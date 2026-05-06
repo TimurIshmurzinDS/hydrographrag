@@ -1,10 +1,6 @@
 
 # 🌊 HydroGraphRAG
 
-[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B.svg)](https://streamlit.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://img.shields.io/badge/Paper-IEEE_Access-success.svg)](#citation)
 
 **HydroGraphRAG** is an Executable Ontology-Grounded Graph Retrieval-Augmented Generation framework designed for explainable and reliable hydrological analysis. 
 
