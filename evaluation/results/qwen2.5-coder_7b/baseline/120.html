@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_edd2e8f6d57368ca9ccadcf5998d68af {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_edd2e8f6d57368ca9ccadcf5998d68af" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_edd2e8f6d57368ca9ccadcf5998d68af = L.map(
+                "map_edd2e8f6d57368ca9ccadcf5998d68af",
+                {
+                    center: [54.0, 37.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e6ffc1d274ecc1561978b5a53dfed794 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e6ffc1d274ecc1561978b5a53dfed794.addTo(map_edd2e8f6d57368ca9ccadcf5998d68af);
+        
+    
+            var marker_89921f73a206f42b38db240fb2d3db9c = L.marker(
+                [54.1, 37.2],
+                {
+}
+            ).addTo(map_edd2e8f6d57368ca9ccadcf5998d68af);
+        
+    
+            var icon_2566de6823f00aa8b9a02fb1c0e63d4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ccfb49a843ae784e6ced286e185aa47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_190af89171cff55ed8c7568b959e49d9 = $(`<div id="html_190af89171cff55ed8c7568b959e49d9" style="width: 100.0%; height: 100.0%;">Курты</div>`)[0];
+                popup_4ccfb49a843ae784e6ced286e185aa47.setContent(html_190af89171cff55ed8c7568b959e49d9);
+            
+        
+
+        marker_89921f73a206f42b38db240fb2d3db9c.bindPopup(popup_4ccfb49a843ae784e6ced286e185aa47)
+        ;
+
+        
+    
+    
+                marker_89921f73a206f42b38db240fb2d3db9c.setIcon(icon_2566de6823f00aa8b9a02fb1c0e63d4f);
+            
+    
+            var marker_4326e204bab6344af1c724d6f3eb49a2 = L.marker(
+                [54.2, 37.3],
+                {
+}
+            ).addTo(map_edd2e8f6d57368ca9ccadcf5998d68af);
+        
+    
+            var icon_8f7d36cfe0e4aa115fad1c853ec9ca79 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_536c11b8676e8cca75eb35fb3fa775b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47c5fb4cac10d817d0b80314782cd483 = $(`<div id="html_47c5fb4cac10d817d0b80314782cd483" style="width: 100.0%; height: 100.0%;">Лепсы</div>`)[0];
+                popup_536c11b8676e8cca75eb35fb3fa775b9.setContent(html_47c5fb4cac10d817d0b80314782cd483);
+            
+        
+
+        marker_4326e204bab6344af1c724d6f3eb49a2.bindPopup(popup_536c11b8676e8cca75eb35fb3fa775b9)
+        ;
+
+        
+    
+    
+                marker_4326e204bab6344af1c724d6f3eb49a2.setIcon(icon_8f7d36cfe0e4aa115fad1c853ec9ca79);
+            
+    
+            var marker_20a4c19f573c4f09bc99c4851a59238a = L.marker(
+                [54.15, 37.25],
+                {
+}
+            ).addTo(map_edd2e8f6d57368ca9ccadcf5998d68af);
+        
+    
+            var icon_a3b4001f9488cdae694034dba6d563d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c488b1dbe78541503d79616af12b28b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_def29d55f0a5a59ff6f0c04bb44f1076 = $(`<div id="html_def29d55f0a5a59ff6f0c04bb44f1076" style="width: 100.0%; height: 100.0%;">Сельское хозяйство</div>`)[0];
+                popup_c488b1dbe78541503d79616af12b28b1.setContent(html_def29d55f0a5a59ff6f0c04bb44f1076);
+            
+        
+
+        marker_20a4c19f573c4f09bc99c4851a59238a.bindPopup(popup_c488b1dbe78541503d79616af12b28b1)
+        ;
+
+        
+    
+    
+                marker_20a4c19f573c4f09bc99c4851a59238a.setIcon(icon_a3b4001f9488cdae694034dba6d563d1);
+            
+</script>
+</html>

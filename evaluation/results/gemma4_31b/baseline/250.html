@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ceb65dd29a76f439057c94fb2e3ac9b9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ceb65dd29a76f439057c94fb2e3ac9b9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ceb65dd29a76f439057c94fb2e3ac9b9 = L.map(
+                "map_ceb65dd29a76f439057c94fb2e3ac9b9",
+                {
+                    center: [48.7, 65.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f0d4a9a722685dd728cb5970dec4b627 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f0d4a9a722685dd728cb5970dec4b627.addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            var poly_line_099497bab712f01c876241975795c39a = L.polyline(
+                [[48.5, 65.2], [48.6, 65.5], [48.7, 65.8], [48.8, 66.1], [48.9, 66.4]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            poly_line_099497bab712f01c876241975795c39a.bindTooltip(
+                `<div>
+                     Река Тентек (основное русло)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_61000d08b9b8ef6b7ffb51b4efc99dad = L.polyline(
+                [[48.4, 65.3], [48.5, 65.4]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            poly_line_61000d08b9b8ef6b7ffb51b4efc99dad.bindTooltip(
+                `<div>
+                     Приток 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e756954e5eb53586863ad549a55274d5 = L.polyline(
+                [[48.6, 65.6], [48.7, 65.6]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            poly_line_e756954e5eb53586863ad549a55274d5.bindTooltip(
+                `<div>
+                     Приток 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c96038bb0b64b95ff10ba4ac141e9ed6 = L.polyline(
+                [[48.7, 65.9], [48.8, 65.9]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            poly_line_c96038bb0b64b95ff10ba4ac141e9ed6.bindTooltip(
+                `<div>
+                     Приток 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b84cead3c03547577dfd7f9751f84b8f = L.polyline(
+                [[48.8, 66.2], [48.7, 66.3]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            poly_line_b84cead3c03547577dfd7f9751f84b8f.bindTooltip(
+                `<div>
+                     Приток 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b182df33aa838362ac3a31c01d5f558e = L.polyline(
+                [[0.0, 66.0], [2.664512117573701, 68.41671355080723], [5.32323365005814, 70.8449894022142], [7.9702861815833455, 73.29648869856008], [10.599614347744538, 75.78306702091359], [13.204894238718992, 78.31686292798643], [15.779438340542294, 80.91037450598843], [18.316096397057585, 83.57651719665587], [20.807152161215832, 86.32865364415139], [23.24421690336365, 89.18058296875589], [25.61812187496059, 92.14647274299035], [27.918813829184813, 95.2407121893249], [30.135260317393257, 98.4776602395621], [32.25537491279841, 101.87125814428238], [34.26597673630363, 105.43447516484059], [36.15280339281124, 109.17856044271798], [37.90060094561503, 113.1120883993008], [39.49331749585834, 117.23981341383728], [40.91442617759718, 121.56139529650245], [42.147396244278355, 126.07011917974262], [43.17631489548965, 130.75180251490303], [43.98663667131452, 135.58413708142675], [44.566004219368914, 140.53672476957837], [44.90505143946524, 145.57200249642412], [44.998078903173166, 150.64710330482455], [44.843493572520174, 155.71649382920128], [44.44393563511456, 160.73502756660292], [43.80606923487076, 165.6609367851289], [42.94007518441325, 170.45830347808993], [41.8589330924087, 175.09869379885035], [40.57760404236539, 179.56185011346997], [39.11222044800849, -176.16446812841286], [37.47936451842338, -172.08527551355434], [35.6954829537473, -168.19952177269136], [33.7764537651767, -164.50138585908599], [31.737297655325644, -160.9815272232919], [29.59201275961791, -157.62818731766237], [27.35350626317132, -154.4280928848268], [25.033596807333012, -151.36715389343215], [22.64306510132506, -148.430973469298], [20.19173482666502, -145.60519859916835], [17.688570575421625, -142.87574318830727], [15.141783603462798, -140.22891297192243], [12.558939404927626, -137.65145745976767], [9.947063541726244, -135.13056917229247], [7.312743908701384, -132.65384579469435], [4.662228825899135, -130.2092269343869], [2.0015211603843373, -127.78491403849696], [-0.6635307963120696, -125.36927969050052], [-3.3271446476874185, -122.95077088365065], [-5.983516183346083, -120.51780988259068], [-8.626731346156667, -118.05869587307279], [-11.250676602827756, -115.56151073530063], [-13.848946565949452, -113.01403296838546], [-16.41474795904153, -110.40366508667921], [-18.940799429284183, -107.71738177612559], [-21.419227366971917, -104.94170882278345], [-23.84145888506163, -102.06274636250441], [-26.198114571769125, -99.06625431435214], [-28.47890569739244, -95.93782271129675], [-30.672543370593047, -92.66315441516332], [-32.76667077825976, -89.2284911710538], [-34.74783403361865, -85.62121400612062], [-36.60151192677385, -81.83064240796205], [-38.31222915426062, -77.84903934742982], [-39.863779849799506, -73.67279669041295], [-41.23958615619228, -69.30372535725633], [-42.42320743215209, -64.75030946048224], [-43.39899720362211, -60.02871562642878], [-44.15287693700218, -55.16330144919203], [-44.673161857119275, -50.186372252698675], [-44.95134297555214, -45.13702008452077], [-44.98271321922498, -40.05904587589026], [-44.766734677534686, -34.99817823552229], [-44.30708152622506, -29.99898907761741], [-43.61135074615846, -25.101992207618878], [-42.690492817258615, -20.341358765354073], [-41.55805842365782, -15.74351593709764], [-40.22937366674339, -11.326681751261106], [-38.72074563005503, -7.101205100555035], [-37.04877164174129, -3.0704734173557426], [-35.229791434479054, 0.7678729755329812], [-33.279491353700855, 4.42064373840077], [-31.212648758487997, 7.897877063777358], [-29.042993415044286, 11.2117849037014], [-26.783159073716273, 14.375901351758735], [-24.444699813593473, 17.40443376363597], [-22.038149682052612, 20.311795378199648], [-19.573108908814604, 23.1122893204844], [-17.058344511691754, 25.819912588763607]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 10", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            poly_line_b182df33aa838362ac3a31c01d5f558e.bindTooltip(
+                `<div>
+                     Траектория спутника (Ground Track)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9731a4311c80e07bb6ed57a2128a3bc8 = L.marker(
+                [-17.058344511691754, 25.819912588763607],
+                {
+}
+            ).addTo(map_ceb65dd29a76f439057c94fb2e3ac9b9);
+        
+    
+            var icon_8b1c22e074584482d668c6618b4440e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ebc08c0602739fd96dad52a0c97771a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71a13f2883b289047a1260177e8a382e = $(`<div id="html_71a13f2883b289047a1260177e8a382e" style="width: 100.0%; height: 100.0%;">Текущая позиция спутника</div>`)[0];
+                popup_7ebc08c0602739fd96dad52a0c97771a.setContent(html_71a13f2883b289047a1260177e8a382e);
+            
+        
+
+        marker_9731a4311c80e07bb6ed57a2128a3bc8.bindPopup(popup_7ebc08c0602739fd96dad52a0c97771a)
+        ;
+
+        
+    
+    
+                marker_9731a4311c80e07bb6ed57a2128a3bc8.setIcon(icon_8b1c22e074584482d668c6618b4440e1);
+            
+</script>
+</html>

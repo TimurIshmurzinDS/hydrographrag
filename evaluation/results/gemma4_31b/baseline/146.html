@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e50d5bc65d275ad31b2e8cf3c37de6bd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e50d5bc65d275ad31b2e8cf3c37de6bd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e50d5bc65d275ad31b2e8cf3c37de6bd = L.map(
+                "map_e50d5bc65d275ad31b2e8cf3c37de6bd",
+                {
+                    center: [49.85, 82.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2561b6a1fd0934b928bdfa2f61760c8c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2561b6a1fd0934b928bdfa2f61760c8c.addTo(map_e50d5bc65d275ad31b2e8cf3c37de6bd);
+        
+    
+            var marker_49040e23d4feba5c14c16cf91c360591 = L.marker(
+                [49.85, 82.1],
+                {
+}
+            ).addTo(map_e50d5bc65d275ad31b2e8cf3c37de6bd);
+        
+    
+            var icon_1a6785c78e0f296945474a2882a04a48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae50f88002af5b26289b46bf39072386 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f69302d55f25e23b37679f82d3a2f9a = $(`<div id="html_6f69302d55f25e23b37679f82d3a2f9a" style="width: 100.0%; height: 100.0%;">Датчик: S1<br>Река: Аягоз<br>Заряд: 85%<br>Дней молчания: 1<br><b>Статус: Исправен</b></div>`)[0];
+                popup_ae50f88002af5b26289b46bf39072386.setContent(html_6f69302d55f25e23b37679f82d3a2f9a);
+            
+        
+
+        marker_49040e23d4feba5c14c16cf91c360591.bindPopup(popup_ae50f88002af5b26289b46bf39072386)
+        ;
+
+        
+    
+    
+                marker_49040e23d4feba5c14c16cf91c360591.setIcon(icon_1a6785c78e0f296945474a2882a04a48);
+            
+    
+            var marker_0ff1c99fc05ae372f7f4caf6adabc79d = L.marker(
+                [49.92, 82.25],
+                {
+}
+            ).addTo(map_e50d5bc65d275ad31b2e8cf3c37de6bd);
+        
+    
+            var icon_f817b3b18122766373cfb99bcec1faca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38e34164d7db0ed86224693cda7e54e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_faf4d72daf6e43526ff5f124b1e0a71b = $(`<div id="html_faf4d72daf6e43526ff5f124b1e0a71b" style="width: 100.0%; height: 100.0%;">Датчик: S2<br>Река: Аягоз<br>Заряд: 15%<br>Дней молчания: 5<br><b>Статус: Требуется ТО</b></div>`)[0];
+                popup_38e34164d7db0ed86224693cda7e54e7.setContent(html_faf4d72daf6e43526ff5f124b1e0a71b);
+            
+        
+
+        marker_0ff1c99fc05ae372f7f4caf6adabc79d.bindPopup(popup_38e34164d7db0ed86224693cda7e54e7)
+        ;
+
+        
+    
+    
+                marker_0ff1c99fc05ae372f7f4caf6adabc79d.setIcon(icon_f817b3b18122766373cfb99bcec1faca);
+            
+    
+            var marker_54c9500d6fe2ba7d00d1b9eab242f8fb = L.marker(
+                [50.01, 82.4],
+                {
+}
+            ).addTo(map_e50d5bc65d275ad31b2e8cf3c37de6bd);
+        
+    
+            var icon_b8e7f85f5739780659f8d8046d9ecd0d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4dea568bcee06071ff3977d38f1c2fe2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6da8f6c8313e71fbe22a45eed2d4cc61 = $(`<div id="html_6da8f6c8313e71fbe22a45eed2d4cc61" style="width: 100.0%; height: 100.0%;">Датчик: S3<br>Река: Аягоз<br>Заряд: 90%<br>Дней молчания: 0<br><b>Статус: Исправен</b></div>`)[0];
+                popup_4dea568bcee06071ff3977d38f1c2fe2.setContent(html_6da8f6c8313e71fbe22a45eed2d4cc61);
+            
+        
+
+        marker_54c9500d6fe2ba7d00d1b9eab242f8fb.bindPopup(popup_4dea568bcee06071ff3977d38f1c2fe2)
+        ;
+
+        
+    
+    
+                marker_54c9500d6fe2ba7d00d1b9eab242f8fb.setIcon(icon_b8e7f85f5739780659f8d8046d9ecd0d);
+            
+    
+            var marker_f001b84e612a5f10b9a4e63bd5a94f3b = L.marker(
+                [49.7, 82.0],
+                {
+}
+            ).addTo(map_e50d5bc65d275ad31b2e8cf3c37de6bd);
+        
+    
+            var icon_160805e85362c0226cbf989511aa6a69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b4ab97f1ac4f6a5318dfe87170400e6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7437723acd74becf1df7c9461754c067 = $(`<div id="html_7437723acd74becf1df7c9461754c067" style="width: 100.0%; height: 100.0%;">Датчик: S4<br>Река: Токыраун<br>Заряд: 10%<br>Дней молчания: 10<br><b>Статус: Требуется ТО</b></div>`)[0];
+                popup_3b4ab97f1ac4f6a5318dfe87170400e6.setContent(html_7437723acd74becf1df7c9461754c067);
+            
+        
+
+        marker_f001b84e612a5f10b9a4e63bd5a94f3b.bindPopup(popup_3b4ab97f1ac4f6a5318dfe87170400e6)
+        ;
+
+        
+    
+    
+                marker_f001b84e612a5f10b9a4e63bd5a94f3b.setIcon(icon_160805e85362c0226cbf989511aa6a69);
+            
+    
+            var marker_ee8830482c0d581fb9cdd8255fa3404f = L.marker(
+                [49.78, 82.15],
+                {
+}
+            ).addTo(map_e50d5bc65d275ad31b2e8cf3c37de6bd);
+        
+    
+            var icon_7eb8166dfa219fba3c849d1d613dfaca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a3a0d3d898db98cd9ed0412fde993c8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e0634bc8d7cfbc0ab3f3c3ac3191c250 = $(`<div id="html_e0634bc8d7cfbc0ab3f3c3ac3191c250" style="width: 100.0%; height: 100.0%;">Датчик: S5<br>Река: Токыраун<br>Заряд: 70%<br>Дней молчания: 1<br><b>Статус: Исправен</b></div>`)[0];
+                popup_3a3a0d3d898db98cd9ed0412fde993c8.setContent(html_e0634bc8d7cfbc0ab3f3c3ac3191c250);
+            
+        
+
+        marker_ee8830482c0d581fb9cdd8255fa3404f.bindPopup(popup_3a3a0d3d898db98cd9ed0412fde993c8)
+        ;
+
+        
+    
+    
+                marker_ee8830482c0d581fb9cdd8255fa3404f.setIcon(icon_7eb8166dfa219fba3c849d1d613dfaca);
+            
+    
+            var marker_7768cd91afa6de5f857458d073f91b4d = L.marker(
+                [49.88, 82.3],
+                {
+}
+            ).addTo(map_e50d5bc65d275ad31b2e8cf3c37de6bd);
+        
+    
+            var icon_1685707c1ac0b485e323d2ef1fa9794d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72aee6b0116c3abbd6e735e801ba3eeb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4667947e022935183e9a9c474a74639c = $(`<div id="html_4667947e022935183e9a9c474a74639c" style="width: 100.0%; height: 100.0%;">Датчик: S6<br>Река: Токыраун<br>Заряд: 50%<br>Дней молчания: 2<br><b>Статус: Исправен</b></div>`)[0];
+                popup_72aee6b0116c3abbd6e735e801ba3eeb.setContent(html_4667947e022935183e9a9c474a74639c);
+            
+        
+
+        marker_7768cd91afa6de5f857458d073f91b4d.bindPopup(popup_72aee6b0116c3abbd6e735e801ba3eeb)
+        ;
+
+        
+    
+    
+                marker_7768cd91afa6de5f857458d073f91b4d.setIcon(icon_1685707c1ac0b485e323d2ef1fa9794d);
+            
+</script>
+</html>

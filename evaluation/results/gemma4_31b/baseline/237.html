@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cac2900ef548461b399b2ac88cec16bd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Рецепт 'Весенний паводок'</b><br>
+     <i style="background-color:blue; width:10px; height:10px; display:inline-block"></i> Русло реки<br>
+     <i style="background-color:cyan; width:10px; height:10px; display:inline-block"></i> Зона затопления<br>
+     <i style="background-color:red; width:10px; height:10px; display:inline-block"></i> Снеготаяние (Heatmap)
+     </div>
+     
+    
+            <div class="folium-map" id="map_cac2900ef548461b399b2ac88cec16bd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cac2900ef548461b399b2ac88cec16bd = L.map(
+                "map_cac2900ef548461b399b2ac88cec16bd",
+                {
+                    center: [42.5, 82.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0f4f3f4672af34739f67cf5f91eb0d27 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0f4f3f4672af34739f67cf5f91eb0d27.addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            var poly_line_e2d7ddc459a4410e53289cc318e3d0b0 = L.polyline(
+                [[43.48475197938058, 81.00212262975954], [43.34574658566033, 81.1985517053338], [43.233210162905706, 81.41851896002714], [43.00297963699848, 81.61435273861011], [42.860747858531994, 81.78007264129718], [42.748227596755626, 82.02748748507017], [42.609758964308824, 82.22852246408091], [42.429789063850166, 82.44877135599923], [42.3032067125941, 82.62063553672346], [42.14295633921896, 82.76829105703918], [42.04353192563792, 82.98204621842251], [41.82584665840884, 83.1704750170642], [41.73021229112986, 83.36672074881335], [41.54354802373919, 83.58789755316904], [41.44882640221667, 83.79324378109206], [41.296701724399504, 84.04105982817696], [41.078712173365666, 84.17504167811992], [40.903528852028906, 84.4263118506232], [40.821395782068976, 84.6021762222609], [40.64101912846779, 84.83652338931896]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            poly_line_e2d7ddc459a4410e53289cc318e3d0b0.bindTooltip(
+                `<div>
+                     Русло реки Аксу
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_8d183010ef3f6e0c92d2840dee738f77 = L.polygon(
+                [[43.504751979380586, 81.02212262975954], [43.36574658566033, 81.2185517053338], [43.325746585660326, 81.1785517053338], [43.46475197938058, 80.98212262975954]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_8d183010ef3f6e0c92d2840dee738f77.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_cb86579f131362f1e9d5bc0d1702af40 = L.polygon(
+                [[43.36574658566033, 81.2185517053338], [43.25321016290571, 81.43851896002714], [43.2132101629057, 81.39851896002715], [43.325746585660326, 81.1785517053338]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_cb86579f131362f1e9d5bc0d1702af40.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_7af9e21847f5d8149d94f13405be018f = L.polygon(
+                [[43.25321016290571, 81.43851896002714], [43.022979636998485, 81.6343527386101], [42.98297963699848, 81.59435273861011], [43.2132101629057, 81.39851896002715]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_7af9e21847f5d8149d94f13405be018f.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_e57787f3af845f1f9a14fb8edc405854 = L.polygon(
+                [[43.022979636998485, 81.6343527386101], [42.880747858532, 81.80007264129718], [42.84074785853199, 81.76007264129719], [42.98297963699848, 81.59435273861011]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_e57787f3af845f1f9a14fb8edc405854.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_940202965faacb61ac9060752c825e78 = L.polygon(
+                [[42.880747858532, 81.80007264129718], [42.76822759675563, 82.04748748507016], [42.72822759675562, 82.00748748507017], [42.84074785853199, 81.76007264129719]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_940202965faacb61ac9060752c825e78.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_ff4e5944b408580eee3365bc12dc8a38 = L.polygon(
+                [[42.76822759675563, 82.04748748507016], [42.62975896430883, 82.2485224640809], [42.58975896430882, 82.20852246408091], [42.72822759675562, 82.00748748507017]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_ff4e5944b408580eee3365bc12dc8a38.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_9a7f2027e7487cf9668a68b4a03f702d = L.polygon(
+                [[42.62975896430883, 82.2485224640809], [42.44978906385017, 82.46877135599922], [42.40978906385016, 82.42877135599923], [42.58975896430882, 82.20852246408091]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_9a7f2027e7487cf9668a68b4a03f702d.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_ac2e48b4d2860f651c82343bcf083e6e = L.polygon(
+                [[42.44978906385017, 82.46877135599922], [42.3232067125941, 82.64063553672345], [42.283206712594094, 82.60063553672346], [42.40978906385016, 82.42877135599923]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_ac2e48b4d2860f651c82343bcf083e6e.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_f2a57a434c745dfce256086ff458af67 = L.polygon(
+                [[42.3232067125941, 82.64063553672345], [42.162956339218965, 82.78829105703917], [42.12295633921896, 82.74829105703918], [42.283206712594094, 82.60063553672346]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_f2a57a434c745dfce256086ff458af67.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_a7f135b31bb87be89d2b869561f85e58 = L.polygon(
+                [[42.162956339218965, 82.78829105703917], [42.063531925637925, 83.0020462184225], [42.02353192563792, 82.96204621842251], [42.12295633921896, 82.74829105703918]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_a7f135b31bb87be89d2b869561f85e58.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_34376d6ff919025782af89b5ed5832e1 = L.polygon(
+                [[42.063531925637925, 83.0020462184225], [41.845846658408846, 83.1904750170642], [41.80584665840884, 83.15047501706421], [42.02353192563792, 82.96204621842251]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_34376d6ff919025782af89b5ed5832e1.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_cff7a1de9520b631a729a32d3e960682 = L.polygon(
+                [[41.845846658408846, 83.1904750170642], [41.75021229112986, 83.38672074881335], [41.71021229112986, 83.34672074881335], [41.80584665840884, 83.15047501706421]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_cff7a1de9520b631a729a32d3e960682.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_13953e75162939816b4ac492b3967b17 = L.polygon(
+                [[41.75021229112986, 83.38672074881335], [41.563548023739195, 83.60789755316904], [41.52354802373919, 83.56789755316905], [41.71021229112986, 83.34672074881335]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_13953e75162939816b4ac492b3967b17.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_7203624cf4841151bfb647fdb0b3424e = L.polygon(
+                [[41.563548023739195, 83.60789755316904], [41.46882640221667, 83.81324378109205], [41.428826402216664, 83.77324378109206], [41.52354802373919, 83.56789755316905]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_7203624cf4841151bfb647fdb0b3424e.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_84b958eb828e02aeeaa0cbb8853d2ef1 = L.polygon(
+                [[41.46882640221667, 83.81324378109205], [41.31670172439951, 84.06105982817695], [41.2767017243995, 84.02105982817696], [41.428826402216664, 83.77324378109206]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_84b958eb828e02aeeaa0cbb8853d2ef1.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_475be767d3cc4bf1cb38343ff0943e59 = L.polygon(
+                [[41.31670172439951, 84.06105982817695], [41.09871217336567, 84.19504167811992], [41.05871217336566, 84.15504167811993], [41.2767017243995, 84.02105982817696]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_475be767d3cc4bf1cb38343ff0943e59.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_fba5ab92589e8fb00c86795dd6db2b3d = L.polygon(
+                [[41.09871217336567, 84.19504167811992], [40.92352885202891, 84.44631185062319], [40.8835288520289, 84.4063118506232], [41.05871217336566, 84.15504167811993]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_fba5ab92589e8fb00c86795dd6db2b3d.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_9da1ea738eba7b0aba7a8e032309f953 = L.polygon(
+                [[40.92352885202891, 84.44631185062319], [40.84139578206898, 84.62217622226089], [40.80139578206897, 84.5821762222609], [40.8835288520289, 84.4063118506232]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_9da1ea738eba7b0aba7a8e032309f953.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_a2eafd8e9e0b1be2596d0fd0fe10ff55 = L.polygon(
+                [[40.84139578206898, 84.62217622226089], [40.66101912846779, 84.85652338931895], [40.621019128467786, 84.81652338931896], [40.80139578206897, 84.5821762222609]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+    
+            polygon_a2eafd8e9e0b1be2596d0fd0fe10ff55.bindTooltip(
+                `<div>
+                     Зона весеннего паводка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var heat_map_7dcb29390e58a77071702f066ce0a3a0 = L.heatLayer(
+                [[43.61908549328605, 80.88269322726578, 0.5357994595274314], [43.47409992938862, 81.1165389693215, 0.7957743490027829], [43.49737733254976, 80.96592374694004, 0.672259602087188], [43.30488125071882, 80.85705477720508, 0.6736726205754764], [43.56466128760013, 81.13568752728544, 0.9926092774172479], [43.521735992932804, 80.97502671391618, 0.8212415766818921], [43.53961705240616, 81.00015374130994, 0.8791714279800572], [43.58300803499561, 81.10484170425731, 0.8784655368706649], [43.45055964114436, 80.80499927283586, 0.8144749640047935], [43.429183374812496, 81.14748232000301, 0.8874303912795543], [43.15949026647612, 81.00531615719295, 0.5714573202389444], [43.437291264423834, 81.10662129374337, 0.7090474711800434], [43.23862340515824, 81.38317897646381, 0.9242509137962769], [43.27980228191448, 81.25230245739947, 0.7945527807954729], [43.496335616334996, 81.31689831350815, 0.9704591706400796], [43.2739547875908, 81.35887611565276, 0.5234008016227074], [43.54117142277913, 81.17765022171172, 0.5618728081201814], [43.30024974395146, 81.1767287923426, 0.6559958282177434], [43.50966766692602, 81.21901927365157, 0.6381011478703227], [43.189725298326245, 81.14119207566169, 0.606990240019422], [43.22919534656374, 81.34904398369443, 0.735189404006901], [43.19215109837573, 81.5189513329128, 0.747326728565467], [43.252732252530954, 81.24257173251459, 0.918213100511668], [43.07618281072003, 81.26966300321135, 0.5217461913525168], [43.27468686616186, 81.35125242865722, 0.9998380938967029], [43.08941942169527, 81.31634177479556, 0.9286408652337916], [43.39088398794956, 81.33738412294508, 0.8209487273124376], [43.167197722387996, 81.52032798291737, 0.6549848700822781], [43.04677487835863, 81.2226196301435, 0.5364040049524882], [43.41410530570312, 81.462978658253, 0.7469122398231895], [43.08414081180404, 81.61248071821231, 0.885684718765298], [42.92031561654105, 81.53682966455158, 0.756171076603755], [42.82176674230584, 81.52166669258006, 0.504118800951119], [43.097460524680194, 81.73444375402526, 0.5064153772626637], [43.124631331749455, 81.80462162024722, 0.6956802540110392], [43.100782437050846, 81.80392925006213, 0.8545843652675396], [42.98633347310104, 81.66498376027505, 0.9704786586799461], [42.90347720781474, 81.80056374805604, 0.8301417637853716], [42.84397651456136, 81.47055177338838, 0.6104707557067435], [42.92144597633406, 81.77488269615901, 0.5280927670103637], [42.7041609685215, 81.63414441894552, 0.9387090813731784], [43.02244238033077, 81.86900261527647, 0.8855752292425527], [42.95532374029288, 81.96194640248459, 0.871326184905076], [42.860600982674, 81.84030452051599, 0.7800328808755665], [43.04712283411731, 81.84248234515067, 0.5977611739376367], [42.90350229041645, 81.70992015629064, 0.929928676116882], [42.80994838394793, 81.81161830419288, 0.6558182700330786], [43.004902378369486, 81.5852346113779, 0.9736881332328038], [42.75118563674094, 81.7954981714901, 0.7846382924574713], [42.7046000714801, 81.7212221327487, 0.6951224396347684]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_7dcb29390e58a77071702f066ce0a3a0.addTo(map_cac2900ef548461b399b2ac88cec16bd);
+        
+</script>
+</html>

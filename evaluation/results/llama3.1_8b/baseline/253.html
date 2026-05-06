@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7e536885b36b57d101ac05ba49572add {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7e536885b36b57d101ac05ba49572add" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7e536885b36b57d101ac05ba49572add = L.map(
+                "map_7e536885b36b57d101ac05ba49572add",
+                {
+                    center: [42.7333, 70.2833],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c329a20041d8025fecd9ae07ab7083ba = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c329a20041d8025fecd9ae07ab7083ba.addTo(map_7e536885b36b57d101ac05ba49572add);
+        
+    
+            var marker_042ca1b5906891bbef2c58343082fcf9 = L.marker(
+                [-62.6869, 47.8667],
+                {
+}
+            ).addTo(map_7e536885b36b57d101ac05ba49572add);
+        
+    
+        var popup_82c11da4cbed843a1775a63cd00b14ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdddc36aec7e0283fad97726d456924d = $(`<div id="html_bdddc36aec7e0283fad97726d456924d" style="width: 100.0%; height: 100.0%;">Альфа Центавра</div>`)[0];
+                popup_82c11da4cbed843a1775a63cd00b14ec.setContent(html_bdddc36aec7e0283fad97726d456924d);
+            
+        
+
+        marker_042ca1b5906891bbef2c58343082fcf9.bindPopup(popup_82c11da4cbed843a1775a63cd00b14ec)
+        ;
+
+        
+    
+    
+            var marker_3b2939e5de3e1b9e1191291cb0ba1e0f = L.marker(
+                [42.7333, 47.8667],
+                {
+}
+            ).addTo(map_7e536885b36b57d101ac05ba49572add);
+        
+    
+        var popup_fea66c14b99babf6ac2d2327f483767b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ca62e2d9e1c02a0de3ea5e5b5abfa52 = $(`<div id="html_6ca62e2d9e1c02a0de3ea5e5b5abfa52" style="width: 100.0%; height: 100.0%;">Расстояние до Альфы Центавра: 105.4202 градусов</div>`)[0];
+                popup_fea66c14b99babf6ac2d2327f483767b.setContent(html_6ca62e2d9e1c02a0de3ea5e5b5abfa52);
+            
+        
+
+        marker_3b2939e5de3e1b9e1191291cb0ba1e0f.bindPopup(popup_fea66c14b99babf6ac2d2327f483767b)
+        ;
+
+        
+    
+</script>
+</html>

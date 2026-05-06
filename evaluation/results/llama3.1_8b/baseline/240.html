@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_272405cd19a9f4d058926efdab2c8b67 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_272405cd19a9f4d058926efdab2c8b67" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_272405cd19a9f4d058926efdab2c8b67 = L.map(
+                "map_272405cd19a9f4d058926efdab2c8b67",
+                {
+                    center: [50.05, 78.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4fcae62777d9e66e2d2d582c209ca306 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4fcae62777d9e66e2d2d582c209ca306.addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+            var marker_7f06bcae4ca87f6de820d3927c3612ee = L.marker(
+                [50.05, 78.5],
+                {
+}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_e56c1cd64448447ff5c235d9239ba385 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b9b1860380f8eb6c2dbde843415221a = $(`<div id="html_3b9b1860380f8eb6c2dbde843415221a" style="width: 100.0%; height: 100.0%;">Оптимальное время выпечки хлеба</div>`)[0];
+                popup_e56c1cd64448447ff5c235d9239ba385.setContent(html_3b9b1860380f8eb6c2dbde843415221a);
+            
+        
+
+        marker_7f06bcae4ca87f6de820d3927c3612ee.bindPopup(popup_e56c1cd64448447ff5c235d9239ba385)
+        ;
+
+        
+    
+    
+            var circle_marker_11bcd0e04fd901758406d939fc3162a3 = L.circleMarker(
+                [0.1, 100.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_6170264ea2458280a69256479704b5d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7482ce5b4170c53c2a62562e71193b9b = $(`<div id="html_7482ce5b4170c53c2a62562e71193b9b" style="width: 100.0%; height: 100.0%;">Месяц: 1, Уровень воды: 100</div>`)[0];
+                popup_6170264ea2458280a69256479704b5d1.setContent(html_7482ce5b4170c53c2a62562e71193b9b);
+            
+        
+
+        circle_marker_11bcd0e04fd901758406d939fc3162a3.bindPopup(popup_6170264ea2458280a69256479704b5d1)
+        ;
+
+        
+    
+    
+            var circle_marker_d24d24be59258983229328341aac5226 = L.circleMarker(
+                [0.2, 120.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_e0b78d15f0189892b45698578d4a4f75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d45ebf4661f31315e490cb0a538c003 = $(`<div id="html_1d45ebf4661f31315e490cb0a538c003" style="width: 100.0%; height: 100.0%;">Месяц: 2, Уровень воды: 120</div>`)[0];
+                popup_e0b78d15f0189892b45698578d4a4f75.setContent(html_1d45ebf4661f31315e490cb0a538c003);
+            
+        
+
+        circle_marker_d24d24be59258983229328341aac5226.bindPopup(popup_e0b78d15f0189892b45698578d4a4f75)
+        ;
+
+        
+    
+    
+            var circle_marker_30e1fc5f924e20064f05f91dede198aa = L.circleMarker(
+                [0.30000000000000004, 150.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_5501d3ff46250b7458bc65bc8679f4e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29296b42cbf259c6dd1bcb08949e8d1c = $(`<div id="html_29296b42cbf259c6dd1bcb08949e8d1c" style="width: 100.0%; height: 100.0%;">Месяц: 3, Уровень воды: 150</div>`)[0];
+                popup_5501d3ff46250b7458bc65bc8679f4e5.setContent(html_29296b42cbf259c6dd1bcb08949e8d1c);
+            
+        
+
+        circle_marker_30e1fc5f924e20064f05f91dede198aa.bindPopup(popup_5501d3ff46250b7458bc65bc8679f4e5)
+        ;
+
+        
+    
+    
+            var circle_marker_2b0f0fda43506b5d20ed79a6ae9f717b = L.circleMarker(
+                [0.4, 180.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_973cfa9aee11732909f4962520e4d17c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b006ec468ea63ae31252360eb4afca31 = $(`<div id="html_b006ec468ea63ae31252360eb4afca31" style="width: 100.0%; height: 100.0%;">Месяц: 4, Уровень воды: 180</div>`)[0];
+                popup_973cfa9aee11732909f4962520e4d17c.setContent(html_b006ec468ea63ae31252360eb4afca31);
+            
+        
+
+        circle_marker_2b0f0fda43506b5d20ed79a6ae9f717b.bindPopup(popup_973cfa9aee11732909f4962520e4d17c)
+        ;
+
+        
+    
+    
+            var circle_marker_cbd97c2ddc624e5d1cd8ac2a855676f3 = L.circleMarker(
+                [0.5, 200.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_0b42644e5f7a302e4cd61636ab405c66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aab945d74c3c2c9b3d0606420cd568ab = $(`<div id="html_aab945d74c3c2c9b3d0606420cd568ab" style="width: 100.0%; height: 100.0%;">Месяц: 5, Уровень воды: 200</div>`)[0];
+                popup_0b42644e5f7a302e4cd61636ab405c66.setContent(html_aab945d74c3c2c9b3d0606420cd568ab);
+            
+        
+
+        circle_marker_cbd97c2ddc624e5d1cd8ac2a855676f3.bindPopup(popup_0b42644e5f7a302e4cd61636ab405c66)
+        ;
+
+        
+    
+    
+            var circle_marker_c210def6278727a7e0898cfae6a88ca0 = L.circleMarker(
+                [0.6000000000000001, 220.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_e3d38b6b51de096655b59ae308230f0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75a67f80a9a4dfbe156169add89256d8 = $(`<div id="html_75a67f80a9a4dfbe156169add89256d8" style="width: 100.0%; height: 100.0%;">Месяц: 6, Уровень воды: 220</div>`)[0];
+                popup_e3d38b6b51de096655b59ae308230f0f.setContent(html_75a67f80a9a4dfbe156169add89256d8);
+            
+        
+
+        circle_marker_c210def6278727a7e0898cfae6a88ca0.bindPopup(popup_e3d38b6b51de096655b59ae308230f0f)
+        ;
+
+        
+    
+    
+            var circle_marker_7a95004b181b21f67d375b4dd880f69a = L.circleMarker(
+                [0.7000000000000001, 250.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_a0c14c05e5a14733d82a1f3427bc4dc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d04c6b402aa6bb372c3f8f035b65361d = $(`<div id="html_d04c6b402aa6bb372c3f8f035b65361d" style="width: 100.0%; height: 100.0%;">Месяц: 7, Уровень воды: 250</div>`)[0];
+                popup_a0c14c05e5a14733d82a1f3427bc4dc2.setContent(html_d04c6b402aa6bb372c3f8f035b65361d);
+            
+        
+
+        circle_marker_7a95004b181b21f67d375b4dd880f69a.bindPopup(popup_a0c14c05e5a14733d82a1f3427bc4dc2)
+        ;
+
+        
+    
+    
+            var circle_marker_a6d619e52a179987dbe6b60f3b24d35a = L.circleMarker(
+                [0.8, 280.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_23085c846d913166263fb6a2407b581f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bbe22ce9785c5e548904f2be58305d94 = $(`<div id="html_bbe22ce9785c5e548904f2be58305d94" style="width: 100.0%; height: 100.0%;">Месяц: 8, Уровень воды: 280</div>`)[0];
+                popup_23085c846d913166263fb6a2407b581f.setContent(html_bbe22ce9785c5e548904f2be58305d94);
+            
+        
+
+        circle_marker_a6d619e52a179987dbe6b60f3b24d35a.bindPopup(popup_23085c846d913166263fb6a2407b581f)
+        ;
+
+        
+    
+    
+            var circle_marker_ddedc92dc9d4a7caab74368d644ea42f = L.circleMarker(
+                [0.9, 300.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_f23025c75131fef289b3084a64f8fbe9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06f4bbd20b469b006c7ef36a814ff2ae = $(`<div id="html_06f4bbd20b469b006c7ef36a814ff2ae" style="width: 100.0%; height: 100.0%;">Месяц: 9, Уровень воды: 300</div>`)[0];
+                popup_f23025c75131fef289b3084a64f8fbe9.setContent(html_06f4bbd20b469b006c7ef36a814ff2ae);
+            
+        
+
+        circle_marker_ddedc92dc9d4a7caab74368d644ea42f.bindPopup(popup_f23025c75131fef289b3084a64f8fbe9)
+        ;
+
+        
+    
+    
+            var circle_marker_ab051565a855acb725ac27ea283a578d = L.circleMarker(
+                [1.0, 320.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_6d98bcdacfd4405d1ef35b5b05abe539 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4280e70bcebad3a99aedcac638390da = $(`<div id="html_c4280e70bcebad3a99aedcac638390da" style="width: 100.0%; height: 100.0%;">Месяц: 10, Уровень воды: 320</div>`)[0];
+                popup_6d98bcdacfd4405d1ef35b5b05abe539.setContent(html_c4280e70bcebad3a99aedcac638390da);
+            
+        
+
+        circle_marker_ab051565a855acb725ac27ea283a578d.bindPopup(popup_6d98bcdacfd4405d1ef35b5b05abe539)
+        ;
+
+        
+    
+    
+            var circle_marker_ebe63c023728f12759c8f33296f5312a = L.circleMarker(
+                [1.1, 350.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_0419bc35e3840343ac8c9f6f45f28a56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0801e03866263bf292f219a2e37a52dc = $(`<div id="html_0801e03866263bf292f219a2e37a52dc" style="width: 100.0%; height: 100.0%;">Месяц: 11, Уровень воды: 350</div>`)[0];
+                popup_0419bc35e3840343ac8c9f6f45f28a56.setContent(html_0801e03866263bf292f219a2e37a52dc);
+            
+        
+
+        circle_marker_ebe63c023728f12759c8f33296f5312a.bindPopup(popup_0419bc35e3840343ac8c9f6f45f28a56)
+        ;
+
+        
+    
+    
+            var circle_marker_aa04a1eff83c0941f387ae3597d4052d = L.circleMarker(
+                [1.2000000000000002, 380.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_272405cd19a9f4d058926efdab2c8b67);
+        
+    
+        var popup_7460139e9a62105b14a4b389c64242cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed0d715de55dd0d88c322c893647e756 = $(`<div id="html_ed0d715de55dd0d88c322c893647e756" style="width: 100.0%; height: 100.0%;">Месяц: 12, Уровень воды: 380</div>`)[0];
+                popup_7460139e9a62105b14a4b389c64242cd.setContent(html_ed0d715de55dd0d88c322c893647e756);
+            
+        
+
+        circle_marker_aa04a1eff83c0941f387ae3597d4052d.bindPopup(popup_7460139e9a62105b14a4b389c64242cd)
+        ;
+
+        
+    
+</script>
+</html>

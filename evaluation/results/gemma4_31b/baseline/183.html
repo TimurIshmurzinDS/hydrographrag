@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fead4437e62c6ecd2b483a2c9a006a83 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 180px; height: 100px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Доступность воды:</b><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Достаточно<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Риск дефицита<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Критический дефицит
+     </div>
+     
+    
+            <div class="folium-map" id="map_fead4437e62c6ecd2b483a2c9a006a83" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fead4437e62c6ecd2b483a2c9a006a83 = L.map(
+                "map_fead4437e62c6ecd2b483a2c9a006a83",
+                {
+                    center: [42.575, 77.275],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5756b9e87a8e64d360795646b4534699 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5756b9e87a8e64d360795646b4534699.addTo(map_fead4437e62c6ecd2b483a2c9a006a83);
+        
+    
+            var poly_line_da5d6ebbf3b20451280767958e56f9dd = L.polyline(
+                [[42.55, 77.2], [42.56, 77.22], [42.57, 77.25], [42.58, 77.28], [42.59, 77.31], [42.6, 77.35]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_fead4437e62c6ecd2b483a2c9a006a83);
+        
+    
+            poly_line_da5d6ebbf3b20451280767958e56f9dd.bindTooltip(
+                `<div>
+                     Река Турген
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6efab1efa50e14cbbc2394bda90fbc6b = L.circleMarker(
+                [42.555, 77.21],
+                {"bubblingMouseEvents": true, "color": "Green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "Green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fead4437e62c6ecd2b483a2c9a006a83);
+        
+    
+        var popup_1404bf5e140d54c6c2ed7a7750f0464e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c4cbe99899f43ef41239c7484bc8e4c = $(`<div id="html_5c4cbe99899f43ef41239c7484bc8e4c" style="width: 100.0%; height: 100.0%;"><b>Сад Северный</b><br>Статус: Достаточно<br>Площадь: 10 га</div>`)[0];
+                popup_1404bf5e140d54c6c2ed7a7750f0464e.setContent(html_5c4cbe99899f43ef41239c7484bc8e4c);
+            
+        
+
+        circle_marker_6efab1efa50e14cbbc2394bda90fbc6b.bindPopup(popup_1404bf5e140d54c6c2ed7a7750f0464e)
+        ;
+
+        
+    
+    
+            var circle_marker_13eb34c8fc7e772daf87cbf0f1ad1bd4 = L.circleMarker(
+                [42.565, 77.23],
+                {"bubblingMouseEvents": true, "color": "Green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "Green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fead4437e62c6ecd2b483a2c9a006a83);
+        
+    
+        var popup_bcb4ee7f6c0bde08b75838b26a55284e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30c7c102325142df1b62f6ebc814cbc5 = $(`<div id="html_30c7c102325142df1b62f6ebc814cbc5" style="width: 100.0%; height: 100.0%;"><b>Сад Центральный</b><br>Статус: Достаточно<br>Площадь: 25 га</div>`)[0];
+                popup_bcb4ee7f6c0bde08b75838b26a55284e.setContent(html_30c7c102325142df1b62f6ebc814cbc5);
+            
+        
+
+        circle_marker_13eb34c8fc7e772daf87cbf0f1ad1bd4.bindPopup(popup_bcb4ee7f6c0bde08b75838b26a55284e)
+        ;
+
+        
+    
+    
+            var circle_marker_47073f569549bf496c003e997466dae0 = L.circleMarker(
+                [42.575, 77.26],
+                {"bubblingMouseEvents": true, "color": "Green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "Green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fead4437e62c6ecd2b483a2c9a006a83);
+        
+    
+        var popup_610e2c5e1a5ee75a7d5baa9b493685d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8104bbde88acd733cdd267e4c4ba2ab1 = $(`<div id="html_8104bbde88acd733cdd267e4c4ba2ab1" style="width: 100.0%; height: 100.0%;"><b>Сад Южный</b><br>Статус: Достаточно<br>Площадь: 15 га</div>`)[0];
+                popup_610e2c5e1a5ee75a7d5baa9b493685d3.setContent(html_8104bbde88acd733cdd267e4c4ba2ab1);
+            
+        
+
+        circle_marker_47073f569549bf496c003e997466dae0.bindPopup(popup_610e2c5e1a5ee75a7d5baa9b493685d3)
+        ;
+
+        
+    
+    
+            var circle_marker_a6f50b73de8351e3f8b0dbd62b43548e = L.circleMarker(
+                [42.585, 77.29],
+                {"bubblingMouseEvents": true, "color": "Green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "Green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fead4437e62c6ecd2b483a2c9a006a83);
+        
+    
+        var popup_a54de591461379001052ea6da9784cdd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30618d861c36d83d79591866fa7137c0 = $(`<div id="html_30618d861c36d83d79591866fa7137c0" style="width: 100.0%; height: 100.0%;"><b>Сад Восточный</b><br>Статус: Достаточно<br>Площадь: 30 га</div>`)[0];
+                popup_a54de591461379001052ea6da9784cdd.setContent(html_30618d861c36d83d79591866fa7137c0);
+            
+        
+
+        circle_marker_a6f50b73de8351e3f8b0dbd62b43548e.bindPopup(popup_a54de591461379001052ea6da9784cdd)
+        ;
+
+        
+    
+    
+            var circle_marker_3bb747ad04345ddbe1db970ad698aaeb = L.circleMarker(
+                [42.595, 77.33],
+                {"bubblingMouseEvents": true, "color": "Green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "Green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fead4437e62c6ecd2b483a2c9a006a83);
+        
+    
+        var popup_f2bf6ad3abbcc40cd852444fbaf502ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d24dfa09c75405ec82b73c225c564f3 = $(`<div id="html_8d24dfa09c75405ec82b73c225c564f3" style="width: 100.0%; height: 100.0%;"><b>Сад Горный</b><br>Статус: Достаточно<br>Площадь: 12 га</div>`)[0];
+                popup_f2bf6ad3abbcc40cd852444fbaf502ce.setContent(html_8d24dfa09c75405ec82b73c225c564f3);
+            
+        
+
+        circle_marker_3bb747ad04345ddbe1db970ad698aaeb.bindPopup(popup_f2bf6ad3abbcc40cd852444fbaf502ce)
+        ;
+
+        
+    
+</script>
+</html>

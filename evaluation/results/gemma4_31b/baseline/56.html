@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fd48d13ddc342dd9010d9c5a8a744d79 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <strong>Sediment Load</strong><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Low (<2500t)<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Medium (2500-4000t)<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> High (>4000t)
+     </div>
+     
+    
+            <div class="folium-map" id="map_fd48d13ddc342dd9010d9c5a8a744d79" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fd48d13ddc342dd9010d9c5a8a744d79 = L.map(
+                "map_fd48d13ddc342dd9010d9c5a8a744d79",
+                {
+                    center: [45.55, -122.62],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d50d11d272fed075ca4fce0a68b3b39c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d50d11d272fed075ca4fce0a68b3b39c.addTo(map_fd48d13ddc342dd9010d9c5a8a744d79);
+        
+    
+            var circle_marker_71d2fd8072ad10be6edb4c918602c926 = L.circleMarker(
+                [45.523, -122.676],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fd48d13ddc342dd9010d9c5a8a744d79);
+        
+    
+        var popup_6e69f3c7473a6551f3e97375c9225776 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ed001cd990aa7e615a93eeeb32e662e0 = $(`<div id="html_ed001cd990aa7e615a93eeeb32e662e0" style="width: 100.0%; height: 100.0%;">     <strong>Station: Station_A</strong><br>     Avg Load (5y): 2,771 t<br>     Trend (2019-2023): 1,522 t<br>     <hr>     <strong>History:</strong><br>2019: 2,498 t<br>2020: 4,027 t<br>2021: 1,380 t<br>2022: 1,931 t<br>2023: 4,020 t     </div>`)[0];
+                popup_6e69f3c7473a6551f3e97375c9225776.setContent(html_ed001cd990aa7e615a93eeeb32e662e0);
+            
+        
+
+        circle_marker_71d2fd8072ad10be6edb4c918602c926.bindPopup(popup_6e69f3c7473a6551f3e97375c9225776)
+        ;
+
+        
+    
+    
+            var circle_marker_beaa2d426346c672271bc2300a73e88a = L.circleMarker(
+                [45.53, -122.65],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fd48d13ddc342dd9010d9c5a8a744d79);
+        
+    
+        var popup_372d8d9a0bd0c5b19790d0d594ad06bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3f7b670530057fc5176fa7ba108de2c = $(`<div id="html_d3f7b670530057fc5176fa7ba108de2c" style="width: 100.0%; height: 100.0%;">     <strong>Station: Station_B</strong><br>     Avg Load (5y): 2,348 t<br>     Trend (2019-2023): 1,427 t<br>     <hr>     <strong>History:</strong><br>2019: 1,082 t<br>2020: 4,235 t<br>2021: 1,510 t<br>2022: 2,404 t<br>2023: 2,510 t     </div>`)[0];
+                popup_372d8d9a0bd0c5b19790d0d594ad06bf.setContent(html_d3f7b670530057fc5176fa7ba108de2c);
+            
+        
+
+        circle_marker_beaa2d426346c672271bc2300a73e88a.bindPopup(popup_372d8d9a0bd0c5b19790d0d594ad06bf)
+        ;
+
+        
+    
+    
+            var circle_marker_00080c94e8ef497821574a653334b266 = L.circleMarker(
+                [45.54, -122.63],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fd48d13ddc342dd9010d9c5a8a744d79);
+        
+    
+        var popup_0f7b24e0215295d20423c57848d7216a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3594675d0cb001862ebfb7d6b79f1355 = $(`<div id="html_3594675d0cb001862ebfb7d6b79f1355" style="width: 100.0%; height: 100.0%;">     <strong>Station: Station_C</strong><br>     Avg Load (5y): 2,688 t<br>     Trend (2019-2023): -784 t<br>     <hr>     <strong>History:</strong><br>2019: 3,447 t<br>2020: 2,151 t<br>2021: 3,209 t<br>2022: 1,970 t<br>2023: 2,662 t     </div>`)[0];
+                popup_0f7b24e0215295d20423c57848d7216a.setContent(html_3594675d0cb001862ebfb7d6b79f1355);
+            
+        
+
+        circle_marker_00080c94e8ef497821574a653334b266.bindPopup(popup_0f7b24e0215295d20423c57848d7216a)
+        ;
+
+        
+    
+    
+            var circle_marker_419c9d203284989ec23b4d1f3c6812b7 = L.circleMarker(
+                [45.555, -122.61],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fd48d13ddc342dd9010d9c5a8a744d79);
+        
+    
+        var popup_94ef0784d3c68d4453b24baaa33013f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b1fa6718e7c021c7f9d8c69706f1311d = $(`<div id="html_b1fa6718e7c021c7f9d8c69706f1311d" style="width: 100.0%; height: 100.0%;">     <strong>Station: Station_D</strong><br>     Avg Load (5y): 3,163 t<br>     Trend (2019-2023): 387 t<br>     <hr>     <strong>History:</strong><br>2019: 3,430 t<br>2020: 1,534 t<br>2021: 5,270 t<br>2022: 1,764 t<br>2023: 3,817 t     </div>`)[0];
+                popup_94ef0784d3c68d4453b24baaa33013f1.setContent(html_b1fa6718e7c021c7f9d8c69706f1311d);
+            
+        
+
+        circle_marker_419c9d203284989ec23b4d1f3c6812b7.bindPopup(popup_94ef0784d3c68d4453b24baaa33013f1)
+        ;
+
+        
+    
+    
+            var circle_marker_17e0642014f2dcf68cc1ecbfc09cef39 = L.circleMarker(
+                [45.57, -122.59],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fd48d13ddc342dd9010d9c5a8a744d79);
+        
+    
+        var popup_9314a2e2fcb62111e5d2e3b4e242e371 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16b8b8cda760ba5b36538a378bce147f = $(`<div id="html_16b8b8cda760ba5b36538a378bce147f" style="width: 100.0%; height: 100.0%;">     <strong>Station: Station_E</strong><br>     Avg Load (5y): 2,072 t<br>     Trend (2019-2023): 1,268 t<br>     <hr>     <strong>History:</strong><br>2019: 1,488 t<br>2020: 1,392 t<br>2021: 2,297 t<br>2022: 2,426 t<br>2023: 2,756 t     </div>`)[0];
+                popup_9314a2e2fcb62111e5d2e3b4e242e371.setContent(html_16b8b8cda760ba5b36538a378bce147f);
+            
+        
+
+        circle_marker_17e0642014f2dcf68cc1ecbfc09cef39.bindPopup(popup_9314a2e2fcb62111e5d2e3b4e242e371)
+        ;
+
+        
+    
+    
+            var circle_marker_bc8704d6cde08c66214d5ea6e70b6e62 = L.circleMarker(
+                [45.585, -122.57],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_fd48d13ddc342dd9010d9c5a8a744d79);
+        
+    
+        var popup_95c0d1b6434c554b1599283efbbdfcda = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_77ba4774885e8ac8ef0ccaef095f3cbb = $(`<div id="html_77ba4774885e8ac8ef0ccaef095f3cbb" style="width: 100.0%; height: 100.0%;">     <strong>Station: Station_F</strong><br>     Avg Load (5y): 3,175 t<br>     Trend (2019-2023): -3,846 t<br>     <hr>     <strong>History:</strong><br>2019: 4,878 t<br>2020: 5,005 t<br>2021: 3,913 t<br>2022: 1,047 t<br>2023: 1,031 t     </div>`)[0];
+                popup_95c0d1b6434c554b1599283efbbdfcda.setContent(html_77ba4774885e8ac8ef0ccaef095f3cbb);
+            
+        
+
+        circle_marker_bc8704d6cde08c66214d5ea6e70b6e62.bindPopup(popup_95c0d1b6434c554b1599283efbbdfcda)
+        ;
+
+        
+    
+</script>
+</html>

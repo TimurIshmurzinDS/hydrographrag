@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d1fbb0d7fbb93cd9d39388973cbec40f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d1fbb0d7fbb93cd9d39388973cbec40f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d1fbb0d7fbb93cd9d39388973cbec40f = L.map(
+                "map_d1fbb0d7fbb93cd9d39388973cbec40f",
+                {
+                    center: [43.65, 80.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_54027bbaa6f0a035eec739db0c5d1739 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_54027bbaa6f0a035eec739db0c5d1739.addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+            var marker_b8b49f15fb3dc070091abfd3f25a2a20 = L.marker(
+                [43.65, 80.2],
+                {
+}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+            var icon_a5f0724b2d65f896e74577e14c8f2733 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4a721bb95c32c71ad8ae12d6073895a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98761d3707ac64e45595a26328f3521c = $(`<div id="html_98761d3707ac64e45595a26328f3521c" style="width: 100.0%; height: 100.0%;">Командный Центр 'Коктал-1'</div>`)[0];
+                popup_d4a721bb95c32c71ad8ae12d6073895a.setContent(html_98761d3707ac64e45595a26328f3521c);
+            
+        
+
+        marker_b8b49f15fb3dc070091abfd3f25a2a20.bindPopup(popup_d4a721bb95c32c71ad8ae12d6073895a)
+        ;
+
+        
+    
+    
+                marker_b8b49f15fb3dc070091abfd3f25a2a20.setIcon(icon_a5f0724b2d65f896e74577e14c8f2733);
+            
+    
+            var circle_marker_32b1e6b213bcc54a02bda8176a79afa3 = L.circleMarker(
+                [43.55703516064104, 80.1935146781873],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_c782e2f6f9975e9f0426540864dc8233 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4e382af49dd9a52ad26cedd024db4f9 = $(`<div id="html_f4e382af49dd9a52ad26cedd024db4f9" style="width: 100.0%; height: 100.0%;">Кристалл #1: Доступен для разведки</div>`)[0];
+                popup_c782e2f6f9975e9f0426540864dc8233.setContent(html_f4e382af49dd9a52ad26cedd024db4f9);
+            
+        
+
+        circle_marker_32b1e6b213bcc54a02bda8176a79afa3.bindPopup(popup_c782e2f6f9975e9f0426540864dc8233)
+        ;
+
+        
+    
+    
+            var circle_marker_2bd665fd9b3de81578bcdf720ddd6fbb = L.circleMarker(
+                [43.593458424409654, 80.29358873848759],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_3b3bec8454e2f408d93a01816b90248d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77f3c38d076e758d9fe74325e73b1509 = $(`<div id="html_77f3c38d076e758d9fe74325e73b1509" style="width: 100.0%; height: 100.0%;">Кристалл #2: Доступен для разведки</div>`)[0];
+                popup_3b3bec8454e2f408d93a01816b90248d.setContent(html_77f3c38d076e758d9fe74325e73b1509);
+            
+        
+
+        circle_marker_2bd665fd9b3de81578bcdf720ddd6fbb.bindPopup(popup_3b3bec8454e2f408d93a01816b90248d)
+        ;
+
+        
+    
+    
+            var circle_marker_14faa84f2a4d132b04a435ebfa7dc63f = L.circleMarker(
+                [43.567446731581036, 80.22114555916018],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_b4f5dd64c887d848089dba2da2824f54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c01c45901796b1f2950f14645588d23 = $(`<div id="html_2c01c45901796b1f2950f14645588d23" style="width: 100.0%; height: 100.0%;">Кристалл #3: Доступен для разведки</div>`)[0];
+                popup_b4f5dd64c887d848089dba2da2824f54.setContent(html_2c01c45901796b1f2950f14645588d23);
+            
+        
+
+        circle_marker_14faa84f2a4d132b04a435ebfa7dc63f.bindPopup(popup_b4f5dd64c887d848089dba2da2824f54)
+        ;
+
+        
+    
+    
+            var circle_marker_d987d6c0afd3db695029a377c3076ba2 = L.circleMarker(
+                [43.619547875095385, 80.19312735674383],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_6acceb7dde3579807820566cd4c0b951 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab90617beacafa174422962cb2c38cc3 = $(`<div id="html_ab90617beacafa174422962cb2c38cc3" style="width: 100.0%; height: 100.0%;">Кристалл #4: Захвачен</div>`)[0];
+                popup_6acceb7dde3579807820566cd4c0b951.setContent(html_ab90617beacafa174422962cb2c38cc3);
+            
+        
+
+        circle_marker_d987d6c0afd3db695029a377c3076ba2.bindPopup(popup_6acceb7dde3579807820566cd4c0b951)
+        ;
+
+        
+    
+    
+            var poly_line_22ae0055345b640f463eeeddfc962a95 = L.polyline(
+                [[43.65, 80.2], [43.619547875095385, 80.19312735674383]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": "5, 10", "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+            var circle_marker_6d2dea36d1541e2f9c79c2cfcdb27e64 = L.circleMarker(
+                [43.65662662936103, 80.11663447565608],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_48642bd94ceb091d1f679e111f382940 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afc29f9b9b56d4bb4edadec477ddab4c = $(`<div id="html_afc29f9b9b56d4bb4edadec477ddab4c" style="width: 100.0%; height: 100.0%;">Кристалл #5: Доступен для разведки</div>`)[0];
+                popup_48642bd94ceb091d1f679e111f382940.setContent(html_afc29f9b9b56d4bb4edadec477ddab4c);
+            
+        
+
+        circle_marker_6d2dea36d1541e2f9c79c2cfcdb27e64.bindPopup(popup_48642bd94ceb091d1f679e111f382940)
+        ;
+
+        
+    
+    
+            var circle_marker_f0b3a9b44c4d365c4d0180b18d2ac137 = L.circleMarker(
+                [43.718635992388194, 80.29798746101295],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_fc0c19aa4c46b58aafda0f0d65a7cf0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9b15548d161f6bf8dac1115b36480dd = $(`<div id="html_b9b15548d161f6bf8dac1115b36480dd" style="width: 100.0%; height: 100.0%;">Кристалл #6: Доступен для разведки</div>`)[0];
+                popup_fc0c19aa4c46b58aafda0f0d65a7cf0e.setContent(html_b9b15548d161f6bf8dac1115b36480dd);
+            
+        
+
+        circle_marker_f0b3a9b44c4d365c4d0180b18d2ac137.bindPopup(popup_fc0c19aa4c46b58aafda0f0d65a7cf0e)
+        ;
+
+        
+    
+    
+            var circle_marker_8a05c8efc73bf1b0c74a79117f9946ca = L.circleMarker(
+                [43.6603382379885, 80.29176737677516],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_f788d1245059d7685d8e5f84c632859c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4cb08ec16d1c45f98e4e970e0340b818 = $(`<div id="html_4cb08ec16d1c45f98e4e970e0340b818" style="width: 100.0%; height: 100.0%;">Кристалл #7: Доступен для разведки</div>`)[0];
+                popup_f788d1245059d7685d8e5f84c632859c.setContent(html_4cb08ec16d1c45f98e4e970e0340b818);
+            
+        
+
+        circle_marker_8a05c8efc73bf1b0c74a79117f9946ca.bindPopup(popup_f788d1245059d7685d8e5f84c632859c)
+        ;
+
+        
+    
+    
+            var circle_marker_7487d6a23a5d1020d89589bdb20de528 = L.circleMarker(
+                [43.628182201394196, 80.2548548154712],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_2f8edbf299c1c4a71f2f3d4c8a8e079c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5fe3cbe27098d2cfb1b86c50fc93380 = $(`<div id="html_d5fe3cbe27098d2cfb1b86c50fc93380" style="width: 100.0%; height: 100.0%;">Кристалл #8: Доступен для разведки</div>`)[0];
+                popup_2f8edbf299c1c4a71f2f3d4c8a8e079c.setContent(html_d5fe3cbe27098d2cfb1b86c50fc93380);
+            
+        
+
+        circle_marker_7487d6a23a5d1020d89589bdb20de528.bindPopup(popup_2f8edbf299c1c4a71f2f3d4c8a8e079c)
+        ;
+
+        
+    
+    
+            var circle_marker_e740afdf000334e1377708f08df237d7 = L.circleMarker(
+                [43.58577851984197, 80.1803397695253],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_5da42651c5e02f6d76a0a9c75ec45dc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_feb6e3e7619e4dff11a4774b59646d43 = $(`<div id="html_feb6e3e7619e4dff11a4774b59646d43" style="width: 100.0%; height: 100.0%;">Кристалл #9: Доступен для разведки</div>`)[0];
+                popup_5da42651c5e02f6d76a0a9c75ec45dc2.setContent(html_feb6e3e7619e4dff11a4774b59646d43);
+            
+        
+
+        circle_marker_e740afdf000334e1377708f08df237d7.bindPopup(popup_5da42651c5e02f6d76a0a9c75ec45dc2)
+        ;
+
+        
+    
+    
+            var circle_marker_16e4121c59e337a95c2b08d09d900fa1 = L.circleMarker(
+                [43.608292684254316, 80.15110445528752],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_6dc06ae2475519b9e06f8285c8e1503e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7817de82df706dcc7895234252b31d6c = $(`<div id="html_7817de82df706dcc7895234252b31d6c" style="width: 100.0%; height: 100.0%;">Кристалл #10: Доступен для разведки</div>`)[0];
+                popup_6dc06ae2475519b9e06f8285c8e1503e.setContent(html_7817de82df706dcc7895234252b31d6c);
+            
+        
+
+        circle_marker_16e4121c59e337a95c2b08d09d900fa1.bindPopup(popup_6dc06ae2475519b9e06f8285c8e1503e)
+        ;
+
+        
+    
+    
+            var circle_2bb6db977a0cb67f1864a3e067362902 = L.circle(
+                [43.62736942233212, 80.16107787215824],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_6f1ae4a66ba679eb12b68bbc2bbc9190 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0433683e402ca5257149943c6b5dea2 = $(`<div id="html_f0433683e402ca5257149943c6b5dea2" style="width: 100.0%; height: 100.0%;">ОПАСНОСТЬ: Космическая аномалия!</div>`)[0];
+                popup_6f1ae4a66ba679eb12b68bbc2bbc9190.setContent(html_f0433683e402ca5257149943c6b5dea2);
+            
+        
+
+        circle_2bb6db977a0cb67f1864a3e067362902.bindPopup(popup_6f1ae4a66ba679eb12b68bbc2bbc9190)
+        ;
+
+        
+    
+    
+            var circle_d1e51e4babbc3f87bd801b67696dd3fd = L.circle(
+                [43.665015408537016, 80.18873196915756],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_96fb365837159295ec230440fa81acb1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_290098698dc56627f364999b4dbc5655 = $(`<div id="html_290098698dc56627f364999b4dbc5655" style="width: 100.0%; height: 100.0%;">ОПАСНОСТЬ: Космическая аномалия!</div>`)[0];
+                popup_96fb365837159295ec230440fa81acb1.setContent(html_290098698dc56627f364999b4dbc5655);
+            
+        
+
+        circle_d1e51e4babbc3f87bd801b67696dd3fd.bindPopup(popup_96fb365837159295ec230440fa81acb1)
+        ;
+
+        
+    
+    
+            var circle_1b5bd90511ad87dafea2a24e58aac4bc = L.circle(
+                [43.67382889464601, 80.28359127621627],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_d1fbb0d7fbb93cd9d39388973cbec40f);
+        
+    
+        var popup_119f5296f657b9d7405257c9398482bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f86fc4b3ae5199ffb2301ad5c1c701c = $(`<div id="html_7f86fc4b3ae5199ffb2301ad5c1c701c" style="width: 100.0%; height: 100.0%;">ОПАСНОСТЬ: Космическая аномалия!</div>`)[0];
+                popup_119f5296f657b9d7405257c9398482bd.setContent(html_7f86fc4b3ae5199ffb2301ad5c1c701c);
+            
+        
+
+        circle_1b5bd90511ad87dafea2a24e58aac4bc.bindPopup(popup_119f5296f657b9d7405257c9398482bd)
+        ;
+
+        
+    
+</script>
+</html>

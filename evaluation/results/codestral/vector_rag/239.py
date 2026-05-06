@@ -1,0 +1,20 @@
+python
+   import geopandas as gpd
+   import folium
+   from shapely import wkt
+
+   # Load the shapefile and convert to CRS 'EPSG:4326'
+   basin = gpd.read_file(r"data/basin_data.shp")
+   basin = basin.to_crs('EPSG:4326')
+
+   # Initialize folium.Map using the centroid of the shapefile and parameter tiles='CartoDB positron'
+   m = folium.Map(location=[basin.geometry.centroid.y, basin.geometry.centroid.x], tiles='CartoDB positron')
+
+   # Add the basin to the map using folium.GeoJson
+   folium.GeoJson(basin, style_function=lambda x: {'fillColor': 'green', 'color': 'darkgreen', 'fillOpacity': 0.2}).add_to(m)
+
+   # Since we don't have the exact coordinates or water level data for Koktal River in the context,
+   # we can't create a hardcoded list of dictionaries to represent these points on the map.
+
+   # Save the final map
+   m.save("239.html")

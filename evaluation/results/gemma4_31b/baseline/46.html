@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8888b7fd1062dd15017e83eefb093424 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Легенда:</b><br>
+     <i style="background:blue; width:10px; height:10px; display:inline-block"></i> Повышение<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Понижение<br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Стабильно
+     </div>
+     
+    
+            <div class="folium-map" id="map_8888b7fd1062dd15017e83eefb093424" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8888b7fd1062dd15017e83eefb093424 = L.map(
+                "map_8888b7fd1062dd15017e83eefb093424",
+                {
+                    center: [48.1826, 65.522],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_73ae2a39f116d1cc07cc17cc9c6cdbb2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_73ae2a39f116d1cc07cc17cc9c6cdbb2.addTo(map_8888b7fd1062dd15017e83eefb093424);
+        
+    
+            var circle_marker_f758733269a000977cbeb686e86ceac7 = L.circleMarker(
+                [48.123, 65.45],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8888b7fd1062dd15017e83eefb093424);
+        
+    
+        var popup_0290fa4e2dffd933236cb4730f16ccf2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e48a870f19d71316a500e19c3c360ce7 = $(`<div id="html_e48a870f19d71316a500e19c3c360ce7" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Upper Sarykan<br><b>Уровень 2022:</b> 2.06 м<br><b>Уровень 2023:</b> 1.51 м<br><b>Разница:</b> -0.55 м</div>`)[0];
+                popup_0290fa4e2dffd933236cb4730f16ccf2.setContent(html_e48a870f19d71316a500e19c3c360ce7);
+            
+        
+
+        circle_marker_f758733269a000977cbeb686e86ceac7.bindPopup(popup_0290fa4e2dffd933236cb4730f16ccf2)
+        ;
+
+        
+    
+    
+            var circle_marker_0fd06cb1fe69318785a89eeb4ac91bcb = L.circleMarker(
+                [48.15, 65.48],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8888b7fd1062dd15017e83eefb093424);
+        
+    
+        var popup_13df49bc92a7445a89971830320d0d5c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c29700d547c1df9057a4da72454a5479 = $(`<div id="html_c29700d547c1df9057a4da72454a5479" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Mid-Upper Sarykan<br><b>Уровень 2022:</b> 2.93 м<br><b>Уровень 2023:</b> 1.32 м<br><b>Разница:</b> -1.61 м</div>`)[0];
+                popup_13df49bc92a7445a89971830320d0d5c.setContent(html_c29700d547c1df9057a4da72454a5479);
+            
+        
+
+        circle_marker_0fd06cb1fe69318785a89eeb4ac91bcb.bindPopup(popup_13df49bc92a7445a89971830320d0d5c)
+        ;
+
+        
+    
+    
+            var circle_marker_952b0e9aa707663bfba7b94651b95496 = L.circleMarker(
+                [48.18, 65.52],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8888b7fd1062dd15017e83eefb093424);
+        
+    
+        var popup_2fabdba12c1b01d3c5de60d12d57cca6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_215635392c2d76eb6cdb483b33b123fa = $(`<div id="html_215635392c2d76eb6cdb483b33b123fa" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Central Sarykan<br><b>Уровень 2022:</b> 2.60 м<br><b>Уровень 2023:</b> 2.93 м<br><b>Разница:</b> 0.33 м</div>`)[0];
+                popup_2fabdba12c1b01d3c5de60d12d57cca6.setContent(html_215635392c2d76eb6cdb483b33b123fa);
+            
+        
+
+        circle_marker_952b0e9aa707663bfba7b94651b95496.bindPopup(popup_2fabdba12c1b01d3c5de60d12d57cca6)
+        ;
+
+        
+    
+    
+            var circle_marker_8fbcb3aad62a851f4d54ef76b9fb5d06 = L.circleMarker(
+                [48.21, 65.56],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8888b7fd1062dd15017e83eefb093424);
+        
+    
+        var popup_c8d75f70963ed57e8567fbcd80c37c7b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2fcf092588968f295b94a469fbd3523c = $(`<div id="html_2fcf092588968f295b94a469fbd3523c" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Mid-Lower Sarykan<br><b>Уровень 2022:</b> 2.40 м<br><b>Уровень 2023:</b> 2.40 м<br><b>Разница:</b> 0.00 м</div>`)[0];
+                popup_c8d75f70963ed57e8567fbcd80c37c7b.setContent(html_2fcf092588968f295b94a469fbd3523c);
+            
+        
+
+        circle_marker_8fbcb3aad62a851f4d54ef76b9fb5d06.bindPopup(popup_c8d75f70963ed57e8567fbcd80c37c7b)
+        ;
+
+        
+    
+    
+            var circle_marker_101e3de70ff31ed605f4fc1ea1b6625d = L.circleMarker(
+                [48.25, 65.6],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8888b7fd1062dd15017e83eefb093424);
+        
+    
+        var popup_ff78bd4621b8471372b0bcf395e55715 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b497c2ae351764b8149efb1bcbf36941 = $(`<div id="html_b497c2ae351764b8149efb1bcbf36941" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Lower Sarykan<br><b>Уровень 2022:</b> 1.73 м<br><b>Уровень 2023:</b> 2.62 м<br><b>Разница:</b> 0.88 м</div>`)[0];
+                popup_ff78bd4621b8471372b0bcf395e55715.setContent(html_b497c2ae351764b8149efb1bcbf36941);
+            
+        
+
+        circle_marker_101e3de70ff31ed605f4fc1ea1b6625d.bindPopup(popup_ff78bd4621b8471372b0bcf395e55715)
+        ;
+
+        
+    
+</script>
+</html>

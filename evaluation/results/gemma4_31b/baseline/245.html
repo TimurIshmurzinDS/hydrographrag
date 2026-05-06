@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_727b49b052afbb9f762923362a2727aa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_727b49b052afbb9f762923362a2727aa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_727b49b052afbb9f762923362a2727aa = L.map(
+                "map_727b49b052afbb9f762923362a2727aa",
+                {
+                    center: [49.56, 85.33],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0651e7fbcd93d3aa32c0ebec459dbb30 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0651e7fbcd93d3aa32c0ebec459dbb30.addTo(map_727b49b052afbb9f762923362a2727aa);
+        
+    
+            var poly_line_f169b887cc85b7060a0827fc2821e78a = L.polyline(
+                [[49.512, 85.21], [49.53, 85.25], [49.55, 85.3], [49.58, 85.38], [49.61, 85.45]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_727b49b052afbb9f762923362a2727aa);
+        
+    
+            poly_line_f169b887cc85b7060a0827fc2821e78a.bindTooltip(
+                `<div>
+                     Река Караой
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb5223ae03517e58e4ee48d4f64ad53c = L.marker(
+                [49.512, 85.21],
+                {
+}
+            ).addTo(map_727b49b052afbb9f762923362a2727aa);
+        
+    
+        var popup_d72de980abb4614c03efd680f13fb8a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30085d8e044e114398d9f55191d760f3 = $(`<div id="html_30085d8e044e114398d9f55191d760f3" style="width: 100.0%; height: 100.0%;">Исток (условно)</div>`)[0];
+                popup_d72de980abb4614c03efd680f13fb8a3.setContent(html_30085d8e044e114398d9f55191d760f3);
+            
+        
+
+        marker_cb5223ae03517e58e4ee48d4f64ad53c.bindPopup(popup_d72de980abb4614c03efd680f13fb8a3)
+        ;
+
+        
+    
+    
+            var marker_1318538a35734c82db4fca3ace2c105f = L.marker(
+                [49.61, 85.45],
+                {
+}
+            ).addTo(map_727b49b052afbb9f762923362a2727aa);
+        
+    
+        var popup_496f2ea893308de40d11f935d20d8e59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_719232aefffecfe9f9ba60346b6eb3e9 = $(`<div id="html_719232aefffecfe9f9ba60346b6eb3e9" style="width: 100.0%; height: 100.0%;">Устье (условно)</div>`)[0];
+                popup_496f2ea893308de40d11f935d20d8e59.setContent(html_719232aefffecfe9f9ba60346b6eb3e9);
+            
+        
+
+        marker_1318538a35734c82db4fca3ace2c105f.bindPopup(popup_496f2ea893308de40d11f935d20d8e59)
+        ;
+
+        
+    
+</script>
+</html>

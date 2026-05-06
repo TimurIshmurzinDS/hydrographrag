@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e58c1de4d49f3a85285388878bc3a64c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e58c1de4d49f3a85285388878bc3a64c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e58c1de4d49f3a85285388878bc3a64c = L.map(
+                "map_e58c1de4d49f3a85285388878bc3a64c",
+                {
+                    center: [43.0528, 76.9167],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_05d2b250645624568e99c92ca130020d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_05d2b250645624568e99c92ca130020d.addTo(map_e58c1de4d49f3a85285388878bc3a64c);
+        
+    
+            var measure_control_75fec5a9c9b6b6dba0165ee0f4958cbc = new L.Control.Measure(
+                {
+  "position": "topright",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "miles",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+});
+            map_e58c1de4d49f3a85285388878bc3a64c.addControl(measure_control_75fec5a9c9b6b6dba0165ee0f4958cbc);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var marker_67c1acae1ddf0992cff790b84efef0f7 = L.marker(
+                [43.0528, 76.9167],
+                {
+}
+            ).addTo(map_e58c1de4d49f3a85285388878bc3a64c);
+        
+    
+            var icon_5203c4c64fb5569c0c1be23ed09868c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3c6b146e1cd3e18184b6f3ed76e5110 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7c4bdb7c5749faa3e37d4fc7dffe697 = $(`<div id="html_c7c4bdb7c5749faa3e37d4fc7dffe697" style="width: 100.0%; height: 100.0%;">Point 1: Гравитация = 9.81 м/с^2</div>`)[0];
+                popup_d3c6b146e1cd3e18184b6f3ed76e5110.setContent(html_c7c4bdb7c5749faa3e37d4fc7dffe697);
+            
+        
+
+        marker_67c1acae1ddf0992cff790b84efef0f7.bindPopup(popup_d3c6b146e1cd3e18184b6f3ed76e5110)
+        ;
+
+        
+    
+    
+                marker_67c1acae1ddf0992cff790b84efef0f7.setIcon(icon_5203c4c64fb5569c0c1be23ed09868c4);
+            
+    
+            var marker_78b575978585d23c2d6f41d9c3beeee3 = L.marker(
+                [43.053, 76.917],
+                {
+}
+            ).addTo(map_e58c1de4d49f3a85285388878bc3a64c);
+        
+    
+            var icon_bbadeff6d85ab50f3f2fc5c291cfae50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c2c2cff245c5d8353c3683b681b7a89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7484d18eb130d8897a32bbaee89a114d = $(`<div id="html_7484d18eb130d8897a32bbaee89a114d" style="width: 100.0%; height: 100.0%;">Point 2: Гравитация = 9.82 м/с^2</div>`)[0];
+                popup_7c2c2cff245c5d8353c3683b681b7a89.setContent(html_7484d18eb130d8897a32bbaee89a114d);
+            
+        
+
+        marker_78b575978585d23c2d6f41d9c3beeee3.bindPopup(popup_7c2c2cff245c5d8353c3683b681b7a89)
+        ;
+
+        
+    
+    
+                marker_78b575978585d23c2d6f41d9c3beeee3.setIcon(icon_bbadeff6d85ab50f3f2fc5c291cfae50);
+            
+    
+            var marker_f0f4b7c97b709ff7122b9255cbda5e1e = L.marker(
+                [43.0532, 76.9175],
+                {
+}
+            ).addTo(map_e58c1de4d49f3a85285388878bc3a64c);
+        
+    
+            var icon_31a9db6c242156eac2c0360e4e3071e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89c293c013afcc2dcd419fbabb7f8fd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5e4972e381f7e8d3189f410ceff8513 = $(`<div id="html_b5e4972e381f7e8d3189f410ceff8513" style="width: 100.0%; height: 100.0%;">Point 3: Гравитация = 9.83 м/с^2</div>`)[0];
+                popup_89c293c013afcc2dcd419fbabb7f8fd4.setContent(html_b5e4972e381f7e8d3189f410ceff8513);
+            
+        
+
+        marker_f0f4b7c97b709ff7122b9255cbda5e1e.bindPopup(popup_89c293c013afcc2dcd419fbabb7f8fd4)
+        ;
+
+        
+    
+    
+                marker_f0f4b7c97b709ff7122b9255cbda5e1e.setIcon(icon_31a9db6c242156eac2c0360e4e3071e3);
+            
+    
+            var marker_e0413e816014ae724d9bef0fbe02b840 = L.marker(
+                [43.0535, 76.918],
+                {
+}
+            ).addTo(map_e58c1de4d49f3a85285388878bc3a64c);
+        
+    
+            var icon_ca6eaf6140318b667f7b240f095001e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e8954c777b689fbcb3bc108b6a4945a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c92843f7984a9ce8a6aa4a6d5bd91662 = $(`<div id="html_c92843f7984a9ce8a6aa4a6d5bd91662" style="width: 100.0%; height: 100.0%;">Point 4: Гравитация = 9.84 м/с^2</div>`)[0];
+                popup_8e8954c777b689fbcb3bc108b6a4945a.setContent(html_c92843f7984a9ce8a6aa4a6d5bd91662);
+            
+        
+
+        marker_e0413e816014ae724d9bef0fbe02b840.bindPopup(popup_8e8954c777b689fbcb3bc108b6a4945a)
+        ;
+
+        
+    
+    
+                marker_e0413e816014ae724d9bef0fbe02b840.setIcon(icon_ca6eaf6140318b667f7b240f095001e7);
+            
+</script>
+</html>

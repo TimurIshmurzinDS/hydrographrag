@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e6a6b42d5a7234eacae822e57db3b498 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e6a6b42d5a7234eacae822e57db3b498" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e6a6b42d5a7234eacae822e57db3b498 = L.map(
+                "map_e6a6b42d5a7234eacae822e57db3b498",
+                {
+                    center: [43.45, 82.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ea86aa376212304677a54a28082c1b1f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ea86aa376212304677a54a28082c1b1f.addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+            var poly_line_f13ba13cda69e8a7388d0066a87a1196 = L.polyline(
+                [[43.2, 81.5], [43.3, 81.7], [43.4, 81.9], [43.5, 82.1], [43.6, 82.3], [43.7, 82.5]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 30}
+            ).addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+            poly_line_f13ba13cda69e8a7388d0066a87a1196.bindTooltip(
+                `<div>
+                     Слой 'Капуста': Зона низкого риска (3км)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b278a39b93c6972d9726fe1624941d3a = L.polyline(
+                [[43.2, 81.5], [43.3, 81.7], [43.4, 81.9], [43.5, 82.1], [43.6, 82.3], [43.7, 82.5]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 15}
+            ).addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+            poly_line_b278a39b93c6972d9726fe1624941d3a.bindTooltip(
+                `<div>
+                     Слой 'Картофель': Зона умеренного риска (1.5км)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_57347e93bbd5130c31d072121da7601f = L.polyline(
+                [[43.2, 81.5], [43.3, 81.7], [43.4, 81.9], [43.5, 82.1], [43.6, 82.3], [43.7, 82.5]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+            poly_line_57347e93bbd5130c31d072121da7601f.bindTooltip(
+                `<div>
+                     Слой 'Свекла': Зона высокого риска (500м)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_29bf0e9996e2bcafaec208f97608b89a = L.circleMarker(
+                [43.32, 81.75],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+        var popup_9a07e0f0978b418061956e60c50fe29c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_725de782bbf68b298d8aeb2c16cb61ee = $(`<div id="html_725de782bbf68b298d8aeb2c16cb61ee" style="width: 100.0%; height: 100.0%;">Ингредиент: Поселок А<br>Риск: Высокий</div>`)[0];
+                popup_9a07e0f0978b418061956e60c50fe29c.setContent(html_725de782bbf68b298d8aeb2c16cb61ee);
+            
+        
+
+        circle_marker_29bf0e9996e2bcafaec208f97608b89a.bindPopup(popup_9a07e0f0978b418061956e60c50fe29c)
+        ;
+
+        
+    
+    
+            var circle_marker_2e0a981a3ae191a99c6c19a8d8469598 = L.circleMarker(
+                [43.51, 82.12],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+        var popup_7339bfa9dc99b9cdb909cdf78ce16569 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9af12282c0e90b83de0901295c80ed32 = $(`<div id="html_9af12282c0e90b83de0901295c80ed32" style="width: 100.0%; height: 100.0%;">Ингредиент: Поселок Б<br>Риск: Средний</div>`)[0];
+                popup_7339bfa9dc99b9cdb909cdf78ce16569.setContent(html_9af12282c0e90b83de0901295c80ed32);
+            
+        
+
+        circle_marker_2e0a981a3ae191a99c6c19a8d8469598.bindPopup(popup_7339bfa9dc99b9cdb909cdf78ce16569)
+        ;
+
+        
+    
+    
+            var circle_marker_097cba50bd62c005f8d8d1a205ec608b = L.circleMarker(
+                [43.68, 82.45],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+        var popup_1992a1fa32aa2d4bb25670aaa4a4ee88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba5e410271ceabf87d41ada62307cf60 = $(`<div id="html_ba5e410271ceabf87d41ada62307cf60" style="width: 100.0%; height: 100.0%;">Ингредиент: Поселок В<br>Риск: Низкий</div>`)[0];
+                popup_1992a1fa32aa2d4bb25670aaa4a4ee88.setContent(html_ba5e410271ceabf87d41ada62307cf60);
+            
+        
+
+        circle_marker_097cba50bd62c005f8d8d1a205ec608b.bindPopup(popup_1992a1fa32aa2d4bb25670aaa4a4ee88)
+        ;
+
+        
+    
+    
+            var marker_0cac0f17acff2d6bccf5afe6c19384a7 = L.marker(
+                [43.4, 81.4],
+                {
+}
+            ).addTo(map_e6a6b42d5a7234eacae822e57db3b498);
+        
+    
+            var icon_13a61f79f127d995bfc5d128ef4dfb3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_975ffc1d7c856ea06ac1ad008760f316 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ace4d72b676b1c064c9a3a2ad8199afb = $(`<div id="html_ace4d72b676b1c064c9a3a2ad8199afb" style="width: 100.0%; height: 100.0%;"><b>Рецепт Борща 'Аксу-Риск'</b><br>1. Бульон: Русло реки Аксу (LineString)<br>2. Свекла: Красная зона (Buffer 500m)<br>3. Картофель: Желтая зона (Buffer 1.5km)<br>4. Капуста: Зеленая зона (Buffer 3km)<br>5. Зажарка: Точки инфраструктуры<br>6. Сметана: Финальный рендеринг в .html</div>`)[0];
+                popup_975ffc1d7c856ea06ac1ad008760f316.setContent(html_ace4d72b676b1c064c9a3a2ad8199afb);
+            
+        
+
+        marker_0cac0f17acff2d6bccf5afe6c19384a7.bindPopup(popup_975ffc1d7c856ea06ac1ad008760f316)
+        ;
+
+        
+    
+    
+                marker_0cac0f17acff2d6bccf5afe6c19384a7.setIcon(icon_13a61f79f127d995bfc5d128ef4dfb3c);
+            
+</script>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a0a284e50a37613e05193581928bb759 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a0a284e50a37613e05193581928bb759" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a0a284e50a37613e05193581928bb759 = L.map(
+                "map_a0a284e50a37613e05193581928bb759",
+                {
+                    center: [48.6, 68.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_12da4e463c2c8e87684573da32478c58 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_12da4e463c2c8e87684573da32478c58.addTo(map_a0a284e50a37613e05193581928bb759);
+        
+    
+            var marker_0e3a7bc17a3b868f3a37af9e070b7eef = L.marker(
+                [48.721, 68.12],
+                {
+}
+            ).addTo(map_a0a284e50a37613e05193581928bb759);
+        
+    
+            var icon_795644eb8fece39c2638740b7cb7998b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a2c50065978e638e47769e89011a48a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ababfdf1af0480b7590bf32e1715ed69 = $(`<div id="html_ababfdf1af0480b7590bf32e1715ed69" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Tentek River<br><b>ID датчика:</b> TENT-01<br><b>Уровень:</b> 1.2 м.<br><b>Состояние:</b> Normal</div>`)[0];
+                popup_4a2c50065978e638e47769e89011a48a.setContent(html_ababfdf1af0480b7590bf32e1715ed69);
+            
+        
+
+        marker_0e3a7bc17a3b868f3a37af9e070b7eef.bindPopup(popup_4a2c50065978e638e47769e89011a48a)
+        ;
+
+        
+    
+    
+                marker_0e3a7bc17a3b868f3a37af9e070b7eef.setIcon(icon_795644eb8fece39c2638740b7cb7998b);
+            
+    
+            var marker_cd244229928feffcb329f771d7f55cae = L.marker(
+                [48.55, 68.31],
+                {
+}
+            ).addTo(map_a0a284e50a37613e05193581928bb759);
+        
+    
+            var icon_ea7fc932a2cb860042b3fbe8ed9e4204 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac88b1434992da0bd6e5c9bd89ede5cb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ef5188a93431bebb6abce1f2d55eaee = $(`<div id="html_8ef5188a93431bebb6abce1f2d55eaee" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Tentek River<br><b>ID датчика:</b> TENT-02<br><b>Уровень:</b> 2.5 м.<br><b>Состояние:</b> Warning</div>`)[0];
+                popup_ac88b1434992da0bd6e5c9bd89ede5cb.setContent(html_8ef5188a93431bebb6abce1f2d55eaee);
+            
+        
+
+        marker_cd244229928feffcb329f771d7f55cae.bindPopup(popup_ac88b1434992da0bd6e5c9bd89ede5cb)
+        ;
+
+        
+    
+    
+                marker_cd244229928feffcb329f771d7f55cae.setIcon(icon_ea7fc932a2cb860042b3fbe8ed9e4204);
+            
+    
+            var marker_50c9be26f4e23b492feda532e2c07c61 = L.marker(
+                [48.81, 68.55],
+                {
+}
+            ).addTo(map_a0a284e50a37613e05193581928bb759);
+        
+    
+            var icon_a61bed8cb2841410c41133379e040d23 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4f5f5dceb2923eaa556ca95e3a84c3c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61aa90fd5a9ed1280b04adf2490bc68f = $(`<div id="html_61aa90fd5a9ed1280b04adf2490bc68f" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Temirlik River<br><b>ID датчика:</b> TEMI-01<br><b>Уровень:</b> 0.8 м.<br><b>Состояние:</b> Normal</div>`)[0];
+                popup_b4f5f5dceb2923eaa556ca95e3a84c3c.setContent(html_61aa90fd5a9ed1280b04adf2490bc68f);
+            
+        
+
+        marker_50c9be26f4e23b492feda532e2c07c61.bindPopup(popup_b4f5f5dceb2923eaa556ca95e3a84c3c)
+        ;
+
+        
+    
+    
+                marker_50c9be26f4e23b492feda532e2c07c61.setIcon(icon_a61bed8cb2841410c41133379e040d23);
+            
+    
+            var marker_9db5bfa9d72f1df1704da9b770b32df2 = L.marker(
+                [48.62, 68.71],
+                {
+}
+            ).addTo(map_a0a284e50a37613e05193581928bb759);
+        
+    
+            var icon_95497bccbb369b4dd182ab2139a8cd22 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20fc1784251145fe0514b8a079c6f1ec = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_95789e52cefbb565acfd5d85400602cd = $(`<div id="html_95789e52cefbb565acfd5d85400602cd" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Temirlik River<br><b>ID датчика:</b> TEMI-02<br><b>Уровень:</b> 3.1 м.<br><b>Состояние:</b> Critical</div>`)[0];
+                popup_20fc1784251145fe0514b8a079c6f1ec.setContent(html_95789e52cefbb565acfd5d85400602cd);
+            
+        
+
+        marker_9db5bfa9d72f1df1704da9b770b32df2.bindPopup(popup_20fc1784251145fe0514b8a079c6f1ec)
+        ;
+
+        
+    
+    
+                marker_9db5bfa9d72f1df1704da9b770b32df2.setIcon(icon_95497bccbb369b4dd182ab2139a8cd22);
+            
+    
+            var marker_b3b508573525ea1395dee0cf202a197c = L.marker(
+                [48.41, 68.82],
+                {
+}
+            ).addTo(map_a0a284e50a37613e05193581928bb759);
+        
+    
+            var icon_def04af73cee982b4450f8ee0a116cce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c355cc32615ad806bf0812bc8fc56c8e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c82c048df80bf9d916750e2f1d45ce5a = $(`<div id="html_c82c048df80bf9d916750e2f1d45ce5a" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Temirlik River<br><b>ID датчика:</b> TEMI-03<br><b>Уровень:</b> nan м.<br><b>Состояние:</b> Offline</div>`)[0];
+                popup_c355cc32615ad806bf0812bc8fc56c8e.setContent(html_c82c048df80bf9d916750e2f1d45ce5a);
+            
+        
+
+        marker_b3b508573525ea1395dee0cf202a197c.bindPopup(popup_c355cc32615ad806bf0812bc8fc56c8e)
+        ;
+
+        
+    
+    
+                marker_b3b508573525ea1395dee0cf202a197c.setIcon(icon_def04af73cee982b4450f8ee0a116cce);
+            
+</script>
+</html>

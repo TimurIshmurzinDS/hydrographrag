@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8d84a7776287ed1b2672b3d8aa0e0bbf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8d84a7776287ed1b2672b3d8aa0e0bbf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8d84a7776287ed1b2672b3d8aa0e0bbf = L.map(
+                "map_8d84a7776287ed1b2672b3d8aa0e0bbf",
+                {
+                    center: [58.0, 60.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c430d4d3b9b03be91a1a2c9f89fcbee5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c430d4d3b9b03be91a1a2c9f89fcbee5.addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+            var circle_marker_5333fd0e52860a3065ea59eba48642db = L.circleMarker(
+                [57.3, 48.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_8b77c55300f8c01b7c55dca3eddd757b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ffcc05ee755d62fc54a3fa514f130f6 = $(`<div id="html_8ffcc05ee755d62fc54a3fa514f130f6" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Волга<br><b>Статус:</b> КРИТИЧЕСКИЙ<br><b>Текущий уровень:</b> 5.2 м<br><b>Критический уровень:</b> 5.0 м<br><b>Отклонение:</b> 0.20 м</div>`)[0];
+                popup_8b77c55300f8c01b7c55dca3eddd757b.setContent(html_8ffcc05ee755d62fc54a3fa514f130f6);
+            
+        
+
+        circle_marker_5333fd0e52860a3065ea59eba48642db.bindPopup(popup_8b77c55300f8c01b7c55dca3eddd757b)
+        ;
+
+        
+    
+    
+            var circle_marker_90acd744697d66a84775d37cef554482 = L.circleMarker(
+                [47.2, 39.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_06d8dffab0aab3219a782f958ec2f0fc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3e5eae31938d359f5237b7ba516c4462 = $(`<div id="html_3e5eae31938d359f5237b7ba516c4462" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Дон<br><b>Статус:</b> Норма<br><b>Текущий уровень:</b> 2.1 м<br><b>Критический уровень:</b> 3.0 м<br><b>Отклонение:</b> -0.90 м</div>`)[0];
+                popup_06d8dffab0aab3219a782f958ec2f0fc.setContent(html_3e5eae31938d359f5237b7ba516c4462);
+            
+        
+
+        circle_marker_90acd744697d66a84775d37cef554482.bindPopup(popup_06d8dffab0aab3219a782f958ec2f0fc)
+        ;
+
+        
+    
+    
+            var circle_marker_85868a7949e3f40634007f028fd3f864 = L.circleMarker(
+                [55.0, 82.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_aded8ee323ff4b3e79c81f60a3b15bbe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f9abd4d16767a9ffe3773f291db04f2 = $(`<div id="html_4f9abd4d16767a9ffe3773f291db04f2" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Обь<br><b>Статус:</b> КРИТИЧЕСКИЙ<br><b>Текущий уровень:</b> 7.8 м<br><b>Критический уровень:</b> 7.0 м<br><b>Отклонение:</b> 0.80 м</div>`)[0];
+                popup_aded8ee323ff4b3e79c81f60a3b15bbe.setContent(html_4f9abd4d16767a9ffe3773f291db04f2);
+            
+        
+
+        circle_marker_85868a7949e3f40634007f028fd3f864.bindPopup(popup_aded8ee323ff4b3e79c81f60a3b15bbe)
+        ;
+
+        
+    
+    
+            var circle_marker_64b758673a8772c3c20e50622225eb1d = L.circleMarker(
+                [56.4, 92.8],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_5faca84238bfb2364eae4996761fd2e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7cef143549a7cf7fdfbc2c7da040e01 = $(`<div id="html_f7cef143549a7cf7fdfbc2c7da040e01" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Енисей<br><b>Статус:</b> Норма<br><b>Текущий уровень:</b> 4.1 м<br><b>Критический уровень:</b> 5.0 м<br><b>Отклонение:</b> -0.90 м</div>`)[0];
+                popup_5faca84238bfb2364eae4996761fd2e3.setContent(html_f7cef143549a7cf7fdfbc2c7da040e01);
+            
+        
+
+        circle_marker_64b758673a8772c3c20e50622225eb1d.bindPopup(popup_5faca84238bfb2364eae4996761fd2e3)
+        ;
+
+        
+    
+    
+            var circle_marker_068d8016305433e8c651acf5c249d930 = L.circleMarker(
+                [62.1, 129.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_9faaeeec415b7a47b8ab1a92c40965bc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_370e0807bdc19fcfc2293f84cf99b511 = $(`<div id="html_370e0807bdc19fcfc2293f84cf99b511" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Лена<br><b>Статус:</b> КРИТИЧЕСКИЙ<br><b>Текущий уровень:</b> 8.5 м<br><b>Критический уровень:</b> 8.0 м<br><b>Отклонение:</b> 0.50 м</div>`)[0];
+                popup_9faaeeec415b7a47b8ab1a92c40965bc.setContent(html_370e0807bdc19fcfc2293f84cf99b511);
+            
+        
+
+        circle_marker_068d8016305433e8c651acf5c249d930.bindPopup(popup_9faaeeec415b7a47b8ab1a92c40965bc)
+        ;
+
+        
+    
+    
+            var circle_marker_8708c52eef536525e9e33df5991005f1 = L.circleMarker(
+                [52.5, 128.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_b082e5c7e2fc5c6e4d7ce5048e3a148f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_72e9581a296457108f093f04893125b8 = $(`<div id="html_72e9581a296457108f093f04893125b8" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Амур<br><b>Статус:</b> КРИТИЧЕСКИЙ<br><b>Текущий уровень:</b> 6.2 м<br><b>Критический уровень:</b> 6.0 м<br><b>Отклонение:</b> 0.20 м</div>`)[0];
+                popup_b082e5c7e2fc5c6e4d7ce5048e3a148f.setContent(html_72e9581a296457108f093f04893125b8);
+            
+        
+
+        circle_marker_8708c52eef536525e9e33df5991005f1.bindPopup(popup_b082e5c7e2fc5c6e4d7ce5048e3a148f)
+        ;
+
+        
+    
+    
+            var circle_marker_d951905fa7c4f2a0de03736eeb40290b = L.circleMarker(
+                [59.9, 30.3],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_94087a58565a621681f1fa10498d5b8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a33ee1c2860d6954c7ce292a926a92b3 = $(`<div id="html_a33ee1c2860d6954c7ce292a926a92b3" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Нева<br><b>Статус:</b> Норма<br><b>Текущий уровень:</b> 1.5 м<br><b>Критический уровень:</b> 2.0 м<br><b>Отклонение:</b> -0.50 м</div>`)[0];
+                popup_94087a58565a621681f1fa10498d5b8c.setContent(html_a33ee1c2860d6954c7ce292a926a92b3);
+            
+        
+
+        circle_marker_d951905fa7c4f2a0de03736eeb40290b.bindPopup(popup_94087a58565a621681f1fa10498d5b8c)
+        ;
+
+        
+    
+    
+            var circle_marker_726d9f292aeb75838854db5bc83badb9 = L.circleMarker(
+                [52.2, 53.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8d84a7776287ed1b2672b3d8aa0e0bbf);
+        
+    
+        var popup_44c6fa9ef1105d8f857a4d888dca5b97 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c0ef2fe1c314b4d17ef43df8b2e12dd5 = $(`<div id="html_c0ef2fe1c314b4d17ef43df8b2e12dd5" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Урал<br><b>Статус:</b> КРИТИЧЕСКИЙ<br><b>Текущий уровень:</b> 4.8 м<br><b>Критический уровень:</b> 4.5 м<br><b>Отклонение:</b> 0.30 м</div>`)[0];
+                popup_44c6fa9ef1105d8f857a4d888dca5b97.setContent(html_c0ef2fe1c314b4d17ef43df8b2e12dd5);
+            
+        
+
+        circle_marker_726d9f292aeb75838854db5bc83badb9.bindPopup(popup_44c6fa9ef1105d8f857a4d888dca5b97)
+        ;
+
+        
+    
+</script>
+</html>

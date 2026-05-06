@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e7a7f32269392355fda50fb5b0e4d7da {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e7a7f32269392355fda50fb5b0e4d7da" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e7a7f32269392355fda50fb5b0e4d7da = L.map(
+                "map_e7a7f32269392355fda50fb5b0e4d7da",
+                {
+                    center: [17.65, 49.283],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5a22101dc878bbc65e041e3cce97a3de = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5a22101dc878bbc65e041e3cce97a3de.addTo(map_e7a7f32269392355fda50fb5b0e4d7da);
+        
+    
+            var marker_80e5dac4a79584b5e2d632826fb711c8 = L.marker(
+                [17.65, 49.283],
+                {
+}
+            ).addTo(map_e7a7f32269392355fda50fb5b0e4d7da);
+        
+    
+            var icon_77216d448e0416f281619f530f56420a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18ac5f7c0afd73186f465beca9da5174 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1468a6174183afdbb168afdbcf3e861a = $(`<div id="html_1468a6174183afdbb168afdbcf3e861a" style="width: 100.0%; height: 100.0%;">Уровень воды: 2.5 м Внимание! Уровень воды превысил критическое значение.</div>`)[0];
+                popup_18ac5f7c0afd73186f465beca9da5174.setContent(html_1468a6174183afdbb168afdbcf3e861a);
+            
+        
+
+        marker_80e5dac4a79584b5e2d632826fb711c8.bindPopup(popup_18ac5f7c0afd73186f465beca9da5174)
+        ;
+
+        
+    
+    
+                marker_80e5dac4a79584b5e2d632826fb711c8.setIcon(icon_77216d448e0416f281619f530f56420a);
+            
+</script>
+</html>

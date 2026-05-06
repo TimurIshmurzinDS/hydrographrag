@@ -1,0 +1,25 @@
+import geopandas as gpd
+import folium
+from shapely import wkt
+
+# Load shapefile with raw string and convert to CRS 'EPSG:4326'
+gdf = gpd.read_file(r"data/basin_data.shp").to_crs('EPSG:4326')
+
+# Initialize folium.Map using the centroid of the shapefile and parameter tiles='CartoDB positron'
+m = folium.Map(location=gdf.centroid.iloc[0], zoom_start=10, tiles='CartoDB positron')
+
+# Add the basin to the map using folium.GeoJson (fillColor='green', color='darkgreen', fillOpacity=0.2)
+folium.GeoJson(gdf.to_crs('EPSG:4326').geometry.wkt).add_child(folium.features.GeoJsonTooltip(fields=['name'], aliases=['Название'], labels=True)).add_to(m)
+
+# Create a hardcoded list of dictionaries for coordinates (WKT) if available
+wkt_coords = [
+    {'lat': 43.1234, 'lon': 79.5678},
+    {'lat': 43.2345, 'lon': 79.6789}
+]
+
+# Add markers to the map using folium.Marker
+for coord in wkt_coords:
+    folium.Marker([coord['lat'], coord['lon']], popup='Наблюдение').add_to(m)
+
+# Save the final map
+m.save("111.html")

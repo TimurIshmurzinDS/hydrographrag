@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3b1051296bbc87c2ed4b5aaa66e1d0ed {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3b1051296bbc87c2ed4b5aaa66e1d0ed" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3b1051296bbc87c2ed4b5aaa66e1d0ed = L.map(
+                "map_3b1051296bbc87c2ed4b5aaa66e1d0ed",
+                {
+                    center: [44.7, 19.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3dc8f5044cb90e9358eaf4ff4a9389e4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3dc8f5044cb90e9358eaf4ff4a9389e4.addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+            var poly_line_32f001c9c9ccace54fda6f527fec3476 = L.polyline(
+                [[44.75, 18.8], [44.72, 18.85], [44.68, 18.9], [44.65, 18.95]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+            poly_line_32f001c9c9ccace54fda6f527fec3476.bindTooltip(
+                `<div>
+                     River Koktal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_d00a4f5a0c1f343df31b34ff2cecf8e5 = L.circle(
+                [44.75, 18.8],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 600.0, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_22f3cc6b4dad58e4ddc32d10ff3da6ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41612323673bf7d2792e09e6f68342d5 = $(`<div id="html_41612323673bf7d2792e09e6f68342d5" style="width: 100.0%; height: 100.0%;">Risk Zone: Koktal (Seasonal Peak)</div>`)[0];
+                popup_22f3cc6b4dad58e4ddc32d10ff3da6ad.setContent(html_41612323673bf7d2792e09e6f68342d5);
+            
+        
+
+        circle_d00a4f5a0c1f343df31b34ff2cecf8e5.bindPopup(popup_22f3cc6b4dad58e4ddc32d10ff3da6ad)
+        ;
+
+        
+    
+    
+            var circle_7b2e2709d0176d595f6899e9332370d2 = L.circle(
+                [44.72, 18.85],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 600.0, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_c9bdfd97cc4c4c6c72e58658f107efae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d094f7a634f9d6afeacb788e5a8e54d = $(`<div id="html_1d094f7a634f9d6afeacb788e5a8e54d" style="width: 100.0%; height: 100.0%;">Risk Zone: Koktal (Seasonal Peak)</div>`)[0];
+                popup_c9bdfd97cc4c4c6c72e58658f107efae.setContent(html_1d094f7a634f9d6afeacb788e5a8e54d);
+            
+        
+
+        circle_7b2e2709d0176d595f6899e9332370d2.bindPopup(popup_c9bdfd97cc4c4c6c72e58658f107efae)
+        ;
+
+        
+    
+    
+            var circle_80d367105597c0c82d2e05ab0f69b072 = L.circle(
+                [44.68, 18.9],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 600.0, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_b6e40665cf581a17ec99af5a0438a9e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2404dc70509ca1c6b78cddac79aba5c = $(`<div id="html_d2404dc70509ca1c6b78cddac79aba5c" style="width: 100.0%; height: 100.0%;">Risk Zone: Koktal (Seasonal Peak)</div>`)[0];
+                popup_b6e40665cf581a17ec99af5a0438a9e3.setContent(html_d2404dc70509ca1c6b78cddac79aba5c);
+            
+        
+
+        circle_80d367105597c0c82d2e05ab0f69b072.bindPopup(popup_b6e40665cf581a17ec99af5a0438a9e3)
+        ;
+
+        
+    
+    
+            var circle_b82aa51a6c41c2656819b3e6c4d8c75c = L.circle(
+                [44.65, 18.95],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 600.0, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_abd783418e99ad1a9317e6cf48d86942 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acfa37c7ffd6def805b19d528559e6cd = $(`<div id="html_acfa37c7ffd6def805b19d528559e6cd" style="width: 100.0%; height: 100.0%;">Risk Zone: Koktal (Seasonal Peak)</div>`)[0];
+                popup_abd783418e99ad1a9317e6cf48d86942.setContent(html_acfa37c7ffd6def805b19d528559e6cd);
+            
+        
+
+        circle_b82aa51a6c41c2656819b3e6c4d8c75c.bindPopup(popup_abd783418e99ad1a9317e6cf48d86942)
+        ;
+
+        
+    
+    
+            var poly_line_89043c59a1fa58b9fbc2f8664ccf000a = L.polyline(
+                [[44.8, 19.2], [44.75, 19.4], [44.7, 19.6], [44.6, 19.8]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+            poly_line_89043c59a1fa58b9fbc2f8664ccf000a.bindTooltip(
+                `<div>
+                     River Baskan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_0556e48d071d45a287bf4d5405977dc2 = L.circle(
+                [44.8, 19.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 651.0638297872341, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_a19173b1a06388af7a29a1fd58be5c8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c24e82814e000c4981ab84681fb7a95 = $(`<div id="html_4c24e82814e000c4981ab84681fb7a95" style="width: 100.0%; height: 100.0%;">Risk Zone: Baskan (Seasonal Peak)</div>`)[0];
+                popup_a19173b1a06388af7a29a1fd58be5c8a.setContent(html_4c24e82814e000c4981ab84681fb7a95);
+            
+        
+
+        circle_0556e48d071d45a287bf4d5405977dc2.bindPopup(popup_a19173b1a06388af7a29a1fd58be5c8a)
+        ;
+
+        
+    
+    
+            var circle_9c3ab4208a59a363c6d53caad3e7c368 = L.circle(
+                [44.75, 19.4],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 651.0638297872341, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_43f9e3782fd8bf1afbb29c762889df4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ada12628559f06e4593ec665171e446 = $(`<div id="html_8ada12628559f06e4593ec665171e446" style="width: 100.0%; height: 100.0%;">Risk Zone: Baskan (Seasonal Peak)</div>`)[0];
+                popup_43f9e3782fd8bf1afbb29c762889df4c.setContent(html_8ada12628559f06e4593ec665171e446);
+            
+        
+
+        circle_9c3ab4208a59a363c6d53caad3e7c368.bindPopup(popup_43f9e3782fd8bf1afbb29c762889df4c)
+        ;
+
+        
+    
+    
+            var circle_eabe184e801598ac012c4f2b43878275 = L.circle(
+                [44.7, 19.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 651.0638297872341, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_eb561e8870a25b87eee93dac9cb4c374 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2935d4000377258f1a31c2e966a38e3e = $(`<div id="html_2935d4000377258f1a31c2e966a38e3e" style="width: 100.0%; height: 100.0%;">Risk Zone: Baskan (Seasonal Peak)</div>`)[0];
+                popup_eb561e8870a25b87eee93dac9cb4c374.setContent(html_2935d4000377258f1a31c2e966a38e3e);
+            
+        
+
+        circle_eabe184e801598ac012c4f2b43878275.bindPopup(popup_eb561e8870a25b87eee93dac9cb4c374)
+        ;
+
+        
+    
+    
+            var circle_66ad751a7a803e8e2d83b31b434faa3e = L.circle(
+                [44.6, 19.8],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 651.0638297872341, "stroke": true, "weight": 3}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+        var popup_208b8c13daf2bdc919782368145a8e0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8d7f661a213b25182c8b2104536bc16 = $(`<div id="html_f8d7f661a213b25182c8b2104536bc16" style="width: 100.0%; height: 100.0%;">Risk Zone: Baskan (Seasonal Peak)</div>`)[0];
+                popup_208b8c13daf2bdc919782368145a8e0a.setContent(html_f8d7f661a213b25182c8b2104536bc16);
+            
+        
+
+        circle_66ad751a7a803e8e2d83b31b434faa3e.bindPopup(popup_208b8c13daf2bdc919782368145a8e0a)
+        ;
+
+        
+    
+    
+            var marker_f3b00c2b8271c2ff0224534340f359ab = L.marker(
+                [44.75, 18.8],
+                {
+}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+            var icon_d2db6d74676dd72fa60ad8fedbef462a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fca682ae9a0a5b79ca9ca07205488f06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34526df0630aeaee168f803ce8fbaddf = $(`<div id="html_34526df0630aeaee168f803ce8fbaddf" style="width: 100.0%; height: 100.0%;">Koktal Peak: 6.2 m3/s in Apr</div>`)[0];
+                popup_fca682ae9a0a5b79ca9ca07205488f06.setContent(html_34526df0630aeaee168f803ce8fbaddf);
+            
+        
+
+        marker_f3b00c2b8271c2ff0224534340f359ab.bindPopup(popup_fca682ae9a0a5b79ca9ca07205488f06)
+        ;
+
+        
+    
+    
+                marker_f3b00c2b8271c2ff0224534340f359ab.setIcon(icon_d2db6d74676dd72fa60ad8fedbef462a);
+            
+    
+            var marker_b9d00d66e51d10fbf52d3bcee0f66487 = L.marker(
+                [44.8, 19.2],
+                {
+}
+            ).addTo(map_3b1051296bbc87c2ed4b5aaa66e1d0ed);
+        
+    
+            var icon_c391c9554061e1baf728ad151d689e3d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_52c2ce2752d6d8194fe6d8a650b1d3f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20075f157118f6192a5e05f909f1e683 = $(`<div id="html_20075f157118f6192a5e05f909f1e683" style="width: 100.0%; height: 100.0%;">Baskan Peak: 5.1 m3/s in Apr</div>`)[0];
+                popup_52c2ce2752d6d8194fe6d8a650b1d3f5.setContent(html_20075f157118f6192a5e05f909f1e683);
+            
+        
+
+        marker_b9d00d66e51d10fbf52d3bcee0f66487.bindPopup(popup_52c2ce2752d6d8194fe6d8a650b1d3f5)
+        ;
+
+        
+    
+    
+                marker_b9d00d66e51d10fbf52d3bcee0f66487.setIcon(icon_c391c9554061e1baf728ad151d689e3d);
+            
+</script>
+</html>

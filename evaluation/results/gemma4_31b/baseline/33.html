@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_faa748f24e06859d470f4b537c60fd36 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_faa748f24e06859d470f4b537c60fd36" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_faa748f24e06859d470f4b537c60fd36 = L.map(
+                "map_faa748f24e06859d470f4b537c60fd36",
+                {
+                    center: [43.75, 81.7],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6f853ec6e796f20033b55c088b697d71 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6f853ec6e796f20033b55c088b697d71.addTo(map_faa748f24e06859d470f4b537c60fd36);
+        
+    
+            var poly_line_76a238b755b4a975564ed9c2e2d0945a = L.polyline(
+                [[43.5, 81.0], [43.6, 81.2], [43.7, 81.5], [43.8, 81.8], [43.9, 82.1], [44.0, 82.4]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_faa748f24e06859d470f4b537c60fd36);
+        
+    
+            poly_line_76a238b755b4a975564ed9c2e2d0945a.bindTooltip(
+                `<div>
+                     Река Аксу
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5e0ea70481ec7a66401665fc367e9a1 = L.circleMarker(
+                [43.55, 81.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.75, "stroke": true, "weight": 3}
+            ).addTo(map_faa748f24e06859d470f4b537c60fd36);
+        
+    
+        var popup_96cce40aa45cdfd2af7824bbe38da1e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02819896742dff4ff24ebef0da548e6d = $(`<div id="html_02819896742dff4ff24ebef0da548e6d" style="width: 100.0%; height: 100.0%;">Объект: Водозабор Северный<br>Объем: 15.5 млн м3/год</div>`)[0];
+                popup_96cce40aa45cdfd2af7824bbe38da1e7.setContent(html_02819896742dff4ff24ebef0da548e6d);
+            
+        
+
+        circle_marker_e5e0ea70481ec7a66401665fc367e9a1.bindPopup(popup_96cce40aa45cdfd2af7824bbe38da1e7)
+        ;
+
+        
+    
+    
+            var circle_marker_abfe92d1342aa5c784dac90f3320472c = L.circleMarker(
+                [43.68, 81.4],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.05, "stroke": true, "weight": 3}
+            ).addTo(map_faa748f24e06859d470f4b537c60fd36);
+        
+    
+        var popup_46a0b2ec5addf9ba4cfd44df7fd23c22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8a330ae4c18d0b9c1d479df1be6e06d = $(`<div id="html_b8a330ae4c18d0b9c1d479df1be6e06d" style="width: 100.0%; height: 100.0%;">Объект: Канал Восточный<br>Объем: 22.1 млн м3/год</div>`)[0];
+                popup_46a0b2ec5addf9ba4cfd44df7fd23c22.setContent(html_b8a330ae4c18d0b9c1d479df1be6e06d);
+            
+        
+
+        circle_marker_abfe92d1342aa5c784dac90f3320472c.bindPopup(popup_46a0b2ec5addf9ba4cfd44df7fd23c22)
+        ;
+
+        
+    
+    
+            var circle_marker_728c174163ff99d6546d73d9c47129e6 = L.circleMarker(
+                [43.82, 81.7],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.2, "stroke": true, "weight": 3}
+            ).addTo(map_faa748f24e06859d470f4b537c60fd36);
+        
+    
+        var popup_a633f10d7aeb01a47f8c941d3041007e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bae5b429eafed69e206f7c96afe25b86 = $(`<div id="html_bae5b429eafed69e206f7c96afe25b86" style="width: 100.0%; height: 100.0%;">Объект: Ирригационный узел А<br>Объем: 18.4 млн м3/год</div>`)[0];
+                popup_a633f10d7aeb01a47f8c941d3041007e.setContent(html_bae5b429eafed69e206f7c96afe25b86);
+            
+        
+
+        circle_marker_728c174163ff99d6546d73d9c47129e6.bindPopup(popup_a633f10d7aeb01a47f8c941d3041007e)
+        ;
+
+        
+    
+    
+            var circle_marker_d2ef32b1854cd71b9d7c4c4b2083cabe = L.circleMarker(
+                [43.95, 82.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(map_faa748f24e06859d470f4b537c60fd36);
+        
+    
+        var popup_58368e6562a91193a00090e3ac9599e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4743a159c79940c1b87971c80c35be34 = $(`<div id="html_4743a159c79940c1b87971c80c35be34" style="width: 100.0%; height: 100.0%;">Объект: Фермерский забор Б<br>Объем: 12.0 млн м3/год</div>`)[0];
+                popup_58368e6562a91193a00090e3ac9599e1.setContent(html_4743a159c79940c1b87971c80c35be34);
+            
+        
+
+        circle_marker_d2ef32b1854cd71b9d7c4c4b2083cabe.bindPopup(popup_58368e6562a91193a00090e3ac9599e1)
+        ;
+
+        
+    
+    
+            var marker_ea26f61c835468b60b7f81d3dc03186f = L.marker(
+                [43.75, 81.7],
+                {
+}
+            ).addTo(map_faa748f24e06859d470f4b537c60fd36);
+        
+    
+            var div_icon_964a686a2519870dc6892c30270446d3 = L.divIcon({
+  "html": "\u003cdiv style=\"font-family: Arial; color: black; font-weight: bold; \n                                background: white; padding: 10px; border: 2px solid blue; border-radius: 5px;\"\u003e\n                                \u0418\u0442\u043e\u0433\u043e\u0432\u044b\u0439 \u043e\u0431\u044a\u0435\u043c \u0437\u0430\u0431\u043e\u0440\u0430: 68.00 \u043c\u043b\u043d \u043c3/\u0433\u043e\u0434\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_ea26f61c835468b60b7f81d3dc03186f.setIcon(div_icon_964a686a2519870dc6892c30270446d3);
+            
+</script>
+</html>

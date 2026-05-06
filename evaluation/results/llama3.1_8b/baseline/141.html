@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dc5c53592a59bbfb02b4b6b4216910e2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_dc5c53592a59bbfb02b4b6b4216910e2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dc5c53592a59bbfb02b4b6b4216910e2 = L.map(
+                "map_dc5c53592a59bbfb02b4b6b4216910e2",
+                {
+                    center: [55.7558, 37.6173],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fee60528be03785240b4666a1bc7f232 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fee60528be03785240b4666a1bc7f232.addTo(map_dc5c53592a59bbfb02b4b6b4216910e2);
+        
+    
+            var marker_e2cae9a3a3a681bc837cec206e6f5628 = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_dc5c53592a59bbfb02b4b6b4216910e2);
+        
+    
+        var popup_0a44769e529c9561c3c354a4929d32a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_926a29ba584dc0baa8272b3b7a7fc4f5 = $(`<div id="html_926a29ba584dc0baa8272b3b7a7fc4f5" style="width: 100.0%; height: 100.0%;">Река: Дон, Критический уровень воды</div>`)[0];
+                popup_0a44769e529c9561c3c354a4929d32a5.setContent(html_926a29ba584dc0baa8272b3b7a7fc4f5);
+            
+        
+
+        marker_e2cae9a3a3a681bc837cec206e6f5628.bindPopup(popup_0a44769e529c9561c3c354a4929d32a5)
+        ;
+
+        
+    
+    
+            var marker_ff5ef7361e8819d7b60d0c15ee0f81c3 = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_dc5c53592a59bbfb02b4b6b4216910e2);
+        
+    
+        var popup_5ea0fc4df589c81e2ea72836046c06ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_993abd3876d574272f01528c25ff2a92 = $(`<div id="html_993abd3876d574272f01528c25ff2a92" style="width: 100.0%; height: 100.0%;">Река: Волга, Критический уровень воды</div>`)[0];
+                popup_5ea0fc4df589c81e2ea72836046c06ec.setContent(html_993abd3876d574272f01528c25ff2a92);
+            
+        
+
+        marker_ff5ef7361e8819d7b60d0c15ee0f81c3.bindPopup(popup_5ea0fc4df589c81e2ea72836046c06ec)
+        ;
+
+        
+    
+    
+            var marker_faffaf94a3eab5c448d5aa164e3fd898 = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_dc5c53592a59bbfb02b4b6b4216910e2);
+        
+    
+        var popup_cf40fe34f87b51bc66076fd2c6978cae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f413fe815ba2587f344801193fdd0ae1 = $(`<div id="html_f413fe815ba2587f344801193fdd0ae1" style="width: 100.0%; height: 100.0%;">Река: Нева, Критический уровень воды</div>`)[0];
+                popup_cf40fe34f87b51bc66076fd2c6978cae.setContent(html_f413fe815ba2587f344801193fdd0ae1);
+            
+        
+
+        marker_faffaf94a3eab5c448d5aa164e3fd898.bindPopup(popup_cf40fe34f87b51bc66076fd2c6978cae)
+        ;
+
+        
+    
+    
+            var marker_cdbd7861ba780b14ff4fcbe5aaa9ce9b = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_dc5c53592a59bbfb02b4b6b4216910e2);
+        
+    
+        var popup_0d06a2d02c94433908e4cd0fb099c708 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c01c69fbf9ef7092d109885bee65125d = $(`<div id="html_c01c69fbf9ef7092d109885bee65125d" style="width: 100.0%; height: 100.0%;">Река: Обь, Критический уровень воды</div>`)[0];
+                popup_0d06a2d02c94433908e4cd0fb099c708.setContent(html_c01c69fbf9ef7092d109885bee65125d);
+            
+        
+
+        marker_cdbd7861ba780b14ff4fcbe5aaa9ce9b.bindPopup(popup_0d06a2d02c94433908e4cd0fb099c708)
+        ;
+
+        
+    
+</script>
+</html>

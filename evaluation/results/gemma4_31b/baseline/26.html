@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fab87e4312dd7e1389832f28213bfb8d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fab87e4312dd7e1389832f28213bfb8d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fab87e4312dd7e1389832f28213bfb8d = L.map(
+                "map_fab87e4312dd7e1389832f28213bfb8d",
+                {
+                    center: [50.65, 13.65],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_fab87e4312dd7e1389832f28213bfb8d);
+
+            
+
+        
+    
+            var tile_layer_f7d4d88de4e1173d329e03ffbed409d9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f7d4d88de4e1173d329e03ffbed409d9.addTo(map_fab87e4312dd7e1389832f28213bfb8d);
+        
+    
+            var marker_0145b92623e2977dab492cd5f5e12d06 = L.marker(
+                [50.65, 13.65],
+                {
+}
+            ).addTo(map_fab87e4312dd7e1389832f28213bfb8d);
+        
+    
+            var icon_049ebc9981c3a7d2abb9cb4d759562f7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e01eef3b927ac7dd136fc00fe7f50382 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ff8499e38f31899d0d1051a7bc9e98c = $(`<div id="html_1ff8499e38f31899d0d1051a7bc9e98c" style="width: 100.0%; height: 100.0%;"><b>Река: Osek River</b><br>Текущий уровень: 5.19 м<br>Статус: КРИТИЧЕСКИЙ (Паводок)<br>Время замера: 2026-04-18 10:26:27</div>`)[0];
+                popup_e01eef3b927ac7dd136fc00fe7f50382.setContent(html_1ff8499e38f31899d0d1051a7bc9e98c);
+            
+        
+
+        marker_0145b92623e2977dab492cd5f5e12d06.bindPopup(popup_e01eef3b927ac7dd136fc00fe7f50382)
+        ;
+
+        
+    
+    
+            marker_0145b92623e2977dab492cd5f5e12d06.bindTooltip(
+                `<div>
+                     Гидрологический пост Osek River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0145b92623e2977dab492cd5f5e12d06.setIcon(icon_049ebc9981c3a7d2abb9cb4d759562f7);
+            
+    
+            var circle_f982f1256f13d607639b364fb455cbe3 = L.circle(
+                [50.65, 13.65],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_fab87e4312dd7e1389832f28213bfb8d);
+        
+    
+        var popup_0ab18be4fdb9b207e6e4678029de5700 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bcc76cc30082ab41210fd8350a4ef42 = $(`<div id="html_2bcc76cc30082ab41210fd8350a4ef42" style="width: 100.0%; height: 100.0%;">Зона возможного затопления</div>`)[0];
+                popup_0ab18be4fdb9b207e6e4678029de5700.setContent(html_2bcc76cc30082ab41210fd8350a4ef42);
+            
+        
+
+        circle_f982f1256f13d607639b364fb455cbe3.bindPopup(popup_0ab18be4fdb9b207e6e4678029de5700)
+        ;
+
+        
+    
+</script>
+</html>

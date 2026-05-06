@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5c47ff8b47ca7191edbbe853bc0e2307 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5c47ff8b47ca7191edbbe853bc0e2307" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5c47ff8b47ca7191edbbe853bc0e2307 = L.map(
+                "map_5c47ff8b47ca7191edbbe853bc0e2307",
+                {
+                    center: [55.808673584805966, 37.63146167284661],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f4cda838e17514ae8200896904c1edd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7f4cda838e17514ae8200896904c1edd.addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+            var circle_marker_e55699cf2f79d6b40707919a0d776950 = L.circleMarker(
+                [56.22040866250784, 37.328827966319366],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_07aab9f936c99ebcbf290d04307a6bfe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8abf4a7109cd59c6b11337c63c59833c = $(`<div id="html_8abf4a7109cd59c6b11337c63c59833c" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_1<br><b>Название:</b> Датчик 1<br><b>Статус:</b> Warning<br><b>Уровень воды:</b> 2.67 м.</div>`)[0];
+                popup_07aab9f936c99ebcbf290d04307a6bfe.setContent(html_8abf4a7109cd59c6b11337c63c59833c);
+            
+        
+
+        circle_marker_e55699cf2f79d6b40707919a0d776950.bindPopup(popup_07aab9f936c99ebcbf290d04307a6bfe)
+        ;
+
+        
+    
+    
+            var circle_marker_17495e21441cbdcc79b25e183ad61be8 = L.circleMarker(
+                [55.521593189190654, 37.12571778288006],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_a28cb681e6825ac9b0878d036f1aa295 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc65585e4bbaf0290ac9c79e97757c2f = $(`<div id="html_dc65585e4bbaf0290ac9c79e97757c2f" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_2<br><b>Название:</b> Датчик 2<br><b>Статус:</b> Offline<br><b>Уровень воды:</b> 3.32 м.</div>`)[0];
+                popup_a28cb681e6825ac9b0878d036f1aa295.setContent(html_dc65585e4bbaf0290ac9c79e97757c2f);
+            
+        
+
+        circle_marker_17495e21441cbdcc79b25e183ad61be8.bindPopup(popup_a28cb681e6825ac9b0878d036f1aa295)
+        ;
+
+        
+    
+    
+            var circle_marker_9b93b64ae121f06708e2489d45ee598e = L.circleMarker(
+                [56.0527334388102, 37.871373965851085],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_18a70a50fe77dfea3c5ebf8dc9ca89ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c265df6f85c7e5484ae31b6a5fa32141 = $(`<div id="html_c265df6f85c7e5484ae31b6a5fa32141" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_3<br><b>Название:</b> Датчик 3<br><b>Статус:</b> Active<br><b>Уровень воды:</b> 1.24 м.</div>`)[0];
+                popup_18a70a50fe77dfea3c5ebf8dc9ca89ff.setContent(html_c265df6f85c7e5484ae31b6a5fa32141);
+            
+        
+
+        circle_marker_9b93b64ae121f06708e2489d45ee598e.bindPopup(popup_18a70a50fe77dfea3c5ebf8dc9ca89ff)
+        ;
+
+        
+    
+    
+            var circle_marker_31e1fae88450e45c8556afb067c78e7a = L.circleMarker(
+                [56.168225547405974, 37.565669910459],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_3e7d5853c076fa4d46c1377ba32feace = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_115f2663136c08444c9711038cdf31dd = $(`<div id="html_115f2663136c08444c9711038cdf31dd" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_4<br><b>Название:</b> Датчик 4<br><b>Статус:</b> Active<br><b>Уровень воды:</b> 3.14 м.</div>`)[0];
+                popup_3e7d5853c076fa4d46c1377ba32feace.setContent(html_115f2663136c08444c9711038cdf31dd);
+            
+        
+
+        circle_marker_31e1fae88450e45c8556afb067c78e7a.bindPopup(popup_3e7d5853c076fa4d46c1377ba32feace)
+        ;
+
+        
+    
+    
+            var circle_marker_99deaec9b558f24df6c17b4a6e9b9bab = L.circleMarker(
+                [55.577868012223824, 38.0634910208577],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_883e902f1792e10f6be0ea431148edcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bea16298803876629a2969d1b64b7e5a = $(`<div id="html_bea16298803876629a2969d1b64b7e5a" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_5<br><b>Название:</b> Датчик 5<br><b>Статус:</b> Offline<br><b>Уровень воды:</b> 5.65 м.</div>`)[0];
+                popup_883e902f1792e10f6be0ea431148edcc.setContent(html_bea16298803876629a2969d1b64b7e5a);
+            
+        
+
+        circle_marker_99deaec9b558f24df6c17b4a6e9b9bab.bindPopup(popup_883e902f1792e10f6be0ea431148edcc)
+        ;
+
+        
+    
+    
+            var circle_marker_6ee912aa70efdf3e968a82f48e24e426 = L.circleMarker(
+                [55.53532928021107, 38.075291234826466],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_39b10c33964075d11e0aac139488a5e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c4f90b14eb2311671ec7129d1a2429c = $(`<div id="html_5c4f90b14eb2311671ec7129d1a2429c" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_6<br><b>Название:</b> Датчик 6<br><b>Статус:</b> Offline<br><b>Уровень воды:</b> 3.21 м.</div>`)[0];
+                popup_39b10c33964075d11e0aac139488a5e4.setContent(html_5c4f90b14eb2311671ec7129d1a2429c);
+            
+        
+
+        circle_marker_6ee912aa70efdf3e968a82f48e24e426.bindPopup(popup_39b10c33964075d11e0aac139488a5e4)
+        ;
+
+        
+    
+    
+            var circle_marker_651291cb071f3116c24c8ab9f0349748 = L.circleMarker(
+                [55.67044288286258, 37.27957825410076],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_cc542b933f33a0b3c894f60914ae17b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_087712438f2e4aa5732253e3fb36f2aa = $(`<div id="html_087712438f2e4aa5732253e3fb36f2aa" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_7<br><b>Название:</b> Датчик 7<br><b>Статус:</b> Active<br><b>Уровень воды:</b> 5.18 м.</div>`)[0];
+                popup_cc542b933f33a0b3c894f60914ae17b5.setContent(html_087712438f2e4aa5732253e3fb36f2aa);
+            
+        
+
+        circle_marker_651291cb071f3116c24c8ab9f0349748.bindPopup(popup_cc542b933f33a0b3c894f60914ae17b5)
+        ;
+
+        
+    
+    
+            var circle_marker_dc6c8f965034f6b8ba1b0290d9be2511 = L.circleMarker(
+                [55.446434513687805, 38.07229221916226],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_a4b0c402bb217e2c3bc21dc7042c8c35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a21a01d338fedb79398ea9dcca5f975 = $(`<div id="html_8a21a01d338fedb79398ea9dcca5f975" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_8<br><b>Название:</b> Датчик 8<br><b>Статус:</b> Warning<br><b>Уровень воды:</b> 2.76 м.</div>`)[0];
+                popup_a4b0c402bb217e2c3bc21dc7042c8c35.setContent(html_8a21a01d338fedb79398ea9dcca5f975);
+            
+        
+
+        circle_marker_dc6c8f965034f6b8ba1b0290d9be2511.bindPopup(popup_a4b0c402bb217e2c3bc21dc7042c8c35)
+        ;
+
+        
+    
+    
+            var circle_marker_9f41f0f6f080400164c2e8ab9b063fad = L.circleMarker(
+                [56.12782434563769, 37.23513721444137],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_934427167a030a589f430b89e1e88470 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_946bfe1c2e8a5607214a23d1f2c2e155 = $(`<div id="html_946bfe1c2e8a5607214a23d1f2c2e155" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_9<br><b>Название:</b> Датчик 9<br><b>Статус:</b> Offline<br><b>Уровень воды:</b> 1.77 м.</div>`)[0];
+                popup_934427167a030a589f430b89e1e88470.setContent(html_946bfe1c2e8a5607214a23d1f2c2e155);
+            
+        
+
+        circle_marker_9f41f0f6f080400164c2e8ab9b063fad.bindPopup(popup_934427167a030a589f430b89e1e88470)
+        ;
+
+        
+    
+    
+            var circle_marker_642b2c6ff2ecb6e91b97b53293687dc8 = L.circleMarker(
+                [55.76587597552201, 37.69723715956812],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5c47ff8b47ca7191edbbe853bc0e2307);
+        
+    
+        var popup_37b534333d01617d45b592c93aaaef9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdd4f298011b3c6ef58d820dd524bb58 = $(`<div id="html_cdd4f298011b3c6ef58d820dd524bb58" style="width: 100.0%; height: 100.0%;"><b>ID:</b> SN_10<br><b>Название:</b> Датчик 10<br><b>Статус:</b> Offline<br><b>Уровень воды:</b> 1.53 м.</div>`)[0];
+                popup_37b534333d01617d45b592c93aaaef9e.setContent(html_cdd4f298011b3c6ef58d820dd524bb58);
+            
+        
+
+        circle_marker_642b2c6ff2ecb6e91b97b53293687dc8.bindPopup(popup_37b534333d01617d45b592c93aaaef9e)
+        ;
+
+        
+    
+</script>
+</html>

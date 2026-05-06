@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_05b4058ddd90956cb7b60dd5bb60bd4c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_05b4058ddd90956cb7b60dd5bb60bd4c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_05b4058ddd90956cb7b60dd5bb60bd4c = L.map(
+                "map_05b4058ddd90956cb7b60dd5bb60bd4c",
+                {
+                    center: [44.475, 82.60000000000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4da2d9a21fb14c754057ef823cd2bafc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4da2d9a21fb14c754057ef823cd2bafc.addTo(map_05b4058ddd90956cb7b60dd5bb60bd4c);
+        
+    
+            var marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_cc5f614412a2d7ea616b39346f3638ee = L.circleMarker(
+                [44.85, 82.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e);
+        
+    
+        var popup_c57c4404e74cce55cc978bec7db89e0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a6ad181e28157fe5444426234c4f998 = $(`<div id="html_4a6ad181e28157fe5444426234c4f998" style="width: 100.0%; height: 100.0%;">Станция: 1.0<br>Температура 2021: 12.5°C<br>Температура 2022: 13.1°C<br>Разница: 0.60°C</div>`)[0];
+                popup_c57c4404e74cce55cc978bec7db89e0f.setContent(html_4a6ad181e28157fe5444426234c4f998);
+            
+        
+
+        circle_marker_cc5f614412a2d7ea616b39346f3638ee.bindPopup(popup_c57c4404e74cce55cc978bec7db89e0f)
+        ;
+
+        
+    
+    
+            var circle_marker_7a324391a9bd176309f1a3a3758265c0 = L.circleMarker(
+                [44.7, 82.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e);
+        
+    
+        var popup_2561655ff065b134530ecc650939bc3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_764aa704755764a76f334b1ad68594ed = $(`<div id="html_764aa704755764a76f334b1ad68594ed" style="width: 100.0%; height: 100.0%;">Станция: 2.0<br>Температура 2021: 13.2°C<br>Температура 2022: 12.8°C<br>Разница: -0.40°C</div>`)[0];
+                popup_2561655ff065b134530ecc650939bc3b.setContent(html_764aa704755764a76f334b1ad68594ed);
+            
+        
+
+        circle_marker_7a324391a9bd176309f1a3a3758265c0.bindPopup(popup_2561655ff065b134530ecc650939bc3b)
+        ;
+
+        
+    
+    
+            var circle_marker_355a0e6f781ce8f4c8c9545751348310 = L.circleMarker(
+                [44.55, 82.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e);
+        
+    
+        var popup_be290d8b6e7d0f596fef7627da605e7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c6c455e7dec56e433c6ebca48a1445b = $(`<div id="html_1c6c455e7dec56e433c6ebca48a1445b" style="width: 100.0%; height: 100.0%;">Станция: 3.0<br>Температура 2021: 11.8°C<br>Температура 2022: 12.5°C<br>Разница: 0.70°C</div>`)[0];
+                popup_be290d8b6e7d0f596fef7627da605e7f.setContent(html_1c6c455e7dec56e433c6ebca48a1445b);
+            
+        
+
+        circle_marker_355a0e6f781ce8f4c8c9545751348310.bindPopup(popup_be290d8b6e7d0f596fef7627da605e7f)
+        ;
+
+        
+    
+    
+            var circle_marker_9f4975fbcaa339cf137839c24792eb5f = L.circleMarker(
+                [44.4, 82.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e);
+        
+    
+        var popup_c8c4792e1b30490e0d3790dc1572f408 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b669b6ae697d364677bcea1acc58135 = $(`<div id="html_0b669b6ae697d364677bcea1acc58135" style="width: 100.0%; height: 100.0%;">Станция: 4.0<br>Температура 2021: 14.1°C<br>Температура 2022: 14.8°C<br>Разница: 0.70°C</div>`)[0];
+                popup_c8c4792e1b30490e0d3790dc1572f408.setContent(html_0b669b6ae697d364677bcea1acc58135);
+            
+        
+
+        circle_marker_9f4975fbcaa339cf137839c24792eb5f.bindPopup(popup_c8c4792e1b30490e0d3790dc1572f408)
+        ;
+
+        
+    
+    
+            var circle_marker_69c3a83ba19ee364431556bccff39561 = L.circleMarker(
+                [44.25, 82.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e);
+        
+    
+        var popup_0b09eaa47adb585ed40a9d5f1cd36db7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca71c2d3708360445e1d0699ffb72d0c = $(`<div id="html_ca71c2d3708360445e1d0699ffb72d0c" style="width: 100.0%; height: 100.0%;">Станция: 5.0<br>Температура 2021: 15.0°C<br>Температура 2022: 15.5°C<br>Разница: 0.50°C</div>`)[0];
+                popup_0b09eaa47adb585ed40a9d5f1cd36db7.setContent(html_ca71c2d3708360445e1d0699ffb72d0c);
+            
+        
+
+        circle_marker_69c3a83ba19ee364431556bccff39561.bindPopup(popup_0b09eaa47adb585ed40a9d5f1cd36db7)
+        ;
+
+        
+    
+    
+            var circle_marker_73930c863e765808b9e64d6ece652ea0 = L.circleMarker(
+                [44.1, 83.1],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e);
+        
+    
+        var popup_86f05d1e1ddec4c22847bad00490bf90 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3397f766b7caf0fb1a78877a5e8e6fd = $(`<div id="html_a3397f766b7caf0fb1a78877a5e8e6fd" style="width: 100.0%; height: 100.0%;">Станция: 6.0<br>Температура 2021: 14.8°C<br>Температура 2022: 14.2°C<br>Разница: -0.60°C</div>`)[0];
+                popup_86f05d1e1ddec4c22847bad00490bf90.setContent(html_a3397f766b7caf0fb1a78877a5e8e6fd);
+            
+        
+
+        circle_marker_73930c863e765808b9e64d6ece652ea0.bindPopup(popup_86f05d1e1ddec4c22847bad00490bf90)
+        ;
+
+        
+    
+    
+            marker_cluster_e2c8c46e786573fcc4e4419dbf645b3e.addTo(map_05b4058ddd90956cb7b60dd5bb60bd4c);
+        
+</script>
+</html>

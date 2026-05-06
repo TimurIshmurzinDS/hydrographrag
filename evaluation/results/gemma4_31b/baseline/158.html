@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3de514db0c1f5fa2d7da2b9582b1db56 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Легенда паводков:</b><br>
+     Синяя линия: Bayankol (Риск: [6, 7])<br>
+     Зеленая линия: Sarykan (Риск: [7, 6])<br>
+     Желтые точки: Зоны высокого риска
+     </div>
+     
+    
+            <div class="folium-map" id="map_3de514db0c1f5fa2d7da2b9582b1db56" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3de514db0c1f5fa2d7da2b9582b1db56 = L.map(
+                "map_3de514db0c1f5fa2d7da2b9582b1db56",
+                {
+                    center: [46.7, 66.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2b5c98718d812a54bc9e7117bfb00a83 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2b5c98718d812a54bc9e7117bfb00a83.addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+            var poly_line_024f29613a03e2355102ba4cf8f6108f = L.polyline(
+                [[46.5, 66.2], [46.6, 66.4], [46.7, 66.5]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+            poly_line_024f29613a03e2355102ba4cf8f6108f.bindTooltip(
+                `<div>
+                     River: Bayankol
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_758518799bc6da3956f52a828ab6a7cd = L.circleMarker(
+                [46.5, 66.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+        var popup_d72d9d31b715738c11b9fdedc6d54a6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ebb7c1116f52aea66a8e4af9c68b091e = $(`<div id="html_ebb7c1116f52aea66a8e4af9c68b091e" style="width: 100.0%; height: 100.0%;">River Bayankol: High risk in months [6, 7]</div>`)[0];
+                popup_d72d9d31b715738c11b9fdedc6d54a6a.setContent(html_ebb7c1116f52aea66a8e4af9c68b091e);
+            
+        
+
+        circle_marker_758518799bc6da3956f52a828ab6a7cd.bindPopup(popup_d72d9d31b715738c11b9fdedc6d54a6a)
+        ;
+
+        
+    
+    
+            var circle_marker_73efde3ed5469ed699eadd983db6c9e7 = L.circleMarker(
+                [46.6, 66.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+        var popup_ced520c49cee5d22a8c428bdc73ceabd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4570f63f816582f3fe79096b67bff5a8 = $(`<div id="html_4570f63f816582f3fe79096b67bff5a8" style="width: 100.0%; height: 100.0%;">River Bayankol: High risk in months [6, 7]</div>`)[0];
+                popup_ced520c49cee5d22a8c428bdc73ceabd.setContent(html_4570f63f816582f3fe79096b67bff5a8);
+            
+        
+
+        circle_marker_73efde3ed5469ed699eadd983db6c9e7.bindPopup(popup_ced520c49cee5d22a8c428bdc73ceabd)
+        ;
+
+        
+    
+    
+            var circle_marker_000b02a47a7d0a925c519a12377541f7 = L.circleMarker(
+                [46.7, 66.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+        var popup_463a8e8f247a177b332de133946413ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cd67af5f4f7de41777407b43c3c2891 = $(`<div id="html_7cd67af5f4f7de41777407b43c3c2891" style="width: 100.0%; height: 100.0%;">River Bayankol: High risk in months [6, 7]</div>`)[0];
+                popup_463a8e8f247a177b332de133946413ee.setContent(html_7cd67af5f4f7de41777407b43c3c2891);
+            
+        
+
+        circle_marker_000b02a47a7d0a925c519a12377541f7.bindPopup(popup_463a8e8f247a177b332de133946413ee)
+        ;
+
+        
+    
+    
+            var poly_line_79e579187215b2bc4b56d0a127d1ac8a = L.polyline(
+                [[46.8, 66.8], [46.9, 67.0], [47.0, 67.1]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+            poly_line_79e579187215b2bc4b56d0a127d1ac8a.bindTooltip(
+                `<div>
+                     River: Sarykan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aeb2eae7b3bf79525a14ba8137989c15 = L.circleMarker(
+                [46.8, 66.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+        var popup_6c5d04927c529a1e29d8b2aec24538e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc7772d2eb2eda554cd307df1e527939 = $(`<div id="html_bc7772d2eb2eda554cd307df1e527939" style="width: 100.0%; height: 100.0%;">River Sarykan: High risk in months [7, 6]</div>`)[0];
+                popup_6c5d04927c529a1e29d8b2aec24538e6.setContent(html_bc7772d2eb2eda554cd307df1e527939);
+            
+        
+
+        circle_marker_aeb2eae7b3bf79525a14ba8137989c15.bindPopup(popup_6c5d04927c529a1e29d8b2aec24538e6)
+        ;
+
+        
+    
+    
+            var circle_marker_3dd90c92ec41312645b6b3855e69c70b = L.circleMarker(
+                [46.9, 67.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+        var popup_ed6a63614a6571356ed2ff768e748559 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3f53c64d260e31e3c0dd4b0536a29a1 = $(`<div id="html_c3f53c64d260e31e3c0dd4b0536a29a1" style="width: 100.0%; height: 100.0%;">River Sarykan: High risk in months [7, 6]</div>`)[0];
+                popup_ed6a63614a6571356ed2ff768e748559.setContent(html_c3f53c64d260e31e3c0dd4b0536a29a1);
+            
+        
+
+        circle_marker_3dd90c92ec41312645b6b3855e69c70b.bindPopup(popup_ed6a63614a6571356ed2ff768e748559)
+        ;
+
+        
+    
+    
+            var circle_marker_7852a7e5922430865941001904800404 = L.circleMarker(
+                [47.0, 67.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3de514db0c1f5fa2d7da2b9582b1db56);
+        
+    
+        var popup_707167ddde305097d1ec92388b45fcdd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d68236659a4f29a1868ee49f85ae33f0 = $(`<div id="html_d68236659a4f29a1868ee49f85ae33f0" style="width: 100.0%; height: 100.0%;">River Sarykan: High risk in months [7, 6]</div>`)[0];
+                popup_707167ddde305097d1ec92388b45fcdd.setContent(html_d68236659a4f29a1868ee49f85ae33f0);
+            
+        
+
+        circle_marker_7852a7e5922430865941001904800404.bindPopup(popup_707167ddde305097d1ec92388b45fcdd)
+        ;
+
+        
+    
+</script>
+</html>

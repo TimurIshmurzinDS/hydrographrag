@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ce45a6f4f7a938acfaebefc8cd2e1df9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ce45a6f4f7a938acfaebefc8cd2e1df9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ce45a6f4f7a938acfaebefc8cd2e1df9 = L.map(
+                "map_ce45a6f4f7a938acfaebefc8cd2e1df9",
+                {
+                    center: [51.06, 75.89],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bf70afe0021d79e7902dd3eb4eb2b37e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bf70afe0021d79e7902dd3eb4eb2b37e.addTo(map_ce45a6f4f7a938acfaebefc8cd2e1df9);
+        
+    
+            var marker_cluster_6b03acd1b20a6928acc44e339c67ba31 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_b6269c0eddc81456fc086c9ff4d7ff13 = L.marker(
+                [51.23, 76.45],
+                {
+}
+            ).addTo(marker_cluster_6b03acd1b20a6928acc44e339c67ba31);
+        
+    
+            var icon_7cbb1f3ca0570ac47becf0ec9c72f64c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88203e78544588ea8fe5b8c6cac15b88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c13018cfd8a6054a25ba387ca6eeb82 = $(`<div id="html_5c13018cfd8a6054a25ba387ca6eeb82" style="width: 100.0%; height: 100.0%;">Река: 1 Качество воды: Good Виды рыб: S, a, l, m, o, n</div>`)[0];
+                popup_88203e78544588ea8fe5b8c6cac15b88.setContent(html_5c13018cfd8a6054a25ba387ca6eeb82);
+            
+        
+
+        marker_b6269c0eddc81456fc086c9ff4d7ff13.bindPopup(popup_88203e78544588ea8fe5b8c6cac15b88)
+        ;
+
+        
+    
+    
+                marker_b6269c0eddc81456fc086c9ff4d7ff13.setIcon(icon_7cbb1f3ca0570ac47becf0ec9c72f64c);
+            
+    
+            var marker_6c3e2ab67fc54c3dd5a3b3a5886c326d = L.marker(
+                [51.24, 76.46],
+                {
+}
+            ).addTo(marker_cluster_6b03acd1b20a6928acc44e339c67ba31);
+        
+    
+            var icon_6fcb95fe9538a604d8b896fd38acaad5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_39c9e68ec8ab8f6da018bb07700f5a72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bd366c30452b67001de7d4a8301af8b = $(`<div id="html_4bd366c30452b67001de7d4a8301af8b" style="width: 100.0%; height: 100.0%;">Река: 2 Качество воды: Moderate Виды рыб: T, r, o, u, t</div>`)[0];
+                popup_39c9e68ec8ab8f6da018bb07700f5a72.setContent(html_4bd366c30452b67001de7d4a8301af8b);
+            
+        
+
+        marker_6c3e2ab67fc54c3dd5a3b3a5886c326d.bindPopup(popup_39c9e68ec8ab8f6da018bb07700f5a72)
+        ;
+
+        
+    
+    
+                marker_6c3e2ab67fc54c3dd5a3b3a5886c326d.setIcon(icon_6fcb95fe9538a604d8b896fd38acaad5);
+            
+    
+            var marker_6431548cc25431a342c176d0ad480ddb = L.marker(
+                [50.98, 75.32],
+                {
+}
+            ).addTo(marker_cluster_6b03acd1b20a6928acc44e339c67ba31);
+        
+    
+            var icon_790268682e046e6cd0449abe3043b386 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a90dedf511719d5f494cd903656333ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a32c38bc24e6e40370271ba1f26f85b = $(`<div id="html_5a32c38bc24e6e40370271ba1f26f85b" style="width: 100.0%; height: 100.0%;">Река: 3 Качество воды: Poor Виды рыб: B, r, e, a, m</div>`)[0];
+                popup_a90dedf511719d5f494cd903656333ee.setContent(html_5a32c38bc24e6e40370271ba1f26f85b);
+            
+        
+
+        marker_6431548cc25431a342c176d0ad480ddb.bindPopup(popup_a90dedf511719d5f494cd903656333ee)
+        ;
+
+        
+    
+    
+                marker_6431548cc25431a342c176d0ad480ddb.setIcon(icon_790268682e046e6cd0449abe3043b386);
+            
+    
+            var marker_ac8abe9cf300df6f3b85875718282ef0 = L.marker(
+                [51.0, 75.34],
+                {
+}
+            ).addTo(marker_cluster_6b03acd1b20a6928acc44e339c67ba31);
+        
+    
+            var icon_d0ea1c981adfcab6610517a4815f5286 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a668aa7d8b50e6f3ee239380fafc15c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ba54ad6f52802124ee856c1218134cb = $(`<div id="html_9ba54ad6f52802124ee856c1218134cb" style="width: 100.0%; height: 100.0%;">Река: 4 Качество воды: Good Виды рыб: P, e, r, c, h</div>`)[0];
+                popup_a668aa7d8b50e6f3ee239380fafc15c4.setContent(html_9ba54ad6f52802124ee856c1218134cb);
+            
+        
+
+        marker_ac8abe9cf300df6f3b85875718282ef0.bindPopup(popup_a668aa7d8b50e6f3ee239380fafc15c4)
+        ;
+
+        
+    
+    
+                marker_ac8abe9cf300df6f3b85875718282ef0.setIcon(icon_d0ea1c981adfcab6610517a4815f5286);
+            
+    
+            marker_cluster_6b03acd1b20a6928acc44e339c67ba31.addTo(map_ce45a6f4f7a938acfaebefc8cd2e1df9);
+        
+</script>
+</html>

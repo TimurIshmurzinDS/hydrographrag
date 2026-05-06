@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_81ff06931d19c5245ac2ef06b1952754 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 180px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Flood Risk Legend</b><br>
+     <i style="background:blue; width:10px; height:10px; display:inline-block"></i> River Bed<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> High Risk<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Medium Risk<br>
+     <i style="background:yellow; width:10px; height:10px; display:inline-block"></i> Low Risk
+     </div>
+     
+    
+            <div class="folium-map" id="map_81ff06931d19c5245ac2ef06b1952754" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_81ff06931d19c5245ac2ef06b1952754 = L.map(
+                "map_81ff06931d19c5245ac2ef06b1952754",
+                {
+                    center: [48.6, 68.25],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1b6f7a6b9eec9a0fc47ec7ba946f7515 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1b6f7a6b9eec9a0fc47ec7ba946f7515.addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+            var poly_line_2f33a1bf6fef62573847d6f814d49928 = L.polyline(
+                [[48.5, 68.1], [48.52, 68.15], [48.55, 68.2], [48.58, 68.25]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+            poly_line_2f33a1bf6fef62573847d6f814d49928.bindTooltip(
+                `<div>
+                     River: Shyzhyn River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_0f0ebf436fc48b079b4b0a14aaaf6450 = L.circle(
+                [48.5, 68.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_5b2e3adff0aa7624b80a5673dbabb36c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_235fa44af6af5ed83cf7569d084f372a = $(`<div id="html_235fa44af6af5ed83cf7569d084f372a" style="width: 100.0%; height: 100.0%;">Shyzhyn River: High Risk Zone</div>`)[0];
+                popup_5b2e3adff0aa7624b80a5673dbabb36c.setContent(html_235fa44af6af5ed83cf7569d084f372a);
+            
+        
+
+        circle_0f0ebf436fc48b079b4b0a14aaaf6450.bindPopup(popup_5b2e3adff0aa7624b80a5673dbabb36c)
+        ;
+
+        
+    
+    
+            var circle_8e86edfc45b71e3ad1ab11766fc2801a = L.circle(
+                [48.52, 68.15],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_e6d59df1e865c4ab6799934d24cbafa7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_edffd821c538ed38a61a0e79d1b9a046 = $(`<div id="html_edffd821c538ed38a61a0e79d1b9a046" style="width: 100.0%; height: 100.0%;">Shyzhyn River: High Risk Zone</div>`)[0];
+                popup_e6d59df1e865c4ab6799934d24cbafa7.setContent(html_edffd821c538ed38a61a0e79d1b9a046);
+            
+        
+
+        circle_8e86edfc45b71e3ad1ab11766fc2801a.bindPopup(popup_e6d59df1e865c4ab6799934d24cbafa7)
+        ;
+
+        
+    
+    
+            var circle_04fc150cda77e3e33059f4e518833989 = L.circle(
+                [48.55, 68.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_365399aab576442c2f30dc5c4640892f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_074096220d104d982ef80ee4c2456e1e = $(`<div id="html_074096220d104d982ef80ee4c2456e1e" style="width: 100.0%; height: 100.0%;">Shyzhyn River: High Risk Zone</div>`)[0];
+                popup_365399aab576442c2f30dc5c4640892f.setContent(html_074096220d104d982ef80ee4c2456e1e);
+            
+        
+
+        circle_04fc150cda77e3e33059f4e518833989.bindPopup(popup_365399aab576442c2f30dc5c4640892f)
+        ;
+
+        
+    
+    
+            var circle_5cce05fb1ca3be9c15d4198892b61e2a = L.circle(
+                [48.58, 68.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_43bb8e7b53c3715d5c71db48fcb9dbc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed2d6694012d9bd2e974ac7e27efab43 = $(`<div id="html_ed2d6694012d9bd2e974ac7e27efab43" style="width: 100.0%; height: 100.0%;">Shyzhyn River: High Risk Zone</div>`)[0];
+                popup_43bb8e7b53c3715d5c71db48fcb9dbc4.setContent(html_ed2d6694012d9bd2e974ac7e27efab43);
+            
+        
+
+        circle_5cce05fb1ca3be9c15d4198892b61e2a.bindPopup(popup_43bb8e7b53c3715d5c71db48fcb9dbc4)
+        ;
+
+        
+    
+    
+            var circle_c46d9180e05371abe843b9543c229ae7 = L.circle(
+                [48.5, 68.1],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_ca05b915076135f8fc968cabf08db993 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ea9b42be86026db753a92f2c366cb55 = $(`<div id="html_8ea9b42be86026db753a92f2c366cb55" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Medium Risk Zone</div>`)[0];
+                popup_ca05b915076135f8fc968cabf08db993.setContent(html_8ea9b42be86026db753a92f2c366cb55);
+            
+        
+
+        circle_c46d9180e05371abe843b9543c229ae7.bindPopup(popup_ca05b915076135f8fc968cabf08db993)
+        ;
+
+        
+    
+    
+            var circle_d82b3bd4691690a70f881b71547ff088 = L.circle(
+                [48.52, 68.15],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_241e1cd7c3dfc9cf6dc7054553d84887 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f539ea850d2666d400e967e01bf8e334 = $(`<div id="html_f539ea850d2666d400e967e01bf8e334" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Medium Risk Zone</div>`)[0];
+                popup_241e1cd7c3dfc9cf6dc7054553d84887.setContent(html_f539ea850d2666d400e967e01bf8e334);
+            
+        
+
+        circle_d82b3bd4691690a70f881b71547ff088.bindPopup(popup_241e1cd7c3dfc9cf6dc7054553d84887)
+        ;
+
+        
+    
+    
+            var circle_17af9a270d591f55d24a8ba441d0cc38 = L.circle(
+                [48.55, 68.2],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_1cf6fe1101e5500cbdbe196c1b7fe1de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21c1611a7367dac7ce51f64d4a4bea7c = $(`<div id="html_21c1611a7367dac7ce51f64d4a4bea7c" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Medium Risk Zone</div>`)[0];
+                popup_1cf6fe1101e5500cbdbe196c1b7fe1de.setContent(html_21c1611a7367dac7ce51f64d4a4bea7c);
+            
+        
+
+        circle_17af9a270d591f55d24a8ba441d0cc38.bindPopup(popup_1cf6fe1101e5500cbdbe196c1b7fe1de)
+        ;
+
+        
+    
+    
+            var circle_2df7e71fe7cbf757936bf2e87c7b8c3f = L.circle(
+                [48.58, 68.25],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_e80ba19fe9df6285d1cd462c273bf8d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33b8489da40e8f345e9801c7acb14beb = $(`<div id="html_33b8489da40e8f345e9801c7acb14beb" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Medium Risk Zone</div>`)[0];
+                popup_e80ba19fe9df6285d1cd462c273bf8d3.setContent(html_33b8489da40e8f345e9801c7acb14beb);
+            
+        
+
+        circle_2df7e71fe7cbf757936bf2e87c7b8c3f.bindPopup(popup_e80ba19fe9df6285d1cd462c273bf8d3)
+        ;
+
+        
+    
+    
+            var circle_60ecd0ca62597978735b3b99520bdf6a = L.circle(
+                [48.5, 68.1],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_01f54bd89edb2c3fbd1d25c478fda63d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4032d268b015687c9a588b87325b8f22 = $(`<div id="html_4032d268b015687c9a588b87325b8f22" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Low Risk Zone</div>`)[0];
+                popup_01f54bd89edb2c3fbd1d25c478fda63d.setContent(html_4032d268b015687c9a588b87325b8f22);
+            
+        
+
+        circle_60ecd0ca62597978735b3b99520bdf6a.bindPopup(popup_01f54bd89edb2c3fbd1d25c478fda63d)
+        ;
+
+        
+    
+    
+            var circle_8a548e6666625110e89f26dd2207dc49 = L.circle(
+                [48.52, 68.15],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_10da29c2f8b0a54eb7ae9a2b8f7292c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e167efa51ede9956eb12a8edba36f9ae = $(`<div id="html_e167efa51ede9956eb12a8edba36f9ae" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Low Risk Zone</div>`)[0];
+                popup_10da29c2f8b0a54eb7ae9a2b8f7292c5.setContent(html_e167efa51ede9956eb12a8edba36f9ae);
+            
+        
+
+        circle_8a548e6666625110e89f26dd2207dc49.bindPopup(popup_10da29c2f8b0a54eb7ae9a2b8f7292c5)
+        ;
+
+        
+    
+    
+            var circle_e93e96ce60455ec5dc7390e7b9c2bf5e = L.circle(
+                [48.55, 68.2],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_57e8194de31b2941ecfc2802300e323a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70bc556bda852f0311aacfdf1c68b9a0 = $(`<div id="html_70bc556bda852f0311aacfdf1c68b9a0" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Low Risk Zone</div>`)[0];
+                popup_57e8194de31b2941ecfc2802300e323a.setContent(html_70bc556bda852f0311aacfdf1c68b9a0);
+            
+        
+
+        circle_e93e96ce60455ec5dc7390e7b9c2bf5e.bindPopup(popup_57e8194de31b2941ecfc2802300e323a)
+        ;
+
+        
+    
+    
+            var circle_8940e65036cd5ef6bdcdf25d718c7e6c = L.circle(
+                [48.58, 68.25],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_93e11b45f8349a99ce154a561000083d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d9a5c5767172f88872a050c7542aa48 = $(`<div id="html_4d9a5c5767172f88872a050c7542aa48" style="width: 100.0%; height: 100.0%;">Shyzhyn River: Low Risk Zone</div>`)[0];
+                popup_93e11b45f8349a99ce154a561000083d.setContent(html_4d9a5c5767172f88872a050c7542aa48);
+            
+        
+
+        circle_8940e65036cd5ef6bdcdf25d718c7e6c.bindPopup(popup_93e11b45f8349a99ce154a561000083d)
+        ;
+
+        
+    
+    
+            var poly_line_c8bb9a33130f6420a7b54fcc8ee7c2a5 = L.polyline(
+                [[48.6, 68.3], [48.63, 68.35], [48.67, 68.4], [48.7, 68.45]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+            poly_line_c8bb9a33130f6420a7b54fcc8ee7c2a5.bindTooltip(
+                `<div>
+                     River: Sarykan River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_277dbb300823839f900c540425f1f341 = L.circle(
+                [48.6, 68.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_58f082246e7aef8ced66cf87df6d2ade = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_749e2bc65f2aef5fba35950684ba0fc5 = $(`<div id="html_749e2bc65f2aef5fba35950684ba0fc5" style="width: 100.0%; height: 100.0%;">Sarykan River: High Risk Zone</div>`)[0];
+                popup_58f082246e7aef8ced66cf87df6d2ade.setContent(html_749e2bc65f2aef5fba35950684ba0fc5);
+            
+        
+
+        circle_277dbb300823839f900c540425f1f341.bindPopup(popup_58f082246e7aef8ced66cf87df6d2ade)
+        ;
+
+        
+    
+    
+            var circle_4f32e5b68d5d5a6a10630ff76bb939c1 = L.circle(
+                [48.63, 68.35],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_f02c348ffc7f106255d183b4e48a30f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb7fdb1aa36f8945e67908741bb621d4 = $(`<div id="html_cb7fdb1aa36f8945e67908741bb621d4" style="width: 100.0%; height: 100.0%;">Sarykan River: High Risk Zone</div>`)[0];
+                popup_f02c348ffc7f106255d183b4e48a30f2.setContent(html_cb7fdb1aa36f8945e67908741bb621d4);
+            
+        
+
+        circle_4f32e5b68d5d5a6a10630ff76bb939c1.bindPopup(popup_f02c348ffc7f106255d183b4e48a30f2)
+        ;
+
+        
+    
+    
+            var circle_19f68cda0d71ed2db1c80bfa632ba049 = L.circle(
+                [48.67, 68.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_27a5bb609879eb882d94d6f9869e7526 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10cb486e169bd8c8ca4f6b821d3f345b = $(`<div id="html_10cb486e169bd8c8ca4f6b821d3f345b" style="width: 100.0%; height: 100.0%;">Sarykan River: High Risk Zone</div>`)[0];
+                popup_27a5bb609879eb882d94d6f9869e7526.setContent(html_10cb486e169bd8c8ca4f6b821d3f345b);
+            
+        
+
+        circle_19f68cda0d71ed2db1c80bfa632ba049.bindPopup(popup_27a5bb609879eb882d94d6f9869e7526)
+        ;
+
+        
+    
+    
+            var circle_0fb333e77d5abfe67bae953e1dc84ab3 = L.circle(
+                [48.7, 68.45],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_2b680aef3fac7bf54b02ec7b7a4275bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af9236081f061857f248b02eac1684fa = $(`<div id="html_af9236081f061857f248b02eac1684fa" style="width: 100.0%; height: 100.0%;">Sarykan River: High Risk Zone</div>`)[0];
+                popup_2b680aef3fac7bf54b02ec7b7a4275bd.setContent(html_af9236081f061857f248b02eac1684fa);
+            
+        
+
+        circle_0fb333e77d5abfe67bae953e1dc84ab3.bindPopup(popup_2b680aef3fac7bf54b02ec7b7a4275bd)
+        ;
+
+        
+    
+    
+            var circle_5e1b0930e89ffe503b0b606890a163dc = L.circle(
+                [48.6, 68.3],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_18e1f472e7fcbf41e6315aef4499c332 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d626a20286960396aff3d51ae944897d = $(`<div id="html_d626a20286960396aff3d51ae944897d" style="width: 100.0%; height: 100.0%;">Sarykan River: Medium Risk Zone</div>`)[0];
+                popup_18e1f472e7fcbf41e6315aef4499c332.setContent(html_d626a20286960396aff3d51ae944897d);
+            
+        
+
+        circle_5e1b0930e89ffe503b0b606890a163dc.bindPopup(popup_18e1f472e7fcbf41e6315aef4499c332)
+        ;
+
+        
+    
+    
+            var circle_d607ad773a6771733fd52ba78637046f = L.circle(
+                [48.63, 68.35],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_0c53b1b77f70a1be4748bf19d0f45f62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c4e2b08e78987520d8702194963755f = $(`<div id="html_5c4e2b08e78987520d8702194963755f" style="width: 100.0%; height: 100.0%;">Sarykan River: Medium Risk Zone</div>`)[0];
+                popup_0c53b1b77f70a1be4748bf19d0f45f62.setContent(html_5c4e2b08e78987520d8702194963755f);
+            
+        
+
+        circle_d607ad773a6771733fd52ba78637046f.bindPopup(popup_0c53b1b77f70a1be4748bf19d0f45f62)
+        ;
+
+        
+    
+    
+            var circle_d7cb27081a0c9ed9eb133a8265106ffe = L.circle(
+                [48.67, 68.4],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_9c801aa0e69ee0644c9addfcd32e4422 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed3a437d1eccd5e58e2ea9f55b26708b = $(`<div id="html_ed3a437d1eccd5e58e2ea9f55b26708b" style="width: 100.0%; height: 100.0%;">Sarykan River: Medium Risk Zone</div>`)[0];
+                popup_9c801aa0e69ee0644c9addfcd32e4422.setContent(html_ed3a437d1eccd5e58e2ea9f55b26708b);
+            
+        
+
+        circle_d7cb27081a0c9ed9eb133a8265106ffe.bindPopup(popup_9c801aa0e69ee0644c9addfcd32e4422)
+        ;
+
+        
+    
+    
+            var circle_a70e837f2e61f74c122e401b19b8f738 = L.circle(
+                [48.7, 68.45],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_5d4a2965646dcdf5d9830cff0886eab8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de2a17a3f0784bbac78c2e121c556d4c = $(`<div id="html_de2a17a3f0784bbac78c2e121c556d4c" style="width: 100.0%; height: 100.0%;">Sarykan River: Medium Risk Zone</div>`)[0];
+                popup_5d4a2965646dcdf5d9830cff0886eab8.setContent(html_de2a17a3f0784bbac78c2e121c556d4c);
+            
+        
+
+        circle_a70e837f2e61f74c122e401b19b8f738.bindPopup(popup_5d4a2965646dcdf5d9830cff0886eab8)
+        ;
+
+        
+    
+    
+            var circle_ee51669fa375a868cbf87f1ed2ee4fc4 = L.circle(
+                [48.6, 68.3],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_e32c610058fcc921acc7321cf478b2f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd7028eca6300999554439af6c3aff95 = $(`<div id="html_fd7028eca6300999554439af6c3aff95" style="width: 100.0%; height: 100.0%;">Sarykan River: Low Risk Zone</div>`)[0];
+                popup_e32c610058fcc921acc7321cf478b2f9.setContent(html_fd7028eca6300999554439af6c3aff95);
+            
+        
+
+        circle_ee51669fa375a868cbf87f1ed2ee4fc4.bindPopup(popup_e32c610058fcc921acc7321cf478b2f9)
+        ;
+
+        
+    
+    
+            var circle_68bb937c2d8de9d95ff3a483d952fc46 = L.circle(
+                [48.63, 68.35],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_30d62cdc2d7885608ca1128c96073df9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78216c88f59419209ebe475e435c393d = $(`<div id="html_78216c88f59419209ebe475e435c393d" style="width: 100.0%; height: 100.0%;">Sarykan River: Low Risk Zone</div>`)[0];
+                popup_30d62cdc2d7885608ca1128c96073df9.setContent(html_78216c88f59419209ebe475e435c393d);
+            
+        
+
+        circle_68bb937c2d8de9d95ff3a483d952fc46.bindPopup(popup_30d62cdc2d7885608ca1128c96073df9)
+        ;
+
+        
+    
+    
+            var circle_091fccda77a52c6d864230595ba35b64 = L.circle(
+                [48.67, 68.4],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_6beacaabcdca0651de136cc0e5a9685b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e31f04159e830f5c80f541a65ddd6ed = $(`<div id="html_6e31f04159e830f5c80f541a65ddd6ed" style="width: 100.0%; height: 100.0%;">Sarykan River: Low Risk Zone</div>`)[0];
+                popup_6beacaabcdca0651de136cc0e5a9685b.setContent(html_6e31f04159e830f5c80f541a65ddd6ed);
+            
+        
+
+        circle_091fccda77a52c6d864230595ba35b64.bindPopup(popup_6beacaabcdca0651de136cc0e5a9685b)
+        ;
+
+        
+    
+    
+            var circle_a09591ef07cba0d55632eac19dbf3027 = L.circle(
+                [48.7, 68.45],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3000.0, "stroke": true, "weight": 3}
+            ).addTo(map_81ff06931d19c5245ac2ef06b1952754);
+        
+    
+        var popup_f01ef4d1a1c381db042cb084a6548c57 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e435d8d561ca4f2e187cabd3ef28346 = $(`<div id="html_0e435d8d561ca4f2e187cabd3ef28346" style="width: 100.0%; height: 100.0%;">Sarykan River: Low Risk Zone</div>`)[0];
+                popup_f01ef4d1a1c381db042cb084a6548c57.setContent(html_0e435d8d561ca4f2e187cabd3ef28346);
+            
+        
+
+        circle_a09591ef07cba0d55632eac19dbf3027.bindPopup(popup_f01ef4d1a1c381db042cb084a6548c57)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_abd4ebb3a30b0b3693539e0d0060dd35 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_abd4ebb3a30b0b3693539e0d0060dd35" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_abd4ebb3a30b0b3693539e0d0060dd35 = L.map(
+                "map_abd4ebb3a30b0b3693539e0d0060dd35",
+                {
+                    center: [43.15, 76.6],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_409e2855cebda07e64d288db74485e38 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_409e2855cebda07e64d288db74485e38.addTo(map_abd4ebb3a30b0b3693539e0d0060dd35);
+        
+    
+            var circle_marker_12a31ff49a28fe192fbd06c05c681e07 = L.circleMarker(
+                [43.25, 76.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_abd4ebb3a30b0b3693539e0d0060dd35);
+        
+    
+        var popup_cf6b756f7bdb7ff2e0a293270626cdae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab53075c85b234f0224cfaefe6677e6c = $(`<div id="html_ab53075c85b234f0224cfaefe6677e6c" style="width: 100.0%; height: 100.0%;"><b>Station:</b> Upper Temirlik<br><b>Discharge:</b> 12.5 m³/s<br><b>Flood Probability:</b> Low</div>`)[0];
+                popup_cf6b756f7bdb7ff2e0a293270626cdae.setContent(html_ab53075c85b234f0224cfaefe6677e6c);
+            
+        
+
+        circle_marker_12a31ff49a28fe192fbd06c05c681e07.bindPopup(popup_cf6b756f7bdb7ff2e0a293270626cdae)
+        ;
+
+        
+    
+    
+            var circle_marker_ae3f194db352aa7ef41f0cece6b422f2 = L.circleMarker(
+                [43.2, 76.55],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_abd4ebb3a30b0b3693539e0d0060dd35);
+        
+    
+        var popup_b6cbb4ee9eddd2446bf64b9b451fc7e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6a21a35407bbd518b76d6aa02835af6 = $(`<div id="html_c6a21a35407bbd518b76d6aa02835af6" style="width: 100.0%; height: 100.0%;"><b>Station:</b> Mid-North Post<br><b>Discharge:</b> 22.1 m³/s<br><b>Flood Probability:</b> Medium</div>`)[0];
+                popup_b6cbb4ee9eddd2446bf64b9b451fc7e2.setContent(html_c6a21a35407bbd518b76d6aa02835af6);
+            
+        
+
+        circle_marker_ae3f194db352aa7ef41f0cece6b422f2.bindPopup(popup_b6cbb4ee9eddd2446bf64b9b451fc7e2)
+        ;
+
+        
+    
+    
+            var circle_marker_22cdabcc68529fa1701fd67295531f69 = L.circleMarker(
+                [43.15, 76.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_abd4ebb3a30b0b3693539e0d0060dd35);
+        
+    
+        var popup_7d263aa87d9943a66d67761447990700 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_672a9d4b6acd753e88a7259e891a5fb0 = $(`<div id="html_672a9d4b6acd753e88a7259e891a5fb0" style="width: 100.0%; height: 100.0%;"><b>Station:</b> Central Basin<br><b>Discharge:</b> 35.8 m³/s<br><b>Flood Probability:</b> High</div>`)[0];
+                popup_7d263aa87d9943a66d67761447990700.setContent(html_672a9d4b6acd753e88a7259e891a5fb0);
+            
+        
+
+        circle_marker_22cdabcc68529fa1701fd67295531f69.bindPopup(popup_7d263aa87d9943a66d67761447990700)
+        ;
+
+        
+    
+    
+            var circle_marker_f943a1a136a06bcdc212246c621eea60 = L.circleMarker(
+                [43.1, 76.65],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_abd4ebb3a30b0b3693539e0d0060dd35);
+        
+    
+        var popup_da79a4a4d190b867f69a1985b5f56ce6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a99efc560aee02b770c95c3a62cf454 = $(`<div id="html_5a99efc560aee02b770c95c3a62cf454" style="width: 100.0%; height: 100.0%;"><b>Station:</b> Lower Valley<br><b>Discharge:</b> 28.4 m³/s<br><b>Flood Probability:</b> Medium</div>`)[0];
+                popup_da79a4a4d190b867f69a1985b5f56ce6.setContent(html_5a99efc560aee02b770c95c3a62cf454);
+            
+        
+
+        circle_marker_f943a1a136a06bcdc212246c621eea60.bindPopup(popup_da79a4a4d190b867f69a1985b5f56ce6)
+        ;
+
+        
+    
+    
+            var circle_marker_0b7748f74fd63356d8d0f66d3f4215ee = L.circleMarker(
+                [43.05, 76.7],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_abd4ebb3a30b0b3693539e0d0060dd35);
+        
+    
+        var popup_79fa83d34e7e087a3708c106496da0ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b264a109cfb447c56953d271380c8b1b = $(`<div id="html_b264a109cfb447c56953d271380c8b1b" style="width: 100.0%; height: 100.0%;"><b>Station:</b> Estuary Post<br><b>Discharge:</b> 10.2 m³/s<br><b>Flood Probability:</b> Low</div>`)[0];
+                popup_79fa83d34e7e087a3708c106496da0ec.setContent(html_b264a109cfb447c56953d271380c8b1b);
+            
+        
+
+        circle_marker_0b7748f74fd63356d8d0f66d3f4215ee.bindPopup(popup_79fa83d34e7e087a3708c106496da0ec)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_86e3db0f556c775070756651d032d51f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_86e3db0f556c775070756651d032d51f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_86e3db0f556c775070756651d032d51f = L.map(
+                "map_86e3db0f556c775070756651d032d51f",
+                {
+                    center: [50.5, 85.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e0d47846ad8972db336db9a2fb4ab1e4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e0d47846ad8972db336db9a2fb4ab1e4.addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+            var poly_line_eec5471814fdcde648d7ab5e02a16f4a = L.polyline(
+                [[50.8, 84.5], [50.7, 84.7], [50.6, 84.8], [50.5, 85.0], [50.4, 85.2], [50.3, 85.4]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+            poly_line_eec5471814fdcde648d7ab5e02a16f4a.bindTooltip(
+                `<div>
+                     Основное русло: Шоколадный ганаш
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bb62abe4b41de1c679a7fb52af3be76b = L.polyline(
+                [[50.8, 84.5], [50.9, 84.4], [51.0, 84.6]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+            poly_line_bb62abe4b41de1c679a7fb52af3be76b.bindTooltip(
+                `<div>
+                     Приток 1: Ягодный сироп
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ff4c1c874baafb7f861ba0864c1d8fe5 = L.polyline(
+                [[50.7, 84.7], [50.8, 84.8], [50.8, 84.9]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+            poly_line_ff4c1c874baafb7f861ba0864c1d8fe5.bindTooltip(
+                `<div>
+                     Приток 2: Ягодный сироп
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0415f30f1c529a918ef0beae4318f516 = L.polyline(
+                [[50.5, 85.0], [50.6, 85.1], [50.7, 85.2]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+            poly_line_0415f30f1c529a918ef0beae4318f516.bindTooltip(
+                `<div>
+                     Приток 3: Ягодный сироп
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_916bcfb4fe1784507d2ef19061ee7177 = L.polyline(
+                [[50.4, 85.2], [50.3, 85.1], [50.2, 85.0]],
+                {"bubblingMouseEvents": true, "color": "skyblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "skyblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+            poly_line_916bcfb4fe1784507d2ef19061ee7177.bindTooltip(
+                `<div>
+                     Приток 4: Ягодный сироп
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8146589f8c6f0407dfa7d3e5def4b3c5 = L.circleMarker(
+                [50.8, 84.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+        var popup_d51ee88fe85fd61bfad334ddce83a76b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b78ccefbd009cca53b30c6460b792cd = $(`<div id="html_5b78ccefbd009cca53b30c6460b792cd" style="width: 100.0%; height: 100.0%;">Начало десерта (Верховья)</div>`)[0];
+                popup_d51ee88fe85fd61bfad334ddce83a76b.setContent(html_5b78ccefbd009cca53b30c6460b792cd);
+            
+        
+
+        circle_marker_8146589f8c6f0407dfa7d3e5def4b3c5.bindPopup(popup_d51ee88fe85fd61bfad334ddce83a76b)
+        ;
+
+        
+    
+    
+            var circle_marker_cfc5980ee0190bceafa293df69b4af3b = L.circleMarker(
+                [50.5, 85.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+        var popup_433e33afc280e3264c753b07261e77b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68201dd2388390f4f488219f8a3a271e = $(`<div id="html_68201dd2388390f4f488219f8a3a271e" style="width: 100.0%; height: 100.0%;">Центральный элемент (Слияние)</div>`)[0];
+                popup_433e33afc280e3264c753b07261e77b3.setContent(html_68201dd2388390f4f488219f8a3a271e);
+            
+        
+
+        circle_marker_cfc5980ee0190bceafa293df69b4af3b.bindPopup(popup_433e33afc280e3264c753b07261e77b3)
+        ;
+
+        
+    
+    
+            var circle_marker_7de571fa869be1f4be73b39baf9d0946 = L.circleMarker(
+                [50.3, 85.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_86e3db0f556c775070756651d032d51f);
+        
+    
+        var popup_a945387b617c3b3a53143cd319bcc86c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bbae1040a3c837d9874b3df375fb2fc = $(`<div id="html_3bbae1040a3c837d9874b3df375fb2fc" style="width: 100.0%; height: 100.0%;">Финишная точка (Устье)</div>`)[0];
+                popup_a945387b617c3b3a53143cd319bcc86c.setContent(html_3bbae1040a3c837d9874b3df375fb2fc);
+            
+        
+
+        circle_marker_7de571fa869be1f4be73b39baf9d0946.bindPopup(popup_a945387b617c3b3a53143cd319bcc86c)
+        ;
+
+        
+    
+</script>
+</html>

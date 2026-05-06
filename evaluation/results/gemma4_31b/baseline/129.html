@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a4b6aca5c23baeed395dd3a0c2fa8c4b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a4b6aca5c23baeed395dd3a0c2fa8c4b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a4b6aca5c23baeed395dd3a0c2fa8c4b = L.map(
+                "map_a4b6aca5c23baeed395dd3a0c2fa8c4b",
+                {
+                    center: [43.75, 80.25],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ca32fd6aac79ba2b108977b5e5557f6a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ca32fd6aac79ba2b108977b5e5557f6a.addTo(map_a4b6aca5c23baeed395dd3a0c2fa8c4b);
+        
+    
+            var marker_cb040086e2c62741aee8dfc01e17101a = L.marker(
+                [43.5, 79.5],
+                {
+}
+            ).addTo(map_a4b6aca5c23baeed395dd3a0c2fa8c4b);
+        
+    
+            var icon_5d0c464ec5eba6a57da652252ca69f9a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a11211e14014572d704663af65e2a60d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c5539710f1438bc77a7db36e5f83270 = $(`<div id="html_4c5539710f1438bc77a7db36e5f83270" style="width: 100.0%; height: 100.0%;"><b>Kurty River</b><br>Средний расход (весна): 73.17 м3/с</div>`)[0];
+                popup_a11211e14014572d704663af65e2a60d.setContent(html_4c5539710f1438bc77a7db36e5f83270);
+            
+        
+
+        marker_cb040086e2c62741aee8dfc01e17101a.bindPopup(popup_a11211e14014572d704663af65e2a60d)
+        ;
+
+        
+    
+    
+            marker_cb040086e2c62741aee8dfc01e17101a.bindTooltip(
+                `<div>
+                     Kurty River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb040086e2c62741aee8dfc01e17101a.setIcon(icon_5d0c464ec5eba6a57da652252ca69f9a);
+            
+    
+            var marker_f55f5c9e1ad722d1438d35a4fafb2134 = L.marker(
+                [44.0, 81.0],
+                {
+}
+            ).addTo(map_a4b6aca5c23baeed395dd3a0c2fa8c4b);
+        
+    
+            var icon_fa994c94234ef10c101221aa1cdc3c83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_074af21e29f20e600eadd5ba2ceb5412 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbd41307bf66b66a65c662f6dbdf8ce3 = $(`<div id="html_dbd41307bf66b66a65c662f6dbdf8ce3" style="width: 100.0%; height: 100.0%;"><b>Tekes River</b><br>Средний расход (весна): 48.98 м3/с</div>`)[0];
+                popup_074af21e29f20e600eadd5ba2ceb5412.setContent(html_dbd41307bf66b66a65c662f6dbdf8ce3);
+            
+        
+
+        marker_f55f5c9e1ad722d1438d35a4fafb2134.bindPopup(popup_074af21e29f20e600eadd5ba2ceb5412)
+        ;
+
+        
+    
+    
+            marker_f55f5c9e1ad722d1438d35a4fafb2134.bindTooltip(
+                `<div>
+                     Tekes River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f55f5c9e1ad722d1438d35a4fafb2134.setIcon(icon_fa994c94234ef10c101221aa1cdc3c83);
+            
+    
+        var popup_b50002069f70414dc55f8a6f5041a45d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71416c5b42693a3774f737783aedba7f = $(`<div id="html_71416c5b42693a3774f737783aedba7f" style="width: 100.0%; height: 100.0%;">Анализ половодья 2019-2023:<br>Kurty Avg: 73.17 m3/s<br>Tekes Avg: 48.98 m3/s</div>`)[0];
+                popup_b50002069f70414dc55f8a6f5041a45d.setContent(html_71416c5b42693a3774f737783aedba7f);
+            
+        
+
+        map_a4b6aca5c23baeed395dd3a0c2fa8c4b.bindPopup(popup_b50002069f70414dc55f8a6f5041a45d)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,19 @@
+# Работа с LLM и промптами
+langchain==0.3.0
+langchain-ollama==0.2.0
+
+# Базы данных и файлы
+pandas==2.2.2
+python-dotenv==1.0.1
+
+# Математика и эмбеддинги (для Dense Graph Extraction)
+sentence-transformers==3.1.0
+numpy==1.26.4
+scikit-learn==1.5.1
+langchain-ollama
+SPARQLWrapper
+isodate
+geopy
+geopandas
+folium
+streamlit-folium

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b61850143f9fa5ba67d038e288ae3470 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b61850143f9fa5ba67d038e288ae3470" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b61850143f9fa5ba67d038e288ae3470 = L.map(
+                "map_b61850143f9fa5ba67d038e288ae3470",
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5390cc2272b0ebc75b5443c0d30e64d5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5390cc2272b0ebc75b5443c0d30e64d5.addTo(map_b61850143f9fa5ba67d038e288ae3470);
+        
+    
+            var marker_07d4a0712da1bf5d4da77e7d9fca2c99 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(map_b61850143f9fa5ba67d038e288ae3470);
+        
+    
+            var icon_1fb6fe0e1dc70410ccf08f5840108590 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c9b3ea54de003944bfc18956cb67bc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a93094e5edee7546efaec89589a76a3 = $(`<div id="html_1a93094e5edee7546efaec89589a76a3" style="width: 100.0%; height: 100.0%;">Karaoy River: Current Level 10, Predicted Level 15</div>`)[0];
+                popup_2c9b3ea54de003944bfc18956cb67bc6.setContent(html_1a93094e5edee7546efaec89589a76a3);
+            
+        
+
+        marker_07d4a0712da1bf5d4da77e7d9fca2c99.bindPopup(popup_2c9b3ea54de003944bfc18956cb67bc6)
+        ;
+
+        
+    
+    
+                marker_07d4a0712da1bf5d4da77e7d9fca2c99.setIcon(icon_1fb6fe0e1dc70410ccf08f5840108590);
+            
+    
+            var marker_24629cbd0eb9a19c4c72933a55e96361 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(map_b61850143f9fa5ba67d038e288ae3470);
+        
+    
+            var icon_816850bd9539a8f213a1a4ceb50c16d5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0e83329202faa85a382c12f2861758c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81584d507c860df805689c33f8a67694 = $(`<div id="html_81584d507c860df805689c33f8a67694" style="width: 100.0%; height: 100.0%;">Temirlik River: Current Level 8, Predicted Level 12</div>`)[0];
+                popup_a0e83329202faa85a382c12f2861758c.setContent(html_81584d507c860df805689c33f8a67694);
+            
+        
+
+        marker_24629cbd0eb9a19c4c72933a55e96361.bindPopup(popup_a0e83329202faa85a382c12f2861758c)
+        ;
+
+        
+    
+    
+                marker_24629cbd0eb9a19c4c72933a55e96361.setIcon(icon_816850bd9539a8f213a1a4ceb50c16d5);
+            
+    
+            var marker_32800f2af90c488c94dac2c272f751a4 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(map_b61850143f9fa5ba67d038e288ae3470);
+        
+    
+            var icon_f2df522fe1ffe5e1aab0b73d1b9a19e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f8a299a140039ff12a8bec11b09a004 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e62dfb3416ababc3cac3870e4f9d222 = $(`<div id="html_5e62dfb3416ababc3cac3870e4f9d222" style="width: 100.0%; height: 100.0%;">Turgen River: Current Level 7, Predicted Level 9</div>`)[0];
+                popup_7f8a299a140039ff12a8bec11b09a004.setContent(html_5e62dfb3416ababc3cac3870e4f9d222);
+            
+        
+
+        marker_32800f2af90c488c94dac2c272f751a4.bindPopup(popup_7f8a299a140039ff12a8bec11b09a004)
+        ;
+
+        
+    
+    
+                marker_32800f2af90c488c94dac2c272f751a4.setIcon(icon_f2df522fe1ffe5e1aab0b73d1b9a19e4);
+            
+</script>
+</html>

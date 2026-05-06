@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bc1ca7a07151c4bbb0cf95728f412973 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_bc1ca7a07151c4bbb0cf95728f412973" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bc1ca7a07151c4bbb0cf95728f412973 = L.map(
+                "map_bc1ca7a07151c4bbb0cf95728f412973",
+                {
+                    center: [50.0, 10.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_596ffe6b037febcbcbc902ca2f743790 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_596ffe6b037febcbcbc902ca2f743790.addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+            var marker_981d786422dc415157035d7267df12e4 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_3fcacb0011289b2d2721b560aaaf5ec6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_993b74de55eb2eff8856f80d2b199b60 = $(`<div id="html_993b74de55eb2eff8856f80d2b199b60" style="width: 100.0%; height: 100.0%;">Год 2010: Вероятность солнечных вспышек = 10.00</div>`)[0];
+                popup_3fcacb0011289b2d2721b560aaaf5ec6.setContent(html_993b74de55eb2eff8856f80d2b199b60);
+            
+        
+
+        marker_981d786422dc415157035d7267df12e4.bindPopup(popup_3fcacb0011289b2d2721b560aaaf5ec6)
+        ;
+
+        
+    
+    
+            var marker_ea98a05a0edf45792662e0a0b6ee45bb = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_76794ecd4e1d05164531042f1140cac5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e7c2266c8be55c22ceba7fcf5ce67e7 = $(`<div id="html_7e7c2266c8be55c22ceba7fcf5ce67e7" style="width: 100.0%; height: 100.0%;">Год 2011: Вероятность солнечных вспышек = 12.00</div>`)[0];
+                popup_76794ecd4e1d05164531042f1140cac5.setContent(html_7e7c2266c8be55c22ceba7fcf5ce67e7);
+            
+        
+
+        marker_ea98a05a0edf45792662e0a0b6ee45bb.bindPopup(popup_76794ecd4e1d05164531042f1140cac5)
+        ;
+
+        
+    
+    
+            var marker_2c7664dc48e00a644c688acd48c993ad = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_a6c1bde73c2224528b94801a7b2130bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e06d8e0f3e4a00ef1a395600b8d1cea = $(`<div id="html_0e06d8e0f3e4a00ef1a395600b8d1cea" style="width: 100.0%; height: 100.0%;">Год 2012: Вероятность солнечных вспышек = 15.00</div>`)[0];
+                popup_a6c1bde73c2224528b94801a7b2130bc.setContent(html_0e06d8e0f3e4a00ef1a395600b8d1cea);
+            
+        
+
+        marker_2c7664dc48e00a644c688acd48c993ad.bindPopup(popup_a6c1bde73c2224528b94801a7b2130bc)
+        ;
+
+        
+    
+    
+            var marker_886f68e150422e11bfe52736b1fd2e4d = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_8a4a984bd3b0101ad8b78bfe211a6b17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_189b2b1bb26525b8921169500ef48030 = $(`<div id="html_189b2b1bb26525b8921169500ef48030" style="width: 100.0%; height: 100.0%;">Год 2013: Вероятность солнечных вспышек = 18.00</div>`)[0];
+                popup_8a4a984bd3b0101ad8b78bfe211a6b17.setContent(html_189b2b1bb26525b8921169500ef48030);
+            
+        
+
+        marker_886f68e150422e11bfe52736b1fd2e4d.bindPopup(popup_8a4a984bd3b0101ad8b78bfe211a6b17)
+        ;
+
+        
+    
+    
+            var marker_8b8eaf4a6e72c8d831224e936d22cbe5 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_70d18720f38f3e8ffbb42e4d6aba904b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f021afa8668e02e3095cdf31c3efa962 = $(`<div id="html_f021afa8668e02e3095cdf31c3efa962" style="width: 100.0%; height: 100.0%;">Год 2014: Вероятность солнечных вспышек = 20.00</div>`)[0];
+                popup_70d18720f38f3e8ffbb42e4d6aba904b.setContent(html_f021afa8668e02e3095cdf31c3efa962);
+            
+        
+
+        marker_8b8eaf4a6e72c8d831224e936d22cbe5.bindPopup(popup_70d18720f38f3e8ffbb42e4d6aba904b)
+        ;
+
+        
+    
+    
+            var marker_f238a2ce7aaf2cafa0dc562db5979653 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_6007fc6120a5889a0cde4dab5269a6a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4aaf9dadf8d137a5b12476ce9c90ba8e = $(`<div id="html_4aaf9dadf8d137a5b12476ce9c90ba8e" style="width: 100.0%; height: 100.0%;">Год 2015: Вероятность солнечных вспышек = 22.00</div>`)[0];
+                popup_6007fc6120a5889a0cde4dab5269a6a8.setContent(html_4aaf9dadf8d137a5b12476ce9c90ba8e);
+            
+        
+
+        marker_f238a2ce7aaf2cafa0dc562db5979653.bindPopup(popup_6007fc6120a5889a0cde4dab5269a6a8)
+        ;
+
+        
+    
+    
+            var marker_2a7582f509f47e36fcd454e199acb42b = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_11583769b39f28ed8328edc90f6a7cd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f83c592fbf6df0aa20a1908433866d4e = $(`<div id="html_f83c592fbf6df0aa20a1908433866d4e" style="width: 100.0%; height: 100.0%;">Год 2016: Вероятность солнечных вспышек = 24.00</div>`)[0];
+                popup_11583769b39f28ed8328edc90f6a7cd8.setContent(html_f83c592fbf6df0aa20a1908433866d4e);
+            
+        
+
+        marker_2a7582f509f47e36fcd454e199acb42b.bindPopup(popup_11583769b39f28ed8328edc90f6a7cd8)
+        ;
+
+        
+    
+    
+            var marker_fa66da55b0b34443376235f1ef2c7736 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_3fddc192d8491f5de4accd18ead898cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e6dc8d7be310fff2d16a50935716f27 = $(`<div id="html_5e6dc8d7be310fff2d16a50935716f27" style="width: 100.0%; height: 100.0%;">Год 2017: Вероятность солнечных вспышек = 26.00</div>`)[0];
+                popup_3fddc192d8491f5de4accd18ead898cd.setContent(html_5e6dc8d7be310fff2d16a50935716f27);
+            
+        
+
+        marker_fa66da55b0b34443376235f1ef2c7736.bindPopup(popup_3fddc192d8491f5de4accd18ead898cd)
+        ;
+
+        
+    
+    
+            var marker_b5200b0bcabbc1cbaaa91ceead708bbf = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_36e3b11760a77f6dc01c50eca7c04277 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54dd807ff5289097a0636b069ad5d851 = $(`<div id="html_54dd807ff5289097a0636b069ad5d851" style="width: 100.0%; height: 100.0%;">Год 2018: Вероятность солнечных вспышек = 28.00</div>`)[0];
+                popup_36e3b11760a77f6dc01c50eca7c04277.setContent(html_54dd807ff5289097a0636b069ad5d851);
+            
+        
+
+        marker_b5200b0bcabbc1cbaaa91ceead708bbf.bindPopup(popup_36e3b11760a77f6dc01c50eca7c04277)
+        ;
+
+        
+    
+    
+            var marker_092bf3d3e56a796ac84ba95df03f6a5c = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_bc1ca7a07151c4bbb0cf95728f412973);
+        
+    
+        var popup_a35a0206b2f939e8f994b85427e1f09d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78fbc5327dddfd50e192b86135198836 = $(`<div id="html_78fbc5327dddfd50e192b86135198836" style="width: 100.0%; height: 100.0%;">Год 2019: Вероятность солнечных вспышек = 30.00</div>`)[0];
+                popup_a35a0206b2f939e8f994b85427e1f09d.setContent(html_78fbc5327dddfd50e192b86135198836);
+            
+        
+
+        marker_092bf3d3e56a796ac84ba95df03f6a5c.bindPopup(popup_a35a0206b2f939e8f994b85427e1f09d)
+        ;
+
+        
+    
+</script>
+</html>

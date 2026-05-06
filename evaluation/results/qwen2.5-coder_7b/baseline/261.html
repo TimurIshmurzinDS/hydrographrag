@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_390ed665155c4b88ab8e3df84856aff3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_390ed665155c4b88ab8e3df84856aff3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_390ed665155c4b88ab8e3df84856aff3 = L.map(
+                "map_390ed665155c4b88ab8e3df84856aff3",
+                {
+                    center: [51.6094, 37.2823],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cf60f3bdba5d129668cf83f8fedef7dc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cf60f3bdba5d129668cf83f8fedef7dc.addTo(map_390ed665155c4b88ab8e3df84856aff3);
+        
+    
+            var marker_dc0777080b3ceeff6a878eacf76d062c = L.marker(
+                [51.6094, 37.2823],
+                {
+}
+            ).addTo(map_390ed665155c4b88ab8e3df84856aff3);
+        
+    
+            var icon_52a8fb907805485d0a1303f4049741d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f3b61ec4f97291a1d9083fe38da1d75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_279d8fedfb10fd7f82788e2c68d46727 = $(`<div id="html_279d8fedfb10fd7f82788e2c68d46727" style="width: 100.0%; height: 100.0%;">Река Киши Осек</div>`)[0];
+                popup_5f3b61ec4f97291a1d9083fe38da1d75.setContent(html_279d8fedfb10fd7f82788e2c68d46727);
+            
+        
+
+        marker_dc0777080b3ceeff6a878eacf76d062c.bindPopup(popup_5f3b61ec4f97291a1d9083fe38da1d75)
+        ;
+
+        
+    
+    
+                marker_dc0777080b3ceeff6a878eacf76d062c.setIcon(icon_52a8fb907805485d0a1303f4049741d7);
+            
+    
+            var marker_cluster_de795d709eb6cac4ae7a8c38f0ae9c07 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_1a852635c5737a0dc441eb21fc307c68 = L.marker(
+                [51.61, 37.283],
+                {
+}
+            ).addTo(marker_cluster_de795d709eb6cac4ae7a8c38f0ae9c07);
+        
+    
+            var icon_394547fa312b781d48ac3bf71eedc0c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7efff2f720d06fce1f51ed7fab32630 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf442c2e24f3b6d9a0c285a9b404b2ce = $(`<div id="html_bf442c2e24f3b6d9a0c285a9b404b2ce" style="width: 100.0%; height: 100.0%;">Точка засолки овощей</div>`)[0];
+                popup_b7efff2f720d06fce1f51ed7fab32630.setContent(html_bf442c2e24f3b6d9a0c285a9b404b2ce);
+            
+        
+
+        marker_1a852635c5737a0dc441eb21fc307c68.bindPopup(popup_b7efff2f720d06fce1f51ed7fab32630)
+        ;
+
+        
+    
+    
+                marker_1a852635c5737a0dc441eb21fc307c68.setIcon(icon_394547fa312b781d48ac3bf71eedc0c7);
+            
+    
+            var marker_3dbc5c3f33db07a80d5e9fa4ca3ba1d1 = L.marker(
+                [51.6095, 37.284],
+                {
+}
+            ).addTo(marker_cluster_de795d709eb6cac4ae7a8c38f0ae9c07);
+        
+    
+            var icon_9a37195c421369cc3221d274f134c327 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32b870768ec58c93fbfd43d5c4ee9636 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45ccd815263dd6291bba727287bec940 = $(`<div id="html_45ccd815263dd6291bba727287bec940" style="width: 100.0%; height: 100.0%;">Точка засолки овощей</div>`)[0];
+                popup_32b870768ec58c93fbfd43d5c4ee9636.setContent(html_45ccd815263dd6291bba727287bec940);
+            
+        
+
+        marker_3dbc5c3f33db07a80d5e9fa4ca3ba1d1.bindPopup(popup_32b870768ec58c93fbfd43d5c4ee9636)
+        ;
+
+        
+    
+    
+                marker_3dbc5c3f33db07a80d5e9fa4ca3ba1d1.setIcon(icon_9a37195c421369cc3221d274f134c327);
+            
+    
+            var marker_a2da063f2e86f4a808287a9e49142689 = L.marker(
+                [51.609, 37.285],
+                {
+}
+            ).addTo(marker_cluster_de795d709eb6cac4ae7a8c38f0ae9c07);
+        
+    
+            var icon_91a3253ff6ce53110371f0ee36aa15df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a342e7bafee429e2839720d42fc03713 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d3bad1639debd7d33de965cc409605c = $(`<div id="html_6d3bad1639debd7d33de965cc409605c" style="width: 100.0%; height: 100.0%;">Точка засолки овощей</div>`)[0];
+                popup_a342e7bafee429e2839720d42fc03713.setContent(html_6d3bad1639debd7d33de965cc409605c);
+            
+        
+
+        marker_a2da063f2e86f4a808287a9e49142689.bindPopup(popup_a342e7bafee429e2839720d42fc03713)
+        ;
+
+        
+    
+    
+                marker_a2da063f2e86f4a808287a9e49142689.setIcon(icon_91a3253ff6ce53110371f0ee36aa15df);
+            
+    
+            marker_cluster_de795d709eb6cac4ae7a8c38f0ae9c07.addTo(map_390ed665155c4b88ab8e3df84856aff3);
+        
+</script>
+</html>

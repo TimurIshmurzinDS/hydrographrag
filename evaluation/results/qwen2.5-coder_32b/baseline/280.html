@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_34382e96828f93c499f89317247217cf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_34382e96828f93c499f89317247217cf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_34382e96828f93c499f89317247217cf = L.map(
+                "map_34382e96828f93c499f89317247217cf",
+                {
+                    center: [55.7558, 37.6173],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f33923e0848e24156a9080238200e3b8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f33923e0848e24156a9080238200e3b8.addTo(map_34382e96828f93c499f89317247217cf);
+        
+    
+            var marker_e9277a73cd9554a9c65c617d717fd454 = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_34382e96828f93c499f89317247217cf);
+        
+    
+            var icon_06398214b03671e2d55f43efe7d1fa29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37558dd1a9129b0b47fe216e7308fc91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b3d2e4d9095d44502384078eba4e9b9 = $(`<div id="html_0b3d2e4d9095d44502384078eba4e9b9" style="width: 100.0%; height: 100.0%;">Москва: Средняя стоимость проживания - 93.75 руб.</div>`)[0];
+                popup_37558dd1a9129b0b47fe216e7308fc91.setContent(html_0b3d2e4d9095d44502384078eba4e9b9);
+            
+        
+
+        marker_e9277a73cd9554a9c65c617d717fd454.bindPopup(popup_37558dd1a9129b0b47fe216e7308fc91)
+        ;
+
+        
+    
+    
+                marker_e9277a73cd9554a9c65c617d717fd454.setIcon(icon_06398214b03671e2d55f43efe7d1fa29);
+            
+    
+            var marker_2c8cb7e6aba90ebc9d5aa05fa31cf167 = L.marker(
+                [59.9386, 30.3141],
+                {
+}
+            ).addTo(map_34382e96828f93c499f89317247217cf);
+        
+    
+            var icon_77de38e65a6d166743cfd9851d7ec5dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9ecb1abd16c0490ff61926ebb13eda4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f53fce7e94606a5b4f93e332f3d78ae = $(`<div id="html_0f53fce7e94606a5b4f93e332f3d78ae" style="width: 100.0%; height: 100.0%;">Санкт-Петербург: Средняя стоимость проживания - 75.0 руб.</div>`)[0];
+                popup_a9ecb1abd16c0490ff61926ebb13eda4.setContent(html_0f53fce7e94606a5b4f93e332f3d78ae);
+            
+        
+
+        marker_2c8cb7e6aba90ebc9d5aa05fa31cf167.bindPopup(popup_a9ecb1abd16c0490ff61926ebb13eda4)
+        ;
+
+        
+    
+    
+                marker_2c8cb7e6aba90ebc9d5aa05fa31cf167.setIcon(icon_77de38e65a6d166743cfd9851d7ec5dc);
+            
+    
+            var marker_49ab3a5f7ced876ccbd1b4538b54e3c7 = L.marker(
+                [55.0302, 82.9236],
+                {
+}
+            ).addTo(map_34382e96828f93c499f89317247217cf);
+        
+    
+            var icon_1f2c73ca8796f0f90d39484a01881662 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7cfcb58faaaa0b90bd5b766a8540c8e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_943766a9efadf6ac818e8813f55392ba = $(`<div id="html_943766a9efadf6ac818e8813f55392ba" style="width: 100.0%; height: 100.0%;">Новосибирск: Средняя стоимость проживания - 56.25 руб.</div>`)[0];
+                popup_7cfcb58faaaa0b90bd5b766a8540c8e6.setContent(html_943766a9efadf6ac818e8813f55392ba);
+            
+        
+
+        marker_49ab3a5f7ced876ccbd1b4538b54e3c7.bindPopup(popup_7cfcb58faaaa0b90bd5b766a8540c8e6)
+        ;
+
+        
+    
+    
+                marker_49ab3a5f7ced876ccbd1b4538b54e3c7.setIcon(icon_1f2c73ca8796f0f90d39484a01881662);
+            
+    
+            var marker_0a242887d6726d75c61024a7778335fb = L.marker(
+                [56.8389, 60.6057],
+                {
+}
+            ).addTo(map_34382e96828f93c499f89317247217cf);
+        
+    
+            var icon_2a04cb7c030b988e72036f3f162c176b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cdd6fa93896275e61f482768fc85ade = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_145c30d9c0fee0e6b7e3d64129506fa1 = $(`<div id="html_145c30d9c0fee0e6b7e3d64129506fa1" style="width: 100.0%; height: 100.0%;">Екатеринбург: Средняя стоимость проживания - 37.5 руб.</div>`)[0];
+                popup_2cdd6fa93896275e61f482768fc85ade.setContent(html_145c30d9c0fee0e6b7e3d64129506fa1);
+            
+        
+
+        marker_0a242887d6726d75c61024a7778335fb.bindPopup(popup_2cdd6fa93896275e61f482768fc85ade)
+        ;
+
+        
+    
+    
+                marker_0a242887d6726d75c61024a7778335fb.setIcon(icon_2a04cb7c030b988e72036f3f162c176b);
+            
+</script>
+</html>

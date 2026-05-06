@@ -1,0 +1,3065 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8f26fed09cc1e9ce499500ec231e5b16 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8f26fed09cc1e9ce499500ec231e5b16" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8f26fed09cc1e9ce499500ec231e5b16 = L.map(
+                "map_8f26fed09cc1e9ce499500ec231e5b16",
+                {
+                    center: [51.4014, 77.0475],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2bce0021192685cf9f8b40fd623b0636 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2bce0021192685cf9f8b40fd623b0636.addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var marker_e5d3bf2d0c3f74cc1e44ca77abaf4f7c = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_921ddaf94afceb3710aa50bbd0952925 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03da0ea2356b122a8664230e1f0b5dcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d29eee8452332269446059ab1e0d02fb = $(`<div id="html_d29eee8452332269446059ab1e0d02fb" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-01-29 00:00:00</div>`)[0];
+                popup_03da0ea2356b122a8664230e1f0b5dcc.setContent(html_d29eee8452332269446059ab1e0d02fb);
+            
+        
+
+        marker_e5d3bf2d0c3f74cc1e44ca77abaf4f7c.bindPopup(popup_03da0ea2356b122a8664230e1f0b5dcc)
+        ;
+
+        
+    
+    
+                marker_e5d3bf2d0c3f74cc1e44ca77abaf4f7c.setIcon(icon_921ddaf94afceb3710aa50bbd0952925);
+            
+    
+            var marker_3fec91ec618dfdca25f0cb21e0014e57 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_36e776576cfb44c0b28e52caf7b25ece = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_149328ead6623a02420d387f95330f75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f1fb8ca533c3e4c1539f8412550fbf2 = $(`<div id="html_9f1fb8ca533c3e4c1539f8412550fbf2" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-04-26 00:00:00</div>`)[0];
+                popup_149328ead6623a02420d387f95330f75.setContent(html_9f1fb8ca533c3e4c1539f8412550fbf2);
+            
+        
+
+        marker_3fec91ec618dfdca25f0cb21e0014e57.bindPopup(popup_149328ead6623a02420d387f95330f75)
+        ;
+
+        
+    
+    
+                marker_3fec91ec618dfdca25f0cb21e0014e57.setIcon(icon_36e776576cfb44c0b28e52caf7b25ece);
+            
+    
+            var marker_1f3a65633ab3a776c9c42454a67d49ec = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_22ccba8d8fd6134b39c1a1849883f9b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb9017c78cb82cd380479d6e0fe96eed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5b7ec509020eabdacee638f8d366993 = $(`<div id="html_e5b7ec509020eabdacee638f8d366993" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-05-28 00:00:00</div>`)[0];
+                popup_fb9017c78cb82cd380479d6e0fe96eed.setContent(html_e5b7ec509020eabdacee638f8d366993);
+            
+        
+
+        marker_1f3a65633ab3a776c9c42454a67d49ec.bindPopup(popup_fb9017c78cb82cd380479d6e0fe96eed)
+        ;
+
+        
+    
+    
+                marker_1f3a65633ab3a776c9c42454a67d49ec.setIcon(icon_22ccba8d8fd6134b39c1a1849883f9b5);
+            
+    
+            var marker_4f8b8e7abf4048184bad5ecfc0d01975 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_20c4f749d3dcc64d2d8903c312696097 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5852d2e66ae1da52769021eeb5978876 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18e70dc652aabc56fd61ddaf54c55deb = $(`<div id="html_18e70dc652aabc56fd61ddaf54c55deb" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-05-31 00:00:00</div>`)[0];
+                popup_5852d2e66ae1da52769021eeb5978876.setContent(html_18e70dc652aabc56fd61ddaf54c55deb);
+            
+        
+
+        marker_4f8b8e7abf4048184bad5ecfc0d01975.bindPopup(popup_5852d2e66ae1da52769021eeb5978876)
+        ;
+
+        
+    
+    
+                marker_4f8b8e7abf4048184bad5ecfc0d01975.setIcon(icon_20c4f749d3dcc64d2d8903c312696097);
+            
+    
+            var marker_bd1d80cf065c5a1806afa9dc38471290 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_67145d42a017c5cbe8d3e4aeca7785b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17dc3f67f7e20522e100b83be1065c2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_def2a3fbef90103525d98da3caf774ef = $(`<div id="html_def2a3fbef90103525d98da3caf774ef" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-06-05 00:00:00</div>`)[0];
+                popup_17dc3f67f7e20522e100b83be1065c2b.setContent(html_def2a3fbef90103525d98da3caf774ef);
+            
+        
+
+        marker_bd1d80cf065c5a1806afa9dc38471290.bindPopup(popup_17dc3f67f7e20522e100b83be1065c2b)
+        ;
+
+        
+    
+    
+                marker_bd1d80cf065c5a1806afa9dc38471290.setIcon(icon_67145d42a017c5cbe8d3e4aeca7785b8);
+            
+    
+            var marker_c60641c3aefe009ce66174e8b8af1a4f = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_f17c11a1aecfc39d21b8a358553796e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f130d0a70a961af5b255edaac3c192f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09608113fb640799044b1222fc3a57f3 = $(`<div id="html_09608113fb640799044b1222fc3a57f3" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-07-13 00:00:00</div>`)[0];
+                popup_f130d0a70a961af5b255edaac3c192f0.setContent(html_09608113fb640799044b1222fc3a57f3);
+            
+        
+
+        marker_c60641c3aefe009ce66174e8b8af1a4f.bindPopup(popup_f130d0a70a961af5b255edaac3c192f0)
+        ;
+
+        
+    
+    
+                marker_c60641c3aefe009ce66174e8b8af1a4f.setIcon(icon_f17c11a1aecfc39d21b8a358553796e7);
+            
+    
+            var marker_6d2396ac70ba0fe0431a60dac9c48fa5 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_ca9009fe8845bf2a73b86f2b7276f05b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0987e7a92e48deec874c6bfbddd43d6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef60d17e45207ff28d3fa48c3a1d92ae = $(`<div id="html_ef60d17e45207ff28d3fa48c3a1d92ae" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-07-17 00:00:00</div>`)[0];
+                popup_0987e7a92e48deec874c6bfbddd43d6e.setContent(html_ef60d17e45207ff28d3fa48c3a1d92ae);
+            
+        
+
+        marker_6d2396ac70ba0fe0431a60dac9c48fa5.bindPopup(popup_0987e7a92e48deec874c6bfbddd43d6e)
+        ;
+
+        
+    
+    
+                marker_6d2396ac70ba0fe0431a60dac9c48fa5.setIcon(icon_ca9009fe8845bf2a73b86f2b7276f05b);
+            
+    
+            var marker_9463507fe509a691a7a1588ae837bcd1 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_0040db21c4683ae425995b7206a206f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb7e2dba7a60b6160e425f8c8ef16d45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91c59734e19453a6a7576a71836b7332 = $(`<div id="html_91c59734e19453a6a7576a71836b7332" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-07-21 00:00:00</div>`)[0];
+                popup_eb7e2dba7a60b6160e425f8c8ef16d45.setContent(html_91c59734e19453a6a7576a71836b7332);
+            
+        
+
+        marker_9463507fe509a691a7a1588ae837bcd1.bindPopup(popup_eb7e2dba7a60b6160e425f8c8ef16d45)
+        ;
+
+        
+    
+    
+                marker_9463507fe509a691a7a1588ae837bcd1.setIcon(icon_0040db21c4683ae425995b7206a206f6);
+            
+    
+            var marker_d993501a34d380ae10071ccf2643325f = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_bf9f1a84ea85c1e826490450bcb97e1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ee12298648f1c1b34bfa37a82e31828 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a67990d1ae3a981b0a3affa92468878 = $(`<div id="html_7a67990d1ae3a981b0a3affa92468878" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-07-26 00:00:00</div>`)[0];
+                popup_4ee12298648f1c1b34bfa37a82e31828.setContent(html_7a67990d1ae3a981b0a3affa92468878);
+            
+        
+
+        marker_d993501a34d380ae10071ccf2643325f.bindPopup(popup_4ee12298648f1c1b34bfa37a82e31828)
+        ;
+
+        
+    
+    
+                marker_d993501a34d380ae10071ccf2643325f.setIcon(icon_bf9f1a84ea85c1e826490450bcb97e1a);
+            
+    
+            var marker_461a2031efb36adc54081b053610ddae = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_c941f25face99a38962c031542a61f8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_005ebe764e8411ef653a6fd488418e6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71f691a25af91d8dd5d263349013585b = $(`<div id="html_71f691a25af91d8dd5d263349013585b" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-09-11 00:00:00</div>`)[0];
+                popup_005ebe764e8411ef653a6fd488418e6d.setContent(html_71f691a25af91d8dd5d263349013585b);
+            
+        
+
+        marker_461a2031efb36adc54081b053610ddae.bindPopup(popup_005ebe764e8411ef653a6fd488418e6d)
+        ;
+
+        
+    
+    
+                marker_461a2031efb36adc54081b053610ddae.setIcon(icon_c941f25face99a38962c031542a61f8c);
+            
+    
+            var marker_f1bf7bfc722b780ccebd2b1ec6e3b7ab = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_ddb218235f106a63f1c763f52280cc75 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f99c3c12da649ad7c7de5aa8d58da2aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b49be39eb66dd16385a055013852a873 = $(`<div id="html_b49be39eb66dd16385a055013852a873" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-09-19 00:00:00</div>`)[0];
+                popup_f99c3c12da649ad7c7de5aa8d58da2aa.setContent(html_b49be39eb66dd16385a055013852a873);
+            
+        
+
+        marker_f1bf7bfc722b780ccebd2b1ec6e3b7ab.bindPopup(popup_f99c3c12da649ad7c7de5aa8d58da2aa)
+        ;
+
+        
+    
+    
+                marker_f1bf7bfc722b780ccebd2b1ec6e3b7ab.setIcon(icon_ddb218235f106a63f1c763f52280cc75);
+            
+    
+            var marker_a974efb8db2bfe4d912a51ae80f43017 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_95aec7555fc45719ac9abc847629ff95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4ed7a89a61d87d20511b423b2204430 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e6d414171f9f6c70852906e49d498ce = $(`<div id="html_0e6d414171f9f6c70852906e49d498ce" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-10-02 00:00:00</div>`)[0];
+                popup_c4ed7a89a61d87d20511b423b2204430.setContent(html_0e6d414171f9f6c70852906e49d498ce);
+            
+        
+
+        marker_a974efb8db2bfe4d912a51ae80f43017.bindPopup(popup_c4ed7a89a61d87d20511b423b2204430)
+        ;
+
+        
+    
+    
+                marker_a974efb8db2bfe4d912a51ae80f43017.setIcon(icon_95aec7555fc45719ac9abc847629ff95);
+            
+    
+            var marker_560af85363e9aa971bf490005b99e912 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_66e93e90e6a7d8e947a392d6793470c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98b24293dcd18de2bb68cced4a9f2a0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68e12ce6c251fdb3517791e76f59e607 = $(`<div id="html_68e12ce6c251fdb3517791e76f59e607" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-10-25 00:00:00</div>`)[0];
+                popup_98b24293dcd18de2bb68cced4a9f2a0b.setContent(html_68e12ce6c251fdb3517791e76f59e607);
+            
+        
+
+        marker_560af85363e9aa971bf490005b99e912.bindPopup(popup_98b24293dcd18de2bb68cced4a9f2a0b)
+        ;
+
+        
+    
+    
+                marker_560af85363e9aa971bf490005b99e912.setIcon(icon_66e93e90e6a7d8e947a392d6793470c7);
+            
+    
+            var marker_51ad90da15c369a2e3b46409b511339b = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_0928049a36e2eda78f1b2482f1516b05 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04e835b6319bfc80066b20cdbf4d47bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74ba095f57249fc821cfa58e1254e4f3 = $(`<div id="html_74ba095f57249fc821cfa58e1254e4f3" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-10-31 00:00:00</div>`)[0];
+                popup_04e835b6319bfc80066b20cdbf4d47bf.setContent(html_74ba095f57249fc821cfa58e1254e4f3);
+            
+        
+
+        marker_51ad90da15c369a2e3b46409b511339b.bindPopup(popup_04e835b6319bfc80066b20cdbf4d47bf)
+        ;
+
+        
+    
+    
+                marker_51ad90da15c369a2e3b46409b511339b.setIcon(icon_0928049a36e2eda78f1b2482f1516b05);
+            
+    
+            var marker_2cb578208fa9371770a6ded5b52a61c5 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_061c5be8e5f2a594061b11cf8030b357 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e35f9e21b4bcb5be05d15b4de43d2d21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5188ee4c7595691db086bf97f58a80c4 = $(`<div id="html_5188ee4c7595691db086bf97f58a80c4" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-11-09 00:00:00</div>`)[0];
+                popup_e35f9e21b4bcb5be05d15b4de43d2d21.setContent(html_5188ee4c7595691db086bf97f58a80c4);
+            
+        
+
+        marker_2cb578208fa9371770a6ded5b52a61c5.bindPopup(popup_e35f9e21b4bcb5be05d15b4de43d2d21)
+        ;
+
+        
+    
+    
+                marker_2cb578208fa9371770a6ded5b52a61c5.setIcon(icon_061c5be8e5f2a594061b11cf8030b357);
+            
+    
+            var marker_49081a3bedb24fc1c215995d9accfa02 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_d8be4acdfee1ad961e938f4f26c2a707 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5fc1e035fa4d6fa351e56de3cb318d7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d6fdd875170073e030a353267e8017a = $(`<div id="html_4d6fdd875170073e030a353267e8017a" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-12-17 00:00:00</div>`)[0];
+                popup_5fc1e035fa4d6fa351e56de3cb318d7b.setContent(html_4d6fdd875170073e030a353267e8017a);
+            
+        
+
+        marker_49081a3bedb24fc1c215995d9accfa02.bindPopup(popup_5fc1e035fa4d6fa351e56de3cb318d7b)
+        ;
+
+        
+    
+    
+                marker_49081a3bedb24fc1c215995d9accfa02.setIcon(icon_d8be4acdfee1ad961e938f4f26c2a707);
+            
+    
+            var marker_a48a92a867ef7621449b94412de6d487 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_d4e80ca114a72086a942d2722086a380 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf366d295bc74be80aea71c0e04c255a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8f2805d79bd52b13cfc0527da5f9e8a = $(`<div id="html_a8f2805d79bd52b13cfc0527da5f9e8a" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2023-12-29 00:00:00</div>`)[0];
+                popup_bf366d295bc74be80aea71c0e04c255a.setContent(html_a8f2805d79bd52b13cfc0527da5f9e8a);
+            
+        
+
+        marker_a48a92a867ef7621449b94412de6d487.bindPopup(popup_bf366d295bc74be80aea71c0e04c255a)
+        ;
+
+        
+    
+    
+                marker_a48a92a867ef7621449b94412de6d487.setIcon(icon_d4e80ca114a72086a942d2722086a380);
+            
+    
+            var marker_bfc506c8181fee689019d5478fe9bc5b = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_ab2b22e798f011d8268aa1fdf0a1665f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f575d3bf255da059fb5d7a11fc59668f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6de9cb82e48c6cc30a7bd5189fd48ed6 = $(`<div id="html_6de9cb82e48c6cc30a7bd5189fd48ed6" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-01-04 00:00:00</div>`)[0];
+                popup_f575d3bf255da059fb5d7a11fc59668f.setContent(html_6de9cb82e48c6cc30a7bd5189fd48ed6);
+            
+        
+
+        marker_bfc506c8181fee689019d5478fe9bc5b.bindPopup(popup_f575d3bf255da059fb5d7a11fc59668f)
+        ;
+
+        
+    
+    
+                marker_bfc506c8181fee689019d5478fe9bc5b.setIcon(icon_ab2b22e798f011d8268aa1fdf0a1665f);
+            
+    
+            var marker_e74ee24778a8bd631f9b02d856d62461 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_569b4357f5f77f479c1b5c5963f0f71e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa79c41b19c5d0c2735cb24f700bba47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99403f6e8b4904518fd7239e5cdb188c = $(`<div id="html_99403f6e8b4904518fd7239e5cdb188c" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-02-24 00:00:00</div>`)[0];
+                popup_aa79c41b19c5d0c2735cb24f700bba47.setContent(html_99403f6e8b4904518fd7239e5cdb188c);
+            
+        
+
+        marker_e74ee24778a8bd631f9b02d856d62461.bindPopup(popup_aa79c41b19c5d0c2735cb24f700bba47)
+        ;
+
+        
+    
+    
+                marker_e74ee24778a8bd631f9b02d856d62461.setIcon(icon_569b4357f5f77f479c1b5c5963f0f71e);
+            
+    
+            var marker_41cacd6970d09be002c43b2069cbb711 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_5def1ee0e0349101c97e9d31faf0904e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89fa1363e0d4ff4fc9036501c79ddba2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc69b6811e83b964ed29a9b4e470bb77 = $(`<div id="html_fc69b6811e83b964ed29a9b4e470bb77" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-05-14 00:00:00</div>`)[0];
+                popup_89fa1363e0d4ff4fc9036501c79ddba2.setContent(html_fc69b6811e83b964ed29a9b4e470bb77);
+            
+        
+
+        marker_41cacd6970d09be002c43b2069cbb711.bindPopup(popup_89fa1363e0d4ff4fc9036501c79ddba2)
+        ;
+
+        
+    
+    
+                marker_41cacd6970d09be002c43b2069cbb711.setIcon(icon_5def1ee0e0349101c97e9d31faf0904e);
+            
+    
+            var marker_e4625bee8f26d2a842747db477cbea44 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_797ba4369d5059e236be73a636a4544f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04bd2f4e196e4b3252367f05c45986f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2fa685e7a4a1b05ae0f5be07b7ec74e = $(`<div id="html_b2fa685e7a4a1b05ae0f5be07b7ec74e" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-07-19 00:00:00</div>`)[0];
+                popup_04bd2f4e196e4b3252367f05c45986f1.setContent(html_b2fa685e7a4a1b05ae0f5be07b7ec74e);
+            
+        
+
+        marker_e4625bee8f26d2a842747db477cbea44.bindPopup(popup_04bd2f4e196e4b3252367f05c45986f1)
+        ;
+
+        
+    
+    
+                marker_e4625bee8f26d2a842747db477cbea44.setIcon(icon_797ba4369d5059e236be73a636a4544f);
+            
+    
+            var marker_a50c121362648c2b3b0fc66b7fd99f69 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_8210bb75e080e66736e39e55846b5400 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f6d7c487ef1b84ea34ddb2485c8ae7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92c566f24c3a4322b392c1d9868bb3db = $(`<div id="html_92c566f24c3a4322b392c1d9868bb3db" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-08-12 00:00:00</div>`)[0];
+                popup_9f6d7c487ef1b84ea34ddb2485c8ae7c.setContent(html_92c566f24c3a4322b392c1d9868bb3db);
+            
+        
+
+        marker_a50c121362648c2b3b0fc66b7fd99f69.bindPopup(popup_9f6d7c487ef1b84ea34ddb2485c8ae7c)
+        ;
+
+        
+    
+    
+                marker_a50c121362648c2b3b0fc66b7fd99f69.setIcon(icon_8210bb75e080e66736e39e55846b5400);
+            
+    
+            var marker_544c623ad01ebceec4aab48a6b44ba98 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_e6a6d6d1754ca9e4f754918dd2aae42e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7072cb49f4eadb662178d77e20d27164 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c7bbb603f4ea636fd446e5869003644 = $(`<div id="html_3c7bbb603f4ea636fd446e5869003644" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-08-13 00:00:00</div>`)[0];
+                popup_7072cb49f4eadb662178d77e20d27164.setContent(html_3c7bbb603f4ea636fd446e5869003644);
+            
+        
+
+        marker_544c623ad01ebceec4aab48a6b44ba98.bindPopup(popup_7072cb49f4eadb662178d77e20d27164)
+        ;
+
+        
+    
+    
+                marker_544c623ad01ebceec4aab48a6b44ba98.setIcon(icon_e6a6d6d1754ca9e4f754918dd2aae42e);
+            
+    
+            var marker_1e895195b8fef1ccddc6ace2cdf2e977 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_ba90c8efaeca33cc046d4b24e71ca093 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_642155b0650faa61c7c0e7229a1eb016 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f12211d9296d4dcafa34b498aa85cfbc = $(`<div id="html_f12211d9296d4dcafa34b498aa85cfbc" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-08-31 00:00:00</div>`)[0];
+                popup_642155b0650faa61c7c0e7229a1eb016.setContent(html_f12211d9296d4dcafa34b498aa85cfbc);
+            
+        
+
+        marker_1e895195b8fef1ccddc6ace2cdf2e977.bindPopup(popup_642155b0650faa61c7c0e7229a1eb016)
+        ;
+
+        
+    
+    
+                marker_1e895195b8fef1ccddc6ace2cdf2e977.setIcon(icon_ba90c8efaeca33cc046d4b24e71ca093);
+            
+    
+            var marker_e7f241f6fbc2ee3a94b310b17d05cfdd = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_1a615afe0d107142e494aac07b985faa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab8de9f0bc78f6b563da713c493d048c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_412124e0fb30f2c136162fc50d3f1b58 = $(`<div id="html_412124e0fb30f2c136162fc50d3f1b58" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-09-27 00:00:00</div>`)[0];
+                popup_ab8de9f0bc78f6b563da713c493d048c.setContent(html_412124e0fb30f2c136162fc50d3f1b58);
+            
+        
+
+        marker_e7f241f6fbc2ee3a94b310b17d05cfdd.bindPopup(popup_ab8de9f0bc78f6b563da713c493d048c)
+        ;
+
+        
+    
+    
+                marker_e7f241f6fbc2ee3a94b310b17d05cfdd.setIcon(icon_1a615afe0d107142e494aac07b985faa);
+            
+    
+            var marker_d4f6e8254d76a7c6890326f5ff57dedf = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_5711bf3bee111ffa8a979812c2ceef77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70f9f30964568522a6077314cb44f8ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e889e84774924536a2885996fd5320f = $(`<div id="html_4e889e84774924536a2885996fd5320f" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-10-03 00:00:00</div>`)[0];
+                popup_70f9f30964568522a6077314cb44f8ef.setContent(html_4e889e84774924536a2885996fd5320f);
+            
+        
+
+        marker_d4f6e8254d76a7c6890326f5ff57dedf.bindPopup(popup_70f9f30964568522a6077314cb44f8ef)
+        ;
+
+        
+    
+    
+                marker_d4f6e8254d76a7c6890326f5ff57dedf.setIcon(icon_5711bf3bee111ffa8a979812c2ceef77);
+            
+    
+            var marker_f5b5de908a38670dc94cc91768267924 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_5483e8c4e54fd47a0b1232b4472deacb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67f30eafa7b5b16e64cb2e0c5083ff8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a78a0fffdcdadc483bb8dbb7672ca875 = $(`<div id="html_a78a0fffdcdadc483bb8dbb7672ca875" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-10-16 00:00:00</div>`)[0];
+                popup_67f30eafa7b5b16e64cb2e0c5083ff8c.setContent(html_a78a0fffdcdadc483bb8dbb7672ca875);
+            
+        
+
+        marker_f5b5de908a38670dc94cc91768267924.bindPopup(popup_67f30eafa7b5b16e64cb2e0c5083ff8c)
+        ;
+
+        
+    
+    
+                marker_f5b5de908a38670dc94cc91768267924.setIcon(icon_5483e8c4e54fd47a0b1232b4472deacb);
+            
+    
+            var marker_7466773f12d2818cf6131648b895448f = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_170f54c39974678c5475ad98abbf9199 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47e444b1eb863720eac0df151878e0ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a449d53ac3fc2a6debf80fac249bf8af = $(`<div id="html_a449d53ac3fc2a6debf80fac249bf8af" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-10-18 00:00:00</div>`)[0];
+                popup_47e444b1eb863720eac0df151878e0ad.setContent(html_a449d53ac3fc2a6debf80fac249bf8af);
+            
+        
+
+        marker_7466773f12d2818cf6131648b895448f.bindPopup(popup_47e444b1eb863720eac0df151878e0ad)
+        ;
+
+        
+    
+    
+                marker_7466773f12d2818cf6131648b895448f.setIcon(icon_170f54c39974678c5475ad98abbf9199);
+            
+    
+            var marker_5cdb0b853d27e8bc21c2f135233dfe05 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_7479dba2a3cc9615c588c81a99b3f375 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd640abb8e30fbe625ef1831485371c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12bd17f92d6c1ffd33263c9dac8f6b39 = $(`<div id="html_12bd17f92d6c1ffd33263c9dac8f6b39" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-10-24 00:00:00</div>`)[0];
+                popup_dd640abb8e30fbe625ef1831485371c7.setContent(html_12bd17f92d6c1ffd33263c9dac8f6b39);
+            
+        
+
+        marker_5cdb0b853d27e8bc21c2f135233dfe05.bindPopup(popup_dd640abb8e30fbe625ef1831485371c7)
+        ;
+
+        
+    
+    
+                marker_5cdb0b853d27e8bc21c2f135233dfe05.setIcon(icon_7479dba2a3cc9615c588c81a99b3f375);
+            
+    
+            var marker_4c7c427858ad2f08c8cea59fb04407be = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_dab1ba27bd2215ef4ee556adbec2eac5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c944045369fb09a1a47ca16ea46fc8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6006f8c914361ffe1cae4c852091787a = $(`<div id="html_6006f8c914361ffe1cae4c852091787a" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-11-11 00:00:00</div>`)[0];
+                popup_7c944045369fb09a1a47ca16ea46fc8f.setContent(html_6006f8c914361ffe1cae4c852091787a);
+            
+        
+
+        marker_4c7c427858ad2f08c8cea59fb04407be.bindPopup(popup_7c944045369fb09a1a47ca16ea46fc8f)
+        ;
+
+        
+    
+    
+                marker_4c7c427858ad2f08c8cea59fb04407be.setIcon(icon_dab1ba27bd2215ef4ee556adbec2eac5);
+            
+    
+            var marker_5daee22bd5198716952c6f0f1b58f1b6 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_b24f12cedea8724b24b81aa26fba060a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1edd14cbbcffd27f8f0452e928905e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df432c1aa23a37555847c98af4fcddd6 = $(`<div id="html_df432c1aa23a37555847c98af4fcddd6" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-11-18 00:00:00</div>`)[0];
+                popup_e1edd14cbbcffd27f8f0452e928905e4.setContent(html_df432c1aa23a37555847c98af4fcddd6);
+            
+        
+
+        marker_5daee22bd5198716952c6f0f1b58f1b6.bindPopup(popup_e1edd14cbbcffd27f8f0452e928905e4)
+        ;
+
+        
+    
+    
+                marker_5daee22bd5198716952c6f0f1b58f1b6.setIcon(icon_b24f12cedea8724b24b81aa26fba060a);
+            
+    
+            var marker_40621c50f48c37da0c61c09fc3c01466 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_4ab35ad025df0df1ed8f163e30eaca62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3532b838c4b11ec16fb9e61fea99db34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58900eaf23426017bda901c069547849 = $(`<div id="html_58900eaf23426017bda901c069547849" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-11-29 00:00:00</div>`)[0];
+                popup_3532b838c4b11ec16fb9e61fea99db34.setContent(html_58900eaf23426017bda901c069547849);
+            
+        
+
+        marker_40621c50f48c37da0c61c09fc3c01466.bindPopup(popup_3532b838c4b11ec16fb9e61fea99db34)
+        ;
+
+        
+    
+    
+                marker_40621c50f48c37da0c61c09fc3c01466.setIcon(icon_4ab35ad025df0df1ed8f163e30eaca62);
+            
+    
+            var marker_22d87a50aea95305018917e0b6f84d64 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_70c02addc831386d2ab2010a33d1a6cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e6e4df95f04f589ccab257f1b925864 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a915daa26eb5970c73bbe4dde35b8166 = $(`<div id="html_a915daa26eb5970c73bbe4dde35b8166" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-12-06 00:00:00</div>`)[0];
+                popup_5e6e4df95f04f589ccab257f1b925864.setContent(html_a915daa26eb5970c73bbe4dde35b8166);
+            
+        
+
+        marker_22d87a50aea95305018917e0b6f84d64.bindPopup(popup_5e6e4df95f04f589ccab257f1b925864)
+        ;
+
+        
+    
+    
+                marker_22d87a50aea95305018917e0b6f84d64.setIcon(icon_70c02addc831386d2ab2010a33d1a6cd);
+            
+    
+            var marker_7cdb25fba3735ad5dbd6b8cb8f60a6cf = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_239ec63517570cefaf9ecd3ca315e2f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e54f94bf484d6ff5ccce4e8e0bd97676 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae1fe3574a3652de36a14ffb34702b9e = $(`<div id="html_ae1fe3574a3652de36a14ffb34702b9e" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-12-12 00:00:00</div>`)[0];
+                popup_e54f94bf484d6ff5ccce4e8e0bd97676.setContent(html_ae1fe3574a3652de36a14ffb34702b9e);
+            
+        
+
+        marker_7cdb25fba3735ad5dbd6b8cb8f60a6cf.bindPopup(popup_e54f94bf484d6ff5ccce4e8e0bd97676)
+        ;
+
+        
+    
+    
+                marker_7cdb25fba3735ad5dbd6b8cb8f60a6cf.setIcon(icon_239ec63517570cefaf9ecd3ca315e2f1);
+            
+    
+            var marker_c7312c403d9ef22b183fb69326762c56 = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_a8f882c2c8033261c9b087ba76913540 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce281a62a94d438c979770db8546e183 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d73f0584d58868dfd088bb6b40322814 = $(`<div id="html_d73f0584d58868dfd088bb6b40322814" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-12-13 00:00:00</div>`)[0];
+                popup_ce281a62a94d438c979770db8546e183.setContent(html_d73f0584d58868dfd088bb6b40322814);
+            
+        
+
+        marker_c7312c403d9ef22b183fb69326762c56.bindPopup(popup_ce281a62a94d438c979770db8546e183)
+        ;
+
+        
+    
+    
+                marker_c7312c403d9ef22b183fb69326762c56.setIcon(icon_a8f882c2c8033261c9b087ba76913540);
+            
+    
+            var marker_8a3a6bd710ad7633a8b13b4ef18178ac = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_db67edc83781cd990dd4cc8216855883 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0afb7fe57751803376aeb65bf8573d7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17d1bbfa5ec46a3cccb9aad04622cc6c = $(`<div id="html_17d1bbfa5ec46a3cccb9aad04622cc6c" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-12-20 00:00:00</div>`)[0];
+                popup_0afb7fe57751803376aeb65bf8573d7d.setContent(html_17d1bbfa5ec46a3cccb9aad04622cc6c);
+            
+        
+
+        marker_8a3a6bd710ad7633a8b13b4ef18178ac.bindPopup(popup_0afb7fe57751803376aeb65bf8573d7d)
+        ;
+
+        
+    
+    
+                marker_8a3a6bd710ad7633a8b13b4ef18178ac.setIcon(icon_db67edc83781cd990dd4cc8216855883);
+            
+    
+            var marker_cf494d5f03e262014b15668557a3df3a = L.marker(
+                [51.2345, 76.8901],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_04a0d1327f6d4a547563030dcb26b17a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bdb63dcf512b667fab2f5add332c87c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75567842bb0147f0b36200586a1b00a6 = $(`<div id="html_75567842bb0147f0b36200586a1b00a6" style="width: 100.0%; height: 100.0%;">Kurty River - Признаки экологического стресса: 2024-12-26 00:00:00</div>`)[0];
+                popup_bdb63dcf512b667fab2f5add332c87c7.setContent(html_75567842bb0147f0b36200586a1b00a6);
+            
+        
+
+        marker_cf494d5f03e262014b15668557a3df3a.bindPopup(popup_bdb63dcf512b667fab2f5add332c87c7)
+        ;
+
+        
+    
+    
+                marker_cf494d5f03e262014b15668557a3df3a.setIcon(icon_04a0d1327f6d4a547563030dcb26b17a);
+            
+    
+            var marker_95f8c1ef78de4197cdd3b40b2ee37af4 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_58fd8bdabd64f09ff24d41fafffe2320 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11f1e71d6a84c7656c8489dac00bc48d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a7fb1ef73689745b606383807e27055 = $(`<div id="html_7a7fb1ef73689745b606383807e27055" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-02-05 00:00:00</div>`)[0];
+                popup_11f1e71d6a84c7656c8489dac00bc48d.setContent(html_7a7fb1ef73689745b606383807e27055);
+            
+        
+
+        marker_95f8c1ef78de4197cdd3b40b2ee37af4.bindPopup(popup_11f1e71d6a84c7656c8489dac00bc48d)
+        ;
+
+        
+    
+    
+                marker_95f8c1ef78de4197cdd3b40b2ee37af4.setIcon(icon_58fd8bdabd64f09ff24d41fafffe2320);
+            
+    
+            var marker_ae20ac6d7599ae4ce95ec6e01838f42e = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_62dfcce40a0bec57bf23ca2f57192101 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_786969057fca3e9ab837ce1f62880a03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5f2b527c0aa7a2e79b648cfe18794b7 = $(`<div id="html_e5f2b527c0aa7a2e79b648cfe18794b7" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-02-10 00:00:00</div>`)[0];
+                popup_786969057fca3e9ab837ce1f62880a03.setContent(html_e5f2b527c0aa7a2e79b648cfe18794b7);
+            
+        
+
+        marker_ae20ac6d7599ae4ce95ec6e01838f42e.bindPopup(popup_786969057fca3e9ab837ce1f62880a03)
+        ;
+
+        
+    
+    
+                marker_ae20ac6d7599ae4ce95ec6e01838f42e.setIcon(icon_62dfcce40a0bec57bf23ca2f57192101);
+            
+    
+            var marker_af2c0ab62955712875bf9b8521ce51a2 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_7564f0c7feff96530224cb6108a8a8b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be1d778a5a19b26254336e90fca95f5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f944a108ad34be0d625e3922441d892 = $(`<div id="html_2f944a108ad34be0d625e3922441d892" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-02-28 00:00:00</div>`)[0];
+                popup_be1d778a5a19b26254336e90fca95f5a.setContent(html_2f944a108ad34be0d625e3922441d892);
+            
+        
+
+        marker_af2c0ab62955712875bf9b8521ce51a2.bindPopup(popup_be1d778a5a19b26254336e90fca95f5a)
+        ;
+
+        
+    
+    
+                marker_af2c0ab62955712875bf9b8521ce51a2.setIcon(icon_7564f0c7feff96530224cb6108a8a8b5);
+            
+    
+            var marker_b72bf7acf66e54f223d5846f88e66cf4 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_d1278e708b0bf181ad16c21b32f3f5f5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b14149cedd09709b3285fc1613b6a2e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_132450897c596686ec98ca325d3fa287 = $(`<div id="html_132450897c596686ec98ca325d3fa287" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-03-18 00:00:00</div>`)[0];
+                popup_b14149cedd09709b3285fc1613b6a2e5.setContent(html_132450897c596686ec98ca325d3fa287);
+            
+        
+
+        marker_b72bf7acf66e54f223d5846f88e66cf4.bindPopup(popup_b14149cedd09709b3285fc1613b6a2e5)
+        ;
+
+        
+    
+    
+                marker_b72bf7acf66e54f223d5846f88e66cf4.setIcon(icon_d1278e708b0bf181ad16c21b32f3f5f5);
+            
+    
+            var marker_d10e7a9890a23222a0c1f573687dfa41 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_cfe114c71b1513f849dfbf3e92870050 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de9b0a500386dcdfa531c8b9da19fefd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47d7028d101e305f12669ac81a3a112a = $(`<div id="html_47d7028d101e305f12669ac81a3a112a" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-05-05 00:00:00</div>`)[0];
+                popup_de9b0a500386dcdfa531c8b9da19fefd.setContent(html_47d7028d101e305f12669ac81a3a112a);
+            
+        
+
+        marker_d10e7a9890a23222a0c1f573687dfa41.bindPopup(popup_de9b0a500386dcdfa531c8b9da19fefd)
+        ;
+
+        
+    
+    
+                marker_d10e7a9890a23222a0c1f573687dfa41.setIcon(icon_cfe114c71b1513f849dfbf3e92870050);
+            
+    
+            var marker_18672db7e5562a916843b0bd5f2acf5c = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_3bfbc0f587a0f03a8cee86fad216822f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d00813cc605596716398b9d03f6bb686 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc7d8a5149071c7cee3c7bf8b83a2d22 = $(`<div id="html_cc7d8a5149071c7cee3c7bf8b83a2d22" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-06-18 00:00:00</div>`)[0];
+                popup_d00813cc605596716398b9d03f6bb686.setContent(html_cc7d8a5149071c7cee3c7bf8b83a2d22);
+            
+        
+
+        marker_18672db7e5562a916843b0bd5f2acf5c.bindPopup(popup_d00813cc605596716398b9d03f6bb686)
+        ;
+
+        
+    
+    
+                marker_18672db7e5562a916843b0bd5f2acf5c.setIcon(icon_3bfbc0f587a0f03a8cee86fad216822f);
+            
+    
+            var marker_bcf28b0a1dc487b68d7554d08c5013c6 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_3909f560c27d12ccf82024846d074958 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43b4410b972e07c9e29142b6f5d72d8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1bbf091dad561e81ffaab3023324ac59 = $(`<div id="html_1bbf091dad561e81ffaab3023324ac59" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-06-26 00:00:00</div>`)[0];
+                popup_43b4410b972e07c9e29142b6f5d72d8f.setContent(html_1bbf091dad561e81ffaab3023324ac59);
+            
+        
+
+        marker_bcf28b0a1dc487b68d7554d08c5013c6.bindPopup(popup_43b4410b972e07c9e29142b6f5d72d8f)
+        ;
+
+        
+    
+    
+                marker_bcf28b0a1dc487b68d7554d08c5013c6.setIcon(icon_3909f560c27d12ccf82024846d074958);
+            
+    
+            var marker_0cc9a6aa66d802f00c1c44bc36b53ddf = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_75166a0c4f2b9d16fa21605c00907296 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06938b3fcf5aab3b29d87b65bb5f3067 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_279fb533dabef888f235424b10ac8ed0 = $(`<div id="html_279fb533dabef888f235424b10ac8ed0" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-08-07 00:00:00</div>`)[0];
+                popup_06938b3fcf5aab3b29d87b65bb5f3067.setContent(html_279fb533dabef888f235424b10ac8ed0);
+            
+        
+
+        marker_0cc9a6aa66d802f00c1c44bc36b53ddf.bindPopup(popup_06938b3fcf5aab3b29d87b65bb5f3067)
+        ;
+
+        
+    
+    
+                marker_0cc9a6aa66d802f00c1c44bc36b53ddf.setIcon(icon_75166a0c4f2b9d16fa21605c00907296);
+            
+    
+            var marker_0545a917688075cf228093f5435cf161 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_93a0270b220b363d205b79249705639d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb621fc002e93c49aae9393f7e8b096d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44fdfa88ba0c1adc6dde0168fb877509 = $(`<div id="html_44fdfa88ba0c1adc6dde0168fb877509" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-08-09 00:00:00</div>`)[0];
+                popup_bb621fc002e93c49aae9393f7e8b096d.setContent(html_44fdfa88ba0c1adc6dde0168fb877509);
+            
+        
+
+        marker_0545a917688075cf228093f5435cf161.bindPopup(popup_bb621fc002e93c49aae9393f7e8b096d)
+        ;
+
+        
+    
+    
+                marker_0545a917688075cf228093f5435cf161.setIcon(icon_93a0270b220b363d205b79249705639d);
+            
+    
+            var marker_f8b037cb012954f0b419674cc6d852f8 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_97c7a86b706a027f907353210704f108 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29ce8702da90788ed9aa06bedd3d4139 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d7da41c87349a54f6928e98b44034db = $(`<div id="html_0d7da41c87349a54f6928e98b44034db" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-08-10 00:00:00</div>`)[0];
+                popup_29ce8702da90788ed9aa06bedd3d4139.setContent(html_0d7da41c87349a54f6928e98b44034db);
+            
+        
+
+        marker_f8b037cb012954f0b419674cc6d852f8.bindPopup(popup_29ce8702da90788ed9aa06bedd3d4139)
+        ;
+
+        
+    
+    
+                marker_f8b037cb012954f0b419674cc6d852f8.setIcon(icon_97c7a86b706a027f907353210704f108);
+            
+    
+            var marker_fa2f60c31ab555ceee6e8fba7e448cb4 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_36546835a6dff2824dc1d56d2359aa14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1571e4f5c8a974e9758328a878d7f1f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb924219192a1d9823f92f0ce09ca892 = $(`<div id="html_bb924219192a1d9823f92f0ce09ca892" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-08-19 00:00:00</div>`)[0];
+                popup_1571e4f5c8a974e9758328a878d7f1f5.setContent(html_bb924219192a1d9823f92f0ce09ca892);
+            
+        
+
+        marker_fa2f60c31ab555ceee6e8fba7e448cb4.bindPopup(popup_1571e4f5c8a974e9758328a878d7f1f5)
+        ;
+
+        
+    
+    
+                marker_fa2f60c31ab555ceee6e8fba7e448cb4.setIcon(icon_36546835a6dff2824dc1d56d2359aa14);
+            
+    
+            var marker_e21c5fe45b17fe614833bf654e5720ab = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_978c9c4fcd87454deef918fb56c16c28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_343fef41d179c5d2a123b32301b791be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30bc9526ee61872d432f7b7ba8a22970 = $(`<div id="html_30bc9526ee61872d432f7b7ba8a22970" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-09-04 00:00:00</div>`)[0];
+                popup_343fef41d179c5d2a123b32301b791be.setContent(html_30bc9526ee61872d432f7b7ba8a22970);
+            
+        
+
+        marker_e21c5fe45b17fe614833bf654e5720ab.bindPopup(popup_343fef41d179c5d2a123b32301b791be)
+        ;
+
+        
+    
+    
+                marker_e21c5fe45b17fe614833bf654e5720ab.setIcon(icon_978c9c4fcd87454deef918fb56c16c28);
+            
+    
+            var marker_d5da9e21970c6ff17400f58a33cf1076 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_e206e1e525af6c9fb22b22473252d134 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae7ca1a86d7b95a1102fe6ce0a7ec739 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a222606cac15665678dbd24bc7c94da = $(`<div id="html_8a222606cac15665678dbd24bc7c94da" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-09-05 00:00:00</div>`)[0];
+                popup_ae7ca1a86d7b95a1102fe6ce0a7ec739.setContent(html_8a222606cac15665678dbd24bc7c94da);
+            
+        
+
+        marker_d5da9e21970c6ff17400f58a33cf1076.bindPopup(popup_ae7ca1a86d7b95a1102fe6ce0a7ec739)
+        ;
+
+        
+    
+    
+                marker_d5da9e21970c6ff17400f58a33cf1076.setIcon(icon_e206e1e525af6c9fb22b22473252d134);
+            
+    
+            var marker_4d18cedf87794c509a1905646d2f01d6 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_7d33f2053bf9608130d8936fbf2e4312 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_118df19ae585e662fac7ee00b4e873f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79d174766413360361c560d1b902be5b = $(`<div id="html_79d174766413360361c560d1b902be5b" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-09-18 00:00:00</div>`)[0];
+                popup_118df19ae585e662fac7ee00b4e873f7.setContent(html_79d174766413360361c560d1b902be5b);
+            
+        
+
+        marker_4d18cedf87794c509a1905646d2f01d6.bindPopup(popup_118df19ae585e662fac7ee00b4e873f7)
+        ;
+
+        
+    
+    
+                marker_4d18cedf87794c509a1905646d2f01d6.setIcon(icon_7d33f2053bf9608130d8936fbf2e4312);
+            
+    
+            var marker_cc97db80584b095c538a7be55fdb8723 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_d37403800cd9eb753d3040b62a41bbfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2916079f5b6bc7ff4736602651f1e80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be1ea8dd2078443acba8cdd91ff93227 = $(`<div id="html_be1ea8dd2078443acba8cdd91ff93227" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-09-24 00:00:00</div>`)[0];
+                popup_d2916079f5b6bc7ff4736602651f1e80.setContent(html_be1ea8dd2078443acba8cdd91ff93227);
+            
+        
+
+        marker_cc97db80584b095c538a7be55fdb8723.bindPopup(popup_d2916079f5b6bc7ff4736602651f1e80)
+        ;
+
+        
+    
+    
+                marker_cc97db80584b095c538a7be55fdb8723.setIcon(icon_d37403800cd9eb753d3040b62a41bbfa);
+            
+    
+            var marker_ddf0124becb13632330b5e76144bd9c5 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_b16d7d84beb3b2d81a622578559f60d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_687f7182b542f86f0b0f923721ecd2ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_846a71418a1c7065fb35d1920043b34a = $(`<div id="html_846a71418a1c7065fb35d1920043b34a" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-09-26 00:00:00</div>`)[0];
+                popup_687f7182b542f86f0b0f923721ecd2ba.setContent(html_846a71418a1c7065fb35d1920043b34a);
+            
+        
+
+        marker_ddf0124becb13632330b5e76144bd9c5.bindPopup(popup_687f7182b542f86f0b0f923721ecd2ba)
+        ;
+
+        
+    
+    
+                marker_ddf0124becb13632330b5e76144bd9c5.setIcon(icon_b16d7d84beb3b2d81a622578559f60d9);
+            
+    
+            var marker_0f904c6231aed515683ac3ede647cd01 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_839acb5b4091b752468b0724387d0b59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd6b79984a1f7739669e540471cad51e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45f183da41287d90225afa418c9732c0 = $(`<div id="html_45f183da41287d90225afa418c9732c0" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-11-28 00:00:00</div>`)[0];
+                popup_fd6b79984a1f7739669e540471cad51e.setContent(html_45f183da41287d90225afa418c9732c0);
+            
+        
+
+        marker_0f904c6231aed515683ac3ede647cd01.bindPopup(popup_fd6b79984a1f7739669e540471cad51e)
+        ;
+
+        
+    
+    
+                marker_0f904c6231aed515683ac3ede647cd01.setIcon(icon_839acb5b4091b752468b0724387d0b59);
+            
+    
+            var marker_1c14b71573574a4c584bb03c0fa26573 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_5c4a3e220aad403ec0938622c14c475f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69ed77cc895bba0fbca2ce8e86ff6e60 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a45a717eb3b437394553f8c77fe2afe = $(`<div id="html_3a45a717eb3b437394553f8c77fe2afe" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-11-29 00:00:00</div>`)[0];
+                popup_69ed77cc895bba0fbca2ce8e86ff6e60.setContent(html_3a45a717eb3b437394553f8c77fe2afe);
+            
+        
+
+        marker_1c14b71573574a4c584bb03c0fa26573.bindPopup(popup_69ed77cc895bba0fbca2ce8e86ff6e60)
+        ;
+
+        
+    
+    
+                marker_1c14b71573574a4c584bb03c0fa26573.setIcon(icon_5c4a3e220aad403ec0938622c14c475f);
+            
+    
+            var marker_c8d3badf70e889d406fe20834f540323 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_d5873678b2c2d350c30d5c31eb46d873 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3deeb563945965419105a84bbe0c602e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb26e60283886a56a06ac2d74233f806 = $(`<div id="html_bb26e60283886a56a06ac2d74233f806" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-12-13 00:00:00</div>`)[0];
+                popup_3deeb563945965419105a84bbe0c602e.setContent(html_bb26e60283886a56a06ac2d74233f806);
+            
+        
+
+        marker_c8d3badf70e889d406fe20834f540323.bindPopup(popup_3deeb563945965419105a84bbe0c602e)
+        ;
+
+        
+    
+    
+                marker_c8d3badf70e889d406fe20834f540323.setIcon(icon_d5873678b2c2d350c30d5c31eb46d873);
+            
+    
+            var marker_68bc39ba0cb3eb1379786fb7a8b4d129 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_0a4171aa34f35bd5261a4312dac83325 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e67b2263c6712dda7d8ce0f15d570ae1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9645a46e18e4fb036615970e8d41b3a8 = $(`<div id="html_9645a46e18e4fb036615970e8d41b3a8" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2023-12-28 00:00:00</div>`)[0];
+                popup_e67b2263c6712dda7d8ce0f15d570ae1.setContent(html_9645a46e18e4fb036615970e8d41b3a8);
+            
+        
+
+        marker_68bc39ba0cb3eb1379786fb7a8b4d129.bindPopup(popup_e67b2263c6712dda7d8ce0f15d570ae1)
+        ;
+
+        
+    
+    
+                marker_68bc39ba0cb3eb1379786fb7a8b4d129.setIcon(icon_0a4171aa34f35bd5261a4312dac83325);
+            
+    
+            var marker_32bdd556d4627657770170885aa84214 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_e10430842297e30ba68c9a9085e4b692 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6ff26abde7ee896697be89df65f3005 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_245a8ed4e57be97c535485033bf720a4 = $(`<div id="html_245a8ed4e57be97c535485033bf720a4" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-01-16 00:00:00</div>`)[0];
+                popup_a6ff26abde7ee896697be89df65f3005.setContent(html_245a8ed4e57be97c535485033bf720a4);
+            
+        
+
+        marker_32bdd556d4627657770170885aa84214.bindPopup(popup_a6ff26abde7ee896697be89df65f3005)
+        ;
+
+        
+    
+    
+                marker_32bdd556d4627657770170885aa84214.setIcon(icon_e10430842297e30ba68c9a9085e4b692);
+            
+    
+            var marker_5a42d072eccf4b9d3faae77b3ce9b3de = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_4cd5083c0d291d397609a701f31167ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e59db9e0a56849e41af391f91b255967 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74f4bd8cd087053d1348f9d29f1de356 = $(`<div id="html_74f4bd8cd087053d1348f9d29f1de356" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-02-12 00:00:00</div>`)[0];
+                popup_e59db9e0a56849e41af391f91b255967.setContent(html_74f4bd8cd087053d1348f9d29f1de356);
+            
+        
+
+        marker_5a42d072eccf4b9d3faae77b3ce9b3de.bindPopup(popup_e59db9e0a56849e41af391f91b255967)
+        ;
+
+        
+    
+    
+                marker_5a42d072eccf4b9d3faae77b3ce9b3de.setIcon(icon_4cd5083c0d291d397609a701f31167ed);
+            
+    
+            var marker_329191a14d6e89ee652dcab06917c2c4 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_0b12f6a40370df56ca2c4decbf6b9e40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b175a488f47e6644b8ecc6c6cd07632 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac49bee7cf380bd6cfcc670ffb0a7788 = $(`<div id="html_ac49bee7cf380bd6cfcc670ffb0a7788" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-03-28 00:00:00</div>`)[0];
+                popup_2b175a488f47e6644b8ecc6c6cd07632.setContent(html_ac49bee7cf380bd6cfcc670ffb0a7788);
+            
+        
+
+        marker_329191a14d6e89ee652dcab06917c2c4.bindPopup(popup_2b175a488f47e6644b8ecc6c6cd07632)
+        ;
+
+        
+    
+    
+                marker_329191a14d6e89ee652dcab06917c2c4.setIcon(icon_0b12f6a40370df56ca2c4decbf6b9e40);
+            
+    
+            var marker_a74dac08cf37f20c4bb28a1ea5cce61c = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_8c5fa1a978bfc0b8b416cfdd5300065c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a47e38a02bbe69219a59b852168aa8c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_214ab03844137eb89e98100e67fee14a = $(`<div id="html_214ab03844137eb89e98100e67fee14a" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-04-13 00:00:00</div>`)[0];
+                popup_a47e38a02bbe69219a59b852168aa8c6.setContent(html_214ab03844137eb89e98100e67fee14a);
+            
+        
+
+        marker_a74dac08cf37f20c4bb28a1ea5cce61c.bindPopup(popup_a47e38a02bbe69219a59b852168aa8c6)
+        ;
+
+        
+    
+    
+                marker_a74dac08cf37f20c4bb28a1ea5cce61c.setIcon(icon_8c5fa1a978bfc0b8b416cfdd5300065c);
+            
+    
+            var marker_932b8fba7ea13a17b96229ff28224ba9 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_0fbe84f9d7f9aec140aa1eb72fbc0428 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f640c6802e08cfe5126f05ba95e7f3ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fb50a67bd58064a6184025897418bb8 = $(`<div id="html_1fb50a67bd58064a6184025897418bb8" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-07-06 00:00:00</div>`)[0];
+                popup_f640c6802e08cfe5126f05ba95e7f3ad.setContent(html_1fb50a67bd58064a6184025897418bb8);
+            
+        
+
+        marker_932b8fba7ea13a17b96229ff28224ba9.bindPopup(popup_f640c6802e08cfe5126f05ba95e7f3ad)
+        ;
+
+        
+    
+    
+                marker_932b8fba7ea13a17b96229ff28224ba9.setIcon(icon_0fbe84f9d7f9aec140aa1eb72fbc0428);
+            
+    
+            var marker_9a62ce002f6ec4c84756377be3aa6ef7 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_4eba168a1fba42ed67d6f67919b7eba6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f6f1da53c9430b64d76b2beb3a78add = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08a616981b572b64c500ec7231695387 = $(`<div id="html_08a616981b572b64c500ec7231695387" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-08-31 00:00:00</div>`)[0];
+                popup_2f6f1da53c9430b64d76b2beb3a78add.setContent(html_08a616981b572b64c500ec7231695387);
+            
+        
+
+        marker_9a62ce002f6ec4c84756377be3aa6ef7.bindPopup(popup_2f6f1da53c9430b64d76b2beb3a78add)
+        ;
+
+        
+    
+    
+                marker_9a62ce002f6ec4c84756377be3aa6ef7.setIcon(icon_4eba168a1fba42ed67d6f67919b7eba6);
+            
+    
+            var marker_d57f68e525f259577366cab61a51035c = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_3707721488052c3a31c1245ff9e22867 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98d0f123c76365f605df20a4cbfa472e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8a86379a36e61b867b6c561c95bf064 = $(`<div id="html_e8a86379a36e61b867b6c561c95bf064" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-09-04 00:00:00</div>`)[0];
+                popup_98d0f123c76365f605df20a4cbfa472e.setContent(html_e8a86379a36e61b867b6c561c95bf064);
+            
+        
+
+        marker_d57f68e525f259577366cab61a51035c.bindPopup(popup_98d0f123c76365f605df20a4cbfa472e)
+        ;
+
+        
+    
+    
+                marker_d57f68e525f259577366cab61a51035c.setIcon(icon_3707721488052c3a31c1245ff9e22867);
+            
+    
+            var marker_df1e8d2912d5141779a55d7d1354bbb7 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_9b3e7ab35b036967d523c607c1594a67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11680ccb657a31f5289453d21702112c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e41075807e51d2fd9d96095ef3b1987 = $(`<div id="html_1e41075807e51d2fd9d96095ef3b1987" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-09-08 00:00:00</div>`)[0];
+                popup_11680ccb657a31f5289453d21702112c.setContent(html_1e41075807e51d2fd9d96095ef3b1987);
+            
+        
+
+        marker_df1e8d2912d5141779a55d7d1354bbb7.bindPopup(popup_11680ccb657a31f5289453d21702112c)
+        ;
+
+        
+    
+    
+                marker_df1e8d2912d5141779a55d7d1354bbb7.setIcon(icon_9b3e7ab35b036967d523c607c1594a67);
+            
+    
+            var marker_70355172d2bcea03476b2ac690899840 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_beaf72d55c5d7a57dfc8fe1ba1771fa9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b837dd30aa191571a8baefd8b4f540e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8403e44d5cf185cfa5bd3c8a2f9e9658 = $(`<div id="html_8403e44d5cf185cfa5bd3c8a2f9e9658" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-09-13 00:00:00</div>`)[0];
+                popup_1b837dd30aa191571a8baefd8b4f540e.setContent(html_8403e44d5cf185cfa5bd3c8a2f9e9658);
+            
+        
+
+        marker_70355172d2bcea03476b2ac690899840.bindPopup(popup_1b837dd30aa191571a8baefd8b4f540e)
+        ;
+
+        
+    
+    
+                marker_70355172d2bcea03476b2ac690899840.setIcon(icon_beaf72d55c5d7a57dfc8fe1ba1771fa9);
+            
+    
+            var marker_a4345f7b7084988633eed93a9bd644db = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_8b9ce8f6b50c7eb69df8a3c7195a1ad8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8136583aa92b3c8370de54fb6458556b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_824d2b2782f47171821f7ee773a48ec1 = $(`<div id="html_824d2b2782f47171821f7ee773a48ec1" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-09-17 00:00:00</div>`)[0];
+                popup_8136583aa92b3c8370de54fb6458556b.setContent(html_824d2b2782f47171821f7ee773a48ec1);
+            
+        
+
+        marker_a4345f7b7084988633eed93a9bd644db.bindPopup(popup_8136583aa92b3c8370de54fb6458556b)
+        ;
+
+        
+    
+    
+                marker_a4345f7b7084988633eed93a9bd644db.setIcon(icon_8b9ce8f6b50c7eb69df8a3c7195a1ad8);
+            
+    
+            var marker_ac05b807a9f2ebb1076f2635d39a36bb = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_a69d501aafbf6c97beba3a043951ab5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8e2d2bca591a4323b17b187e948fbff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_934eb01ca30ed5248bf7039e927912a0 = $(`<div id="html_934eb01ca30ed5248bf7039e927912a0" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-09-21 00:00:00</div>`)[0];
+                popup_e8e2d2bca591a4323b17b187e948fbff.setContent(html_934eb01ca30ed5248bf7039e927912a0);
+            
+        
+
+        marker_ac05b807a9f2ebb1076f2635d39a36bb.bindPopup(popup_e8e2d2bca591a4323b17b187e948fbff)
+        ;
+
+        
+    
+    
+                marker_ac05b807a9f2ebb1076f2635d39a36bb.setIcon(icon_a69d501aafbf6c97beba3a043951ab5e);
+            
+    
+            var marker_a14d7233670808e99379f2a1585e7f4a = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_73f046f373410b0bca36010640445d8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75ea92e9bd544b7cde4ac2b0e93688da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09099cfd5ef44db5d19382b2fa65bf19 = $(`<div id="html_09099cfd5ef44db5d19382b2fa65bf19" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-10-01 00:00:00</div>`)[0];
+                popup_75ea92e9bd544b7cde4ac2b0e93688da.setContent(html_09099cfd5ef44db5d19382b2fa65bf19);
+            
+        
+
+        marker_a14d7233670808e99379f2a1585e7f4a.bindPopup(popup_75ea92e9bd544b7cde4ac2b0e93688da)
+        ;
+
+        
+    
+    
+                marker_a14d7233670808e99379f2a1585e7f4a.setIcon(icon_73f046f373410b0bca36010640445d8e);
+            
+    
+            var marker_95dcdef30273742f3ffb18896281598a = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_6221f43f5520e22770b07d18ae9db573 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2269288cc428b382727b96c264c7dd31 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d1f3f7f8bfb75a5e191cf027042b1fd = $(`<div id="html_8d1f3f7f8bfb75a5e191cf027042b1fd" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-10-25 00:00:00</div>`)[0];
+                popup_2269288cc428b382727b96c264c7dd31.setContent(html_8d1f3f7f8bfb75a5e191cf027042b1fd);
+            
+        
+
+        marker_95dcdef30273742f3ffb18896281598a.bindPopup(popup_2269288cc428b382727b96c264c7dd31)
+        ;
+
+        
+    
+    
+                marker_95dcdef30273742f3ffb18896281598a.setIcon(icon_6221f43f5520e22770b07d18ae9db573);
+            
+    
+            var marker_1182b96ada4a9fae667dc70d5fc03d56 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_5898b4b3963e61e96a5c70361e6a320a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eab8cc2bc9d9814727cd81e30ad35c6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1188b194f9c37fc7a006f8a66b07ae8a = $(`<div id="html_1188b194f9c37fc7a006f8a66b07ae8a" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-10-30 00:00:00</div>`)[0];
+                popup_eab8cc2bc9d9814727cd81e30ad35c6b.setContent(html_1188b194f9c37fc7a006f8a66b07ae8a);
+            
+        
+
+        marker_1182b96ada4a9fae667dc70d5fc03d56.bindPopup(popup_eab8cc2bc9d9814727cd81e30ad35c6b)
+        ;
+
+        
+    
+    
+                marker_1182b96ada4a9fae667dc70d5fc03d56.setIcon(icon_5898b4b3963e61e96a5c70361e6a320a);
+            
+    
+            var marker_9e043b51f7c8a5c85ca6333e58dcdf07 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_bcbeefb0f3ab6f0a1a8ee0855b70de88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66f36a155f71c54ccaded54bd2fba262 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e513388671279ad0a7784214d40c4039 = $(`<div id="html_e513388671279ad0a7784214d40c4039" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-11-05 00:00:00</div>`)[0];
+                popup_66f36a155f71c54ccaded54bd2fba262.setContent(html_e513388671279ad0a7784214d40c4039);
+            
+        
+
+        marker_9e043b51f7c8a5c85ca6333e58dcdf07.bindPopup(popup_66f36a155f71c54ccaded54bd2fba262)
+        ;
+
+        
+    
+    
+                marker_9e043b51f7c8a5c85ca6333e58dcdf07.setIcon(icon_bcbeefb0f3ab6f0a1a8ee0855b70de88);
+            
+    
+            var marker_bb96394fa073df45c88fc28750d5b9ef = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_c1fea96e0a854955419387364d78e089 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7bda21648d993a76aaf6ec41e67149e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d23fc3cb8dc8afd873c8270c453da74 = $(`<div id="html_3d23fc3cb8dc8afd873c8270c453da74" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-11-10 00:00:00</div>`)[0];
+                popup_7bda21648d993a76aaf6ec41e67149e4.setContent(html_3d23fc3cb8dc8afd873c8270c453da74);
+            
+        
+
+        marker_bb96394fa073df45c88fc28750d5b9ef.bindPopup(popup_7bda21648d993a76aaf6ec41e67149e4)
+        ;
+
+        
+    
+    
+                marker_bb96394fa073df45c88fc28750d5b9ef.setIcon(icon_c1fea96e0a854955419387364d78e089);
+            
+    
+            var marker_4a8007b1d8e8e4910ab9155a66e650d5 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_fb378210ea15765e359cb772282d924f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2032f2e77d73cfaf5c853055fd97d2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba6ee4199ca9c39d68ea9dfb6d608f49 = $(`<div id="html_ba6ee4199ca9c39d68ea9dfb6d608f49" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-11-25 00:00:00</div>`)[0];
+                popup_d2032f2e77d73cfaf5c853055fd97d2b.setContent(html_ba6ee4199ca9c39d68ea9dfb6d608f49);
+            
+        
+
+        marker_4a8007b1d8e8e4910ab9155a66e650d5.bindPopup(popup_d2032f2e77d73cfaf5c853055fd97d2b)
+        ;
+
+        
+    
+    
+                marker_4a8007b1d8e8e4910ab9155a66e650d5.setIcon(icon_fb378210ea15765e359cb772282d924f);
+            
+    
+            var marker_b8c3a655e1e3fc173483f8575f8407db = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_18f0a2e98785ee7cbe8cfe3782456f54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e13562b4f1945c3bed1e4bd24ad03be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f82d3c40e60a3eaaf4f8f106d790587 = $(`<div id="html_2f82d3c40e60a3eaaf4f8f106d790587" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-12-11 00:00:00</div>`)[0];
+                popup_6e13562b4f1945c3bed1e4bd24ad03be.setContent(html_2f82d3c40e60a3eaaf4f8f106d790587);
+            
+        
+
+        marker_b8c3a655e1e3fc173483f8575f8407db.bindPopup(popup_6e13562b4f1945c3bed1e4bd24ad03be)
+        ;
+
+        
+    
+    
+                marker_b8c3a655e1e3fc173483f8575f8407db.setIcon(icon_18f0a2e98785ee7cbe8cfe3782456f54);
+            
+    
+            var marker_c5d7f9fe0f899bbc05c45dd357e6c448 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_a5bfca2f5fab29ab18051289bb284f13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be9c133f66be38c492123b685843566c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd789aa50cb8f48580e85809c69d138f = $(`<div id="html_cd789aa50cb8f48580e85809c69d138f" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-12-16 00:00:00</div>`)[0];
+                popup_be9c133f66be38c492123b685843566c.setContent(html_cd789aa50cb8f48580e85809c69d138f);
+            
+        
+
+        marker_c5d7f9fe0f899bbc05c45dd357e6c448.bindPopup(popup_be9c133f66be38c492123b685843566c)
+        ;
+
+        
+    
+    
+                marker_c5d7f9fe0f899bbc05c45dd357e6c448.setIcon(icon_a5bfca2f5fab29ab18051289bb284f13);
+            
+    
+            var marker_6007ebc246ea42c6fce96ec3af3e5cf0 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_6b7113455775ac7f789b46759c56ce13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_109907108723951a70469304ac28ecaf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4f8a678a822ae124c80b575740b19f0 = $(`<div id="html_b4f8a678a822ae124c80b575740b19f0" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-12-19 00:00:00</div>`)[0];
+                popup_109907108723951a70469304ac28ecaf.setContent(html_b4f8a678a822ae124c80b575740b19f0);
+            
+        
+
+        marker_6007ebc246ea42c6fce96ec3af3e5cf0.bindPopup(popup_109907108723951a70469304ac28ecaf)
+        ;
+
+        
+    
+    
+                marker_6007ebc246ea42c6fce96ec3af3e5cf0.setIcon(icon_6b7113455775ac7f789b46759c56ce13);
+            
+    
+            var marker_057a6134360317f394fa64dac5cf0b97 = L.marker(
+                [51.5678, 77.2345],
+                {
+}
+            ).addTo(map_8f26fed09cc1e9ce499500ec231e5b16);
+        
+    
+            var icon_5bd8d21c4acb871417f2e444a769978e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_117463844ae85de98a064a75edf2d809 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_148095b329fcc46412b662a779b4b294 = $(`<div id="html_148095b329fcc46412b662a779b4b294" style="width: 100.0%; height: 100.0%;">Urzhar River - Признаки экологического стресса: 2024-12-30 00:00:00</div>`)[0];
+                popup_117463844ae85de98a064a75edf2d809.setContent(html_148095b329fcc46412b662a779b4b294);
+            
+        
+
+        marker_057a6134360317f394fa64dac5cf0b97.bindPopup(popup_117463844ae85de98a064a75edf2d809)
+        ;
+
+        
+    
+    
+                marker_057a6134360317f394fa64dac5cf0b97.setIcon(icon_5bd8d21c4acb871417f2e444a769978e);
+            
+</script>
+</html>

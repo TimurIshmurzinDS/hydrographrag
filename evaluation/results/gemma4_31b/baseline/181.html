@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_77ca842fb2652a3fa1d82b183874f92a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 50px; left: 50px; width: 250px; height: 150px; 
+                background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+                padding: 10px; font-family: Arial;">
+        <b>Легенда влияния уровня воды:</b><br>
+        <i style="background:orange; width:10px; height:10px; display:inline-block;"></i> Низкий уровень (Риск засухи)<br>
+        <i style="background:green; width:10px; height:10px; display:inline-block;"></i> Средний уровень (Оптимум)<br>
+        <i style="background:purple; width:10px; height:10px; display:inline-block;"></i> Высокий уровень (Затопление)<br>
+        <i style="background:red; width:10px; height:10px; display:inline-block;"></i> Тепловая карта: Биоразнообразие
+    </div>
+    
+    
+            <div class="folium-map" id="map_77ca842fb2652a3fa1d82b183874f92a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_77ca842fb2652a3fa1d82b183874f92a = L.map(
+                "map_77ca842fb2652a3fa1d82b183874f92a",
+                {
+                    center: [43.5, 79.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ae932097593914417b24c80a933a2827 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ae932097593914417b24c80a933a2827.addTo(map_77ca842fb2652a3fa1d82b183874f92a);
+        
+    
+            var poly_line_f03b57a0b5d06d9169004fe6a3ecc3ab = L.polyline(
+                [[43.8, 79.2], [43.7, 79.4], [43.6, 79.6], [43.5, 79.8], [43.4, 80.1], [43.3, 80.4], [43.2, 80.7], [43.1, 81.0]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_77ca842fb2652a3fa1d82b183874f92a);
+        
+    
+            poly_line_f03b57a0b5d06d9169004fe6a3ecc3ab.bindTooltip(
+                `<div>
+                     Река Шарын
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e53dae631a859f8be0efccfff269119e = L.polyline(
+                [[43.8, 79.2], [43.7, 79.4], [43.6, 79.6], [43.5, 79.8], [43.4, 80.1], [43.3, 80.4], [43.2, 80.7], [43.1, 81.0]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 4.0}
+            ).addTo(map_77ca842fb2652a3fa1d82b183874f92a);
+        
+    
+            poly_line_e53dae631a859f8be0efccfff269119e.bindTooltip(
+                `<div>
+                     Низкий уровень (Засуха)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_59a0706779d923d92041905ca2cb237c = L.polyline(
+                [[43.8, 79.2], [43.7, 79.4], [43.6, 79.6], [43.5, 79.8], [43.4, 80.1], [43.3, 80.4], [43.2, 80.7], [43.1, 81.0]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 16.0}
+            ).addTo(map_77ca842fb2652a3fa1d82b183874f92a);
+        
+    
+            poly_line_59a0706779d923d92041905ca2cb237c.bindTooltip(
+                `<div>
+                     Средний уровень (Норма)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c06246c91108238a2fb9374edeaad53a = L.polyline(
+                [[43.8, 79.2], [43.7, 79.4], [43.6, 79.6], [43.5, 79.8], [43.4, 80.1], [43.3, 80.4], [43.2, 80.7], [43.1, 81.0]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 30.0}
+            ).addTo(map_77ca842fb2652a3fa1d82b183874f92a);
+        
+    
+            poly_line_c06246c91108238a2fb9374edeaad53a.bindTooltip(
+                `<div>
+                     Высокий уровень (Паводок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var heat_map_51dc7173cbbb3f9abd719dc4d7a92550 = L.heatLayer(
+                [],
+                {
+  "minOpacity": 0.4,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 10,
+}
+            );
+        
+    
+            heat_map_51dc7173cbbb3f9abd719dc4d7a92550.addTo(map_77ca842fb2652a3fa1d82b183874f92a);
+        
+</script>
+</html>

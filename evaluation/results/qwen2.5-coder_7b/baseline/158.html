@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6aced33405afed320dee8430a7740bf7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6aced33405afed320dee8430a7740bf7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6aced33405afed320dee8430a7740bf7 = L.map(
+                "map_6aced33405afed320dee8430a7740bf7",
+                {
+                    center: [43.0721, 85.6924],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b266f35c20c9161aec34ae7204ce8ce4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b266f35c20c9161aec34ae7204ce8ce4.addTo(map_6aced33405afed320dee8430a7740bf7);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_6aced33405afed320dee8430a7740bf7.timeDimension = L.timeDimension(
+                {
+                    period: "PT1H",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 10,
+  "autoPlay": true,
+  "loopButton": false,
+  "timeSliderDragUpdate": false,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": true,
+  "startOver": true,
+},
+}
+            );
+            map_6aced33405afed320dee8430a7740bf7.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-01-03T00:00:00Z", "river": "Bayankol", "flow_rate": 193.76946144445864, "rainfall": 21.48620406210728}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-01-22T00:00:00Z", "river": "Bayankol", "flow_rate": 89.71445832839441, "rainfall": 20.619323456657263}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-02-02T00:00:00Z", "river": "Bayankol", "flow_rate": 160.36740817612264, "rainfall": 33.774773408228754}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-02-21T00:00:00Z", "river": "Bayankol", "flow_rate": 144.3065617579711, "rainfall": 21.971029578148396}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-02-23T00:00:00Z", "river": "Bayankol", "flow_rate": 219.9584258129752, "rainfall": 10.866588621823064}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-02-29T00:00:00Z", "river": "Bayankol", "flow_rate": 81.51581883075264, "rainfall": 41.390086855464425}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-03-06T00:00:00Z", "river": "Bayankol", "flow_rate": 138.88880715236385, "rainfall": 21.673624446363412}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-03-22T00:00:00Z", "river": "Bayankol", "flow_rate": 197.77944918713362, "rainfall": 32.90664385469342}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-03-29T00:00:00Z", "river": "Bayankol", "flow_rate": 110.0577999604549, "rainfall": 23.990153627548754}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-03-31T00:00:00Z", "river": "Bayankol", "flow_rate": 93.16370058953659, "rainfall": 23.098231174126816}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-04-26T00:00:00Z", "river": "Bayankol", "flow_rate": 98.72356714153912, "rainfall": 27.85684068442309}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-05-09T00:00:00Z", "river": "Bayankol", "flow_rate": 159.4259979545227, "rainfall": 23.194057308080364}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-05-29T00:00:00Z", "river": "Bayankol", "flow_rate": 94.2169662620616, "rainfall": 24.344234595685677}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-06-08T00:00:00Z", "river": "Bayankol", "flow_rate": 134.4992994932896, "rainfall": 27.356013004097758}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-06-11T00:00:00Z", "river": "Bayankol", "flow_rate": -58.259151485559784, "rainfall": 31.474973125070463}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-06-13T00:00:00Z", "river": "Bayankol", "flow_rate": 99.75288540000066, "rainfall": 25.044794428409848}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-06-14T00:00:00Z", "river": "Bayankol", "flow_rate": 173.4123563765881, "rainfall": 16.99146168465347}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-06-18T00:00:00Z", "river": "Bayankol", "flow_rate": 128.23527175065982, "rainfall": 21.088001943097716}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-06-26T00:00:00Z", "river": "Bayankol", "flow_rate": 29.191508696543266, "rainfall": 16.040071303119724}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-06-29T00:00:00Z", "river": "Sarykan", "flow_rate": 159.95856370752358, "rainfall": 21.849174449784275}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-07-15T00:00:00Z", "river": "Sarykan", "flow_rate": 235.94911533190836, "rainfall": 11.233936989092001}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-07-18T00:00:00Z", "river": "Sarykan", "flow_rate": 102.72967078410939, "rainfall": 17.62738930313056}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-07-25T00:00:00Z", "river": "Sarykan", "flow_rate": 80.72406480703552, "rainfall": 10.888151846054244}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-07-29T00:00:00Z", "river": "Sarykan", "flow_rate": 142.7584632738852, "rainfall": 4.005465246213371}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-08-03T00:00:00Z", "river": "Sarykan", "flow_rate": 117.49376778010105, "rainfall": 23.0749324939343}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-08-10T00:00:00Z", "river": "Sarykan", "flow_rate": 80.00887671689782, "rainfall": 22.62834226941973}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-08-12T00:00:00Z", "river": "Sarykan", "flow_rate": 191.4719356750602, "rainfall": 30.782726240662676}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-09-08T00:00:00Z", "river": "Sarykan", "flow_rate": 61.66654349011498, "rainfall": 25.285465116024017}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-09-20T00:00:00Z", "river": "Sarykan", "flow_rate": 138.4342742720657, "rainfall": 18.213358120735933}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-09-23T00:00:00Z", "river": "Sarykan", "flow_rate": 116.85676444698215, "rainfall": 36.82754720293989}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-09-28T00:00:00Z", "river": "Sarykan", "flow_rate": 140.22170972258562, "rainfall": 14.643528907042999}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-10-21T00:00:00Z", "river": "Sarykan", "flow_rate": 35.95258910114302, "rainfall": 21.73488789190198}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-11-04T00:00:00Z", "river": "Sarykan", "flow_rate": 139.1130629086571, "rainfall": 25.56872366101735}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-11-06T00:00:00Z", "river": "Sarykan", "flow_rate": 27.864913159980816, "rainfall": 5.793976335439076}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-11-11T00:00:00Z", "river": "Sarykan", "flow_rate": 159.10461029044308, "rainfall": 11.1024748826825}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-11-16T00:00:00Z", "river": "Sarykan", "flow_rate": 84.75597556194764, "rainfall": 7.150213741717488}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-11-20T00:00:00Z", "river": "Sarykan", "flow_rate": 125.37631202806566, "rainfall": 18.60887520612934}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-12-03T00:00:00Z", "river": "Sarykan", "flow_rate": 214.67010097486002, "rainfall": 10.910438492602818}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-12-05T00:00:00Z", "river": "Sarykan", "flow_rate": 78.7070327203064, "rainfall": 13.735245339149632}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-12-08T00:00:00Z", "river": "Sarykan", "flow_rate": 70.19662315006644, "rainfall": 45.55535965796623}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [85.6924, 43.0721]}, "properties": {"time": "2020-12-12T00:00:00Z", "river": "Sarykan", "flow_rate": 164.1977369536489, "rainfall": 17.436229290031726}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_dccf78b641fab909538a2e9408426a70 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_6aced33405afed320dee8430a7740bf7);
+        
+</script>
+</html>

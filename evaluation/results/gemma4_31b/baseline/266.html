@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3be2298d7ee4d71ab910969d47bc8417 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3be2298d7ee4d71ab910969d47bc8417" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3be2298d7ee4d71ab910969d47bc8417 = L.map(
+                "map_3be2298d7ee4d71ab910969d47bc8417",
+                {
+                    center: [48.7, 65.4],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4ceadd721882a9a7019a64ba75f06a03 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4ceadd721882a9a7019a64ba75f06a03.addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+            var poly_line_938f7f0f94c0752b9e41a79675760677 = L.polyline(
+                [[48.5, 65.0], [48.6, 65.2], [48.7, 65.3], [48.8, 65.5], [48.9, 65.7], [49.0, 65.8]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+            poly_line_938f7f0f94c0752b9e41a79675760677.bindTooltip(
+                `<div>
+                     Река Караой
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_79c12f32841650ed9bf28910fcdf418a = L.polygon(
+                [[48.61709279445739, 65.94040675527575], [48.62709279445739, 65.94040675527575], [48.62709279445739, 65.95040675527575], [48.61709279445739, 65.95040675527575], [48.61709279445739, 65.94040675527575]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_7b1e8b97170cf1a3019887321f0226c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76015c262be60b9e9e1ebc802d292e4e = $(`<div id="html_76015c262be60b9e9e1ebc802d292e4e" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.3708</div>`)[0];
+                popup_7b1e8b97170cf1a3019887321f0226c0.setContent(html_76015c262be60b9e9e1ebc802d292e4e);
+            
+        
+
+        polygon_79c12f32841650ed9bf28910fcdf418a.bindPopup(popup_7b1e8b97170cf1a3019887321f0226c0)
+        ;
+
+        
+    
+    
+            var polygon_4b30c43c41879960452ff028cff10c6f = L.polygon(
+                [[48.57066141545717, 65.23312247004027], [48.580661415457165, 65.23312247004027], [48.580661415457165, 65.24312247004028], [48.57066141545717, 65.24312247004028], [48.57066141545717, 65.23312247004027]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_17f1ded4e5394ad24eb4c3e353f64c64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7f35ebd9662f10b23da725133e41f0e = $(`<div id="html_f7f35ebd9662f10b23da725133e41f0e" style="width: 100.0%; height: 100.0%;">Статус: Irrigated<br>Дистанция: 0.0442</div>`)[0];
+                popup_17f1ded4e5394ad24eb4c3e353f64c64.setContent(html_f7f35ebd9662f10b23da725133e41f0e);
+            
+        
+
+        polygon_4b30c43c41879960452ff028cff10c6f.bindPopup(popup_17f1ded4e5394ad24eb4c3e353f64c64)
+        ;
+
+        
+    
+    
+            var polygon_d367d3aec84356349ce9d154dc334df5 = L.polygon(
+                [[48.70881250076894, 64.98922949553135], [48.71881250076894, 64.98922949553135], [48.71881250076894, 64.99922949553135], [48.70881250076894, 64.99922949553135], [48.70881250076894, 64.98922949553135]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_2691cf4c096524661d968e43c314381b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e572ce274f5f708bb4f5dead18e7b706 = $(`<div id="html_e572ce274f5f708bb4f5dead18e7b706" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.1938</div>`)[0];
+                popup_2691cf4c096524661d968e43c314381b.setContent(html_e572ce274f5f708bb4f5dead18e7b706);
+            
+        
+
+        polygon_d367d3aec84356349ce9d154dc334df5.bindPopup(popup_2691cf4c096524661d968e43c314381b)
+        ;
+
+        
+    
+    
+            var polygon_fcfd219aebc23a6764dd3f8cc75870e6 = L.polygon(
+                [[48.43492372510508, 64.93018660544281], [48.44492372510508, 64.93018660544281], [48.44492372510508, 64.94018660544282], [48.43492372510508, 64.94018660544282], [48.43492372510508, 64.93018660544281]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_708c118480075c5f91235d30a0349f8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59c7463d9b7177c02098eb3efc8bf8ef = $(`<div id="html_59c7463d9b7177c02098eb3efc8bf8ef" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.0884</div>`)[0];
+                popup_708c118480075c5f91235d30a0349f8c.setContent(html_59c7463d9b7177c02098eb3efc8bf8ef);
+            
+        
+
+        polygon_fcfd219aebc23a6764dd3f8cc75870e6.bindPopup(popup_708c118480075c5f91235d30a0349f8c)
+        ;
+
+        
+    
+    
+            var polygon_aa91e909356442a559109588798d9989 = L.polygon(
+                [[48.513876754986114, 65.31011191712965], [48.52387675498611, 65.31011191712965], [48.52387675498611, 65.32011191712965], [48.513876754986114, 65.32011191712965], [48.513876754986114, 65.31011191712965]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_c4b989a765af470c41f269c0a203a160 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8db92d1118ca5cc8605846ebc10c5d8 = $(`<div id="html_a8db92d1118ca5cc8605846ebc10c5d8" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.1388</div>`)[0];
+                popup_c4b989a765af470c41f269c0a203a160.setContent(html_a8db92d1118ca5cc8605846ebc10c5d8);
+            
+        
+
+        polygon_aa91e909356442a559109588798d9989.bindPopup(popup_c4b989a765af470c41f269c0a203a160)
+        ;
+
+        
+    
+    
+            var polygon_16ff40561c97e6bd920f4ad255b03a47 = L.polygon(
+                [[48.97836864547504, 65.16005634588092], [48.988368645475035, 65.16005634588092], [48.988368645475035, 65.17005634588092], [48.97836864547504, 65.17005634588092], [48.97836864547504, 65.16005634588092]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_78037832aacbc123c22193fdfab10d15 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5553eea2ac92bcb472a001f5a0ed77be = $(`<div id="html_5553eea2ac92bcb472a001f5a0ed77be" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.3138</div>`)[0];
+                popup_78037832aacbc123c22193fdfab10d15.setContent(html_5553eea2ac92bcb472a001f5a0ed77be);
+            
+        
+
+        polygon_16ff40561c97e6bd920f4ad255b03a47.bindPopup(popup_78037832aacbc123c22193fdfab10d15)
+        ;
+
+        
+    
+    
+            var polygon_afe4c9eb986619a513afafbc57a48fe2 = L.polygon(
+                [[49.09198059911521, 65.53181009435421], [49.10198059911521, 65.53181009435421], [49.10198059911521, 65.54181009435422], [49.09198059911521, 65.54181009435422], [49.09198059911521, 65.53181009435421]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_a65f71dcacf1e1e979aa9edddef74d2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98df88442ca706561ec0e147a64cb2e3 = $(`<div id="html_98df88442ca706561ec0e147a64cb2e3" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.2492</div>`)[0];
+                popup_a65f71dcacf1e1e979aa9edddef74d2b.setContent(html_98df88442ca706561ec0e147a64cb2e3);
+            
+        
+
+        polygon_afe4c9eb986619a513afafbc57a48fe2.bindPopup(popup_a65f71dcacf1e1e979aa9edddef74d2b)
+        ;
+
+        
+    
+    
+            var polygon_82366db61f78a3cba5d0e1fc3bd58a23 = L.polygon(
+                [[48.454566235658184, 65.44166996411577], [48.46456623565818, 65.44166996411577], [48.46456623565818, 65.45166996411578], [48.454566235658184, 65.45166996411578], [48.454566235658184, 65.44166996411577]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_ab3c4b1d2a2b3754b8951620086750f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5eb464fa4bbd97f182e92ce33d310d0 = $(`<div id="html_d5eb464fa4bbd97f182e92ce33d310d0" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.2737</div>`)[0];
+                popup_ab3c4b1d2a2b3754b8951620086750f9.setContent(html_d5eb464fa4bbd97f182e92ce33d310d0);
+            
+        
+
+        polygon_82366db61f78a3cba5d0e1fc3bd58a23.bindPopup(popup_ab3c4b1d2a2b3754b8951620086750f9)
+        ;
+
+        
+    
+    
+            var polygon_21064b9087a19713b01af226a4c340fc = L.polygon(
+                [[49.0212966543346, 65.25462101599268], [49.0312966543346, 65.25462101599268], [49.0312966543346, 65.26462101599269], [49.0212966543346, 65.26462101599269], [49.0212966543346, 65.25462101599268]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_f1c59c8a22b0c89e734806e9e50c3d56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9d6483688549805dbebaf6520d9f850 = $(`<div id="html_b9d6483688549805dbebaf6520d9f850" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.3099</div>`)[0];
+                popup_f1c59c8a22b0c89e734806e9e50c3d56.setContent(html_b9d6483688549805dbebaf6520d9f850);
+            
+        
+
+        polygon_21064b9087a19713b01af226a4c340fc.bindPopup(popup_f1c59c8a22b0c89e734806e9e50c3d56)
+        ;
+
+        
+    
+    
+            var polygon_43a5b8379bc7cc5c04cf95482bf3e1f1 = L.polygon(
+                [[49.07994510831286, 65.92592620398416], [49.08994510831286, 65.92592620398416], [49.08994510831286, 65.93592620398417], [49.07994510831286, 65.93592620398417], [49.07994510831286, 65.92592620398416]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_2e5e4df670302248ce235c9ea3ee2a03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7615563d3e0b59a2d79333d0fe4a639d = $(`<div id="html_7615563d3e0b59a2d79333d0fe4a639d" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.1561</div>`)[0];
+                popup_2e5e4df670302248ce235c9ea3ee2a03.setContent(html_7615563d3e0b59a2d79333d0fe4a639d);
+            
+        
+
+        polygon_43a5b8379bc7cc5c04cf95482bf3e1f1.bindPopup(popup_2e5e4df670302248ce235c9ea3ee2a03)
+        ;
+
+        
+    
+    
+            var polygon_241d264335006206058ac22f3f5010a8 = L.polygon(
+                [[48.7757967400993, 65.78611657132234], [48.7857967400993, 65.78611657132234], [48.7857967400993, 65.79611657132234], [48.7757967400993, 65.79611657132234], [48.7757967400993, 65.78611657132234]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_dd878d139d9f7108546694f6d0169441 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_685f4df4fea2f1d211d928866726496f = $(`<div id="html_685f4df4fea2f1d211d928866726496f" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.1500</div>`)[0];
+                popup_dd878d139d9f7108546694f6d0169441.setContent(html_685f4df4fea2f1d211d928866726496f);
+            
+        
+
+        polygon_241d264335006206058ac22f3f5010a8.bindPopup(popup_dd878d139d9f7108546694f6d0169441)
+        ;
+
+        
+    
+    
+            var polygon_e6b768b2152b076a587e349e53b843fb = L.polygon(
+                [[48.98430317369999, 65.52289372354248], [48.99430317369999, 65.52289372354248], [48.99430317369999, 65.53289372354249], [48.98430317369999, 65.53289372354249], [48.98430317369999, 65.52289372354248]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_01555a5d404f1c7ccf743af5b1e57f77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c09434cf62c24a2f4e5d0c94e68bf795 = $(`<div id="html_c09434cf62c24a2f4e5d0c94e68bf795" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.1568</div>`)[0];
+                popup_01555a5d404f1c7ccf743af5b1e57f77.setContent(html_c09434cf62c24a2f4e5d0c94e68bf795);
+            
+        
+
+        polygon_e6b768b2152b076a587e349e53b843fb.bindPopup(popup_01555a5d404f1c7ccf743af5b1e57f77)
+        ;
+
+        
+    
+    
+            var polygon_d7d96377a8eb180608782059a47f09af = L.polygon(
+                [[48.65490603269965, 65.27452932086612], [48.66490603269965, 65.27452932086612], [48.66490603269965, 65.28452932086613], [48.65490603269965, 65.28452932086613], [48.65490603269965, 65.27452932086612]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_ef92d6760cc63dae01d8c516b3548443 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd09f619f851f2b56ba6ff2942d3ea31 = $(`<div id="html_cd09f619f851f2b56ba6ff2942d3ea31" style="width: 100.0%; height: 100.0%;">Статус: Irrigated<br>Дистанция: 0.0139</div>`)[0];
+                popup_ef92d6760cc63dae01d8c516b3548443.setContent(html_cd09f619f851f2b56ba6ff2942d3ea31);
+            
+        
+
+        polygon_d7d96377a8eb180608782059a47f09af.bindPopup(popup_ef92d6760cc63dae01d8c516b3548443)
+        ;
+
+        
+    
+    
+            var polygon_47fac9a13303c8206b2ce94ecffc86e4 = L.polygon(
+                [[49.007505799049675, 65.7417552715469], [49.01750579904967, 65.7417552715469], [49.01750579904967, 65.7517552715469], [49.007505799049675, 65.7517552715469], [49.007505799049675, 65.7417552715469]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_97acdd58844f0023aa4300b7cb2deefb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1d63141eeeede6e47a723f95dac0db8 = $(`<div id="html_f1d63141eeeede6e47a723f95dac0db8" style="width: 100.0%; height: 100.0%;">Статус: Irrigated<br>Дистанция: 0.0465</div>`)[0];
+                popup_97acdd58844f0023aa4300b7cb2deefb.setContent(html_f1d63141eeeede6e47a723f95dac0db8);
+            
+        
+
+        polygon_47fac9a13303c8206b2ce94ecffc86e4.bindPopup(popup_97acdd58844f0023aa4300b7cb2deefb)
+        ;
+
+        
+    
+    
+            var polygon_54aa4c377c3adcc5d7c4965783c2465d = L.polygon(
+                [[48.9311506333719, 64.97923079476656], [48.9411506333719, 64.97923079476656], [48.9411506333719, 64.98923079476657], [48.9311506333719, 64.98923079476657], [48.9311506333719, 64.97923079476656]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3be2298d7ee4d71ab910969d47bc8417);
+        
+    
+        var popup_9a0cb8b94f49f77b597aa85bc5befa84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ee3db67443525f4c5b97458284139a9 = $(`<div id="html_2ee3db67443525f4c5b97458284139a9" style="width: 100.0%; height: 100.0%;">Статус: Needs Infrastructure<br>Дистанция: 0.3903</div>`)[0];
+                popup_9a0cb8b94f49f77b597aa85bc5befa84.setContent(html_2ee3db67443525f4c5b97458284139a9);
+            
+        
+
+        polygon_54aa4c377c3adcc5d7c4965783c2465d.bindPopup(popup_9a0cb8b94f49f77b597aa85bc5befa84)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b56ac2e05f924a75c3e55966740b7920 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Flood Risk Index</b><br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Medium
+     </div>
+     
+    
+            <div class="folium-map" id="map_b56ac2e05f924a75c3e55966740b7920" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b56ac2e05f924a75c3e55966740b7920 = L.map(
+                "map_b56ac2e05f924a75c3e55966740b7920",
+                {
+                    center: [43.08, 76.88],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ef12713c2ad49e9da6428fc39d40ac64 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ef12713c2ad49e9da6428fc39d40ac64.addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+            var poly_line_2fb9fbdf958c73497aa128d857b79090 = L.polyline(
+                [[43.15, 76.95], [43.12, 76.92], [43.08, 76.88], [43.05, 76.85], [43.02, 76.82]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+            poly_line_2fb9fbdf958c73497aa128d857b79090.bindTooltip(
+                `<div>
+                     Ulken Almaty River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_888fd302d3a5c20437944f2fc7473bcc = L.circle(
+                [43.15, 76.95],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+        var popup_c76d9607d329ce0e876e5e6de35ba510 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b0d05477c566f8b6dd66ddaac594c3c = $(`<div id="html_3b0d05477c566f8b6dd66ddaac594c3c" style="width: 100.0%; height: 100.0%;">Risk Level: Medium</div>`)[0];
+                popup_c76d9607d329ce0e876e5e6de35ba510.setContent(html_3b0d05477c566f8b6dd66ddaac594c3c);
+            
+        
+
+        circle_888fd302d3a5c20437944f2fc7473bcc.bindPopup(popup_c76d9607d329ce0e876e5e6de35ba510)
+        ;
+
+        
+    
+    
+            var circle_6a846c8a8200a034659380129cedb3d4 = L.circle(
+                [43.12, 76.92],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+        var popup_29abf1ca9d79ec7876880f05be5d09bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afe0db137bb542270dec61d3821c0e53 = $(`<div id="html_afe0db137bb542270dec61d3821c0e53" style="width: 100.0%; height: 100.0%;">Risk Level: Medium</div>`)[0];
+                popup_29abf1ca9d79ec7876880f05be5d09bf.setContent(html_afe0db137bb542270dec61d3821c0e53);
+            
+        
+
+        circle_6a846c8a8200a034659380129cedb3d4.bindPopup(popup_29abf1ca9d79ec7876880f05be5d09bf)
+        ;
+
+        
+    
+    
+            var circle_8e8419df8f8d23b4dc130db7e50bbb2b = L.circle(
+                [43.08, 76.88],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+        var popup_4ccaa08a08ec51c4a2ff0ac1d1068b2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_002d5f0679a5a4572e7ee521c1de341c = $(`<div id="html_002d5f0679a5a4572e7ee521c1de341c" style="width: 100.0%; height: 100.0%;">Risk Level: Medium</div>`)[0];
+                popup_4ccaa08a08ec51c4a2ff0ac1d1068b2f.setContent(html_002d5f0679a5a4572e7ee521c1de341c);
+            
+        
+
+        circle_8e8419df8f8d23b4dc130db7e50bbb2b.bindPopup(popup_4ccaa08a08ec51c4a2ff0ac1d1068b2f)
+        ;
+
+        
+    
+    
+            var circle_8a49f66700791d8d566b196ba9a1ea03 = L.circle(
+                [43.05, 76.85],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+        var popup_7dc6fb29b3f0008eb18d1da1e606dc92 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85bcee85129bab146124750cf7c4907a = $(`<div id="html_85bcee85129bab146124750cf7c4907a" style="width: 100.0%; height: 100.0%;">Risk Level: Medium</div>`)[0];
+                popup_7dc6fb29b3f0008eb18d1da1e606dc92.setContent(html_85bcee85129bab146124750cf7c4907a);
+            
+        
+
+        circle_8a49f66700791d8d566b196ba9a1ea03.bindPopup(popup_7dc6fb29b3f0008eb18d1da1e606dc92)
+        ;
+
+        
+    
+    
+            var circle_af66be39facfd0f51ea3514b41fc6c34 = L.circle(
+                [43.02, 76.82],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1500, "stroke": true, "weight": 3}
+            ).addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+        var popup_59f5f8e26149fbb5b9d2c444d45c49b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb9575afd01bf8920f68e6b43c269ebc = $(`<div id="html_cb9575afd01bf8920f68e6b43c269ebc" style="width: 100.0%; height: 100.0%;">Risk Level: Medium</div>`)[0];
+                popup_59f5f8e26149fbb5b9d2c444d45c49b7.setContent(html_cb9575afd01bf8920f68e6b43c269ebc);
+            
+        
+
+        circle_af66be39facfd0f51ea3514b41fc6c34.bindPopup(popup_59f5f8e26149fbb5b9d2c444d45c49b7)
+        ;
+
+        
+    
+    
+            var marker_d83f61df2de61d06d97ef09f4d8738e8 = L.marker(
+                [43.15, 76.95],
+                {
+}
+            ).addTo(map_b56ac2e05f924a75c3e55966740b7920);
+        
+    
+            var icon_4e7afa511e010698108996a457c11a94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72e0378d182d4c1aef8ef21e7c04e081 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0651759daa291e889a0d9ed52c23fb0b = $(`<div id="html_0651759daa291e889a0d9ed52c23fb0b" style="width: 100.0%; height: 100.0%;">Current Flood Risk: Medium</div>`)[0];
+                popup_72e0378d182d4c1aef8ef21e7c04e081.setContent(html_0651759daa291e889a0d9ed52c23fb0b);
+            
+        
+
+        marker_d83f61df2de61d06d97ef09f4d8738e8.bindPopup(popup_72e0378d182d4c1aef8ef21e7c04e081)
+        ;
+
+        
+    
+    
+                marker_d83f61df2de61d06d97ef09f4d8738e8.setIcon(icon_4e7afa511e010698108996a457c11a94);
+            
+</script>
+</html>

@@ -1,0 +1,29 @@
+% =========================================================================
+% TABLE 1: QUALITATIVE EXAMPLES OF HYDROGRAPHRAG RESPONSES
+% =========================================================================
+\begin{table*}[t]
+\centering
+\caption{Qualitative Analysis: Examples of Queries and HydroGraphRAG Responses across Ontological Categories}
+\label{tab:query_examples}
+\begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X @{}}
+\toprule
+\textbf{Category} & \textbf{Example User Query} & \textbf{HydroGraphRAG Response / Output Action} \\ 
+\midrule
+\textbf{Explicit} & 
+``Plot the water level dynamics for the Kapchagay reservoir for the year 2022 and show it on a map.'' & 
+\textbf{Successful Execution:} Directly extracts the entity (Kapchagay) and property (water level). Generates executable Python code using folium to map the reservoir and matplotlib to plot the 2022 time-series data. \\ 
+\addlinespace
+\textbf{Semi-explicit} & 
+``Find all hydrological monitoring stations located directly upstream of the Ile river delta.'' & 
+\textbf{Graph Traversal:} Leverages topological graph edges (UPSTREAM_OF) to resolve spatial relationships without exact coordinates. Successfully identifies the correct target stations and generates a geographic map of the sub-basin. \\ 
+\addlinespace
+\textbf{Implicit} & 
+``Analyze the water deficit trends and potential drought risks in the southern agricultural zones over the last decade.'' & 
+\textbf{Multi-hop Reasoning:} Infers the geographic scope (southern zones). Performs multi-hop retrieval to aggregate historical flow data across multiple regional rivers. Generates a statistical deficit analysis and a predictive heat map. \\ 
+\addlinespace
+\textbf{Anomalous} & 
+``Generate a spatial map showing the distribution of financial institutions in the Almaty region.'' & 
+\textbf{Semantic Fallback:} Identifies the query as Out-of-Domain (OOD). Aborts code generation and execution to prevent spatial hallucinations. Output text: 'Query is out of the hydrological domain. Map generation aborted.' \\ 
+\bottomrule
+\end{tabularx}
+\end{table*}

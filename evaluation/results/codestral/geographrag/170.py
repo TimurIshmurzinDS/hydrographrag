@@ -1,0 +1,15 @@
+python
+   import geopandas as gpd
+   import folium
+
+   # 1. Load basin (assuming a default basin for the region)
+   basin_data = gpd.read_file(r"data/basin_data.shp").to_crs('EPSG:4326')
+   centroid = basin_data.geometry.centroid.iloc[0]
+
+   # 2. Init map
+   m = folium.Map(location=[centroid.y, centroid.x], tiles='CartoDB positron', zoom_start=8)
+   folium.GeoJson(basin_data.to_json(), style_function=lambda x: {'fillColor': 'green', 'color': 'darkgreen', 'fillOpacity': 0.2}).add_to(m)
+
+   # 3. Since data is unavailable, no points can be added based on Graph Knowledge
+
+   m.save("170.html")

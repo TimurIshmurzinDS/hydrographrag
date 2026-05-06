@@ -1,0 +1,27 @@
+import geopandas as gpd
+import folium
+from shapely import wkt
+
+# 1. Load basin
+basin_data = gpd.read_file(r"data/basin_data.shp").to_crs('EPSG:4326')
+centroid = basin_data.geometry.centroid.iloc[0]
+
+# 2. Init map
+m = folium.Map(location=[centroid.y, centroid.x], tiles='CartoDB positron', zoom_start=8)
+folium.GeoJson(basin_data.to_json(), style_function=lambda x: {'fillColor': 'green', 'color': 'darkgreen', 'fillOpacity': 0.2}).add_to(m)
+
+# 3. Add YOUR points here based on Graph Knowledge
+points = [
+    {"name": "Ili River | Dobyn pier", "wkt": "POINT(80.046 43.4)"},
+    {"name": "Ili River | 164 km above Kapchagay HPP", "wkt": "POINT(79.590664 43.977649)"},
+    {"name": "Ili River | Kapchagay tract", "wkt": "POINT(77.29 43.49)"},
+    {"name": "Ili River | 1 km below the Zhideli branch", "wkt": "POINT(79.988607 44.00253)"},
+    {"name": "Shyzhyn River | Tekeli town", "wkt": "POINT(78.4551 44.5147)"}
+]
+
+# 4. Draw markers
+for p in points:
+    geom = wkt.loads(p["wkt"])
+    folium.Marker(location=[geom.y, geom.x], popup=p["name"]).add_to(m)
+
+m.save("160.html")

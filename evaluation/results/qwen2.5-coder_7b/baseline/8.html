@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5b47c3d936483e5043dc24df49eebcfd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5b47c3d936483e5043dc24df49eebcfd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5b47c3d936483e5043dc24df49eebcfd = L.map(
+                "map_5b47c3d936483e5043dc24df49eebcfd",
+                {
+                    center: [43.2175, 76.8975],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_86f2ba6b84e144310898d6be12255526 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_86f2ba6b84e144310898d6be12255526.addTo(map_5b47c3d936483e5043dc24df49eebcfd);
+        
+    
+            var marker_83ebb9f7dd841508656e423e9df72b45 = L.marker(
+                [43.21, 76.89],
+                {
+}
+            ).addTo(map_5b47c3d936483e5043dc24df49eebcfd);
+        
+    
+        var popup_3de8eb98d43b3aab5dff1f369aa6ce7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c812775a251a4d1cad9beb9b2852ea8a = $(`<div id="html_c812775a251a4d1cad9beb9b2852ea8a" style="width: 100.0%; height: 100.0%;">Датчик 1</div>`)[0];
+                popup_3de8eb98d43b3aab5dff1f369aa6ce7f.setContent(html_c812775a251a4d1cad9beb9b2852ea8a);
+            
+        
+
+        marker_83ebb9f7dd841508656e423e9df72b45.bindPopup(popup_3de8eb98d43b3aab5dff1f369aa6ce7f)
+        ;
+
+        
+    
+    
+            var marker_442f1fe602f14fcf9eea15dcce16fbda = L.marker(
+                [43.215, 76.895],
+                {
+}
+            ).addTo(map_5b47c3d936483e5043dc24df49eebcfd);
+        
+    
+        var popup_080011afbfb0c6e0b69a20ff5d304d79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08b1e1cc47e1ee0b43fe654f02ce2996 = $(`<div id="html_08b1e1cc47e1ee0b43fe654f02ce2996" style="width: 100.0%; height: 100.0%;">Датчик 2</div>`)[0];
+                popup_080011afbfb0c6e0b69a20ff5d304d79.setContent(html_08b1e1cc47e1ee0b43fe654f02ce2996);
+            
+        
+
+        marker_442f1fe602f14fcf9eea15dcce16fbda.bindPopup(popup_080011afbfb0c6e0b69a20ff5d304d79)
+        ;
+
+        
+    
+    
+            var marker_5cd523e38dfcd622f851af6eaa118339 = L.marker(
+                [43.22, 76.9],
+                {
+}
+            ).addTo(map_5b47c3d936483e5043dc24df49eebcfd);
+        
+    
+        var popup_413c805307998e766bfab3fffcc7763b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b10a5ff4c6e175ffd332d78459a0778b = $(`<div id="html_b10a5ff4c6e175ffd332d78459a0778b" style="width: 100.0%; height: 100.0%;">Датчик 3</div>`)[0];
+                popup_413c805307998e766bfab3fffcc7763b.setContent(html_b10a5ff4c6e175ffd332d78459a0778b);
+            
+        
+
+        marker_5cd523e38dfcd622f851af6eaa118339.bindPopup(popup_413c805307998e766bfab3fffcc7763b)
+        ;
+
+        
+    
+    
+            var marker_e5b8de983c362174403f5b26f3a16451 = L.marker(
+                [43.225, 76.905],
+                {
+}
+            ).addTo(map_5b47c3d936483e5043dc24df49eebcfd);
+        
+    
+        var popup_0f1941d2ae984fd6867b66d28a9e0ce3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b73ccd80d6c5154d7079e7a06f1476d4 = $(`<div id="html_b73ccd80d6c5154d7079e7a06f1476d4" style="width: 100.0%; height: 100.0%;">Датчик 4</div>`)[0];
+                popup_0f1941d2ae984fd6867b66d28a9e0ce3.setContent(html_b73ccd80d6c5154d7079e7a06f1476d4);
+            
+        
+
+        marker_e5b8de983c362174403f5b26f3a16451.bindPopup(popup_0f1941d2ae984fd6867b66d28a9e0ce3)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ca1ebacea09a9b87bc946bc213fd2c28 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Drought Risk Legend</b><br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> High Risk (Aksu River)<br>
+     <i style="background:blue; width:10px; height:10px; display:inline-block"></i> Lower Risk
+     </div>
+     
+    
+            <div class="folium-map" id="map_ca1ebacea09a9b87bc946bc213fd2c28" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ca1ebacea09a9b87bc946bc213fd2c28 = L.map(
+                "map_ca1ebacea09a9b87bc946bc213fd2c28",
+                {
+                    center: [43.5, 80.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f13a0ef24101697b7113f455754b94fe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f13a0ef24101697b7113f455754b94fe.addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+            var poly_line_7bacfd224f601e736287ff6548b6616e = L.polyline(
+                [[43.1, 81.2], [43.2, 81.4], [43.4, 81.6]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+            poly_line_7bacfd224f601e736287ff6548b6616e.bindTooltip(
+                `<div>
+                     Aksu River - Risk: 3.20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_1e89eff9421f2762be356de3c0ceb84e = L.circle(
+                [43.1, 81.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+        var popup_722d7d6402e63db0635325fadb6a0ec7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc56c9d317ca697b07c42a81c557a561 = $(`<div id="html_fc56c9d317ca697b07c42a81c557a561" style="width: 100.0%; height: 100.0%;">Farm Zone: Aksu River</div>`)[0];
+                popup_722d7d6402e63db0635325fadb6a0ec7.setContent(html_fc56c9d317ca697b07c42a81c557a561);
+            
+        
+
+        circle_1e89eff9421f2762be356de3c0ceb84e.bindPopup(popup_722d7d6402e63db0635325fadb6a0ec7)
+        ;
+
+        
+    
+    
+            var circle_7c2ed613ab8df505c25e57a5ab073808 = L.circle(
+                [43.2, 81.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+        var popup_277978d34ad72230a1324464aad3f93c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3147ca7f8183f51ddab64916fcbc5b6 = $(`<div id="html_b3147ca7f8183f51ddab64916fcbc5b6" style="width: 100.0%; height: 100.0%;">Farm Zone: Aksu River</div>`)[0];
+                popup_277978d34ad72230a1324464aad3f93c.setContent(html_b3147ca7f8183f51ddab64916fcbc5b6);
+            
+        
+
+        circle_7c2ed613ab8df505c25e57a5ab073808.bindPopup(popup_277978d34ad72230a1324464aad3f93c)
+        ;
+
+        
+    
+    
+            var circle_acca7dab1e6089399d797f86c46054ae = L.circle(
+                [43.4, 81.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+        var popup_d6d8b06c484cdf9a854343a1abdd22f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bb39fa43cc52388b18021c4c368ddcb = $(`<div id="html_7bb39fa43cc52388b18021c4c368ddcb" style="width: 100.0%; height: 100.0%;">Farm Zone: Aksu River</div>`)[0];
+                popup_d6d8b06c484cdf9a854343a1abdd22f5.setContent(html_7bb39fa43cc52388b18021c4c368ddcb);
+            
+        
+
+        circle_acca7dab1e6089399d797f86c46054ae.bindPopup(popup_d6d8b06c484cdf9a854343a1abdd22f5)
+        ;
+
+        
+    
+    
+            var poly_line_2d91242bb42339fe07e3fd8e8be6e747 = L.polyline(
+                [[43.5, 80.1], [43.6, 80.3], [43.8, 80.5]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+            poly_line_2d91242bb42339fe07e3fd8e8be6e747.bindTooltip(
+                `<div>
+                     Temirlik River - Risk: 0.81
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_bb33031a6c64c0d5f60489e1512665d0 = L.circle(
+                [43.5, 80.1],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+        var popup_45f746573e43a12aa42356f5d5ef0152 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_baf58c93527821962eae30d831b4bbbf = $(`<div id="html_baf58c93527821962eae30d831b4bbbf" style="width: 100.0%; height: 100.0%;">Farm Zone: Temirlik River</div>`)[0];
+                popup_45f746573e43a12aa42356f5d5ef0152.setContent(html_baf58c93527821962eae30d831b4bbbf);
+            
+        
+
+        circle_bb33031a6c64c0d5f60489e1512665d0.bindPopup(popup_45f746573e43a12aa42356f5d5ef0152)
+        ;
+
+        
+    
+    
+            var circle_ec2f010e1addbab85646cd8b95ce8c3a = L.circle(
+                [43.6, 80.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+        var popup_005447416353243d65cd7b97431a93f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35593e9772693f2508d7ceb5e714920d = $(`<div id="html_35593e9772693f2508d7ceb5e714920d" style="width: 100.0%; height: 100.0%;">Farm Zone: Temirlik River</div>`)[0];
+                popup_005447416353243d65cd7b97431a93f0.setContent(html_35593e9772693f2508d7ceb5e714920d);
+            
+        
+
+        circle_ec2f010e1addbab85646cd8b95ce8c3a.bindPopup(popup_005447416353243d65cd7b97431a93f0)
+        ;
+
+        
+    
+    
+            var circle_06c05c5c5e88f0e120bda6cc55868ee9 = L.circle(
+                [43.8, 80.5],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_ca1ebacea09a9b87bc946bc213fd2c28);
+        
+    
+        var popup_579b5bf746ad7059a04ebe006d12b98b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c64f36159c49c80089de6dd4b010a472 = $(`<div id="html_c64f36159c49c80089de6dd4b010a472" style="width: 100.0%; height: 100.0%;">Farm Zone: Temirlik River</div>`)[0];
+                popup_579b5bf746ad7059a04ebe006d12b98b.setContent(html_c64f36159c49c80089de6dd4b010a472);
+            
+        
+
+        circle_06c05c5c5e88f0e120bda6cc55868ee9.bindPopup(popup_579b5bf746ad7059a04ebe006d12b98b)
+        ;
+
+        
+    
+</script>
+</html>

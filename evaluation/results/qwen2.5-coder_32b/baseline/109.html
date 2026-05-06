@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6dec2af5164db2201ab6cef006f1eebe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6dec2af5164db2201ab6cef006f1eebe" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6dec2af5164db2201ab6cef006f1eebe = L.map(
+                "map_6dec2af5164db2201ab6cef006f1eebe",
+                {
+                    center: [42.93, 74.65],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b36a8460e6fd8fe974989e4f5a385786 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b36a8460e6fd8fe974989e4f5a385786.addTo(map_6dec2af5164db2201ab6cef006f1eebe);
+        
+    
+            var poly_line_237b2caf7a82cfe272a2af4c6565b9d7 = L.polyline(
+                [[42.85, 74.61], [42.86, 74.62]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_6dec2af5164db2201ab6cef006f1eebe);
+        
+    
+            var poly_line_d45f430c973649456742f5c0e0832ccc = L.polyline(
+                [[43.0, 74.7], [43.01, 74.71]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_6dec2af5164db2201ab6cef006f1eebe);
+        
+    
+            var marker_1bf30cbac984260b000591199be4d8a7 = L.marker(
+                [74.615, 42.855],
+                {
+}
+            ).addTo(map_6dec2af5164db2201ab6cef006f1eebe);
+        
+    
+            var icon_4e596edf86bccacb103fd90f80ca2746 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77fd16960f63cbc7cd562427dab6e6b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b84ae1f720b07daf6b9f50fe528cea7f = $(`<div id="html_b84ae1f720b07daf6b9f50fe528cea7f" style="width: 100.0%; height: 100.0%;">Расстояние до Byzhy: 0.01 м Расстояние до Lepsy: 0.17 м</div>`)[0];
+                popup_77fd16960f63cbc7cd562427dab6e6b1.setContent(html_b84ae1f720b07daf6b9f50fe528cea7f);
+            
+        
+
+        marker_1bf30cbac984260b000591199be4d8a7.bindPopup(popup_77fd16960f63cbc7cd562427dab6e6b1)
+        ;
+
+        
+    
+    
+                marker_1bf30cbac984260b000591199be4d8a7.setIcon(icon_4e596edf86bccacb103fd90f80ca2746);
+            
+    
+            var marker_90e60b63b234da6792ae185c9e545fe2 = L.marker(
+                [74.625, 42.865],
+                {
+}
+            ).addTo(map_6dec2af5164db2201ab6cef006f1eebe);
+        
+    
+            var icon_00a903437b612bdb927aac582db67ed1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ad328a0b9508ed573fe6becf750b789 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2f211b02cb9ce25e440a117ddb16dda = $(`<div id="html_f2f211b02cb9ce25e440a117ddb16dda" style="width: 100.0%; height: 100.0%;">Расстояние до Byzhy: 0.01 м Расстояние до Lepsy: 0.15 м</div>`)[0];
+                popup_7ad328a0b9508ed573fe6becf750b789.setContent(html_f2f211b02cb9ce25e440a117ddb16dda);
+            
+        
+
+        marker_90e60b63b234da6792ae185c9e545fe2.bindPopup(popup_7ad328a0b9508ed573fe6becf750b789)
+        ;
+
+        
+    
+    
+                marker_90e60b63b234da6792ae185c9e545fe2.setIcon(icon_00a903437b612bdb927aac582db67ed1);
+            
+    
+            var marker_cce882c7faaecc693496faf2b3da1202 = L.marker(
+                [74.705, 43.005],
+                {
+}
+            ).addTo(map_6dec2af5164db2201ab6cef006f1eebe);
+        
+    
+            var icon_77fcd8c25be6ccf57f98aa3f257663d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b106952eb295682fd98bc13c7008d99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7befba7fa821ef7d467f99528eebf4f5 = $(`<div id="html_7befba7fa821ef7d467f99528eebf4f5" style="width: 100.0%; height: 100.0%;">Расстояние до Byzhy: 0.17 м Расстояние до Lepsy: 0.01 м</div>`)[0];
+                popup_9b106952eb295682fd98bc13c7008d99.setContent(html_7befba7fa821ef7d467f99528eebf4f5);
+            
+        
+
+        marker_cce882c7faaecc693496faf2b3da1202.bindPopup(popup_9b106952eb295682fd98bc13c7008d99)
+        ;
+
+        
+    
+    
+                marker_cce882c7faaecc693496faf2b3da1202.setIcon(icon_77fcd8c25be6ccf57f98aa3f257663d1);
+            
+    
+            var marker_c2b0decd5a34ffe5de6f32c7fe980af1 = L.marker(
+                [74.715, 43.015],
+                {
+}
+            ).addTo(map_6dec2af5164db2201ab6cef006f1eebe);
+        
+    
+            var icon_8e0876c6969ae6bf645698863d58516f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ce7a73f1407bb98cfeb5a0ff69f5f1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec9f30d16407fe9fdb6a2047f588a573 = $(`<div id="html_ec9f30d16407fe9fdb6a2047f588a573" style="width: 100.0%; height: 100.0%;">Расстояние до Byzhy: 0.18 м Расстояние до Lepsy: 0.01 м</div>`)[0];
+                popup_1ce7a73f1407bb98cfeb5a0ff69f5f1c.setContent(html_ec9f30d16407fe9fdb6a2047f588a573);
+            
+        
+
+        marker_c2b0decd5a34ffe5de6f32c7fe980af1.bindPopup(popup_1ce7a73f1407bb98cfeb5a0ff69f5f1c)
+        ;
+
+        
+    
+    
+                marker_c2b0decd5a34ffe5de6f32c7fe980af1.setIcon(icon_8e0876c6969ae6bf645698863d58516f);
+            
+</script>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_278e97d6f466c0461770f97b3e5e1678 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_278e97d6f466c0461770f97b3e5e1678" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_278e97d6f466c0461770f97b3e5e1678 = L.map(
+                "map_278e97d6f466c0461770f97b3e5e1678",
+                {
+                    center: [55.7833, 21.2833],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_db02b7629a312a83f9260f047e6ce0f3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_db02b7629a312a83f9260f047e6ce0f3.addTo(map_278e97d6f466c0461770f97b3e5e1678);
+        
+    
+            var marker_519bbc980bfc6dd2a2a0f190393537fa = L.marker(
+                [55.7833, 21.2833],
+                {
+}
+            ).addTo(map_278e97d6f466c0461770f97b3e5e1678);
+        
+    
+            var icon_e5adffc0a1786b6751ceceed0ae01e44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16c356bc7915f755ca1d4565cdaef89f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ecfed3cdd31ad637275dda30e52e938 = $(`<div id="html_0ecfed3cdd31ad637275dda30e52e938" style="width: 100.0%; height: 100.0%;">Показатель: pH Значение: 7.2</div>`)[0];
+                popup_16c356bc7915f755ca1d4565cdaef89f.setContent(html_0ecfed3cdd31ad637275dda30e52e938);
+            
+        
+
+        marker_519bbc980bfc6dd2a2a0f190393537fa.bindPopup(popup_16c356bc7915f755ca1d4565cdaef89f)
+        ;
+
+        
+    
+    
+                marker_519bbc980bfc6dd2a2a0f190393537fa.setIcon(icon_e5adffc0a1786b6751ceceed0ae01e44);
+            
+    
+            var marker_da5f5c15a0a9513ccd23df551850c7ca = L.marker(
+                [55.7333, 21.2333],
+                {
+}
+            ).addTo(map_278e97d6f466c0461770f97b3e5e1678);
+        
+    
+            var icon_cf8df7c5c01173afd650abef9ae5cbf3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b3d9bff9d81cbfe495b2a7851b527387 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b2c0adce32ae702635cfb4eaeb3d3ac = $(`<div id="html_3b2c0adce32ae702635cfb4eaeb3d3ac" style="width: 100.0%; height: 100.0%;">Показатель: Temperature Значение: 12.5</div>`)[0];
+                popup_b3d9bff9d81cbfe495b2a7851b527387.setContent(html_3b2c0adce32ae702635cfb4eaeb3d3ac);
+            
+        
+
+        marker_da5f5c15a0a9513ccd23df551850c7ca.bindPopup(popup_b3d9bff9d81cbfe495b2a7851b527387)
+        ;
+
+        
+    
+    
+                marker_da5f5c15a0a9513ccd23df551850c7ca.setIcon(icon_cf8df7c5c01173afd650abef9ae5cbf3);
+            
+    
+            var marker_b87ce4fe2ef467338a4611a9cb083f8f = L.marker(
+                [55.6833, 21.1833],
+                {
+}
+            ).addTo(map_278e97d6f466c0461770f97b3e5e1678);
+        
+    
+            var icon_3c6ef143ed6b87f8ad5f426359e12643 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d52986db09746593dd8368c9a265a31 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa806c11af6286cd6e87d53098a3dc46 = $(`<div id="html_aa806c11af6286cd6e87d53098a3dc46" style="width: 100.0%; height: 100.0%;">Показатель: Nitrogen Значение: 10.8</div>`)[0];
+                popup_3d52986db09746593dd8368c9a265a31.setContent(html_aa806c11af6286cd6e87d53098a3dc46);
+            
+        
+
+        marker_b87ce4fe2ef467338a4611a9cb083f8f.bindPopup(popup_3d52986db09746593dd8368c9a265a31)
+        ;
+
+        
+    
+    
+                marker_b87ce4fe2ef467338a4611a9cb083f8f.setIcon(icon_3c6ef143ed6b87f8ad5f426359e12643);
+            
+</script>
+</html>

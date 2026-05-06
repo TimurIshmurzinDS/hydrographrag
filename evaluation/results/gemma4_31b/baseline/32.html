@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_543296e4be887c0e01ea822301d2321b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_543296e4be887c0e01ea822301d2321b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_543296e4be887c0e01ea822301d2321b = L.map(
+                "map_543296e4be887c0e01ea822301d2321b",
+                {
+                    center: [43.06, 77.67],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb1877cd7379b3eb4e53290938b98382 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bb1877cd7379b3eb4e53290938b98382.addTo(map_543296e4be887c0e01ea822301d2321b);
+        
+    
+            var poly_line_ccab9e43d6c03f7d4ce81171e9c82d07 = L.polyline(
+                [[43.15, 77.55], [43.1, 77.6], [43.05, 77.65], [43.01, 77.72], [42.97, 77.8]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_543296e4be887c0e01ea822301d2321b);
+        
+    
+            poly_line_ccab9e43d6c03f7d4ce81171e9c82d07.bindTooltip(
+                `<div>
+                     Русло реки Талгар
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c643c4c18d379a010cebea5d0ec776b = L.circleMarker(
+                [43.15, 77.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_543296e4be887c0e01ea822301d2321b);
+        
+    
+        var popup_a9cc5e0880c4573f6abadd0e38352eea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9fce2d9dada95f1a551a305ef2f81b29 = $(`<div id="html_9fce2d9dada95f1a551a305ef2f81b29" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Верховья (Горы)<br><b>Индекс качества воды (WQI):</b> 25<br><b>pH:</b> 7.2<br><b>Растворенный кислород:</b> 9.5 мг/л<br><b>Статус:</b> Чистая</div>`)[0];
+                popup_a9cc5e0880c4573f6abadd0e38352eea.setContent(html_9fce2d9dada95f1a551a305ef2f81b29);
+            
+        
+
+        circle_marker_8c643c4c18d379a010cebea5d0ec776b.bindPopup(popup_a9cc5e0880c4573f6abadd0e38352eea)
+        ;
+
+        
+    
+    
+            circle_marker_8c643c4c18d379a010cebea5d0ec776b.bindTooltip(
+                `<div>
+                     Станция 1: Верховья (Горы)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c8fa81748858aeafa7146c957961a53 = L.circleMarker(
+                [43.1, 77.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_543296e4be887c0e01ea822301d2321b);
+        
+    
+        var popup_1702934d5827fae2969aeb5fcf7a7419 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47118ff7cebd1e79706a9e21bbc61c65 = $(`<div id="html_47118ff7cebd1e79706a9e21bbc61c65" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Среднее течение (Лес)<br><b>Индекс качества воды (WQI):</b> 45<br><b>pH:</b> 7.4<br><b>Растворенный кислород:</b> 8.8 мг/л<br><b>Статус:</b> Чистая</div>`)[0];
+                popup_1702934d5827fae2969aeb5fcf7a7419.setContent(html_47118ff7cebd1e79706a9e21bbc61c65);
+            
+        
+
+        circle_marker_0c8fa81748858aeafa7146c957961a53.bindPopup(popup_1702934d5827fae2969aeb5fcf7a7419)
+        ;
+
+        
+    
+    
+            circle_marker_0c8fa81748858aeafa7146c957961a53.bindTooltip(
+                `<div>
+                     Станция 2: Среднее течение (Лес)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a676218beb36a4887bca70a9bfb145d7 = L.circleMarker(
+                [43.05, 77.65],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_543296e4be887c0e01ea822301d2321b);
+        
+    
+        var popup_3f7cadffb7831d5772f1661c4f544e7a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47b1131e96e28cf69fa91a8c50ba5233 = $(`<div id="html_47b1131e96e28cf69fa91a8c50ba5233" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Район г. Талгар<br><b>Индекс качества воды (WQI):</b> 85<br><b>pH:</b> 7.8<br><b>Растворенный кислород:</b> 6.2 мг/л<br><b>Статус:</b> Средняя</div>`)[0];
+                popup_3f7cadffb7831d5772f1661c4f544e7a.setContent(html_47b1131e96e28cf69fa91a8c50ba5233);
+            
+        
+
+        circle_marker_a676218beb36a4887bca70a9bfb145d7.bindPopup(popup_3f7cadffb7831d5772f1661c4f544e7a)
+        ;
+
+        
+    
+    
+            circle_marker_a676218beb36a4887bca70a9bfb145d7.bindTooltip(
+                `<div>
+                     Станция 3: Район г. Талгар
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5153f8efb3bdd5a6f3f3f22b6ac295ce = L.circleMarker(
+                [43.01, 77.72],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_543296e4be887c0e01ea822301d2321b);
+        
+    
+        var popup_88f6a93883677b71c9244a252c9081d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4cf4591fd45caf6c8853d580d39738ff = $(`<div id="html_4cf4591fd45caf6c8853d580d39738ff" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Нижнее течение (Поля)<br><b>Индекс качества воды (WQI):</b> 120<br><b>pH:</b> 8.1<br><b>Растворенный кислород:</b> 4.5 мг/л<br><b>Статус:</b> Загрязненная</div>`)[0];
+                popup_88f6a93883677b71c9244a252c9081d2.setContent(html_4cf4591fd45caf6c8853d580d39738ff);
+            
+        
+
+        circle_marker_5153f8efb3bdd5a6f3f3f22b6ac295ce.bindPopup(popup_88f6a93883677b71c9244a252c9081d2)
+        ;
+
+        
+    
+    
+            circle_marker_5153f8efb3bdd5a6f3f3f22b6ac295ce.bindTooltip(
+                `<div>
+                     Станция 4: Нижнее течение (Поля)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_11cfbb2fbcc98cb1d77b5c667a31fcb7 = L.circleMarker(
+                [42.97, 77.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_543296e4be887c0e01ea822301d2321b);
+        
+    
+        var popup_b5744b35ae8b1273d0f1efd47335ee60 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d209fb6dce31f502dcf48a232fdf4f07 = $(`<div id="html_d209fb6dce31f502dcf48a232fdf4f07" style="width: 100.0%; height: 100.0%;"><b>Станция:</b> Устье/Канал<br><b>Индекс качества воды (WQI):</b> 150<br><b>pH:</b> 8.5<br><b>Растворенный кислород:</b> 3.1 мг/л<br><b>Статус:</b> Загрязненная</div>`)[0];
+                popup_b5744b35ae8b1273d0f1efd47335ee60.setContent(html_d209fb6dce31f502dcf48a232fdf4f07);
+            
+        
+
+        circle_marker_11cfbb2fbcc98cb1d77b5c667a31fcb7.bindPopup(popup_b5744b35ae8b1273d0f1efd47335ee60)
+        ;
+
+        
+    
+    
+            circle_marker_11cfbb2fbcc98cb1d77b5c667a31fcb7.bindTooltip(
+                `<div>
+                     Станция 5: Устье/Канал
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

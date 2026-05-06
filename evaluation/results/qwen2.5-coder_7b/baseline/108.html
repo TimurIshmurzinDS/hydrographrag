@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8480f61b9d8e1480040444e1282c6c3d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8480f61b9d8e1480040444e1282c6c3d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8480f61b9d8e1480040444e1282c6c3d = L.map(
+                "map_8480f61b9d8e1480040444e1282c6c3d",
+                {
+                    center: [50.0, 36.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e9adfe323a4ad19be7f809dfb7d1767c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e9adfe323a4ad19be7f809dfb7d1767c.addTo(map_8480f61b9d8e1480040444e1282c6c3d);
+        
+    
+            var marker_ba0af572b6b04f7302624590439c221a = L.marker(
+                [50.05803453733183, 35.96712202291923],
+                {
+}
+            ).addTo(map_8480f61b9d8e1480040444e1282c6c3d);
+        
+    
+        var popup_4932d528331c1d2ba9cdfed9ca7ef980 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d1bc0cf8819476dbce1075aa5af9545 = $(`<div id="html_9d1bc0cf8819476dbce1075aa5af9545" style="width: 100.0%; height: 100.0%;">Date: 2023-01-01 00:00:00 Kurty River: 10 (Stress: Low) Urzhar River: 8 (Stress: Low)</div>`)[0];
+                popup_4932d528331c1d2ba9cdfed9ca7ef980.setContent(html_9d1bc0cf8819476dbce1075aa5af9545);
+            
+        
+
+        marker_ba0af572b6b04f7302624590439c221a.bindPopup(popup_4932d528331c1d2ba9cdfed9ca7ef980)
+        ;
+
+        
+    
+    
+            var marker_58e74f0daf59d0518b7c91f381849701 = L.marker(
+                [50.015221308398935, 36.04056163915897],
+                {
+}
+            ).addTo(map_8480f61b9d8e1480040444e1282c6c3d);
+        
+    
+        var popup_285e8ad2a4a87c2bc5e499db19772ea3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9f2f5577ff2b19bc51c30f23404aa87 = $(`<div id="html_c9f2f5577ff2b19bc51c30f23404aa87" style="width: 100.0%; height: 100.0%;">Date: 2023-01-02 00:00:00 Kurty River: 12 (Stress: Low) Urzhar River: 9 (Stress: Low)</div>`)[0];
+                popup_285e8ad2a4a87c2bc5e499db19772ea3.setContent(html_c9f2f5577ff2b19bc51c30f23404aa87);
+            
+        
+
+        marker_58e74f0daf59d0518b7c91f381849701.bindPopup(popup_285e8ad2a4a87c2bc5e499db19772ea3)
+        ;
+
+        
+    
+    
+            var marker_e460b0537085a946ad6d9f2850641e66 = L.marker(
+                [49.91564500320689, 36.028559502430646],
+                {
+}
+            ).addTo(map_8480f61b9d8e1480040444e1282c6c3d);
+        
+    
+        var popup_84c30de263329774574ebe50ff31d148 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba24ed53913a05c908d4473b05a84d82 = $(`<div id="html_ba24ed53913a05c908d4473b05a84d82" style="width: 100.0%; height: 100.0%;">Date: 2023-01-03 00:00:00 Kurty River: 15 (Stress: Low) Urzhar River: 11 (Stress: Low)</div>`)[0];
+                popup_84c30de263329774574ebe50ff31d148.setContent(html_ba24ed53913a05c908d4473b05a84d82);
+            
+        
+
+        marker_e460b0537085a946ad6d9f2850641e66.bindPopup(popup_84c30de263329774574ebe50ff31d148)
+        ;
+
+        
+    
+    
+            var marker_f2d3e837ef17502d6e82c9ec46a4b8ca = L.marker(
+                [50.06244235945353, 35.95035856641488],
+                {
+}
+            ).addTo(map_8480f61b9d8e1480040444e1282c6c3d);
+        
+    
+        var popup_ad40521a60805310d10c3a83f7c045a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b609aba9c5f59d7a33eb6641125dfa3 = $(`<div id="html_9b609aba9c5f59d7a33eb6641125dfa3" style="width: 100.0%; height: 100.0%;">Date: 2023-01-04 00:00:00 Kurty River: 18 (Stress: Low) Urzhar River: 13 (Stress: Low)</div>`)[0];
+                popup_ad40521a60805310d10c3a83f7c045a4.setContent(html_9b609aba9c5f59d7a33eb6641125dfa3);
+            
+        
+
+        marker_f2d3e837ef17502d6e82c9ec46a4b8ca.bindPopup(popup_ad40521a60805310d10c3a83f7c045a4)
+        ;
+
+        
+    
+    
+            var marker_d3e7715fcdb145a90c2327db9b7557c1 = L.marker(
+                [49.97282003462089, 35.917770436376],
+                {
+}
+            ).addTo(map_8480f61b9d8e1480040444e1282c6c3d);
+        
+    
+        var popup_c7b3850d9533d0a2ee6c29e4488fc8c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eedb0cc953460733e9f7977e20c21f89 = $(`<div id="html_eedb0cc953460733e9f7977e20c21f89" style="width: 100.0%; height: 100.0%;">Date: 2023-01-05 00:00:00 Kurty River: 20 (Stress: High) Urzhar River: 14 (Stress: High)</div>`)[0];
+                popup_c7b3850d9533d0a2ee6c29e4488fc8c9.setContent(html_eedb0cc953460733e9f7977e20c21f89);
+            
+        
+
+        marker_d3e7715fcdb145a90c2327db9b7557c1.bindPopup(popup_c7b3850d9533d0a2ee6c29e4488fc8c9)
+        ;
+
+        
+    
+</script>
+</html>

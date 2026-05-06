@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae844c3c50331395df7bf23f4cbb0b2e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ae844c3c50331395df7bf23f4cbb0b2e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae844c3c50331395df7bf23f4cbb0b2e = L.map(
+                "map_ae844c3c50331395df7bf23f4cbb0b2e",
+                {
+                    center: [43.7, 43.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e51ffa739c28f68ebdbde3789122e176 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e51ffa739c28f68ebdbde3789122e176.addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+        function geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.2, "weight": 1};
+            }
+        }
+
+        function geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9 = L.geoJson(null, {
+                onEachFeature: geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9_onEachFeature,
+            
+                style: geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9_styler,
+            ...{
+}
+        });
+
+        function geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9_add (data) {
+            geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9
+                .addData(data);
+        }
+            geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9_add({"bbox": [42.0, 43.0, 45.0, 44.5], "features": [{"bbox": [42.0, 43.0, 45.0, 44.5], "geometry": {"coordinates": [[[42.0, 43.0], [45.0, 43.0], [45.0, 44.5], [42.0, 44.5], [42.0, 43.0]]], "type": "Polygon"}, "id": "0", "properties": {"name": "Ili Basin"}, "type": "Feature"}, {"bbox": [43.5, 43.5, 44.5, 44.0], "geometry": {"coordinates": [[[43.5, 43.5], [44.5, 43.5], [44.5, 44.0], [43.5, 44.0], [43.5, 43.5]]], "type": "Polygon"}, "id": "1", "properties": {"name": "Karatal Basin"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a9f11517ce6d957b7cc0c9548ad5b9c9.addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+            var circle_marker_f09005527fb089fcb34c71effaad51fd = L.circleMarker(
+                [43.5, 43.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+        var popup_e8e005aac6bae7324889f80f550e8fc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fbf0d0198011f68d59ff2b9c801dbf7 = $(`<div id="html_6fbf0d0198011f68d59ff2b9c801dbf7" style="width: 100.0%; height: 100.0%;">Sensor ID: 101<br>Status: working<br>Basin: Ili Basin</div>`)[0];
+                popup_e8e005aac6bae7324889f80f550e8fc2.setContent(html_6fbf0d0198011f68d59ff2b9c801dbf7);
+            
+        
+
+        circle_marker_f09005527fb089fcb34c71effaad51fd.bindPopup(popup_e8e005aac6bae7324889f80f550e8fc2)
+        ;
+
+        
+    
+    
+            var circle_marker_48d3d77f637a7706e28b65054acfa615 = L.circleMarker(
+                [43.8, 44.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+        var popup_4d287679aec5a57598cca84fbc39f030 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5790bcd6103602a9a9768afc3e1e984c = $(`<div id="html_5790bcd6103602a9a9768afc3e1e984c" style="width: 100.0%; height: 100.0%;">Sensor ID: 102<br>Status: faulty<br>Basin: Ili Basin</div>`)[0];
+                popup_4d287679aec5a57598cca84fbc39f030.setContent(html_5790bcd6103602a9a9768afc3e1e984c);
+            
+        
+
+        circle_marker_48d3d77f637a7706e28b65054acfa615.bindPopup(popup_4d287679aec5a57598cca84fbc39f030)
+        ;
+
+        
+    
+    
+            var circle_marker_cdbb9064d55becb4c2b01e3cc7bf688b = L.circleMarker(
+                [43.8, 44.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+        var popup_4e5a81f7f21ea9e677cf8a1b66049abe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a912d36aafe2684a9249dc24a3f2782 = $(`<div id="html_9a912d36aafe2684a9249dc24a3f2782" style="width: 100.0%; height: 100.0%;">Sensor ID: 102<br>Status: faulty<br>Basin: Karatal Basin</div>`)[0];
+                popup_4e5a81f7f21ea9e677cf8a1b66049abe.setContent(html_9a912d36aafe2684a9249dc24a3f2782);
+            
+        
+
+        circle_marker_cdbb9064d55becb4c2b01e3cc7bf688b.bindPopup(popup_4e5a81f7f21ea9e677cf8a1b66049abe)
+        ;
+
+        
+    
+    
+            var circle_marker_ec07cdc2d6ec0922a9596029480b89bb = L.circleMarker(
+                [44.2, 44.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+        var popup_25d29470fea09534856b14e223ae9a2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_236b8bac766bdf6120ba368bb306492e = $(`<div id="html_236b8bac766bdf6120ba368bb306492e" style="width: 100.0%; height: 100.0%;">Sensor ID: 103<br>Status: working<br>Basin: Ili Basin</div>`)[0];
+                popup_25d29470fea09534856b14e223ae9a2a.setContent(html_236b8bac766bdf6120ba368bb306492e);
+            
+        
+
+        circle_marker_ec07cdc2d6ec0922a9596029480b89bb.bindPopup(popup_25d29470fea09534856b14e223ae9a2a)
+        ;
+
+        
+    
+    
+            var circle_marker_91275f36b84b7f06cbc4d0073a592436 = L.circleMarker(
+                [43.7, 43.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+        var popup_3bb57878fe64f90491d163ac8fc0076a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85bf7d5c0be11d8893b0f87899f6b20a = $(`<div id="html_85bf7d5c0be11d8893b0f87899f6b20a" style="width: 100.0%; height: 100.0%;">Sensor ID: 104<br>Status: faulty<br>Basin: Ili Basin</div>`)[0];
+                popup_3bb57878fe64f90491d163ac8fc0076a.setContent(html_85bf7d5c0be11d8893b0f87899f6b20a);
+            
+        
+
+        circle_marker_91275f36b84b7f06cbc4d0073a592436.bindPopup(popup_3bb57878fe64f90491d163ac8fc0076a)
+        ;
+
+        
+    
+    
+            var circle_marker_0a4d8bcba728f2b97be21de6487bb50d = L.circleMarker(
+                [43.7, 43.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_ae844c3c50331395df7bf23f4cbb0b2e);
+        
+    
+        var popup_9db96055e05824ece5241aeaf674cb3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acbc0789468c58cb91e542390a8be64f = $(`<div id="html_acbc0789468c58cb91e542390a8be64f" style="width: 100.0%; height: 100.0%;">Sensor ID: 104<br>Status: faulty<br>Basin: Karatal Basin</div>`)[0];
+                popup_9db96055e05824ece5241aeaf674cb3c.setContent(html_acbc0789468c58cb91e542390a8be64f);
+            
+        
+
+        circle_marker_0a4d8bcba728f2b97be21de6487bb50d.bindPopup(popup_9db96055e05824ece5241aeaf674cb3c)
+        ;
+
+        
+    
+</script>
+</html>

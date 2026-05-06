@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3d909690f4c2065ab2030fc4b6b3105d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3d909690f4c2065ab2030fc4b6b3105d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3d909690f4c2065ab2030fc4b6b3105d = L.map(
+                "map_3d909690f4c2065ab2030fc4b6b3105d",
+                {
+                    center: [43.24, 76.95],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_80f8776eb8058c7de2dc9eb7da0db595 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_80f8776eb8058c7de2dc9eb7da0db595.addTo(map_3d909690f4c2065ab2030fc4b6b3105d);
+        
+    
+            var marker_321ba2151ba982ecfc73fed5f3277066 = L.marker(
+                [43.2589, 76.9102],
+                {
+}
+            ).addTo(map_3d909690f4c2065ab2030fc4b6b3105d);
+        
+    
+        var popup_69c88500518d758971b3221dcc0c69a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ef354c81eff04617664e78a6b0731bc = $(`<div id="html_4ef354c81eff04617664e78a6b0731bc" style="width: 100.0%; height: 100.0%;">Впадение реки Каратал</div>`)[0];
+                popup_69c88500518d758971b3221dcc0c69a3.setContent(html_4ef354c81eff04617664e78a6b0731bc);
+            
+        
+
+        marker_321ba2151ba982ecfc73fed5f3277066.bindPopup(popup_69c88500518d758971b3221dcc0c69a3)
+        ;
+
+        
+    
+    
+            var marker_3fe76fcb8e32bcfc3183fd668942c67a = L.marker(
+                [43.2289, 76.9802],
+                {
+}
+            ).addTo(map_3d909690f4c2065ab2030fc4b6b3105d);
+        
+    
+        var popup_2f54aab8b1b1ce88da02d123ec8473e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72ee8a814df4d812c652297ca6660fc9 = $(`<div id="html_72ee8a814df4d812c652297ca6660fc9" style="width: 100.0%; height: 100.0%;">Впадение реки Улькен Алматы</div>`)[0];
+                popup_2f54aab8b1b1ce88da02d123ec8473e9.setContent(html_72ee8a814df4d812c652297ca6660fc9);
+            
+        
+
+        marker_3fe76fcb8e32bcfc3183fd668942c67a.bindPopup(popup_2f54aab8b1b1ce88da02d123ec8473e9)
+        ;
+
+        
+    
+    
+            var poly_line_25204ab71d3fd0a0a03b6df9e4885d8b = L.polyline(
+                [[43.2589, 76.9102], [43.2289, 76.9802]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3d909690f4c2065ab2030fc4b6b3105d);
+        
+</script>
+</html>

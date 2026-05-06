@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b7b0318342237f840192f60a9aa16861 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b7b0318342237f840192f60a9aa16861" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b7b0318342237f840192f60a9aa16861 = L.map(
+                "map_b7b0318342237f840192f60a9aa16861",
+                {
+                    center: [48.45, 68.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_63b9a298916547a61d9e0d40e679d730 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_63b9a298916547a61d9e0d40e679d730.addTo(map_b7b0318342237f840192f60a9aa16861);
+        
+    
+            var poly_line_a0195c70cd0cedcd2cac2f8a7b75b294 = L.polyline(
+                [[48.5, 68.2], [48.6, 68.4], [48.7, 68.5]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_b7b0318342237f840192f60a9aa16861);
+        
+    
+            poly_line_a0195c70cd0cedcd2cac2f8a7b75b294.bindTooltip(
+                `<div>
+                     Sarykan River: 25.92 млн м3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b7a395ffdecd39cd69a501f9864c41f1 = L.marker(
+                [48.5, 68.2],
+                {
+}
+            ).addTo(map_b7b0318342237f840192f60a9aa16861);
+        
+    
+            var icon_234be2561332563740515831fe6e96fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1567fd3b903ce5fe95c76946c8b2ee46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aadf3a767b23076204b08c323cf3fb4 = $(`<div id="html_9aadf3a767b23076204b08c323cf3fb4" style="width: 100.0%; height: 100.0%;"><b>Sarykan River</b><br>Объем: 25.92 млн м3</div>`)[0];
+                popup_1567fd3b903ce5fe95c76946c8b2ee46.setContent(html_9aadf3a767b23076204b08c323cf3fb4);
+            
+        
+
+        marker_b7a395ffdecd39cd69a501f9864c41f1.bindPopup(popup_1567fd3b903ce5fe95c76946c8b2ee46)
+        ;
+
+        
+    
+    
+                marker_b7a395ffdecd39cd69a501f9864c41f1.setIcon(icon_234be2561332563740515831fe6e96fc);
+            
+    
+            var poly_line_7830078357fe1eb601e0790e32e5494f = L.polyline(
+                [[48.4, 68.1], [48.3, 68.3], [48.2, 68.4]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_b7b0318342237f840192f60a9aa16861);
+        
+    
+            poly_line_7830078357fe1eb601e0790e32e5494f.bindTooltip(
+                `<div>
+                     Temirlik River: 18.66 млн м3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c6682a876b70036c9cb4a726e6e5f24f = L.marker(
+                [48.4, 68.1],
+                {
+}
+            ).addTo(map_b7b0318342237f840192f60a9aa16861);
+        
+    
+            var icon_5075274e18d8bd703e1922b4356f3bf5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_090f749dc255673c844d44f30d18469b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67500a9a708d13e1c4fce49855fe6db0 = $(`<div id="html_67500a9a708d13e1c4fce49855fe6db0" style="width: 100.0%; height: 100.0%;"><b>Temirlik River</b><br>Объем: 18.66 млн м3</div>`)[0];
+                popup_090f749dc255673c844d44f30d18469b.setContent(html_67500a9a708d13e1c4fce49855fe6db0);
+            
+        
+
+        marker_c6682a876b70036c9cb4a726e6e5f24f.bindPopup(popup_090f749dc255673c844d44f30d18469b)
+        ;
+
+        
+    
+    
+                marker_c6682a876b70036c9cb4a726e6e5f24f.setIcon(icon_5075274e18d8bd703e1922b4356f3bf5);
+            
+</script>
+</html>

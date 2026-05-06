@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b2b1f67d3a125fb27cec44a459d52d18 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b2b1f67d3a125fb27cec44a459d52d18" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b2b1f67d3a125fb27cec44a459d52d18 = L.map(
+                "map_b2b1f67d3a125fb27cec44a459d52d18",
+                {
+                    center: [42.18, 78.54],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ab2eaf0029b5cf94e68d801aa7705ca8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ab2eaf0029b5cf94e68d801aa7705ca8.addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+            var poly_line_5856d4edbf0456cba97775b32805aac7 = L.polyline(
+                [[42.15, 78.5], [42.155, 78.51], [42.162, 78.525], [42.17, 78.54], [42.185, 78.55], [42.2, 78.565], [42.215, 78.58]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+            poly_line_5856d4edbf0456cba97775b32805aac7.bindTooltip(
+                `<div>
+                     Русло реки Караой
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a38b2eb7bc780c0e34150785316e3bbc = L.circleMarker(
+                [42.155, 78.51],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+        var popup_f6a4248a0dfada4a4defd7f8f3c862f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41dd6754102178c6bd246dfa47a26e06 = $(`<div id="html_41dd6754102178c6bd246dfa47a26e06" style="width: 100.0%; height: 100.0%;">Точка 1: pH 7.08</div>`)[0];
+                popup_f6a4248a0dfada4a4defd7f8f3c862f0.setContent(html_41dd6754102178c6bd246dfa47a26e06);
+            
+        
+
+        circle_marker_a38b2eb7bc780c0e34150785316e3bbc.bindPopup(popup_f6a4248a0dfada4a4defd7f8f3c862f0)
+        ;
+
+        
+    
+    
+            var circle_marker_7c9fcef25564400b3383622cea73ae4a = L.circleMarker(
+                [42.162, 78.525],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+        var popup_56f8e847046f6615c2ac614284b0f97c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aeaa16509382d3d7b444bebdb479238d = $(`<div id="html_aeaa16509382d3d7b444bebdb479238d" style="width: 100.0%; height: 100.0%;">Точка 2: pH 7.95</div>`)[0];
+                popup_56f8e847046f6615c2ac614284b0f97c.setContent(html_aeaa16509382d3d7b444bebdb479238d);
+            
+        
+
+        circle_marker_7c9fcef25564400b3383622cea73ae4a.bindPopup(popup_56f8e847046f6615c2ac614284b0f97c)
+        ;
+
+        
+    
+    
+            var circle_marker_de234edfb01bc73772c73ef67c9dfa6a = L.circleMarker(
+                [42.17, 78.54],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+        var popup_1978c364cbe880b3bdfe5775e6b9611b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2d6cbf93543f35e7beffa5369e4caeb = $(`<div id="html_d2d6cbf93543f35e7beffa5369e4caeb" style="width: 100.0%; height: 100.0%;">Точка 3: pH 6.53</div>`)[0];
+                popup_1978c364cbe880b3bdfe5775e6b9611b.setContent(html_d2d6cbf93543f35e7beffa5369e4caeb);
+            
+        
+
+        circle_marker_de234edfb01bc73772c73ef67c9dfa6a.bindPopup(popup_1978c364cbe880b3bdfe5775e6b9611b)
+        ;
+
+        
+    
+    
+            var circle_marker_d2f9b23a20df69eeda9b243c7b25a626 = L.circleMarker(
+                [42.185, 78.55],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+        var popup_8a1f4b421cd950c0b7e2f111788a22b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_014e94037f022198ffb3bc725f284ce1 = $(`<div id="html_014e94037f022198ffb3bc725f284ce1" style="width: 100.0%; height: 100.0%;">Точка 4: pH 7.43</div>`)[0];
+                popup_8a1f4b421cd950c0b7e2f111788a22b0.setContent(html_014e94037f022198ffb3bc725f284ce1);
+            
+        
+
+        circle_marker_d2f9b23a20df69eeda9b243c7b25a626.bindPopup(popup_8a1f4b421cd950c0b7e2f111788a22b0)
+        ;
+
+        
+    
+    
+            var circle_marker_2a0007d65d31358c59e024c97683686f = L.circleMarker(
+                [42.2, 78.565],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+        var popup_7816d3e041e5428f765759f2b1e41fd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e25221fa6867eaba82776de1b66ceffb = $(`<div id="html_e25221fa6867eaba82776de1b66ceffb" style="width: 100.0%; height: 100.0%;">Точка 5: pH 8.29</div>`)[0];
+                popup_7816d3e041e5428f765759f2b1e41fd8.setContent(html_e25221fa6867eaba82776de1b66ceffb);
+            
+        
+
+        circle_marker_2a0007d65d31358c59e024c97683686f.bindPopup(popup_7816d3e041e5428f765759f2b1e41fd8)
+        ;
+
+        
+    
+    
+            var circle_marker_19f55ae32599a3db863d069c815fa486 = L.circleMarker(
+                [42.215, 78.58],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+        var popup_c1772a7dd456195ce802446aae97e4f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc3720daeb96564285087499fb8d80ef = $(`<div id="html_cc3720daeb96564285087499fb8d80ef" style="width: 100.0%; height: 100.0%;">Точка 6: pH 7.48</div>`)[0];
+                popup_c1772a7dd456195ce802446aae97e4f0.setContent(html_cc3720daeb96564285087499fb8d80ef);
+            
+        
+
+        circle_marker_19f55ae32599a3db863d069c815fa486.bindPopup(popup_c1772a7dd456195ce802446aae97e4f0)
+        ;
+
+        
+    
+    
+            var marker_365f368c923064bc4682ceaf47aedc87 = L.marker(
+                [42.15, 78.5],
+                {
+}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+            var icon_b61200484ee175fcc1559979826936b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f82904dd048b11d3ed18e854ea7caec3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_651a5d4db9d902ca1e7943c541e0c0df = $(`<div id="html_651a5d4db9d902ca1e7943c541e0c0df" style="width: 100.0%; height: 100.0%;">Старт робота</div>`)[0];
+                popup_f82904dd048b11d3ed18e854ea7caec3.setContent(html_651a5d4db9d902ca1e7943c541e0c0df);
+            
+        
+
+        marker_365f368c923064bc4682ceaf47aedc87.bindPopup(popup_f82904dd048b11d3ed18e854ea7caec3)
+        ;
+
+        
+    
+    
+                marker_365f368c923064bc4682ceaf47aedc87.setIcon(icon_b61200484ee175fcc1559979826936b5);
+            
+    
+            var marker_0d3d4fab144e8d9197883de27373f546 = L.marker(
+                [42.215, 78.58],
+                {
+}
+            ).addTo(map_b2b1f67d3a125fb27cec44a459d52d18);
+        
+    
+            var icon_65efa215fc48a2f5e74670ff2319783c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a02e05a26958553ab5e350b0113bb73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38def63d77230236e4bdca66c21b77d7 = $(`<div id="html_38def63d77230236e4bdca66c21b77d7" style="width: 100.0%; height: 100.0%;">Финиш робота</div>`)[0];
+                popup_0a02e05a26958553ab5e350b0113bb73.setContent(html_38def63d77230236e4bdca66c21b77d7);
+            
+        
+
+        marker_0d3d4fab144e8d9197883de27373f546.bindPopup(popup_0a02e05a26958553ab5e350b0113bb73)
+        ;
+
+        
+    
+    
+                marker_0d3d4fab144e8d9197883de27373f546.setIcon(icon_65efa215fc48a2f5e74670ff2319783c);
+            
+</script>
+</html>

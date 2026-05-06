@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3365c453e4602d5bcb6ab0c3bf8f27e4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3365c453e4602d5bcb6ab0c3bf8f27e4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3365c453e4602d5bcb6ab0c3bf8f27e4 = L.map(
+                "map_3365c453e4602d5bcb6ab0c3bf8f27e4",
+                {
+                    center: [44.2, 68.6],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bac769076bb85a1a7042fd91213d79ac = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bac769076bb85a1a7042fd91213d79ac.addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+            var poly_line_bce37cc712779be35fdb710d34b1f26f = L.polyline(
+                [[44.123, 68.456], [44.15, 68.5], [44.18, 68.55], [44.21, 68.6], [44.25, 68.68], [44.3, 68.75]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+            poly_line_bce37cc712779be35fdb710d34b1f26f.bindTooltip(
+                `<div>
+                     Bayankol River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_423e12d3db99d614de5bb1b39f1ae1cf = L.circleMarker(
+                [44.123, 68.456],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+        var popup_8a34bf57f3e67df7428ac927e06da31c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff9db9088d5fb63568d8e513a1872ca2 = $(`<div id="html_ff9db9088d5fb63568d8e513a1872ca2" style="width: 100.0%; height: 100.0%;">Coins Mined: 24<br>Volatility: 0.73</div>`)[0];
+                popup_8a34bf57f3e67df7428ac927e06da31c.setContent(html_ff9db9088d5fb63568d8e513a1872ca2);
+            
+        
+
+        circle_marker_423e12d3db99d614de5bb1b39f1ae1cf.bindPopup(popup_8a34bf57f3e67df7428ac927e06da31c)
+        ;
+
+        
+    
+    
+            var circle_marker_6559974399a8a5708fdb3f3daa071cad = L.circleMarker(
+                [44.15, 68.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+        var popup_8ec62bd013cb44e60368bb119d1ea7d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f14e4f5a4d8497e91d25ba55036562bf = $(`<div id="html_f14e4f5a4d8497e91d25ba55036562bf" style="width: 100.0%; height: 100.0%;">Coins Mined: 24<br>Volatility: 0.74</div>`)[0];
+                popup_8ec62bd013cb44e60368bb119d1ea7d2.setContent(html_f14e4f5a4d8497e91d25ba55036562bf);
+            
+        
+
+        circle_marker_6559974399a8a5708fdb3f3daa071cad.bindPopup(popup_8ec62bd013cb44e60368bb119d1ea7d2)
+        ;
+
+        
+    
+    
+            var circle_marker_04cc06aa93d9c83386cfca74cac68004 = L.circleMarker(
+                [44.18, 68.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+        var popup_fc98dfa7ad98bc4fcd08bfc890ab699b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2886dc7ff7e86f2c964ac7e3e4055a8 = $(`<div id="html_e2886dc7ff7e86f2c964ac7e3e4055a8" style="width: 100.0%; height: 100.0%;">Coins Mined: 24<br>Volatility: 0.70</div>`)[0];
+                popup_fc98dfa7ad98bc4fcd08bfc890ab699b.setContent(html_e2886dc7ff7e86f2c964ac7e3e4055a8);
+            
+        
+
+        circle_marker_04cc06aa93d9c83386cfca74cac68004.bindPopup(popup_fc98dfa7ad98bc4fcd08bfc890ab699b)
+        ;
+
+        
+    
+    
+            var circle_marker_4958f816712e0689d67c74dbb8cfc0df = L.circleMarker(
+                [44.21, 68.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+        var popup_07c0e22c791ebc62037e97c1e0ea9f6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bda7c05012d017a849005af49f22b50d = $(`<div id="html_bda7c05012d017a849005af49f22b50d" style="width: 100.0%; height: 100.0%;">Coins Mined: 24<br>Volatility: 0.80</div>`)[0];
+                popup_07c0e22c791ebc62037e97c1e0ea9f6e.setContent(html_bda7c05012d017a849005af49f22b50d);
+            
+        
+
+        circle_marker_4958f816712e0689d67c74dbb8cfc0df.bindPopup(popup_07c0e22c791ebc62037e97c1e0ea9f6e)
+        ;
+
+        
+    
+    
+            var circle_marker_69f1c39d8e074041a330942df4493af1 = L.circleMarker(
+                [44.25, 68.68],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+        var popup_17feb329962a47c6efa03cfb21239fc0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_256593b09bc998644ea44b491b2adaf0 = $(`<div id="html_256593b09bc998644ea44b491b2adaf0" style="width: 100.0%; height: 100.0%;">Coins Mined: 24<br>Volatility: 0.72</div>`)[0];
+                popup_17feb329962a47c6efa03cfb21239fc0.setContent(html_256593b09bc998644ea44b491b2adaf0);
+            
+        
+
+        circle_marker_69f1c39d8e074041a330942df4493af1.bindPopup(popup_17feb329962a47c6efa03cfb21239fc0)
+        ;
+
+        
+    
+    
+            var circle_marker_d5c783fdcbd2e27496b803de2eb9584c = L.circleMarker(
+                [44.3, 68.75],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(map_3365c453e4602d5bcb6ab0c3bf8f27e4);
+        
+    
+        var popup_34f31e3172c5ca366246e9adc65e4631 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b5ac56f9f9bc3f72780ea680ca04cad = $(`<div id="html_2b5ac56f9f9bc3f72780ea680ca04cad" style="width: 100.0%; height: 100.0%;">Coins Mined: 24<br>Volatility: 0.76</div>`)[0];
+                popup_34f31e3172c5ca366246e9adc65e4631.setContent(html_2b5ac56f9f9bc3f72780ea680ca04cad);
+            
+        
+
+        circle_marker_d5c783fdcbd2e27496b803de2eb9584c.bindPopup(popup_34f31e3172c5ca366246e9adc65e4631)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ebc09069b892bb7eb0d343e7002bc4f7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ebc09069b892bb7eb0d343e7002bc4f7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ebc09069b892bb7eb0d343e7002bc4f7 = L.map(
+                "map_ebc09069b892bb7eb0d343e7002bc4f7",
+                {
+                    center: [52.0894, 73.5167],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cdaba6e45f8bb8fa81b2bf281111cd63 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cdaba6e45f8bb8fa81b2bf281111cd63.addTo(map_ebc09069b892bb7eb0d343e7002bc4f7);
+        
+    
+            var marker_09c4ed3a54966aa4c7ea0d24a0b4ed32 = L.marker(
+                [52.0894, 73.5167],
+                {
+}
+            ).addTo(map_ebc09069b892bb7eb0d343e7002bc4f7);
+        
+    
+            var icon_2bb47d93d00651b8841496471f4fd9ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_070b4589a68b6f187f104d159c4044ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e467a60a28898e65d7fb698b757f889b = $(`<div id="html_e467a60a28898e65d7fb698b757f889b" style="width: 100.0%; height: 100.0%;">Река Баскан</div>`)[0];
+                popup_070b4589a68b6f187f104d159c4044ad.setContent(html_e467a60a28898e65d7fb698b757f889b);
+            
+        
+
+        marker_09c4ed3a54966aa4c7ea0d24a0b4ed32.bindPopup(popup_070b4589a68b6f187f104d159c4044ad)
+        ;
+
+        
+    
+    
+                marker_09c4ed3a54966aa4c7ea0d24a0b4ed32.setIcon(icon_2bb47d93d00651b8841496471f4fd9ca);
+            
+    
+            var marker_05751ab56c5d09ce3a894076ed472b19 = L.marker(
+                [52.0894, 73.5167],
+                {
+}
+            ).addTo(map_ebc09069b892bb7eb0d343e7002bc4f7);
+        
+    
+            var icon_da65d0d8d1145691408ee0b4a5edc61c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "snowflake",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b24d1cdeaac9a7955400609f05e032ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd69239f9f9b4b479352aa55ed788ef7 = $(`<div id="html_dd69239f9f9b4b479352aa55ed788ef7" style="width: 100.0%; height: 100.0%;">Точка сбора льда</div>`)[0];
+                popup_b24d1cdeaac9a7955400609f05e032ce.setContent(html_dd69239f9f9b4b479352aa55ed788ef7);
+            
+        
+
+        marker_05751ab56c5d09ce3a894076ed472b19.bindPopup(popup_b24d1cdeaac9a7955400609f05e032ce)
+        ;
+
+        
+    
+    
+                marker_05751ab56c5d09ce3a894076ed472b19.setIcon(icon_da65d0d8d1145691408ee0b4a5edc61c);
+            
+    
+            var marker_bd2423ae72a5ccf630e5f75a27cb444a = L.marker(
+                [52.0894, 73.5167],
+                {
+}
+            ).addTo(map_ebc09069b892bb7eb0d343e7002bc4f7);
+        
+    
+            var icon_ce1aad279d9b72272c5142b9bf9d7c75 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thermometer",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38213a35b237c469d1d774e64b6d0017 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a529f8bcf28569c597d148e0acf9a1da = $(`<div id="html_a529f8bcf28569c597d148e0acf9a1da" style="width: 100.0%; height: 100.0%;">Точка охлаждения воды</div>`)[0];
+                popup_38213a35b237c469d1d774e64b6d0017.setContent(html_a529f8bcf28569c597d148e0acf9a1da);
+            
+        
+
+        marker_bd2423ae72a5ccf630e5f75a27cb444a.bindPopup(popup_38213a35b237c469d1d774e64b6d0017)
+        ;
+
+        
+    
+    
+                marker_bd2423ae72a5ccf630e5f75a27cb444a.setIcon(icon_ce1aad279d9b72272c5142b9bf9d7c75);
+            
+</script>
+</html>

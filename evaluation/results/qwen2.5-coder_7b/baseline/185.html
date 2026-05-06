@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c7e3bb222895e850de3e5e5d75d8ff8c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c7e3bb222895e850de3e5e5d75d8ff8c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c7e3bb222895e850de3e5e5d75d8ff8c = L.map(
+                "map_c7e3bb222895e850de3e5e5d75d8ff8c",
+                {
+                    center: [50.45, 30.52],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_48583869c1bb8f99324b4fd2e66dd4ee = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_48583869c1bb8f99324b4fd2e66dd4ee.addTo(map_c7e3bb222895e850de3e5e5d75d8ff8c);
+        
+    
+            var marker_f15125e3065bc883ecea9c603342669a = L.marker(
+                [50.53270154037324, 30.45207304095125],
+                {
+}
+            ).addTo(map_c7e3bb222895e850de3e5e5d75d8ff8c);
+        
+    
+            var icon_8bbda7363062d898edbdaf7740790841 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc6cbf5dbf99fbc78cc79affa841150c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03308e5196ab16b1cf30fa4721431af9 = $(`<div id="html_03308e5196ab16b1cf30fa4721431af9" style="width: 100.0%; height: 100.0%;">Год: 2018, Вода: 100, Урожай: 2000</div>`)[0];
+                popup_dc6cbf5dbf99fbc78cc79affa841150c.setContent(html_03308e5196ab16b1cf30fa4721431af9);
+            
+        
+
+        marker_f15125e3065bc883ecea9c603342669a.bindPopup(popup_dc6cbf5dbf99fbc78cc79affa841150c)
+        ;
+
+        
+    
+    
+                marker_f15125e3065bc883ecea9c603342669a.setIcon(icon_8bbda7363062d898edbdaf7740790841);
+            
+    
+            var marker_02df1a4a40c9adfd438551ec31f6ccae = L.marker(
+                [50.45224872361777, 30.4834441671636],
+                {
+}
+            ).addTo(map_c7e3bb222895e850de3e5e5d75d8ff8c);
+        
+    
+            var icon_8cccf3cf42d8b6730b626c928ea9f096 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b0e4c6551aa0e8337cde30eb3af69bb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6704c178766649200629241001e042a = $(`<div id="html_c6704c178766649200629241001e042a" style="width: 100.0%; height: 100.0%;">Год: 2019, Вода: 150, Урожай: 2200</div>`)[0];
+                popup_b0e4c6551aa0e8337cde30eb3af69bb4.setContent(html_c6704c178766649200629241001e042a);
+            
+        
+
+        marker_02df1a4a40c9adfd438551ec31f6ccae.bindPopup(popup_b0e4c6551aa0e8337cde30eb3af69bb4)
+        ;
+
+        
+    
+    
+                marker_02df1a4a40c9adfd438551ec31f6ccae.setIcon(icon_8cccf3cf42d8b6730b626c928ea9f096);
+            
+    
+            var marker_59bd6c52cac0cc95bd03e1494996b2b1 = L.marker(
+                [50.463769302506485, 30.528460709344774],
+                {
+}
+            ).addTo(map_c7e3bb222895e850de3e5e5d75d8ff8c);
+        
+    
+            var icon_05f6fb85bd59a01cb26abb96e332731d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7b84f9dfa7cd2e39805981d25a61c98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40cf7f235218ad4372f361c2b246006d = $(`<div id="html_40cf7f235218ad4372f361c2b246006d" style="width: 100.0%; height: 100.0%;">Год: 2020, Вода: 120, Урожай: 2100</div>`)[0];
+                popup_d7b84f9dfa7cd2e39805981d25a61c98.setContent(html_40cf7f235218ad4372f361c2b246006d);
+            
+        
+
+        marker_59bd6c52cac0cc95bd03e1494996b2b1.bindPopup(popup_d7b84f9dfa7cd2e39805981d25a61c98)
+        ;
+
+        
+    
+    
+                marker_59bd6c52cac0cc95bd03e1494996b2b1.setIcon(icon_05f6fb85bd59a01cb26abb96e332731d);
+            
+    
+            var marker_5be58a21c9f0ccb8569cd58933882a0a = L.marker(
+                [50.450389520675245, 30.53316557581425],
+                {
+}
+            ).addTo(map_c7e3bb222895e850de3e5e5d75d8ff8c);
+        
+    
+            var icon_6a63cbc577e5403c4dbba63141beed25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5fe3a16ac765c6d881d997280e0c2cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3584fe3f02e5e1bb2ad1ebeabdaa5107 = $(`<div id="html_3584fe3f02e5e1bb2ad1ebeabdaa5107" style="width: 100.0%; height: 100.0%;">Год: 2021, Вода: 130, Урожай: 2300</div>`)[0];
+                popup_a5fe3a16ac765c6d881d997280e0c2cf.setContent(html_3584fe3f02e5e1bb2ad1ebeabdaa5107);
+            
+        
+
+        marker_5be58a21c9f0ccb8569cd58933882a0a.bindPopup(popup_a5fe3a16ac765c6d881d997280e0c2cf)
+        ;
+
+        
+    
+    
+                marker_5be58a21c9f0ccb8569cd58933882a0a.setIcon(icon_6a63cbc577e5403c4dbba63141beed25);
+            
+    
+            var marker_6aa7084b68d844a69c1810a93b86c9b9 = L.marker(
+                [50.399073315176864, 30.59655488778891],
+                {
+}
+            ).addTo(map_c7e3bb222895e850de3e5e5d75d8ff8c);
+        
+    
+            var icon_99ab029b833f472c56f87bbcd5648c8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3dd7c1726f0f6ff94ec6a7436492afd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_100bfca6da672bc090c1a408b7af0514 = $(`<div id="html_100bfca6da672bc090c1a408b7af0514" style="width: 100.0%; height: 100.0%;">Год: 2022, Вода: 140, Урожай: 2400</div>`)[0];
+                popup_3dd7c1726f0f6ff94ec6a7436492afd8.setContent(html_100bfca6da672bc090c1a408b7af0514);
+            
+        
+
+        marker_6aa7084b68d844a69c1810a93b86c9b9.bindPopup(popup_3dd7c1726f0f6ff94ec6a7436492afd8)
+        ;
+
+        
+    
+    
+                marker_6aa7084b68d844a69c1810a93b86c9b9.setIcon(icon_99ab029b833f472c56f87bbcd5648c8e);
+            
+</script>
+</html>

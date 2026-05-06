@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1531941cd0dd9af61835292c011b93a4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1531941cd0dd9af61835292c011b93a4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1531941cd0dd9af61835292c011b93a4 = L.map(
+                "map_1531941cd0dd9af61835292c011b93a4",
+                {
+                    center: [56.145, 60.475],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fc8ef2eb770096a79bc0e6a4322c213d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fc8ef2eb770096a79bc0e6a4322c213d.addTo(map_1531941cd0dd9af61835292c011b93a4);
+        
+    
+            var poly_line_c3693b52fae28987b001fbdeb998f221 = L.polyline(
+                [[56.123, 60.456], [56.13, 60.46], [56.145, 60.475], [56.16, 60.49], [56.18, 60.51]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_1531941cd0dd9af61835292c011b93a4);
+        
+    
+            poly_line_c3693b52fae28987b001fbdeb998f221.bindTooltip(
+                `<div>
+                     Prokhodnaya River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5dc1388946482f5d6dafcb5f15ba03e1 = L.circleMarker(
+                [56.145, 60.475],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1531941cd0dd9af61835292c011b93a4);
+        
+    
+        var popup_a9f10a627918e5fa56cd3dffba3f81f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_235dccd571f304ccc17b9d1ac6770c92 = $(`<div id="html_235dccd571f304ccc17b9d1ac6770c92" style="width: 100.0%; height: 100.0%;"><b>Станция мониторинга: Prokhodnaya River</b><br>Текущий расход: 45.5 м³/с<br>Средний исторический (весна): 36.78 м³/с<br>Отклонение: 8.72 м³/с (23.71%)<br><b>Статус: Высокий уровень (Паводок)</b></div>`)[0];
+                popup_a9f10a627918e5fa56cd3dffba3f81f1.setContent(html_235dccd571f304ccc17b9d1ac6770c92);
+            
+        
+
+        circle_marker_5dc1388946482f5d6dafcb5f15ba03e1.bindPopup(popup_a9f10a627918e5fa56cd3dffba3f81f1)
+        ;
+
+        
+    
+</script>
+</html>

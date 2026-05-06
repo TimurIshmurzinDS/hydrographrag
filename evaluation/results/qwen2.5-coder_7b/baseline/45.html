@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ada9579da13d69a27d57e91e2824969d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ada9579da13d69a27d57e91e2824969d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ada9579da13d69a27d57e91e2824969d = L.map(
+                "map_ada9579da13d69a27d57e91e2824969d",
+                {
+                    center: [37.5, -122.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eb26b2b17ca3cd446adeaa6ff20d5907 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eb26b2b17ca3cd446adeaa6ff20d5907.addTo(map_ada9579da13d69a27d57e91e2824969d);
+        
+    
+            var marker_cea2990b92ecdbc572c4f25844aec883 = L.marker(
+                [37.123, -122.123],
+                {
+}
+            ).addTo(map_ada9579da13d69a27d57e91e2824969d);
+        
+    
+            var icon_616c7671fbda38e021e577c1558a2b84 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db4a5ae5f282e19480137e93745fc46d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3477fbc93f8c9a9c0d72c8d333a9ab5 = $(`<div id="html_f3477fbc93f8c9a9c0d72c8d333a9ab5" style="width: 100.0%; height: 100.0%;">Factory A<br>Потребление воды: 1000 м³</div>`)[0];
+                popup_db4a5ae5f282e19480137e93745fc46d.setContent(html_f3477fbc93f8c9a9c0d72c8d333a9ab5);
+            
+        
+
+        marker_cea2990b92ecdbc572c4f25844aec883.bindPopup(popup_db4a5ae5f282e19480137e93745fc46d)
+        ;
+
+        
+    
+    
+                marker_cea2990b92ecdbc572c4f25844aec883.setIcon(icon_616c7671fbda38e021e577c1558a2b84);
+            
+    
+            var marker_dadad2f54a07b0caa638bde7840bdf7a = L.marker(
+                [37.456, -122.456],
+                {
+}
+            ).addTo(map_ada9579da13d69a27d57e91e2824969d);
+        
+    
+            var icon_571785ddaee08a421e005ecf12e1727f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba040fe8db329bbb6f9dda1e1efa3089 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8077b4d6b817f0c394b9e2f2546a5c07 = $(`<div id="html_8077b4d6b817f0c394b9e2f2546a5c07" style="width: 100.0%; height: 100.0%;">Factory B<br>Потребление воды: 1500 м³</div>`)[0];
+                popup_ba040fe8db329bbb6f9dda1e1efa3089.setContent(html_8077b4d6b817f0c394b9e2f2546a5c07);
+            
+        
+
+        marker_dadad2f54a07b0caa638bde7840bdf7a.bindPopup(popup_ba040fe8db329bbb6f9dda1e1efa3089)
+        ;
+
+        
+    
+    
+                marker_dadad2f54a07b0caa638bde7840bdf7a.setIcon(icon_571785ddaee08a421e005ecf12e1727f);
+            
+    
+            var marker_6b420c0566f6d19a304251afd489771c = L.marker(
+                [37.789, -122.789],
+                {
+}
+            ).addTo(map_ada9579da13d69a27d57e91e2824969d);
+        
+    
+            var icon_1ed0f384837fd8e534aecdfa4ada91a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81faacff54b645988e9f2e071aa09ae5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3fd9c4267f3b72024a191a6d3a757064 = $(`<div id="html_3fd9c4267f3b72024a191a6d3a757064" style="width: 100.0%; height: 100.0%;">Factory C<br>Потребление воды: 2000 м³</div>`)[0];
+                popup_81faacff54b645988e9f2e071aa09ae5.setContent(html_3fd9c4267f3b72024a191a6d3a757064);
+            
+        
+
+        marker_6b420c0566f6d19a304251afd489771c.bindPopup(popup_81faacff54b645988e9f2e071aa09ae5)
+        ;
+
+        
+    
+    
+                marker_6b420c0566f6d19a304251afd489771c.setIcon(icon_1ed0f384837fd8e534aecdfa4ada91a0);
+            
+</script>
+</html>

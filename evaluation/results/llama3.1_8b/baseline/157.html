@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_48f5e7ef96c4bf39fc6e1248a11bd5a8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_48f5e7ef96c4bf39fc6e1248a11bd5a8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_48f5e7ef96c4bf39fc6e1248a11bd5a8 = L.map(
+                "map_48f5e7ef96c4bf39fc6e1248a11bd5a8",
+                {
+                    center: [55.789500000000004, 83.0115],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0a7392005f7fd236da91b451cf9b69a6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0a7392005f7fd236da91b451cf9b69a6.addTo(map_48f5e7ef96c4bf39fc6e1248a11bd5a8);
+        
+    
+            var marker_f721806837611a4bd7e46f55ff6d9d19 = L.marker(
+                [55.123, 82.345],
+                {
+}
+            ).addTo(map_48f5e7ef96c4bf39fc6e1248a11bd5a8);
+        
+    
+        var popup_499c307c04f15fe7c2c4eb62c014cd00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8dcb974c02f44c8de16cb07f99c777c = $(`<div id="html_b8dcb974c02f44c8de16cb07f99c777c" style="width: 100.0%; height: 100.0%;">Река: Шилик Прогнозируемая амплитуда сезонного стока: 1009.1194549766681 - 504.55972748833403</div>`)[0];
+                popup_499c307c04f15fe7c2c4eb62c014cd00.setContent(html_b8dcb974c02f44c8de16cb07f99c777c);
+            
+        
+
+        marker_f721806837611a4bd7e46f55ff6d9d19.bindPopup(popup_499c307c04f15fe7c2c4eb62c014cd00)
+        ;
+
+        
+    
+    
+            var marker_30c159d690ac6afcc7eb3cfedbe43548 = L.marker(
+                [56.456, 83.678],
+                {
+}
+            ).addTo(map_48f5e7ef96c4bf39fc6e1248a11bd5a8);
+        
+    
+        var popup_4302e1190dd83e4bb702df48ba05fccd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_102baeeb0a255b92f06f586621f2b469 = $(`<div id="html_102baeeb0a255b92f06f586621f2b469" style="width: 100.0%; height: 100.0%;">Река: Шижин Прогнозируемая амплитуда сезонного стока: 923.4217557956307 - 461.71087789781535</div>`)[0];
+                popup_4302e1190dd83e4bb702df48ba05fccd.setContent(html_102baeeb0a255b92f06f586621f2b469);
+            
+        
+
+        marker_30c159d690ac6afcc7eb3cfedbe43548.bindPopup(popup_4302e1190dd83e4bb702df48ba05fccd)
+        ;
+
+        
+    
+</script>
+</html>

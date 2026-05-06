@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_051574cb1fa13eb6c2214d3d3cec3f34 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_051574cb1fa13eb6c2214d3d3cec3f34" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_051574cb1fa13eb6c2214d3d3cec3f34 = L.map(
+                "map_051574cb1fa13eb6c2214d3d3cec3f34",
+                {
+                    center: [42.60266, 75.27808],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a8e2d870d92f52ada3f0e50e09c60c43 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a8e2d870d92f52ada3f0e50e09c60c43.addTo(map_051574cb1fa13eb6c2214d3d3cec3f34);
+        
+    
+            var marker_bd09aa564b41889400a7f6d3a2ee06d6 = L.marker(
+                [42.5123, 75.1234],
+                {
+}
+            ).addTo(map_051574cb1fa13eb6c2214d3d3cec3f34);
+        
+    
+            var icon_67409bb2cb85b4d084d207eab8691c5d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f45a9101bc271f14a9871493f8704f22 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7fb8b82a116eef4fd8d7702c2d36ee63 = $(`<div id="html_7fb8b82a116eef4fd8d7702c2d36ee63" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> OS-01<br><b>River:</b> Osek River<br><b>Status:</b> Active<br><b>Water Level:</b> 2.1m<br><b>Condition:</b> OK</div>`)[0];
+                popup_f45a9101bc271f14a9871493f8704f22.setContent(html_7fb8b82a116eef4fd8d7702c2d36ee63);
+            
+        
+
+        marker_bd09aa564b41889400a7f6d3a2ee06d6.bindPopup(popup_f45a9101bc271f14a9871493f8704f22)
+        ;
+
+        
+    
+    
+                marker_bd09aa564b41889400a7f6d3a2ee06d6.setIcon(icon_67409bb2cb85b4d084d207eab8691c5d);
+            
+    
+            var marker_a755193b5893f145337d28816fa72f7c = L.marker(
+                [42.5567, 75.189],
+                {
+}
+            ).addTo(map_051574cb1fa13eb6c2214d3d3cec3f34);
+        
+    
+            var icon_b48364a4d4a6234802ab7bb85ed880ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a95e288273a6261648e686f94df74e2f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc19e881cda271ad55cdc50df12bcb09 = $(`<div id="html_cc19e881cda271ad55cdc50df12bcb09" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> OS-02<br><b>River:</b> Osek River<br><b>Status:</b> Inactive<br><b>Water Level:</b> 0.0m<br><b>Condition:</b> ALERT</div>`)[0];
+                popup_a95e288273a6261648e686f94df74e2f.setContent(html_cc19e881cda271ad55cdc50df12bcb09);
+            
+        
+
+        marker_a755193b5893f145337d28816fa72f7c.bindPopup(popup_a95e288273a6261648e686f94df74e2f)
+        ;
+
+        
+    
+    
+                marker_a755193b5893f145337d28816fa72f7c.setIcon(icon_b48364a4d4a6234802ab7bb85ed880ae);
+            
+    
+            var marker_dcc888da73c590e49838f6ebd3edaae6 = L.marker(
+                [42.6101, 75.312],
+                {
+}
+            ).addTo(map_051574cb1fa13eb6c2214d3d3cec3f34);
+        
+    
+            var icon_4fb31bbe3a8b912de383fb3a02e8b5fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33ce87f5b0a61822dfa815e4b04ec3e8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e33900abf34b0e470e37bf4884092fed = $(`<div id="html_e33900abf34b0e470e37bf4884092fed" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> KT-01<br><b>River:</b> Koktal River<br><b>Status:</b> Active<br><b>Water Level:</b> 4.8m<br><b>Condition:</b> OK</div>`)[0];
+                popup_33ce87f5b0a61822dfa815e4b04ec3e8.setContent(html_e33900abf34b0e470e37bf4884092fed);
+            
+        
+
+        marker_dcc888da73c590e49838f6ebd3edaae6.bindPopup(popup_33ce87f5b0a61822dfa815e4b04ec3e8)
+        ;
+
+        
+    
+    
+                marker_dcc888da73c590e49838f6ebd3edaae6.setIcon(icon_4fb31bbe3a8b912de383fb3a02e8b5fa);
+            
+    
+            var marker_af9487e004299f7c03973171205e5a43 = L.marker(
+                [42.645, 75.356],
+                {
+}
+            ).addTo(map_051574cb1fa13eb6c2214d3d3cec3f34);
+        
+    
+            var icon_b2035bbb25fe3f1c01a8e8db655c4ca9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a8b48a1fe87b9714e252cf2dcc02466 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ab4012b73d641a4cb4f794a9e290404 = $(`<div id="html_7ab4012b73d641a4cb4f794a9e290404" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> KT-02<br><b>River:</b> Koktal River<br><b>Status:</b> Active<br><b>Water Level:</b> 5.2m<br><b>Condition:</b> ALERT</div>`)[0];
+                popup_0a8b48a1fe87b9714e252cf2dcc02466.setContent(html_7ab4012b73d641a4cb4f794a9e290404);
+            
+        
+
+        marker_af9487e004299f7c03973171205e5a43.bindPopup(popup_0a8b48a1fe87b9714e252cf2dcc02466)
+        ;
+
+        
+    
+    
+                marker_af9487e004299f7c03973171205e5a43.setIcon(icon_b2035bbb25fe3f1c01a8e8db655c4ca9);
+            
+    
+            var marker_0d894c55db4bd0034d7ceaa3b9655c87 = L.marker(
+                [42.6892, 75.41],
+                {
+}
+            ).addTo(map_051574cb1fa13eb6c2214d3d3cec3f34);
+        
+    
+            var icon_f59e3ad83c02819b9ffd904a9dc77af7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2060cffc634491a2dcba642fcb61f0c2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5549c0ca32c4b6fe29ff7a8630ec325c = $(`<div id="html_5549c0ca32c4b6fe29ff7a8630ec325c" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> KT-03<br><b>River:</b> Koktal River<br><b>Status:</b> Active<br><b>Water Level:</b> 1.9m<br><b>Condition:</b> OK</div>`)[0];
+                popup_2060cffc634491a2dcba642fcb61f0c2.setContent(html_5549c0ca32c4b6fe29ff7a8630ec325c);
+            
+        
+
+        marker_0d894c55db4bd0034d7ceaa3b9655c87.bindPopup(popup_2060cffc634491a2dcba642fcb61f0c2)
+        ;
+
+        
+    
+    
+                marker_0d894c55db4bd0034d7ceaa3b9655c87.setIcon(icon_f59e3ad83c02819b9ffd904a9dc77af7);
+            
+</script>
+</html>

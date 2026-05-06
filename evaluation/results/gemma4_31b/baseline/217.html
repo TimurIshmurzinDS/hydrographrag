@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_385934b6cc54a82986dfa0667623721f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_385934b6cc54a82986dfa0667623721f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_385934b6cc54a82986dfa0667623721f = L.map(
+                "map_385934b6cc54a82986dfa0667623721f",
+                {
+                    center: [43.25, 77.05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f1f8ac307f083157113a27034d2961ca = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f1f8ac307f083157113a27034d2961ca.addTo(map_385934b6cc54a82986dfa0667623721f);
+        
+    
+            var circle_marker_c453d3bedd7c2f2f0bf990b5722036b1 = L.circleMarker(
+                [43.225, 77.012],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_385934b6cc54a82986dfa0667623721f);
+        
+    
+        var popup_f7be53fa7707431b221899d9215670ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94c7a58ab2f221164873c1b53f6c3dee = $(`<div id="html_94c7a58ab2f221164873c1b53f6c3dee" style="width: 100.0%; height: 100.0%;"><b>Sensor_1</b><br>T: 15.5°C, H: 65%<br><i>Температура прохладная. Рекомендуется использование мини-парника. Слишком высокая влажность (влияние реки)! Полностью прекратите полив и обеспечьте максимальную вентиляцию.</i></div>`)[0];
+                popup_f7be53fa7707431b221899d9215670ba.setContent(html_94c7a58ab2f221164873c1b53f6c3dee);
+            
+        
+
+        circle_marker_c453d3bedd7c2f2f0bf990b5722036b1.bindPopup(popup_f7be53fa7707431b221899d9215670ba)
+        ;
+
+        
+    
+    
+            var circle_marker_ff10c6a5e3b145ae8302ed7f4f49e82b = L.circleMarker(
+                [43.238, 77.035],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_385934b6cc54a82986dfa0667623721f);
+        
+    
+        var popup_9b55f03d1ed6d565b0749e35dd8b7feb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c7ddba381dfda08081c2379da80bce8 = $(`<div id="html_1c7ddba381dfda08081c2379da80bce8" style="width: 100.0%; height: 100.0%;"><b>Sensor_2</b><br>T: 18.2°C, H: 58%<br><i>Температура прохладная. Рекомендуется использование мини-парника. Влажность выше нормы. Сократите частоту полива до 1 раза в месяц.</i></div>`)[0];
+                popup_9b55f03d1ed6d565b0749e35dd8b7feb.setContent(html_1c7ddba381dfda08081c2379da80bce8);
+            
+        
+
+        circle_marker_ff10c6a5e3b145ae8302ed7f4f49e82b.bindPopup(popup_9b55f03d1ed6d565b0749e35dd8b7feb)
+        ;
+
+        
+    
+    
+            var circle_marker_a0ede928a70a667a62ebe98f6ee7c501 = L.circleMarker(
+                [43.251, 77.058],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_385934b6cc54a82986dfa0667623721f);
+        
+    
+        var popup_1c7d9820abc821be8d886776f7205f1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_931a7b9854e72370c390ba9b98af3638 = $(`<div id="html_931a7b9854e72370c390ba9b98af3638" style="width: 100.0%; height: 100.0%;"><b>Sensor_3</b><br>T: 21.0°C, H: 52%<br><i>Температурный режим оптимален. Влажность выше нормы. Сократите частоту полива до 1 раза в месяц.</i></div>`)[0];
+                popup_1c7d9820abc821be8d886776f7205f1d.setContent(html_931a7b9854e72370c390ba9b98af3638);
+            
+        
+
+        circle_marker_a0ede928a70a667a62ebe98f6ee7c501.bindPopup(popup_1c7d9820abc821be8d886776f7205f1d)
+        ;
+
+        
+    
+    
+            var circle_marker_742684998b3e2c2fd468dfa18e17b5c4 = L.circleMarker(
+                [43.265, 77.081],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_385934b6cc54a82986dfa0667623721f);
+        
+    
+        var popup_1d300a86ee5de9a8b9871ef92c3bd06c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4874cba7ed3b87553e323117d7a25495 = $(`<div id="html_4874cba7ed3b87553e323117d7a25495" style="width: 100.0%; height: 100.0%;"><b>Sensor_4</b><br>T: 23.5°C, H: 45%<br><i>Температурный режим оптимален. Влажность выше нормы. Сократите частоту полива до 1 раза в месяц.</i></div>`)[0];
+                popup_1d300a86ee5de9a8b9871ef92c3bd06c.setContent(html_4874cba7ed3b87553e323117d7a25495);
+            
+        
+
+        circle_marker_742684998b3e2c2fd468dfa18e17b5c4.bindPopup(popup_1d300a86ee5de9a8b9871ef92c3bd06c)
+        ;
+
+        
+    
+    
+            var circle_marker_5445561f28041efa9eda63997aa08ff0 = L.circleMarker(
+                [43.278, 77.104],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_385934b6cc54a82986dfa0667623721f);
+        
+    
+        var popup_0cb8e6b5c7abb82833858e056307965f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bb4276c2d667d931d5b06a2ace06850 = $(`<div id="html_3bb4276c2d667d931d5b06a2ace06850" style="width: 100.0%; height: 100.0%;"><b>Sensor_5</b><br>T: 25.1°C, H: 38%<br><i>Температурный режим оптимален. Влажность воздуха идеальна для кактусов.</i></div>`)[0];
+                popup_0cb8e6b5c7abb82833858e056307965f.setContent(html_3bb4276c2d667d931d5b06a2ace06850);
+            
+        
+
+        circle_marker_5445561f28041efa9eda63997aa08ff0.bindPopup(popup_0cb8e6b5c7abb82833858e056307965f)
+        ;
+
+        
+    
+</script>
+</html>

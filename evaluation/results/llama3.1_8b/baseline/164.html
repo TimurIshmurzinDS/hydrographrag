@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_13ea9103276e7ea2cb41562ef620804a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_13ea9103276e7ea2cb41562ef620804a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_13ea9103276e7ea2cb41562ef620804a = L.map(
+                "map_13ea9103276e7ea2cb41562ef620804a",
+                {
+                    center: [46.5, 68.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e30a74dbb0c40a1e30fdc6c0ce895d0f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e30a74dbb0c40a1e30fdc6c0ce895d0f.addTo(map_13ea9103276e7ea2cb41562ef620804a);
+        
+    
+            var marker_3c000b83e011e7e2503cc6dec557e927 = L.marker(
+                [1000.0, 10.0],
+                {
+}
+            ).addTo(map_13ea9103276e7ea2cb41562ef620804a);
+        
+    
+        var popup_591ddb3ae1418966430fa2ca8bbfd655 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d485fc2f39bf1f79cbc32830ba1631b1 = $(`<div id="html_d485fc2f39bf1f79cbc32830ba1631b1" style="width: 100.0%; height: 100.0%;">Река: Ili River</div>`)[0];
+                popup_591ddb3ae1418966430fa2ca8bbfd655.setContent(html_d485fc2f39bf1f79cbc32830ba1631b1);
+            
+        
+
+        marker_3c000b83e011e7e2503cc6dec557e927.bindPopup(popup_591ddb3ae1418966430fa2ca8bbfd655)
+        ;
+
+        
+    
+    
+            var marker_a6e3f789d77bc74f4303413ec5cadde6 = L.marker(
+                [500.0, 5.0],
+                {
+}
+            ).addTo(map_13ea9103276e7ea2cb41562ef620804a);
+        
+    
+        var popup_2af74500fb0fed7a523c39a1cbdfb849 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b333b1c1b4c910cfb1639dc38b7bcbb = $(`<div id="html_9b333b1c1b4c910cfb1639dc38b7bcbb" style="width: 100.0%; height: 100.0%;">Река: Shynzhaly River</div>`)[0];
+                popup_2af74500fb0fed7a523c39a1cbdfb849.setContent(html_9b333b1c1b4c910cfb1639dc38b7bcbb);
+            
+        
+
+        marker_a6e3f789d77bc74f4303413ec5cadde6.bindPopup(popup_2af74500fb0fed7a523c39a1cbdfb849)
+        ;
+
+        
+    
+    
+            var marker_6ff6bb9b20ced5dfe4d14fb115cfa157 = L.marker(
+                [1000.0, 10.0],
+                {
+}
+            ).addTo(map_13ea9103276e7ea2cb41562ef620804a);
+        
+    
+        var popup_8d97ce6dc760a794889e7ed4aa7d7249 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_153aedef2ce554008d87c8bb86878e04 = $(`<div id="html_153aedef2ce554008d87c8bb86878e04" style="width: 100.0%; height: 100.0%;">Река: Ili River, Вероятность экстремального паводка: 0.09</div>`)[0];
+                popup_8d97ce6dc760a794889e7ed4aa7d7249.setContent(html_153aedef2ce554008d87c8bb86878e04);
+            
+        
+
+        marker_6ff6bb9b20ced5dfe4d14fb115cfa157.bindPopup(popup_8d97ce6dc760a794889e7ed4aa7d7249)
+        ;
+
+        
+    
+    
+            var marker_c183b0a8b68a529c24c5ffcf8f9d78a7 = L.marker(
+                [500.0, 5.0],
+                {
+}
+            ).addTo(map_13ea9103276e7ea2cb41562ef620804a);
+        
+    
+        var popup_bdc8800eff4c2bb08a5bc0444a8bc22e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6e38a5a6eaf5feb9ee524c95024e4d7 = $(`<div id="html_f6e38a5a6eaf5feb9ee524c95024e4d7" style="width: 100.0%; height: 100.0%;">Река: Shynzhaly River, Вероятность экстремального паводка: 0.05</div>`)[0];
+                popup_bdc8800eff4c2bb08a5bc0444a8bc22e.setContent(html_f6e38a5a6eaf5feb9ee524c95024e4d7);
+            
+        
+
+        marker_c183b0a8b68a529c24c5ffcf8f9d78a7.bindPopup(popup_bdc8800eff4c2bb08a5bc0444a8bc22e)
+        ;
+
+        
+    
+</script>
+</html>

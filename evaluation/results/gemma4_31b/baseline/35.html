@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_54577aeea144756eb63350623b828f14 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_54577aeea144756eb63350623b828f14" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_54577aeea144756eb63350623b828f14 = L.map(
+                "map_54577aeea144756eb63350623b828f14",
+                {
+                    center: [48.6, 83.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7c65bd4fda9446f357e5cd12d04b0ee6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7c65bd4fda9446f357e5cd12d04b0ee6.addTo(map_54577aeea144756eb63350623b828f14);
+        
+    
+            var poly_line_df5004423baa75ceb632b27ef3def049 = L.polyline(
+                [[48.8, 82.5], [48.7, 82.8], [48.6, 83.1], [48.5, 83.4], [48.4, 83.7]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_54577aeea144756eb63350623b828f14);
+        
+    
+            poly_line_df5004423baa75ceb632b27ef3def049.bindTooltip(
+                `<div>
+                     Река Аягоз
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b44ea8aeff9f8b61cc3e5991e70bf494 = L.circleMarker(
+                [48.75, 82.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 3}
+            ).addTo(map_54577aeea144756eb63350623b828f14);
+        
+    
+        var popup_63121ab417be32a16404b992a42eccc0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c76a135c60493b5dcb3e31f2f136a78 = $(`<div id="html_5c76a135c60493b5dcb3e31f2f136a78" style="width: 100.0%; height: 100.0%;">Зона 1.0<br>Площадь: 1200.0 га<br>Спрос: 540000.0 м3</div>`)[0];
+                popup_63121ab417be32a16404b992a42eccc0.setContent(html_5c76a135c60493b5dcb3e31f2f136a78);
+            
+        
+
+        circle_marker_b44ea8aeff9f8b61cc3e5991e70bf494.bindPopup(popup_63121ab417be32a16404b992a42eccc0)
+        ;
+
+        
+    
+    
+            var circle_marker_819a441bea7df3f413ab2c5d590eb6f2 = L.circleMarker(
+                [48.65, 82.9],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.0, "stroke": true, "weight": 3}
+            ).addTo(map_54577aeea144756eb63350623b828f14);
+        
+    
+        var popup_4483ad455b157a896962875cfc3186dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_446cc9a51dd8ef719009ddb4a562ed6d = $(`<div id="html_446cc9a51dd8ef719009ddb4a562ed6d" style="width: 100.0%; height: 100.0%;">Зона 2.0<br>Площадь: 2500.0 га<br>Спрос: 1250000.0 м3</div>`)[0];
+                popup_4483ad455b157a896962875cfc3186dd.setContent(html_446cc9a51dd8ef719009ddb4a562ed6d);
+            
+        
+
+        circle_marker_819a441bea7df3f413ab2c5d590eb6f2.bindPopup(popup_4483ad455b157a896962875cfc3186dd)
+        ;
+
+        
+    
+    
+            var circle_marker_2efc7bf70ca4b43d7866ad38692fb15b = L.circleMarker(
+                [48.55, 83.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(map_54577aeea144756eb63350623b828f14);
+        
+    
+        var popup_ec1af09ef2f6045965b84aeff68ef16c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3402dfba352595a7a0f60f822f2a4a34 = $(`<div id="html_3402dfba352595a7a0f60f822f2a4a34" style="width: 100.0%; height: 100.0%;">Зона 3.0<br>Площадь: 1800.0 га<br>Спрос: 720000.0 м3</div>`)[0];
+                popup_ec1af09ef2f6045965b84aeff68ef16c.setContent(html_3402dfba352595a7a0f60f822f2a4a34);
+            
+        
+
+        circle_marker_2efc7bf70ca4b43d7866ad38692fb15b.bindPopup(popup_ec1af09ef2f6045965b84aeff68ef16c)
+        ;
+
+        
+    
+    
+            var circle_marker_f9dce0bc655b9baa7e13d63ff6ebb843 = L.circleMarker(
+                [48.45, 83.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.0, "stroke": true, "weight": 3}
+            ).addTo(map_54577aeea144756eb63350623b828f14);
+        
+    
+        var popup_fb0ceab8bb65af5d20ddc324bbb6c281 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5cf406a159b7a73a0f8bc2833a47451e = $(`<div id="html_5cf406a159b7a73a0f8bc2833a47451e" style="width: 100.0%; height: 100.0%;">Зона 4.0<br>Площадь: 3000.0 га<br>Спрос: 1650000.0 м3</div>`)[0];
+                popup_fb0ceab8bb65af5d20ddc324bbb6c281.setContent(html_5cf406a159b7a73a0f8bc2833a47451e);
+            
+        
+
+        circle_marker_f9dce0bc655b9baa7e13d63ff6ebb843.bindPopup(popup_fb0ceab8bb65af5d20ddc324bbb6c281)
+        ;
+
+        
+    
+    
+        var popup_1141394befbd9b3527215683de2a25c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41b65729445fa1e1478ed4ce178403c1 = $(`<div id="html_41b65729445fa1e1478ed4ce178403c1" style="width: 100.0%; height: 100.0%;">Анализ дефицита воды р. Аягоз<br>Общий дефицит: -86.92%</div>`)[0];
+                popup_1141394befbd9b3527215683de2a25c2.setContent(html_41b65729445fa1e1478ed4ce178403c1);
+            
+        
+
+        map_54577aeea144756eb63350623b828f14.bindPopup(popup_1141394befbd9b3527215683de2a25c2)
+        ;
+
+        
+    
+</script>
+</html>

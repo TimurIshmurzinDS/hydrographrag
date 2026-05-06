@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1953ce6becbc428b4cd4a37f307fff44 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1953ce6becbc428b4cd4a37f307fff44" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1953ce6becbc428b4cd4a37f307fff44 = L.map(
+                "map_1953ce6becbc428b4cd4a37f307fff44",
+                {
+                    center: [51.23, 71.12],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d9b4545953e71a645393b89aa4274e0c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d9b4545953e71a645393b89aa4274e0c.addTo(map_1953ce6becbc428b4cd4a37f307fff44);
+        
+    
+            var marker_cluster_a79f90a822ae2051144df481bc475f79 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_5ebd2f15bb40a9ee85cf3fdf006107c0 = L.marker(
+                [51.234, 71.123],
+                {
+}
+            ).addTo(marker_cluster_a79f90a822ae2051144df481bc475f79);
+        
+    
+        var popup_a8455dd6ea54883f8bd2b0b90fa35ba0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_194b9364f2a1d53b6bbbc5d42a111d98 = $(`<div id="html_194b9364f2a1d53b6bbbc5d42a111d98" style="width: 100.0%; height: 100.0%;">Sensor ID: S1, Water Level: 10</div>`)[0];
+                popup_a8455dd6ea54883f8bd2b0b90fa35ba0.setContent(html_194b9364f2a1d53b6bbbc5d42a111d98);
+            
+        
+
+        marker_5ebd2f15bb40a9ee85cf3fdf006107c0.bindPopup(popup_a8455dd6ea54883f8bd2b0b90fa35ba0)
+        ;
+
+        
+    
+    
+            var marker_8e72843ef4249947182230745c6e9476 = L.marker(
+                [51.235, 71.124],
+                {
+}
+            ).addTo(marker_cluster_a79f90a822ae2051144df481bc475f79);
+        
+    
+        var popup_7dfc2b9aeaa0ce3fd62b4896671a75ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9b7beaa91d2a3568acc74d7ace107bd = $(`<div id="html_d9b7beaa91d2a3568acc74d7ace107bd" style="width: 100.0%; height: 100.0%;">Sensor ID: S2, Water Level: 11</div>`)[0];
+                popup_7dfc2b9aeaa0ce3fd62b4896671a75ac.setContent(html_d9b7beaa91d2a3568acc74d7ace107bd);
+            
+        
+
+        marker_8e72843ef4249947182230745c6e9476.bindPopup(popup_7dfc2b9aeaa0ce3fd62b4896671a75ac)
+        ;
+
+        
+    
+    
+            var marker_6cb022da25be9d65f8873ea5df421573 = L.marker(
+                [51.236, 71.125],
+                {
+}
+            ).addTo(marker_cluster_a79f90a822ae2051144df481bc475f79);
+        
+    
+        var popup_58d7b706a971e6892ebbefec7232a982 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae712445d30ceb5a1ca8f46de4c25e98 = $(`<div id="html_ae712445d30ceb5a1ca8f46de4c25e98" style="width: 100.0%; height: 100.0%;">Sensor ID: S3, Water Level: 12</div>`)[0];
+                popup_58d7b706a971e6892ebbefec7232a982.setContent(html_ae712445d30ceb5a1ca8f46de4c25e98);
+            
+        
+
+        marker_6cb022da25be9d65f8873ea5df421573.bindPopup(popup_58d7b706a971e6892ebbefec7232a982)
+        ;
+
+        
+    
+    
+            var marker_96c84cf148f74fe72b030acccca99cef = L.marker(
+                [51.237, 71.126],
+                {
+}
+            ).addTo(marker_cluster_a79f90a822ae2051144df481bc475f79);
+        
+    
+        var popup_d09fb94f37247cf36ac39c200ad23e41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c4f8ba3e26ab588c4ab35b56121f5b5 = $(`<div id="html_8c4f8ba3e26ab588c4ab35b56121f5b5" style="width: 100.0%; height: 100.0%;">Sensor ID: S4, Water Level: 100</div>`)[0];
+                popup_d09fb94f37247cf36ac39c200ad23e41.setContent(html_8c4f8ba3e26ab588c4ab35b56121f5b5);
+            
+        
+
+        marker_96c84cf148f74fe72b030acccca99cef.bindPopup(popup_d09fb94f37247cf36ac39c200ad23e41)
+        ;
+
+        
+    
+    
+            var marker_dc9f8c2d1e36467c7a8ce913fa641416 = L.marker(
+                [51.238, 71.127],
+                {
+}
+            ).addTo(marker_cluster_a79f90a822ae2051144df481bc475f79);
+        
+    
+        var popup_c2573322f3520eb46b9d97abbf1feb08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f263ef1961bc3847dc845926ce6574f = $(`<div id="html_7f263ef1961bc3847dc845926ce6574f" style="width: 100.0%; height: 100.0%;">Sensor ID: S5, Water Level: 11</div>`)[0];
+                popup_c2573322f3520eb46b9d97abbf1feb08.setContent(html_7f263ef1961bc3847dc845926ce6574f);
+            
+        
+
+        marker_dc9f8c2d1e36467c7a8ce913fa641416.bindPopup(popup_c2573322f3520eb46b9d97abbf1feb08)
+        ;
+
+        
+    
+    
+            marker_cluster_a79f90a822ae2051144df481bc475f79.addTo(map_1953ce6becbc428b4cd4a37f307fff44);
+        
+    
+            var marker_14ea1f51a3ff22287714e9a9f8a0b43c = L.marker(
+                [51.234, 71.123],
+                {
+}
+            ).addTo(map_1953ce6becbc428b4cd4a37f307fff44);
+        
+    
+            var icon_e7bed8719b9c23d34986901f4d7fbafb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3fc62d4f40bce3b9057903faac1a353e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c327785737a468ba47a53df8ff7c32d3 = $(`<div id="html_c327785737a468ba47a53df8ff7c32d3" style="width: 100.0%; height: 100.0%;">Sensor ID: S1, Water Level: 10 (Anomaly)</div>`)[0];
+                popup_3fc62d4f40bce3b9057903faac1a353e.setContent(html_c327785737a468ba47a53df8ff7c32d3);
+            
+        
+
+        marker_14ea1f51a3ff22287714e9a9f8a0b43c.bindPopup(popup_3fc62d4f40bce3b9057903faac1a353e)
+        ;
+
+        
+    
+    
+                marker_14ea1f51a3ff22287714e9a9f8a0b43c.setIcon(icon_e7bed8719b9c23d34986901f4d7fbafb);
+            
+    
+            var marker_caf45b19c44511b3a5596ff52cd315a5 = L.marker(
+                [51.235, 71.124],
+                {
+}
+            ).addTo(map_1953ce6becbc428b4cd4a37f307fff44);
+        
+    
+            var icon_ebdda4b882d93089f97fd6d10bd11308 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe4cf2d1c8c2770574a1837a54e5b301 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6726509c169580bbbf2e7ba76e4ee727 = $(`<div id="html_6726509c169580bbbf2e7ba76e4ee727" style="width: 100.0%; height: 100.0%;">Sensor ID: S2, Water Level: 11 (Anomaly)</div>`)[0];
+                popup_fe4cf2d1c8c2770574a1837a54e5b301.setContent(html_6726509c169580bbbf2e7ba76e4ee727);
+            
+        
+
+        marker_caf45b19c44511b3a5596ff52cd315a5.bindPopup(popup_fe4cf2d1c8c2770574a1837a54e5b301)
+        ;
+
+        
+    
+    
+                marker_caf45b19c44511b3a5596ff52cd315a5.setIcon(icon_ebdda4b882d93089f97fd6d10bd11308);
+            
+    
+            var marker_577c6336a66b4e03430c1983030227b8 = L.marker(
+                [51.236, 71.125],
+                {
+}
+            ).addTo(map_1953ce6becbc428b4cd4a37f307fff44);
+        
+    
+            var icon_ea0960dc193cb5e6107e2c0828539468 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40f5598e2ed6f87c0c978948dff124fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5ffb90a681020b24098768b985edd6a = $(`<div id="html_f5ffb90a681020b24098768b985edd6a" style="width: 100.0%; height: 100.0%;">Sensor ID: S3, Water Level: 12 (Anomaly)</div>`)[0];
+                popup_40f5598e2ed6f87c0c978948dff124fd.setContent(html_f5ffb90a681020b24098768b985edd6a);
+            
+        
+
+        marker_577c6336a66b4e03430c1983030227b8.bindPopup(popup_40f5598e2ed6f87c0c978948dff124fd)
+        ;
+
+        
+    
+    
+                marker_577c6336a66b4e03430c1983030227b8.setIcon(icon_ea0960dc193cb5e6107e2c0828539468);
+            
+    
+            var marker_740820990183ad930fbf140cb730f0da = L.marker(
+                [51.237, 71.126],
+                {
+}
+            ).addTo(map_1953ce6becbc428b4cd4a37f307fff44);
+        
+    
+            var icon_566578879cc49f20454d7c123efe9ff6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd8cdbd5feb05072aeddb73801f4713d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ceda017b11a7b8d731c48c727595b54 = $(`<div id="html_4ceda017b11a7b8d731c48c727595b54" style="width: 100.0%; height: 100.0%;">Sensor ID: S4, Water Level: 100 (Anomaly)</div>`)[0];
+                popup_dd8cdbd5feb05072aeddb73801f4713d.setContent(html_4ceda017b11a7b8d731c48c727595b54);
+            
+        
+
+        marker_740820990183ad930fbf140cb730f0da.bindPopup(popup_dd8cdbd5feb05072aeddb73801f4713d)
+        ;
+
+        
+    
+    
+                marker_740820990183ad930fbf140cb730f0da.setIcon(icon_566578879cc49f20454d7c123efe9ff6);
+            
+    
+            var marker_905af9e1bee7aee2c86b7e2947092f3d = L.marker(
+                [51.238, 71.127],
+                {
+}
+            ).addTo(map_1953ce6becbc428b4cd4a37f307fff44);
+        
+    
+            var icon_80acbb8964af38e6b0dc3d52073db0c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa932c27c713039845c00dbee74ed5c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c33d990c374ce9b4e7878ae94378aa86 = $(`<div id="html_c33d990c374ce9b4e7878ae94378aa86" style="width: 100.0%; height: 100.0%;">Sensor ID: S5, Water Level: 11 (Anomaly)</div>`)[0];
+                popup_fa932c27c713039845c00dbee74ed5c3.setContent(html_c33d990c374ce9b4e7878ae94378aa86);
+            
+        
+
+        marker_905af9e1bee7aee2c86b7e2947092f3d.bindPopup(popup_fa932c27c713039845c00dbee74ed5c3)
+        ;
+
+        
+    
+    
+                marker_905af9e1bee7aee2c86b7e2947092f3d.setIcon(icon_80acbb8964af38e6b0dc3d52073db0c6);
+            
+</script>
+</html>

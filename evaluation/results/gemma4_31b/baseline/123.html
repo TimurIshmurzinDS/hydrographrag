@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_07d69f223fe4808353af845d91da9a9e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_07d69f223fe4808353af845d91da9a9e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_07d69f223fe4808353af845d91da9a9e = L.map(
+                "map_07d69f223fe4808353af845d91da9a9e",
+                {
+                    center: [43.6, 79.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_262ede79e3dab6f3c31bebf3f226c623 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_262ede79e3dab6f3c31bebf3f226c623.addTo(map_07d69f223fe4808353af845d91da9a9e);
+        
+    
+            var marker_cdb5b797b470814558d1237c8a37281b = L.marker(
+                [43.5, 79.5],
+                {
+}
+            ).addTo(map_07d69f223fe4808353af845d91da9a9e);
+        
+    
+            var icon_a239465f554b36ee4859ba376c62617c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d40162d9a8b6680972a6a1146c9a0ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f11e37746d5d844b42aec28f4ce891c7 = $(`<div id="html_f11e37746d5d844b42aec28f4ce891c7" style="width: 100.0%; height: 100.0%;">Sharyn River</div>`)[0];
+                popup_7d40162d9a8b6680972a6a1146c9a0ee.setContent(html_f11e37746d5d844b42aec28f4ce891c7);
+            
+        
+
+        marker_cdb5b797b470814558d1237c8a37281b.bindPopup(popup_7d40162d9a8b6680972a6a1146c9a0ee)
+        ;
+
+        
+    
+    
+                marker_cdb5b797b470814558d1237c8a37281b.setIcon(icon_a239465f554b36ee4859ba376c62617c);
+            
+    
+            var marker_47d5e07d759c98fa9c27576ee14132d2 = L.marker(
+                [43.8, 79.2],
+                {
+}
+            ).addTo(map_07d69f223fe4808353af845d91da9a9e);
+        
+    
+            var icon_f03d3077dab6222002ee0a365e71f411 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6521572f7bbdbe0317e9064bfe11d436 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_362076a6cdffe382c20096f5f110b502 = $(`<div id="html_362076a6cdffe382c20096f5f110b502" style="width: 100.0%; height: 100.0%;">Kurty River</div>`)[0];
+                popup_6521572f7bbdbe0317e9064bfe11d436.setContent(html_362076a6cdffe382c20096f5f110b502);
+            
+        
+
+        marker_47d5e07d759c98fa9c27576ee14132d2.bindPopup(popup_6521572f7bbdbe0317e9064bfe11d436)
+        ;
+
+        
+    
+    
+                marker_47d5e07d759c98fa9c27576ee14132d2.setIcon(icon_f03d3077dab6222002ee0a365e71f411);
+            
+    
+            var poly_line_acd186708c32e10c7db7fa13ea4c409e = L.polyline(
+                [[43.5, 79.5], [43.8, 79.2]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_07d69f223fe4808353af845d91da9a9e);
+        
+    
+            poly_line_acd186708c32e10c7db7fa13ea4c409e.bindTooltip(
+                `<div>
+                     Сравниваемый гидрологический регион
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        var popup_3f6b3addfb947e5c81cc513be570c6a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25ffabb8f1c4186b092cffd1169ce896 = $(`<div id="html_25ffabb8f1c4186b092cffd1169ce896" style="width: 100.0%; height: 100.0%;">Результат: Совпадает ли тренд? Да (Корреляция: 0.73, p-value: 0.0000)</div>`)[0];
+                popup_3f6b3addfb947e5c81cc513be570c6a0.setContent(html_25ffabb8f1c4186b092cffd1169ce896);
+            
+        
+
+        map_07d69f223fe4808353af845d91da9a9e.bindPopup(popup_3f6b3addfb947e5c81cc513be570c6a0)
+        ;
+
+        
+    
+</script>
+</html>

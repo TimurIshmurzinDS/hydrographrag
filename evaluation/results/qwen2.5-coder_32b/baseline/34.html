@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a9a66717a1eb6ffe37c813be718305b7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a9a66717a1eb6ffe37c813be718305b7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a9a66717a1eb6ffe37c813be718305b7 = L.map(
+                "map_a9a66717a1eb6ffe37c813be718305b7",
+                {
+                    center: [56.339999999999996, 44.029999999999994],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_18e98bdee6f8bd1e1bc4eeda99cd7985 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_18e98bdee6f8bd1e1bc4eeda99cd7985.addTo(map_a9a66717a1eb6ffe37c813be718305b7);
+        
+    
+            var marker_6b0fff2f97e9429aff557d4bbf847afb = L.marker(
+                [56.32, 44.01],
+                {
+}
+            ).addTo(map_a9a66717a1eb6ffe37c813be718305b7);
+        
+    
+            var icon_0706b5863f90395394c0ac7cb5d434bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c3cf746033ab3ca6abeb04f8c4cef0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_187c06fb22367aa7ed8b60fcb287ca51 = $(`<div id="html_187c06fb22367aa7ed8b60fcb287ca51" style="width: 100.0%; height: 100.0%;">Уровень кислорода: 8.5 мг/л Концентрация загрязняющих веществ: 0.05 мг/л</div>`)[0];
+                popup_3c3cf746033ab3ca6abeb04f8c4cef0e.setContent(html_187c06fb22367aa7ed8b60fcb287ca51);
+            
+        
+
+        marker_6b0fff2f97e9429aff557d4bbf847afb.bindPopup(popup_3c3cf746033ab3ca6abeb04f8c4cef0e)
+        ;
+
+        
+    
+    
+                marker_6b0fff2f97e9429aff557d4bbf847afb.setIcon(icon_0706b5863f90395394c0ac7cb5d434bb);
+            
+    
+            var marker_9b9ac50052bea600a5524ec5bfcd6162 = L.marker(
+                [56.34, 44.03],
+                {
+}
+            ).addTo(map_a9a66717a1eb6ffe37c813be718305b7);
+        
+    
+            var icon_8d2e54eabccaadbf8058f581ccb37101 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c25427e0801792869c5a8bd8d42b2766 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_507106889aecaae47d43fba026e9c849 = $(`<div id="html_507106889aecaae47d43fba026e9c849" style="width: 100.0%; height: 100.0%;">Уровень кислорода: 7.9 мг/л Концентрация загрязняющих веществ: 0.1 мг/л</div>`)[0];
+                popup_c25427e0801792869c5a8bd8d42b2766.setContent(html_507106889aecaae47d43fba026e9c849);
+            
+        
+
+        marker_9b9ac50052bea600a5524ec5bfcd6162.bindPopup(popup_c25427e0801792869c5a8bd8d42b2766)
+        ;
+
+        
+    
+    
+                marker_9b9ac50052bea600a5524ec5bfcd6162.setIcon(icon_8d2e54eabccaadbf8058f581ccb37101);
+            
+    
+            var marker_82071a5f38d6bd9a2bb5cfd8e7ab3c51 = L.marker(
+                [56.36, 44.05],
+                {
+}
+            ).addTo(map_a9a66717a1eb6ffe37c813be718305b7);
+        
+    
+            var icon_6cf9509da55498624c5cd830a8319a41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23a1ad78c38779b590f6dd2e3c770106 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8ebf2786c5705c9bb56abae25046f04 = $(`<div id="html_c8ebf2786c5705c9bb56abae25046f04" style="width: 100.0%; height: 100.0%;">Уровень кислорода: 8.2 мг/л Концентрация загрязняющих веществ: 0.08 мг/л</div>`)[0];
+                popup_23a1ad78c38779b590f6dd2e3c770106.setContent(html_c8ebf2786c5705c9bb56abae25046f04);
+            
+        
+
+        marker_82071a5f38d6bd9a2bb5cfd8e7ab3c51.bindPopup(popup_23a1ad78c38779b590f6dd2e3c770106)
+        ;
+
+        
+    
+    
+                marker_82071a5f38d6bd9a2bb5cfd8e7ab3c51.setIcon(icon_6cf9509da55498624c5cd830a8319a41);
+            
+</script>
+</html>

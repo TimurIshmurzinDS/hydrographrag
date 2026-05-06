@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c13499505f53df44fc0ba651c1325134 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c13499505f53df44fc0ba651c1325134" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c13499505f53df44fc0ba651c1325134 = L.map(
+                "map_c13499505f53df44fc0ba651c1325134",
+                {
+                    center: [50.25, 46.45],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_04146ff9ff2a6e86b5e4175a09c4b20c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_04146ff9ff2a6e86b5e4175a09c4b20c.addTo(map_c13499505f53df44fc0ba651c1325134);
+        
+    
+
+        function geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53 = L.geoJson(null, {
+                onEachFeature: geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53_add (data) {
+            geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53
+                .addData(data);
+        }
+            geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53_add({"coordinates": [[[50.2, 46.3], [50.4, 46.3], [50.4, 46.5], [50.2, 46.5], [50.2, 46.3]]], "type": "Polygon"});
+        geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_b4c1ff69a573982c00ff2ac8ddd2bf53.addTo(map_c13499505f53df44fc0ba651c1325134);
+        
+    
+            var marker_7e2f523839ac2b066a841e99b2f5e8d0 = L.marker(
+                [50.300000000000004, 46.4],
+                {
+}
+            ).addTo(map_c13499505f53df44fc0ba651c1325134);
+        
+    
+        var popup_b33e078e3b5cae04974f7999549a8b1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49443c91937977b8b00b146fe0a484f0 = $(`<div id="html_49443c91937977b8b00b146fe0a484f0" style="width: 100.0%; height: 100.0%;">Полив: high Расписание: 3 раза в неделю, 60 минут</div>`)[0];
+                popup_b33e078e3b5cae04974f7999549a8b1e.setContent(html_49443c91937977b8b00b146fe0a484f0);
+            
+        
+
+        marker_7e2f523839ac2b066a841e99b2f5e8d0.bindPopup(popup_b33e078e3b5cae04974f7999549a8b1e)
+        ;
+
+        
+    
+    
+
+        function geo_json_3dee8f41c9e9f285b1130ad1e5e6874b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3dee8f41c9e9f285b1130ad1e5e6874b = L.geoJson(null, {
+                onEachFeature: geo_json_3dee8f41c9e9f285b1130ad1e5e6874b_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_3dee8f41c9e9f285b1130ad1e5e6874b_add (data) {
+            geo_json_3dee8f41c9e9f285b1130ad1e5e6874b
+                .addData(data);
+        }
+            geo_json_3dee8f41c9e9f285b1130ad1e5e6874b_add({"coordinates": [[[50.1, 46.4], [50.3, 46.4], [50.3, 46.6], [50.1, 46.6], [50.1, 46.4]]], "type": "Polygon"});
+        geo_json_3dee8f41c9e9f285b1130ad1e5e6874b.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_3dee8f41c9e9f285b1130ad1e5e6874b.addTo(map_c13499505f53df44fc0ba651c1325134);
+        
+    
+            var marker_de826d05dac221174c4fd78f694cb2bd = L.marker(
+                [50.19999999999999, 46.50000000000001],
+                {
+}
+            ).addTo(map_c13499505f53df44fc0ba651c1325134);
+        
+    
+        var popup_46b33823cc53ad874189039ec1fdbf3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4002cd278bce60651ea00b5d4625092 = $(`<div id="html_f4002cd278bce60651ea00b5d4625092" style="width: 100.0%; height: 100.0%;">Полив: high Расписание: 3 раза в неделю, 60 минут</div>`)[0];
+                popup_46b33823cc53ad874189039ec1fdbf3b.setContent(html_f4002cd278bce60651ea00b5d4625092);
+            
+        
+
+        marker_de826d05dac221174c4fd78f694cb2bd.bindPopup(popup_46b33823cc53ad874189039ec1fdbf3b)
+        ;
+
+        
+    
+</script>
+</html>

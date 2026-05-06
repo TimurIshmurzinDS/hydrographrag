@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_eee836fd72a93475de8d568928052a02 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 100px; 
+     border:2px solid black; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Расход воды (весна):</b><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Низкий (< 60 м³/с)<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Средний (60-110 м³/с)<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Высокий (> 110 м³/с)
+     </div>
+     
+    
+            <div class="folium-map" id="map_eee836fd72a93475de8d568928052a02" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_eee836fd72a93475de8d568928052a02 = L.map(
+                "map_eee836fd72a93475de8d568928052a02",
+                {
+                    center: [48.2, 84.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_98add4096a27633da3f778fe87401414 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_98add4096a27633da3f778fe87401414.addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+            var poly_line_356e30043d6d0aaf8fe8c7cb9fa3dc3a = L.polyline(
+                [[48.5, 84.5], [48.4, 84.3], [48.3, 84.2], [48.2, 84.0], [48.1, 83.8], [47.9, 83.5]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+            poly_line_356e30043d6d0aaf8fe8c7cb9fa3dc3a.bindTooltip(
+                `<div>
+                     Русло реки Текес
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd943baf8607dd68c83ddab489e28308 = L.circleMarker(
+                [48.5, 84.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.040000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+        var popup_538ed42f493af52abbbe73a5e066c5da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ac2cbf18be751e3ab1de0f00879eb1b = $(`<div id="html_3ac2cbf18be751e3ab1de0f00879eb1b" style="width: 100.0%; height: 100.0%;">Станция: Верхний Текес<br>Весенний расход: 45.2 м³/с</div>`)[0];
+                popup_538ed42f493af52abbbe73a5e066c5da.setContent(html_3ac2cbf18be751e3ab1de0f00879eb1b);
+            
+        
+
+        circle_marker_cd943baf8607dd68c83ddab489e28308.bindPopup(popup_538ed42f493af52abbbe73a5e066c5da)
+        ;
+
+        
+    
+    
+            circle_marker_cd943baf8607dd68c83ddab489e28308.bindTooltip(
+                `<div>
+                     Верхний Текес
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b684d616c572753c2cec4bc08f10f34 = L.circleMarker(
+                [48.3, 84.2],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.740000000000002, "stroke": true, "weight": 3}
+            ).addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+        var popup_f8b6c35a34a7a0fd9675eea43ba1aa7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20753e1d55f973ce0af5e304e4b77d9b = $(`<div id="html_20753e1d55f973ce0af5e304e4b77d9b" style="width: 100.0%; height: 100.0%;">Станция: Средний Текес<br>Весенний расход: 88.7 м³/с</div>`)[0];
+                popup_f8b6c35a34a7a0fd9675eea43ba1aa7b.setContent(html_20753e1d55f973ce0af5e304e4b77d9b);
+            
+        
+
+        circle_marker_4b684d616c572753c2cec4bc08f10f34.bindPopup(popup_f8b6c35a34a7a0fd9675eea43ba1aa7b)
+        ;
+
+        
+    
+    
+            circle_marker_4b684d616c572753c2cec4bc08f10f34.bindTooltip(
+                `<div>
+                     Средний Текес
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e9e7b92a06cfa312a1ad188909fd89a = L.circleMarker(
+                [48.1, 83.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.1, "stroke": true, "weight": 3}
+            ).addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+        var popup_1fc0abe8ae8e574212dee83d81a37faf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59fc90510118f7502911b3ac011fd9a8 = $(`<div id="html_59fc90510118f7502911b3ac011fd9a8" style="width: 100.0%; height: 100.0%;">Станция: Нижний Текес<br>Весенний расход: 120.5 м³/с</div>`)[0];
+                popup_1fc0abe8ae8e574212dee83d81a37faf.setContent(html_59fc90510118f7502911b3ac011fd9a8);
+            
+        
+
+        circle_marker_9e9e7b92a06cfa312a1ad188909fd89a.bindPopup(popup_1fc0abe8ae8e574212dee83d81a37faf)
+        ;
+
+        
+    
+    
+            circle_marker_9e9e7b92a06cfa312a1ad188909fd89a.bindTooltip(
+                `<div>
+                     Нижний Текес
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b35e868d737d45dc14f262d4e06b08d6 = L.circleMarker(
+                [47.9, 83.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.060000000000002, "stroke": true, "weight": 3}
+            ).addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+        var popup_58e390c2d40dc9cee153ac8f316fa599 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a348ea3fde2d2562e6c627bc9b84b9e = $(`<div id="html_7a348ea3fde2d2562e6c627bc9b84b9e" style="width: 100.0%; height: 100.0%;">Станция: Устье Текеса<br>Весенний расход: 155.3 м³/с</div>`)[0];
+                popup_58e390c2d40dc9cee153ac8f316fa599.setContent(html_7a348ea3fde2d2562e6c627bc9b84b9e);
+            
+        
+
+        circle_marker_b35e868d737d45dc14f262d4e06b08d6.bindPopup(popup_58e390c2d40dc9cee153ac8f316fa599)
+        ;
+
+        
+    
+    
+            circle_marker_b35e868d737d45dc14f262d4e06b08d6.bindTooltip(
+                `<div>
+                     Устье Текеса
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3217643c8cf8d54a8c412cffca2e62ea = L.circleMarker(
+                [48.4, 84.3],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.42, "stroke": true, "weight": 3}
+            ).addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+        var popup_efb299d8389ef02d5f01320db5915ac1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c60aa16cb7e232bd5e8947b3d6d763b = $(`<div id="html_0c60aa16cb7e232bd5e8947b3d6d763b" style="width: 100.0%; height: 100.0%;">Станция: Пост-1<br>Весенний расход: 62.1 м³/с</div>`)[0];
+                popup_efb299d8389ef02d5f01320db5915ac1.setContent(html_0c60aa16cb7e232bd5e8947b3d6d763b);
+            
+        
+
+        circle_marker_3217643c8cf8d54a8c412cffca2e62ea.bindPopup(popup_efb299d8389ef02d5f01320db5915ac1)
+        ;
+
+        
+    
+    
+            circle_marker_3217643c8cf8d54a8c412cffca2e62ea.bindTooltip(
+                `<div>
+                     Пост-1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12cbbac5a90d89e6dda2828993d56009 = L.circleMarker(
+                [48.2, 84.0],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.28, "stroke": true, "weight": 3}
+            ).addTo(map_eee836fd72a93475de8d568928052a02);
+        
+    
+        var popup_e107a2bebf28df5deedef766aa1f8e5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7596557035f392328f217df852784be1 = $(`<div id="html_7596557035f392328f217df852784be1" style="width: 100.0%; height: 100.0%;">Станция: Пост-2<br>Весенний расход: 101.4 м³/с</div>`)[0];
+                popup_e107a2bebf28df5deedef766aa1f8e5a.setContent(html_7596557035f392328f217df852784be1);
+            
+        
+
+        circle_marker_12cbbac5a90d89e6dda2828993d56009.bindPopup(popup_e107a2bebf28df5deedef766aa1f8e5a)
+        ;
+
+        
+    
+    
+            circle_marker_12cbbac5a90d89e6dda2828993d56009.bindTooltip(
+                `<div>
+                     Пост-2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

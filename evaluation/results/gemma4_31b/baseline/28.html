@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_db82defb042f3a25d10eb462df8bbd41 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+       <div style="position: fixed; 
+                   top: 50px; left: 50px; width: 300px; height: 90px; 
+                   z-index: 9999; font-size: 14px; 
+                   background-color: white; 
+                   padding: 10px; 
+                   border: 2px solid black;
+                   border-radius: 10px;">
+       <b>Мониторинг Shyzhyn River</b><br>ВНИМАНИЕ: Обнаружены оповещения о высоком уровне воды на реке Shyzhyn River!
+       </div>
+    
+    
+            <div class="folium-map" id="map_db82defb042f3a25d10eb462df8bbd41" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_db82defb042f3a25d10eb462df8bbd41 = L.map(
+                "map_db82defb042f3a25d10eb462df8bbd41",
+                {
+                    center: [48.54, 35.17],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5d5c78d92eccb1f2bae4225f4e8c33db = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5d5c78d92eccb1f2bae4225f4e8c33db.addTo(map_db82defb042f3a25d10eb462df8bbd41);
+        
+    
+            var poly_line_d7c368e58f42d9837caf2bd73099e3c9 = L.polyline(
+                [[48.5, 35.1], [48.51, 35.12], [48.525, 35.15], [48.54, 35.18], [48.56, 35.21], [48.58, 35.25]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_db82defb042f3a25d10eb462df8bbd41);
+        
+    
+            poly_line_d7c368e58f42d9837caf2bd73099e3c9.bindTooltip(
+                `<div>
+                     Shyzhyn River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c49c586e7dd460fc5edd7383a3ed31e = L.circleMarker(
+                [48.51, 35.12],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_db82defb042f3a25d10eb462df8bbd41);
+        
+    
+        var popup_626947ac169145f04118330a00536d3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49307a38cece583a19f17e4df19f560f = $(`<div id="html_49307a38cece583a19f17e4df19f560f" style="width: 100.0%; height: 100.0%;">Станция: ST_01<br>Уровень: 2.1м<br>Порог: 3.0м<br>Статус: Норма</div>`)[0];
+                popup_626947ac169145f04118330a00536d3c.setContent(html_49307a38cece583a19f17e4df19f560f);
+            
+        
+
+        circle_marker_9c49c586e7dd460fc5edd7383a3ed31e.bindPopup(popup_626947ac169145f04118330a00536d3c)
+        ;
+
+        
+    
+    
+            var circle_marker_d118824183aaf59fb55ecb233284006a = L.circleMarker(
+                [48.54, 35.18],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_db82defb042f3a25d10eb462df8bbd41);
+        
+    
+        var popup_f06413b4bf17846076e693900e6da5e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6947ab19b8bea98a6b90810b3edf399d = $(`<div id="html_6947ab19b8bea98a6b90810b3edf399d" style="width: 100.0%; height: 100.0%;">Станция: ST_02<br>Уровень: 4.5м<br>Порог: 4.0м<br>Статус: ⚠️ ВЫСОКИЙ УРОВЕНЬ!</div>`)[0];
+                popup_f06413b4bf17846076e693900e6da5e8.setContent(html_6947ab19b8bea98a6b90810b3edf399d);
+            
+        
+
+        circle_marker_d118824183aaf59fb55ecb233284006a.bindPopup(popup_f06413b4bf17846076e693900e6da5e8)
+        ;
+
+        
+    
+    
+            var circle_marker_42e16b511d4a8593ff5bf838fedacfd7 = L.circleMarker(
+                [48.58, 35.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_db82defb042f3a25d10eb462df8bbd41);
+        
+    
+        var popup_8354c259fa46b16e3014d3ac87019924 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa33205b82c0cec6c34aa91096ca1eed = $(`<div id="html_aa33205b82c0cec6c34aa91096ca1eed" style="width: 100.0%; height: 100.0%;">Станция: ST_03<br>Уровень: 1.8м<br>Порог: 3.0м<br>Статус: Норма</div>`)[0];
+                popup_8354c259fa46b16e3014d3ac87019924.setContent(html_aa33205b82c0cec6c34aa91096ca1eed);
+            
+        
+
+        circle_marker_42e16b511d4a8593ff5bf838fedacfd7.bindPopup(popup_8354c259fa46b16e3014d3ac87019924)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,23 @@
+python
+       import geopandas as gpd
+       import folium
+       from shapely import wkt
+
+       # Load the shapefile
+       basin = gpd.read_file(r"data/basin_data.shp")
+       basin = basin.to_crs('EPSG:4326')
+
+       # Initialize folium map
+       m = folium.Map(location=[basin.centroid.y, basin.centroid.x], tiles='CartoDB positron', zoom_start=10)
+
+       # Add the basin to the map
+       folium.GeoJson(basin['geometry'], name='Basin', style_function=lambda x: {'fillColor': 'green', 'color': 'darkgreen', 'fillOpacity': 0.2}).add_to(m)
+
+       # Hardcoded list of dictionaries for the mentioned observation point
+       observations = [{'name': 'Observation Point', 'geometry': wkt.loads('POINT (37.618490 55.751244)')}]
+
+       # Add the observation point to the map
+       folium.GeoJson(observations, name='Observation Point').add_to(m)
+
+       # Save the final map
+       m.save("81.html")

@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_376d93ea944c5312063791b6e1bd013a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size: 16px;"><b>Инструкция по приготовлению ГИС-пиццы "Шарынский разлив"</b></h3>
+    <p align="center"><i>Основа: Паводковая зона | Топпинги: Гео-объекты | Запекание: Сезонный цикл</i></p>
+    
+    
+            <div class="folium-map" id="map_376d93ea944c5312063791b6e1bd013a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_376d93ea944c5312063791b6e1bd013a = L.map(
+                "map_376d93ea944c5312063791b6e1bd013a",
+                {
+                    center: [43.62, 79.45],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_09bc6b716a15d7e099cb0172c7e4540b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_09bc6b716a15d7e099cb0172c7e4540b.addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+            var polygon_72192a0bed0c4f6b5f4b43cbf85964d5 = L.polygon(
+                [[43.55, 79.14999999999999], [43.599999999999994, 79.25], [43.65, 79.39999999999999], [43.699999999999996, 79.55], [43.75, 79.7], [43.8, 79.85], [43.7, 79.75], [43.650000000000006, 79.60000000000001], [43.6, 79.45], [43.550000000000004, 79.3], [43.5, 79.15], [43.45, 79.05]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_18430cc8d5b4cf9fe0b0a2d48b046af6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35d28dc0edd1605c9e12562ee4efd12e = $(`<div id="html_35d28dc0edd1605c9e12562ee4efd12e" style="width: 100.0%; height: 100.0%;">Основа пиццы (Зона разлива Шарына)</div>`)[0];
+                popup_18430cc8d5b4cf9fe0b0a2d48b046af6.setContent(html_35d28dc0edd1605c9e12562ee4efd12e);
+            
+        
+
+        polygon_72192a0bed0c4f6b5f4b43cbf85964d5.bindPopup(popup_18430cc8d5b4cf9fe0b0a2d48b046af6)
+        ;
+
+        
+    
+    
+            var circle_marker_af02a20a31c513921d2d16a519e6bc37 = L.circleMarker(
+                [43.53223496883998, 79.17998542819691],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_572828cd5617e6ae94ceb27d2f16127c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31d2d223b1f2438d5139fb1072a7afe4 = $(`<div id="html_31d2d223b1f2438d5139fb1072a7afe4" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_572828cd5617e6ae94ceb27d2f16127c.setContent(html_31d2d223b1f2438d5139fb1072a7afe4);
+            
+        
+
+        circle_marker_af02a20a31c513921d2d16a519e6bc37.bindPopup(popup_572828cd5617e6ae94ceb27d2f16127c)
+        ;
+
+        
+    
+    
+            var circle_marker_f1781836a6077b35c96e434352cd67c1 = L.circleMarker(
+                [43.49515632428865, 79.24182534486518],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_87f5a1300dd1f5f86c512c653f3e5d39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2686e2b536522c8fe33887131939cda = $(`<div id="html_b2686e2b536522c8fe33887131939cda" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_87f5a1300dd1f5f86c512c653f3e5d39.setContent(html_b2686e2b536522c8fe33887131939cda);
+            
+        
+
+        circle_marker_f1781836a6077b35c96e434352cd67c1.bindPopup(popup_87f5a1300dd1f5f86c512c653f3e5d39)
+        ;
+
+        
+    
+    
+            var circle_marker_7a1009429e767791cd158f874c72704f = L.circleMarker(
+                [43.60268838722275, 79.67662160306928],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_e780bfe2bea7ccf2d6091f499c13c2e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fa6b4aabf83bde029e6e9bc75e90b5e = $(`<div id="html_8fa6b4aabf83bde029e6e9bc75e90b5e" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_e780bfe2bea7ccf2d6091f499c13c2e6.setContent(html_8fa6b4aabf83bde029e6e9bc75e90b5e);
+            
+        
+
+        circle_marker_7a1009429e767791cd158f874c72704f.bindPopup(popup_e780bfe2bea7ccf2d6091f499c13c2e6)
+        ;
+
+        
+    
+    
+            var circle_marker_70b29ae86f2561af269f37ddadd5c14b = L.circleMarker(
+                [43.65042383062472, 79.70310541541923],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_72c323fa64a20a6aed3e33e65acec2c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e17bb3f633eee23a69d1847d46119fb = $(`<div id="html_6e17bb3f633eee23a69d1847d46119fb" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_72c323fa64a20a6aed3e33e65acec2c4.setContent(html_6e17bb3f633eee23a69d1847d46119fb);
+            
+        
+
+        circle_marker_70b29ae86f2561af269f37ddadd5c14b.bindPopup(popup_72c323fa64a20a6aed3e33e65acec2c4)
+        ;
+
+        
+    
+    
+            var circle_marker_f8ebee6fbf1350361762d6b680149b9e = L.circleMarker(
+                [43.55743912835229, 79.28674285497372],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_9114a63db4876ec3ea58b20337aa1ee8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03b5457904eede6cefacc6911a3d68c8 = $(`<div id="html_03b5457904eede6cefacc6911a3d68c8" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_9114a63db4876ec3ea58b20337aa1ee8.setContent(html_03b5457904eede6cefacc6911a3d68c8);
+            
+        
+
+        circle_marker_f8ebee6fbf1350361762d6b680149b9e.bindPopup(popup_9114a63db4876ec3ea58b20337aa1ee8)
+        ;
+
+        
+    
+    
+            var circle_marker_3c3d56c4f9623830829f77b82b09c927 = L.circleMarker(
+                [43.79725390320024, 79.77007417151019],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_c67689fad1358004d4c69126eda0f1c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19a03baf29ed4bf56ec4605f39f1b1cd = $(`<div id="html_19a03baf29ed4bf56ec4605f39f1b1cd" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_c67689fad1358004d4c69126eda0f1c5.setContent(html_19a03baf29ed4bf56ec4605f39f1b1cd);
+            
+        
+
+        circle_marker_3c3d56c4f9623830829f77b82b09c927.bindPopup(popup_c67689fad1358004d4c69126eda0f1c5)
+        ;
+
+        
+    
+    
+            var circle_marker_c9a4d565732d208ce4c07104a6da626d = L.circleMarker(
+                [43.624435946622455, 79.48500931731142],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_3e47f9570e7bf0b4b653462c7a8715d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7aef8506cf47e0047c31cffdeb902989 = $(`<div id="html_7aef8506cf47e0047c31cffdeb902989" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_3e47f9570e7bf0b4b653462c7a8715d2.setContent(html_7aef8506cf47e0047c31cffdeb902989);
+            
+        
+
+        circle_marker_c9a4d565732d208ce4c07104a6da626d.bindPopup(popup_3e47f9570e7bf0b4b653462c7a8715d2)
+        ;
+
+        
+    
+    
+            var circle_marker_9c174ab9866149a2f5d673d13ded2f9f = L.circleMarker(
+                [43.68022965464556, 79.68466673906802],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_67eff489b3aef693510dad984941ae72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e9f6aaa380330b206e02a64d7a563c6 = $(`<div id="html_5e9f6aaa380330b206e02a64d7a563c6" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_67eff489b3aef693510dad984941ae72.setContent(html_5e9f6aaa380330b206e02a64d7a563c6);
+            
+        
+
+        circle_marker_9c174ab9866149a2f5d673d13ded2f9f.bindPopup(popup_67eff489b3aef693510dad984941ae72)
+        ;
+
+        
+    
+    
+            var circle_marker_c092d3fa0133bb690cc837ff51ac4cd8 = L.circleMarker(
+                [43.83682117636811, 79.74917739243267],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_643e930c6c3a5f9096c9d39fdedd83a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8da1aad2bda9ed4de6d180c7141ac9c4 = $(`<div id="html_8da1aad2bda9ed4de6d180c7141ac9c4" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_643e930c6c3a5f9096c9d39fdedd83a2.setContent(html_8da1aad2bda9ed4de6d180c7141ac9c4);
+            
+        
+
+        circle_marker_c092d3fa0133bb690cc837ff51ac4cd8.bindPopup(popup_643e930c6c3a5f9096c9d39fdedd83a2)
+        ;
+
+        
+    
+    
+            var circle_marker_7494b543bfa40966b9c8fc9af5b26b19 = L.circleMarker(
+                [43.50038920954225, 79.29214801935744],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_bae548705d9e9b6360c030fc3fe9b877 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_976effa711164522cd5050f5523e8abf = $(`<div id="html_976effa711164522cd5050f5523e8abf" style="width: 100.0%; height: 100.0%;">Ингредиент: Пепперони (Минералы)</div>`)[0];
+                popup_bae548705d9e9b6360c030fc3fe9b877.setContent(html_976effa711164522cd5050f5523e8abf);
+            
+        
+
+        circle_marker_7494b543bfa40966b9c8fc9af5b26b19.bindPopup(popup_bae548705d9e9b6360c030fc3fe9b877)
+        ;
+
+        
+    
+    
+            var circle_marker_5083d612a92e84b52e8a4ca6cde7ce27 = L.circleMarker(
+                [43.65230879701159, 79.66069430018644],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_911057ecf4708d4afcb8706fee90682f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c170dd24766f5e13f24719c58a6fe066 = $(`<div id="html_c170dd24766f5e13f24719c58a6fe066" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_911057ecf4708d4afcb8706fee90682f.setContent(html_c170dd24766f5e13f24719c58a6fe066);
+            
+        
+
+        circle_marker_5083d612a92e84b52e8a4ca6cde7ce27.bindPopup(popup_911057ecf4708d4afcb8706fee90682f)
+        ;
+
+        
+    
+    
+            var circle_marker_5f31b1a23fe3b4feb3597b6f49833a9c = L.circleMarker(
+                [43.56856228827031, 79.11344872447319],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_442f0f5ac0c49adda2bebaa931754d95 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_367e4a633038fe20ee28779631675c27 = $(`<div id="html_367e4a633038fe20ee28779631675c27" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_442f0f5ac0c49adda2bebaa931754d95.setContent(html_367e4a633038fe20ee28779631675c27);
+            
+        
+
+        circle_marker_5f31b1a23fe3b4feb3597b6f49833a9c.bindPopup(popup_442f0f5ac0c49adda2bebaa931754d95)
+        ;
+
+        
+    
+    
+            var circle_marker_ac137fc813f9ce35baaf1c9e5b08dae6 = L.circleMarker(
+                [43.7971727710561, 79.7937092873643],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_1e27f3d9ed4d3f3382b1fb0c3d2f47e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e343e537ac8a63f4ad74621475105797 = $(`<div id="html_e343e537ac8a63f4ad74621475105797" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_1e27f3d9ed4d3f3382b1fb0c3d2f47e0.setContent(html_e343e537ac8a63f4ad74621475105797);
+            
+        
+
+        circle_marker_ac137fc813f9ce35baaf1c9e5b08dae6.bindPopup(popup_1e27f3d9ed4d3f3382b1fb0c3d2f47e0)
+        ;
+
+        
+    
+    
+            var circle_marker_d896c5e62c83ee615a657d0b3d756518 = L.circleMarker(
+                [43.76906958262946, 79.8893063764321],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_eb0c85591e694d0c45bcf7c32ec6195f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59804c33f3cc2e25d78a7fc1cbfddff3 = $(`<div id="html_59804c33f3cc2e25d78a7fc1cbfddff3" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_eb0c85591e694d0c45bcf7c32ec6195f.setContent(html_59804c33f3cc2e25d78a7fc1cbfddff3);
+            
+        
+
+        circle_marker_d896c5e62c83ee615a657d0b3d756518.bindPopup(popup_eb0c85591e694d0c45bcf7c32ec6195f)
+        ;
+
+        
+    
+    
+            var circle_marker_bd7f5eca97fcfa50f8d7e4cb0ff5a67e = L.circleMarker(
+                [43.58834973640521, 79.31723225930222],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_da74b8553e7e4a4bddec4573c1616c47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53b33e55317f374a1506ba16fc34a096 = $(`<div id="html_53b33e55317f374a1506ba16fc34a096" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_da74b8553e7e4a4bddec4573c1616c47.setContent(html_53b33e55317f374a1506ba16fc34a096);
+            
+        
+
+        circle_marker_bd7f5eca97fcfa50f8d7e4cb0ff5a67e.bindPopup(popup_da74b8553e7e4a4bddec4573c1616c47)
+        ;
+
+        
+    
+    
+            var circle_marker_9f33ce6a3b2958f0f0028140a0b26d92 = L.circleMarker(
+                [43.61299880388269, 79.53963157484704],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_f456d5ab55af5f8c0e0b47de1ca781fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cce78dfcfb7e1dcc3c8ae9779b1d13b9 = $(`<div id="html_cce78dfcfb7e1dcc3c8ae9779b1d13b9" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_f456d5ab55af5f8c0e0b47de1ca781fd.setContent(html_cce78dfcfb7e1dcc3c8ae9779b1d13b9);
+            
+        
+
+        circle_marker_9f33ce6a3b2958f0f0028140a0b26d92.bindPopup(popup_f456d5ab55af5f8c0e0b47de1ca781fd)
+        ;
+
+        
+    
+    
+            var circle_marker_6921fe76ff5620ef7e1dbba3503ff5a7 = L.circleMarker(
+                [43.61616964980325, 79.5315862342097],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_d1e7459f6ef1188ce9b763d3228d68d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f644f5441e3598ab42b3f84f2c14eefd = $(`<div id="html_f644f5441e3598ab42b3f84f2c14eefd" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_d1e7459f6ef1188ce9b763d3228d68d6.setContent(html_f644f5441e3598ab42b3f84f2c14eefd);
+            
+        
+
+        circle_marker_6921fe76ff5620ef7e1dbba3503ff5a7.bindPopup(popup_d1e7459f6ef1188ce9b763d3228d68d6)
+        ;
+
+        
+    
+    
+            var circle_marker_a98233ef2468c316e51be94475484cde = L.circleMarker(
+                [43.58492886908874, 79.140947222591],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_d7fa18ca9fbcb8480f9fc71a4959c871 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f26f8bcb27cdc88839f9dd23dfa5a78d = $(`<div id="html_f26f8bcb27cdc88839f9dd23dfa5a78d" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_d7fa18ca9fbcb8480f9fc71a4959c871.setContent(html_f26f8bcb27cdc88839f9dd23dfa5a78d);
+            
+        
+
+        circle_marker_a98233ef2468c316e51be94475484cde.bindPopup(popup_d7fa18ca9fbcb8480f9fc71a4959c871)
+        ;
+
+        
+    
+    
+            var circle_marker_460dcaa7ee042e636359964fdf47cfee = L.circleMarker(
+                [43.63406594832997, 79.18852800004333],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_6f84e2fdc552a91bb288d47499fa5a9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62fd58482e17302143c9153a9c24c94c = $(`<div id="html_62fd58482e17302143c9153a9c24c94c" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_6f84e2fdc552a91bb288d47499fa5a9b.setContent(html_62fd58482e17302143c9153a9c24c94c);
+            
+        
+
+        circle_marker_460dcaa7ee042e636359964fdf47cfee.bindPopup(popup_6f84e2fdc552a91bb288d47499fa5a9b)
+        ;
+
+        
+    
+    
+            var circle_marker_65f08b6e38f2840919d509f8a479d2d3 = L.circleMarker(
+                [43.84721177681265, 79.8788631402289],
+                {"bubblingMouseEvents": true, "color": "gold", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gold", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_eba6c5acd43c0775760be67ff5b2fdf0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_578f35b8bdd14bbb121841c95c635311 = $(`<div id="html_578f35b8bdd14bbb121841c95c635311" style="width: 100.0%; height: 100.0%;">Ингредиент: Сыр (Ил и осадки)</div>`)[0];
+                popup_eba6c5acd43c0775760be67ff5b2fdf0.setContent(html_578f35b8bdd14bbb121841c95c635311);
+            
+        
+
+        circle_marker_65f08b6e38f2840919d509f8a479d2d3.bindPopup(popup_eba6c5acd43c0775760be67ff5b2fdf0)
+        ;
+
+        
+    
+    
+            var circle_marker_38c8a04e6730755a611406944c0497d0 = L.circleMarker(
+                [43.623873369451, 79.71692927558718],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_e5bfc823fbacb81c5cd21874bec19e9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed936a7627732de646b99fb97d873775 = $(`<div id="html_ed936a7627732de646b99fb97d873775" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_e5bfc823fbacb81c5cd21874bec19e9f.setContent(html_ed936a7627732de646b99fb97d873775);
+            
+        
+
+        circle_marker_38c8a04e6730755a611406944c0497d0.bindPopup(popup_e5bfc823fbacb81c5cd21874bec19e9f)
+        ;
+
+        
+    
+    
+            var circle_marker_1106e707a553427b0a2089ae15220e57 = L.circleMarker(
+                [43.7521076551796, 79.72379774167669],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_19e3d6eb53195afa838d8388acb6e492 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38de4e03cc1037408757d677002b1ff3 = $(`<div id="html_38de4e03cc1037408757d677002b1ff3" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_19e3d6eb53195afa838d8388acb6e492.setContent(html_38de4e03cc1037408757d677002b1ff3);
+            
+        
+
+        circle_marker_1106e707a553427b0a2089ae15220e57.bindPopup(popup_19e3d6eb53195afa838d8388acb6e492)
+        ;
+
+        
+    
+    
+            var circle_marker_371ff3a7b774f0f1ccf64dfdb6a4906d = L.circleMarker(
+                [43.49108692892554, 79.13961403203838],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_bbeb6b5fbc5e015fd82ed435fb7dc408 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71c3e43f9ef9868d09a4b0d14203ed59 = $(`<div id="html_71c3e43f9ef9868d09a4b0d14203ed59" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_bbeb6b5fbc5e015fd82ed435fb7dc408.setContent(html_71c3e43f9ef9868d09a4b0d14203ed59);
+            
+        
+
+        circle_marker_371ff3a7b774f0f1ccf64dfdb6a4906d.bindPopup(popup_bbeb6b5fbc5e015fd82ed435fb7dc408)
+        ;
+
+        
+    
+    
+            var circle_marker_c20c05c3968b5596027b8fe405e78952 = L.circleMarker(
+                [43.72637648229454, 79.74984557512687],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_707153f7739c7cc23ffa49e8aeacb56a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74174c16c485409f66a475e1139c0b50 = $(`<div id="html_74174c16c485409f66a475e1139c0b50" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_707153f7739c7cc23ffa49e8aeacb56a.setContent(html_74174c16c485409f66a475e1139c0b50);
+            
+        
+
+        circle_marker_c20c05c3968b5596027b8fe405e78952.bindPopup(popup_707153f7739c7cc23ffa49e8aeacb56a)
+        ;
+
+        
+    
+    
+            var circle_marker_6cfd28e76f80c299184318a024a91731 = L.circleMarker(
+                [43.60909668939217, 79.57883075064935],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_1213f4425a6024d9ed2e585e3e60f53c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_421c0cfa2c33149f88b5f567eb307bbf = $(`<div id="html_421c0cfa2c33149f88b5f567eb307bbf" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_1213f4425a6024d9ed2e585e3e60f53c.setContent(html_421c0cfa2c33149f88b5f567eb307bbf);
+            
+        
+
+        circle_marker_6cfd28e76f80c299184318a024a91731.bindPopup(popup_1213f4425a6024d9ed2e585e3e60f53c)
+        ;
+
+        
+    
+    
+            var circle_marker_9d9360bfa74c53cc59959c4aff5f4753 = L.circleMarker(
+                [43.78090095553098, 79.83943986356714],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_9f3f2a06505106a0339db484fa9d6e2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6eebdc75053a539ccb157e328ee45678 = $(`<div id="html_6eebdc75053a539ccb157e328ee45678" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_9f3f2a06505106a0339db484fa9d6e2b.setContent(html_6eebdc75053a539ccb157e328ee45678);
+            
+        
+
+        circle_marker_9d9360bfa74c53cc59959c4aff5f4753.bindPopup(popup_9f3f2a06505106a0339db484fa9d6e2b)
+        ;
+
+        
+    
+    
+            var circle_marker_3c0fbc787685c31930b2a3b733c966f3 = L.circleMarker(
+                [43.564916520791115, 79.00639675147991],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_b242c1a54a9b4572c0a88b0654a9231c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_761c845c6b9396fa6d5461903a69a3da = $(`<div id="html_761c845c6b9396fa6d5461903a69a3da" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_b242c1a54a9b4572c0a88b0654a9231c.setContent(html_761c845c6b9396fa6d5461903a69a3da);
+            
+        
+
+        circle_marker_3c0fbc787685c31930b2a3b733c966f3.bindPopup(popup_b242c1a54a9b4572c0a88b0654a9231c)
+        ;
+
+        
+    
+    
+            var circle_marker_e5f734392a8cec12db64b845ee544823 = L.circleMarker(
+                [43.63596770316742, 79.14147482274487],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_07cca5d82be08cb5a2d45ee94fda0c74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57c47c3eb6404bf391c85441d59214b1 = $(`<div id="html_57c47c3eb6404bf391c85441d59214b1" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_07cca5d82be08cb5a2d45ee94fda0c74.setContent(html_57c47c3eb6404bf391c85441d59214b1);
+            
+        
+
+        circle_marker_e5f734392a8cec12db64b845ee544823.bindPopup(popup_07cca5d82be08cb5a2d45ee94fda0c74)
+        ;
+
+        
+    
+    
+            var circle_marker_edd8ff6d9b96cd316b1faf1895c9ed8a = L.circleMarker(
+                [43.64785874315725, 79.41884039731092],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_e23582360e54e96dd7fdc3f9b0110806 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_561079fb01d14ab3b71dc056492294b7 = $(`<div id="html_561079fb01d14ab3b71dc056492294b7" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_e23582360e54e96dd7fdc3f9b0110806.setContent(html_561079fb01d14ab3b71dc056492294b7);
+            
+        
+
+        circle_marker_edd8ff6d9b96cd316b1faf1895c9ed8a.bindPopup(popup_e23582360e54e96dd7fdc3f9b0110806)
+        ;
+
+        
+    
+    
+            var circle_marker_8d9dc88171835b686e181ea1dc6763ae = L.circleMarker(
+                [43.630347316021734, 79.31824075743752],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_5af56da3cfbe13eb6a30791b9b3ac6d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d3168f8d66445160e289367b54c28cf = $(`<div id="html_0d3168f8d66445160e289367b54c28cf" style="width: 100.0%; height: 100.0%;">Ингредиент: Базилик (Прибрежная флора)</div>`)[0];
+                popup_5af56da3cfbe13eb6a30791b9b3ac6d1.setContent(html_0d3168f8d66445160e289367b54c28cf);
+            
+        
+
+        circle_marker_8d9dc88171835b686e181ea1dc6763ae.bindPopup(popup_5af56da3cfbe13eb6a30791b9b3ac6d1)
+        ;
+
+        
+    
+    
+            var circle_marker_b550a57487420ac241dd62aa43060a47 = L.circleMarker(
+                [43.52676321455094, 79.24787013021512],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_eb031aee98574af67aa0d3889341b672 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb951dd2d09ee15675f84f925c2a813e = $(`<div id="html_fb951dd2d09ee15675f84f925c2a813e" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_eb031aee98574af67aa0d3889341b672.setContent(html_fb951dd2d09ee15675f84f925c2a813e);
+            
+        
+
+        circle_marker_b550a57487420ac241dd62aa43060a47.bindPopup(popup_eb031aee98574af67aa0d3889341b672)
+        ;
+
+        
+    
+    
+            var circle_marker_2808eafa5f7365b35238ad1a2471638c = L.circleMarker(
+                [43.414096169190366, 79.19259193097126],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_37a4e5864fed84aabf51d21510c5f207 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_919e34933bca6f75792ecebbf1aebac1 = $(`<div id="html_919e34933bca6f75792ecebbf1aebac1" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_37a4e5864fed84aabf51d21510c5f207.setContent(html_919e34933bca6f75792ecebbf1aebac1);
+            
+        
+
+        circle_marker_2808eafa5f7365b35238ad1a2471638c.bindPopup(popup_37a4e5864fed84aabf51d21510c5f207)
+        ;
+
+        
+    
+    
+            var circle_marker_f5549993ec5e05f82c38f8e490cfe45a = L.circleMarker(
+                [43.59677168696124, 79.0366268211624],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_a5aafe4a0ea1a63620ca5a2902c848a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be5b536aa4a3938287abc8745f976d2e = $(`<div id="html_be5b536aa4a3938287abc8745f976d2e" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_a5aafe4a0ea1a63620ca5a2902c848a3.setContent(html_be5b536aa4a3938287abc8745f976d2e);
+            
+        
+
+        circle_marker_f5549993ec5e05f82c38f8e490cfe45a.bindPopup(popup_a5aafe4a0ea1a63620ca5a2902c848a3)
+        ;
+
+        
+    
+    
+            var circle_marker_2d9708c79b6d117c3865db3a1aedb4ae = L.circleMarker(
+                [43.66926754123383, 79.74865768911154],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_e7d53ff6b077436e4598ce418a4e9db1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60993d3033705ac306dc0fe0dadae619 = $(`<div id="html_60993d3033705ac306dc0fe0dadae619" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_e7d53ff6b077436e4598ce418a4e9db1.setContent(html_60993d3033705ac306dc0fe0dadae619);
+            
+        
+
+        circle_marker_2d9708c79b6d117c3865db3a1aedb4ae.bindPopup(popup_e7d53ff6b077436e4598ce418a4e9db1)
+        ;
+
+        
+    
+    
+            var circle_marker_f8fb31a662f67b206ca41d879c46892d = L.circleMarker(
+                [43.78345528668946, 79.61869506396943],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_5bec071dd54e1bba74791cef6277bec8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28a8f28a6413dfd47176cd2a39c5004a = $(`<div id="html_28a8f28a6413dfd47176cd2a39c5004a" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_5bec071dd54e1bba74791cef6277bec8.setContent(html_28a8f28a6413dfd47176cd2a39c5004a);
+            
+        
+
+        circle_marker_f8fb31a662f67b206ca41d879c46892d.bindPopup(popup_5bec071dd54e1bba74791cef6277bec8)
+        ;
+
+        
+    
+    
+            var circle_marker_6974bdd733879e6c64cd76fc452d6c96 = L.circleMarker(
+                [43.69030862741888, 79.35137485030295],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_e9ad88ded66df5600d42681329ade53b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52231f9f4ad569db600afa1aaf4cd7d6 = $(`<div id="html_52231f9f4ad569db600afa1aaf4cd7d6" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_e9ad88ded66df5600d42681329ade53b.setContent(html_52231f9f4ad569db600afa1aaf4cd7d6);
+            
+        
+
+        circle_marker_6974bdd733879e6c64cd76fc452d6c96.bindPopup(popup_e9ad88ded66df5600d42681329ade53b)
+        ;
+
+        
+    
+    
+            var circle_marker_e8a0d137dec2c990e5f1d28e3e637ed0 = L.circleMarker(
+                [43.79612070589249, 79.66834909481523],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_48225c9a9a4cdd911f22fda31c5a66ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3fb1e3eeaeff161c833c658c3d775e66 = $(`<div id="html_3fb1e3eeaeff161c833c658c3d775e66" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_48225c9a9a4cdd911f22fda31c5a66ea.setContent(html_3fb1e3eeaeff161c833c658c3d775e66);
+            
+        
+
+        circle_marker_e8a0d137dec2c990e5f1d28e3e637ed0.bindPopup(popup_48225c9a9a4cdd911f22fda31c5a66ea)
+        ;
+
+        
+    
+    
+            var circle_marker_c93ee559b9d2a8d9e161c611e4d95d49 = L.circleMarker(
+                [43.742038888582385, 79.41927513703227],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_85a06b53e35ad570bb9a910150607d71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c206d09f2d874296b739c6d5c4c52fff = $(`<div id="html_c206d09f2d874296b739c6d5c4c52fff" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_85a06b53e35ad570bb9a910150607d71.setContent(html_c206d09f2d874296b739c6d5c4c52fff);
+            
+        
+
+        circle_marker_c93ee559b9d2a8d9e161c611e4d95d49.bindPopup(popup_85a06b53e35ad570bb9a910150607d71)
+        ;
+
+        
+    
+    
+            var circle_marker_6491ff7c7d838777c308ece022d1443b = L.circleMarker(
+                [43.667143792170826, 79.44002447566687],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_74918687e333c8dc33343ffafc2c3a5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b6101d528fcc86a9e08c2b58a1d7833 = $(`<div id="html_6b6101d528fcc86a9e08c2b58a1d7833" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_74918687e333c8dc33343ffafc2c3a5b.setContent(html_6b6101d528fcc86a9e08c2b58a1d7833);
+            
+        
+
+        circle_marker_6491ff7c7d838777c308ece022d1443b.bindPopup(popup_74918687e333c8dc33343ffafc2c3a5b)
+        ;
+
+        
+    
+    
+            var circle_marker_405faa104004da72454be06e8f77151e = L.circleMarker(
+                [43.657279371311276, 79.69381458645374],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_fa75ed557a6cd6cac6269e075abcbf73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc7cadac9cdf8bd7e05e86fd750b04d7 = $(`<div id="html_fc7cadac9cdf8bd7e05e86fd750b04d7" style="width: 100.0%; height: 100.0%;">Ингредиент: Грибы (Геологические выходы)</div>`)[0];
+                popup_fa75ed557a6cd6cac6269e075abcbf73.setContent(html_fc7cadac9cdf8bd7e05e86fd750b04d7);
+            
+        
+
+        circle_marker_405faa104004da72454be06e8f77151e.bindPopup(popup_fa75ed557a6cd6cac6269e075abcbf73)
+        ;
+
+        
+    
+    
+            var poly_line_7b073dd71a2204a74c51033cf573ac66 = L.polyline(
+                [[43.5, 79.1], [43.55, 79.2], [43.6, 79.35], [43.65, 79.5], [43.7, 79.65], [43.75, 79.8]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_376d93ea944c5312063791b6e1bd013a);
+        
+    
+        var popup_169d1a1be70ee51a2e03be81ee8a0bf5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a752668ca800867ee209a05fa58ef7ab = $(`<div id="html_a752668ca800867ee209a05fa58ef7ab" style="width: 100.0%; height: 100.0%;">Русло реки Шарын</div>`)[0];
+                popup_169d1a1be70ee51a2e03be81ee8a0bf5.setContent(html_a752668ca800867ee209a05fa58ef7ab);
+            
+        
+
+        poly_line_7b073dd71a2204a74c51033cf573ac66.bindPopup(popup_169d1a1be70ee51a2e03be81ee8a0bf5)
+        ;
+
+        
+    
+</script>
+</html>

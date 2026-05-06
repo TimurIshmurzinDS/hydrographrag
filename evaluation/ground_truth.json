@@ -1,0 +1,2730 @@
+[
+    {
+        "query": "Каков текущий уровень воды в реке Ili River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Ili River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 1
+    },
+    {
+        "query": "Проверь статус датчика уровня воды на реке Karatal River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Karatal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 2
+    },
+    {
+        "query": "Какой последний показатель уровня воды зафиксирован на реке Talgar River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 3
+    },
+    {
+        "query": "Работает ли сейчас станция мониторинга на реке Koktal River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Koktal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 4
+    },
+    {
+        "query": "Покажи текущий уровень воды в реке Prokhodnaya River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 5
+    },
+    {
+        "query": "Какой статус у сенсора на реке Kumbel River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Kumbel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 6
+    },
+    {
+        "query": "Предоставь данные о текущем уровне воды в реке Batareyka River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 7
+    },
+    {
+        "query": "Проверь состояние датчика мониторинга на реке Ulken Almaty River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Ulken Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 8
+    },
+    {
+        "query": "Каков текущий уровень воды в реках Ili River и Karatal River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Ili River",
+            "Karatal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 9
+    },
+    {
+        "query": "Выведи статус датчиков на реке Talgar River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 10
+    },
+    {
+        "query": "Какая сейчас глубина воды в Koktal River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Koktal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 11
+    },
+    {
+        "query": "Есть ли ошибки в работе сенсора на реке Prokhodnaya River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 12
+    },
+    {
+        "query": "Покажи последние показания уровня воды для Kumbel River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Kumbel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 13
+    },
+    {
+        "query": "Проверь работоспособность системы мониторинга на реке Batareyka River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 14
+    },
+    {
+        "query": "Какой уровень воды сейчас в Ulken Almaty River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Ulken Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 15
+    },
+    {
+        "query": "Каков текущий риск паводка на реке Ulken Almaty River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Ulken Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 16
+    },
+    {
+        "query": "Покажите данные по весеннему расходу воды для реки Tekes River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Tekes River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 17
+    },
+    {
+        "query": "Есть ли предупреждения о сезонных паводках для реки Bayankol River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Bayankol River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 18
+    },
+    {
+        "query": "Получите максимальный уровень воды, достигнутый во время последнего весеннего паводка на реке Osek River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 19
+    },
+    {
+        "query": "Предоставьте данные об изменениях расхода воды в реке Batareyka River в период паводка.",
+        "category": "explicit",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 20
+    },
+    {
+        "query": "Проверьте прогнозы сезонного расхода воды для реки Shyzhyn River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Shyzhyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 21
+    },
+    {
+        "query": "Каким был пиковый уровень воды в реке Uzyn Kargaly River во время весеннего паводка?",
+        "category": "explicit",
+        "expected_entities": [
+            "Uzyn Kargaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 22
+    },
+    {
+        "query": "Предоставьте оценку риска наводнения для реки Prokhodnaya River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 23
+    },
+    {
+        "query": "Покажите исторические данные весенних паводков для реки Ulken Almaty River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Ulken Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 24
+    },
+    {
+        "query": "Сравните уровни расхода воды рек Tekes River и Bayankol River в период паводка.",
+        "category": "explicit",
+        "expected_entities": [
+            "Tekes River",
+            "Bayankol River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 25
+    },
+    {
+        "query": "Какой текущий уровень воды на реке Osek River в период паводка?",
+        "category": "explicit",
+        "expected_entities": [
+            "Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 26
+    },
+    {
+        "query": "Получите значения расхода воды в реке Batareyka River во время весеннего таяния.",
+        "category": "explicit",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 27
+    },
+    {
+        "query": "Есть ли оповещения о высоком уровне воды для реки Shyzhyn River?",
+        "category": "explicit",
+        "expected_entities": [
+            "Shyzhyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 28
+    },
+    {
+        "query": "Перечислите значения расхода воды во время весеннего паводка для реки Uzyn Kargaly River.",
+        "category": "explicit",
+        "expected_entities": [
+            "Uzyn Kargaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 29
+    },
+    {
+        "query": "Рассчитайте индекс риска наводнения для реки Prokhodnaya River на основе текущего расхода.",
+        "category": "explicit",
+        "expected_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 30
+    },
+    {
+        "query": "Каков текущий уровень потребления воды для реки Или?",
+        "category": "explicit",
+        "expected_entities": [
+            "Ile River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 31
+    },
+    {
+        "query": "Предоставьте данные об экологическом состоянии реки Талгар.",
+        "category": "explicit",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 32
+    },
+    {
+        "query": "Какой объем воды забирается на нужды сельского хозяйства в реке Аксу?",
+        "category": "explicit",
+        "expected_entities": [
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 33
+    },
+    {
+        "query": "Покажите показатели загрязнения воды в реке Лепси.",
+        "category": "explicit",
+        "expected_entities": [
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 34
+    },
+    {
+        "query": "Каков уровень дефицита воды для ирригации в реке Аягоз?",
+        "category": "explicit",
+        "expected_entities": [
+            "Ayagoz River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 35
+    },
+    {
+        "query": "Какие изменения в экосистеме реки Шынжалы связаны с потреблением воды?",
+        "category": "explicit",
+        "expected_entities": [
+            "Shynzhaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 36
+    },
+    {
+        "query": "Предоставьте статистику использования воды для нужд агропромышленного комплекса в реке Кумбель.",
+        "category": "explicit",
+        "expected_entities": [
+            "Kumbel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 37
+    },
+    {
+        "query": "Каков уровень экологического риска для реки Каркара?",
+        "category": "explicit",
+        "expected_entities": [
+            "Karkara River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 38
+    },
+    {
+        "query": "Укажите объемы воды, используемые для полива в бассейне реки Или.",
+        "category": "explicit",
+        "expected_entities": [
+            "Ile River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 39
+    },
+    {
+        "query": "Каков уровень загрязнения сточными водами в реке Талгар?",
+        "category": "explicit",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 40
+    },
+    {
+        "query": "Какие данные по потреблению воды на фермерские хозяйства есть по реке Аксу?",
+        "category": "explicit",
+        "expected_entities": [
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 41
+    },
+    {
+        "query": "Покажите уровень влияния агрокультуры на качество воды в реке Лепси.",
+        "category": "explicit",
+        "expected_entities": [
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 42
+    },
+    {
+        "query": "Каков объем воды, выделяемый на орошение в реке Аягоз?",
+        "category": "explicit",
+        "expected_entities": [
+            "Ayagoz River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 43
+    },
+    {
+        "query": "Какие экологические показатели зафиксированы в реке Шынжалы?",
+        "category": "explicit",
+        "expected_entities": [
+            "Shynzhaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 44
+    },
+    {
+        "query": "Предоставьте данные о потреблении воды предприятиями в реке Кумбель.",
+        "category": "explicit",
+        "expected_entities": [
+            "Kumbel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 45
+    },
+    {
+        "query": "Сравните уровни воды в реке Sarykan River за 22022 и 2023 годы.",
+        "category": "explicit",
+        "expected_entities": [
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 46
+    },
+    {
+        "query": "Предскажите расход воды в реке Shilik River на следующий месяц на основе исторических данных.",
+        "category": "explicit",
+        "expected_entities": [
+            "Shilik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 47
+    },
+    {
+        "query": "Получите исторические данные о расходе воды в реке Karkara River за период с 2010 по 2020 годы.",
+        "category": "explicit",
+        "expected_entities": [
+            "Karkara River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 48
+    },
+    {
+        "query": "Сравните пиковые уровни воды в реке Batareyka River в 2015 и 2023 годах.",
+        "category": "explicit",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 49
+    },
+    {
+        "query": "Создайте модель прогнозирования уровня паводка для реки Dos River, используя данные за последние 5 лет.",
+        "category": "explicit",
+        "expected_entities": [
+            "Dos River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 50
+    },
+    {
+        "query": "Сравните средний расход воды в реке Kurty River в летний и зимний периоды прошлых лет.",
+        "category": "explicit",
+        "expected_entities": [
+            "Kurty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 51
+    },
+    {
+        "query": "Разработайте модель прогнозирования стока для реки Sarykan River на следующий сезон.",
+        "category": "explicit",
+        "expected_entities": [
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 52
+    },
+    {
+        "query": "Сравните исторические показатели температуры воды в реке Shilik River за 202 21 и 2022 годы.",
+        "category": "explicit",
+        "expected_entities": [
+            "Shilik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 53
+    },
+    {
+        "query": "Рассчитайте разницу в расходе воды в реке Karkara River между последним и предыдущим десятилетиями.",
+        "category": "explicit",
+        "expected_entities": [
+            "Karkara River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 54
+    },
+    {
+        "query": "Предскажите уровень воды в реке Batareyka River на предстоящий год на основе исторических трендов.",
+        "category": "explicit",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 55
+    },
+    {
+        "query": "Сравните историческую нагрузку наносов в реке Dos River за последние 5 лет.",
+        "category": "explicit",
+        "expected_entities": [
+            "Dos River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 56
+    },
+    {
+        "query": "Постройте модель прогнозирования уровня воды в реке Kurty River на основе исторических трендов.",
+        "category": "explicit",
+        "expected_entities": [
+            "Kurty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 57
+    },
+    {
+        "query": "Сравните ежемесячные показатели расхода воды в реке Sarykan River за 2020 и 2023 годы.",
+        "category": "explicit",
+        "expected_entities": [
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 58
+    },
+    {
+        "query": "Предскажите максимальный расход воды в реке Shilik River на следующее десятилетие.",
+        "category": "explicit",
+        "expected_entities": [
+            "Shilik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 59
+    },
+    {
+        "query": "Сравните влияние исторических осадков на уровень воды в реке Karkara River в период с 2018 по 2023 годы.",
+        "category": "explicit",
+        "expected_entities": [
+            "Karkara River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 60
+    },
+    {
+        "query": "Проверь статус всех датчиков уровня воды на реке Aksu River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 61
+    },
+    {
+        "query": "Какие посты мониторинга на реке Sharyn River сейчас не передают данные?",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 62
+    },
+    {
+        "query": "Выведи текущие уровни воды для всех гидропостов на реке Byzhy River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 63
+    },
+    {
+        "query": "Есть ли ошибки в работе сенсоров на реке Tentek River?",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tentek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 64
+    },
+    {
+        "query": "Проверь уровень воды на реках Aksu River и Byzhy River и сообщи, если датчики неисправны.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Aksu River",
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 65
+    },
+    {
+        "query": "Проверь работоспособность оборудования на реке Temirlik River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Temirlik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 66
+    },
+    {
+        "query": "Покажи последние зафиксированные уровни воды для всех постов на реке Prokhodnaya River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 67
+    },
+    {
+        "query": "Просканируй датчики на реке Osek River и сообщи о любых неисправностях.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 68
+    },
+    {
+        "query": "Сравни текущий статус датчиков на реке Koktal River и реке Aksu River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Koktal River",
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 69
+    },
+    {
+        "query": "Какие гидрологические посты на реке Sharyn River показывают критический уровень?",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 70
+    },
+    {
+        "query": "Проверь, все ли сенсоры на реке Byzhy River находятся в активном режиме.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 71
+    },
+    {
+        "query": "Найди информацию о состоянии датчиков уровня для рек Tentek River и Temirlik River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tentek River",
+            "Temirlik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 72
+    },
+    {
+        "query": "Проверь состояние датчиков уровня воды на реках Osek River и Koktal River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Osek River",
+            "Koktal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 73
+    },
+    {
+        "query": "Проверь наличие аномалий в показаниях сенсоров на реке Prokhodnaya River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 74
+    },
+    {
+        "query": "Сравни статус передачи данных между реками Tentek River и Sharyn River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tentek River",
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 75
+    },
+    {
+        "query": "Найди все гидропосты на реке Karaoy River и оцени риск паводка по их текущему расходу воды.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_annotated_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 76
+    },
+    {
+        "query": "Сравни уровни сезонного расхода на реках Baskan River и Prokhodnaya River для прогнозирования весеннего половодья.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Baskan River",
+            "Prokhodnaya River"
+        ],
+        "expected_annotated_entities": [
+            "Baskan River",
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 77
+    },
+    {
+        "query": "Выведи данные о расходе воды для всех постов на реке Temirlik River, чтобы определить вероятность наводнения.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Temirlik River"
+        ],
+        "expected_annotated_entities": [
+            "Temirlik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 78
+    },
+    {
+        "query": "Проверь, есть ли признаки паводка на реке Turgen River, изучив изменения сезонного расхода воды.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Turgen River"
+        ],
+        "expected_annotated_entities": [
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 79
+    },
+    {
+        "query": "Найди показатели расхода на реке Tokyraun River и сравни их с уровнем на реке Koktal River для оценки риска затопления.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tokyraun River",
+            "Koktal River"
+        ],
+        "expected_annotated_entities": [
+            "Tokyraun River",
+            "Koktal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 80
+    },
+    {
+        "query": "Определи, на каких реках из списка (Baskan River, Prokhodnaya River) уровень воды превышает норму из-за весеннего таяния снегов.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Baskan River",
+            "Prokhodnaya River"
+        ],
+        "expected_annotated_entities": [
+            "Baskan River",
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 81
+    },
+    {
+        "query": "Найди все посты на реке Karaoy River и проверь, превышает ли их расход критическую отметку паводка.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_annotated_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 82
+    },
+    {
+        "query": "Сравни сезонные динамики расхода воды на реках Temirlik River и Turgen River для оценки угрозы весенних наводнений.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Temirlik River",
+            "Turgen River"
+        ],
+        "expected_annotated_entities": [
+            "Temirlik River",
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 83
+    },
+    {
+        "query": "Проверь все гидропосты на реке Tokyraun River на предмет резкого роста расхода воды в период весеннего половодья.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tokyraun River"
+        ],
+        "expected_annotated_entities": [
+            "Tokyraun River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 84
+    },
+    {
+        "query": "Найди данные по расходу на реках Koktal River и Baskan River, чтобы выявить риск сезонного затопления территорий.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Koktal River",
+            "Baskan River"
+        ],
+        "expected_annotated_entities": [
+            "Koktal River",
+            "Baskan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 85
+    },
+    {
+        "query": "Определи, на каких реках (Karaoy River, Temirlik River, Turgen River) наблюдается опасный рост уровня воды из-за паводка.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Karaoy River",
+            "Temirlik River",
+            "Turgen River"
+        ],
+        "expected_annotated_entities": [
+            "Karaoy River",
+            "Temirlik River",
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 86
+    },
+    {
+        "query": "Сравни текущий расход на реке Prokhodnaya River с историческими данными весеннего паводка для этой реки.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_annotated_entities": [
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 87
+    },
+    {
+        "query": "Выведи список всех постов на реке Koktal River и их текущий уровень воды для мониторинга паводковой ситуации.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Koktal River"
+        ],
+        "expected_annotated_entities": [
+            "Koktal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 88
+    },
+    {
+        "query": "Проверь, насколько текущий расход на реке Baskan River отличается от уровня на реке Prokhodnaya River в период пика половодья.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Baskan River",
+            "Prokhodnaya River"
+        ],
+        "expected_annotated_entities": [
+            "Baskan River",
+            "Prokhodnaya River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 89
+    },
+    {
+        "query": "Найди все реки из списка (Karaoy River, Baskan River, Temirlik River) и проверь их текущий риск затопления.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Karaoy River",
+            "Baskan River",
+            "Temirlik River"
+        ],
+        "expected_annotated_entities": [
+            "Karaoy River",
+            "Baskan River",
+            "Temirlik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 90
+    },
+    {
+        "query": "Найди все притоки реки Уржар и укажи их координаты.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 91
+    },
+    {
+        "query": "Вычисли расстояние между устьем реки Дос и началом реки Емель.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Dos River",
+            "Emel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 92
+    },
+    {
+        "query": "Перечисли все реки, которые являются притоками реки Каратал, и найди их общую протяженность.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Karatal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 93
+    },
+    {
+        "query": "Найди координаты самого верхнего течения реки Тентек и сравни их с координатами реки Быж.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tentek River",
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 94
+    },
+    {
+        "query": "Проверь, связаны ли река Улькен Алматы и река Шыжын через систему притоков.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Ulken Almaty River",
+            "Shyzhyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 95
+    },
+    {
+        "query": "Найди реки Уржар и Дос и определи расстояние между их гидрографическими точками.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Urzhar River",
+            "Dos River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 96
+    },
+    {
+        "query": "Является ли река Емель притоком реки Каратал и какая длина этого участка?",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Emel River",
+            "Karatal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 97
+    },
+    {
+        "query": "Найди реки Тентек и Быж и определи, в какой бассейн они впадают.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tentek River",
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 98
+    },
+    {
+        "query": "Сравни географические координаты истока реки Улькен Алматы и реки Уржар.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Ulken Almaty River",
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 99
+    },
+    {
+        "query": "Рассчитай общую длину речного пути от реки Шыжын до реки Дос, учитывая все промежуточные звенья.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Shyzhyn River",
+            "Dos River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 100
+    },
+    {
+        "query": "Определи, какие из перечисленных рек (Тентек, Быж) являются притоками реки Емель.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tentek River",
+            "Byzhy River",
+            "Emel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 101
+    },
+    {
+        "query": "Найди расстояние между точками впадения реки Каратал и реки Улькен Алматы.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Karatal River",
+            "Ulken Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 102
+    },
+    {
+        "query": "Выведи список координат для всех рек: Уржар, Дос и Каратал.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Urzhar River",
+            "Dos River",
+            "Karatal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 103
+    },
+    {
+        "query": "Проверь, является ли река Шыжын притоком реки Дос, и найди расстояние до их слияния.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Shyzhyn River",
+            "Dos River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 104
+    },
+    {
+        "query": "Найди все реки из списка (Улькен Алматы, Емель, Тентек), чьи координаты находятся в одном регионе.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Ulken Almaty River",
+            "Emel River",
+            "Tentek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 105
+    },
+    {
+        "query": "Проверьте, достаточно ли уровней воды в реках Sarykan River и Aksu River для орошения в текущем сезоне.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 106
+    },
+    {
+        "query": "Рассчитайте суммарное потребление воды для нужд сельского хозяйства по рекам Tekeli River и Temirlik River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tekeli River",
+            "Temirlik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 107
+    },
+    {
+        "query": "Выявите признаки экологического стресса в реках Kurty River и Urzhar River на основе последних изменений уровня стока.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Kurty River",
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 108
+    },
+    {
+        "query": "Сравните доступность водных ресурсов в реках Byzhy River и Lepsy River для нужд животноводства.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Byzhy River",
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 109
+    },
+    {
+        "query": "Найдите показатели расхода воды в реках Sarykan River и Tekeli River для оценки их влияния на урожайность.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Tekeli River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 110
+    },
+    {
+        "query": "Определите, какая из рек, Aksu River или Temirlik River, подвержена большему риску засухи, угрожающей фермерским хозяйствам.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Aksu River",
+            "Temirlik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 111
+    },
+    {
+        "query": "Выведите уровни водопотребления для следующих рек: Kurty River, Urzhar River и Byzhy River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Kurty River",
+            "Urzhar River",
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 112
+    },
+    {
+        "query": "Оцените экологические последствия снижения уровня воды в реках Lepsy River и Sarykan River для местной флоры и фауны.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 113
+    },
+    {
+        "query": "Сравните ирригационный потенциал рек Aksu River и Kurty River, основываясь на их текущем дебите.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Aksu River",
+            "Kurty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 114
+    },
+    {
+        "query": "Проанализируйте потребление воды для сельского хозяйства в бассейнах рек Temirlik River и Byzhy River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Temirlik River",
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 115
+    },
+    {
+        "query": "Проверьте стабильность уровня воды в реках Tekeli River и Lepsy River с точки зрения устойчивого земледелия.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tekeli River",
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 116
+    },
+    {
+        "query": "Установите, ведут ли изменения стока в реках Urzhar River и Aksu River к экологическому дисбалансу.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Urzhar River",
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 117
+    },
+    {
+        "query": "Рассчитайте общий объем воды, доступный для полива культур, из рек Sarykan River и Temirlik River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Temirlik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 118
+    },
+    {
+        "query": "Проведите сравнение экологических индикаторов для рек Byzhy River и Tekeli River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Byzhy River",
+            "Tekeli River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 119
+    },
+    {
+        "query": "Проверьте, достаточно ли объемов воды из рек Kurty River и Lepsy River для удовлетворения сельскохозяйственного спроса.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Kurty River",
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 120
+    },
+    {
+        "query": "Сравни средний расход воды в реке Bayankol River и реке Shilik River за последние 10 лет.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Bayankol River",
+            "Shilik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 121
+    },
+    {
+        "query": "Найди пиковый уровень воды, зафиксированный на реке Kishi Almaty River, и сравни его со средним многолетним показателем.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Kishi Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 122
+    },
+    {
+        "query": "Определи, совпадает ли текущий тренд стока реки Kurty River с историческим паттерном реки Sharyn River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Kurty River",
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 123
+    },
+    {
+        "query": "Спрогнозируй уровни воды в реке Lepsy River на 2025 год, используя исторические данные реки Dos River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Dos River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 124
+    },
+    {
+        "query": "Выяви, какая из рек — Tekes River или Bayankol River — показала наибольшее увеличение расхода воды по сравнению со своим средним значением за последние 5 лет.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Tekes River",
+            "Bayankol River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 125
+    },
+    {
+        "query": "Сравни сезонную изменчивость стока реки Shilik River с показателями реки Kishi Almaty River на основе исторических записей.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Shilik River",
+            "Kishi Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 126
+    },
+    {
+        "query": "Рассчитай разницу между максимальным зафиксированным уровнем паводка в реке Sharyn River и его историческим средним значением.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 127
+    },
+    {
+        "query": "Используя исторические данные реки Lepsy River, оцени вероятность паводка в реке Dos River в следующем сезоне.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Dos River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 128
+    },
+    {
+        "query": "Сравни показатели расхода воды в реках Kurty River и Tekes River в период весеннего половодья за последние 5 лет.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Kurty River",
+            "Tekes River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 129
+    },
+    {
+        "query": "Проанализируй историческое отклонение стока реки Bayankol River относительно базового уровня, установленного рекой Shilik River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Bayankol River",
+            "Shilik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 130
+    },
+    {
+        "query": "Спрогнозируй среднемесячный расход воды для реки Kishi Almaty River, основываясь на исторических трендах реки Sharyn River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Kishi Almaty River",
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 131
+    },
+    {
+        "query": "Найди год с самым высоким уровнем стока в реке Lepsy River и сравни его с аналогичным периодом в реке Tekes River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Tekes River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 132
+    },
+    {
+        "query": "Сравни влияние недавних осадков на сток реки Dos River относительно исторических данных реки Kurty River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Dos River",
+            "Kurty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 133
+    },
+    {
+        "query": "Определи, является ли волатильность стока в реке Bayankol River выше, чем в реке Kishi Almaty River, используя данные за последнее десятилетие.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Bayankol River",
+            "Kishi Almaty River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 134
+    },
+    {
+        "query": "Сравни исторические периоды летней засухи в реках Shilik River и Sharyn River.",
+        "category": "semi-explicit",
+        "expected_entities": [
+            "Shilik River",
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 135
+    },
+    {
+        "query": "Проверь статус всех датчиков уровня воды в речной сети региона.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Ayagoz River",
+            "Ile River",
+            "Karatal River",
+            "Tokyraun River",
+            "Lepsy River",
+            "Butak River",
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 136
+    },
+    {
+        "query": "Есть ли неисправные датчики мониторинга в бассейнах рек Или и Каратал?",
+        "category": "implicit",
+        "expected_entities": [
+            "Ile River",
+            "Karatal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 137
+    },
+    {
+        "query": "Проведи сравнение текущих уровней воды в реках Лепсы и Бутак.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Butak River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 138
+    },
+    {
+        "query": "Выяви реки, где датчики уровня воды фиксируют аномальные показатели в районе реки Сарыкан.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 139
+    },
+    {
+        "query": "Подготовь отчет о стабильности связи датчиков на реках Токыраун и Аягоз.",
+        "category": "implicit",
+        "expected_entities": [
+            "Tokyraun River",
+            "Ayagoz River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 140
+    },
+    {
+        "query": "Определи, на каких из основных рек сейчас наблюдаются критические уровни воды согласно данным мониторинга.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Ayagoz River",
+            "Ile River",
+            "Karatal River",
+            "Tokyraun River",
+            "Lepsy River",
+            "Butak River",
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 141
+    },
+    {
+        "query": "Проверь, нет ли сбоев в работе оборудования мониторинга на реке Киши Осек.",
+        "category": "implicit",
+        "expected_entities": [
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 142
+    },
+    {
+        "query": "Сравни состояние работоспособности гидропостов на реках Каратал и Лепсы.",
+        "category": "implicit",
+        "expected_entities": [
+            "Karatal River",
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 143
+    },
+    {
+        "query": "Есть ли какие-либо оповещения от датчиков уровня воды в бассейне реки Или?",
+        "category": "implicit",
+        "expected_entities": [
+            "Ile River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 144
+    },
+    {
+        "query": "Сделай общий обзор текущего состояния датчиков по всем рекам в базе данных.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Ayagoz River",
+            "Ile River",
+            "Karatal River",
+            "Tokyraun River",
+            "Lepsy River",
+            "Butak River",
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 145
+    },
+    {
+        "query": "Нужно ли провести техническое обслуживание датчиков на реках Аягоз и Токыраун?",
+        "category": "implicit",
+        "expected_entities": [
+            "Ayagoz River",
+            "Tokyraun River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 146
+    },
+    {
+        "query": "Все ли датчики в районе рек Бутак и Сарыкан передают данные без ошибок?",
+        "category": "implicit",
+        "expected_entities": [
+            "Butak River",
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 147
+    },
+    {
+        "query": "Какие реки сейчас показывают повышенный уровень воды по данным последних замеров?",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Ayagoz River",
+            "Ile River",
+            "Karatal River",
+            "Tokyraun River",
+            "Lepsy River",
+            "Butak River",
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 148
+    },
+    {
+        "query": "Проверь наличие периодов отсутствия сигнала от датчиков на реках Лепсы и Киши Осек.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 149
+    },
+    {
+        "query": "Проанализируй стабильность показаний датчиков уровня воды для рек Или и Каратал.",
+        "category": "implicit",
+        "expected_entities": [
+            "Ile River",
+            "Karatal River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 150
+    },
+    {
+        "query": "Проанализируй риск паводков на реках Bayankol River и Ili River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Bayankol River",
+            "Ili River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 151
+    },
+    {
+        "query": "Оцени сезонный сток для системы рек Lepsy River и Shilik River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Shilik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 152
+    },
+    {
+        "query": "Какие реки в бассейне Sarykan River наиболее подвержены весенним половодьям?",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 153
+    },
+    {
+        "query": "Сравни вероятность наводнений на реках Shynzhaly River и Shyzhyn River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Shynzhaly River",
+            "Shyzhyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 154
+    },
+    {
+        "query": "Проведи анализ динамики весеннего половодья для рек Bayankol River и Lepsy River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Bayankol River",
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 155
+    },
+    {
+        "query": "Оцени угрозу паводков для бассейна Ili River, включая притоки Sarykan River и Shynzhaly River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Ili River",
+            "Sarykan River",
+            "Shynzhaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 156
+    },
+    {
+        "query": "Какова прогнозируемая амплитуда сезонного стока для рек Shilik River и Shyzhyn River?",
+        "category": "implicit",
+        "expected_entities": [
+            "Shilik River",
+            "Shyzhyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 157
+    },
+    {
+        "query": "Выяви наиболее опасные периоды паводка для рек Bayankol River и Sarykan River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Bayankol River",
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 158
+    },
+    {
+        "query": "Проанализируй риск перелива рек Lepsy River и Shynzhaly River во время весеннего таяния.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Shynzhaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 159
+    },
+    {
+        "query": "Сравни уровни сезонного расхода воды в реках Ili River и Shyzhyn River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Ili River",
+            "Shyzhyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 160
+    },
+    {
+        "query": "Оцени потенциал паводкового затопления для бассейна Shynzhaly River и рек Shilik River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Shynzhaly River",
+            "Shilik River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 161
+    },
+    {
+        "query": "Исследуй корреляцию между снеготаянием и паводками на реках Bayankol River и Lepsy River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Bayankol River",
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 162
+    },
+    {
+        "query": "Подготовь отчет по рискам весеннего половодья для системы рек Sarykan River и Shyzhyn River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Shyzhyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 163
+    },
+    {
+        "query": "Оцени вероятность экстремальных паводков на реках Ili River и Shynzhaly River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Ili River",
+            "Shynzhaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 164
+    },
+    {
+        "query": "Проанализируй гидрологическую обстановку (паводки) для рек Shyzhyn River и Sarykan River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Shyzhyn River",
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 165
+    },
+    {
+        "query": "Проанализируй структуру притоков реки Талгар, чтобы определить основные узлы слияния в её бассейне.",
+        "category": "implicit",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 166
+    },
+    {
+        "query": "Рассчитай общую протяженность речной сети, соединяющей реку Текес и река Тентек.",
+        "category": "implicit",
+        "expected_entities": [
+            "Tekes River",
+            "Tentek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 167
+    },
+    {
+        "query": "Оцени топологическую связность бассейна реки Эмель с притоками, такими как река Сарыкан.",
+        "category": "implicit",
+        "expected_entities": [
+            "Emel River",
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 168
+    },
+    {
+        "query": "Определи пространственное пересечение координат русел рек Шынжалы и реки Талгар.",
+        "category": "implicit",
+        "expected_entities": [
+            "Shynzhaly River",
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 169
+    },
+    {
+        "query": "Проведи анализ иерархии речной сети, начиная от ручья Терисбутак до основных артерий региона.",
+        "category": "implicit",
+        "expected_entities": [
+            "Terisbuthak Creek"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 170
+    },
+    {
+        "query": "Вычисли гидрологическое расстояние между точками слияния реки Киши-Осек и реки Талгар.",
+        "category": "implicit",
+        "expected_entities": [
+            "Kishi Osek River",
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 171
+    },
+    {
+        "query": "Оцени плотность дренажной сети в бассейне реки Текес, учитывая её топологические особенности.",
+        "category": "implicit",
+        "expected_entities": [
+            "Tekes River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 172
+    },
+    {
+        "query": "Проанализируй направление стока от реки Шынжалы к основным речным системам, используя топологию сети.",
+        "category": "implicit",
+        "expected_entities": [
+            "Shynzhaly River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 173
+    },
+    {
+        "query": "Определи все точки пересечения водоразделов между реками Эмель и Тентек.",
+        "category": "implicit",
+        "expected_entities": [
+            "Emel River",
+            "Tentek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 174
+    },
+    {
+        "query": "Рассчитай коэффициент связности речной сети для системы, включающей река Сарыкан.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 175
+    },
+    {
+        "query": "Проведи пространственный анализ близости русла ручья Терисбутак к реке Талгар.",
+        "category": "implicit",
+        "expected_entities": [
+            "Terisbuthak Creek",
+            "Talgar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 176
+    },
+    {
+        "query": "Сравни топологическую сложность бассейнов рек Сарыкан и реки Эмель.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sarykan River",
+            "Emel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 177
+    },
+    {
+        "query": "Оцени влияние топологии притоков реки Тентек на общую структуру речной сети региона.",
+        "category": "implicit",
+        "expected_entities": [
+            "Tentek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 178
+    },
+    {
+        "query": "Выяви потенциальные пути распространения паводка по речной сети, начиная от реки Киши-Осек.",
+        "category": "implicit",
+        "expected_entities": [
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 179
+    },
+    {
+        "query": "Проанализируй конфигурацию речной сети, объединяющей реки Текес и Сарыкан.",
+        "category": "implicit",
+        "expected_entities": [
+            "Tekes River",
+            "Sarykan River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 180
+    },
+    {
+        "query": "Оцените влияние изменения уровня воды в реке Шарын на состояние прилегающих экосистем и биоразнообразие.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 181
+    },
+    {
+        "query": "Проанализируйте риски дефицита воды для сельскохозяйственных нужд в бассейне реки Уржар.",
+        "category": "implicit",
+        "expected_entities": [
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 182
+    },
+    {
+        "query": "Как текущее состояние стока реки Турген влияет на доступность воды для орошения садов?",
+        "category": "implicit",
+        "expected_entities": [
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 183
+    },
+    {
+        "query": "Оцените экологическую устойчивость пойменных земель вдоль реки Киши Осек в контексте изменения климата.",
+        "category": "implicit",
+        "expected_entities": [
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 184
+    },
+    {
+        "query": "Исследуйте корреляцию между объемом потребления воды из реки Бызж и урожайностью местных культур.",
+        "category": "implicit",
+        "expected_entities": [
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 185
+    },
+    {
+        "query": "Проведите анализ влияния загрязнения реки Бутак на качество воды, используемой в сельском хозяйстве.",
+        "category": "implicit",
+        "expected_entities": [
+            "Butak River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 186
+    },
+    {
+        "query": "Оцените потенциальное влияние снижения уровня реки Токыраун на потребление воды животноводческими хозяйствами.",
+        "category": "implicit",
+        "expected_entities": [
+            "Tokyraun River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 187
+    },
+    {
+        "query": "Сравните экологический статус речных экосистем в бассейнах рек Шарын и Уржар.",
+        "category": "implicit",
+        "expected_entities": [
+            "Sharyn River",
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 188
+    },
+    {
+        "query": "Какова вероятность возникновения засухи в регионе реки Турген и её последствия для ирригационных систем?",
+        "category": "implicit",
+        "expected_entities": [
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 189
+    },
+    {
+        "query": "Оцените нагрузку на водные ресурсы реки Киши Осек в связи с расширением сельскохозяйственных угодий.",
+        "category": "implicit",
+        "expected_entities": [
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 190
+    },
+    {
+        "query": "Проанализируйте динамику изменения биоразнообразия в дельте реки Бызж под влиянием интенсивного забора воды.",
+        "category": "implicit",
+        "expected_entities": [
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 191
+    },
+    {
+        "query": "Исследуйте влияние сезонных колебаний стока реки Бутак на устойчивость местных агроценозов.",
+        "category": "implicit",
+        "expected_entities": [
+            "Butak River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 192
+    },
+    {
+        "query": "Сделайте прогноз потребности в воде для орошения в бассейне реки Токыраун на основе исторических данных о стоке.",
+        "category": "implicit",
+        "expected_entities": [
+            "Tokyraun River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 193
+    },
+    {
+        "query": "Как изменение гидрологического режима реки Шарын может повлиять на развитие экологического туризма в регионе?",
+        "category": "implicit",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 194
+    },
+    {
+        "query": "Оцените риски засоления почв вблизи реки Уржар вследствие неэффективного использования поливной воды.",
+        "category": "implicit",
+        "expected_entities": [
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 195
+    },
+    {
+        "query": "Проведи сравнительный анализ исторических показателей расхода воды в Koksu River и Emel River за последние 10 лет для выявления сезонных закономерностей.",
+        "category": "implicit",
+        "expected_entities": [
+            "Koksu River",
+            "Emel River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 196
+    },
+    {
+        "query": "На основе исторических данных о стоке, разработай модель прогнозирования пиковых паводков для реки Aksu River на следующий сезон.",
+        "category": "implicit",
+        "expected_entities": [
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 197
+    },
+    {
+        "query": "Проанализируй долгосрочные тренды изменения уровня воды в бассейнах рек Lepsy River и Turgen River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 198
+    },
+    {
+        "query": "Оцени корреляцию между историческими изменениями осадков и динамикой стока в реках Urzhar River и Byzhy River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Urzhar River",
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 199
+    },
+    {
+        "query": "Выяви годы экстремальных паводков в Kishi Osek River, сравнив текущие показатели с историческими записями.",
+        "category": "implicit",
+        "expected_entities": [
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 200
+    },
+    {
+        "query": "Создай модель прогнозирования риска летней засухи для бассейна, включающего Aksu River и Lepsy River, используя исторические данные.",
+        "category": "implicit",
+        "expected_entities": [
+            "Aksu River",
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 201
+    },
+    {
+        "query": "Определи, какая из рек демонстрирует более значительную межгодовую изменчивость стока: Emel River или Turgen River, на основе ретроспективного анализа.",
+        "category": "implicit",
+        "expected_entities": [
+            "Emel River",
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 202
+    },
+    {
+        "query": "Рассчитай вероятность превышения порога 50-летнего паводка для Koksu River, используя исторический ряд данных.",
+        "category": "implicit",
+        "expected_entities": [
+            "Koksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 203
+    },
+    {
+        "query": "Сравни гидрологические режимы рек Byzhy River и Urzhar River на основе их исторических рядов стока.",
+        "category": "implicit",
+        "expected_entities": [
+            "Byzhy River",
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 204
+    },
+    {
+        "query": "Проанализируй, как исторические изменения в сроках снеготаяния повлияли на динамику стока в Lepsy River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 205
+    },
+    {
+        "query": "Разработай прогностическую модель доступности воды в бассейне рек Aksu River и Kishi Osek River, опираясь на исторические показатели.",
+        "category": "implicit",
+        "expected_entities": [
+            "Aksu River",
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 206
+    },
+    {
+        "query": "Сравни частоту экстремальных межени в реках Emel River и Turgen River за последние два десятилетия.",
+        "category": "implicit",
+        "expected_entities": [
+            "Emel River",
+            "Turgen River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 207
+    },
+    {
+        "query": "Проанализируй десятилетний тренд минимальных уровней воды в Koksu River и Byzhy River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Koksu River",
+            "Byzhy River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 208
+    },
+    {
+        "query": "Смоделируй потенциальное воздействие экстремальных осадков на риск наводнений в бассейне Urzhar River.",
+        "category": "implicit",
+        "expected_entities": [
+            "Urzhar River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 209
+    },
+    {
+        "query": "Проведи сравнительный анализ сезонного распределения стока рек Lepsy River и Aksu River, используя исторические наборы данных.",
+        "category": "implicit",
+        "expected_entities": [
+            "Lepsy River",
+            "Aksu River"
+        ],
+        "expected_behavior": "generate_code",
+        "id": 210
+    },
+    {
+        "query": "Напиши рецепт пирога, где основным ингредиентом является уровень воды в Uzyn Kargaly River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Uzyn Kargaly River"
+        ],
+        "expected_behavior": "reject",
+        "id": 211
+    },
+    {
+        "query": "Как использовать курс биткоина для прогнозирования уровня воды в Batareyka River?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "reject",
+        "id": 212
+    },
+    {
+        "query": "Напиши Python скрипт, который превращает показания датчиков Dos River в прогноз цен на Ethereum.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Dos River"
+        ],
+        "expected_behavior": "reject",
+        "id": 213
+    },
+    {
+        "query": "Как приготовить суп, используя данные о расходе воды в Karatal River?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karatal River"
+        ],
+        "expected_behavior": "reject",
+        "id": 214
+    },
+    {
+        "query": "Создай алгоритм майнинга криптовалюты, основанный на колебаниях уровня воды в Bayankol River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Bayankol River"
+        ],
+        "expected_behavior": "reject",
+        "id": 215
+    },
+    {
+        "query": "Напиши код для телепортации, используя сенсоры реки Karaoy River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "reject",
+        "id": 216
+    },
+    {
+        "query": "Напиши инструкцию по выращиванию кактусов, опираясь на датчики Kishi Almaty River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kishi Almaty River"
+        ],
+        "expected_behavior": "reject",
+        "id": 217
+    },
+    {
+        "query": "Как использовать гравитацию Юпитера для измерения уровня воды в Baskan River?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Baskan River"
+        ],
+        "expected_behavior": "reject",
+        "id": 218
+    },
+    {
+        "query": "Напиши рецепт коктейля, где уровень жидкости зависит от Uzyn Kargaly River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Uzyn Kargaly River"
+        ],
+        "expected_behavior": "reject",
+        "id": 219
+    },
+    {
+        "query": "Как построить космический корабль, используя данные о датчиках Batareyka River?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Batareyka River"
+        ],
+        "expected_behavior": "reject",
+        "id": 220
+    },
+    {
+        "query": "Напиши скрипт на Python для предсказания будущего по уровню воды в Dos River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Dos River"
+        ],
+        "expected_behavior": "reject",
+        "id": 221
+    },
+    {
+        "query": "Как приготовить пасту, если датчики Karatal River показывают аномалию?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karatal River"
+        ],
+        "expected_behavior": "reject",
+        "id": 222
+    },
+    {
+        "query": "Как инвестировать в золото, глядя на уровень воды в Bayankol River?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Bayankol River"
+        ],
+        "expected_behavior": "reject",
+        "id": 223
+    },
+    {
+        "query": "Напиши код для управления роботом, используя данные Karaoy River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "reject",
+        "id": 224
+    },
+    {
+        "query": "Как создать черную дыру, используя поток воды в Kishi Almaty River?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kishi Almaty River"
+        ],
+        "expected_behavior": "reject",
+        "id": 225
+    },
+    {
+        "query": "Как приготовить яблочный пирог, используя уровень паводка реки Шарын?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "reject",
+        "id": 226
+    },
+    {
+        "query": "Напишите Python-скрипт для майнинга биткоина, основываясь на сезонном расходе реки Или.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Ile River"
+        ],
+        "expected_behavior": "reject",
+        "id": 227
+    },
+    {
+        "query": "Как построить ракету, используя сезонные изменения реки Аягоз?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Ayagoz River"
+        ],
+        "expected_behavior": "reject",
+        "id": 228
+    },
+    {
+        "query": "Рецепт борща, вдохновленный риском наводнения реки Аксу.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Aksu River"
+        ],
+        "expected_behavior": "reject",
+        "id": 229
+    },
+    {
+        "query": "Напишите код на Python для предсказания курса Ethereum на основе стока реки Осек.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Osek River"
+        ],
+        "expected_behavior": "reject",
+        "id": 230
+    },
+    {
+        "query": "Как приготовить пасту, используя данные о весеннем половодье реки Коктал?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Koktal River"
+        ],
+        "expected_behavior": "reject",
+        "id": 231
+    },
+    {
+        "query": "Как рассчитать траекторию полета на Луну, используя уровень воды в реке Каскелен?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kaskelen River"
+        ],
+        "expected_behavior": "reject",
+        "id": 232
+    },
+    {
+        "query": "Создайте Python-скрипт для создания NFT, основываясь на паводке реки Кумбель.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kumbel River"
+        ],
+        "expected_behavior": "reject",
+        "id": 233
+    },
+    {
+        "query": "Инструкция по приготовлению пиццы, используя сезонный разлив реки Шарын.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "reject",
+        "id": 234
+    },
+    {
+        "query": "Как запустить спутник, используя расход воды реки Или?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Ile River"
+        ],
+        "expected_behavior": "reject",
+        "id": 235
+    },
+    {
+        "query": "Напишите алгоритм на Python для торговли криптовалютой, используя уровень реки Аягоз?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Ayagoz River"
+        ],
+        "expected_behavior": "reject",
+        "id": 236
+    },
+    {
+        "query": "Рецепт коктейля 'Весенний паводок реки Аксу'.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Aksu River"
+        ],
+        "expected_behavior": "reject",
+        "id": 237
+    },
+    {
+        "query": "Как создать блокчейн, используя данные о стоке реки Осек?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Osek River"
+        ],
+        "expected_behavior": "reject",
+        "id": 238
+    },
+    {
+        "query": "Напишите Python-скрипт для игры в космосе, используя уровень реки Коктал?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Koktal River"
+        ],
+        "expected_behavior": "reject",
+        "id": 239
+    },
+    {
+        "query": "Как испечь хлеб, используя сезонные колебания реки Каскелен?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kaskelen River"
+        ],
+        "expected_behavior": "reject",
+        "id": 240
+    },
+    {
+        "query": "Напишите Python-скript для расчета расстояния между рекой Талгар и Луной.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "reject",
+        "id": 241
+    },
+    {
+        "query": "Как приготовить пирог, форма которого повторяет разветвление притоков реки Тентек?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Tentek River"
+        ],
+        "expected_behavior": "reject",
+        "id": 242
+    },
+    {
+        "query": "Какой криптовалютный алгоритм лучше всего подходит для моделирования географических координат реки Кумбель?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kumbel River"
+        ],
+        "expected_behavior": "reject",
+        "id": 243
+    },
+    {
+        "query": "Напишите рецепт соуса, вкус которого соответствует топографии русла реки Дос.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Dos River"
+        ],
+        "expected_behavior": "reject",
+        "id": 244
+    },
+    {
+        "query": "Как вычислить массу черной дыры, используя длину реки Караой?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "reject",
+        "id": 245
+    },
+    {
+        "query": "Создайте программу на Python для поиска кратчайшего пути между созвездием Ориона и рекой Шилик.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Shilik River"
+        ],
+        "expected_behavior": "reject",
+        "id": 246
+    },
+    {
+        "query": "Как добывать биткоины, используя данные о расположении притоков реки Каскелен?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kaskelen River"
+        ],
+        "expected_behavior": "reject",
+        "id": 247
+    },
+    {
+        "query": "Напишите эссе о колонизации Марса, основываясь на географических координатах реки Аксу.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Aksu River"
+        ],
+        "expected_behavior": "reject",
+        "id": 248
+    },
+    {
+        "query": "Рецепт коктейля, ингредиенты которого зависят от расстояния между рекой Талгар и Юпитером.",
+        "category": "anomalulus",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "reject",
+        "id": 249
+    },
+    {
+        "query": "Напишите скрипт на Python, который рассчитывает орбиту спутника относительно топографической сети притоков реки Тентек.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Tentek River"
+        ],
+        "expected_behavior": "reject",
+        "id": 250
+    },
+    {
+        "query": "Как приготовить десерт, визуально напоминающий гидрографическую сеть реки Кумбель?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kumbel River"
+        ],
+        "expected_behavior": "reject",
+        "id": 251
+    },
+    {
+        "query": "Инструкция по созданию смарт-контракта, привязанного к географическим координатам реки Дос.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Dos River"
+        ],
+        "expected_behavior": "reject",
+        "id": 252
+    },
+    {
+        "query": "Как рассчитать расстояние до Альфы Центавра, используя ширину реки Караой?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "reject",
+        "id": 253
+    },
+    {
+        "query": "Python-скрипт для генерации случайных чисел на основе извилистости русла реки Шилик.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Shilik River"
+        ],
+        "expected_behavior": "reject",
+        "id": 254
+    },
+    {
+        "query": "Рецепт хлеба, текстура которого имитирует рельеф бассейна реки Каскелен.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kaskelen River"
+        ],
+        "expected_behavior": "reject",
+        "id": 255
+    },
+    {
+        "query": "Рецепт блюда, которое можно приготовить, используя только воду из реки Талгар.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "reject",
+        "id": 256
+    },
+    {
+        "query": "Напишите скрипт на Python для расчета потребности в поливе, основываясь на уровне воды в реке Баянколь.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Bayankol River"
+        ],
+        "expected_behavior": "reject",
+        "id": 257
+    },
+    {
+        "query": "Как изменится курс биткоина, если уровень воды в реке Эмел упадет из-за засухи?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Emel River"
+        ],
+        "expected_behavior": "reject",
+        "id": 258
+    },
+    {
+        "query": "Может ли космический корабль использовать воду из реки Баскан для охлаждения двигателей?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Baskan River"
+        ],
+        "expected_behavior": "reject",
+        "id": 259
+    },
+    {
+        "query": "Как приготовить органическое удобрение, используя ил из реки Караой?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "reject",
+        "id": 260
+    },
+    {
+        "query": "Рецепт засолки овощей, если у нас есть только вода из реки Киши Осек.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "reject",
+        "id": 261
+    },
+    {
+        "query": "Напишите код на Python, который предсказывает популяцию рыб в реке Бутак на основе цен на нефть.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Butak River"
+        ],
+        "expected_behavior": "reject",
+        "id": 262
+    },
+    {
+        "query": "Как вырастить картофель на Марсе, используя воду из реки Талгар?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "reject",
+        "id": 263
+    },
+    {
+        "query": "Создайте прогноз стоимости токенов, привязанных к уровню воды в реке Баянколь.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Bayankol River"
+        ],
+        "expected_behavior": "reject",
+        "id": 264
+    },
+    {
+        "query": "Расскажите анекдот про экологическую катастрофу на реке Эмел.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Emel River"
+        ],
+        "expected_behavior": "reject",
+        "id": 265
+    },
+    {
+        "query": "Напишите программу на Python для автоматического полива полей в бассейне реки Караой.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karaoy River"
+        ],
+        "expected_behavior": "reject",
+        "id": 266
+    },
+    {
+        "query": "Как приготовить освежающий напиток, используя лед из реки Баскан?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Baskan River"
+        ],
+        "expected_behavior": "reject",
+        "id": 267
+    },
+    {
+        "query": "Какая криптовалюта лучше всего подходит для инвестиций в сельское хозяйство реки Бутак?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Butak River"
+        ],
+        "expected_behavior": "reject",
+        "id": 268
+    },
+    {
+        "query": "Как построить ферму на Луне, используя системы орошения реки Киши Осек?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Kishi Osek River"
+        ],
+        "expected_behavior": "reject",
+        "id": 269
+    },
+    {
+        "query": "Напишите функцию на Python, которая рассчитывает индекс NDVI, используя только уровень воды в реке Талгар.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Talgar River"
+        ],
+        "expected_behavior": "reject",
+        "id": 270
+    },
+    {
+        "query": "Можно ли использовать исторические данные реки Bayankol River для предсказания курса биткоина?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Bayankol River"
+        ],
+        "expected_behavior": "reject",
+        "id": 271
+    },
+    {
+        "query": "Напиши Python-скрипт для сравнения темпов инфляции, используя данные реки Sharyn River.",
+        "category": "anomalous",
+        "expected_entities": [
+            "Sharyn River"
+        ],
+        "expected_behavior": "reject",
+        "id": 272
+    },
+    {
+        "query": "Как изменился состав традиционных рецептов хлеба, если сравнить их с периодом, когда рядом протекала Karatal River?",
+        "category": "anomalous",
+        "expected_entities": [
+            "Karatal River"
+        ],
+        "expected_behavior": "reject",
+        "id": 273
+    },
+    {
+        "query": "Сравни динамику добычи золота в XIX и XX веках.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 274
+    },
+    {
+        "query": "Как предсказать вероятность солнечной вспышки, используя данные прошлых циклов?",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 275
+    },
+    {
+        "query": "Напиши код для моделирования роста популяции кроликов в зависимости от количества корма.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 276
+    },
+    {
+        "query": "Сравни прибыльность акций технологического сектора за последние три десятилетия.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 277
+    },
+    {
+        "query": "Как предсказать следующую волну миграции, основываясь на исторических трендах?",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 278
+    },
+    {
+        "query": "Напиши скрипт на Python для регрессионного анализа цен на недвижимость.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 279
+    },
+    {
+        "query": "Сравни историческую стоимость проживания в крупных городах по сравнению с прошлым веком.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 280
+    },
+    {
+        "query": "Сравни исторические методы прогнозирования погоды и современные алгоритмы.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 281
+    },
+    {
+        "query": "Как предсказать падение стоимости криптовалюты на основе анализа волатильности?",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 282
+    },
+    {
+        "query": "Напиши функцию для сравнения двух временных рядов в библиотеке Pandas.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 283
+    },
+    {
+        "query": "Как анализировать исторические изменения климата на Марсе?",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 284
+    },
+    {
+        "query": "Сравни эффективность различных стратегий трейдинга на основе исторических графиков.",
+        "category": "anomalous",
+        "expected_entities": [],
+        "expected_behavior": "reject",
+        "id": 285
+    }
+]

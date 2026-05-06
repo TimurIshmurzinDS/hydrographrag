@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e299c873abc0cf1415000feb1981c444 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e299c873abc0cf1415000feb1981c444" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e299c873abc0cf1415000feb1981c444 = L.map(
+                "map_e299c873abc0cf1415000feb1981c444",
+                {
+                    center: [49.3, 84.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a65dc1f141528c5a82f9c172add902b4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a65dc1f141528c5a82f9c172add902b4.addTo(map_e299c873abc0cf1415000feb1981c444);
+        
+    
+            var marker_87bd5938261c57eb6bb753083299fc8b = L.marker(
+                [49.5, 84.5],
+                {
+}
+            ).addTo(map_e299c873abc0cf1415000feb1981c444);
+        
+    
+            var icon_dd55da9aeb26db06c2d0e9b258740e7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4d81c54fc79046c078bd3de174f7cd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_278284e320ab49d8b6c71cb7c842c67c = $(`<div id="html_278284e320ab49d8b6c71cb7c842c67c" style="width: 100.0%; height: 100.0%;">Река Лепсы Макс. сток: 47 в 2017 г.</div>`)[0];
+                popup_e4d81c54fc79046c078bd3de174f7cd9.setContent(html_278284e320ab49d8b6c71cb7c842c67c);
+            
+        
+
+        marker_87bd5938261c57eb6bb753083299fc8b.bindPopup(popup_e4d81c54fc79046c078bd3de174f7cd9)
+        ;
+
+        
+    
+    
+            marker_87bd5938261c57eb6bb753083299fc8b.bindTooltip(
+                `<div>
+                     Lepsy River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87bd5938261c57eb6bb753083299fc8b.setIcon(icon_dd55da9aeb26db06c2d0e9b258740e7e);
+            
+    
+            var marker_16d43faa63977d4d45cce0285e0ae7a3 = L.marker(
+                [49.2, 85.2],
+                {
+}
+            ).addTo(map_e299c873abc0cf1415000feb1981c444);
+        
+    
+            var icon_25f06d7aca4e537092b3510cd218b7f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ac88192045197705d1d3eb905f8b603 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7d7454569dcf6d5bed465f121cf2ed5 = $(`<div id="html_f7d7454569dcf6d5bed465f121cf2ed5" style="width: 100.0%; height: 100.0%;">Река Текес Сток в 2017 г.: 12</div>`)[0];
+                popup_2ac88192045197705d1d3eb905f8b603.setContent(html_f7d7454569dcf6d5bed465f121cf2ed5);
+            
+        
+
+        marker_16d43faa63977d4d45cce0285e0ae7a3.bindPopup(popup_2ac88192045197705d1d3eb905f8b603)
+        ;
+
+        
+    
+    
+            marker_16d43faa63977d4d45cce0285e0ae7a3.bindTooltip(
+                `<div>
+                     Tekes River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16d43faa63977d4d45cce0285e0ae7a3.setIcon(icon_25f06d7aca4e537092b3510cd218b7f8);
+            
+    
+            var marker_780dcf431efd8bcbd4a7d53d60df466d = L.marker(
+                [49.35, 84.85],
+                {
+}
+            ).addTo(map_e299c873abc0cf1415000feb1981c444);
+        
+    
+            var icon_31edc9e51d3802d005ef49e2db5222e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ccd48c3f4112a68c2c628dda7745348 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d5fdf1f2f48d26a0c028276942bfa26c = $(`<div id="html_d5fdf1f2f48d26a0c028276942bfa26c" style="width: 100.0%; height: 100.0%;">Анализ: В 2017 году река Лепсы достигла пика (47). В этот же период сток реки Текес составил 12. Разница: 35 ед.</div>`)[0];
+                popup_1ccd48c3f4112a68c2c628dda7745348.setContent(html_d5fdf1f2f48d26a0c028276942bfa26c);
+            
+        
+
+        marker_780dcf431efd8bcbd4a7d53d60df466d.bindPopup(popup_1ccd48c3f4112a68c2c628dda7745348)
+        ;
+
+        
+    
+    
+                marker_780dcf431efd8bcbd4a7d53d60df466d.setIcon(icon_31edc9e51d3802d005ef49e2db5222e6);
+            
+</script>
+</html>

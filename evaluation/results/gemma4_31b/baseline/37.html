@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_28cdbfb32ce2bee424ac81b56c20d1e4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_28cdbfb32ce2bee424ac81b56c20d1e4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_28cdbfb32ce2bee424ac81b56c20d1e4 = L.map(
+                "map_28cdbfb32ce2bee424ac81b56c20d1e4",
+                {
+                    center: [52.22, 63.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ce8fb16f3d8f6bf350b8069233935b5f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ce8fb16f3d8f6bf350b8069233935b5f.addTo(map_28cdbfb32ce2bee424ac81b56c20d1e4);
+        
+    
+            var poly_line_02047f4026a8e6aab265d2c891284b2b = L.polyline(
+                [[52.1, 63.5], [52.15, 63.6], [52.2, 63.75], [52.25, 63.85], [52.3, 64.0], [52.35, 64.15]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_28cdbfb32ce2bee424ac81b56c20d1e4);
+        
+    
+            poly_line_02047f4026a8e6aab265d2c891284b2b.bindTooltip(
+                `<div>
+                     Река Кумбель
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cluster_71b7ab6559b2441f114dc87503927ea2 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_15b05c470521ed0549f2b1c3611777c6 = L.circleMarker(
+                [52.10496714153011, 63.49437712470759],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.71215, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_d1ad47e3b7f431b5b8ce78133b032667 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc0fb4472d6ad57b3d33b73db529267c = $(`<div id="html_dc0fb4472d6ad57b3d33b73db529267c" style="width: 100.0%; height: 100.0%;">Точка №1<br>Сектор: АПК<br>Объем: 134,243 м3/год</div>`)[0];
+                popup_d1ad47e3b7f431b5b8ce78133b032667.setContent(html_dc0fb4472d6ad57b3d33b73db529267c);
+            
+        
+
+        circle_marker_15b05c470521ed0549f2b1c3611777c6.bindPopup(popup_d1ad47e3b7f431b5b8ce78133b032667)
+        ;
+
+        
+    
+    
+            var circle_marker_951c6312f93e3a316c180d7771bb762f = L.circleMarker(
+                [52.10218878555972, 63.497014545939514],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.09975, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_dd8374acbf2838f0bb1718f2e332f9de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16609b86209dd74b112547f6131c1246 = $(`<div id="html_16609b86209dd74b112547f6131c1246" style="width: 100.0%; height: 100.0%;">Точка №2<br>Сектор: АПК<br>Объем: 261,995 м3/год</div>`)[0];
+                popup_dd8374acbf2838f0bb1718f2e332f9de.setContent(html_16609b86209dd74b112547f6131c1246);
+            
+        
+
+        circle_marker_951c6312f93e3a316c180d7771bb762f.bindPopup(popup_dd8374acbf2838f0bb1718f2e332f9de)
+        ;
+
+        
+    
+    
+            var circle_marker_0b3fa4a7c995da8dd90b3b90cea0b4be = L.circleMarker(
+                [52.113619742523866, 63.517428187611664],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.6159, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_92022ca6a74a4b5c92cec85e1e874b65 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92c9a05445480d8794e73a508e10535c = $(`<div id="html_92c9a05445480d8794e73a508e10535c" style="width: 100.0%; height: 100.0%;">Точка №3<br>Сектор: АПК<br>Объем: 392,318 м3/год</div>`)[0];
+                popup_92022ca6a74a4b5c92cec85e1e874b65.setContent(html_92c9a05445480d8794e73a508e10535c);
+            
+        
+
+        circle_marker_0b3fa4a7c995da8dd90b3b90cea0b4be.bindPopup(popup_92022ca6a74a4b5c92cec85e1e874b65)
+        ;
+
+        
+    
+    
+            var circle_marker_eff84063e77db6413fd6e963e10a38b6 = L.circleMarker(
+                [52.125944584278365, 63.51234833067336],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.22775, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_10e9ff36c7faa3a7ced0365b73194252 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd921b6972082eaf034274ac6e904d8b = $(`<div id="html_cd921b6972082eaf034274ac6e904d8b" style="width: 100.0%; height: 100.0%;">Точка №4<br>Сектор: АПК<br>Объем: 164,555 м3/год</div>`)[0];
+                popup_10e9ff36c7faa3a7ced0365b73194252.setContent(html_cd921b6972082eaf034274ac6e904d8b);
+            
+        
+
+        circle_marker_eff84063e77db6413fd6e963e10a38b6.bindPopup(popup_10e9ff36c7faa3a7ced0365b73194252)
+        ;
+
+        
+    
+    
+            var circle_marker_e7cb43133887c9419c6a13c6150a6145 = L.circleMarker(
+                [52.11194418053848, 63.514448391558076],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.8251, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_9a7ebc22a93bb18e161c5f4d8ab028a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_427a1d36f7b1adc5136f557818566339 = $(`<div id="html_427a1d36f7b1adc5136f557818566339" style="width: 100.0%; height: 100.0%;">Точка №5<br>Сектор: АПК<br>Объем: 396,502 м3/год</div>`)[0];
+                popup_9a7ebc22a93bb18e161c5f4d8ab028a7.setContent(html_427a1d36f7b1adc5136f557818566339);
+            
+        
+
+        circle_marker_e7cb43133887c9419c6a13c6150a6145.bindPopup(popup_9a7ebc22a93bb18e161c5f4d8ab028a7)
+        ;
+
+        
+    
+    
+            var circle_marker_240bf6b83ee58c358a55d2c3736dd386 = L.circleMarker(
+                [52.11551577328765, 63.5503707734035],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.92775, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_a3337e0a27b5f78044132a3e0a0b425a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a552718bc7437634bde877355dfebee = $(`<div id="html_9a552718bc7437634bde877355dfebee" style="width: 100.0%; height: 100.0%;">Точка №6<br>Сектор: АПК<br>Объем: 58,555 м3/год</div>`)[0];
+                popup_a3337e0a27b5f78044132a3e0a0b425a.setContent(html_9a552718bc7437634bde877355dfebee);
+            
+        
+
+        circle_marker_240bf6b83ee58c358a55d2c3736dd386.bindPopup(popup_a3337e0a27b5f78044132a3e0a0b425a)
+        ;
+
+        
+    
+    
+            var circle_marker_c87b871a003c16340d2d8361d06bf5ca = L.circleMarker(
+                [52.13722069958365, 63.54059937985228],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.3254, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_36990daf9d2e193321ac2118a230132f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73a85175733aa4aa4105992bf3405fd4 = $(`<div id="html_73a85175733aa4aa4105992bf3405fd4" style="width: 100.0%; height: 100.0%;">Точка №7<br>Сектор: АПК<br>Объем: 266,508 м3/год</div>`)[0];
+                popup_36990daf9d2e193321ac2118a230132f.setContent(html_73a85175733aa4aa4105992bf3405fd4);
+            
+        
+
+        circle_marker_c87b871a003c16340d2d8361d06bf5ca.bindPopup(popup_36990daf9d2e193321ac2118a230132f)
+        ;
+
+        
+    
+    
+            var circle_marker_2a40c356f30767da5f2298629c07a924 = L.circleMarker(
+                [52.13267434729153, 63.550675282046875],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.46515, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_3767e5adb2401deff148d553ccdd1126 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bba698cb1574d7925615c866b28ca4d6 = $(`<div id="html_bba698cb1574d7925615c866b28ca4d6" style="width: 100.0%; height: 100.0%;">Точка №8<br>Сектор: АПК<br>Объем: 289,303 м3/год</div>`)[0];
+                popup_3767e5adb2401deff148d553ccdd1126.setContent(html_bba698cb1574d7925615c866b28ca4d6);
+            
+        
+
+        circle_marker_2a40c356f30767da5f2298629c07a924.bindPopup(popup_3767e5adb2401deff148d553ccdd1126)
+        ;
+
+        
+    
+    
+            var circle_marker_9a3ea2c15f4a36d96709f4ea9d9181ba = L.circleMarker(
+                [52.12387668471208, 63.54289537528072],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.1327, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_1e0c2cbcfac895a60276c3c718676d26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d80300338451977783f9fb3d6ef99ee9 = $(`<div id="html_d80300338451977783f9fb3d6ef99ee9" style="width: 100.0%; height: 100.0%;">Точка №9<br>Сектор: АПК<br>Объем: 382,654 м3/год</div>`)[0];
+                popup_1e0c2cbcfac895a60276c3c718676d26.setContent(html_d80300338451977783f9fb3d6ef99ee9);
+            
+        
+
+        circle_marker_9a3ea2c15f4a36d96709f4ea9d9181ba.bindPopup(popup_1e0c2cbcfac895a60276c3c718676d26)
+        ;
+
+        
+    
+    
+            var circle_marker_75c6b4f3ad50999afa92f2ff9cd0978b = L.circleMarker(
+                [52.137568457578716, 63.558841887040465],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.8265, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_5f43297021629590c72f731e0fcdf859 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_922e43615324887640f3fbb7a9e4fe80 = $(`<div id="html_922e43615324887640f3fbb7a9e4fe80" style="width: 100.0%; height: 100.0%;">Точка №10<br>Сектор: АПК<br>Объем: 116,530 м3/год</div>`)[0];
+                popup_5f43297021629590c72f731e0fcdf859.setContent(html_922e43615324887640f3fbb7a9e4fe80);
+            
+        
+
+        circle_marker_75c6b4f3ad50999afa92f2ff9cd0978b.bindPopup(popup_5f43297021629590c72f731e0fcdf859)
+        ;
+
+        
+    
+    
+            var circle_marker_8dff66250663934963a113e9204d5bca = L.circleMarker(
+                [52.131080108786165, 63.572537797325666],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.50385, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_0b1b8c8331063325d1bf0257dc06e3ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c268b2516fe26b5220c00072cd86dd6d = $(`<div id="html_c268b2516fe26b5220c00072cd86dd6d" style="width: 100.0%; height: 100.0%;">Точка №11<br>Сектор: АПК<br>Объем: 90,077 м3/год</div>`)[0];
+                popup_0b1b8c8331063325d1bf0257dc06e3ff.setContent(html_c268b2516fe26b5220c00072cd86dd6d);
+            
+        
+
+        circle_marker_8dff66250663934963a113e9204d5bca.bindPopup(popup_0b1b8c8331063325d1bf0257dc06e3ff)
+        ;
+
+        
+    
+    
+            var circle_marker_b7a0b7f4eac7d8fe6ead209dd6d6d691 = L.circleMarker(
+                [52.13462841675001, 63.56706149279721],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.4032, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_6a1881a2d716c1e7d98a05baa1e04220 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bc6cce03dc3cc87bb329a9e3073456e = $(`<div id="html_4bc6cce03dc3cc87bb329a9e3073456e" style="width: 100.0%; height: 100.0%;">Точка №12<br>Сектор: АПК<br>Объем: 308,064 м3/год</div>`)[0];
+                popup_6a1881a2d716c1e7d98a05baa1e04220.setContent(html_4bc6cce03dc3cc87bb329a9e3073456e);
+            
+        
+
+        circle_marker_b7a0b7f4eac7d8fe6ead209dd6d6d691.bindPopup(popup_6a1881a2d716c1e7d98a05baa1e04220)
+        ;
+
+        
+    
+    
+            var circle_marker_280dea4dd0b521b239497a2602c3ad9b = L.circleMarker(
+                [52.1452767655728, 63.58947126589774],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.76415, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_3bfccf63557b10e50ada341b243988cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_052deb3a2a7cbb0cfbd3b918a67c9184 = $(`<div id="html_052deb3a2a7cbb0cfbd3b918a67c9184" style="width: 100.0%; height: 100.0%;">Точка №13<br>Сектор: АПК<br>Объем: 495,283 м3/год</div>`)[0];
+                popup_3bfccf63557b10e50ada341b243988cf.setContent(html_052deb3a2a7cbb0cfbd3b918a67c9184);
+            
+        
+
+        circle_marker_280dea4dd0b521b239497a2602c3ad9b.bindPopup(popup_3bfccf63557b10e50ada341b243988cf)
+        ;
+
+        
+    
+    
+            var circle_marker_2903f081c7147715aded0700a9122610 = L.circleMarker(
+                [52.127295768981995, 63.586850755957954],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.51685, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_632404ec86f7953aa0b380acbb82ae5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_098feb7776d31cc76477adb76351af85 = $(`<div id="html_098feb7776d31cc76477adb76351af85" style="width: 100.0%; height: 100.0%;">Точка №14<br>Сектор: АПК<br>Объем: 470,337 м3/год</div>`)[0];
+                popup_632404ec86f7953aa0b380acbb82ae5a.setContent(html_098feb7776d31cc76477adb76351af85);
+            
+        
+
+        circle_marker_2903f081c7147715aded0700a9122610.bindPopup(popup_632404ec86f7953aa0b380acbb82ae5a)
+        ;
+
+        
+    
+    
+            var circle_marker_ec8b5145550982b52654d295c14e1a4f = L.circleMarker(
+                [52.13275082167487, 63.597083062502065],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.52755, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_71b7ab6559b2441f114dc87503927ea2);
+        
+    
+        var popup_96806cc00872fefaf02125d89fccfc49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc4e9f331ad55499447e4b09cbf8ad48 = $(`<div id="html_cc4e9f331ad55499447e4b09cbf8ad48" style="width: 100.0%; height: 100.0%;">Точка №15<br>Сектор: АПК<br>Объем: 210,551 м3/год</div>`)[0];
+                popup_96806cc00872fefaf02125d89fccfc49.setContent(html_cc4e9f331ad55499447e4b09cbf8ad48);
+            
+        
+
+        circle_marker_ec8b5145550982b52654d295c14e1a4f.bindPopup(popup_96806cc00872fefaf02125d89fccfc49)
+        ;
+
+        
+    
+    
+            marker_cluster_71b7ab6559b2441f114dc87503927ea2.addTo(map_28cdbfb32ce2bee424ac81b56c20d1e4);
+        
+</script>
+</html>

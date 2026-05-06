@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_542cbcf95332f21e8711ea37a1995130 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_542cbcf95332f21e8711ea37a1995130" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_542cbcf95332f21e8711ea37a1995130 = L.map(
+                "map_542cbcf95332f21e8711ea37a1995130",
+                {
+                    center: [47.6062, -122.3321],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2695846f8474bb0e87c575b130696c09 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2695846f8474bb0e87c575b130696c09.addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+            var marker_30007f9a528c5592e037d98476db2d5a = L.marker(
+                [47.6062, -122.3321],
+                {
+}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_22fd29a6eae8c0925d90f462beb41bb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80ec180368932f8098d008da2b6b6376 = $(`<div id="html_80ec180368932f8098d008da2b6b6376" style="width: 100.0%; height: 100.0%;">Каскелен</div>`)[0];
+                popup_22fd29a6eae8c0925d90f462beb41bb9.setContent(html_80ec180368932f8098d008da2b6b6376);
+            
+        
+
+        marker_30007f9a528c5592e037d98476db2d5a.bindPopup(popup_22fd29a6eae8c0925d90f462beb41bb9)
+        ;
+
+        
+    
+    
+            var circle_marker_c7d3fc15b75d08c3faf5ababe3f13ccb = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_6ed5cb555d69c58d5eaa8162351fb654 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abd64bade7dc5183dfd505abe80ba46e = $(`<div id="html_abd64bade7dc5183dfd505abe80ba46e" style="width: 100.0%; height: 100.0%;">Дата: 2023-01-01<br>Температура воды: 5°C</div>`)[0];
+                popup_6ed5cb555d69c58d5eaa8162351fb654.setContent(html_abd64bade7dc5183dfd505abe80ba46e);
+            
+        
+
+        circle_marker_c7d3fc15b75d08c3faf5ababe3f13ccb.bindPopup(popup_6ed5cb555d69c58d5eaa8162351fb654)
+        ;
+
+        
+    
+    
+            var circle_marker_a712ef3545b1614e590d58b6eabcb741 = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_74f25c81f0675841f746415d3309189b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b838b74f1c56ab8ab901c5d32382fad1 = $(`<div id="html_b838b74f1c56ab8ab901c5d32382fad1" style="width: 100.0%; height: 100.0%;">Дата: 2023-02-01<br>Температура воды: 7°C</div>`)[0];
+                popup_74f25c81f0675841f746415d3309189b.setContent(html_b838b74f1c56ab8ab901c5d32382fad1);
+            
+        
+
+        circle_marker_a712ef3545b1614e590d58b6eabcb741.bindPopup(popup_74f25c81f0675841f746415d3309189b)
+        ;
+
+        
+    
+    
+            var circle_marker_2707d3e3686ae0f461bab7cb8998a3ab = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_c176d6eb57dc035b339abbd147a2c597 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2cbd38d83092cfdfa71b812dc2e43a3e = $(`<div id="html_2cbd38d83092cfdfa71b812dc2e43a3e" style="width: 100.0%; height: 100.0%;">Дата: 2023-03-01<br>Температура воды: 9°C</div>`)[0];
+                popup_c176d6eb57dc035b339abbd147a2c597.setContent(html_2cbd38d83092cfdfa71b812dc2e43a3e);
+            
+        
+
+        circle_marker_2707d3e3686ae0f461bab7cb8998a3ab.bindPopup(popup_c176d6eb57dc035b339abbd147a2c597)
+        ;
+
+        
+    
+    
+            var circle_marker_ecbb1d19a1efa7ec4849b010caa91d1c = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_81567e984b1d83ce9603e1358e180d54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d98779b3268b3930eff3dccc499aa72d = $(`<div id="html_d98779b3268b3930eff3dccc499aa72d" style="width: 100.0%; height: 100.0%;">Дата: 2023-04-01<br>Температура воды: 11°C</div>`)[0];
+                popup_81567e984b1d83ce9603e1358e180d54.setContent(html_d98779b3268b3930eff3dccc499aa72d);
+            
+        
+
+        circle_marker_ecbb1d19a1efa7ec4849b010caa91d1c.bindPopup(popup_81567e984b1d83ce9603e1358e180d54)
+        ;
+
+        
+    
+    
+            var circle_marker_11ef985207f4a9b3d7410bb5bf4716b5 = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_ecd16d92faab38199c73ab49012df667 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d428f99e2e339f688385715f9e1feea7 = $(`<div id="html_d428f99e2e339f688385715f9e1feea7" style="width: 100.0%; height: 100.0%;">Дата: 2023-05-01<br>Температура воды: 13°C</div>`)[0];
+                popup_ecd16d92faab38199c73ab49012df667.setContent(html_d428f99e2e339f688385715f9e1feea7);
+            
+        
+
+        circle_marker_11ef985207f4a9b3d7410bb5bf4716b5.bindPopup(popup_ecd16d92faab38199c73ab49012df667)
+        ;
+
+        
+    
+    
+            var circle_marker_0ca0bfce5fe85a61a8a5e8dacadc30bf = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_f8b82f1f6238682de63f95c53d40d0cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02e2fedac6b783827284d56f73b52b3f = $(`<div id="html_02e2fedac6b783827284d56f73b52b3f" style="width: 100.0%; height: 100.0%;">Дата: 2023-06-01<br>Температура воды: 15°C</div>`)[0];
+                popup_f8b82f1f6238682de63f95c53d40d0cf.setContent(html_02e2fedac6b783827284d56f73b52b3f);
+            
+        
+
+        circle_marker_0ca0bfce5fe85a61a8a5e8dacadc30bf.bindPopup(popup_f8b82f1f6238682de63f95c53d40d0cf)
+        ;
+
+        
+    
+    
+            var circle_marker_178d57cd0747e9053a4968981aa989c2 = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_b55c0fd10ccbeb2e9499a25918f5fa64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac2309e8df68f34ae12f744ae9f0d566 = $(`<div id="html_ac2309e8df68f34ae12f744ae9f0d566" style="width: 100.0%; height: 100.0%;">Дата: 2023-07-01<br>Температура воды: 17°C</div>`)[0];
+                popup_b55c0fd10ccbeb2e9499a25918f5fa64.setContent(html_ac2309e8df68f34ae12f744ae9f0d566);
+            
+        
+
+        circle_marker_178d57cd0747e9053a4968981aa989c2.bindPopup(popup_b55c0fd10ccbeb2e9499a25918f5fa64)
+        ;
+
+        
+    
+    
+            var circle_marker_5c74d0f94c764a19d41cb401d8999a9a = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_61ab81f7de5a74d9f1aab2127504ac2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc05a8612b261814fe43b74d64391b3e = $(`<div id="html_cc05a8612b261814fe43b74d64391b3e" style="width: 100.0%; height: 100.0%;">Дата: 2023-08-01<br>Температура воды: 19°C</div>`)[0];
+                popup_61ab81f7de5a74d9f1aab2127504ac2e.setContent(html_cc05a8612b261814fe43b74d64391b3e);
+            
+        
+
+        circle_marker_5c74d0f94c764a19d41cb401d8999a9a.bindPopup(popup_61ab81f7de5a74d9f1aab2127504ac2e)
+        ;
+
+        
+    
+    
+            var circle_marker_aef66683e9907295744414c6a27f7478 = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_3f1487aaaa4cdce9ccfc43a01d505450 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbc4027b2107906afc5c9818f9214b5c = $(`<div id="html_fbc4027b2107906afc5c9818f9214b5c" style="width: 100.0%; height: 100.0%;">Дата: 2023-09-01<br>Температура воды: 17°C</div>`)[0];
+                popup_3f1487aaaa4cdce9ccfc43a01d505450.setContent(html_fbc4027b2107906afc5c9818f9214b5c);
+            
+        
+
+        circle_marker_aef66683e9907295744414c6a27f7478.bindPopup(popup_3f1487aaaa4cdce9ccfc43a01d505450)
+        ;
+
+        
+    
+    
+            var circle_marker_e14a4ae4215d6031a6aee60205780375 = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_afb0adfc294d3a499c7e3374b419ca55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1114785586b8ddfb91114867c55c5c77 = $(`<div id="html_1114785586b8ddfb91114867c55c5c77" style="width: 100.0%; height: 100.0%;">Дата: 2023-10-01<br>Температура воды: 15°C</div>`)[0];
+                popup_afb0adfc294d3a499c7e3374b419ca55.setContent(html_1114785586b8ddfb91114867c55c5c77);
+            
+        
+
+        circle_marker_e14a4ae4215d6031a6aee60205780375.bindPopup(popup_afb0adfc294d3a499c7e3374b419ca55)
+        ;
+
+        
+    
+    
+            var circle_marker_b325795111b6e6458bbe5ab8201d50a8 = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_cdc70fbed26e5d256d77a77d5f573e97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0347fe671f92980b2439e6acc5416e1 = $(`<div id="html_e0347fe671f92980b2439e6acc5416e1" style="width: 100.0%; height: 100.0%;">Дата: 2023-11-01<br>Температура воды: 13°C</div>`)[0];
+                popup_cdc70fbed26e5d256d77a77d5f573e97.setContent(html_e0347fe671f92980b2439e6acc5416e1);
+            
+        
+
+        circle_marker_b325795111b6e6458bbe5ab8201d50a8.bindPopup(popup_cdc70fbed26e5d256d77a77d5f573e97)
+        ;
+
+        
+    
+    
+            var circle_marker_144c302532b1a442c3247765d390f25f = L.circleMarker(
+                [47.6062, -122.3321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_542cbcf95332f21e8711ea37a1995130);
+        
+    
+        var popup_b6a50fd643a0a9b16140cb8635fdd172 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37629f1a060a44a7ab3411cd5e274e1b = $(`<div id="html_37629f1a060a44a7ab3411cd5e274e1b" style="width: 100.0%; height: 100.0%;">Дата: 2023-12-01<br>Температура воды: 11°C</div>`)[0];
+                popup_b6a50fd643a0a9b16140cb8635fdd172.setContent(html_37629f1a060a44a7ab3411cd5e274e1b);
+            
+        
+
+        circle_marker_144c302532b1a442c3247765d390f25f.bindPopup(popup_b6a50fd643a0a9b16140cb8635fdd172)
+        ;
+
+        
+    
+</script>
+</html>

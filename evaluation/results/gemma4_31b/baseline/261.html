@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_aa5ebef72c10158605f0d36bb5605d25 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_aa5ebef72c10158605f0d36bb5605d25" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_aa5ebef72c10158605f0d36bb5605d25 = L.map(
+                "map_aa5ebef72c10158605f0d36bb5605d25",
+                {
+                    center: [42.21, 71.31],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_849976a138124535e0936685d2ba5062 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_849976a138124535e0936685d2ba5062.addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+            var poly_line_39519587353eba3e74cc682d9ff19eea = L.polyline(
+                [[42.15, 71.2], [42.16, 71.22], [42.175, 71.25], [42.19, 71.28], [42.21, 71.31], [42.23, 71.35], [42.25, 71.39], [42.27, 71.43]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+            poly_line_39519587353eba3e74cc682d9ff19eea.bindTooltip(
+                `<div>
+                     Река Киши Осек
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70b001211c0d1c3f7ddc6ee3c2b1cfcd = L.circleMarker(
+                [42.15, 71.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_7f5d8d7f736a6973a9240a228b950aae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eedeaa5969b1968dcda7ca4db470d75a = $(`<div id="html_eedeaa5969b1968dcda7ca4db470d75a" style="width: 100.0%; height: 100.0%;">Соленость: 0.50 г/л</div>`)[0];
+                popup_7f5d8d7f736a6973a9240a228b950aae.setContent(html_eedeaa5969b1968dcda7ca4db470d75a);
+            
+        
+
+        circle_marker_70b001211c0d1c3f7ddc6ee3c2b1cfcd.bindPopup(popup_7f5d8d7f736a6973a9240a228b950aae)
+        ;
+
+        
+    
+    
+            var circle_marker_8f0a90dd5ba86ef6994ac16ea23d6e68 = L.circleMarker(
+                [42.16, 71.22],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_50575ebb465ab6d087b73ae0106bcf47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa1bf87fd6a6067bb2fdbf485590be05 = $(`<div id="html_aa1bf87fd6a6067bb2fdbf485590be05" style="width: 100.0%; height: 100.0%;">Соленость: 2.14 г/л</div>`)[0];
+                popup_50575ebb465ab6d087b73ae0106bcf47.setContent(html_aa1bf87fd6a6067bb2fdbf485590be05);
+            
+        
+
+        circle_marker_8f0a90dd5ba86ef6994ac16ea23d6e68.bindPopup(popup_50575ebb465ab6d087b73ae0106bcf47)
+        ;
+
+        
+    
+    
+            var circle_marker_d9729fce179e80e5af5bbe7d8bac701b = L.circleMarker(
+                [42.175, 71.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_91c057e84b4a107e16736144f704a826 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b8c105df26595f52a83ec12afcf4483 = $(`<div id="html_9b8c105df26595f52a83ec12afcf4483" style="width: 100.0%; height: 100.0%;">Соленость: 3.79 г/л</div>`)[0];
+                popup_91c057e84b4a107e16736144f704a826.setContent(html_9b8c105df26595f52a83ec12afcf4483);
+            
+        
+
+        circle_marker_d9729fce179e80e5af5bbe7d8bac701b.bindPopup(popup_91c057e84b4a107e16736144f704a826)
+        ;
+
+        
+    
+    
+            var circle_marker_925407d108878a402804d19469cd43aa = L.circleMarker(
+                [42.19, 71.28],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_d3a1acc5fa80ef2ecbec7575d231be2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69b29ee24e54700a92276644a0670a95 = $(`<div id="html_69b29ee24e54700a92276644a0670a95" style="width: 100.0%; height: 100.0%;">Соленость: 5.43 г/л</div>`)[0];
+                popup_d3a1acc5fa80ef2ecbec7575d231be2e.setContent(html_69b29ee24e54700a92276644a0670a95);
+            
+        
+
+        circle_marker_925407d108878a402804d19469cd43aa.bindPopup(popup_d3a1acc5fa80ef2ecbec7575d231be2e)
+        ;
+
+        
+    
+    
+            var circle_marker_0884a6e1098db2c11e052c2670715033 = L.circleMarker(
+                [42.21, 71.31],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_1051c5c8ee500323afc9c36a27b2f9d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cbcf7f9bc5012543d630c3fcf854107 = $(`<div id="html_7cbcf7f9bc5012543d630c3fcf854107" style="width: 100.0%; height: 100.0%;">Соленость: 7.07 г/л</div>`)[0];
+                popup_1051c5c8ee500323afc9c36a27b2f9d3.setContent(html_7cbcf7f9bc5012543d630c3fcf854107);
+            
+        
+
+        circle_marker_0884a6e1098db2c11e052c2670715033.bindPopup(popup_1051c5c8ee500323afc9c36a27b2f9d3)
+        ;
+
+        
+    
+    
+            var circle_marker_97ee86c1cf8991de9c2da11251f212db = L.circleMarker(
+                [42.23, 71.35],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_fe2ff9c9cea4de76bedb71435378877e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8741913ff12b5dc392cb3499bca6146 = $(`<div id="html_a8741913ff12b5dc392cb3499bca6146" style="width: 100.0%; height: 100.0%;">Соленость: 8.71 г/л</div>`)[0];
+                popup_fe2ff9c9cea4de76bedb71435378877e.setContent(html_a8741913ff12b5dc392cb3499bca6146);
+            
+        
+
+        circle_marker_97ee86c1cf8991de9c2da11251f212db.bindPopup(popup_fe2ff9c9cea4de76bedb71435378877e)
+        ;
+
+        
+    
+    
+            var circle_marker_7f425290406af72cb38fe19b3cb27f81 = L.circleMarker(
+                [42.25, 71.39],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_9a3420a30edeb88a44939db30132b77f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_566e6166ec193e48671e85d45ff1f346 = $(`<div id="html_566e6166ec193e48671e85d45ff1f346" style="width: 100.0%; height: 100.0%;">Соленость: 10.36 г/л</div>`)[0];
+                popup_9a3420a30edeb88a44939db30132b77f.setContent(html_566e6166ec193e48671e85d45ff1f346);
+            
+        
+
+        circle_marker_7f425290406af72cb38fe19b3cb27f81.bindPopup(popup_9a3420a30edeb88a44939db30132b77f)
+        ;
+
+        
+    
+    
+            var circle_marker_c6ba28eb4c700b396953f5b1be5913c5 = L.circleMarker(
+                [42.27, 71.43],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+        var popup_8c7d2eff1c94badadaecdd59d7ae7308 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7468127f82cfc05974b95563c3d37574 = $(`<div id="html_7468127f82cfc05974b95563c3d37574" style="width: 100.0%; height: 100.0%;">Соленость: 12.00 г/л</div>`)[0];
+                popup_8c7d2eff1c94badadaecdd59d7ae7308.setContent(html_7468127f82cfc05974b95563c3d37574);
+            
+        
+
+        circle_marker_c6ba28eb4c700b396953f5b1be5913c5.bindPopup(popup_8c7d2eff1c94badadaecdd59d7ae7308)
+        ;
+
+        
+    
+    
+            var marker_d0790c51e01479fe566a04469dbc5905 = L.marker(
+                [42.27, 71.43],
+                {
+}
+            ).addTo(map_aa5ebef72c10158605f0d36bb5605d25);
+        
+    
+            var icon_62fe84072e4dd26a2c6d0ec853cd9d0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a80af75e69889da8cb53b3d2e8fb9992 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7e80b0e0565e38f8e7e38742eba5e57 = $(`<div id="html_f7e80b0e0565e38f8e7e38742eba5e57" style="width: 100.0%; height: 100.0%;">ТОЧКА ЗАСОЛКИ (Max Salinity)</div>`)[0];
+                popup_a80af75e69889da8cb53b3d2e8fb9992.setContent(html_f7e80b0e0565e38f8e7e38742eba5e57);
+            
+        
+
+        marker_d0790c51e01479fe566a04469dbc5905.bindPopup(popup_a80af75e69889da8cb53b3d2e8fb9992)
+        ;
+
+        
+    
+    
+                marker_d0790c51e01479fe566a04469dbc5905.setIcon(icon_62fe84072e4dd26a2c6d0ec853cd9d0f);
+            
+</script>
+</html>

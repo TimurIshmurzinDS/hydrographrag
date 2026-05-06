@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dff06aeae480a0b148610f9f5321c421 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_dff06aeae480a0b148610f9f5321c421" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dff06aeae480a0b148610f9f5321c421 = L.map(
+                "map_dff06aeae480a0b148610f9f5321c421",
+                {
+                    center: [43.0, 76.1],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4d36d98573f2f65a2c98733440c1f879 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4d36d98573f2f65a2c98733440c1f879.addTo(map_dff06aeae480a0b148610f9f5321c421);
+        
+    
+            var marker_cluster_03836ea983a42ad242066dbc1f908ff8 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_692871a6c73e6fc01e888c69b4c5591f = L.marker(
+                [43.05, 76.25],
+                {
+}
+            ).addTo(marker_cluster_03836ea983a42ad242066dbc1f908ff8);
+        
+    
+            var icon_267bd3d14bd35173dee27e958dcca411 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f5d0cb1b28b97ceeee465ccba41b3cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a40294d4d16a045acfda4b1afd1fd516 = $(`<div id="html_a40294d4d16a045acfda4b1afd1fd516" style="width: 100.0%; height: 100.0%;">Или_1: исправный</div>`)[0];
+                popup_3f5d0cb1b28b97ceeee465ccba41b3cf.setContent(html_a40294d4d16a045acfda4b1afd1fd516);
+            
+        
+
+        marker_692871a6c73e6fc01e888c69b4c5591f.bindPopup(popup_3f5d0cb1b28b97ceeee465ccba41b3cf)
+        ;
+
+        
+    
+    
+                marker_692871a6c73e6fc01e888c69b4c5591f.setIcon(icon_267bd3d14bd35173dee27e958dcca411);
+            
+    
+            var marker_380f7f89f977a5452d002a34b58f88cf = L.marker(
+                [43.1, 76.3],
+                {
+}
+            ).addTo(marker_cluster_03836ea983a42ad242066dbc1f908ff8);
+        
+    
+            var icon_3e062d3a4ff5d249240e6fca88506560 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98efe7d5c348de2a543a3a0c39e56138 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb4aff8719de195b83eb0698139abbe5 = $(`<div id="html_fb4aff8719de195b83eb0698139abbe5" style="width: 100.0%; height: 100.0%;">Или_2: неисправный</div>`)[0];
+                popup_98efe7d5c348de2a543a3a0c39e56138.setContent(html_fb4aff8719de195b83eb0698139abbe5);
+            
+        
+
+        marker_380f7f89f977a5452d002a34b58f88cf.bindPopup(popup_98efe7d5c348de2a543a3a0c39e56138)
+        ;
+
+        
+    
+    
+                marker_380f7f89f977a5452d002a34b58f88cf.setIcon(icon_3e062d3a4ff5d249240e6fca88506560);
+            
+    
+            var marker_055227bd889f4835dbfdb77773637089 = L.marker(
+                [42.95, 76.15],
+                {
+}
+            ).addTo(marker_cluster_03836ea983a42ad242066dbc1f908ff8);
+        
+    
+            var icon_f342ccadc97c8bc29ed424869ccd0e1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d52c247548b34511cf331feb5f41d0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_011faacb9d260970a5960102f6a31bdc = $(`<div id="html_011faacb9d260970a5960102f6a31bdc" style="width: 100.0%; height: 100.0%;">Каратал_1: исправный</div>`)[0];
+                popup_9d52c247548b34511cf331feb5f41d0c.setContent(html_011faacb9d260970a5960102f6a31bdc);
+            
+        
+
+        marker_055227bd889f4835dbfdb77773637089.bindPopup(popup_9d52c247548b34511cf331feb5f41d0c)
+        ;
+
+        
+    
+    
+                marker_055227bd889f4835dbfdb77773637089.setIcon(icon_f342ccadc97c8bc29ed424869ccd0e1d);
+            
+    
+            var marker_77ffaa8e451b1b0f9a75cbd41b834d29 = L.marker(
+                [42.85, 76.05],
+                {
+}
+            ).addTo(marker_cluster_03836ea983a42ad242066dbc1f908ff8);
+        
+    
+            var icon_c4370c5091e434f4f18a8c0df6c1244a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fdebdc3f12605655d4e50db8bdbef6c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad1a653ebebd2a058f0cdce3c960a365 = $(`<div id="html_ad1a653ebebd2a058f0cdce3c960a365" style="width: 100.0%; height: 100.0%;">Каратал_2: неисправный</div>`)[0];
+                popup_fdebdc3f12605655d4e50db8bdbef6c3.setContent(html_ad1a653ebebd2a058f0cdce3c960a365);
+            
+        
+
+        marker_77ffaa8e451b1b0f9a75cbd41b834d29.bindPopup(popup_fdebdc3f12605655d4e50db8bdbef6c3)
+        ;
+
+        
+    
+    
+                marker_77ffaa8e451b1b0f9a75cbd41b834d29.setIcon(icon_c4370c5091e434f4f18a8c0df6c1244a);
+            
+    
+            marker_cluster_03836ea983a42ad242066dbc1f908ff8.addTo(map_dff06aeae480a0b148610f9f5321c421);
+        
+</script>
+</html>

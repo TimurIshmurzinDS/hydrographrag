@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7339341eb3015a399daa0f5d027a0c75 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7339341eb3015a399daa0f5d027a0c75" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7339341eb3015a399daa0f5d027a0c75 = L.map(
+                "map_7339341eb3015a399daa0f5d027a0c75",
+                {
+                    center: [42.8, 79.6],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f290bca81ab05d578c626f4c45a3b066 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f290bca81ab05d578c626f4c45a3b066.addTo(map_7339341eb3015a399daa0f5d027a0c75);
+        
+    
+            var circle_marker_837fbda3b3ac0e775ea39ad70b195ade = L.circleMarker(
+                [43.25, 79.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_7339341eb3015a399daa0f5d027a0c75);
+        
+    
+        var popup_cee07c86fec2b183fc866dec0a363ca4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4eb92d018e2139fcdef120c7b8e9373 = $(`<div id="html_f4eb92d018e2139fcdef120c7b8e9373" style="width: 100.0%; height: 100.0%;">Station: Upper Sharyn<br>Current Level: 1.2m<br>Threshold: 2.0m<br>Status: <b>Normal</b></div>`)[0];
+                popup_cee07c86fec2b183fc866dec0a363ca4.setContent(html_f4eb92d018e2139fcdef120c7b8e9373);
+            
+        
+
+        circle_marker_837fbda3b3ac0e775ea39ad70b195ade.bindPopup(popup_cee07c86fec2b183fc866dec0a363ca4)
+        ;
+
+        
+    
+    
+            var circle_marker_0acbdc35cdb7d6b59dd688fc1f75238c = L.circleMarker(
+                [43.1, 79.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_7339341eb3015a399daa0f5d027a0c75);
+        
+    
+        var popup_11ca7350c2e3abf617c27d1568334ce3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21380f2e5eeef08d2f9b05c57aa4d863 = $(`<div id="html_21380f2e5eeef08d2f9b05c57aa4d863" style="width: 100.0%; height: 100.0%;">Station: Middle Sharyn A<br>Current Level: 4.5m<br>Threshold: 4.0m<br>Status: <b>Critical</b></div>`)[0];
+                popup_11ca7350c2e3abf617c27d1568334ce3.setContent(html_21380f2e5eeef08d2f9b05c57aa4d863);
+            
+        
+
+        circle_marker_0acbdc35cdb7d6b59dd688fc1f75238c.bindPopup(popup_11ca7350c2e3abf617c27d1568334ce3)
+        ;
+
+        
+    
+    
+            var circle_marker_83592c4ef2ae17db6a8b559017d342d4 = L.circleMarker(
+                [42.95, 79.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_7339341eb3015a399daa0f5d027a0c75);
+        
+    
+        var popup_798fdafb856f5b129ce1acc88fc9a439 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_631435b12bc6508f83b1483cd6cff4bc = $(`<div id="html_631435b12bc6508f83b1483cd6cff4bc" style="width: 100.0%; height: 100.0%;">Station: Middle Sharyn B<br>Current Level: 2.1m<br>Threshold: 2.5m<br>Status: <b>Normal</b></div>`)[0];
+                popup_798fdafb856f5b129ce1acc88fc9a439.setContent(html_631435b12bc6508f83b1483cd6cff4bc);
+            
+        
+
+        circle_marker_83592c4ef2ae17db6a8b559017d342d4.bindPopup(popup_798fdafb856f5b129ce1acc88fc9a439)
+        ;
+
+        
+    
+    
+            var circle_marker_f926d5b60831f3f279328b62127812d1 = L.circleMarker(
+                [42.7, 79.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_7339341eb3015a399daa0f5d027a0c75);
+        
+    
+        var popup_818ae107e620e26b573e093524e1e706 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_858629a7fdcd1c02568cf75a7b959281 = $(`<div id="html_858629a7fdcd1c02568cf75a7b959281" style="width: 100.0%; height: 100.0%;">Station: Lower Sharyn<br>Current Level: 5.8m<br>Threshold: 5.0m<br>Status: <b>Critical</b></div>`)[0];
+                popup_818ae107e620e26b573e093524e1e706.setContent(html_858629a7fdcd1c02568cf75a7b959281);
+            
+        
+
+        circle_marker_f926d5b60831f3f279328b62127812d1.bindPopup(popup_818ae107e620e26b573e093524e1e706)
+        ;
+
+        
+    
+    
+            var circle_marker_aa3e95a1fa96730b57586bf6e10fbe9f = L.circleMarker(
+                [42.5, 80.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_7339341eb3015a399daa0f5d027a0c75);
+        
+    
+        var popup_ce181eaf47ca325c6284cc99de0f7679 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6e16190401a5e6df2427d04a280beed = $(`<div id="html_d6e16190401a5e6df2427d04a280beed" style="width: 100.0%; height: 100.0%;">Station: Sharyn Delta<br>Current Level: 3.0m<br>Threshold: 3.5m<br>Status: <b>Normal</b></div>`)[0];
+                popup_ce181eaf47ca325c6284cc99de0f7679.setContent(html_d6e16190401a5e6df2427d04a280beed);
+            
+        
+
+        circle_marker_aa3e95a1fa96730b57586bf6e10fbe9f.bindPopup(popup_ce181eaf47ca325c6284cc99de0f7679)
+        ;
+
+        
+    
+</script>
+</html>

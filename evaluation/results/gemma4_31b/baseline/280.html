@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3fc8bf657d380a2dc248ba16b0bc40b4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 100px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Growth Intensity:</b><br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Extreme (>3000%)<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> High (>1000%)<br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Moderate
+     </div>
+     
+    
+            <div class="folium-map" id="map_3fc8bf657d380a2dc248ba16b0bc40b4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3fc8bf657d380a2dc248ba16b0bc40b4 = L.map(
+                "map_3fc8bf657d380a2dc248ba16b0bc40b4",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6524977d5d6180a2b1bdadae5ecf5ba9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6524977d5d6180a2b1bdadae5ecf5ba9.addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+            var circle_marker_b2fc57fefad0d4322bba490d001feaab = L.circleMarker(
+                [40.7128, -74.006],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60.0, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_e8ed8cbf0aefbb434d8b265f4fb53a9d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e5e2f8779d765e890febd6d2f52215cc = $(`<div id="html_e5e2f8779d765e890febd6d2f52215cc" style="width: 100.0%; height: 100.0%;"><b>City:</b> New York<br>Cost 1924: 100 units<br>Cost 2024: 1200 units<br><b>Growth: 1100.00%</b></div>`)[0];
+                popup_e8ed8cbf0aefbb434d8b265f4fb53a9d.setContent(html_e5e2f8779d765e890febd6d2f52215cc);
+            
+        
+
+        circle_marker_b2fc57fefad0d4322bba490d001feaab.bindPopup(popup_e8ed8cbf0aefbb434d8b265f4fb53a9d)
+        ;
+
+        
+    
+    
+            var circle_marker_fd93d7bb468767a1c0d2bb726ae62206 = L.circleMarker(
+                [51.5074, -0.1278],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 55.0, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_cd2cd039b51bd09233a9398ac38079e6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b892ccc11fc3416d34942e263e7b2ee = $(`<div id="html_2b892ccc11fc3416d34942e263e7b2ee" style="width: 100.0%; height: 100.0%;"><b>City:</b> London<br>Cost 1924: 90 units<br>Cost 2024: 1100 units<br><b>Growth: 1122.22%</b></div>`)[0];
+                popup_cd2cd039b51bd09233a9398ac38079e6.setContent(html_2b892ccc11fc3416d34942e263e7b2ee);
+            
+        
+
+        circle_marker_fd93d7bb468767a1c0d2bb726ae62206.bindPopup(popup_cd2cd039b51bd09233a9398ac38079e6)
+        ;
+
+        
+    
+    
+            var circle_marker_dfaf6be963ef554d65480cf1239da024 = L.circleMarker(
+                [35.6895, 139.6917],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 47.5, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_ddce75eecebf89f72cf53808b25db7ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_18cfbf4c9b806f475c169c79a95f6b7f = $(`<div id="html_18cfbf4c9b806f475c169c79a95f6b7f" style="width: 100.0%; height: 100.0%;"><b>City:</b> Tokyo<br>Cost 1924: 40 units<br>Cost 2024: 950 units<br><b>Growth: 2275.00%</b></div>`)[0];
+                popup_ddce75eecebf89f72cf53808b25db7ff.setContent(html_18cfbf4c9b806f475c169c79a95f6b7f);
+            
+        
+
+        circle_marker_dfaf6be963ef554d65480cf1239da024.bindPopup(popup_ddce75eecebf89f72cf53808b25db7ff)
+        ;
+
+        
+    
+    
+            var circle_marker_aee9e875655a45c7a6def8bf3a9fb585 = L.circleMarker(
+                [48.8566, 2.3522],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 52.5, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_b161fb89ae233599d9a7e355956ccdbf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f51368864668b986e63449af5caf309 = $(`<div id="html_6f51368864668b986e63449af5caf309" style="width: 100.0%; height: 100.0%;"><b>City:</b> Paris<br>Cost 1924: 85 units<br>Cost 2024: 1050 units<br><b>Growth: 1135.29%</b></div>`)[0];
+                popup_b161fb89ae233599d9a7e355956ccdbf.setContent(html_6f51368864668b986e63449af5caf309);
+            
+        
+
+        circle_marker_aee9e875655a45c7a6def8bf3a9fb585.bindPopup(popup_b161fb89ae233599d9a7e355956ccdbf)
+        ;
+
+        
+    
+    
+            var circle_marker_cd73c3eb28b7cf94601e1b4b116d576f = L.circleMarker(
+                [55.7558, 37.6173],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40.0, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_2bc9ba2d43af393ef4c85c1bb5daef09 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17eb732efaed591cc6933cc7158ca70d = $(`<div id="html_17eb732efaed591cc6933cc7158ca70d" style="width: 100.0%; height: 100.0%;"><b>City:</b> Moscow<br>Cost 1924: 50 units<br>Cost 2024: 800 units<br><b>Growth: 1500.00%</b></div>`)[0];
+                popup_2bc9ba2d43af393ef4c85c1bb5daef09.setContent(html_17eb732efaed591cc6933cc7158ca70d);
+            
+        
+
+        circle_marker_cd73c3eb28b7cf94601e1b4b116d576f.bindPopup(popup_2bc9ba2d43af393ef4c85c1bb5daef09)
+        ;
+
+        
+    
+    
+            var circle_marker_c8d93ab0259308b1658443fd76c8daf9 = L.circleMarker(
+                [22.3193, 114.1694],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 65.0, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_d45122671d6b0d0b9fac5d1c691ab5de = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4162aeccb66b432424c9962aca292d79 = $(`<div id="html_4162aeccb66b432424c9962aca292d79" style="width: 100.0%; height: 100.0%;"><b>City:</b> Hong Kong<br>Cost 1924: 30 units<br>Cost 2024: 1300 units<br><b>Growth: 4233.33%</b></div>`)[0];
+                popup_d45122671d6b0d0b9fac5d1c691ab5de.setContent(html_4162aeccb66b432424c9962aca292d79);
+            
+        
+
+        circle_marker_c8d93ab0259308b1658443fd76c8daf9.bindPopup(popup_d45122671d6b0d0b9fac5d1c691ab5de)
+        ;
+
+        
+    
+    
+            var circle_marker_45735756e7b129fa87bf7585e3b5e656 = L.circleMarker(
+                [52.52, 13.405],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 42.5, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_99de8dd367032bb7e30e7ffb7218bfd4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_85407defd52d93e44b6fa8908001a7db = $(`<div id="html_85407defd52d93e44b6fa8908001a7db" style="width: 100.0%; height: 100.0%;"><b>City:</b> Berlin<br>Cost 1924: 70 units<br>Cost 2024: 850 units<br><b>Growth: 1114.29%</b></div>`)[0];
+                popup_99de8dd367032bb7e30e7ffb7218bfd4.setContent(html_85407defd52d93e44b6fa8908001a7db);
+            
+        
+
+        circle_marker_45735756e7b129fa87bf7585e3b5e656.bindPopup(popup_99de8dd367032bb7e30e7ffb7218bfd4)
+        ;
+
+        
+    
+    
+            var circle_marker_6392e7863ffae19441ec0795bf03e38f = L.circleMarker(
+                [-33.8688, 151.2093],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45.0, "stroke": true, "weight": 2}
+            ).addTo(map_3fc8bf657d380a2dc248ba16b0bc40b4);
+        
+    
+        var popup_e081c3f7a44da5cb54b391dcf8a8cc67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6bab88bfd0087108d9ac9b0ea70033b1 = $(`<div id="html_6bab88bfd0087108d9ac9b0ea70033b1" style="width: 100.0%; height: 100.0%;"><b>City:</b> Sydney<br>Cost 1924: 60 units<br>Cost 2024: 900 units<br><b>Growth: 1400.00%</b></div>`)[0];
+                popup_e081c3f7a44da5cb54b391dcf8a8cc67.setContent(html_6bab88bfd0087108d9ac9b0ea70033b1);
+            
+        
+
+        circle_marker_6392e7863ffae19441ec0795bf03e38f.bindPopup(popup_e081c3f7a44da5cb54b391dcf8a8cc67)
+        ;
+
+        
+    
+</script>
+</html>

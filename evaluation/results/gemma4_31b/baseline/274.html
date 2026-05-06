@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5c364020a169116f22febb952ee6f106 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Gold Mining Dynamics</b><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block;"></i> Growth (20th > 19th)<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block;"></i> Decline (20th < 19th)<br>
+     <i>Size = Total Volume</i>
+     </div>
+     
+    
+            <div class="folium-map" id="map_5c364020a169116f22febb952ee6f106" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5c364020a169116f22febb952ee6f106 = L.map(
+                "map_5c364020a169116f22febb952ee6f106",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_517619ff06002fa8e6d68cce7bb4838f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_517619ff06002fa8e6d68cce7bb4838f.addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+            var circle_marker_9ad80dd9e36afe4360b6dc6f009b3273 = L.circleMarker(
+                [38.5, -120.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.331501776206203, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_c82c9c43c1cff322a68a040f2b8fc707 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65a433ee505a89e62cefa617c09917fb = $(`<div id="html_65a433ee505a89e62cefa617c09917fb" style="width: 100.0%; height: 100.0%;"><b>Region:</b> California (USA)<br>19th Century: 150 units<br>20th Century: 80 units<br><b>Dynamics:</b> Decline<br>Difference: -70.00</div>`)[0];
+                popup_c82c9c43c1cff322a68a040f2b8fc707.setContent(html_65a433ee505a89e62cefa617c09917fb);
+            
+        
+
+        circle_marker_9ad80dd9e36afe4360b6dc6f009b3273.bindPopup(popup_c82c9c43c1cff322a68a040f2b8fc707)
+        ;
+
+        
+    
+    
+            var circle_marker_0507c201485c2c3d6416039f2adbe512 = L.circleMarker(
+                [-26.2, 28.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45.16635916254486, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_9a1fe9c5eb77fbc5f3a2543cc726f499 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_39c055ddbd182b6a23f0f6cbc0aa080a = $(`<div id="html_39c055ddbd182b6a23f0f6cbc0aa080a" style="width: 100.0%; height: 100.0%;"><b>Region:</b> Witwatersrand (South Africa)<br>19th Century: 10 units<br>20th Century: 500 units<br><b>Dynamics:</b> Growth<br>Difference: 490.00</div>`)[0];
+                popup_9a1fe9c5eb77fbc5f3a2543cc726f499.setContent(html_39c055ddbd182b6a23f0f6cbc0aa080a);
+            
+        
+
+        circle_marker_0507c201485c2c3d6416039f2adbe512.bindPopup(popup_9a1fe9c5eb77fbc5f3a2543cc726f499)
+        ;
+
+        
+    
+    
+            var circle_marker_f94560590c55a7c1b880e94a3c6d9d9a = L.circleMarker(
+                [64.0, -139.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.832396974191326, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_6a0f05a33ed6eb428f1fb8c7f662074f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_804e9d0f35b102576d59fc368ffdafc3 = $(`<div id="html_804e9d0f35b102576d59fc368ffdafc3" style="width: 100.0%; height: 100.0%;"><b>Region:</b> Klondike (Canada)<br>19th Century: 40 units<br>20th Century: 15 units<br><b>Dynamics:</b> Decline<br>Difference: -25.00</div>`)[0];
+                popup_6a0f05a33ed6eb428f1fb8c7f662074f.setContent(html_804e9d0f35b102576d59fc368ffdafc3);
+            
+        
+
+        circle_marker_f94560590c55a7c1b880e94a3c6d9d9a.bindPopup(popup_6a0f05a33ed6eb428f1fb8c7f662074f)
+        ;
+
+        
+    
+    
+            var circle_marker_853411ec09c1926ca5909aa79b1e1930 = L.circleMarker(
+                [-36.7, 144.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.832815729997478, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_bb46950d5d1680cce3791fcd9df090df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_559a80224c4a8957de49155081d35a40 = $(`<div id="html_559a80224c4a8957de49155081d35a40" style="width: 100.0%; height: 100.0%;"><b>Region:</b> Victoria (Australia)<br>19th Century: 120 units<br>20th Century: 60 units<br><b>Dynamics:</b> Decline<br>Difference: -60.00</div>`)[0];
+                popup_bb46950d5d1680cce3791fcd9df090df.setContent(html_559a80224c4a8957de49155081d35a40);
+            
+        
+
+        circle_marker_853411ec09c1926ca5909aa79b1e1930.bindPopup(popup_bb46950d5d1680cce3791fcd9df090df)
+        ;
+
+        
+    
+    
+            var circle_marker_351e4cd802cf82ca6ba0d9182f177705 = L.circleMarker(
+                [65.0, 160.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.202941017470888, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_4bd4bb0420d5ee50dfb78f4096a15d0c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_872903e58821ac468619db40243dfaa2 = $(`<div id="html_872903e58821ac468619db40243dfaa2" style="width: 100.0%; height: 100.0%;"><b>Region:</b> Kolyma (Russia)<br>19th Century: 5 units<br>20th Century: 180 units<br><b>Dynamics:</b> Growth<br>Difference: 175.00</div>`)[0];
+                popup_4bd4bb0420d5ee50dfb78f4096a15d0c.setContent(html_872903e58821ac468619db40243dfaa2);
+            
+        
+
+        circle_marker_351e4cd802cf82ca6ba0d9182f177705.bindPopup(popup_4bd4bb0420d5ee50dfb78f4096a15d0c)
+        ;
+
+        
+    
+    
+            var circle_marker_493b4914b8ba6c65f21e80b0ea5b973d = L.circleMarker(
+                [40.7, -116.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.42534080710379, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_4bd98c0082d3acb83aa689ef4187c1fa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05c260b274a5bb67c9289dd3a0a5b2b1 = $(`<div id="html_05c260b274a5bb67c9289dd3a0a5b2b1" style="width: 100.0%; height: 100.0%;"><b>Region:</b> Carlin Trend (USA)<br>19th Century: 2 units<br>20th Century: 200 units<br><b>Dynamics:</b> Growth<br>Difference: 198.00</div>`)[0];
+                popup_4bd98c0082d3acb83aa689ef4187c1fa.setContent(html_05c260b274a5bb67c9289dd3a0a5b2b1);
+            
+        
+
+        circle_marker_493b4914b8ba6c65f21e80b0ea5b973d.bindPopup(popup_4bd98c0082d3acb83aa689ef4187c1fa)
+        ;
+
+        
+    
+    
+            var circle_marker_d0e2d613eabcc8b1cd0f8b58771db7e4 = L.circleMarker(
+                [7.0, -2.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.80350850198276, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_2cd313e6499a24744f9602bd2413810e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e1d4b5fc8d996eaf4ae04c604f6682b4 = $(`<div id="html_e1d4b5fc8d996eaf4ae04c604f6682b4" style="width: 100.0%; height: 100.0%;"><b>Region:</b> West Africa (Ghana/Mali)<br>19th Century: 20 units<br>20th Century: 110 units<br><b>Dynamics:</b> Growth<br>Difference: 90.00</div>`)[0];
+                popup_2cd313e6499a24744f9602bd2413810e.setContent(html_e1d4b5fc8d996eaf4ae04c604f6682b4);
+            
+        
+
+        circle_marker_d0e2d613eabcc8b1cd0f8b58771db7e4.bindPopup(popup_2cd313e6499a24744f9602bd2413810e)
+        ;
+
+        
+    
+    
+            var circle_marker_9db65d4c916898be595d9af09169ae9d = L.circleMarker(
+                [42.0, 74.0],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.493901531919196, "stroke": true, "weight": 2}
+            ).addTo(map_5c364020a169116f22febb952ee6f106);
+        
+    
+        var popup_94d01cafb789e5bb858d95a63b39be71 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_75d13ffc525d0dd29a3e1a19007e6776 = $(`<div id="html_75d13ffc525d0dd29a3e1a19007e6776" style="width: 100.0%; height: 100.0%;"><b>Region:</b> Central Asia (Kyrgyzstan/Uzbekistan)<br>19th Century: 15 units<br>20th Century: 90 units<br><b>Dynamics:</b> Growth<br>Difference: 75.00</div>`)[0];
+                popup_94d01cafb789e5bb858d95a63b39be71.setContent(html_75d13ffc525d0dd29a3e1a19007e6776);
+            
+        
+
+        circle_marker_9db65d4c916898be595d9af09169ae9d.bindPopup(popup_94d01cafb789e5bb858d95a63b39be71)
+        ;
+
+        
+    
+</script>
+</html>

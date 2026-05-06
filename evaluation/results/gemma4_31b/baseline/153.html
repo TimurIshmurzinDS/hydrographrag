@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_62fa066e721dbeeaf7e3952278140478 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 160px; height: 90px; 
+                border:2px solid grey; z-index:9999; font-size:14px;
+                background-color:white; opacity: 0.8; padding: 10px;">
+    <b>Риск половодья:</b><br>
+    <i style="background:red; width:10px; height:10px; display:inline-block"></i> Высокий<br>
+    <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Средний<br>
+    <i style="background:green; width:10px; height:10px; display:inline-block"></i> Низкий
+    </div>
+    
+    
+            <div class="folium-map" id="map_62fa066e721dbeeaf7e3952278140478" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_62fa066e721dbeeaf7e3952278140478 = L.map(
+                "map_62fa066e721dbeeaf7e3952278140478",
+                {
+                    center: [48.5, 62.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_25eb827ab6b8bbe423a16c1aba177ac5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_25eb827ab6b8bbe423a16c1aba177ac5.addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            var poly_line_171f84d290f98b612dba38153a188b11 = L.polyline(
+                [[48.85489839525204, 62.447179356648675], [48.86243107831266, 62.43296010875494]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_171f84d290f98b612dba38153a188b11.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.60
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_840f24191a4ccca1e731ecd2f6664a5b = L.polyline(
+                [[48.86243107831266, 62.43296010875494], [48.853894434532485, 62.435101986221746]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_840f24191a4ccca1e731ecd2f6664a5b.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.52
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_241a3c201f34b5bc6d43e4913f732d4a = L.polyline(
+                [[48.853894434532485, 62.435101986221746], [48.85313951572577, 62.433749968725095]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_241a3c201f34b5bc6d43e4913f732d4a.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.61
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_083272e0bc6f471458a5e0879c6c88ec = L.polyline(
+                [[48.85313951572577, 62.433749968725095], [48.87204541168583, 62.40448209996585]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_083272e0bc6f471458a5e0879c6c88ec.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4e67f30c48e11d9bd7f0572ec72fa71c = L.polyline(
+                [[48.87204541168583, 62.40448209996585], [48.914124512490076, 62.39011099878211]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_4e67f30c48e11d9bd7f0572ec72fa71c.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.59
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_619b9cd46bd25751cecd5a6aa0879349 = L.polyline(
+                [[48.914124512490076, 62.39011099878211], [48.92749596478793, 62.37092614241122]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_619b9cd46bd25751cecd5a6aa0879349.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.69
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5f0d1acc8a4d297260dcf3cdf53f6fd3 = L.polyline(
+                [[48.92749596478793, 62.37092614241122], [48.918670099258314, 62.40463889518951]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_5f0d1acc8a4d297260dcf3cdf53f6fd3.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.46
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_21ebd5154324b6fca3a0846327af8952 = L.polyline(
+                [[48.918670099258314, 62.40463889518951], [48.89270940654767, 62.43776843830254]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_21ebd5154324b6fca3a0846327af8952.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.58
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_285081b7d204cfbf77a8854668ee83e1 = L.polyline(
+                [[48.89270940654767, 62.43776843830254], [48.917045693823425, 62.43701563143587]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_285081b7d204cfbf77a8854668ee83e1.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.60
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1d9bd9786eae243a1dc908b7c054655d = L.polyline(
+                [[48.917045693823425, 62.43701563143587], [48.90292942337864, 62.479488165408455]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_1d9bd9786eae243a1dc908b7c054655d.bindTooltip(
+                `<div>
+                     River: Sarykan Main Stem | Risk: 0.50
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_79caa68233e900f2399b50393605c220 = L.polyline(
+                [[48.84507319322852, 61.978533242712004], [48.86268407594697, 61.96829418586774]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_79caa68233e900f2399b50393605c220.bindTooltip(
+                `<div>
+                     River: Tributary A | Risk: 0.45
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2e03260009212f3540e235a4977ae7dc = L.polyline(
+                [[48.86268407594697, 61.96829418586774], [48.85996327008996, 61.94271208332911]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_2e03260009212f3540e235a4977ae7dc.bindTooltip(
+                `<div>
+                     River: Tributary A | Risk: 0.48
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_546ad5c36d5eb8a66caa98fa12c7b231 = L.polyline(
+                [[48.85996327008996, 61.94271208332911], [48.842823555363665, 61.93236994552637]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_546ad5c36d5eb8a66caa98fa12c7b231.bindTooltip(
+                `<div>
+                     River: Tributary A | Risk: 0.34
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9cdaa36a6796c61738b41ae351839df9 = L.polyline(
+                [[48.842823555363665, 61.93236994552637], [48.869620938268504, 61.96377713614416]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_9cdaa36a6796c61738b41ae351839df9.bindTooltip(
+                `<div>
+                     River: Tributary A | Risk: 0.43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b2c73bcd21fe09221b06517f062bee25 = L.polyline(
+                [[48.869620938268504, 61.96377713614416], [48.836439278706706, 61.96315285010562]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_b2c73bcd21fe09221b06517f062bee25.bindTooltip(
+                `<div>
+                     River: Tributary A | Risk: 0.43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4eb4df67866a27632243887dfd8f5ee2 = L.polyline(
+                [[48.27531026933674, 61.841697531894035], [48.259186580476076, 61.80541036322235]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_4eb4df67866a27632243887dfd8f5ee2.bindTooltip(
+                `<div>
+                     River: Tributary B | Risk: 0.71
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_144ff4073bf0ce23172ffc5334cc3d81 = L.polyline(
+                [[48.259186580476076, 61.80541036322235], [48.30020266426087, 61.8299017559107]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_144ff4073bf0ce23172ffc5334cc3d81.bindTooltip(
+                `<div>
+                     River: Tributary B | Risk: 0.56
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6acd1b8e983008732b301d9eff794066 = L.polyline(
+                [[48.30020266426087, 61.8299017559107], [48.34827856303753, 61.81952639758254]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_6acd1b8e983008732b301d9eff794066.bindTooltip(
+                `<div>
+                     River: Tributary B | Risk: 0.59
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_fa8b04f398ed2bad16bc78bd19935155 = L.polyline(
+                [[48.34827856303753, 61.81952639758254], [48.37361266970942, 61.8037219566008]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_fa8b04f398ed2bad16bc78bd19935155.bindTooltip(
+                `<div>
+                     River: Tributary B | Risk: 0.53
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f77ff4820a91a75a4c80db6d16fa48e7 = L.polyline(
+                [[48.37361266970942, 61.8037219566008], [48.37762016403319, 61.790143607273066]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_f77ff4820a91a75a4c80db6d16fa48e7.bindTooltip(
+                `<div>
+                     River: Tributary B | Risk: 0.56
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b82ddc544a8cc056ae0b1f3edb324c4d = L.polyline(
+                [[48.42153555515521, 61.91385261188432], [48.38202912966244, 61.93528448669594]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_b82ddc544a8cc056ae0b1f3edb324c4d.bindTooltip(
+                `<div>
+                     River: Tributary C | Risk: 0.46
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0d822efa584ee0d5a3a66f3e3dffb181 = L.polyline(
+                [[48.38202912966244, 61.93528448669594], [48.354333662041405, 61.9601731618822]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_0d822efa584ee0d5a3a66f3e3dffb181.bindTooltip(
+                `<div>
+                     River: Tributary C | Risk: 0.32
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b5fe44135c43bf861bf02f48ea1921bc = L.polyline(
+                [[48.354333662041405, 61.9601731618822], [48.31887133705566, 61.93810028010002]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_b5fe44135c43bf861bf02f48ea1921bc.bindTooltip(
+                `<div>
+                     River: Tributary C | Risk: 0.46
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ec7cbb3b4d23ca24e0e2f6f9541f0756 = L.polyline(
+                [[48.31887133705566, 61.93810028010002], [48.27004163745323, 61.924086169663646]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_ec7cbb3b4d23ca24e0e2f6f9541f0756.bindTooltip(
+                `<div>
+                     River: Tributary C | Risk: 0.46
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a7d1491e632a2ef618625922099d8ef3 = L.polyline(
+                [[48.27004163745323, 61.924086169663646], [48.285771182652304, 61.94122615028123]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_a7d1491e632a2ef618625922099d8ef3.bindTooltip(
+                `<div>
+                     River: Tributary C | Risk: 0.44
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_55404c1ec324bd436013ac01b71e88a9 = L.polyline(
+                [[48.997911766300675, 62.34638494162706], [48.981744505432886, 62.30511742600753]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_55404c1ec324bd436013ac01b71e88a9.bindTooltip(
+                `<div>
+                     River: Tributary D | Risk: 0.54
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_69c3e10798c0d8ea4f55496350079e68 = L.polyline(
+                [[48.981744505432886, 62.30511742600753], [49.00953607685202, 62.34347578906933]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_69c3e10798c0d8ea4f55496350079e68.bindTooltip(
+                `<div>
+                     River: Tributary D | Risk: 0.67
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a570bd17214acf07f8c3cbd8a8041105 = L.polyline(
+                [[49.00953607685202, 62.34347578906933], [49.05388822420313, 62.36906434166114]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_a570bd17214acf07f8c3cbd8a8041105.bindTooltip(
+                `<div>
+                     River: Tributary D | Risk: 0.49
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_dad30fb963a2cd9624a0fe346477d7b1 = L.polyline(
+                [[49.05388822420313, 62.36906434166114], [49.00520611047709, 62.41019190893942]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_dad30fb963a2cd9624a0fe346477d7b1.bindTooltip(
+                `<div>
+                     River: Tributary D | Risk: 0.51
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a13c2523bf6a7001a39332687b152fda = L.polyline(
+                [[49.00520611047709, 62.41019190893942], [49.01596015338269, 62.380409076464495]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_62fa066e721dbeeaf7e3952278140478);
+        
+    
+            poly_line_a13c2523bf6a7001a39332687b152fda.bindTooltip(
+                `<div>
+                     River: Tributary D | Risk: 0.71
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

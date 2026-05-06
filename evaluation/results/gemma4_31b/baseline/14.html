@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f20787f2340e9778e85d6c2b134055a0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f20787f2340e9778e85d6c2b134055a0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f20787f2340e9778e85d6c2b134055a0 = L.map(
+                "map_f20787f2340e9778e85d6c2b134055a0",
+                {
+                    center: [53.475, 30.155],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e9f2b8d93449d33e04dcfb053d88e647 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e9f2b8d93449d33e04dcfb053d88e647.addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+            var poly_line_dfc7ed8847ef992eb58754da5bfdb037 = L.polyline(
+                [[53.45, 30.12], [53.455, 30.135], [53.462, 30.15], [53.47, 30.16], [53.485, 30.175], [53.5, 30.19]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+            poly_line_dfc7ed8847ef992eb58754da5bfdb037.bindTooltip(
+                `<div>
+                     Batareyka River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b54ee12006a076ed892cbcc5e7cf4e7 = L.circleMarker(
+                [53.45, 30.12],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+        var popup_cd55ac152776e7b295f5bfdb6b1de254 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8da8c90a313cdf5945c38ab65b82c0fe = $(`<div id="html_8da8c90a313cdf5945c38ab65b82c0fe" style="width: 100.0%; height: 100.0%;">Sensor ID: SN-01<br>Status: Online<br>Value: 1.2m<br>Health: OK</div>`)[0];
+                popup_cd55ac152776e7b295f5bfdb6b1de254.setContent(html_8da8c90a313cdf5945c38ab65b82c0fe);
+            
+        
+
+        circle_marker_6b54ee12006a076ed892cbcc5e7cf4e7.bindPopup(popup_cd55ac152776e7b295f5bfdb6b1de254)
+        ;
+
+        
+    
+    
+            var circle_marker_d678fd0eeb6c98c5a06cb7a4e974ea65 = L.circleMarker(
+                [53.455, 30.135],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+        var popup_b0e131e774efc8dd1226f66f96648983 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_01262388edaeadbafebf2d12b6d08dc2 = $(`<div id="html_01262388edaeadbafebf2d12b6d08dc2" style="width: 100.0%; height: 100.0%;">Sensor ID: SN-02<br>Status: Online<br>Value: -0.5m<br>Health: Warning</div>`)[0];
+                popup_b0e131e774efc8dd1226f66f96648983.setContent(html_01262388edaeadbafebf2d12b6d08dc2);
+            
+        
+
+        circle_marker_d678fd0eeb6c98c5a06cb7a4e974ea65.bindPopup(popup_b0e131e774efc8dd1226f66f96648983)
+        ;
+
+        
+    
+    
+            var circle_marker_37761fa6c1aa93fbca51bf606e039713 = L.circleMarker(
+                [53.462, 30.15],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+        var popup_d2f0421ec3e77404aac0b4a6427e80bc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_031f459cbee4916c17a492206b0986a9 = $(`<div id="html_031f459cbee4916c17a492206b0986a9" style="width: 100.0%; height: 100.0%;">Sensor ID: SN-03<br>Status: Offline<br>Value: Nonem<br>Health: Critical</div>`)[0];
+                popup_d2f0421ec3e77404aac0b4a6427e80bc.setContent(html_031f459cbee4916c17a492206b0986a9);
+            
+        
+
+        circle_marker_37761fa6c1aa93fbca51bf606e039713.bindPopup(popup_d2f0421ec3e77404aac0b4a6427e80bc)
+        ;
+
+        
+    
+    
+            var circle_marker_a3f66b801a7701f83615210470f5b480 = L.circleMarker(
+                [53.47, 30.16],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+        var popup_a8f1335f5fe784c591932e12019c5450 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9887214ae33a1072117ba3af4bf8eb86 = $(`<div id="html_9887214ae33a1072117ba3af4bf8eb86" style="width: 100.0%; height: 100.0%;">Sensor ID: SN-04<br>Status: Online<br>Value: 1.1m<br>Health: OK</div>`)[0];
+                popup_a8f1335f5fe784c591932e12019c5450.setContent(html_9887214ae33a1072117ba3af4bf8eb86);
+            
+        
+
+        circle_marker_a3f66b801a7701f83615210470f5b480.bindPopup(popup_a8f1335f5fe784c591932e12019c5450)
+        ;
+
+        
+    
+    
+            var circle_marker_2d175fec7f8f0a92e311a220651537a6 = L.circleMarker(
+                [53.485, 30.175],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+        var popup_c4a7af96f2ac474d38266487dacec326 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bde25a81d9830bd1add3fc71b38967c2 = $(`<div id="html_bde25a81d9830bd1add3fc71b38967c2" style="width: 100.0%; height: 100.0%;">Sensor ID: SN-05<br>Status: Online<br>Value: 5.8m<br>Health: Warning</div>`)[0];
+                popup_c4a7af96f2ac474d38266487dacec326.setContent(html_bde25a81d9830bd1add3fc71b38967c2);
+            
+        
+
+        circle_marker_2d175fec7f8f0a92e311a220651537a6.bindPopup(popup_c4a7af96f2ac474d38266487dacec326)
+        ;
+
+        
+    
+    
+            var circle_marker_4b5bfa22d1579c86dc774a82105f5ba3 = L.circleMarker(
+                [53.5, 30.19],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_f20787f2340e9778e85d6c2b134055a0);
+        
+    
+        var popup_ce2c39887935208ea28f52401c324504 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0ed4d120cb53331cf35b6c5fabdef7cc = $(`<div id="html_0ed4d120cb53331cf35b6c5fabdef7cc" style="width: 100.0%; height: 100.0%;">Sensor ID: SN-06<br>Status: Online<br>Value: 1.3m<br>Health: OK</div>`)[0];
+                popup_ce2c39887935208ea28f52401c324504.setContent(html_0ed4d120cb53331cf35b6c5fabdef7cc);
+            
+        
+
+        circle_marker_4b5bfa22d1579c86dc774a82105f5ba3.bindPopup(popup_ce2c39887935208ea28f52401c324504)
+        ;
+
+        
+    
+</script>
+</html>

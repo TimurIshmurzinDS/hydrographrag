@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_82212bd45a8a3bd73d4186ebdc303fa7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_82212bd45a8a3bd73d4186ebdc303fa7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_82212bd45a8a3bd73d4186ebdc303fa7 = L.map(
+                "map_82212bd45a8a3bd73d4186ebdc303fa7",
+                {
+                    center: [47.163000000000004, 45.500166666666665],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_03071ad25ace1fe381c2c816fad2363b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_03071ad25ace1fe381c2c816fad2363b.addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+            var poly_line_910c7a475870db0e00fd19b68f374a1b = L.polyline(
+                [[47.123, 45.456], [47.135, 45.47], [47.15, 45.485], [47.17, 45.51], [47.19, 45.53], [47.21, 45.55]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+            poly_line_910c7a475870db0e00fd19b68f374a1b.bindTooltip(
+                `<div>
+                     Kumbel River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_12e421237aca8b6490581ae65e640c92 = L.polygon(
+                [[47.123, 45.456], [47.16061732461229, 45.49615830236556], [47.17261732461229, 45.510158302365554], [47.135, 45.47]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+        var popup_6555a9a69a09e424cda73238889c4571 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_658e123c2708680a454340b9b9f258a4 = $(`<div id="html_658e123c2708680a454340b9b9f258a4" style="width: 100.0%; height: 100.0%;">Flood Zone ID: 2a63b901</div>`)[0];
+                popup_6555a9a69a09e424cda73238889c4571.setContent(html_658e123c2708680a454340b9b9f258a4);
+            
+        
+
+        polygon_12e421237aca8b6490581ae65e640c92.bindPopup(popup_6555a9a69a09e424cda73238889c4571)
+        ;
+
+        
+    
+    
+            var polygon_f9af671780d0348a67c41ffa486e41e9 = L.polygon(
+                [[47.135, 45.47], [47.162672335038856, 45.51040638979204], [47.17767233503886, 45.52540638979204], [47.15, 45.485]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+        var popup_4d23cf710df394829359060ae6b9a79e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12357c30565a5ac0df26e6cfe9e39c62 = $(`<div id="html_12357c30565a5ac0df26e6cfe9e39c62" style="width: 100.0%; height: 100.0%;">Flood Zone ID: 2a63b901</div>`)[0];
+                popup_4d23cf710df394829359060ae6b9a79e.setContent(html_12357c30565a5ac0df26e6cfe9e39c62);
+            
+        
+
+        polygon_f9af671780d0348a67c41ffa486e41e9.bindPopup(popup_4d23cf710df394829359060ae6b9a79e)
+        ;
+
+        
+    
+    
+            var polygon_9febc7e8779ed2d4689938376d5f8a79 = L.polygon(
+                [[47.15, 45.485], [47.18887128032176, 45.50224102546897], [47.208871280321766, 45.52724102546897], [47.17, 45.51]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+        var popup_93a35e716148fe30e7170ccfa3f2908a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58548b30de487e78996dc1e3a2266568 = $(`<div id="html_58548b30de487e78996dc1e3a2266568" style="width: 100.0%; height: 100.0%;">Flood Zone ID: 2a63b901</div>`)[0];
+                popup_93a35e716148fe30e7170ccfa3f2908a.setContent(html_58548b30de487e78996dc1e3a2266568);
+            
+        
+
+        polygon_9febc7e8779ed2d4689938376d5f8a79.bindPopup(popup_93a35e716148fe30e7170ccfa3f2908a)
+        ;
+
+        
+    
+    
+            var polygon_30e5a0568dc863656a19de083dc4931a = L.polygon(
+                [[47.17, 45.51], [47.20711975430992, 45.5537996954704], [47.22711975430992, 45.573799695470406], [47.19, 45.53]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+        var popup_f70834d6b746ca512af4ba7f166b6ba3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26131ae8380411aa96cef2cde9799a29 = $(`<div id="html_26131ae8380411aa96cef2cde9799a29" style="width: 100.0%; height: 100.0%;">Flood Zone ID: 2a63b901</div>`)[0];
+                popup_f70834d6b746ca512af4ba7f166b6ba3.setContent(html_26131ae8380411aa96cef2cde9799a29);
+            
+        
+
+        polygon_30e5a0568dc863656a19de083dc4931a.bindPopup(popup_f70834d6b746ca512af4ba7f166b6ba3)
+        ;
+
+        
+    
+    
+            var polygon_48ca05d27985431b0c6f93088c65613f = L.polygon(
+                [[47.19, 45.53], [47.20328336404034, 45.564524202913304], [47.22328336404034, 45.5845242029133], [47.21, 45.55]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+        var popup_36bf8f126fb3288ed9403a512f198c37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f9463671fbe3a779589c337071273fd = $(`<div id="html_7f9463671fbe3a779589c337071273fd" style="width: 100.0%; height: 100.0%;">Flood Zone ID: 2a63b901</div>`)[0];
+                popup_36bf8f126fb3288ed9403a512f198c37.setContent(html_7f9463671fbe3a779589c337071273fd);
+            
+        
+
+        polygon_48ca05d27985431b0c6f93088c65613f.bindPopup(popup_36bf8f126fb3288ed9403a512f198c37)
+        ;
+
+        
+    
+    
+            var marker_938208238d09d07f26861ae3d388f735 = L.marker(
+                [47.163000000000004, 45.500166666666665],
+                {
+}
+            ).addTo(map_82212bd45a8a3bd73d4186ebdc303fa7);
+        
+    
+            var icon_07dafbc7ac2996afd41f069aa1c2db53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gold",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92a17ff44223732e5abc48e6cecc3f21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38786025d5a32effd9d2b5432b802c5f = $(`<div id="html_38786025d5a32effd9d2b5432b802c5f" style="width: 100.0%; height: 100.0%;">NFT Asset: 2a63b901ba89...<br>Event: Kumbel Flood</div>`)[0];
+                popup_92a17ff44223732e5abc48e6cecc3f21.setContent(html_38786025d5a32effd9d2b5432b802c5f);
+            
+        
+
+        marker_938208238d09d07f26861ae3d388f735.bindPopup(popup_92a17ff44223732e5abc48e6cecc3f21)
+        ;
+
+        
+    
+    
+                marker_938208238d09d07f26861ae3d388f735.setIcon(icon_07dafbc7ac2996afd41f069aa1c2db53);
+            
+</script>
+</html>

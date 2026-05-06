@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f3ee4200c382d64c1e62969e127bfd72 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f3ee4200c382d64c1e62969e127bfd72" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f3ee4200c382d64c1e62969e127bfd72 = L.map(
+                "map_f3ee4200c382d64c1e62969e127bfd72",
+                {
+                    center: [50.45, 30.52],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_add06e348af7cac45ad5dd5b0a6dc47c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_add06e348af7cac45ad5dd5b0a6dc47c.addTo(map_f3ee4200c382d64c1e62969e127bfd72);
+        
+    
+            var marker_a8a0cab8c7734c2784ad715c98fffae6 = L.marker(
+                [50.45, 30.52],
+                {
+}
+            ).addTo(map_f3ee4200c382d64c1e62969e127bfd72);
+        
+    
+            var icon_8a88c9132545e6c3dfaf636f47b95599 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ccab12e52fb846197d330b854856024e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc203b0c86a03707c7a088f1944927c9 = $(`<div id="html_bc203b0c86a03707c7a088f1944927c9" style="width: 100.0%; height: 100.0%;">Дата: 2018-01-01 00:00:00 Длительность снеготаяния: 73 дней Уровень воды: 10 м</div>`)[0];
+                popup_ccab12e52fb846197d330b854856024e.setContent(html_bc203b0c86a03707c7a088f1944927c9);
+            
+        
+
+        marker_a8a0cab8c7734c2784ad715c98fffae6.bindPopup(popup_ccab12e52fb846197d330b854856024e)
+        ;
+
+        
+    
+    
+                marker_a8a0cab8c7734c2784ad715c98fffae6.setIcon(icon_8a88c9132545e6c3dfaf636f47b95599);
+            
+    
+            var marker_2b81356b7f653c2f42c73301e7e879d2 = L.marker(
+                [50.45, 30.52],
+                {
+}
+            ).addTo(map_f3ee4200c382d64c1e62969e127bfd72);
+        
+    
+            var icon_fd17ee7cb2dc50d2cf13bb4c5420e288 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0f3926ac4e57e074400cca75f802032 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6737c727654c86e771a708fa172ade0a = $(`<div id="html_6737c727654c86e771a708fa172ade0a" style="width: 100.0%; height: 100.0%;">Дата: 2019-01-01 00:00:00 Длительность снеготаяния: 68 дней Уровень воды: 12 м</div>`)[0];
+                popup_e0f3926ac4e57e074400cca75f802032.setContent(html_6737c727654c86e771a708fa172ade0a);
+            
+        
+
+        marker_2b81356b7f653c2f42c73301e7e879d2.bindPopup(popup_e0f3926ac4e57e074400cca75f802032)
+        ;
+
+        
+    
+    
+                marker_2b81356b7f653c2f42c73301e7e879d2.setIcon(icon_fd17ee7cb2dc50d2cf13bb4c5420e288);
+            
+    
+            var marker_1f8bcdafe218326ff7e4715260bd1878 = L.marker(
+                [50.45, 30.52],
+                {
+}
+            ).addTo(map_f3ee4200c382d64c1e62969e127bfd72);
+        
+    
+            var icon_7f301d55200e00baa3652c5526d6578e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_085e56c9127bf9bd0ce162ad0b184ff3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d70dbae4e012bec91c924c90fb44ef6a = $(`<div id="html_d70dbae4e012bec91c924c90fb44ef6a" style="width: 100.0%; height: 100.0%;">Дата: 2020-01-01 00:00:00 Длительность снеготаяния: 79 дней Уровень воды: 14 м</div>`)[0];
+                popup_085e56c9127bf9bd0ce162ad0b184ff3.setContent(html_d70dbae4e012bec91c924c90fb44ef6a);
+            
+        
+
+        marker_1f8bcdafe218326ff7e4715260bd1878.bindPopup(popup_085e56c9127bf9bd0ce162ad0b184ff3)
+        ;
+
+        
+    
+    
+                marker_1f8bcdafe218326ff7e4715260bd1878.setIcon(icon_7f301d55200e00baa3652c5526d6578e);
+            
+    
+            var marker_660eef58b15fa167abc8d35fc5dd7698 = L.marker(
+                [50.45, 30.52],
+                {
+}
+            ).addTo(map_f3ee4200c382d64c1e62969e127bfd72);
+        
+    
+            var icon_9fb6fc1f3eefc3ea94df8929a4bc64b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_769574d2b179628005b28a580a97a015 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_688dad51de3b37e696331202f827fbdf = $(`<div id="html_688dad51de3b37e696331202f827fbdf" style="width: 100.0%; height: 100.0%;">Дата: 2021-01-01 00:00:00 Длительность снеготаяния: 76 дней Уровень воды: 16 м</div>`)[0];
+                popup_769574d2b179628005b28a580a97a015.setContent(html_688dad51de3b37e696331202f827fbdf);
+            
+        
+
+        marker_660eef58b15fa167abc8d35fc5dd7698.bindPopup(popup_769574d2b179628005b28a580a97a015)
+        ;
+
+        
+    
+    
+                marker_660eef58b15fa167abc8d35fc5dd7698.setIcon(icon_9fb6fc1f3eefc3ea94df8929a4bc64b6);
+            
+</script>
+</html>

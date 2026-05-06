@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1c2c80642e128f8e9fdf351cf9eae159 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1c2c80642e128f8e9fdf351cf9eae159" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1c2c80642e128f8e9fdf351cf9eae159 = L.map(
+                "map_1c2c80642e128f8e9fdf351cf9eae159",
+                {
+                    center: [50.0, 10.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c8a7aee64fee20ebde6e13c7d9511179 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c8a7aee64fee20ebde6e13c7d9511179.addTo(map_1c2c80642e128f8e9fdf351cf9eae159);
+        
+    
+            var marker_935305b719afdff591787723f49b53e3 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_1c2c80642e128f8e9fdf351cf9eae159);
+        
+    
+            var icon_5b84c249bc21cde2f1217256ee369aa4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9059c3742a5c1bb094d15b93423a8254 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae07953738f885fe8ae34cf54a121d2c = $(`<div id="html_ae07953738f885fe8ae34cf54a121d2c" style="width: 100.0%; height: 100.0%;">Tekes River: 50 m³/s</div>`)[0];
+                popup_9059c3742a5c1bb094d15b93423a8254.setContent(html_ae07953738f885fe8ae34cf54a121d2c);
+            
+        
+
+        marker_935305b719afdff591787723f49b53e3.bindPopup(popup_9059c3742a5c1bb094d15b93423a8254)
+        ;
+
+        
+    
+    
+                marker_935305b719afdff591787723f49b53e3.setIcon(icon_5b84c249bc21cde2f1217256ee369aa4);
+            
+    
+            var marker_0fee7aa4384cd096b81864ecfd6a6e40 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_1c2c80642e128f8e9fdf351cf9eae159);
+        
+    
+            var icon_55ce7f0f4dec932945e2a0bd1ee97dc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fce380d515d6ba79c9c361dfb5b1190b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7144b09bf6f62c34c56edf6222299827 = $(`<div id="html_7144b09bf6f62c34c56edf6222299827" style="width: 100.0%; height: 100.0%;">Tekes River: 60 m³/s</div>`)[0];
+                popup_fce380d515d6ba79c9c361dfb5b1190b.setContent(html_7144b09bf6f62c34c56edf6222299827);
+            
+        
+
+        marker_0fee7aa4384cd096b81864ecfd6a6e40.bindPopup(popup_fce380d515d6ba79c9c361dfb5b1190b)
+        ;
+
+        
+    
+    
+                marker_0fee7aa4384cd096b81864ecfd6a6e40.setIcon(icon_55ce7f0f4dec932945e2a0bd1ee97dc7);
+            
+    
+            var marker_08e852b64ed3960796502ead301be2ca = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_1c2c80642e128f8e9fdf351cf9eae159);
+        
+    
+            var icon_e56ab1813dc9c4d86ef6b85d0c71efc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6e6d0ea27515f113a6f2dbd815b8578 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f5ce5912093cace1fe941c20c65fcfd = $(`<div id="html_6f5ce5912093cace1fe941c20c65fcfd" style="width: 100.0%; height: 100.0%;">Tekes River: 70 m³/s</div>`)[0];
+                popup_a6e6d0ea27515f113a6f2dbd815b8578.setContent(html_6f5ce5912093cace1fe941c20c65fcfd);
+            
+        
+
+        marker_08e852b64ed3960796502ead301be2ca.bindPopup(popup_a6e6d0ea27515f113a6f2dbd815b8578)
+        ;
+
+        
+    
+    
+                marker_08e852b64ed3960796502ead301be2ca.setIcon(icon_e56ab1813dc9c4d86ef6b85d0c71efc7);
+            
+    
+            var marker_30f6903bbd2cc132dbafef9c31736e09 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_1c2c80642e128f8e9fdf351cf9eae159);
+        
+    
+            var icon_84cc66c1bd8c6f49b81035c7ce86273f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22cd02f403cf4b88c0b6d7b66a42318f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e94c2be7162975c5c3bbf16a4d4d0e9b = $(`<div id="html_e94c2be7162975c5c3bbf16a4d4d0e9b" style="width: 100.0%; height: 100.0%;">Bayankol River: 40 m³/s</div>`)[0];
+                popup_22cd02f403cf4b88c0b6d7b66a42318f.setContent(html_e94c2be7162975c5c3bbf16a4d4d0e9b);
+            
+        
+
+        marker_30f6903bbd2cc132dbafef9c31736e09.bindPopup(popup_22cd02f403cf4b88c0b6d7b66a42318f)
+        ;
+
+        
+    
+    
+                marker_30f6903bbd2cc132dbafef9c31736e09.setIcon(icon_84cc66c1bd8c6f49b81035c7ce86273f);
+            
+    
+            var marker_f201baaafcf2ffe0f96bfa7e30ced783 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_1c2c80642e128f8e9fdf351cf9eae159);
+        
+    
+            var icon_7a82ca2b6f04dab4791a45982deea70a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_166d64b956cb9dd70f5e4738cdbccf8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00caa71e31563130ccf7d72f74c87e6b = $(`<div id="html_00caa71e31563130ccf7d72f74c87e6b" style="width: 100.0%; height: 100.0%;">Bayankol River: 50 m³/s</div>`)[0];
+                popup_166d64b956cb9dd70f5e4738cdbccf8d.setContent(html_00caa71e31563130ccf7d72f74c87e6b);
+            
+        
+
+        marker_f201baaafcf2ffe0f96bfa7e30ced783.bindPopup(popup_166d64b956cb9dd70f5e4738cdbccf8d)
+        ;
+
+        
+    
+    
+                marker_f201baaafcf2ffe0f96bfa7e30ced783.setIcon(icon_7a82ca2b6f04dab4791a45982deea70a);
+            
+    
+            var marker_71e14527fe9cfca82bffbd55c2f52420 = L.marker(
+                [50.0, 10.0],
+                {
+}
+            ).addTo(map_1c2c80642e128f8e9fdf351cf9eae159);
+        
+    
+            var icon_e7adda5d0e317e18998a6b3ce9837393 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f4cff7e0e48d7e75c08f196056b106c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e8dc9fd18dd343143692272888aa65c = $(`<div id="html_5e8dc9fd18dd343143692272888aa65c" style="width: 100.0%; height: 100.0%;">Bayankol River: 60 m³/s</div>`)[0];
+                popup_4f4cff7e0e48d7e75c08f196056b106c.setContent(html_5e8dc9fd18dd343143692272888aa65c);
+            
+        
+
+        marker_71e14527fe9cfca82bffbd55c2f52420.bindPopup(popup_4f4cff7e0e48d7e75c08f196056b106c)
+        ;
+
+        
+    
+    
+                marker_71e14527fe9cfca82bffbd55c2f52420.setIcon(icon_e7adda5d0e317e18998a6b3ce9837393);
+            
+</script>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e9aa5cc99b29fe156dcb3a2812fb34f1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e9aa5cc99b29fe156dcb3a2812fb34f1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e9aa5cc99b29fe156dcb3a2812fb34f1 = L.map(
+                "map_e9aa5cc99b29fe156dcb3a2812fb34f1",
+                {
+                    center: [50.1364, 8.7099],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7dcb5ddbbd202c9577bd063fb9731ce3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7dcb5ddbbd202c9577bd063fb9731ce3.addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var marker_96d34243793ffc91922212432ab656fd = L.marker(
+                [50.13117978992753, 8.716783215371755],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_fa57bc0c41d165f3dad523fe0a82d84f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56a701d807c6a114ac6e8e09a1ad4297 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12eee9f044f0b9d8b3efdc584581a73f = $(`<div id="html_12eee9f044f0b9d8b3efdc584581a73f" style="width: 100.0%; height: 100.0%;">Уровень воды: 100.0, Состояние экосистемы: 0.8</div>`)[0];
+                popup_56a701d807c6a114ac6e8e09a1ad4297.setContent(html_12eee9f044f0b9d8b3efdc584581a73f);
+            
+        
+
+        marker_96d34243793ffc91922212432ab656fd.bindPopup(popup_56a701d807c6a114ac6e8e09a1ad4297)
+        ;
+
+        
+    
+    
+                marker_96d34243793ffc91922212432ab656fd.setIcon(icon_fa57bc0c41d165f3dad523fe0a82d84f);
+            
+    
+            var marker_38ddcf18deed1ee3de45c0059ad1af03 = L.marker(
+                [50.145369202975026, 8.705870991608649],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_59fcb228045a04862ebf407a5a86eddb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_305f20c1a2324d3ffda8afc7cfa15d44 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89aba165279286f4910df129ba42993b = $(`<div id="html_89aba165279286f4910df129ba42993b" style="width: 100.0%; height: 100.0%;">Уровень воды: 105.0, Состояние экосистемы: 0.7</div>`)[0];
+                popup_305f20c1a2324d3ffda8afc7cfa15d44.setContent(html_89aba165279286f4910df129ba42993b);
+            
+        
+
+        marker_38ddcf18deed1ee3de45c0059ad1af03.bindPopup(popup_305f20c1a2324d3ffda8afc7cfa15d44)
+        ;
+
+        
+    
+    
+                marker_38ddcf18deed1ee3de45c0059ad1af03.setIcon(icon_59fcb228045a04862ebf407a5a86eddb);
+            
+    
+            var marker_1f58de9f17ade119876b53f6b40d3991 = L.marker(
+                [50.13674239994977, 8.700260051007362],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_4a0d373df478301bf28a0d3b7b045943 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8196b9be5b491562cf62cf95ff9ed26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94eef70ec2aa0a457a8256d629808958 = $(`<div id="html_94eef70ec2aa0a457a8256d629808958" style="width: 100.0%; height: 100.0%;">Уровень воды: 110.0, Состояние экосистемы: 0.6</div>`)[0];
+                popup_f8196b9be5b491562cf62cf95ff9ed26.setContent(html_94eef70ec2aa0a457a8256d629808958);
+            
+        
+
+        marker_1f58de9f17ade119876b53f6b40d3991.bindPopup(popup_f8196b9be5b491562cf62cf95ff9ed26)
+        ;
+
+        
+    
+    
+                marker_1f58de9f17ade119876b53f6b40d3991.setIcon(icon_4a0d373df478301bf28a0d3b7b045943);
+            
+    
+            var marker_6cf797fab591b17bc6403c58d6d14cb6 = L.marker(
+                [50.14191261784353, 8.708035657534063],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_7108d4c10b3b0b558891f2e715791a8f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97ef8b90d092e784054abc45e148b10c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d414fdbe6856c8b0ffd2477c33b61240 = $(`<div id="html_d414fdbe6856c8b0ffd2477c33b61240" style="width: 100.0%; height: 100.0%;">Уровень воды: 115.0, Состояние экосистемы: 0.5</div>`)[0];
+                popup_97ef8b90d092e784054abc45e148b10c.setContent(html_d414fdbe6856c8b0ffd2477c33b61240);
+            
+        
+
+        marker_6cf797fab591b17bc6403c58d6d14cb6.bindPopup(popup_97ef8b90d092e784054abc45e148b10c)
+        ;
+
+        
+    
+    
+                marker_6cf797fab591b17bc6403c58d6d14cb6.setIcon(icon_7108d4c10b3b0b558891f2e715791a8f);
+            
+    
+            var marker_d30a1ea43b72b3c867dd204f9010129e = L.marker(
+                [50.13221966731089, 8.71434982137548],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_1e7981eea23b9a44c3bcc37cd5d94527 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14cbc5406e861b1e4c576e7d67266362 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_540673dc6966fe681918d1bc7de1b09b = $(`<div id="html_540673dc6966fe681918d1bc7de1b09b" style="width: 100.0%; height: 100.0%;">Уровень воды: 120.0, Состояние экосистемы: 0.4</div>`)[0];
+                popup_14cbc5406e861b1e4c576e7d67266362.setContent(html_540673dc6966fe681918d1bc7de1b09b);
+            
+        
+
+        marker_d30a1ea43b72b3c867dd204f9010129e.bindPopup(popup_14cbc5406e861b1e4c576e7d67266362)
+        ;
+
+        
+    
+    
+                marker_d30a1ea43b72b3c867dd204f9010129e.setIcon(icon_1e7981eea23b9a44c3bcc37cd5d94527);
+            
+    
+            var marker_22f6df214e80c06dbcf8376bd3e48337 = L.marker(
+                [50.12910771814286, 8.699990011274574],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_e570f0a41ef822cb7e19c0f8b464fc1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6a364c35b2874266d36e36c4a798d5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4cae9be2a2fc97ed01a56fbe10ff9c9 = $(`<div id="html_f4cae9be2a2fc97ed01a56fbe10ff9c9" style="width: 100.0%; height: 100.0%;">Уровень воды: 125.0, Состояние экосистемы: 0.3</div>`)[0];
+                popup_f6a364c35b2874266d36e36c4a798d5c.setContent(html_f4cae9be2a2fc97ed01a56fbe10ff9c9);
+            
+        
+
+        marker_22f6df214e80c06dbcf8376bd3e48337.bindPopup(popup_f6a364c35b2874266d36e36c4a798d5c)
+        ;
+
+        
+    
+    
+                marker_22f6df214e80c06dbcf8376bd3e48337.setIcon(icon_e570f0a41ef822cb7e19c0f8b464fc1d);
+            
+    
+            var marker_86692360f5f25773c1da4e1aa1d8c0af = L.marker(
+                [50.13209423417529, 8.71612606085515],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_a9a09fe9bf9ce862b357c54a0adfe608 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5002f2364d437fcf4fd0be0fa95e1b61 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe8f4606714b2ccae0ac13502dca54eb = $(`<div id="html_fe8f4606714b2ccae0ac13502dca54eb" style="width: 100.0%; height: 100.0%;">Уровень воды: 130.0, Состояние экосистемы: 0.2</div>`)[0];
+                popup_5002f2364d437fcf4fd0be0fa95e1b61.setContent(html_fe8f4606714b2ccae0ac13502dca54eb);
+            
+        
+
+        marker_86692360f5f25773c1da4e1aa1d8c0af.bindPopup(popup_5002f2364d437fcf4fd0be0fa95e1b61)
+        ;
+
+        
+    
+    
+                marker_86692360f5f25773c1da4e1aa1d8c0af.setIcon(icon_a9a09fe9bf9ce862b357c54a0adfe608);
+            
+    
+            var marker_9f06bb3579d0be64fa883618390ac04b = L.marker(
+                [50.12711259393805, 8.712357453317807],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_08a6f2d416270e0e13aced7ba48e8fd2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3efe08e2be1e3c1366d92d6904817d8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90219e8a677cea5adf67373195dfe712 = $(`<div id="html_90219e8a677cea5adf67373195dfe712" style="width: 100.0%; height: 100.0%;">Уровень воды: 135.0, Состояние экосистемы: 0.1</div>`)[0];
+                popup_3efe08e2be1e3c1366d92d6904817d8e.setContent(html_90219e8a677cea5adf67373195dfe712);
+            
+        
+
+        marker_9f06bb3579d0be64fa883618390ac04b.bindPopup(popup_3efe08e2be1e3c1366d92d6904817d8e)
+        ;
+
+        
+    
+    
+                marker_9f06bb3579d0be64fa883618390ac04b.setIcon(icon_08a6f2d416270e0e13aced7ba48e8fd2);
+            
+    
+            var marker_cb0993bd07d7f2c998e3a097bbe991fe = L.marker(
+                [50.142861494371196, 8.712253206137428],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_0d629b149967b7fe9557a49f1a94ffe2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_039c0ba9fe9ec9bc58dab91557b169f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd6b82b59f130f56419f01a439194700 = $(`<div id="html_fd6b82b59f130f56419f01a439194700" style="width: 100.0%; height: 100.0%;">Уровень воды: 140.0, Состояние экосистемы: 0.0</div>`)[0];
+                popup_039c0ba9fe9ec9bc58dab91557b169f6.setContent(html_fd6b82b59f130f56419f01a439194700);
+            
+        
+
+        marker_cb0993bd07d7f2c998e3a097bbe991fe.bindPopup(popup_039c0ba9fe9ec9bc58dab91557b169f6)
+        ;
+
+        
+    
+    
+                marker_cb0993bd07d7f2c998e3a097bbe991fe.setIcon(icon_0d629b149967b7fe9557a49f1a94ffe2);
+            
+    
+            var marker_885b942d26fd5c1a061520462f23ca12 = L.marker(
+                [50.12901488512945, 8.70088772732154],
+                {
+}
+            ).addTo(map_e9aa5cc99b29fe156dcb3a2812fb34f1);
+        
+    
+            var icon_8ec27c4fa3e3e5700bc97ade82a1816e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f06613a574860e167b187ba37efbe395 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a03dd00b0e7fb1be8c925a7fb0b4ba1 = $(`<div id="html_6a03dd00b0e7fb1be8c925a7fb0b4ba1" style="width: 100.0%; height: 100.0%;">Уровень воды: 145.0, Состояние экосистемы: -0.1</div>`)[0];
+                popup_f06613a574860e167b187ba37efbe395.setContent(html_6a03dd00b0e7fb1be8c925a7fb0b4ba1);
+            
+        
+
+        marker_885b942d26fd5c1a061520462f23ca12.bindPopup(popup_f06613a574860e167b187ba37efbe395)
+        ;
+
+        
+    
+    
+                marker_885b942d26fd5c1a061520462f23ca12.setIcon(icon_8ec27c4fa3e3e5700bc97ade82a1816e);
+            
+</script>
+</html>

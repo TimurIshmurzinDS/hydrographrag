@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_123bdf051693e4700d8b01c748b4e149 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Риск перелива:</b><br>
+     <i style="background:red;width:10px;height:10px;display:inline-block"></i> Высокий<br>
+     <i style="background:orange;width:10px;height:10px;display:inline-block"></i> Средний<br>
+     <i style="background:yellow;width:10px;height:10px;display:inline-block"></i> Низкий<br>
+     <i style="background:blue;width:10px;height:10px;display:inline-block"></i> Русло реки
+     </div>
+     
+    
+            <div class="folium-map" id="map_123bdf051693e4700d8b01c748b4e149" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_123bdf051693e4700d8b01c748b4e149 = L.map(
+                "map_123bdf051693e4700d8b01c748b4e149",
+                {
+                    center: [44.3, 78.7],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0e36062311dbbbe03ac31e6f5d53651b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0e36062311dbbbe03ac31e6f5d53651b.addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            var poly_line_e6fbab16b6656bc9eb1e3fbaef966ace = L.polyline(
+                [[78.5, 44.1], [78.7, 44.2], [78.9, 44.3], [79.1, 44.5], [79.3, 44.7]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_e6fbab16b6656bc9eb1e3fbaef966ace.bindTooltip(
+                `<div>
+                     Lepsy River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_37e3ba7c3860043d670928fabd71857a = L.polyline(
+                [[78.5, 44.1], [78.7, 44.2], [78.9, 44.3], [79.1, 44.5], [79.3, 44.7]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 100.0}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_37e3ba7c3860043d670928fabd71857a.bindTooltip(
+                `<div>
+                     Low Risk Zone - Lepsy River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bf7c87ef23dbec874edb0e7f97afb18c = L.polyline(
+                [[78.5, 44.1], [78.7, 44.2], [78.9, 44.3], [79.1, 44.5], [79.3, 44.7]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 50.0}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_bf7c87ef23dbec874edb0e7f97afb18c.bindTooltip(
+                `<div>
+                     Medium Risk Zone - Lepsy River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4ce1e42a8f1256c3bfc0cf704aec06d6 = L.polyline(
+                [[78.5, 44.1], [78.7, 44.2], [78.9, 44.3], [79.1, 44.5], [79.3, 44.7]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 20.0}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_4ce1e42a8f1256c3bfc0cf704aec06d6.bindTooltip(
+                `<div>
+                     High Risk Zone - Lepsy River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_68bab96848762d26ff4d85916cd2add9 = L.polyline(
+                [[78.2, 44.0], [78.3, 44.1], [78.4, 44.2], [78.5, 44.3], [78.6, 44.4]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_68bab96848762d26ff4d85916cd2add9.bindTooltip(
+                `<div>
+                     Shynzhaly River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4b3658b5c271778c7c092ed28843c570 = L.polyline(
+                [[78.2, 44.0], [78.3, 44.1], [78.4, 44.2], [78.5, 44.3], [78.6, 44.4]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 100.0}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_4b3658b5c271778c7c092ed28843c570.bindTooltip(
+                `<div>
+                     Low Risk Zone - Shynzhaly River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_67bddf61b854546b5fa8717aab11a580 = L.polyline(
+                [[78.2, 44.0], [78.3, 44.1], [78.4, 44.2], [78.5, 44.3], [78.6, 44.4]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 50.0}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_67bddf61b854546b5fa8717aab11a580.bindTooltip(
+                `<div>
+                     Medium Risk Zone - Shynzhaly River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f17bd4e96c249b7533aca436e1efb878 = L.polyline(
+                [[78.2, 44.0], [78.3, 44.1], [78.4, 44.2], [78.5, 44.3], [78.6, 44.4]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.4, "smoothFactor": 1.0, "stroke": true, "weight": 20.0}
+            ).addTo(map_123bdf051693e4700d8b01c748b4e149);
+        
+    
+            poly_line_f17bd4e96c249b7533aca436e1efb878.bindTooltip(
+                `<div>
+                     High Risk Zone - Shynzhaly River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

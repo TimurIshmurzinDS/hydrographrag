@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0758dbd099f3c3f20dc7882da6636619 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0758dbd099f3c3f20dc7882da6636619" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0758dbd099f3c3f20dc7882da6636619 = L.map(
+                "map_0758dbd099f3c3f20dc7882da6636619",
+                {
+                    center: [42.6, 77.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_61ef5836eb7f805d34f49499ad4c270b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_61ef5836eb7f805d34f49499ad4c270b.addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+            var circle_marker_17507647ccf4bd683d748e9bbc00fdb4 = L.circleMarker(
+                [42.449816047538945, 77.68028572256397],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_c2f63692ed23780080363c5e51dd5a28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6bb9a99e9e87ec438730c79fd4d7999 = $(`<div id="html_e6bb9a99e9e87ec438730c79fd4d7999" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.50</div>`)[0];
+                popup_c2f63692ed23780080363c5e51dd5a28.setContent(html_e6bb9a99e9e87ec438730c79fd4d7999);
+            
+        
+
+        circle_marker_17507647ccf4bd683d748e9bbc00fdb4.bindPopup(popup_c2f63692ed23780080363c5e51dd5a28)
+        ;
+
+        
+    
+    
+            var circle_marker_bc2fe8efd8e5976282df7e3c6a924110 = L.circleMarker(
+                [42.31572485593644, 77.61976415956362],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_3f1383b56230e236cbc821bf3465e0bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61cc875b1bf8838ae91c26ff9c6a8035 = $(`<div id="html_61cc875b1bf8838ae91c26ff9c6a8035" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 5.31</div>`)[0];
+                popup_3f1383b56230e236cbc821bf3465e0bd.setContent(html_61cc875b1bf8838ae91c26ff9c6a8035);
+            
+        
+
+        circle_marker_bc2fe8efd8e5976282df7e3c6a924110.bindPopup(popup_3f1383b56230e236cbc821bf3465e0bd)
+        ;
+
+        
+    
+    
+            var circle_marker_558a0295e6fc14a124a1b1612384c4f0 = L.circleMarker(
+                [42.6851968015436, 77.43674886641547],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_5702aeb5bfa93bbefc0abfcc8046d9b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b6e10c86c397cef092980478335f3fc = $(`<div id="html_7b6e10c86c397cef092980478335f3fc" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.08</div>`)[0];
+                popup_5702aeb5bfa93bbefc0abfcc8046d9b6.setContent(html_7b6e10c86c397cef092980478335f3fc);
+            
+        
+
+        circle_marker_558a0295e6fc14a124a1b1612384c4f0.bindPopup(popup_5702aeb5bfa93bbefc0abfcc8046d9b6)
+        ;
+
+        
+    
+    
+            var circle_marker_6de0daa0b37b2e3b16b4844dc570b7e5 = L.circleMarker(
+                [42.4837787073624, 77.61400661753483],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_0d1bc6f7973f0cbca4663ec790607f7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe7369cde3fde061227c2087cf64db10 = $(`<div id="html_fe7369cde3fde061227c2087cf64db10" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.67</div>`)[0];
+                popup_0d1bc6f7973f0cbca4663ec790607f7d.setContent(html_fe7369cde3fde061227c2087cf64db10);
+            
+        
+
+        circle_marker_6de0daa0b37b2e3b16b4844dc570b7e5.bindPopup(popup_0d1bc6f7973f0cbca4663ec790607f7d)
+        ;
+
+        
+    
+    
+            var circle_marker_a4cce7451059e0644700e8bbb690a032 = L.circleMarker(
+                [42.49440019751904, 77.53087995469382],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_7b5e685b69044e8b6c0698e6a3c7c438 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_114fe5ec8f4b9f6a818fe7d46e7e0502 = $(`<div id="html_114fe5ec8f4b9f6a818fe7d46e7e0502" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 5.09</div>`)[0];
+                popup_7b5e685b69044e8b6c0698e6a3c7c438.setContent(html_114fe5ec8f4b9f6a818fe7d46e7e0502);
+            
+        
+
+        circle_marker_a4cce7451059e0644700e8bbb690a032.bindPopup(popup_7b5e685b69044e8b6c0698e6a3c7c438)
+        ;
+
+        
+    
+    
+            var circle_marker_3138884f6bce1cb0784c3e0b641927f2 = L.circleMarker(
+                [42.31696891928276, 77.4061304550222],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_d6d6b9e6e0e0c9333d61a29955aa16b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2312f8b1d3392c4b626aad8ae045fcd = $(`<div id="html_c2312f8b1d3392c4b626aad8ae045fcd" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 3.98</div>`)[0];
+                popup_d6d6b9e6e0e0c9333d61a29955aa16b1.setContent(html_c2312f8b1d3392c4b626aad8ae045fcd);
+            
+        
+
+        circle_marker_3138884f6bce1cb0784c3e0b641927f2.bindPopup(popup_d6d6b9e6e0e0c9333d61a29955aa16b1)
+        ;
+
+        
+    
+    
+            var circle_marker_ce1761a5d562af13302fc4e2093b43cc = L.circleMarker(
+                [42.32680661510049, 77.69013725339163],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_ae03afef4c97b42cff37c995b9040f43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61bacc1ad452d0cbd613fdded9b6fb39 = $(`<div id="html_61bacc1ad452d0cbd613fdded9b6fb39" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 4.34</div>`)[0];
+                popup_ae03afef4c97b42cff37c995b9040f43.setContent(html_61bacc1ad452d0cbd613fdded9b6fb39);
+            
+        
+
+        circle_marker_ce1761a5d562af13302fc4e2093b43cc.bindPopup(popup_ae03afef4c97b42cff37c995b9040f43)
+        ;
+
+        
+    
+    
+            var circle_marker_6e19cfc20384d15a1463681cc5f089b2 = L.circleMarker(
+                [42.51925808109121, 77.36985887435853],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_3a6a5984160a5a0a8bb058f747356461 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dadf517599c28cb225d3d01b77f891d5 = $(`<div id="html_dadf517599c28cb225d3d01b77f891d5" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.02</div>`)[0];
+                popup_3a6a5984160a5a0a8bb058f747356461.setContent(html_dadf517599c28cb225d3d01b77f891d5);
+            
+        
+
+        circle_marker_6e19cfc20384d15a1463681cc5f089b2.bindPopup(popup_3a6a5984160a5a0a8bb058f747356461)
+        ;
+
+        
+    
+    
+            var circle_marker_450276d3c26bc26645a456b3d4cb8a1a = L.circleMarker(
+                [42.57880966640172, 77.44519313616155],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_fff2c9c24bae7309aa4b4f63f119a1ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d687427605b394e5e10896f18bfe7bd8 = $(`<div id="html_d687427605b394e5e10896f18bfe7bd8" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 3.08</div>`)[0];
+                popup_fff2c9c24bae7309aa4b4f63f119a1ac.setContent(html_d687427605b394e5e10896f18bfe7bd8);
+            
+        
+
+        circle_marker_450276d3c26bc26645a456b3d4cb8a1a.bindPopup(popup_fff2c9c24bae7309aa4b4f63f119a1ac)
+        ;
+
+        
+    
+    
+            var circle_marker_9b8b5f2a956cd91b6f176f876f92fb82 = L.circleMarker(
+                [42.49004334597274, 77.45442037426074],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_a9be936c5aeac9270d58fff445eb443c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9a0c61e545499708eb820405300a0c7 = $(`<div id="html_f9a0c61e545499708eb820405300a0c7" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.13</div>`)[0];
+                popup_a9be936c5aeac9270d58fff445eb443c.setContent(html_f9a0c61e545499708eb820405300a0c7);
+            
+        
+
+        circle_marker_9b8b5f2a956cd91b6f176f876f92fb82.bindPopup(popup_a9be936c5aeac9270d58fff445eb443c)
+        ;
+
+        
+    
+    
+            var circle_marker_3b157ae5bf28d58035678fc5a390ccc7 = L.circleMarker(
+                [42.62642270284573, 77.47282691402664],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_23b0442eea1a570f8a87b9a1a0c1fb1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6dbc0ee76b175f3c399bcc39b7d14ae6 = $(`<div id="html_6dbc0ee76b175f3c399bcc39b7d14ae6" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 0.13</div>`)[0];
+                popup_23b0442eea1a570f8a87b9a1a0c1fb1a.setContent(html_6dbc0ee76b175f3c399bcc39b7d14ae6);
+            
+        
+
+        circle_marker_3b157ae5bf28d58035678fc5a390ccc7.bindPopup(popup_23b0442eea1a570f8a87b9a1a0c1fb1a)
+        ;
+
+        
+    
+    
+            var circle_marker_a67c0bf66c41efe458a95f9d78db0907 = L.circleMarker(
+                [42.45422100059667, 77.66616648058668],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_bb4ae51f929175236d99bd7c52267951 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bcb67314c29d3ca0e42ee7aca5e59575 = $(`<div id="html_bcb67314c29d3ca0e42ee7aca5e59575" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.80</div>`)[0];
+                popup_bb4ae51f929175236d99bd7c52267951.setContent(html_bcb67314c29d3ca0e42ee7aca5e59575);
+            
+        
+
+        circle_marker_a67c0bf66c41efe458a95f9d78db0907.bindPopup(popup_bb4ae51f929175236d99bd7c52267951)
+        ;
+
+        
+    
+    
+            var circle_marker_effcc70cba0eba4750ab1364d3675f25 = L.circleMarker(
+                [42.44025707658286, 77.45072425110969],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_48200d041e8d79a2c6ab91e4593dbc24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80f4cb673cd5ef5381d4258e6d4d4301 = $(`<div id="html_80f4cb673cd5ef5381d4258e6d4d4301" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.60</div>`)[0];
+                popup_48200d041e8d79a2c6ab91e4593dbc24.setContent(html_80f4cb673cd5ef5381d4258e6d4d4301);
+            
+        
+
+        circle_marker_effcc70cba0eba4750ab1364d3675f25.bindPopup(popup_48200d041e8d79a2c6ab91e4593dbc24)
+        ;
+
+        
+    
+    
+            var circle_marker_1baaa3305dbc1fec5970b03f1050df62 = L.circleMarker(
+                [42.30334188166886, 77.36743961937361],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_8713df495007c49bff3ecb5788fc9395 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87d5ed11539915d802c288f404d1a0d9 = $(`<div id="html_87d5ed11539915d802c288f404d1a0d9" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.59</div>`)[0];
+                popup_8713df495007c49bff3ecb5788fc9395.setContent(html_87d5ed11539915d802c288f404d1a0d9);
+            
+        
+
+        circle_marker_1baaa3305dbc1fec5970b03f1050df62.bindPopup(popup_8713df495007c49bff3ecb5788fc9395)
+        ;
+
+        
+    
+    
+            var circle_marker_dacb190576c9a49224a28e325cce6061 = L.circleMarker(
+                [42.49237664323372, 77.45052472678199],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_a122315de0c0ebb5ec0624de36f366be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d175a297649d620886332c268234c14 = $(`<div id="html_4d175a297649d620886332c268234c14" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 4.40</div>`)[0];
+                popup_a122315de0c0ebb5ec0624de36f366be.setContent(html_4d175a297649d620886332c268234c14);
+            
+        
+
+        circle_marker_dacb190576c9a49224a28e325cce6061.bindPopup(popup_a122315de0c0ebb5ec0624de36f366be)
+        ;
+
+        
+    
+    
+            var circle_marker_786f28ccada75a026ca72e4fca05e1e5 = L.circleMarker(
+                [42.461524402099, 77.38589780096335],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_d2d6f458835c9c21716f459cfa8bd6ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_787e100cb926e9351024bea1ad1c881a = $(`<div id="html_787e100cb926e9351024bea1ad1c881a" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.10</div>`)[0];
+                popup_d2d6f458835c9c21716f459cfa8bd6ae.setContent(html_787e100cb926e9351024bea1ad1c881a);
+            
+        
+
+        circle_marker_786f28ccada75a026ca72e4fca05e1e5.bindPopup(popup_d2d6f458835c9c21716f459cfa8bd6ae)
+        ;
+
+        
+    
+    
+            var circle_marker_f21b96cfed6c659a74d537dbce4258ff = L.circleMarker(
+                [42.67737124290611, 77.33939785667177],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_0fe537202048a27a6079af5aaab5751c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea979b4e4c0d91d6a68aefa7be331b3d = $(`<div id="html_ea979b4e4c0d91d6a68aefa7be331b3d" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.29</div>`)[0];
+                popup_0fe537202048a27a6079af5aaab5751c.setContent(html_ea979b4e4c0d91d6a68aefa7be331b3d);
+            
+        
+
+        circle_marker_f21b96cfed6c659a74d537dbce4258ff.bindPopup(popup_0fe537202048a27a6079af5aaab5751c)
+        ;
+
+        
+    
+    
+            var circle_marker_175d12b45f5021fff20f056e7e7c7f7c = L.circleMarker(
+                [42.664319164419545, 77.36983359387054],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_6de8208146b2ed2215adb5a265978b23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1325a8b3ac832dc27eb6b351b86850d5 = $(`<div id="html_1325a8b3ac832dc27eb6b351b86850d5" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 0.26</div>`)[0];
+                popup_6de8208146b2ed2215adb5a265978b23.setContent(html_1325a8b3ac832dc27eb6b351b86850d5);
+            
+        
+
+        circle_marker_175d12b45f5021fff20f056e7e7c7f7c.bindPopup(popup_6de8208146b2ed2215adb5a265978b23)
+        ;
+
+        
+    
+    
+            var circle_marker_5e7f4f1bd0c5ea33d4387e859543106b = L.circleMarker(
+                [42.40060521587056, 77.57786869183879],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_df5d392a04fda347704dbd1be2b0fb71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62d771ce366e0dd8488c12a5f84867d1 = $(`<div id="html_62d771ce366e0dd8488c12a5f84867d1" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.00</div>`)[0];
+                popup_df5d392a04fda347704dbd1be2b0fb71.setContent(html_62d771ce366e0dd8488c12a5f84867d1);
+            
+        
+
+        circle_marker_5e7f4f1bd0c5ea33d4387e859543106b.bindPopup(popup_df5d392a04fda347704dbd1be2b0fb71)
+        ;
+
+        
+    
+    
+            var circle_marker_7bb53fbb52b9c9b2b8282823c70dace0 = L.circleMarker(
+                [42.31336120263097, 77.33643376595202],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_8785995a2f7bb1782c292bde2db880da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e096414e133b4a00d8512e02a849a4fa = $(`<div id="html_e096414e133b4a00d8512e02a849a4fa" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 0.82</div>`)[0];
+                popup_8785995a2f7bb1782c292bde2db880da.setContent(html_e096414e133b4a00d8512e02a849a4fa);
+            
+        
+
+        circle_marker_7bb53fbb52b9c9b2b8282823c70dace0.bindPopup(popup_8785995a2f7bb1782c292bde2db880da)
+        ;
+
+        
+    
+    
+            var circle_marker_b4b584c7356609289299d297456910d8 = L.circleMarker(
+                [42.4673475640528, 77.67157869422905],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_8169192f29437c6de563bca3a890c6bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a623604cb2b03058cae915c98838c42 = $(`<div id="html_8a623604cb2b03058cae915c98838c42" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.54</div>`)[0];
+                popup_8169192f29437c6de563bca3a890c6bb.setContent(html_8a623604cb2b03058cae915c98838c42);
+            
+        
+
+        circle_marker_b4b584c7356609289299d297456910d8.bindPopup(popup_8169192f29437c6de563bca3a890c6bb)
+        ;
+
+        
+    
+    
+            var circle_marker_f65de34492ab7c33a574a8ddc5897765 = L.circleMarker(
+                [42.34452572859102, 77.38485015948878],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_cfddd01b01c5634f142dbe6d7976a2e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2019ef2d9443c029a20a9f01be0ac03 = $(`<div id="html_f2019ef2d9443c029a20a9f01be0ac03" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 4.30</div>`)[0];
+                popup_cfddd01b01c5634f142dbe6d7976a2e0.setContent(html_f2019ef2d9443c029a20a9f01be0ac03);
+            
+        
+
+        circle_marker_f65de34492ab7c33a574a8ddc5897765.bindPopup(popup_cfddd01b01c5634f142dbe6d7976a2e0)
+        ;
+
+        
+    
+    
+            var circle_marker_61f96ac4c9605beb5ae440d478bbd060 = L.circleMarker(
+                [42.569610471650456, 77.47399367166818],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_02493185847f1a0735e01ca85ddc25ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_717e05ddeea5307045a3c689f53ae761 = $(`<div id="html_717e05ddeea5307045a3c689f53ae761" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: -1.22</div>`)[0];
+                popup_02493185847f1a0735e01ca85ddc25ea.setContent(html_717e05ddeea5307045a3c689f53ae761);
+            
+        
+
+        circle_marker_61f96ac4c9605beb5ae440d478bbd060.bindPopup(popup_02493185847f1a0735e01ca85ddc25ea)
+        ;
+
+        
+    
+    
+            var circle_marker_b0cfd72aa4b2e12e0f44ddf2a7e45b4a = L.circleMarker(
+                [42.406620048181715, 77.43794951347728],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_418a2de767ab184043e24cc5df7ca8ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67ea2b3c4bb0575b1dd284388abf1be3 = $(`<div id="html_67ea2b3c4bb0575b1dd284388abf1be3" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 0.37</div>`)[0];
+                popup_418a2de767ab184043e24cc5df7ca8ab.setContent(html_67ea2b3c4bb0575b1dd284388abf1be3);
+            
+        
+
+        circle_marker_b0cfd72aa4b2e12e0f44ddf2a7e45b4a.bindPopup(popup_418a2de767ab184043e24cc5df7ca8ab)
+        ;
+
+        
+    
+    
+            var circle_marker_5abab58fad322543542c1ed5fac1f56d = L.circleMarker(
+                [42.538564010633856, 77.50027865111812],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_882b32902773e16805942261863dcd65 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_246ebddfc1bac9802354361f7112f9de = $(`<div id="html_246ebddfc1bac9802354361f7112f9de" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.54</div>`)[0];
+                popup_882b32902773e16805942261863dcd65.setContent(html_246ebddfc1bac9802354361f7112f9de);
+            
+        
+
+        circle_marker_5abab58fad322543542c1ed5fac1f56d.bindPopup(popup_882b32902773e16805942261863dcd65)
+        ;
+
+        
+    
+    
+            var circle_marker_ae6f2d7dcbb06387e3774f887926bf20 = L.circleMarker(
+                [42.63652334059988, 77.57087603759071],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_f70ffa3b95ad3eef761dc33f95b5e047 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d9b4cc7e9368ea0de3660b12d791dbe = $(`<div id="html_1d9b4cc7e9368ea0de3660b12d791dbe" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.52</div>`)[0];
+                popup_f70ffa3b95ad3eef761dc33f95b5e047.setContent(html_1d9b4cc7e9368ea0de3660b12d791dbe);
+            
+        
+
+        circle_marker_ae6f2d7dcbb06387e3774f887926bf20.bindPopup(popup_f70ffa3b95ad3eef761dc33f95b5e047)
+        ;
+
+        
+    
+    
+            var circle_marker_279c8a29c3c77fb8ddbccb8361983f91 = L.circleMarker(
+                [42.329377876402305, 77.41356695986578],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_13099ecc8050bbabd06db724a6eb41b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8bfe9ccb7d15f83064c9a0499f22fea = $(`<div id="html_b8bfe9ccb7d15f83064c9a0499f22fea" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 0.59</div>`)[0];
+                popup_13099ecc8050bbabd06db724a6eb41b9.setContent(html_b8bfe9ccb7d15f83064c9a0499f22fea);
+            
+        
+
+        circle_marker_279c8a29c3c77fb8ddbccb8361983f91.bindPopup(popup_13099ecc8050bbabd06db724a6eb41b9)
+        ;
+
+        
+    
+    
+            var circle_marker_b8b6524bbaec0022b2e731042318c7f6 = L.circleMarker(
+                [42.45679244516278, 77.55837367392037],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_35429a8fa943bc5d310e59579e06969c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1ce8cceb4fb7828a5d6b371d3f07cc0 = $(`<div id="html_e1ce8cceb4fb7828a5d6b371d3f07cc0" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: -0.57</div>`)[0];
+                popup_35429a8fa943bc5d310e59579e06969c.setContent(html_e1ce8cceb4fb7828a5d6b371d3f07cc0);
+            
+        
+
+        circle_marker_b8b6524bbaec0022b2e731042318c7f6.bindPopup(popup_35429a8fa943bc5d310e59579e06969c)
+        ;
+
+        
+    
+    
+            var circle_marker_abe65e0145f4c8605297824d430e5172 = L.circleMarker(
+                [42.56180890760438, 77.40174381552255],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_6f0ace8651def8bf822730d5f74168e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea49c9ab126d86005eee2ca682905426 = $(`<div id="html_ea49c9ab126d86005eee2ca682905426" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.72</div>`)[0];
+                popup_6f0ace8651def8bf822730d5f74168e6.setContent(html_ea49c9ab126d86005eee2ca682905426);
+            
+        
+
+        circle_marker_abe65e0145f4c8605297824d430e5172.bindPopup(popup_6f0ace8651def8bf822730d5f74168e6)
+        ;
+
+        
+    
+    
+            var circle_marker_699c995fd20df3e219b4799520990517 = L.circleMarker(
+                [42.36552546543773, 77.3160591080115],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_fb35eee54335ffde2ce4b981832bd92a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4788d27dda15d044f7a5fab04c37555a = $(`<div id="html_4788d27dda15d044f7a5fab04c37555a" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.57</div>`)[0];
+                popup_fb35eee54335ffde2ce4b981832bd92a.setContent(html_4788d27dda15d044f7a5fab04c37555a);
+            
+        
+
+        circle_marker_699c995fd20df3e219b4799520990517.bindPopup(popup_fb35eee54335ffde2ce4b981832bd92a)
+        ;
+
+        
+    
+    
+            var circle_marker_5761e0f823a1943570f252c5fbc70fe8 = L.circleMarker(
+                [42.5957344783584, 77.51644116658166],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_cd8f38b81d7ea4fa55d8be6154004a56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9144f1f9c80dbc234cb253f9a37ac8e8 = $(`<div id="html_9144f1f9c80dbc234cb253f9a37ac8e8" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 0.27</div>`)[0];
+                popup_cd8f38b81d7ea4fa55d8be6154004a56.setContent(html_9144f1f9c80dbc234cb253f9a37ac8e8);
+            
+        
+
+        circle_marker_5761e0f823a1943570f252c5fbc70fe8.bindPopup(popup_cd8f38b81d7ea4fa55d8be6154004a56)
+        ;
+
+        
+    
+    
+            var circle_marker_a6cf4d83f10408bf68b21343aa84a5d9 = L.circleMarker(
+                [42.57269137482206, 77.66470981880965],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_8588139013aed7a2149c95073df4ebd0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b0f4efc55fc032ee17fd6d667748d2f = $(`<div id="html_6b0f4efc55fc032ee17fd6d667748d2f" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: -0.35</div>`)[0];
+                popup_8588139013aed7a2149c95073df4ebd0.setContent(html_6b0f4efc55fc032ee17fd6d667748d2f);
+            
+        
+
+        circle_marker_a6cf4d83f10408bf68b21343aa84a5d9.bindPopup(popup_8588139013aed7a2149c95073df4ebd0)
+        ;
+
+        
+    
+    
+            var circle_marker_6d9ac4bb172780b5734deea971cb1079 = L.circleMarker(
+                [42.386527987607586, 77.50233327186264],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_62947b65527a6a0ab22f76fdef70566f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16a9ab5d93bb4c211e21f34cb93d48f3 = $(`<div id="html_16a9ab5d93bb4c211e21f34cb93d48f3" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.59</div>`)[0];
+                popup_62947b65527a6a0ab22f76fdef70566f.setContent(html_16a9ab5d93bb4c211e21f34cb93d48f3);
+            
+        
+
+        circle_marker_6d9ac4bb172780b5734deea971cb1079.bindPopup(popup_62947b65527a6a0ab22f76fdef70566f)
+        ;
+
+        
+    
+    
+            var circle_marker_f13f47a9c50c6f0b6801df59158bb7cb = L.circleMarker(
+                [42.466596164947624, 77.68619637537512],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_d1756e98e13590d574dfa854bf4b3f6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_352571d0f5664c2b1f84e2e5ded60974 = $(`<div id="html_352571d0f5664c2b1f84e2e5ded60974" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.80</div>`)[0];
+                popup_d1756e98e13590d574dfa854bf4b3f6c.setContent(html_352571d0f5664c2b1f84e2e5ded60974);
+            
+        
+
+        circle_marker_f13f47a9c50c6f0b6801df59158bb7cb.bindPopup(popup_d1756e98e13590d574dfa854bf4b3f6c)
+        ;
+
+        
+    
+    
+            var circle_marker_90b816cea4261a88f461ef2c1a55fcbe = L.circleMarker(
+                [42.58199385539103, 77.33295269563136],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_f7ccd73a79cc7cba44802a3e856949eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_405eeec88447faab859dbbbd0478c374 = $(`<div id="html_405eeec88447faab859dbbbd0478c374" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 4.60</div>`)[0];
+                popup_f7ccd73a79cc7cba44802a3e856949eb.setContent(html_405eeec88447faab859dbbbd0478c374);
+            
+        
+
+        circle_marker_90b816cea4261a88f461ef2c1a55fcbe.bindPopup(popup_f7ccd73a79cc7cba44802a3e856949eb)
+        ;
+
+        
+    
+    
+            var circle_marker_2cdb550ebbc3ac49af291510b8929ba7 = L.circleMarker(
+                [42.366331990415794, 77.32125983686917],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_9a618f52b1b01bd686a6b730124f3968 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_137d40d3b59084fac91f6638fc7a1c10 = $(`<div id="html_137d40d3b59084fac91f6638fc7a1c10" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.86</div>`)[0];
+                popup_9a618f52b1b01bd686a6b730124f3968.setContent(html_137d40d3b59084fac91f6638fc7a1c10);
+            
+        
+
+        circle_marker_2cdb550ebbc3ac49af291510b8929ba7.bindPopup(popup_9a618f52b1b01bd686a6b730124f3968)
+        ;
+
+        
+    
+    
+            var circle_marker_9aa7f6b99d62a983862d8899d26ec4af = L.circleMarker(
+                [42.38148131666263, 77.6052759482878],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_7efb59546a3fbc688076bb41f94a4f86 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5099ee50b99eb6b81e81dc034996f6d9 = $(`<div id="html_5099ee50b99eb6b81e81dc034996f6d9" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 4.36</div>`)[0];
+                popup_7efb59546a3fbc688076bb41f94a4f86.setContent(html_5099ee50b99eb6b81e81dc034996f6d9);
+            
+        
+
+        circle_marker_9aa7f6b99d62a983862d8899d26ec4af.bindPopup(popup_7efb59546a3fbc688076bb41f94a4f86)
+        ;
+
+        
+    
+    
+            var circle_marker_41b8dadf32b02f90c363b6cee8a3169e = L.circleMarker(
+                [42.335104589791555, 77.64459125785385],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_4f168e6908ee60cf3c9b11d05820659b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7bd9c9938bcdbf8d0403bba5fb91775 = $(`<div id="html_c7bd9c9938bcdbf8d0403bba5fb91775" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.59</div>`)[0];
+                popup_4f168e6908ee60cf3c9b11d05820659b.setContent(html_c7bd9c9938bcdbf8d0403bba5fb91775);
+            
+        
+
+        circle_marker_41b8dadf32b02f90c363b6cee8a3169e.bindPopup(popup_4f168e6908ee60cf3c9b11d05820659b)
+        ;
+
+        
+    
+    
+            var circle_marker_a998d38778528f3de7e2a4376dd963ed = L.circleMarker(
+                [42.392073396533604, 77.56340257887696],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_3e0ebad7a5386d29b8edd200f5cf06e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9616d7594589f4c5c19e42760dc440be = $(`<div id="html_9616d7594589f4c5c19e42760dc440be" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.50</div>`)[0];
+                popup_3e0ebad7a5386d29b8edd200f5cf06e3.setContent(html_9616d7594589f4c5c19e42760dc440be);
+            
+        
+
+        circle_marker_a998d38778528f3de7e2a4376dd963ed.bindPopup(popup_3e0ebad7a5386d29b8edd200f5cf06e3)
+        ;
+
+        
+    
+    
+            var circle_marker_abcaaf8fede082df7b6216de43fc0c82 = L.circleMarker(
+                [42.47877521494603, 77.60440824168617],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_cdd108a9e7e4be9508ec159f220b3b34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62ff24250392e52241d07122210aa2cd = $(`<div id="html_62ff24250392e52241d07122210aa2cd" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.76</div>`)[0];
+                popup_cdd108a9e7e4be9508ec159f220b3b34.setContent(html_62ff24250392e52241d07122210aa2cd);
+            
+        
+
+        circle_marker_abcaaf8fede082df7b6216de43fc0c82.bindPopup(popup_cdd108a9e7e4be9508ec159f220b3b34)
+        ;
+
+        
+    
+    
+            var circle_marker_bcaec7040d4456a10a87316af8d512ec = L.circleMarker(
+                [42.57610504367416, 77.59600221544362],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_0eaefbea35d6b3fa708cca800b241b19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_089e49d8500d1b69a09d93a5a1a0159f = $(`<div id="html_089e49d8500d1b69a09d93a5a1a0159f" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.33</div>`)[0];
+                popup_0eaefbea35d6b3fa708cca800b241b19.setContent(html_089e49d8500d1b69a09d93a5a1a0159f);
+            
+        
+
+        circle_marker_bcaec7040d4456a10a87316af8d512ec.bindPopup(popup_0eaefbea35d6b3fa708cca800b241b19)
+        ;
+
+        
+    
+    
+            var circle_marker_6768c302b7e8535aef6014d8068270a0 = L.circleMarker(
+                [42.5931657196678, 77.30839199793357],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_396ba7abc87903e5bf5ad5914e534424 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb2812174f1c60b4530947a0ba24d7b4 = $(`<div id="html_bb2812174f1c60b4530947a0ba24d7b4" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.96</div>`)[0];
+                popup_396ba7abc87903e5bf5ad5914e534424.setContent(html_bb2812174f1c60b4530947a0ba24d7b4);
+            
+        
+
+        circle_marker_6768c302b7e8535aef6014d8068270a0.bindPopup(popup_396ba7abc87903e5bf5ad5914e534424)
+        ;
+
+        
+    
+    
+            var circle_marker_85e3d837e4491c7e2fcedc4648e886ae = L.circleMarker(
+                [42.67551530568523, 77.38802708590194],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_328289b6bec1447291d8ed5598f76410 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4eb8c20ffc91372423dec01ab80402b = $(`<div id="html_f4eb8c20ffc91372423dec01ab80402b" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.64</div>`)[0];
+                popup_328289b6bec1447291d8ed5598f76410.setContent(html_f4eb8c20ffc91372423dec01ab80402b);
+            
+        
+
+        circle_marker_85e3d837e4491c7e2fcedc4648e886ae.bindPopup(popup_328289b6bec1447291d8ed5598f76410)
+        ;
+
+        
+    
+    
+            var circle_marker_c8eb318a86d03a55a490cad5f781d25a = L.circleMarker(
+                [42.68460672265073, 77.69048384231857],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_dcfd24c458f6510918986b01915131ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f13ae3987c2dc42a6b488e508aca78d6 = $(`<div id="html_f13ae3987c2dc42a6b488e508aca78d6" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 0.56</div>`)[0];
+                popup_dcfd24c458f6510918986b01915131ee.setContent(html_f13ae3987c2dc42a6b488e508aca78d6);
+            
+        
+
+        circle_marker_c8eb318a86d03a55a490cad5f781d25a.bindPopup(popup_dcfd24c458f6510918986b01915131ee)
+        ;
+
+        
+    
+    
+            var circle_marker_8abc05f67d98f29e7cc04d0d8262e2ed = L.circleMarker(
+                [42.6501046430632, 77.69779103108304],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_4a627c1a59da8f25c5b78a6a95cf36ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_badf96f8baccb6aa88170074e3170dbe = $(`<div id="html_badf96f8baccb6aa88170074e3170dbe" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: -0.08</div>`)[0];
+                popup_4a627c1a59da8f25c5b78a6a95cf36ac.setContent(html_badf96f8baccb6aa88170074e3170dbe);
+            
+        
+
+        circle_marker_8abc05f67d98f29e7cc04d0d8262e2ed.bindPopup(popup_4a627c1a59da8f25c5b78a6a95cf36ac)
+        ;
+
+        
+    
+    
+            var circle_marker_21dd285ec9c61fab3a0191ca904a438f = L.circleMarker(
+                [42.31522729245995, 77.60847267844728],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_fae5d210be25dc1a10902e9b2b5846ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65598a003dfe8e457aca35ba75730473 = $(`<div id="html_65598a003dfe8e457aca35ba75730473" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 3.37</div>`)[0];
+                popup_fae5d210be25dc1a10902e9b2b5846ac.setContent(html_65598a003dfe8e457aca35ba75730473);
+            
+        
+
+        circle_marker_21dd285ec9c61fab3a0191ca904a438f.bindPopup(popup_fae5d210be25dc1a10902e9b2b5846ac)
+        ;
+
+        
+    
+    
+            var circle_marker_cbfeb28045aac150a2c6fba58247fd2b = L.circleMarker(
+                [42.611636501505444, 77.45705803273448],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_3c824c9055ebfc275c388fa08ecacd3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f50779e692c107464eb815ea9504999c = $(`<div id="html_f50779e692c107464eb815ea9504999c" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 4.18</div>`)[0];
+                popup_3c824c9055ebfc275c388fa08ecacd3d.setContent(html_f50779e692c107464eb815ea9504999c);
+            
+        
+
+        circle_marker_cbfeb28045aac150a2c6fba58247fd2b.bindPopup(popup_3c824c9055ebfc275c388fa08ecacd3d)
+        ;
+
+        
+    
+    
+            var circle_marker_880d119c2b42ad83dcb2aed646e8a178 = L.circleMarker(
+                [42.56004423989124, 77.35469233036625],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_0dc0ad7af334191b251c4348eda825ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29ef3092adf8984e8a315abb77bdf27f = $(`<div id="html_29ef3092adf8984e8a315abb77bdf27f" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 2.00</div>`)[0];
+                popup_0dc0ad7af334191b251c4348eda825ed.setContent(html_29ef3092adf8984e8a315abb77bdf27f);
+            
+        
+
+        circle_marker_880d119c2b42ad83dcb2aed646e8a178.bindPopup(popup_0dc0ad7af334191b251c4348eda825ed)
+        ;
+
+        
+    
+    
+            var circle_marker_3d39e284d15f8bdc8fcdf549602d2d8b = L.circleMarker(
+                [42.383389111560284, 77.45417838036664],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_a125e471aab285d864159cb37a948e30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dfc2b918bfeba71b3d377213adfb1428 = $(`<div id="html_dfc2b918bfeba71b3d377213adfb1428" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 1.66</div>`)[0];
+                popup_a125e471aab285d864159cb37a948e30.setContent(html_dfc2b918bfeba71b3d377213adfb1428);
+            
+        
+
+        circle_marker_3d39e284d15f8bdc8fcdf549602d2d8b.bindPopup(popup_a125e471aab285d864159cb37a948e30)
+        ;
+
+        
+    
+    
+            var circle_marker_45d869c9d6ca57f4fbc364bc91fc5d68 = L.circleMarker(
+                [42.54087923187902, 77.31284471629462],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_522b1b5041a81ebf42ca491e0a474c04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80863d0fa8d407edeb24f8b203e1ba83 = $(`<div id="html_80863d0fa8d407edeb24f8b203e1ba83" style="width: 100.0%; height: 100.0%;">River: Aksu<br>Pred. Availability: 3.60</div>`)[0];
+                popup_522b1b5041a81ebf42ca491e0a474c04.setContent(html_80863d0fa8d407edeb24f8b203e1ba83);
+            
+        
+
+        circle_marker_45d869c9d6ca57f4fbc364bc91fc5d68.bindPopup(popup_522b1b5041a81ebf42ca491e0a474c04)
+        ;
+
+        
+    
+    
+            var circle_marker_1b8f5e2bfe092b8e7c1c0984a74a33f0 = L.circleMarker(
+                [42.70968501534827, 77.08722705422878],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_8564a4069915fe6dcebcf4df89aa8102 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d33d0732fc7df6f16c564ebfaa989797 = $(`<div id="html_d33d0732fc7df6f16c564ebfaa989797" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.03</div>`)[0];
+                popup_8564a4069915fe6dcebcf4df89aa8102.setContent(html_d33d0732fc7df6f16c564ebfaa989797);
+            
+        
+
+        circle_marker_1b8f5e2bfe092b8e7c1c0984a74a33f0.bindPopup(popup_8564a4069915fe6dcebcf4df89aa8102)
+        ;
+
+        
+    
+    
+            var circle_marker_cf7de2b79d4be5a30a0f0edb72874946 = L.circleMarker(
+                [42.84927318456011, 77.16074396227563],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_b57b9a2dd318b02df9bcf192ba60ae1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3b80c58debce83b475492b1dcddaa8f = $(`<div id="html_d3b80c58debce83b475492b1dcddaa8f" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.21</div>`)[0];
+                popup_b57b9a2dd318b02df9bcf192ba60ae1f.setContent(html_d3b80c58debce83b475492b1dcddaa8f);
+            
+        
+
+        circle_marker_cf7de2b79d4be5a30a0f0edb72874946.bindPopup(popup_b57b9a2dd318b02df9bcf192ba60ae1f)
+        ;
+
+        
+    
+    
+            var circle_marker_93a5c12931c7e122d5040c52c169a394 = L.circleMarker(
+                [42.630461157351036, 77.01269334466953],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_7cb43aecc40e148253d05a9c488f0ba9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b823fad27ec067bafa5e42dffc1fb9f = $(`<div id="html_6b823fad27ec067bafa5e42dffc1fb9f" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.51</div>`)[0];
+                popup_7cb43aecc40e148253d05a9c488f0ba9.setContent(html_6b823fad27ec067bafa5e42dffc1fb9f);
+            
+        
+
+        circle_marker_93a5c12931c7e122d5040c52c169a394.bindPopup(popup_7cb43aecc40e148253d05a9c488f0ba9)
+        ;
+
+        
+    
+    
+            var circle_marker_c7ea35a8824c01d67dfea52a53b0aa3b = L.circleMarker(
+                [42.797202362402224, 77.38618285727127],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_36df77f76c283a7c28ab2f126cb67cf8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7b147633c46fa08a31acc9fe3113058 = $(`<div id="html_b7b147633c46fa08a31acc9fe3113058" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 4.91</div>`)[0];
+                popup_36df77f76c283a7c28ab2f126cb67cf8.setContent(html_b7b147633c46fa08a31acc9fe3113058);
+            
+        
+
+        circle_marker_c7ea35a8824c01d67dfea52a53b0aa3b.bindPopup(popup_36df77f76c283a7c28ab2f126cb67cf8)
+        ;
+
+        
+    
+    
+            var circle_marker_1e2c343cf9cdfe921037195841abe16c = L.circleMarker(
+                [42.85035038907463, 77.37962289385645],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_78036025759f8224483df854c57a407b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95c8aad6b41ed73fd625221ec51e67a7 = $(`<div id="html_95c8aad6b41ed73fd625221ec51e67a7" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 4.05</div>`)[0];
+                popup_78036025759f8224483df854c57a407b.setContent(html_95c8aad6b41ed73fd625221ec51e67a7);
+            
+        
+
+        circle_marker_1e2c343cf9cdfe921037195841abe16c.bindPopup(popup_78036025759f8224483df854c57a407b)
+        ;
+
+        
+    
+    
+            var circle_marker_387379bcb4ddb369e329dad531b26cfb = L.circleMarker(
+                [42.764729741013575, 77.14067288789711],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_8a75a928c9db323ffd66b31e9ecc65fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b55ed6b3afbbb60acd8c6f0e9f231a6d = $(`<div id="html_b55ed6b3afbbb60acd8c6f0e9f231a6d" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 0.50</div>`)[0];
+                popup_8a75a928c9db323ffd66b31e9ecc65fb.setContent(html_b55ed6b3afbbb60acd8c6f0e9f231a6d);
+            
+        
+
+        circle_marker_387379bcb4ddb369e329dad531b26cfb.bindPopup(popup_8a75a928c9db323ffd66b31e9ecc65fb)
+        ;
+
+        
+    
+    
+            var circle_marker_957ff9bd6b72e72aac7eea7cfdde0820 = L.circleMarker(
+                [42.6765320121161, 77.03207092897735],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_737b74d9be304244495448e0b8d44f0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9f82595bfdaf0ca08e7548d42d6fc61 = $(`<div id="html_a9f82595bfdaf0ca08e7548d42d6fc61" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: -0.35</div>`)[0];
+                popup_737b74d9be304244495448e0b8d44f0d.setContent(html_a9f82595bfdaf0ca08e7548d42d6fc61);
+            
+        
+
+        circle_marker_957ff9bd6b72e72aac7eea7cfdde0820.bindPopup(popup_737b74d9be304244495448e0b8d44f0d)
+        ;
+
+        
+    
+    
+            var circle_marker_b438630eadc020e231d7e0bdeb7eefc1 = L.circleMarker(
+                [42.7753617336484, 77.06868584692269],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_3bcbbe1b3c35fa7027c7ac035c9dd33b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_877d4dab951b83220d7c64aeca8eeef9 = $(`<div id="html_877d4dab951b83220d7c64aeca8eeef9" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 3.42</div>`)[0];
+                popup_3bcbbe1b3c35fa7027c7ac035c9dd33b.setContent(html_877d4dab951b83220d7c64aeca8eeef9);
+            
+        
+
+        circle_marker_b438630eadc020e231d7e0bdeb7eefc1.bindPopup(popup_3bcbbe1b3c35fa7027c7ac035c9dd33b)
+        ;
+
+        
+    
+    
+            var circle_marker_c64b36a7210359b5e762396fc0ffbaee = L.circleMarker(
+                [42.8694096174072, 77.27170745001801],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_a076f068eedb13cdb6f13ebb5b0009f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_406d7bd9c854b710f79e338622e3eaa6 = $(`<div id="html_406d7bd9c854b710f79e338622e3eaa6" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.35</div>`)[0];
+                popup_a076f068eedb13cdb6f13ebb5b0009f1.setContent(html_406d7bd9c854b710f79e338622e3eaa6);
+            
+        
+
+        circle_marker_c64b36a7210359b5e762396fc0ffbaee.bindPopup(popup_a076f068eedb13cdb6f13ebb5b0009f1)
+        ;
+
+        
+    
+    
+            var circle_marker_d49234ea9c6e2ed6f9fcfb26fe561ba0 = L.circleMarker(
+                [42.943846983840245, 77.27536981655825],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_dc805b2612abe3555cc8869fb534b33f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8cac72782c95aed740c0a858fdad5d77 = $(`<div id="html_8cac72782c95aed740c0a858fdad5d77" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 3.47</div>`)[0];
+                popup_dc805b2612abe3555cc8869fb534b33f.setContent(html_8cac72782c95aed740c0a858fdad5d77);
+            
+        
+
+        circle_marker_d49234ea9c6e2ed6f9fcfb26fe561ba0.bindPopup(popup_dc805b2612abe3555cc8869fb534b33f)
+        ;
+
+        
+    
+    
+            var circle_marker_d260c03161bf1b0c0c414c16657f14ec = L.circleMarker(
+                [42.789219001784616, 77.2946931783428],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_043d7f30c1fc3f7a0a9c60a07a3c0ce8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15a880c29cdc4d05aa9f2472c25e0269 = $(`<div id="html_15a880c29cdc4d05aa9f2472c25e0269" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.90</div>`)[0];
+                popup_043d7f30c1fc3f7a0a9c60a07a3c0ce8.setContent(html_15a880c29cdc4d05aa9f2472c25e0269);
+            
+        
+
+        circle_marker_d260c03161bf1b0c0c414c16657f14ec.bindPopup(popup_043d7f30c1fc3f7a0a9c60a07a3c0ce8)
+        ;
+
+        
+    
+    
+            var circle_marker_6c2ab6ebc2f7520be8f81f36ec665ef8 = L.circleMarker(
+                [42.917433700166846, 77.19861038187072],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_dfcac6bff162eab473168c19a7020c77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1caca12722ee38f7c216da938fe6d0c2 = $(`<div id="html_1caca12722ee38f7c216da938fe6d0c2" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.49</div>`)[0];
+                popup_dfcac6bff162eab473168c19a7020c77.setContent(html_1caca12722ee38f7c216da938fe6d0c2);
+            
+        
+
+        circle_marker_6c2ab6ebc2f7520be8f81f36ec665ef8.bindPopup(popup_dfcac6bff162eab473168c19a7020c77)
+        ;
+
+        
+    
+    
+            var circle_marker_6ca4e49270aac3f29bed18d5521a3ddf = L.circleMarker(
+                [42.83870917753459, 77.01312572664946],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_c9fc1e87d78d833f052c6403c502126e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf1e90b9ce99d892a7e0aab9a326df77 = $(`<div id="html_bf1e90b9ce99d892a7e0aab9a326df77" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 0.39</div>`)[0];
+                popup_c9fc1e87d78d833f052c6403c502126e.setContent(html_bf1e90b9ce99d892a7e0aab9a326df77);
+            
+        
+
+        circle_marker_6ca4e49270aac3f29bed18d5521a3ddf.bindPopup(popup_c9fc1e87d78d833f052c6403c502126e)
+        ;
+
+        
+    
+    
+            var circle_marker_53791bb72ea7cc268371ea5a1bbec2b8 = L.circleMarker(
+                [42.950508799498024, 77.01310179364667],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_035a07bb2494937548d8de1a9c19d1e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17f9703d6545332058a8a25c8daa34d9 = $(`<div id="html_17f9703d6545332058a8a25c8daa34d9" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.49</div>`)[0];
+                popup_035a07bb2494937548d8de1a9c19d1e4.setContent(html_17f9703d6545332058a8a25c8daa34d9);
+            
+        
+
+        circle_marker_53791bb72ea7cc268371ea5a1bbec2b8.bindPopup(popup_035a07bb2494937548d8de1a9c19d1e4)
+        ;
+
+        
+    
+    
+            var circle_marker_f6bcdd148c8dbae45c7258994593b0d7 = L.circleMarker(
+                [42.91631250752168, 77.11733004976685],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_49826b5f7f67239f0a9833c12cf38a18 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e7ab282bb175bd6567efb24bbb9102d = $(`<div id="html_5e7ab282bb175bd6567efb24bbb9102d" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.33</div>`)[0];
+                popup_49826b5f7f67239f0a9833c12cf38a18.setContent(html_5e7ab282bb175bd6567efb24bbb9102d);
+            
+        
+
+        circle_marker_f6bcdd148c8dbae45c7258994593b0d7.bindPopup(popup_49826b5f7f67239f0a9833c12cf38a18)
+        ;
+
+        
+    
+    
+            var circle_marker_b3957fc3abfc8ac2b1304605bca805d2 = L.circleMarker(
+                [42.76105267364427, 77.36894662373253],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_18dd1612f4c70af1f53bd2d4d00f0cee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f2428debb4a17003305f3a8004cd0b8 = $(`<div id="html_4f2428debb4a17003305f3a8004cd0b8" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.13</div>`)[0];
+                popup_18dd1612f4c70af1f53bd2d4d00f0cee.setContent(html_4f2428debb4a17003305f3a8004cd0b8);
+            
+        
+
+        circle_marker_b3957fc3abfc8ac2b1304605bca805d2.bindPopup(popup_18dd1612f4c70af1f53bd2d4d00f0cee)
+        ;
+
+        
+    
+    
+            var circle_marker_921cbab36a2cdb2ee72b53ff1913a6cb = L.circleMarker(
+                [42.73434914498791, 77.32790273652508],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_0ec4f38142c77fb8422ecefcf9328f56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29b24834cd792607edca5e84d211f956 = $(`<div id="html_29b24834cd792607edca5e84d211f956" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: -1.08</div>`)[0];
+                popup_0ec4f38142c77fb8422ecefcf9328f56.setContent(html_29b24834cd792607edca5e84d211f956);
+            
+        
+
+        circle_marker_921cbab36a2cdb2ee72b53ff1913a6cb.bindPopup(popup_0ec4f38142c77fb8422ecefcf9328f56)
+        ;
+
+        
+    
+    
+            var circle_marker_36680ff185698435108ec57e871ab85c = L.circleMarker(
+                [42.90637193686768, 77.00886105309957],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_6c3734c7ae9fa7cd6fc8ed6c7d66b72e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff3178f31ca5f2cae361db330d4dd8ce = $(`<div id="html_ff3178f31ca5f2cae361db330d4dd8ce" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.80</div>`)[0];
+                popup_6c3734c7ae9fa7cd6fc8ed6c7d66b72e.setContent(html_ff3178f31ca5f2cae361db330d4dd8ce);
+            
+        
+
+        circle_marker_36680ff185698435108ec57e871ab85c.bindPopup(popup_6c3734c7ae9fa7cd6fc8ed6c7d66b72e)
+        ;
+
+        
+    
+    
+            var circle_marker_61e1de7db01a416b61d2e3435ab77792 = L.circleMarker(
+                [42.707856544522, 77.00538061172189],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_f9e0e9776b854b263b9a05bb5e42c4cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d63374a71bc3ed3972fd9a9957ca9da3 = $(`<div id="html_d63374a71bc3ed3972fd9a9957ca9da3" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.78</div>`)[0];
+                popup_f9e0e9776b854b263b9a05bb5e42c4cb.setContent(html_d63374a71bc3ed3972fd9a9957ca9da3);
+            
+        
+
+        circle_marker_61e1de7db01a416b61d2e3435ab77792.bindPopup(popup_f9e0e9776b854b263b9a05bb5e42c4cb)
+        ;
+
+        
+    
+    
+            var circle_marker_dcee41c2fdbf343b37fac176b680dd83 = L.circleMarker(
+                [42.72295932659321, 77.35485872312474],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_a9f5c37ca76fccf02066d607677d287b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb90b3c4fced7d60e07bc07f363c2a7a = $(`<div id="html_eb90b3c4fced7d60e07bc07f363c2a7a" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 4.60</div>`)[0];
+                popup_a9f5c37ca76fccf02066d607677d287b.setContent(html_eb90b3c4fced7d60e07bc07f363c2a7a);
+            
+        
+
+        circle_marker_dcee41c2fdbf343b37fac176b680dd83.bindPopup(popup_a9f5c37ca76fccf02066d607677d287b)
+        ;
+
+        
+    
+    
+            var circle_marker_7c76529ffa06b6cba866f58f2445846f = L.circleMarker(
+                [42.757012565871285, 77.08822626422345],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_4f938d68bcf0589c5cc96a81c74708d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f66632882d51fe64dbd4f100b75d3f6b = $(`<div id="html_f66632882d51fe64dbd4f100b75d3f6b" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.07</div>`)[0];
+                popup_4f938d68bcf0589c5cc96a81c74708d3.setContent(html_f66632882d51fe64dbd4f100b75d3f6b);
+            
+        
+
+        circle_marker_7c76529ffa06b6cba866f58f2445846f.bindPopup(popup_4f938d68bcf0589c5cc96a81c74708d3)
+        ;
+
+        
+    
+    
+            var circle_marker_6dd9ca0dd577948ccff7fd350c5e818d = L.circleMarker(
+                [42.81531656301755, 77.00583472970354],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_3b17fa033bc02129b8023879690f7484 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da335a924e55cc3b0b82356b8debd5ea = $(`<div id="html_da335a924e55cc3b0b82356b8debd5ea" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: -0.58</div>`)[0];
+                popup_3b17fa033bc02129b8023879690f7484.setContent(html_da335a924e55cc3b0b82356b8debd5ea);
+            
+        
+
+        circle_marker_6dd9ca0dd577948ccff7fd350c5e818d.bindPopup(popup_3b17fa033bc02129b8023879690f7484)
+        ;
+
+        
+    
+    
+            var circle_marker_15769913d41d333d9616dafd1ed5b5de = L.circleMarker(
+                [42.76533417873984, 77.2179072528302],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_23177a97ac83ae3b4ae74b8c603629c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3ca345007a15e42fc2e4ab5626c8848 = $(`<div id="html_b3ca345007a15e42fc2e4ab5626c8848" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.20</div>`)[0];
+                popup_23177a97ac83ae3b4ae74b8c603629c3.setContent(html_b3ca345007a15e42fc2e4ab5626c8848);
+            
+        
+
+        circle_marker_15769913d41d333d9616dafd1ed5b5de.bindPopup(popup_23177a97ac83ae3b4ae74b8c603629c3)
+        ;
+
+        
+    
+    
+            var circle_marker_4fd3f823d47037ab2cd2d4bd05c6714c = L.circleMarker(
+                [42.83698466271154, 77.35104928142634],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_13f8c028d222198f8330aa7be14eef29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f88164db15b897d2d11779a86babddc8 = $(`<div id="html_f88164db15b897d2d11779a86babddc8" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.55</div>`)[0];
+                popup_13f8c028d222198f8330aa7be14eef29.setContent(html_f88164db15b897d2d11779a86babddc8);
+            
+        
+
+        circle_marker_4fd3f823d47037ab2cd2d4bd05c6714c.bindPopup(popup_13f8c028d222198f8330aa7be14eef29)
+        ;
+
+        
+    
+    
+            var circle_marker_4f6ec24db84ef9c9bfaa7b4acac0cee6 = L.circleMarker(
+                [42.922421338292594, 77.2951388231636],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_6277ebe6b034bb7cdb68cbea49c2d568 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ea2ae4c1220f12949f74741b7d62354 = $(`<div id="html_9ea2ae4c1220f12949f74741b7d62354" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.24</div>`)[0];
+                popup_6277ebe6b034bb7cdb68cbea49c2d568.setContent(html_9ea2ae4c1220f12949f74741b7d62354);
+            
+        
+
+        circle_marker_4f6ec24db84ef9c9bfaa7b4acac0cee6.bindPopup(popup_6277ebe6b034bb7cdb68cbea49c2d568)
+        ;
+
+        
+    
+    
+            var circle_marker_70819d9282591953a5736e02a4758459 = L.circleMarker(
+                [42.616287911748614, 77.03630930575008],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_c5a9c2f031ae3d43333a8684b703955d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d833e3c13324f50d8587299044a07e0 = $(`<div id="html_0d833e3c13324f50d8587299044a07e0" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 0.25</div>`)[0];
+                popup_c5a9c2f031ae3d43333a8684b703955d.setContent(html_0d833e3c13324f50d8587299044a07e0);
+            
+        
+
+        circle_marker_70819d9282591953a5736e02a4758459.bindPopup(popup_c5a9c2f031ae3d43333a8684b703955d)
+        ;
+
+        
+    
+    
+            var circle_marker_737a893bbf59d21984b936e3978bb1a4 = L.circleMarker(
+                [42.70497275154615, 77.18892872308955],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_92d349ab9072e5aff0ebbb81b7de7073 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74d4fe0d14c4024395e46b095e4151a4 = $(`<div id="html_74d4fe0d14c4024395e46b095e4151a4" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 3.33</div>`)[0];
+                popup_92d349ab9072e5aff0ebbb81b7de7073.setContent(html_74d4fe0d14c4024395e46b095e4151a4);
+            
+        
+
+        circle_marker_737a893bbf59d21984b936e3978bb1a4.bindPopup(popup_92d349ab9072e5aff0ebbb81b7de7073)
+        ;
+
+        
+    
+    
+            var circle_marker_ed41bf0234afb3d346841ae90d3d7133 = L.circleMarker(
+                [42.66386481741323, 77.21481593720493],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_4db5a75b6d7e75d35a6fbcee68b87f5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab87b51898760adc4f338fdc4e8f1096 = $(`<div id="html_ab87b51898760adc4f338fdc4e8f1096" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.83</div>`)[0];
+                popup_4db5a75b6d7e75d35a6fbcee68b87f5b.setContent(html_ab87b51898760adc4f338fdc4e8f1096);
+            
+        
+
+        circle_marker_ed41bf0234afb3d346841ae90d3d7133.bindPopup(popup_4db5a75b6d7e75d35a6fbcee68b87f5b)
+        ;
+
+        
+    
+    
+            var circle_marker_ec5cf9f584e3a461f5da95b2914fb7d3 = L.circleMarker(
+                [42.608997167352335, 77.16479696992174],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_afd8a8931bcf5e42fbd7f065482c80c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d575fffd376f5171a639fe37ade58daa = $(`<div id="html_d575fffd376f5171a639fe37ade58daa" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.32</div>`)[0];
+                popup_afd8a8931bcf5e42fbd7f065482c80c2.setContent(html_d575fffd376f5171a639fe37ade58daa);
+            
+        
+
+        circle_marker_ec5cf9f584e3a461f5da95b2914fb7d3.bindPopup(popup_afd8a8931bcf5e42fbd7f065482c80c2)
+        ;
+
+        
+    
+    
+            var circle_marker_124d7efe91961a12b310a25b53b31ef4 = L.circleMarker(
+                [42.705259633421704, 77.11341889060455],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_5c5cf175cfc7490c7582393dc0ca1cd0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a07e4e8d4a43d33ff0cc5b72c1fde78 = $(`<div id="html_1a07e4e8d4a43d33ff0cc5b72c1fde78" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 4.54</div>`)[0];
+                popup_5c5cf175cfc7490c7582393dc0ca1cd0.setContent(html_1a07e4e8d4a43d33ff0cc5b72c1fde78);
+            
+        
+
+        circle_marker_124d7efe91961a12b310a25b53b31ef4.bindPopup(popup_5c5cf175cfc7490c7582393dc0ca1cd0)
+        ;
+
+        
+    
+    
+            var circle_marker_2b85c35f28aa68cf33881a736c09deb9 = L.circleMarker(
+                [42.983174886618706, 77.19632107777005],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_bcc5a51b89f03fbc494b4d817f7afcfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b87f034afcd099d98954d4190474060c = $(`<div id="html_b87f034afcd099d98954d4190474060c" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.47</div>`)[0];
+                popup_bcc5a51b89f03fbc494b4d817f7afcfd.setContent(html_b87f034afcd099d98954d4190474060c);
+            
+        
+
+        circle_marker_2b85c35f28aa68cf33881a736c09deb9.bindPopup(popup_bcc5a51b89f03fbc494b4d817f7afcfd)
+        ;
+
+        
+    
+    
+            var circle_marker_f5379f03a968ec011d2c46c1407e5fe1 = L.circleMarker(
+                [42.926776369384655, 77.07665554492607],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_3114b29de497ffb8618e8c801723a532 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_918c49292f1fe7ef1fe75c48c1ad1df2 = $(`<div id="html_918c49292f1fe7ef1fe75c48c1ad1df2" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.61</div>`)[0];
+                popup_3114b29de497ffb8618e8c801723a532.setContent(html_918c49292f1fe7ef1fe75c48c1ad1df2);
+            
+        
+
+        circle_marker_f5379f03a968ec011d2c46c1407e5fe1.bindPopup(popup_3114b29de497ffb8618e8c801723a532)
+        ;
+
+        
+    
+    
+            var circle_marker_cb288840b94cbedf7c24109ecca230c5 = L.circleMarker(
+                [42.962635936427354, 77.18478670601775],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_da870c3c6225c3bf0c2750fb0437abb1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2fe6c099fe8a7302a80bc2b5a0bb4a8 = $(`<div id="html_e2fe6c099fe8a7302a80bc2b5a0bb4a8" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.92</div>`)[0];
+                popup_da870c3c6225c3bf0c2750fb0437abb1.setContent(html_e2fe6c099fe8a7302a80bc2b5a0bb4a8);
+            
+        
+
+        circle_marker_cb288840b94cbedf7c24109ecca230c5.bindPopup(popup_da870c3c6225c3bf0c2750fb0437abb1)
+        ;
+
+        
+    
+    
+            var circle_marker_5a32df58fe803724ddd434f708aab605 = L.circleMarker(
+                [42.85630602788306, 77.18548015770915],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_682bba84cc3b1e2439b19244e7cd24ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c1380e8fc7d8928e0626c5c3fe9e0e5 = $(`<div id="html_9c1380e8fc7d8928e0626c5c3fe9e0e5" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.40</div>`)[0];
+                popup_682bba84cc3b1e2439b19244e7cd24ca.setContent(html_9c1380e8fc7d8928e0626c5c3fe9e0e5);
+            
+        
+
+        circle_marker_5a32df58fe803724ddd434f708aab605.bindPopup(popup_682bba84cc3b1e2439b19244e7cd24ca)
+        ;
+
+        
+    
+    
+            var circle_marker_8bb674da8792995a4caf45d14df2f210 = L.circleMarker(
+                [42.718938864425446, 77.37895921453183],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_8556b1a59ea91ce47bd2d92bfd192c7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2051b180a9393da70e5b83a2b4c6626 = $(`<div id="html_a2051b180a9393da70e5b83a2b4c6626" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 4.00</div>`)[0];
+                popup_8556b1a59ea91ce47bd2d92bfd192c7a.setContent(html_a2051b180a9393da70e5b83a2b4c6626);
+            
+        
+
+        circle_marker_8bb674da8792995a4caf45d14df2f210.bindPopup(popup_8556b1a59ea91ce47bd2d92bfd192c7a)
+        ;
+
+        
+    
+    
+            var circle_marker_5cc6e449ed367d2d4485704f6b9ee074 = L.circleMarker(
+                [42.87067091194687, 77.33699439959298],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_63d2ec1889338aa2195c4cbab0055b48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4312959d5abd3a4f0ef438a7a752c214 = $(`<div id="html_4312959d5abd3a4f0ef438a7a752c214" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: -0.00</div>`)[0];
+                popup_63d2ec1889338aa2195c4cbab0055b48.setContent(html_4312959d5abd3a4f0ef438a7a752c214);
+            
+        
+
+        circle_marker_5cc6e449ed367d2d4485704f6b9ee074.bindPopup(popup_63d2ec1889338aa2195c4cbab0055b48)
+        ;
+
+        
+    
+    
+            var circle_marker_4b35e8002bc47388be6d7e12ac8773a4 = L.circleMarker(
+                [42.69758317501917, 77.03684586384037],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_fe022f01b43ffba3f527a3fdba291c8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6899bb39315673b91437fcfe2814c521 = $(`<div id="html_6899bb39315673b91437fcfe2814c521" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: -0.24</div>`)[0];
+                popup_fe022f01b43ffba3f527a3fdba291c8f.setContent(html_6899bb39315673b91437fcfe2814c521);
+            
+        
+
+        circle_marker_4b35e8002bc47388be6d7e12ac8773a4.bindPopup(popup_fe022f01b43ffba3f527a3fdba291c8f)
+        ;
+
+        
+    
+    
+            var circle_marker_febd2b9a30b231a474171f1b15a521e0 = L.circleMarker(
+                [42.88010474029966, 77.3454258129373],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_e4f9df5a83218d792e9e7ac8d056139f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_641c0656588206521331793cd65784e2 = $(`<div id="html_641c0656588206521331793cd65784e2" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: -0.90</div>`)[0];
+                popup_e4f9df5a83218d792e9e7ac8d056139f.setContent(html_641c0656588206521331793cd65784e2);
+            
+        
+
+        circle_marker_febd2b9a30b231a474171f1b15a521e0.bindPopup(popup_e4f9df5a83218d792e9e7ac8d056139f)
+        ;
+
+        
+    
+    
+            var circle_marker_9b1283a98a251e963582915d14bc5ae8 = L.circleMarker(
+                [42.83799910530296, 77.2881494900836],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_bff329c630d7453434b28fec689ec730 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c4a6f20dcc77092fcf784e448449c82 = $(`<div id="html_3c4a6f20dcc77092fcf784e448449c82" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.98</div>`)[0];
+                popup_bff329c630d7453434b28fec689ec730.setContent(html_3c4a6f20dcc77092fcf784e448449c82);
+            
+        
+
+        circle_marker_9b1283a98a251e963582915d14bc5ae8.bindPopup(popup_bff329c630d7453434b28fec689ec730)
+        ;
+
+        
+    
+    
+            var circle_marker_9e16dd499e120ff693679ce671660ee9 = L.circleMarker(
+                [42.87922244618918, 77.18211055055029],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_dece14871c794c15a96791824bccdc03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7fbe892ef9dd1feb0a52b58504ca467 = $(`<div id="html_e7fbe892ef9dd1feb0a52b58504ca467" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.35</div>`)[0];
+                popup_dece14871c794c15a96791824bccdc03.setContent(html_e7fbe892ef9dd1feb0a52b58504ca467);
+            
+        
+
+        circle_marker_9e16dd499e120ff693679ce671660ee9.bindPopup(popup_dece14871c794c15a96791824bccdc03)
+        ;
+
+        
+    
+    
+            var circle_marker_d6bee09e51c1b931169df3c79fe37085 = L.circleMarker(
+                [42.75101328122334, 77.1879632117608],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_4796c12451ef9767f32c1f24ab29e952 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89d0ec67ef49949b82042da3f6809d81 = $(`<div id="html_89d0ec67ef49949b82042da3f6809d81" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: -0.13</div>`)[0];
+                popup_4796c12451ef9767f32c1f24ab29e952.setContent(html_89d0ec67ef49949b82042da3f6809d81);
+            
+        
+
+        circle_marker_d6bee09e51c1b931169df3c79fe37085.bindPopup(popup_4796c12451ef9767f32c1f24ab29e952)
+        ;
+
+        
+    
+    
+            var circle_marker_8f492357759e5826698025033827daed = L.circleMarker(
+                [42.964128175389526, 77.01723314749812],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_a14a4a183ee5eac453e9864cf803e977 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65da0f8f19e8d15dfeaa1a0f8c8e64b7 = $(`<div id="html_65da0f8f19e8d15dfeaa1a0f8c8e64b7" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.21</div>`)[0];
+                popup_a14a4a183ee5eac453e9864cf803e977.setContent(html_65da0f8f19e8d15dfeaa1a0f8c8e64b7);
+            
+        
+
+        circle_marker_8f492357759e5826698025033827daed.bindPopup(popup_a14a4a183ee5eac453e9864cf803e977)
+        ;
+
+        
+    
+    
+            var circle_marker_ea7f93f1cca6bcadf72a749faff22931 = L.circleMarker(
+                [42.71724267204895, 77.13070920950283],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_eaa65d4e504b3e9b7366d27672314d4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b77d32cd85ecbfb3d258cc08fa612fc9 = $(`<div id="html_b77d32cd85ecbfb3d258cc08fa612fc9" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 6.06</div>`)[0];
+                popup_eaa65d4e504b3e9b7366d27672314d4f.setContent(html_b77d32cd85ecbfb3d258cc08fa612fc9);
+            
+        
+
+        circle_marker_ea7f93f1cca6bcadf72a749faff22931.bindPopup(popup_eaa65d4e504b3e9b7366d27672314d4f)
+        ;
+
+        
+    
+    
+            var circle_marker_c1ab259d37f0c610aae759c8e5ad1f36 = L.circleMarker(
+                [42.95828876269366, 77.3581744037128],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_9e3fa24dde10e8a569da418560b65e7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b8b229823f30400d53fb1185f179d73 = $(`<div id="html_4b8b229823f30400d53fb1185f179d73" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.49</div>`)[0];
+                popup_9e3fa24dde10e8a569da418560b65e7b.setContent(html_4b8b229823f30400d53fb1185f179d73);
+            
+        
+
+        circle_marker_c1ab259d37f0c610aae759c8e5ad1f36.bindPopup(popup_9e3fa24dde10e8a569da418560b65e7b)
+        ;
+
+        
+    
+    
+            var circle_marker_1352d7112d6229384fc6d102e1ad0bfc = L.circleMarker(
+                [42.8028880724584, 77.2310050184413],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_6e199b6dea0c9945f23e4d3061d58ca5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c84d65af175cc8a7bd536d127e9e80ed = $(`<div id="html_c84d65af175cc8a7bd536d127e9e80ed" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 4.18</div>`)[0];
+                popup_6e199b6dea0c9945f23e4d3061d58ca5.setContent(html_c84d65af175cc8a7bd536d127e9e80ed);
+            
+        
+
+        circle_marker_1352d7112d6229384fc6d102e1ad0bfc.bindPopup(popup_6e199b6dea0c9945f23e4d3061d58ca5)
+        ;
+
+        
+    
+    
+            var circle_marker_aeeea51284bb68a90fa60a1fc5ae85df = L.circleMarker(
+                [42.92864614781418, 77.04732186963516],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_7e9f4f10f151e19a9444438c1d0562ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2273303ad5f69d4c17bde125fd663493 = $(`<div id="html_2273303ad5f69d4c17bde125fd663493" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 0.53</div>`)[0];
+                popup_7e9f4f10f151e19a9444438c1d0562ad.setContent(html_2273303ad5f69d4c17bde125fd663493);
+            
+        
+
+        circle_marker_aeeea51284bb68a90fa60a1fc5ae85df.bindPopup(popup_7e9f4f10f151e19a9444438c1d0562ad)
+        ;
+
+        
+    
+    
+            var circle_marker_62c2542612058d4c6dfb36992bb24cff = L.circleMarker(
+                [42.63674770905811, 77.02869042806928],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_4356470858e7599c8f814116627c99df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_491b169dfd21bd9a3a7c8fb29069cc41 = $(`<div id="html_491b169dfd21bd9a3a7c8fb29069cc41" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.93</div>`)[0];
+                popup_4356470858e7599c8f814116627c99df.setContent(html_491b169dfd21bd9a3a7c8fb29069cc41);
+            
+        
+
+        circle_marker_62c2542612058d4c6dfb36992bb24cff.bindPopup(popup_4356470858e7599c8f814116627c99df)
+        ;
+
+        
+    
+    
+            var circle_marker_e7953d292bec4da27e7a97ccb5a74470 = L.circleMarker(
+                [42.745064802398645, 77.10027958221636],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_5cbb3602c2c3aaecc3427f59054f633b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f13d4f676864cb3edf3562651ca024b4 = $(`<div id="html_f13d4f676864cb3edf3562651ca024b4" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.92</div>`)[0];
+                popup_5cbb3602c2c3aaecc3427f59054f633b.setContent(html_f13d4f676864cb3edf3562651ca024b4);
+            
+        
+
+        circle_marker_e7953d292bec4da27e7a97ccb5a74470.bindPopup(popup_5cbb3602c2c3aaecc3427f59054f633b)
+        ;
+
+        
+    
+    
+            var circle_marker_db93e3485c81862b07fa5c614d938fda = L.circleMarker(
+                [42.803149187492025, 77.20375492395802],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_9388073e51ac4eae8fc12682fd48210c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad9d109e05ac18f6b7903f182d4b5670 = $(`<div id="html_ad9d109e05ac18f6b7903f182d4b5670" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 2.19</div>`)[0];
+                popup_9388073e51ac4eae8fc12682fd48210c.setContent(html_ad9d109e05ac18f6b7903f182d4b5670);
+            
+        
+
+        circle_marker_db93e3485c81862b07fa5c614d938fda.bindPopup(popup_9388073e51ac4eae8fc12682fd48210c)
+        ;
+
+        
+    
+    
+            var circle_marker_17860eab58b09597e04277232fda5915 = L.circleMarker(
+                [42.908859329809985, 77.0627770906085],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+    
+        var popup_56f68f860bab5e968534a6e966af8d5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7a67f0c18b67ce29e197cb1b7c30217 = $(`<div id="html_d7a67f0c18b67ce29e197cb1b7c30217" style="width: 100.0%; height: 100.0%;">River: Kishi Osek<br>Pred. Availability: 1.03</div>`)[0];
+                popup_56f68f860bab5e968534a6e966af8d5b.setContent(html_d7a67f0c18b67ce29e197cb1b7c30217);
+            
+        
+
+        circle_marker_17860eab58b09597e04277232fda5915.bindPopup(popup_56f68f860bab5e968534a6e966af8d5b)
+        ;
+
+        
+    
+    
+            var heat_map_67259184e8e5c1f6fd9e506c7c8a2cf7 = L.heatLayer(
+                [[42.449816047538945, 77.68028572256397, 2.4980500733630207], [42.31572485593644, 77.61976415956362, 5.305733470151648], [42.6851968015436, 77.43674886641547, 2.078517752434386], [42.4837787073624, 77.61400661753483, 1.6663824537657814], [42.49440019751904, 77.53087995469382, 5.092400549086187], [42.31696891928276, 77.4061304550222, 3.981902592040526], [42.32680661510049, 77.69013725339163, 4.344650814277701], [42.51925808109121, 77.36985887435853, 2.0230776706280826], [42.57880966640172, 77.44519313616155, 3.0763827410617353], [42.49004334597274, 77.45442037426074, 2.1266386024278883], [42.62642270284573, 77.47282691402664, 0.13466788094705057], [42.45422100059667, 77.66616648058668, 2.7985185866152977], [42.44025707658286, 77.45072425110969, 1.5973917600661676], [42.30334188166886, 77.36743961937361, 1.5855962521217684], [42.49237664323372, 77.45052472678199, 4.395879723975679], [42.461524402099, 77.38589780096335, 2.097465086662554], [42.67737124290611, 77.33939785667177, 2.2869268198595827], [42.664319164419545, 77.36983359387054, 0.2564912756236056], [42.40060521587056, 77.57786869183879, 0.9959175228142183], [42.31336120263097, 77.33643376595202, 0.8210768105542183], [42.4673475640528, 77.67157869422905, 2.5437427300386495], [42.34452572859102, 77.38485015948878, 4.296437628512909], [42.569610471650456, 77.47399367166818, -1.2229865321348905], [42.406620048181715, 77.43794951347728, 0.3664440051040648], [42.538564010633856, 77.50027865111812, 2.539453734487966], [42.63652334059988, 77.57087603759071, 1.515655127239972], [42.329377876402305, 77.41356695986578, 0.5925688452326985], [42.45679244516278, 77.55837367392037, -0.5670433175441576], [42.56180890760438, 77.40174381552255, 1.7242551395525922], [42.36552546543773, 77.3160591080115, 1.567365076790587], [42.5957344783584, 77.51644116658166, 0.2741871746796689], [42.57269137482206, 77.66470981880965, -0.35213627402874137], [42.386527987607586, 77.50233327186264, 1.5873967884733085], [42.466596164947624, 77.68619637537512, 2.798302996285525], [42.58199385539103, 77.33295269563136, 4.600472304581019], [42.366331990415794, 77.32125983686917, 2.8648727341134217], [42.38148131666263, 77.6052759482878, 4.359920555055135], [42.335104589791555, 77.64459125785385, 2.588047691470201], [42.392073396533604, 77.56340257887696, 1.4998118160125], [42.47877521494603, 77.60440824168617, 2.763733080380372], [42.57610504367416, 77.59600221544362, 2.325414135356356], [42.5931657196678, 77.30839199793357, 1.9606045132706813], [42.67551530568523, 77.38802708590194, 1.6400099636619458], [42.68460672265073, 77.69048384231857, 0.5583962042151871], [42.6501046430632, 77.69779103108304, -0.07769476585798636], [42.31522729245995, 77.60847267844728, 3.3732973416344527], [42.611636501505444, 77.45705803273448, 4.178671752171972], [42.56004423989124, 77.35469233036625, 1.9981159941779763], [42.383389111560284, 77.45417838036664, 1.6561248280147485], [42.54087923187902, 77.31284471629462, 3.5961178261565228], [42.70968501534827, 77.08722705422878, 2.034016583419306], [42.84927318456011, 77.16074396227563, 1.205642297580129], [42.630461157351036, 77.01269334466953, 1.5131177941736687], [42.797202362402224, 77.38618285727127, 4.909768403327846], [42.85035038907463, 77.37962289385645, 4.049517575309204], [42.764729741013575, 77.14067288789711, 0.4996453291800754], [42.6765320121161, 77.03207092897735, -0.3461072658979239], [42.7753617336484, 77.06868584692269, 3.416751438020829], [42.8694096174072, 77.27170745001801, 2.34810397621275], [42.943846983840245, 77.27536981655825, 3.470292169495234], [42.789219001784616, 77.2946931783428, 1.89635080901264], [42.917433700166846, 77.19861038187072, 1.4914025182113124], [42.83870917753459, 77.01312572664946, 0.38800663178783323], [42.950508799498024, 77.01310179364667, 1.489250479862947], [42.91631250752168, 77.11733004976685, 1.3280970439787083], [42.76105267364427, 77.36894662373253, 1.1338752819243576], [42.73434914498791, 77.32790273652508, -1.080047888363204], [42.90637193686768, 77.00886105309957, 1.8046452987395356], [42.707856544522, 77.00538061172189, 2.7832832472566706], [42.72295932659321, 77.35485872312474, 4.599132859086062], [42.757012565871285, 77.08822626422345, 2.068084581691471], [42.81531656301755, 77.00583472970354, -0.5817217278122806], [42.76533417873984, 77.2179072528302, 2.1983366297673825], [42.83698466271154, 77.35104928142634, 2.5525105701325215], [42.922421338292594, 77.2951388231636, 1.2411061314614484], [42.616287911748614, 77.03630930575008, 0.2522235191155777], [42.70497275154615, 77.18892872308955, 3.33018725544919], [42.66386481741323, 77.21481593720493, 1.8251604419114507], [42.608997167352335, 77.16479696992174, 2.3194581487280046], [42.705259633421704, 77.11341889060455, 4.5414829338163125], [42.983174886618706, 77.19632107777005, 2.4689761080117134], [42.926776369384655, 77.07665554492607, 1.6143726096218562], [42.962635936427354, 77.18478670601775, 1.9187968714140644], [42.85630602788306, 77.18548015770915, 2.396155108222982], [42.718938864425446, 77.37895921453183, 4.001064013704987], [42.87067091194687, 77.33699439959298, -0.003887664726733373], [42.69758317501917, 77.03684586384037, -0.24143404616316397], [42.88010474029966, 77.3454258129373, -0.9006541565193854], [42.83799910530296, 77.2881494900836, 1.9764189250824449], [42.87922244618918, 77.18211055055029, 2.3523375736985255], [42.75101328122334, 77.1879632117608, -0.12653931523391443], [42.964128175389526, 77.01723314749812, 1.2106719533352737], [42.71724267204895, 77.13070920950283, 6.064644881659917], [42.95828876269366, 77.3581744037128, 1.4865764735947409], [42.8028880724584, 77.2310050184413, 4.181192229374063], [42.92864614781418, 77.04732186963516, 0.527601085324651], [42.63674770905811, 77.02869042806928, 2.9250458298946627], [42.745064802398645, 77.10027958221636, 1.9209303790225496], [42.803149187492025, 77.20375492395802, 2.1949524676951726], [42.908859329809985, 77.0627770906085, 1.0294588197546148]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 20,
+}
+            );
+        
+    
+            heat_map_67259184e8e5c1f6fd9e506c7c8a2cf7.addTo(map_0758dbd099f3c3f20dc7882da6636619);
+        
+</script>
+</html>

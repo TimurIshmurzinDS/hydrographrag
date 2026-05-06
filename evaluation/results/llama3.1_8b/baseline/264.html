@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_90de5224c6e8f3b5c3c3b6009ccfe6b8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_90de5224c6e8f3b5c3c3b6009ccfe6b8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_90de5224c6e8f3b5c3c3b6009ccfe6b8 = L.map(
+                "map_90de5224c6e8f3b5c3c3b6009ccfe6b8",
+                {
+                    center: [51.5, 72.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_21ff0710b8527adf68ccf8e639e96aa6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_21ff0710b8527adf68ccf8e639e96aa6.addTo(map_90de5224c6e8f3b5c3c3b6009ccfe6b8);
+        
+    
+            var marker_bad6f63e03c127403d62d08402232ab8 = L.marker(
+                [51.5, 72.0],
+                {
+}
+            ).addTo(map_90de5224c6e8f3b5c3c3b6009ccfe6b8);
+        
+    
+        var popup_42ae9accff4384e64d6c7bc464fe10f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92c01b4a0a30ed08abb2770f55800a74 = $(`<div id="html_92c01b4a0a30ed08abb2770f55800a74" style="width: 100.0%; height: 100.0%;">Река Баянколь</div>`)[0];
+                popup_42ae9accff4384e64d6c7bc464fe10f1.setContent(html_92c01b4a0a30ed08abb2770f55800a74);
+            
+        
+
+        marker_bad6f63e03c127403d62d08402232ab8.bindPopup(popup_42ae9accff4384e64d6c7bc464fe10f1)
+        ;
+
+        
+    
+    
+            var poly_line_37b5ed4eee9a04b5024075f4f1dc8a7c = L.polyline(
+                [[51.4, 71.9], [51.6, 72.1]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_90de5224c6e8f3b5c3c3b6009ccfe6b8);
+        
+</script>
+</html>

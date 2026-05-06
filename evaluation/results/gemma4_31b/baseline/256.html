@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_21b5d6c6035d619475b7e44de8c72017 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_21b5d6c6035d619475b7e44de8c72017" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_21b5d6c6035d619475b7e44de8c72017 = L.map(
+                "map_21b5d6c6035d619475b7e44de8c72017",
+                {
+                    center: [43.08, 78.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c22fa9d45c7078bb249ac041f82dbaca = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c22fa9d45c7078bb249ac041f82dbaca.addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            var poly_line_0bb3935336f7736272db6cf5a5af6389 = L.polyline(
+                [[43.15, 78.1], [43.12, 78.15], [43.08, 78.2], [43.05, 78.25], [43.02, 78.3]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            poly_line_0bb3935336f7736272db6cf5a5af6389.bindTooltip(
+                `<div>
+                     Река Талгар
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_3686fdb4c142ab8a665568f1ded50710 = L.circle(
+                [43.15, 78.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            circle_3686fdb4c142ab8a665568f1ded50710.bindTooltip(
+                `<div>
+                     Зона сбора ингредиентов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_d15b9c9cc114d844eecd6bc4c2c1c1d7 = L.circle(
+                [43.12, 78.15],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            circle_d15b9c9cc114d844eecd6bc4c2c1c1d7.bindTooltip(
+                `<div>
+                     Зона сбора ингредиентов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_02fa0521f0d04aefd5c7d730612d1e88 = L.circle(
+                [43.08, 78.2],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            circle_02fa0521f0d04aefd5c7d730612d1e88.bindTooltip(
+                `<div>
+                     Зона сбора ингредиентов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_a27bda48c8895df03b44dffd70daf2fa = L.circle(
+                [43.05, 78.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            circle_a27bda48c8895df03b44dffd70daf2fa.bindTooltip(
+                `<div>
+                     Зона сбора ингредиентов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_40c245f1994c513f95ee1b7dc47cd252 = L.circle(
+                [43.02, 78.3],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            circle_40c245f1994c513f95ee1b7dc47cd252.bindTooltip(
+                `<div>
+                     Зона сбора ингредиентов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dad600a9d6ff2f73b5d5e8bb214cc65b = L.marker(
+                [43.135, 78.13],
+                {
+}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            var icon_a205ae4fbcd7ed6d3fa7926bcc0f3562 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_450b61991cfafbe1e7655d9aaeb369cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53d6211aaf2a18642aa4d82470785a35 = $(`<div id="html_53d6211aaf2a18642aa4d82470785a35" style="width: 100.0%; height: 100.0%;">Сбор: Дикая Мята</div>`)[0];
+                popup_450b61991cfafbe1e7655d9aaeb369cf.setContent(html_53d6211aaf2a18642aa4d82470785a35);
+            
+        
+
+        marker_dad600a9d6ff2f73b5d5e8bb214cc65b.bindPopup(popup_450b61991cfafbe1e7655d9aaeb369cf)
+        ;
+
+        
+    
+    
+                marker_dad600a9d6ff2f73b5d5e8bb214cc65b.setIcon(icon_a205ae4fbcd7ed6d3fa7926bcc0f3562);
+            
+    
+            var marker_b1cae242befd4162d3a081b8dd67cf25 = L.marker(
+                [43.065, 78.22],
+                {
+}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            var icon_5e4c708becd813c1178525b5d68d113d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7eb99ba462d98b868447087438e7fa4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08737a75e513837ca0690175617a6fe8 = $(`<div id="html_08737a75e513837ca0690175617a6fe8" style="width: 100.0%; height: 100.0%;">Сбор: Горный Чабрец</div>`)[0];
+                popup_f7eb99ba462d98b868447087438e7fa4.setContent(html_08737a75e513837ca0690175617a6fe8);
+            
+        
+
+        marker_b1cae242befd4162d3a081b8dd67cf25.bindPopup(popup_f7eb99ba462d98b868447087438e7fa4)
+        ;
+
+        
+    
+    
+                marker_b1cae242befd4162d3a081b8dd67cf25.setIcon(icon_5e4c708becd813c1178525b5d68d113d);
+            
+    
+            var marker_01e9663c9bc872a52de5eb48a83bb0f8 = L.marker(
+                [43.03, 78.28],
+                {
+}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            var icon_ab4a1b0e0c7a28e00a0de0b301b0b074 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_267603afd961ff23f5502cf455224cd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66fb2f9278f4e3c510b01030f6ec51c4 = $(`<div id="html_66fb2f9278f4e3c510b01030f6ec51c4" style="width: 100.0%; height: 100.0%;">Сбор: Дикая Малина (листья)</div>`)[0];
+                popup_267603afd961ff23f5502cf455224cd9.setContent(html_66fb2f9278f4e3c510b01030f6ec51c4);
+            
+        
+
+        marker_01e9663c9bc872a52de5eb48a83bb0f8.bindPopup(popup_267603afd961ff23f5502cf455224cd9)
+        ;
+
+        
+    
+    
+                marker_01e9663c9bc872a52de5eb48a83bb0f8.setIcon(icon_ab4a1b0e0c7a28e00a0de0b301b0b074);
+            
+    
+            var marker_f7a19e533812aa6624e2cbf1080b1dbf = L.marker(
+                [43.1, 78.18],
+                {
+}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            var icon_b7a240e5eecc07355b0a8d176ec63598 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d46b7f1f5fe27880f371c6392698b618 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd2c22a60aacbc95b0a9350648d08197 = $(`<div id="html_fd2c22a60aacbc95b0a9350648d08197" style="width: 100.0%; height: 100.0%;">Источник воды из р. Талгар</div>`)[0];
+                popup_d46b7f1f5fe27880f371c6392698b618.setContent(html_fd2c22a60aacbc95b0a9350648d08197);
+            
+        
+
+        marker_f7a19e533812aa6624e2cbf1080b1dbf.bindPopup(popup_d46b7f1f5fe27880f371c6392698b618)
+        ;
+
+        
+    
+    
+                marker_f7a19e533812aa6624e2cbf1080b1dbf.setIcon(icon_b7a240e5eecc07355b0a8d176ec63598);
+            
+    
+            var marker_1d0959588429004ccc23413ab2ea2d09 = L.marker(
+                [43.08, 78.2],
+                {
+}
+            ).addTo(map_21b5d6c6035d619475b7e44de8c72017);
+        
+    
+            var icon_0727482216fce00041636b378ef13d92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04cc78a9ef7206d67008c1089a724bc5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a84cf6e1e1409bb4b1ab6c2f981ac9ba = $(`<div id="html_a84cf6e1e1409bb4b1ab6c2f981ac9ba" style="width: 100.0%; height: 100.0%;">Место приготовления блюда</div>`)[0];
+                popup_04cc78a9ef7206d67008c1089a724bc5.setContent(html_a84cf6e1e1409bb4b1ab6c2f981ac9ba);
+            
+        
+
+        marker_1d0959588429004ccc23413ab2ea2d09.bindPopup(popup_04cc78a9ef7206d67008c1089a724bc5)
+        ;
+
+        
+    
+    
+                marker_1d0959588429004ccc23413ab2ea2d09.setIcon(icon_0727482216fce00041636b378ef13d92);
+            
+</script>
+</html>

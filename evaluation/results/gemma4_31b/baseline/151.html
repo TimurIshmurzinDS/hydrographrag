@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ea308e8e1129892943743d7d81074476 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+                 <div style="position: fixed; 
+                             top: 50px; left: 50px; width: 300px; height: 90px; 
+                             z-index:9999; font-size:14px;
+                             background-color:white; padding: 10px;
+                             border: 2px solid grey; border-radius: 10px;">
+                 <b>Анализ риска паводков</b><br/>
+                 Красный: Высокий риск (близость к руслу + низина)<br/>
+                 Синий/Голубой: Линии рек Ili и Bayankol
+                 </div>
+                 
+    
+            <div class="folium-map" id="map_ea308e8e1129892943743d7d81074476" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ea308e8e1129892943743d7d81074476 = L.map(
+                "map_ea308e8e1129892943743d7d81074476",
+                {
+                    center: [43.5, 82.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0cc4148e98bd238e22dd5c5231a29e5c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0cc4148e98bd238e22dd5c5231a29e5c.addTo(map_ea308e8e1129892943743d7d81074476);
+        
+    
+            var poly_line_5546b77f5b8f1ee8e3c1e0785eca8314 = L.polyline(
+                [[43.2, 78.5], [43.5, 80.0], [43.8, 82.0], [43.7, 84.0], [43.5, 86.0]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ea308e8e1129892943743d7d81074476);
+        
+    
+            poly_line_5546b77f5b8f1ee8e3c1e0785eca8314.bindTooltip(
+                `<div>
+                     Ili River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_74378595221d01e96dd6df721c6544ca = L.polyline(
+                [[43.0, 81.0], [43.2, 81.5], [43.4, 82.2]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ea308e8e1129892943743d7d81074476);
+        
+    
+            poly_line_74378595221d01e96dd6df721c6544ca.bindTooltip(
+                `<div>
+                     Bayankol River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var heat_map_971a0506093695a1ce88f4826c21ff17 = L.heatLayer(
+                [],
+                {
+  "minOpacity": 0.3,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 20,
+}
+            );
+        
+    
+            heat_map_971a0506093695a1ce88f4826c21ff17.addTo(map_ea308e8e1129892943743d7d81074476);
+        
+</script>
+</html>

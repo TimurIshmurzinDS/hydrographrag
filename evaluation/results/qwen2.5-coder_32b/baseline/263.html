@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a5592e30f4723447df55363c273943a0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a5592e30f4723447df55363c273943a0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a5592e30f4723447df55363c273943a0 = L.map(
+                "map_a5592e30f4723447df55363c273943a0",
+                {
+                    center: [48.7396, 2.3072],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_da59a112a2edb8f6b4c48a8390b0d974 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_da59a112a2edb8f6b4c48a8390b0d974.addTo(map_a5592e30f4723447df55363c273943a0);
+        
+    
+            var marker_cb8e0d52b17bbe74a6834bd91a57f880 = L.marker(
+                [48.7396, 2.3072],
+                {
+}
+            ).addTo(map_a5592e30f4723447df55363c273943a0);
+        
+    
+        var popup_35d674004e9fb6bac586a56a3d544c80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f39c4f762cf01cf6573477445842b58 = $(`<div id="html_1f39c4f762cf01cf6573477445842b58" style="width: 100.0%; height: 100.0%;">Источник воды</div>`)[0];
+                popup_35d674004e9fb6bac586a56a3d544c80.setContent(html_1f39c4f762cf01cf6573477445842b58);
+            
+        
+
+        marker_cb8e0d52b17bbe74a6834bd91a57f880.bindPopup(popup_35d674004e9fb6bac586a56a3d544c80)
+        ;
+
+        
+    
+    
+            var marker_f4e30b683e54a8cf06181d61c66e73e1 = L.marker(
+                [48.745, 2.31],
+                {
+}
+            ).addTo(map_a5592e30f4723447df55363c273943a0);
+        
+    
+        var popup_f341ce49f716f608b4b2b701ba15dbf4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91afcf0de76703437a6df68af1a357f1 = $(`<div id="html_91afcf0de76703437a6df68af1a357f1" style="width: 100.0%; height: 100.0%;">Минеральные включения</div>`)[0];
+                popup_f341ce49f716f608b4b2b701ba15dbf4.setContent(html_91afcf0de76703437a6df68af1a357f1);
+            
+        
+
+        marker_f4e30b683e54a8cf06181d61c66e73e1.bindPopup(popup_f341ce49f716f608b4b2b701ba15dbf4)
+        ;
+
+        
+    
+    
+            var marker_e437a7932c0bc61a36f9278089dd8368 = L.marker(
+                [48.7396, 2.3072],
+                {
+}
+            ).addTo(map_a5592e30f4723447df55363c273943a0);
+        
+    
+        var popup_e6ba47c9e1413aa234fef753d709b997 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d93974db75174b4408ee24174a094c60 = $(`<div id="html_d93974db75174b4408ee24174a094c60" style="width: 100.0%; height: 100.0%;">Состав почвы: {'sand': 60, 'clay': 20, 'organic_matter': 20}  pH: 7.0</div>`)[0];
+                popup_e6ba47c9e1413aa234fef753d709b997.setContent(html_d93974db75174b4408ee24174a094c60);
+            
+        
+
+        marker_e437a7932c0bc61a36f9278089dd8368.bindPopup(popup_e6ba47c9e1413aa234fef753d709b997)
+        ;
+
+        
+    
+    
+            var marker_90a522bef3ea2ced3ef2dd3cbb449c9d = L.marker(
+                [48.7396, 2.3072],
+                {
+}
+            ).addTo(map_a5592e30f4723447df55363c273943a0);
+        
+    
+        var popup_473a240a7bf579525aef18bd1fadf59f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36e008833ceb65e73c9f79c5536c83ce = $(`<div id="html_36e008833ceb65e73c9f79c5536c83ce" style="width: 100.0%; height: 100.0%;">Температура: -50 °C  Солнечное освещение: 12 ч/сутки</div>`)[0];
+                popup_473a240a7bf579525aef18bd1fadf59f.setContent(html_36e008833ceb65e73c9f79c5536c83ce);
+            
+        
+
+        marker_90a522bef3ea2ced3ef2dd3cbb449c9d.bindPopup(popup_473a240a7bf579525aef18bd1fadf59f)
+        ;
+
+        
+    
+    
+            var marker_dce1a869387d9ad314752f2bfa7336f5 = L.marker(
+                [48.7396, 2.3072],
+                {
+}
+            ).addTo(map_a5592e30f4723447df55363c273943a0);
+        
+    
+        var popup_f7245da39fac7af125897e2bb16838a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_940d739544aa9f9749688b80c78b883b = $(`<div id="html_940d739544aa9f9749688b80c78b883b" style="width: 100.0%; height: 100.0%;">Расстояние до источника: 50 км  Эффективность системы полива: 0.8</div>`)[0];
+                popup_f7245da39fac7af125897e2bb16838a2.setContent(html_940d739544aa9f9749688b80c78b883b);
+            
+        
+
+        marker_dce1a869387d9ad314752f2bfa7336f5.bindPopup(popup_f7245da39fac7af125897e2bb16838a2)
+        ;
+
+        
+    
+    
+            var marker_e7c368b077dfbe91d6083da19306e879 = L.marker(
+                [48.7396, 2.3072],
+                {
+}
+            ).addTo(map_a5592e30f4723447df55363c273943a0);
+        
+    
+        var popup_c640f3649e6ca44393028757b9f86f29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a37f6c83f33dd1c1268d6e51d6ca58ef = $(`<div id="html_a37f6c83f33dd1c1268d6e51d6ca58ef" style="width: 100.0%; height: 100.0%;">Коэффициент роста: 1.2  Срок созревания: 90 дней</div>`)[0];
+                popup_c640f3649e6ca44393028757b9f86f29.setContent(html_a37f6c83f33dd1c1268d6e51d6ca58ef);
+            
+        
+
+        marker_e7c368b077dfbe91d6083da19306e879.bindPopup(popup_c640f3649e6ca44393028757b9f86f29)
+        ;
+
+        
+    
+</script>
+</html>

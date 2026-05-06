@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b44c5584f01433344ae4e899ad0d1a22 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b44c5584f01433344ae4e899ad0d1a22" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b44c5584f01433344ae4e899ad0d1a22 = L.map(
+                "map_b44c5584f01433344ae4e899ad0d1a22",
+                {
+                    center: [46.5, 81.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_380a7465466e23e39405b9ad4d58db3d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_380a7465466e23e39405b9ad4d58db3d.addTo(map_b44c5584f01433344ae4e899ad0d1a22);
+        
+    
+            var marker_cluster_e1a66bdf11ffccf6405c84728737b101 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_3affbef4505ff3c218e2f6bf512d14ae = L.marker(
+                [42.85, 79.05],
+                {
+}
+            ).addTo(marker_cluster_e1a66bdf11ffccf6405c84728737b101);
+        
+    
+            var icon_afc58268867f90405336dbcfaa82b62a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b7b3b28a1af50d5f391c5341dab7258 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_235a78e6597303a60e193f49a2190a22 = $(`<div id="html_235a78e6597303a60e193f49a2190a22" style="width: 100.0%; height: 100.0%;">Метеостанция 1 - активна</div>`)[0];
+                popup_1b7b3b28a1af50d5f391c5341dab7258.setContent(html_235a78e6597303a60e193f49a2190a22);
+            
+        
+
+        marker_3affbef4505ff3c218e2f6bf512d14ae.bindPopup(popup_1b7b3b28a1af50d5f391c5341dab7258)
+        ;
+
+        
+    
+    
+                marker_3affbef4505ff3c218e2f6bf512d14ae.setIcon(icon_afc58268867f90405336dbcfaa82b62a);
+            
+    
+            var marker_bbf82156e3848cb3bae0357e6f6b7ba7 = L.marker(
+                [43.0, 79.2],
+                {
+}
+            ).addTo(marker_cluster_e1a66bdf11ffccf6405c84728737b101);
+        
+    
+            var icon_316044d3b148e4cc30dbf48a8e5bc7ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64f6f0cf7f3e5dea7b507ed5b9a65fea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be3aff33b2caf43d0443056b4b3e9a98 = $(`<div id="html_be3aff33b2caf43d0443056b4b3e9a98" style="width: 100.0%; height: 100.0%;">Метеостанция 2 - неактивна</div>`)[0];
+                popup_64f6f0cf7f3e5dea7b507ed5b9a65fea.setContent(html_be3aff33b2caf43d0443056b4b3e9a98);
+            
+        
+
+        marker_bbf82156e3848cb3bae0357e6f6b7ba7.bindPopup(popup_64f6f0cf7f3e5dea7b507ed5b9a65fea)
+        ;
+
+        
+    
+    
+                marker_bbf82156e3848cb3bae0357e6f6b7ba7.setIcon(icon_316044d3b148e4cc30dbf48a8e5bc7ae);
+            
+    
+            marker_cluster_e1a66bdf11ffccf6405c84728737b101.addTo(map_b44c5584f01433344ae4e899ad0d1a22);
+        
+    
+            var marker_cluster_6237e6084e97f01050c79b6f603e6b3f = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_a385d1d0dfbc284092013d4413cbe60c = L.marker(
+                [50.6, 82.1],
+                {
+}
+            ).addTo(marker_cluster_6237e6084e97f01050c79b6f603e6b3f);
+        
+    
+            var icon_aaaac2796c037d07c8648021422d6eec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4cccda8e0f3ccc4c6d9b4253d0f68933 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3afe95b6a872f656165866df0de43004 = $(`<div id="html_3afe95b6a872f656165866df0de43004" style="width: 100.0%; height: 100.0%;">Метеостанция 1 - активна</div>`)[0];
+                popup_4cccda8e0f3ccc4c6d9b4253d0f68933.setContent(html_3afe95b6a872f656165866df0de43004);
+            
+        
+
+        marker_a385d1d0dfbc284092013d4413cbe60c.bindPopup(popup_4cccda8e0f3ccc4c6d9b4253d0f68933)
+        ;
+
+        
+    
+    
+                marker_a385d1d0dfbc284092013d4413cbe60c.setIcon(icon_aaaac2796c037d07c8648021422d6eec);
+            
+    
+            var marker_a7c030d80052e2b83c75bc7bf19ed50b = L.marker(
+                [50.75, 82.3],
+                {
+}
+            ).addTo(marker_cluster_6237e6084e97f01050c79b6f603e6b3f);
+        
+    
+            var icon_105daeb061b202282b4c93d95b79b93d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77772dd3e134fe048dfd159dd71bda81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33aa88e4c76ecd8935b8946b2d467cf4 = $(`<div id="html_33aa88e4c76ecd8935b8946b2d467cf4" style="width: 100.0%; height: 100.0%;">Метеостанция 2 - активна</div>`)[0];
+                popup_77772dd3e134fe048dfd159dd71bda81.setContent(html_33aa88e4c76ecd8935b8946b2d467cf4);
+            
+        
+
+        marker_a7c030d80052e2b83c75bc7bf19ed50b.bindPopup(popup_77772dd3e134fe048dfd159dd71bda81)
+        ;
+
+        
+    
+    
+                marker_a7c030d80052e2b83c75bc7bf19ed50b.setIcon(icon_105daeb061b202282b4c93d95b79b93d);
+            
+    
+            marker_cluster_6237e6084e97f01050c79b6f603e6b3f.addTo(map_b44c5584f01433344ae4e899ad0d1a22);
+        
+    
+            var layer_control_d2bd33f45343aa5c32dead8ecda83f51_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_380a7465466e23e39405b9ad4d58db3d,
+                },
+                overlays :  {
+                    "Tentek River" : marker_cluster_e1a66bdf11ffccf6405c84728737b101,
+                    "Sharyn River" : marker_cluster_6237e6084e97f01050c79b6f603e6b3f,
+                },
+            };
+            let layer_control_d2bd33f45343aa5c32dead8ecda83f51 = L.control.layers(
+                layer_control_d2bd33f45343aa5c32dead8ecda83f51_layers.base_layers,
+                layer_control_d2bd33f45343aa5c32dead8ecda83f51_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_b44c5584f01433344ae4e899ad0d1a22);
+
+        
+</script>
+</html>

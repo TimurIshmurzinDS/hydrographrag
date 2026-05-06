@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_12751f542e408f2d6558559843155c45 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 250px; height: 120px; 
+                border:2px solid grey; z-index:9999; font-size:14px;
+                background-color:white; opacity: 0.8; padding: 10px;">
+        <b>Легенда анализа:</b><br>
+        <i style="background:blue; width:10px; height:10px; display:inline-block"></i> Русло реки<br>
+        <i style="background:red; width:10px; height:10px; display:inline-block"></i> Высокий водозабор<br>
+        <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Средний водозабор<br>
+        <span style="color:red">Красные зоны</span>: Высокая потеря NDVI
+    </div>
+    
+    
+            <div class="folium-map" id="map_12751f542e408f2d6558559843155c45" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_12751f542e408f2d6558559843155c45 = L.map(
+                "map_12751f542e408f2d6558559843155c45",
+                {
+                    center: [45.35, 62.25],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1f0b3c3d2c0e1be7434ba7992390154a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1f0b3c3d2c0e1be7434ba7992390154a.addTo(map_12751f542e408f2d6558559843155c45);
+        
+    
+            var poly_line_64ea243aba59890686dd29eb51728e38 = L.polyline(
+                [[45.5, 62.0], [45.49387755102041, 62.01020408163265], [45.487755102040815, 62.02040816326531], [45.481632653061226, 62.03061224489796], [45.47551020408163, 62.04081632653061], [45.46938775510204, 62.05102040816327], [45.46326530612245, 62.06122448979592], [45.457142857142856, 62.07142857142857], [45.45102040816327, 62.08163265306123], [45.44489795918368, 62.09183673469388], [45.43877551020408, 62.10204081632653], [45.43265306122449, 62.11224489795919], [45.426530612244896, 62.12244897959184], [45.42040816326531, 62.13265306122449], [45.41428571428572, 62.142857142857146], [45.40816326530612, 62.1530612244898], [45.40204081632653, 62.16326530612245], [45.39591836734694, 62.173469387755105], [45.38979591836735, 62.183673469387756], [45.38367346938776, 62.19387755102041], [45.37755102040816, 62.204081632653065], [45.371428571428574, 62.214285714285715], [45.36530612244898, 62.224489795918366], [45.35918367346939, 62.234693877551024], [45.3530612244898, 62.244897959183675], [45.3469387755102, 62.255102040816325], [45.340816326530614, 62.265306122448976], [45.334693877551025, 62.275510204081634], [45.32857142857143, 62.285714285714285], [45.32244897959184, 62.295918367346935], [45.316326530612244, 62.30612244897959], [45.310204081632655, 62.316326530612244], [45.304081632653066, 62.326530612244895], [45.29795918367347, 62.33673469387755], [45.29183673469388, 62.3469387755102], [45.285714285714285, 62.357142857142854], [45.279591836734696, 62.36734693877551], [45.27346938775511, 62.37755102040816], [45.26734693877551, 62.38775510204081], [45.26122448979592, 62.39795918367347], [45.255102040816325, 62.40816326530612], [45.248979591836736, 62.41836734693877], [45.24285714285715, 62.42857142857143], [45.23673469387755, 62.43877551020408], [45.23061224489796, 62.44897959183673], [45.22448979591837, 62.45918367346939], [45.21836734693878, 62.46938775510204], [45.21224489795919, 62.47959183673469], [45.20612244897959, 62.48979591836735], [45.2, 62.5]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_12751f542e408f2d6558559843155c45);
+        
+    
+            poly_line_64ea243aba59890686dd29eb51728e38.bindTooltip(
+                `<div>
+                     Река Шынжалы
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var heat_map_25a851c96d6a7907fdbf48ea2b34cefa = L.heatLayer(
+                [[45.5, 62.0, 0.14757886189233688], [45.49387755102041, 62.01020408163265, 0.1], [45.487755102040815, 62.02040816326531, 0.1], [45.481632653061226, 62.03061224489796, 0.12006187094671936], [45.47551020408163, 62.04081632653061, 0.1], [45.46938775510204, 62.05102040816327, 0.19519546891006756], [45.46326530612245, 62.06122448979592, 0.19123263713231214], [45.457142857142856, 62.07142857142857, 0.1], [45.45102040816327, 62.08163265306123, 0.19169681247307244], [45.44489795918368, 62.09183673469388, 0.21647886569961597], [45.43877551020408, 62.10204081632653, 0.16513598746640898], [45.43265306122449, 62.11224489795919, 0.1], [45.426530612244896, 62.12244897959184, 0.24282775593558237], [45.42040816326531, 62.13265306122449, 0.14419036773950542], [45.41428571428572, 62.142857142857146, 0.13588768960855252], [45.40816326530612, 62.1530612244898, 0.15913414942767845], [45.40204081632653, 62.16326530612245, 0.17101476461745152], [45.39591836734694, 62.173469387755105, 0.1874243708188341], [45.38979591836735, 62.183673469387756, 0.15309986587575794], [45.38367346938776, 62.19387755102041, 0.15230429578006724], [45.37755102040816, 62.204081632653065, 0.20581051026579214], [45.371428571428574, 62.214285714285715, 0.26842586665826906], [45.36530612244898, 62.224489795918366, 0.23436511512916633], [45.35918367346939, 62.234693877551024, 0.1669430084868829], [45.3530612244898, 62.244897959183675, 0.15514288536434495], [45.3469387755102, 62.255102040816325, 0.2752466859740119], [45.340816326530614, 62.265306122448976, 0.29247941143280876], [45.334693877551025, 62.275510204081634, 0.21487832668013374], [45.32857142857143, 62.285714285714285, 0.2677843218375144], [45.32244897959184, 62.295918367346935, 0.2058430607550597], [45.316326530612244, 62.30612244897959, 0.17106390070142408], [45.310204081632655, 62.316326530612244, 0.3159618930081338], [45.304081632653066, 62.326530612244895, 0.33148080430352517], [45.29795918367347, 62.33673469387755, 0.33322936815237386], [45.29183673469388, 62.3469387755102, 0.25603199689873474], [45.285714285714285, 62.357142857142854, 0.23802742356331694], [45.279591836734696, 62.36734693877551, 0.32949734316544926], [45.27346938775511, 62.37755102040816, 0.320502913385485], [45.26734693877551, 62.38775510204081, 0.4040327095283954], [45.26122448979592, 62.39795918367347, 0.24188969529694748], [45.255102040816325, 62.40816326530612, 0.2456198563827725], [45.248979591836736, 62.41836734693877, 0.3207745055130519], [45.24285714285715, 62.42857142857143, 0.3057212790846211], [45.23673469387755, 62.43877551020408, 0.425195677431978], [45.23061224489796, 62.44897959183673, 0.32720805480411175], [45.22448979591837, 62.45918367346939, 0.3839123876334544], [45.21836734693878, 62.46938775510204, 0.354035040889718], [45.21224489795919, 62.47959183673469, 0.3479387536808739], [45.20612244897959, 62.48979591836735, 0.4150361590008741], [45.2, 62.5, 0.43317160443407926]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+  "gradient": {
+  0.2: "green",
+  0.4: "yellow",
+  0.6: "orange",
+  1: "red",
+},
+}
+            );
+        
+    
+            heat_map_25a851c96d6a7907fdbf48ea2b34cefa.addTo(map_12751f542e408f2d6558559843155c45);
+        
+    
+            var circle_marker_a1f32514b8a5314341f03b1c9f34e9fa = L.circleMarker(
+                [45.4, 62.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_12751f542e408f2d6558559843155c45);
+        
+    
+        var popup_ac054271d5c996e24d109874f662799c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1718d365c0e79f5974c1b092e4026a2f = $(`<div id="html_1718d365c0e79f5974c1b092e4026a2f" style="width: 100.0%; height: 100.0%;">Водозабор: Station A<br>Объем: High</div>`)[0];
+                popup_ac054271d5c996e24d109874f662799c.setContent(html_1718d365c0e79f5974c1b092e4026a2f);
+            
+        
+
+        circle_marker_a1f32514b8a5314341f03b1c9f34e9fa.bindPopup(popup_ac054271d5c996e24d109874f662799c)
+        ;
+
+        
+    
+    
+            var circle_marker_e161e49f6f1c5f14cc30cd050da6b2c2 = L.circleMarker(
+                [45.3, 62.35],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_12751f542e408f2d6558559843155c45);
+        
+    
+        var popup_cfbfd82a5b1bb2e102264173a1e17a00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d916a7e4268f42e47c74c1953036870 = $(`<div id="html_7d916a7e4268f42e47c74c1953036870" style="width: 100.0%; height: 100.0%;">Водозабор: Station B<br>Объем: Medium</div>`)[0];
+                popup_cfbfd82a5b1bb2e102264173a1e17a00.setContent(html_7d916a7e4268f42e47c74c1953036870);
+            
+        
+
+        circle_marker_e161e49f6f1c5f14cc30cd050da6b2c2.bindPopup(popup_cfbfd82a5b1bb2e102264173a1e17a00)
+        ;
+
+        
+    
+    
+            var circle_marker_16d0d8971a4f2fb6f6ac0083548039df = L.circleMarker(
+                [45.25, 62.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_12751f542e408f2d6558559843155c45);
+        
+    
+        var popup_b6cc8df522f601ec7b9d02199588e08b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5f11d2269a6e73f39832aa941577e15 = $(`<div id="html_f5f11d2269a6e73f39832aa941577e15" style="width: 100.0%; height: 100.0%;">Водозабор: Station C<br>Объем: High</div>`)[0];
+                popup_b6cc8df522f601ec7b9d02199588e08b.setContent(html_f5f11d2269a6e73f39832aa941577e15);
+            
+        
+
+        circle_marker_16d0d8971a4f2fb6f6ac0083548039df.bindPopup(popup_b6cc8df522f601ec7b9d02199588e08b)
+        ;
+
+        
+    
+</script>
+</html>

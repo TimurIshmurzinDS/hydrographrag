@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e86181f69dceec849945fca122539bfd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e86181f69dceec849945fca122539bfd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e86181f69dceec849945fca122539bfd = L.map(
+                "map_e86181f69dceec849945fca122539bfd",
+                {
+                    center: [43.5, 78.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b4d5ae2f02256d978d9a9f5a663e5b99 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b4d5ae2f02256d978d9a9f5a663e5b99.addTo(map_e86181f69dceec849945fca122539bfd);
+        
+    
+            var circle_bf4440050fa55e92a565e26f926d9cb1 = L.circle(
+                [43.5, 78.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20000, "stroke": true, "weight": 3}
+            ).addTo(map_e86181f69dceec849945fca122539bfd);
+        
+    
+        var popup_5c7d60ef8f51c2d78951bcc6e74f1a59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce1f79005af6357f7cae99e31d36c633 = $(`<div id="html_ce1f79005af6357f7cae99e31d36c633" style="width: 100.0%; height: 100.0%;">Зона ускоренного развития иммунитета рыб</div>`)[0];
+                popup_5c7d60ef8f51c2d78951bcc6e74f1a59.setContent(html_ce1f79005af6357f7cae99e31d36c633);
+            
+        
+
+        circle_bf4440050fa55e92a565e26f926d9cb1.bindPopup(popup_5c7d60ef8f51c2d78951bcc6e74f1a59)
+        ;
+
+        
+    
+    
+            var marker_8e0740a567243615e3b8481e91d87051 = L.marker(
+                [43.5, 78.5],
+                {
+}
+            ).addTo(map_e86181f69dceec849945fca122539bfd);
+        
+    
+            var icon_55435988e3822b4bd382d220b279f4a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8bc04c9b604da8243c6e1ce4e69b41aa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_23c951470d3b88e2def4b27d529f4c64 = $(`<div id="html_23c951470d3b88e2def4b27d529f4c64" style="width: 100.0%; height: 100.0%;"><b>Экологическая катастрофа на Эмеле</b><br><br>Приходит инспектор на берег реки Эмел, видит — рыба плавает брюхом вверх. Спрашивает местного: 'Что здесь произошло? Это же катастрофа!'<br>Местный отвечает: 'Какая катастрофа? Мы просто решили провести эксперимент по ускоренному развитию иммунитета у карпов!'</div>`)[0];
+                popup_8bc04c9b604da8243c6e1ce4e69b41aa.setContent(html_23c951470d3b88e2def4b27d529f4c64);
+            
+        
+
+        marker_8e0740a567243615e3b8481e91d87051.bindPopup(popup_8bc04c9b604da8243c6e1ce4e69b41aa)
+        ;
+
+        
+    
+    
+            marker_8e0740a567243615e3b8481e91d87051.bindTooltip(
+                `<div>
+                     Нажми, чтобы узнать правду
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e0740a567243615e3b8481e91d87051.setIcon(icon_55435988e3822b4bd382d220b279f4a8);
+            
+    
+            var marker_5571550c1f357fd70998fd3a9ee0e565 = L.marker(
+                [43.6, 78.7],
+                {
+}
+            ).addTo(map_e86181f69dceec849945fca122539bfd);
+        
+    
+            var icon_3ef3e74c97933d44a198cf2e8ffa4200 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "institution",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f48bc65823124eec47f93019ee20830b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e9d9cdfdecb0f9067324cce11639a41 = $(`<div id="html_1e9d9cdfdecb0f9067324cce11639a41" style="width: 100.0%; height: 100.0%;">Офис экологического контроля (здесь все в порядке)</div>`)[0];
+                popup_f48bc65823124eec47f93019ee20830b.setContent(html_1e9d9cdfdecb0f9067324cce11639a41);
+            
+        
+
+        marker_5571550c1f357fd70998fd3a9ee0e565.bindPopup(popup_f48bc65823124eec47f93019ee20830b)
+        ;
+
+        
+    
+    
+            marker_5571550c1f357fd70998fd3a9ee0e565.bindTooltip(
+                `<div>
+                     Бюрократический центр
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5571550c1f357fd70998fd3a9ee0e565.setIcon(icon_3ef3e74c97933d44a198cf2e8ffa4200);
+            
+</script>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_194f10e6bb55b051911064df027a73bc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_194f10e6bb55b051911064df027a73bc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_194f10e6bb55b051911064df027a73bc = L.map(
+                "map_194f10e6bb55b051911064df027a73bc",
+                {
+                    center: [45.27, 34.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_76800877859504ab7409cfb9e6202713 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_76800877859504ab7409cfb9e6202713.addTo(map_194f10e6bb55b051911064df027a73bc);
+        
+    
+            var marker_1d5b8707c47f89aae34067547f7a0839 = L.marker(
+                [45.35, 34.1],
+                {
+}
+            ).addTo(map_194f10e6bb55b051911064df027a73bc);
+        
+    
+            var icon_939712cd390014b971fccae58f40731d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9cdbc209f62bbf7159d1dc33536267c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f4de0c9e8b57f5365f73ad55623d835 = $(`<div id="html_3f4de0c9e8b57f5365f73ad55623d835" style="width: 100.0%; height: 100.0%;"><b>Baskan River</b><br>Текущий расход: 12.5 м3/с</div>`)[0];
+                popup_9cdbc209f62bbf7159d1dc33536267c2.setContent(html_3f4de0c9e8b57f5365f73ad55623d835);
+            
+        
+
+        marker_1d5b8707c47f89aae34067547f7a0839.bindPopup(popup_9cdbc209f62bbf7159d1dc33536267c2)
+        ;
+
+        
+    
+    
+                marker_1d5b8707c47f89aae34067547f7a0839.setIcon(icon_939712cd390014b971fccae58f40731d);
+            
+    
+            var marker_9e44141753cc6e766b039180c9db340a = L.marker(
+                [45.2, 34.3],
+                {
+}
+            ).addTo(map_194f10e6bb55b051911064df027a73bc);
+        
+    
+            var icon_99d150e760b9cbbc8cdfa020d27e2a94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5413695c7f52650e12d295c8e011e186 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5591f6124c9fa3af9c340475598574b8 = $(`<div id="html_5591f6124c9fa3af9c340475598574b8" style="width: 100.0%; height: 100.0%;"><b>Prokhodnaya River</b><br>Пиковый уровень: 4.2 м</div>`)[0];
+                popup_5413695c7f52650e12d295c8e011e186.setContent(html_5591f6124c9fa3af9c340475598574b8);
+            
+        
+
+        marker_9e44141753cc6e766b039180c9db340a.bindPopup(popup_5413695c7f52650e12d295c8e011e186)
+        ;
+
+        
+    
+    
+                marker_9e44141753cc6e766b039180c9db340a.setIcon(icon_99d150e760b9cbbc8cdfa020d27e2a94);
+            
+    
+        var popup_f11e53b01320963bbee2941604a608e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2332e59adc1f03cb6e5abfcb7cbb1130 = $(`<div id="html_2332e59adc1f03cb6e5abfcb7cbb1130" style="width: 100.0%; height: 100.0%;">Анализ: Разница между расходом Баскана и уровнем Проходной составляет 8.30 ед.</div>`)[0];
+                popup_f11e53b01320963bbee2941604a608e8.setContent(html_2332e59adc1f03cb6e5abfcb7cbb1130);
+            
+        
+
+        map_194f10e6bb55b051911064df027a73bc.bindPopup(popup_f11e53b01320963bbee2941604a608e8)
+        ;
+
+        
+    
+    
+            var marker_ad91564bd1731d588fa8ce3b758a146f = L.marker(
+                [45.27, 34.2],
+                {
+}
+            ).addTo(map_194f10e6bb55b051911064df027a73bc);
+        
+    
+            var icon_da6668de5d6e3fd296073efc14530c04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71cdbcc795624f266576871288f9bdec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c94dc8ba2ccd6667167b137b504a6e97 = $(`<div id="html_c94dc8ba2ccd6667167b137b504a6e97" style="width: 100.0%; height: 100.0%;"><b>Результат анализа:</b><br>Разница: 8.30</div>`)[0];
+                popup_71cdbcc795624f266576871288f9bdec.setContent(html_c94dc8ba2ccd6667167b137b504a6e97);
+            
+        
+
+        marker_ad91564bd1731d588fa8ce3b758a146f.bindPopup(popup_71cdbcc795624f266576871288f9bdec)
+        ;
+
+        
+    
+    
+                marker_ad91564bd1731d588fa8ce3b758a146f.setIcon(icon_da6668de5d6e3fd296073efc14530c04);
+            
+</script>
+</html>

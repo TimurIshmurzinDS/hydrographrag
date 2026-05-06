@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_17405b816f8968ae564d7588d2b7e32d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 300px; height: 160px; 
+                background-color: white; border:2px solid grey; z-index:9999; 
+                font-size:14px; padding: 10px;
+                font-family: Arial, sans-serif;">
+        <b>Технический отчет ГИС:</b><br>
+        Объект: Река Баскан<br>
+        Анализ: Высокая минерализация и 
+        сезонное пересыхание делают воду 
+        непригодной для систем охлаждения 
+        космического корабля.<br>
+        <b>Риск:</b> Коррозия теплообменников.
+    </div>
+    
+    
+            <div class="folium-map" id="map_17405b816f8968ae564d7588d2b7e32d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_17405b816f8968ae564d7588d2b7e32d = L.map(
+                "map_17405b816f8968ae564d7588d2b7e32d",
+                {
+                    center: [46.3, 45.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb186d0af8b7bc6cc29589ab7a213227 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bb186d0af8b7bc6cc29589ab7a213227.addTo(map_17405b816f8968ae564d7588d2b7e32d);
+        
+    
+            var poly_line_fc3813c15603133252809e17b908814d = L.polyline(
+                [[47.2, 44.5], [47.0, 44.8], [46.8, 45.1], [46.5, 45.3], [46.2, 45.5], [45.8, 45.7], [45.5, 45.8], [45.2, 46.0]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_17405b816f8968ae564d7588d2b7e32d);
+        
+    
+            poly_line_fc3813c15603133252809e17b908814d.bindTooltip(
+                `<div>
+                     Река Баскан
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e41eb04f6f2583780b34a7905b29c322 = L.circleMarker(
+                [47.2, 44.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_17405b816f8968ae564d7588d2b7e32d);
+        
+    
+        var popup_c82970eb903eea4086f4b84975c82df0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_334daa6049c33ce7addbd25dc58adf87 = $(`<div id="html_334daa6049c33ce7addbd25dc58adf87" style="width: 100.0%; height: 100.0%;"><b>Точка анализа 0</b><br>Соленость: Very High (Brackish/Saline)<br>Стабильность потока: Intermittent (Seasonal drying)<br>Вердикт: Непригодно для охлаждения двигателей.</div>`)[0];
+                popup_c82970eb903eea4086f4b84975c82df0.setContent(html_334daa6049c33ce7addbd25dc58adf87);
+            
+        
+
+        circle_marker_e41eb04f6f2583780b34a7905b29c322.bindPopup(popup_c82970eb903eea4086f4b84975c82df0)
+        ;
+
+        
+    
+    
+            var circle_marker_62c4220e563ba5e2d7adbeac9367d9de = L.circleMarker(
+                [46.5, 45.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_17405b816f8968ae564d7588d2b7e32d);
+        
+    
+        var popup_2088b45eaab0fe0a5745398ee3b48426 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bffcff803e5f47a2a7448cbc83c87292 = $(`<div id="html_bffcff803e5f47a2a7448cbc83c87292" style="width: 100.0%; height: 100.0%;"><b>Точка анализа 3</b><br>Соленость: Very High (Brackish/Saline)<br>Стабильность потока: Intermittent (Seasonal drying)<br>Вердикт: Непригодно для охлаждения двигателей.</div>`)[0];
+                popup_2088b45eaab0fe0a5745398ee3b48426.setContent(html_bffcff803e5f47a2a7448cbc83c87292);
+            
+        
+
+        circle_marker_62c4220e563ba5e2d7adbeac9367d9de.bindPopup(popup_2088b45eaab0fe0a5745398ee3b48426)
+        ;
+
+        
+    
+    
+            var circle_marker_fd1cc0ed946d3a636b48ee0838a6306e = L.circleMarker(
+                [45.5, 45.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_17405b816f8968ae564d7588d2b7e32d);
+        
+    
+        var popup_b952388ae1353bfbec9b589d17fb3054 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f74f25363c36a2cca8c41ba14feee0ca = $(`<div id="html_f74f25363c36a2cca8c41ba14feee0ca" style="width: 100.0%; height: 100.0%;"><b>Точка анализа 6</b><br>Соленость: Very High (Brackish/Saline)<br>Стабильность потока: Intermittent (Seasonal drying)<br>Вердикт: Непригодно для охлаждения двигателей.</div>`)[0];
+                popup_b952388ae1353bfbec9b589d17fb3054.setContent(html_f74f25363c36a2cca8c41ba14feee0ca);
+            
+        
+
+        circle_marker_fd1cc0ed946d3a636b48ee0838a6306e.bindPopup(popup_b952388ae1353bfbec9b589d17fb3054)
+        ;
+
+        
+    
+</script>
+</html>

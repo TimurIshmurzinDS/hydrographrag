@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4d43cb7bff1a6554a3bd9f78f3616cc5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4d43cb7bff1a6554a3bd9f78f3616cc5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4d43cb7bff1a6554a3bd9f78f3616cc5 = L.map(
+                "map_4d43cb7bff1a6554a3bd9f78f3616cc5",
+                {
+                    center: [43.167, 80.25],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_82d307c076583b69ca79673f8b61769c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_82d307c076583b69ca79673f8b61769c.addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+            var marker_4b6e98db0b5cee981cee5db6d2d5dcb7 = L.marker(
+                [43.167, 80.25],
+                {
+}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_bac7e63a81675b92b1c05c76b09a392a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24d85ce553b98f6500f8fe254a7970cf = $(`<div id="html_24d85ce553b98f6500f8fe254a7970cf" style="width: 100.0%; height: 100.0%;">Река Шынжалы</div>`)[0];
+                popup_bac7e63a81675b92b1c05c76b09a392a.setContent(html_24d85ce553b98f6500f8fe254a7970cf);
+            
+        
+
+        marker_4b6e98db0b5cee981cee5db6d2d5dcb7.bindPopup(popup_bac7e63a81675b92b1c05c76b09a392a)
+        ;
+
+        
+    
+    
+            var circle_marker_10e0cedd544429d30aec88333273a168 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_c2cda8237708dc663e10d000df0e9320 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31c7f6ce7bf7d15bb0bd72a204ea999b = $(`<div id="html_31c7f6ce7bf7d15bb0bd72a204ea999b" style="width: 100.0%; height: 100.0%;">Год: 2015, Потребление воды: 100 Млн кубометров</div>`)[0];
+                popup_c2cda8237708dc663e10d000df0e9320.setContent(html_31c7f6ce7bf7d15bb0bd72a204ea999b);
+            
+        
+
+        circle_marker_10e0cedd544429d30aec88333273a168.bindPopup(popup_c2cda8237708dc663e10d000df0e9320)
+        ;
+
+        
+    
+    
+            var circle_marker_b680e09ee368a83ad01dc418b6fffceb = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_e9ea7bc761ff86672de48269de252c46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5cec5fd60ac2b7e8786a5727228de7f8 = $(`<div id="html_5cec5fd60ac2b7e8786a5727228de7f8" style="width: 100.0%; height: 100.0%;">Год: 2015, Уровень воды: 1000 М</div>`)[0];
+                popup_e9ea7bc761ff86672de48269de252c46.setContent(html_5cec5fd60ac2b7e8786a5727228de7f8);
+            
+        
+
+        circle_marker_b680e09ee368a83ad01dc418b6fffceb.bindPopup(popup_e9ea7bc761ff86672de48269de252c46)
+        ;
+
+        
+    
+    
+            var circle_marker_132da00aca4c39236884f6212371ec8e = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_a5231ac53e4b3dfd0b6152fde5d4a4c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a614ea8bae66359c12fd12228415c8c = $(`<div id="html_0a614ea8bae66359c12fd12228415c8c" style="width: 100.0%; height: 100.0%;">Год: 2015, Индекс загрязнения: 3</div>`)[0];
+                popup_a5231ac53e4b3dfd0b6152fde5d4a4c4.setContent(html_0a614ea8bae66359c12fd12228415c8c);
+            
+        
+
+        circle_marker_132da00aca4c39236884f6212371ec8e.bindPopup(popup_a5231ac53e4b3dfd0b6152fde5d4a4c4)
+        ;
+
+        
+    
+    
+            var circle_marker_a64cc85dbff88f3993f6f564fdb5a70c = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_6825aeaa84a9a6390c2b036d65023c09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f48569c141035726765b4488c3542979 = $(`<div id="html_f48569c141035726765b4488c3542979" style="width: 100.0%; height: 100.0%;">Год: 2016, Потребление воды: 120 Млн кубометров</div>`)[0];
+                popup_6825aeaa84a9a6390c2b036d65023c09.setContent(html_f48569c141035726765b4488c3542979);
+            
+        
+
+        circle_marker_a64cc85dbff88f3993f6f564fdb5a70c.bindPopup(popup_6825aeaa84a9a6390c2b036d65023c09)
+        ;
+
+        
+    
+    
+            var circle_marker_0c26c7716054127a176e9f9593edc72f = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_2b8c5378cf968fa433bc4c8701920a59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53a4b0ea59d3f35cc9a01d3dccaf3f9c = $(`<div id="html_53a4b0ea59d3f35cc9a01d3dccaf3f9c" style="width: 100.0%; height: 100.0%;">Год: 2016, Уровень воды: 980 М</div>`)[0];
+                popup_2b8c5378cf968fa433bc4c8701920a59.setContent(html_53a4b0ea59d3f35cc9a01d3dccaf3f9c);
+            
+        
+
+        circle_marker_0c26c7716054127a176e9f9593edc72f.bindPopup(popup_2b8c5378cf968fa433bc4c8701920a59)
+        ;
+
+        
+    
+    
+            var circle_marker_b7d95a665d6de78a6c81dae3f32d0d1b = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_cccfd7c3877d11076dd96fd6cec42db1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d875ca592bac5534447c526804c92666 = $(`<div id="html_d875ca592bac5534447c526804c92666" style="width: 100.0%; height: 100.0%;">Год: 2016, Индекс загрязнения: 4</div>`)[0];
+                popup_cccfd7c3877d11076dd96fd6cec42db1.setContent(html_d875ca592bac5534447c526804c92666);
+            
+        
+
+        circle_marker_b7d95a665d6de78a6c81dae3f32d0d1b.bindPopup(popup_cccfd7c3877d11076dd96fd6cec42db1)
+        ;
+
+        
+    
+    
+            var circle_marker_a3fed18be0cc54bc3cc5d037cb43c992 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_1e6815ae73b1ce8900099b79f7eb5947 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_207eeb69c836aecf9e5232797d488930 = $(`<div id="html_207eeb69c836aecf9e5232797d488930" style="width: 100.0%; height: 100.0%;">Год: 2017, Потребление воды: 130 Млн кубометров</div>`)[0];
+                popup_1e6815ae73b1ce8900099b79f7eb5947.setContent(html_207eeb69c836aecf9e5232797d488930);
+            
+        
+
+        circle_marker_a3fed18be0cc54bc3cc5d037cb43c992.bindPopup(popup_1e6815ae73b1ce8900099b79f7eb5947)
+        ;
+
+        
+    
+    
+            var circle_marker_f553dac640c81d5908fc8eaddd7f648b = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_8e192aba2431498504923c2b9a6f5980 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef2de0ae3bb4f5ac5774b936dadda70b = $(`<div id="html_ef2de0ae3bb4f5ac5774b936dadda70b" style="width: 100.0%; height: 100.0%;">Год: 2017, Уровень воды: 960 М</div>`)[0];
+                popup_8e192aba2431498504923c2b9a6f5980.setContent(html_ef2de0ae3bb4f5ac5774b936dadda70b);
+            
+        
+
+        circle_marker_f553dac640c81d5908fc8eaddd7f648b.bindPopup(popup_8e192aba2431498504923c2b9a6f5980)
+        ;
+
+        
+    
+    
+            var circle_marker_77ff1706dfa01438f951f9fabc36cf39 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_80b5e9efa7b71973fbbaa2d4f8fd0f8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e399761c73c00101c02e63ef8f42e39e = $(`<div id="html_e399761c73c00101c02e63ef8f42e39e" style="width: 100.0%; height: 100.0%;">Год: 2017, Индекс загрязнения: 5</div>`)[0];
+                popup_80b5e9efa7b71973fbbaa2d4f8fd0f8d.setContent(html_e399761c73c00101c02e63ef8f42e39e);
+            
+        
+
+        circle_marker_77ff1706dfa01438f951f9fabc36cf39.bindPopup(popup_80b5e9efa7b71973fbbaa2d4f8fd0f8d)
+        ;
+
+        
+    
+    
+            var circle_marker_fad88816b76b2d985c0dfc9c5b252e4f = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_71a6916e06f76fbe204e1a3194af4c30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6cc065fe7d13b19102eccd2903b1c82a = $(`<div id="html_6cc065fe7d13b19102eccd2903b1c82a" style="width: 100.0%; height: 100.0%;">Год: 2018, Потребление воды: 140 Млн кубометров</div>`)[0];
+                popup_71a6916e06f76fbe204e1a3194af4c30.setContent(html_6cc065fe7d13b19102eccd2903b1c82a);
+            
+        
+
+        circle_marker_fad88816b76b2d985c0dfc9c5b252e4f.bindPopup(popup_71a6916e06f76fbe204e1a3194af4c30)
+        ;
+
+        
+    
+    
+            var circle_marker_e9a17cd89de110d1bb71f408de3594f2 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_79fb5e3d73214625bd7eee13f101593d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b75290a7b8f22d0796e85a8d37eb5c75 = $(`<div id="html_b75290a7b8f22d0796e85a8d37eb5c75" style="width: 100.0%; height: 100.0%;">Год: 2018, Уровень воды: 940 М</div>`)[0];
+                popup_79fb5e3d73214625bd7eee13f101593d.setContent(html_b75290a7b8f22d0796e85a8d37eb5c75);
+            
+        
+
+        circle_marker_e9a17cd89de110d1bb71f408de3594f2.bindPopup(popup_79fb5e3d73214625bd7eee13f101593d)
+        ;
+
+        
+    
+    
+            var circle_marker_cd11c75324ef568410587b79bfe2b219 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_e13ffeabf8b6e2002212d85feef124ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71b181f7d18eda88a3ab3eb9b4c6266d = $(`<div id="html_71b181f7d18eda88a3ab3eb9b4c6266d" style="width: 100.0%; height: 100.0%;">Год: 2018, Индекс загрязнения: 6</div>`)[0];
+                popup_e13ffeabf8b6e2002212d85feef124ef.setContent(html_71b181f7d18eda88a3ab3eb9b4c6266d);
+            
+        
+
+        circle_marker_cd11c75324ef568410587b79bfe2b219.bindPopup(popup_e13ffeabf8b6e2002212d85feef124ef)
+        ;
+
+        
+    
+    
+            var circle_marker_4e3eca3ae917d597a43c23c7ab458c54 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_035284066d1d5cbab551696da1b3e155 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a659ec1aa2a5deed65851699d877bb5 = $(`<div id="html_7a659ec1aa2a5deed65851699d877bb5" style="width: 100.0%; height: 100.0%;">Год: 2019, Потребление воды: 150 Млн кубометров</div>`)[0];
+                popup_035284066d1d5cbab551696da1b3e155.setContent(html_7a659ec1aa2a5deed65851699d877bb5);
+            
+        
+
+        circle_marker_4e3eca3ae917d597a43c23c7ab458c54.bindPopup(popup_035284066d1d5cbab551696da1b3e155)
+        ;
+
+        
+    
+    
+            var circle_marker_1a52df3f4be7c62ab71ffa0fbc1a8963 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_62f52d90b70d449fe04d7bf03dbfde56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0f8763abfecddfb91af68db85735b31 = $(`<div id="html_d0f8763abfecddfb91af68db85735b31" style="width: 100.0%; height: 100.0%;">Год: 2019, Уровень воды: 920 М</div>`)[0];
+                popup_62f52d90b70d449fe04d7bf03dbfde56.setContent(html_d0f8763abfecddfb91af68db85735b31);
+            
+        
+
+        circle_marker_1a52df3f4be7c62ab71ffa0fbc1a8963.bindPopup(popup_62f52d90b70d449fe04d7bf03dbfde56)
+        ;
+
+        
+    
+    
+            var circle_marker_fd6e11b49f7c570c8975f6a12d2ab2b5 = L.circleMarker(
+                [43.167, 80.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_4d43cb7bff1a6554a3bd9f78f3616cc5);
+        
+    
+        var popup_c91ed715a7b64f6cb506d7b5c4304150 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9a57ccbc3b868ab295feed99406ef22 = $(`<div id="html_c9a57ccbc3b868ab295feed99406ef22" style="width: 100.0%; height: 100.0%;">Год: 2019, Индекс загрязнения: 7</div>`)[0];
+                popup_c91ed715a7b64f6cb506d7b5c4304150.setContent(html_c9a57ccbc3b868ab295feed99406ef22);
+            
+        
+
+        circle_marker_fd6e11b49f7c570c8975f6a12d2ab2b5.bindPopup(popup_c91ed715a7b64f6cb506d7b5c4304150)
+        ;
+
+        
+    
+</script>
+</html>

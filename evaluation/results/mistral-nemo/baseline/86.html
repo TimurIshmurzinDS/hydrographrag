@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e30185270e24317f79034ab1191d72a5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e30185270e24317f79034ab1191d72a5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e30185270e24317f79034ab1191d72a5 = L.map(
+                "map_e30185270e24317f79034ab1191d72a5",
+                {
+                    center: [42.5, 70.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_40e1ebb71e7e78b4ee39902cd80e1f3b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_40e1ebb71e7e78b4ee39902cd80e1f3b.addTo(map_e30185270e24317f79034ab1191d72a5);
+        
+    
+            var marker_10ca58d848f9b3839119fa0bb5c1733b = L.marker(
+                [43.26, 76.9],
+                {
+}
+            ).addTo(map_e30185270e24317f79034ab1191d72a5);
+        
+    
+            var icon_570c2450ead0a5908d8b91b60c64dbc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b929cc7cb3e827d43f7e9feee649a13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11f4d44de0dcfebdd15d1a3b82174a5c = $(`<div id="html_11f4d44de0dcfebdd15d1a3b82174a5c" style="width: 100.0%; height: 100.0%;">Karaoy River: Уровень воды в норме</div>`)[0];
+                popup_0b929cc7cb3e827d43f7e9feee649a13.setContent(html_11f4d44de0dcfebdd15d1a3b82174a5c);
+            
+        
+
+        marker_10ca58d848f9b3839119fa0bb5c1733b.bindPopup(popup_0b929cc7cb3e827d43f7e9feee649a13)
+        ;
+
+        
+    
+    
+                marker_10ca58d848f9b3839119fa0bb5c1733b.setIcon(icon_570c2450ead0a5908d8b91b60c64dbc7);
+            
+    
+            var marker_7bf197c196c92dfc46f3deed23bf8eaa = L.marker(
+                [41.85, 69.24],
+                {
+}
+            ).addTo(map_e30185270e24317f79034ab1191d72a5);
+        
+    
+            var icon_733f34be3e0fd4f9a4813429f8eaf7b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93a77d4b382e106db6b5c797a88b4566 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b0fc381dfc2a69f4fe9747a08e9c155 = $(`<div id="html_3b0fc381dfc2a69f4fe9747a08e9c155" style="width: 100.0%; height: 100.0%;">Temirlik River: Уровень воды в норме</div>`)[0];
+                popup_93a77d4b382e106db6b5c797a88b4566.setContent(html_3b0fc381dfc2a69f4fe9747a08e9c155);
+            
+        
+
+        marker_7bf197c196c92dfc46f3deed23bf8eaa.bindPopup(popup_93a77d4b382e106db6b5c797a88b4566)
+        ;
+
+        
+    
+    
+                marker_7bf197c196c92dfc46f3deed23bf8eaa.setIcon(icon_733f34be3e0fd4f9a4813429f8eaf7b2);
+            
+    
+            var marker_df3077f8bc022b2264144de74d5379c3 = L.marker(
+                [43.28, 77.02],
+                {
+}
+            ).addTo(map_e30185270e24317f79034ab1191d72a5);
+        
+    
+            var icon_72a02ba32182c7b139b7c738605e0abd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a22776853b9ef8809a08b2daefa5eef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47a1b86beb6c19d7aceace8b62a32d5c = $(`<div id="html_47a1b86beb6c19d7aceace8b62a32d5c" style="width: 100.0%; height: 100.0%;">Turgen River: Опасный рост уровня воды</div>`)[0];
+                popup_4a22776853b9ef8809a08b2daefa5eef.setContent(html_47a1b86beb6c19d7aceace8b62a32d5c);
+            
+        
+
+        marker_df3077f8bc022b2264144de74d5379c3.bindPopup(popup_4a22776853b9ef8809a08b2daefa5eef)
+        ;
+
+        
+    
+    
+                marker_df3077f8bc022b2264144de74d5379c3.setIcon(icon_72a02ba32182c7b139b7c738605e0abd);
+            
+</script>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b6f93e0b92d5da735c9f954f9c0214dd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b6f93e0b92d5da735c9f954f9c0214dd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b6f93e0b92d5da735c9f954f9c0214dd = L.map(
+                "map_b6f93e0b92d5da735c9f954f9c0214dd",
+                {
+                    center: [47.0755, 72.82825],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e1ec381b141439e18b996a1768ae493c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e1ec381b141439e18b996a1768ae493c.addTo(map_b6f93e0b92d5da735c9f954f9c0214dd);
+        
+    
+            var marker_a099032b8d74aa511105b79d373a5ffb = L.marker(
+                [43.222, 76.853],
+                {
+}
+            ).addTo(map_b6f93e0b92d5da735c9f954f9c0214dd);
+        
+    
+            var icon_3ed64917565f9adeb63064e6d4b7b420 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ecfe5d74a8938eb5671a9e6a06891534 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a0e28879d35631d2f90b47992fdf9ba = $(`<div id="html_6a0e28879d35631d2f90b47992fdf9ba" style="width: 100.0%; height: 100.0%;">Улькен Алматы (Алматинская область)</div>`)[0];
+                popup_ecfe5d74a8938eb5671a9e6a06891534.setContent(html_6a0e28879d35631d2f90b47992fdf9ba);
+            
+        
+
+        marker_a099032b8d74aa511105b79d373a5ffb.bindPopup(popup_ecfe5d74a8938eb5671a9e6a06891534)
+        ;
+
+        
+    
+    
+                marker_a099032b8d74aa511105b79d373a5ffb.setIcon(icon_3ed64917565f9adeb63064e6d4b7b420);
+            
+    
+            var marker_123ab8d192b885cfb0505c15e998db64 = L.marker(
+                [53.12, 68.15],
+                {
+}
+            ).addTo(map_b6f93e0b92d5da735c9f954f9c0214dd);
+        
+    
+            var icon_943279e9480b2d29452b5d57df4551f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4031c39f6990c085640f98a4a83c084d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_574bb3b175cae871f7c4e464ce6f4d79 = $(`<div id="html_574bb3b175cae871f7c4e464ce6f4d79" style="width: 100.0%; height: 100.0%;">Емель (Северо-Казахстанская область)</div>`)[0];
+                popup_4031c39f6990c085640f98a4a83c084d.setContent(html_574bb3b175cae871f7c4e464ce6f4d79);
+            
+        
+
+        marker_123ab8d192b885cfb0505c15e998db64.bindPopup(popup_4031c39f6990c085640f98a4a83c084d)
+        ;
+
+        
+    
+    
+                marker_123ab8d192b885cfb0505c15e998db64.setIcon(icon_943279e9480b2d29452b5d57df4551f3);
+            
+    
+            var marker_245d88f2c3b7badf8f35ea6510516ff3 = L.marker(
+                [48.51, 69.21],
+                {
+}
+            ).addTo(map_b6f93e0b92d5da735c9f954f9c0214dd);
+        
+    
+            var icon_ce2e9ec23b66e4599777b0a2494407ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16cce3bfad697596092e08bd8232dc22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4a85a53ffc50ea5f4038d5182cb2806 = $(`<div id="html_c4a85a53ffc50ea5f4038d5182cb2806" style="width: 100.0%; height: 100.0%;">Тентек (Карагандинская область)</div>`)[0];
+                popup_16cce3bfad697596092e08bd8232dc22.setContent(html_c4a85a53ffc50ea5f4038d5182cb2806);
+            
+        
+
+        marker_245d88f2c3b7badf8f35ea6510516ff3.bindPopup(popup_16cce3bfad697596092e08bd8232dc22)
+        ;
+
+        
+    
+    
+                marker_245d88f2c3b7badf8f35ea6510516ff3.setIcon(icon_ce2e9ec23b66e4599777b0a2494407ee);
+            
+    
+            var marker_a51c53afe3772419316b66b568ed2700 = L.marker(
+                [43.45, 77.1],
+                {
+}
+            ).addTo(map_b6f93e0b92d5da735c9f954f9c0214dd);
+        
+    
+            var icon_32946ce43d63ee8558fbc73e45365ef3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da9240777334a9c41499d810f4e9fd66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a3c1cb5e881a91b31860120e027559a = $(`<div id="html_5a3c1cb5e881a91b31860120e027559a" style="width: 100.0%; height: 100.0%;">Иле (Алматинская область)</div>`)[0];
+                popup_da9240777334a9c41499d810f4e9fd66.setContent(html_5a3c1cb5e881a91b31860120e027559a);
+            
+        
+
+        marker_a51c53afe3772419316b66b568ed2700.bindPopup(popup_da9240777334a9c41499d810f4e9fd66)
+        ;
+
+        
+    
+    
+                marker_a51c53afe3772419316b66b568ed2700.setIcon(icon_32946ce43d63ee8558fbc73e45365ef3);
+            
+</script>
+</html>

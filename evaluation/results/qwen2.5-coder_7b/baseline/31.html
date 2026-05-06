@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fb33ef059653f565ca2b62a3a4dc5b09 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fb33ef059653f565ca2b62a3a4dc5b09" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fb33ef059653f565ca2b62a3a4dc5b09 = L.map(
+                "map_fb33ef059653f565ca2b62a3a4dc5b09",
+                {
+                    center: [47.86, 91.77],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_947cceb207ace804ad1d0d238d27323f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_947cceb207ace804ad1d0d238d27323f.addTo(map_fb33ef059653f565ca2b62a3a4dc5b09);
+        
+    
+            var marker_3bb9f3a29255060de702be5625964a62 = L.marker(
+                [47.86, 91.77],
+                {
+}
+            ).addTo(map_fb33ef059653f565ca2b62a3a4dc5b09);
+        
+    
+        var popup_1b0de4ef2c88ca47f569148670ca6b78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0e86c6c154023bcbbf3d740c003e66c = $(`<div id="html_c0e86c6c154023bcbbf3d740c003e66c" style="width: 100.0%; height: 100.0%;">Уровень воды: 100, Дата: 2023-10-01 00:00:00</div>`)[0];
+                popup_1b0de4ef2c88ca47f569148670ca6b78.setContent(html_c0e86c6c154023bcbbf3d740c003e66c);
+            
+        
+
+        marker_3bb9f3a29255060de702be5625964a62.bindPopup(popup_1b0de4ef2c88ca47f569148670ca6b78)
+        ;
+
+        
+    
+    
+            var marker_c94916a8805223c200b07ef6a091cb0b = L.marker(
+                [47.86, 91.77],
+                {
+}
+            ).addTo(map_fb33ef059653f565ca2b62a3a4dc5b09);
+        
+    
+        var popup_3e713eacbc21e9768e39d60d1c12c377 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f91fa89d0b03046606d8d19ddff3fd66 = $(`<div id="html_f91fa89d0b03046606d8d19ddff3fd66" style="width: 100.0%; height: 100.0%;">Уровень воды: 102, Дата: 2023-10-02 00:00:00</div>`)[0];
+                popup_3e713eacbc21e9768e39d60d1c12c377.setContent(html_f91fa89d0b03046606d8d19ddff3fd66);
+            
+        
+
+        marker_c94916a8805223c200b07ef6a091cb0b.bindPopup(popup_3e713eacbc21e9768e39d60d1c12c377)
+        ;
+
+        
+    
+    
+            var marker_f943ab54b028b03f3089885eb8b83534 = L.marker(
+                [47.86, 91.77],
+                {
+}
+            ).addTo(map_fb33ef059653f565ca2b62a3a4dc5b09);
+        
+    
+        var popup_b16f8c93c42e0bbc04fad3139045bb08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07cee1877716fecf310e329125d73d56 = $(`<div id="html_07cee1877716fecf310e329125d73d56" style="width: 100.0%; height: 100.0%;">Уровень воды: 98, Дата: 2023-10-03 00:00:00</div>`)[0];
+                popup_b16f8c93c42e0bbc04fad3139045bb08.setContent(html_07cee1877716fecf310e329125d73d56);
+            
+        
+
+        marker_f943ab54b028b03f3089885eb8b83534.bindPopup(popup_b16f8c93c42e0bbc04fad3139045bb08)
+        ;
+
+        
+    
+    
+            var marker_66fd87d603dc64126b49140b0f425f72 = L.marker(
+                [47.86, 91.77],
+                {
+}
+            ).addTo(map_fb33ef059653f565ca2b62a3a4dc5b09);
+        
+    
+        var popup_fa2ffa4cc58ebde48306fc14035851e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54b85e2eef2a52a94bde3e1a302ef713 = $(`<div id="html_54b85e2eef2a52a94bde3e1a302ef713" style="width: 100.0%; height: 100.0%;">Уровень воды: 101, Дата: 2023-10-04 00:00:00</div>`)[0];
+                popup_fa2ffa4cc58ebde48306fc14035851e3.setContent(html_54b85e2eef2a52a94bde3e1a302ef713);
+            
+        
+
+        marker_66fd87d603dc64126b49140b0f425f72.bindPopup(popup_fa2ffa4cc58ebde48306fc14035851e3)
+        ;
+
+        
+    
+    
+            var marker_ef19fcc312b1f8a6663fa30a2686a8d9 = L.marker(
+                [47.86, 91.77],
+                {
+}
+            ).addTo(map_fb33ef059653f565ca2b62a3a4dc5b09);
+        
+    
+        var popup_ed646a6ae7cf48b8b84b149ded8ae680 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc0abb856734a74d7bb42b9cfdef992f = $(`<div id="html_dc0abb856734a74d7bb42b9cfdef992f" style="width: 100.0%; height: 100.0%;">Уровень воды: 103, Дата: 2023-10-05 00:00:00</div>`)[0];
+                popup_ed646a6ae7cf48b8b84b149ded8ae680.setContent(html_dc0abb856734a74d7bb42b9cfdef992f);
+            
+        
+
+        marker_ef19fcc312b1f8a6663fa30a2686a8d9.bindPopup(popup_ed646a6ae7cf48b8b84b149ded8ae680)
+        ;
+
+        
+    
+    
+            var marker_1fac852da9110eed97aa7ebc018f3743 = L.marker(
+                [47.86, 91.77],
+                {
+}
+            ).addTo(map_fb33ef059653f565ca2b62a3a4dc5b09);
+        
+    
+        var popup_8f168fd7bf5adf29888d52b504226b94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb839a6ae69ac422b8ce7775d24458c9 = $(`<div id="html_eb839a6ae69ac422b8ce7775d24458c9" style="width: 100.0%; height: 100.0%;">Прогнозируемый уровень воды: 106.43</div>`)[0];
+                popup_8f168fd7bf5adf29888d52b504226b94.setContent(html_eb839a6ae69ac422b8ce7775d24458c9);
+            
+        
+
+        marker_1fac852da9110eed97aa7ebc018f3743.bindPopup(popup_8f168fd7bf5adf29888d52b504226b94)
+        ;
+
+        
+    
+</script>
+</html>

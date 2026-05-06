@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0961c85f04a761f0ef3ecf1116bc7a5d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 180px; height: 110px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Уровень риска:</b><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Низкий<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Средний<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Высокий
+     </div>
+     
+    
+            <div class="folium-map" id="map_0961c85f04a761f0ef3ecf1116bc7a5d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0961c85f04a761f0ef3ecf1116bc7a5d = L.map(
+                "map_0961c85f04a761f0ef3ecf1116bc7a5d",
+                {
+                    center: [44.2, 68.6],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_276b404e060bfb4c37a3de15de3821cf = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_276b404e060bfb4c37a3de15de3821cf.addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+            var poly_line_5c647022e07ee6b5ed54b97dc0bb2973 = L.polyline(
+                [[44.12, 68.5], [44.15, 68.55], [44.18, 68.6], [44.22, 68.62], [44.25, 68.68], [44.3, 68.75]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+            poly_line_5c647022e07ee6b5ed54b97dc0bb2973.bindTooltip(
+                `<div>
+                     Река Токыраун
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b011839b0c1bd8694186a06e749cc9a3 = L.circleMarker(
+                [44.13, 68.51],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_ce66baf6b4780867c1427a3af5b70359 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13c289a840cef8f45a393f84d63a4833 = $(`<div id="html_13c289a840cef8f45a393f84d63a4833" style="width: 100.0%; height: 100.0%;">Хозяйство 1<br>Дистанция: 3086581м<br>Риск: High Risk</div>`)[0];
+                popup_ce66baf6b4780867c1427a3af5b70359.setContent(html_13c289a840cef8f45a393f84d63a4833);
+            
+        
+
+        circle_marker_b011839b0c1bd8694186a06e749cc9a3.bindPopup(popup_ce66baf6b4780867c1427a3af5b70359)
+        ;
+
+        
+    
+    
+            var circle_marker_ba7ee6a70b9f8cc599d10f8db754c97f = L.circleMarker(
+                [44.16, 68.58],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_2285dfc7679a2cfeaa4840f58671de09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdad6050e1ccee8c29f1286ae2ff0653 = $(`<div id="html_cdad6050e1ccee8c29f1286ae2ff0653" style="width: 100.0%; height: 100.0%;">Хозяйство 2<br>Дистанция: 3085096м<br>Риск: High Risk</div>`)[0];
+                popup_2285dfc7679a2cfeaa4840f58671de09.setContent(html_cdad6050e1ccee8c29f1286ae2ff0653);
+            
+        
+
+        circle_marker_ba7ee6a70b9f8cc599d10f8db754c97f.bindPopup(popup_2285dfc7679a2cfeaa4840f58671de09)
+        ;
+
+        
+    
+    
+            var circle_marker_eaabadd648514a437283a531db983d06 = L.circleMarker(
+                [44.2, 68.61],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_8c00592ea66f7d74adb2654459463fa6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e2549496125d1f382920aced664f03a = $(`<div id="html_2e2549496125d1f382920aced664f03a" style="width: 100.0%; height: 100.0%;">Хозяйство 3<br>Дистанция: 3081581м<br>Риск: High Risk</div>`)[0];
+                popup_8c00592ea66f7d74adb2654459463fa6.setContent(html_2e2549496125d1f382920aced664f03a);
+            
+        
+
+        circle_marker_eaabadd648514a437283a531db983d06.bindPopup(popup_8c00592ea66f7d74adb2654459463fa6)
+        ;
+
+        
+    
+    
+            var circle_marker_11ba6887af5101734aa84c3c02ca857d = L.circleMarker(
+                [44.26, 68.65],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_2f6f5040540ff10da7137640c9867bac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_721936f3c47f2df9748634bb6ce4ba57 = $(`<div id="html_721936f3c47f2df9748634bb6ce4ba57" style="width: 100.0%; height: 100.0%;">Хозяйство 4<br>Дистанция: 3076192м<br>Риск: High Risk</div>`)[0];
+                popup_2f6f5040540ff10da7137640c9867bac.setContent(html_721936f3c47f2df9748634bb6ce4ba57);
+            
+        
+
+        circle_marker_11ba6887af5101734aa84c3c02ca857d.bindPopup(popup_2f6f5040540ff10da7137640c9867bac)
+        ;
+
+        
+    
+    
+            var circle_marker_ea98ca17b7bcdde4f2e79a2018f2b194 = L.circleMarker(
+                [44.28, 68.72],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_5138ff4aeebbe69672d70054af34e8d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e499a904766c6b2f754543dbb7d6cefa = $(`<div id="html_e499a904766c6b2f754543dbb7d6cefa" style="width: 100.0%; height: 100.0%;">Хозяйство 5<br>Дистанция: 3075786м<br>Риск: High Risk</div>`)[0];
+                popup_5138ff4aeebbe69672d70054af34e8d7.setContent(html_e499a904766c6b2f754543dbb7d6cefa);
+            
+        
+
+        circle_marker_ea98ca17b7bcdde4f2e79a2018f2b194.bindPopup(popup_5138ff4aeebbe69672d70054af34e8d7)
+        ;
+
+        
+    
+    
+            var circle_marker_9c2a1adf2f3db9d3ebdcd3be392c4939 = L.circleMarker(
+                [44.14, 68.65],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_b7db30b8ea978419d5cfdb68927891ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c87c1745e69d53a369cb237388d6674 = $(`<div id="html_0c87c1745e69d53a369cb237388d6674" style="width: 100.0%; height: 100.0%;">Хозяйство 6<br>Дистанция: 3088926м<br>Риск: High Risk</div>`)[0];
+                popup_b7db30b8ea978419d5cfdb68927891ac.setContent(html_0c87c1745e69d53a369cb237388d6674);
+            
+        
+
+        circle_marker_9c2a1adf2f3db9d3ebdcd3be392c4939.bindPopup(popup_b7db30b8ea978419d5cfdb68927891ac)
+        ;
+
+        
+    
+    
+            var circle_marker_b30aec8f9356f4dc0ca916bd72915227 = L.circleMarker(
+                [44.21, 68.68],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_2f867116a32d5bab6c2eeb9f05830ce0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ee0f529a5dc3ba253ff828dd55c255f = $(`<div id="html_6ee0f529a5dc3ba253ff828dd55c255f" style="width: 100.0%; height: 100.0%;">Хозяйство 7<br>Дистанция: 3082231м<br>Риск: High Risk</div>`)[0];
+                popup_2f867116a32d5bab6c2eeb9f05830ce0.setContent(html_6ee0f529a5dc3ba253ff828dd55c255f);
+            
+        
+
+        circle_marker_b30aec8f9356f4dc0ca916bd72915227.bindPopup(popup_2f867116a32d5bab6c2eeb9f05830ce0)
+        ;
+
+        
+    
+    
+            var circle_marker_cd6863b95d705591d4ff9df6cf4b334c = L.circleMarker(
+                [44.29, 68.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_0961c85f04a761f0ef3ecf1116bc7a5d);
+        
+    
+        var popup_1c94dfb624c468a4b4fc66107c214170 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bee24e241ebb048a32f02d979d4b1628 = $(`<div id="html_bee24e241ebb048a32f02d979d4b1628" style="width: 100.0%; height: 100.0%;">Хозяйство 8<br>Дистанция: 3076692м<br>Риск: High Risk</div>`)[0];
+                popup_1c94dfb624c468a4b4fc66107c214170.setContent(html_bee24e241ebb048a32f02d979d4b1628);
+            
+        
+
+        circle_marker_cd6863b95d705591d4ff9df6cf4b334c.bindPopup(popup_1c94dfb624c468a4b4fc66107c214170)
+        ;
+
+        
+    
+</script>
+</html>

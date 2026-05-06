@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_afc0b2bdfefcdf0b6f099da3daf6f7fc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_afc0b2bdfefcdf0b6f099da3daf6f7fc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_afc0b2bdfefcdf0b6f099da3daf6f7fc = L.map(
+                "map_afc0b2bdfefcdf0b6f099da3daf6f7fc",
+                {
+                    center: [52.237, 21.0175],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f01b8b37fbb086d3db7cdc5e6b55576d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f01b8b37fbb086d3db7cdc5e6b55576d.addTo(map_afc0b2bdfefcdf0b6f099da3daf6f7fc);
+        
+    
+            var marker_872cc157074c4fad772274975663c871 = L.marker(
+                [52.237, 21.0175],
+                {
+}
+            ).addTo(map_afc0b2bdfefcdf0b6f099da3daf6f7fc);
+        
+    
+        var popup_cb2a48526f37a62d8ee30a8f4dd65216 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88d51a314ed7c7a7b52529da06178a53 = $(`<div id="html_88d51a314ed7c7a7b52529da06178a53" style="width: 100.0%; height: 100.0%;">River Kish Osek</div>`)[0];
+                popup_cb2a48526f37a62d8ee30a8f4dd65216.setContent(html_88d51a314ed7c7a7b52529da06178a53);
+            
+        
+
+        marker_872cc157074c4fad772274975663c871.bindPopup(popup_cb2a48526f37a62d8ee30a8f4dd65216)
+        ;
+
+        
+    
+    
+            var marker_36669e78f81c192e7462093368dc5af2 = L.marker(
+                [52.2456, 21.0289],
+                {
+}
+            ).addTo(map_afc0b2bdfefcdf0b6f099da3daf6f7fc);
+        
+    
+        var popup_83d697f092ec02a8c100d38983e2f10e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76913d0990731ec0f8d21070fca5666b = $(`<div id="html_76913d0990731ec0f8d21070fca5666b" style="width: 100.0%; height: 100.0%;">Pickling Location</div>`)[0];
+                popup_83d697f092ec02a8c100d38983e2f10e.setContent(html_76913d0990731ec0f8d21070fca5666b);
+            
+        
+
+        marker_36669e78f81c192e7462093368dc5af2.bindPopup(popup_83d697f092ec02a8c100d38983e2f10e)
+        ;
+
+        
+    
+</script>
+</html>

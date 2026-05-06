@@ -1,0 +1,352 @@
+Starting point：
+
+
+PREFIX vg:   <http://waterontology.org/vg#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  vg:WaterRegulationsKZ a vg:GroupNode ; rdfs:label "WaterRegulationsKZ" .
+  vg:WHOWaterMonitoring a vg:GroupNode ; rdfs:label "WHOWaterMonitoring" .
+  vg:HY_Features        a vg:GroupNode ; rdfs:label "HY_Features" .
+  vg:SocioGeoKZ         a vg:GroupNode ; rdfs:label "SocioGeoKZ" .
+  vg:TimeOntology       a vg:GroupNode ; rdfs:label "TimeOntology" .
+}
+WHERE { BIND(true AS ?x) }
+
+
+
+
+
+
+Graph expansion：
+
+
+PREFIX vg:    <http://waterontology.org/vg#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa:  <http://www.w3.org/ns/sosa/>
+PREFIX hyf:   <http://www.opengis.net/ont/hy_features#>
+PREFIX sg_kz: <http://smart-water.org/data/SocioGeo_KZ/>
+PREFIX sw:    <http://smart-water.org/data/>
+PREFIX wr_kz: <http://smart-water.org/data/WR_KZ/>
+PREFIX socio_kz: <http://smart-water.org/ont/socio_kz#>
+PREFIX unit:  <http://smart-water.org/ont/unit#>
+PREFIX time:  <http://smart-water.org/ont/time#>
+
+CONSTRUCT {
+  ?node ?p ?neighbor .
+  ?neighbor a ?t .
+  ?neighbor rdfs:label ?nlbl .
+}
+WHERE {
+  {
+    VALUES (?node ?neighbor) {
+      (vg:WaterRegulationsKZ   wr_kz:WaterClass)
+      (vg:WaterRegulationsKZ   wr_kz:WaterHygieneStandards)
+
+      (vg:WHOWaterMonitoring   sosa:Observation)
+      (vg:WHOWaterMonitoring   wr_kz:Indicators)
+      (vg:WHOWaterMonitoring   unit:Unit)
+      # (vg:WHOWaterMonitoring   hyf:HydrometricStation)   
+      (vg:HY_Features          hyf:HY_HydroFeature)
+      (vg:HY_Features          sosa:Observation)
+
+      (vg:SocioGeoKZ           sg_kz:AdministrativeRegion)
+      (vg:SocioGeoKZ           socio_kz:ArableLandArea)
+      (vg:SocioGeoKZ           socio_kz:IndustrialCompanies)
+
+      (vg:TimeOntology         time:Instant)
+      (vg:TimeOntology         time:Interval)
+      (vg:TimeOntology         time:TemporalEntity)
+    }
+    FILTER(?node IN (vg:WaterRegulationsKZ, vg:WHOWaterMonitoring, vg:HY_Features, vg:SocioGeoKZ, vg:TimeOntology))
+    BIND(vg:hasAnchor AS ?p)
+    OPTIONAL { ?neighbor rdfs:label ?nlbl }
+    BIND(?neighbor AS ?t)
+  }
+
+  UNION
+
+  # 2.1 Observation
+  {
+    # 修正：先执行子查询获取数据，再绑定?node为固定值并过滤
+    SELECT (sosa:Observation AS ?node) ?neighbor ?p ?nlbl ?t
+    WHERE {
+      ?neighbor a sosa:Observation .
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+      BIND(vg:hasInstance AS ?p)
+      BIND(sosa:Observation AS ?t)
+    }
+    LIMIT 30
+  }
+  UNION
+  # 2.2 Water bodies
+  {
+    SELECT (hyf:HY_HydroFeature AS ?node) ?neighbor ?p ?nlbl ?t
+    WHERE {
+      ?neighbor a hyf:HY_HydroFeature .
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+      BIND(vg:hasInstance AS ?p)
+      BIND(hyf:HY_HydroFeature AS ?t)
+    }
+    LIMIT 30
+  }
+  UNION
+  # 2.3 Administrative Regions
+  {
+    SELECT (sg_kz:AdministrativeRegion AS ?node) ?neighbor ?p ?nlbl ?t
+    WHERE {
+      ?neighbor a sg_kz:AdministrativeRegion .
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+      BIND(vg:hasInstance AS ?p)
+      BIND(sg_kz:AdministrativeRegion AS ?t)
+    }
+    LIMIT 30
+  }
+  UNION
+  # 2.4 ArableLandArea instances
+  {
+    SELECT (socio_kz:ArableLandArea AS ?node) ?neighbor ?p ?nlbl ?t
+    WHERE {
+      ?neighbor a socio_kz:ArableLandArea .
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+      BIND(vg:hasInstance AS ?p)
+      BIND(socio_kz:ArableLandArea AS ?t)
+    }
+    LIMIT 30
+  }
+  UNION
+  # 2.5 IndustrialCompanies instances
+  {
+    SELECT (socio_kz:IndustrialCompanies AS ?node) ?neighbor ?p ?nlbl ?t
+    WHERE {
+      ?neighbor a socio_kz:IndustrialCompanies .
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+      BIND(vg:hasInstance AS ?p)
+      BIND(socio_kz:IndustrialCompanies AS ?t)
+    }
+    LIMIT 30
+  }
+
+  UNION
+
+  {
+    ?node a sosa:Observation .
+    OPTIONAL {
+      ?node sosa:hasFeatureOfInterest ?neighbor .
+      BIND(sosa:hasFeatureOfInterest AS ?p)
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+    }
+  }
+  UNION
+  {
+    ?node a sosa:Observation .
+    OPTIONAL {
+      ?node sosa:resultTime ?neighbor .
+      BIND(sosa:resultTime AS ?p)
+    }
+  }
+  UNION
+  {
+    ?node a sosa:Observation .
+    OPTIONAL {
+      ?node wr_kz:Water_quality_class ?neighbor .
+      BIND(wr_kz:Water_quality_class AS ?p)
+    }
+  }
+
+  UNION
+
+  {
+    ?node a hyf:HY_HydroFeature .
+    OPTIONAL {
+      ?node sw:locatedInRegion ?neighbor .
+      BIND(sw:locatedInRegion AS ?p)
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+    }
+  }
+  UNION
+  {
+    ?node a hyf:HY_HydroFeature .
+    OPTIONAL {
+      ?node wr_kz:classifiedAs ?neighbor .
+      BIND(wr_kz:classifiedAs AS ?p)
+      OPTIONAL { ?neighbor rdfs:label ?nlbl }
+    }
+  }
+
+  UNION
+
+  {
+    FILTER EXISTS { ?node a wr_kz:WaterClass }   # 更通用的过滤
+    ?neighbor wr_kz:classifiedAs ?node ;
+              a hyf:HY_HydroFeature .
+    BIND(wr_kz:classifiedAs AS ?p)
+    OPTIONAL { ?neighbor rdfs:label ?nlbl }
+  }
+
+  UNION
+
+  {
+    ?node a sg_kz:AdministrativeRegion .
+    ?neighbor a hyf:HY_HydroFeature ;
+              sw:locatedInRegion ?node .
+    BIND(sw:locatedInRegion AS ?p)
+    OPTIONAL { ?neighbor rdfs:label ?nlbl }
+  }
+  UNION
+  {
+    ?node a sg_kz:AdministrativeRegion .
+    ?neighbor a ?t ;
+              socio_kz:locatedIn ?node .
+    FILTER(?t IN (socio_kz:ArableLandArea, socio_kz:IndustrialCompanies))
+    BIND(socio_kz:locatedIn AS ?p)
+    OPTIONAL { ?neighbor rdfs:label ?nlbl }
+  }
+
+  UNION
+
+  {
+    ?node a ?t .
+    FILTER(?t IN (socio_kz:ArableLandArea, socio_kz:IndustrialCompanies))
+    VALUES (?prop) {
+      (socio_kz:hasValue)
+      (unit:hasUnit)
+      (time:hasTime)
+      (socio_kz:locatedIn)
+    }
+    ?node ?prop ?neighbor .
+    BIND(?prop AS ?p)
+    OPTIONAL { ?neighbor rdfs:label ?nlbl }
+  }
+}
+
+
+
+
+
+Node basics：
+
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wr_kz: <http://smart-water.org/data/WR_KZ/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX hyf: <http://www.opengis.net/ont/hy_features#>
+PREFIX sg_kz: <http://smart-water.org/data/SocioGeo_KZ/>
+PREFIX socio_kz: <http://smart-water.org/ont/socio_kz#>
+PREFIX time: <http://smart-water.org/ont/time#>
+PREFIX unit: <http://smart-water.org/ont/unit#>
+PREFIX vg: <http://waterontology.org/vg#>
+
+SELECT ?node ?label ?type ?color
+WHERE {
+  OPTIONAL { ?node wr_kz:Post_name ?postName . }
+  OPTIONAL { ?node rdfs:label ?rdfsLabel . }
+  BIND(COALESCE(?postName, ?rdfsLabel, REPLACE(STR(?node), '^.*[#/](.+)$', '$1')) AS ?label)
+
+  OPTIONAL {
+    ?node a ?realType .
+    BIND(REPLACE(STR(?realType), '^.*[#/](.+)$', '$1') AS ?type)
+  }
+
+  BIND(
+    IF(?node IN (vg:WaterRegulationsKZ, vg:WHOWaterMonitoring, vg:HY_Features, vg:SocioGeoKZ, vg:TimeOntology),
+       "#2C3E50",
+    IF(EXISTS { ?node a wr_kz:WaterClass }, "#E74C3C",
+    IF(EXISTS { ?node a wr_kz:WaterHygieneStandards }, "#E74C3C",
+    IF(EXISTS { ?node a wr_kz:Indicators }, "#3498DB",
+    IF(EXISTS { ?node a unit:Unit }, "#3498DB",
+    IF(EXISTS { ?node a hyf:HY_HydroFeature }, "#3498DB",
+    IF(EXISTS { ?node a sosa:Observation }, "#E67E22",
+    IF(EXISTS { ?node a sg_kz:AdministrativeRegion }, "#1ABC9C",
+    IF(EXISTS { ?node a socio_kz:ArableLandArea }, "#F1C40F",
+    IF(EXISTS { ?node a socio_kz:IndustrialCompanies }, "#E67E22",
+    IF(EXISTS { ?node a time:Instant }, "#9B59B6",
+    IF(EXISTS { ?node a time:Interval }, "#9B59B6",
+    IF(EXISTS { ?node a time:TemporalEntity }, "#9B59B6",
+       "#95A5A6"))))))))))))) AS ?color
+  )
+}
+
+
+
+
+
+Edge basics：
+
+
+SELECT ?edge
+       (REPLACE(STR(?edge), '^.*[#/](.+)$', '$1') AS ?label)
+       (COUNT(*) AS ?count)
+WHERE {
+  ?s ?edge ?o .
+}
+GROUP BY ?edge
+
+
+
+
+
+
+Node extra：
+
+
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa:  <http://www.w3.org/ns/sosa/>
+PREFIX hyf:   <http://www.opengis.net/ont/hy_features#>
+PREFIX sg_kz: <http://smart-water.org/data/SocioGeo_KZ/>
+PREFIX sw:    <http://smart-water.org/data/>
+PREFIX wr_kz: <http://smart-water.org/data/WR_KZ/>
+PREFIX socio_kz: <http://smart-water.org/ont/socio_kz#>
+PREFIX unit:  <http://smart-water.org/ont/unit#>
+PREFIX time:  <http://smart-water.org/ont/time#>
+
+SELECT ?node ?property ?value
+WHERE {
+  {
+    # -------- Observation extras --------
+    ?node a sosa:Observation .
+    VALUES ?property {
+      sosa:hasFeatureOfInterest
+      sosa:resultTime
+      wr_kz:Water_quality_class
+    }
+    OPTIONAL { ?node ?property ?value }
+    FILTER(BOUND(?value))
+  }
+  UNION
+  {
+    ?node a sosa:Observation .
+    ?node ?property ?value .
+    FILTER(
+      CONTAINS(STR(?property), "Parameter") ||
+      CONTAINS(STR(?property), "Unit") ||
+      CONTAINS(STR(?property), "Concentration")
+    )
+  }
+  UNION
+  {
+    # -------- Water body extras --------
+    ?node a hyf:HY_HydroFeature .
+    VALUES ?property { rdfs:label sw:locatedInRegion wr_kz:classifiedAs }
+    OPTIONAL { ?node ?property ?value }
+    FILTER(BOUND(?value))
+  }
+  UNION
+  {
+    # -------- Socio-economic instance extras --------
+    ?node a ?t .
+    FILTER(?t IN (socio_kz:ArableLandArea, socio_kz:IndustrialCompanies))
+    VALUES ?property { socio_kz:hasValue unit:hasUnit time:hasTime socio_kz:locatedIn rdfs:label }
+    OPTIONAL { ?node ?property ?value }
+    FILTER(BOUND(?value))
+  }
+  UNION
+  {
+    # -------- Water quality class extras --------
+    ?node a wr_kz:WaterClass .
+    OPTIONAL { ?node rdfs:label ?value }
+    FILTER(BOUND(?value))
+    BIND(rdfs:label AS ?property)
+  }
+}
+LIMIT 200

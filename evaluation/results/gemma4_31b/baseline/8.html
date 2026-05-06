@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c2cd87987775f8008fd492d8e9c660cb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c2cd87987775f8008fd492d8e9c660cb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c2cd87987775f8008fd492d8e9c660cb = L.map(
+                "map_c2cd87987775f8008fd492d8e9c660cb",
+                {
+                    center: [43.225, 76.912],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_c2cd87987775f8008fd492d8e9c660cb);
+
+            
+
+        
+    
+            var tile_layer_579b8eea669b93dad23fed2d20c1e5c5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_579b8eea669b93dad23fed2d20c1e5c5.addTo(map_c2cd87987775f8008fd492d8e9c660cb);
+        
+    
+            var marker_3d2444b7fcf912f719a6783cf87bd4af = L.marker(
+                [43.225, 76.912],
+                {
+}
+            ).addTo(map_c2cd87987775f8008fd492d8e9c660cb);
+        
+    
+            var icon_29a2727c1f4563611f36a1e85e273477 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d36359ff52506132dff76774a060af9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ebfa420d34021fe485f6c4074a9e9331 = $(`<div id="html_ebfa420d34021fe485f6c4074a9e9331" style="width: 100.0%; height: 100.0%;">✅ Состояние: Работает<br>Уровень воды: 2.52 м<br>Обновлено: 2026-04-18 09:53:32</div>`)[0];
+                popup_3d36359ff52506132dff76774a060af9.setContent(html_ebfa420d34021fe485f6c4074a9e9331);
+            
+        
+
+        marker_3d2444b7fcf912f719a6783cf87bd4af.bindPopup(popup_3d36359ff52506132dff76774a060af9)
+        ;
+
+        
+    
+    
+            marker_3d2444b7fcf912f719a6783cf87bd4af.bindTooltip(
+                `<div>
+                     Датчик мониторинга Ulken Almaty River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d2444b7fcf912f719a6783cf87bd4af.setIcon(icon_29a2727c1f4563611f36a1e85e273477);
+            
+    
+            var marker_b6a235304209e4d1d95483f537785dad = L.marker(
+                [43.225, 76.912],
+                {
+}
+            ).addTo(map_c2cd87987775f8008fd492d8e9c660cb);
+        
+    
+            var div_icon_6866503a2b667d9ddd2404ea5ced1701 = L.divIcon({
+  "html": "\u003cdiv style=\"font-family: Arial; color: black; font-weight: bold; width: 200px;\"\u003e\u0420\u0435\u043a\u0430 Ulken Almaty: Online\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_b6a235304209e4d1d95483f537785dad.setIcon(div_icon_6866503a2b667d9ddd2404ea5ced1701);
+            
+</script>
+</html>

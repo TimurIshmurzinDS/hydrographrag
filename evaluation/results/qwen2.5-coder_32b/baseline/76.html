@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_05fa0c6eb8a67c9f20fcd699c2e38a0f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_05fa0c6eb8a67c9f20fcd699c2e38a0f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_05fa0c6eb8a67c9f20fcd699c2e38a0f = L.map(
+                "map_05fa0c6eb8a67c9f20fcd699c2e38a0f",
+                {
+                    center: [46.0, 81.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e70c94ddcab6e379d3e1925265dbe15f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e70c94ddcab6e379d3e1925265dbe15f.addTo(map_05fa0c6eb8a67c9f20fcd699c2e38a0f);
+        
+    
+            var marker_7448087800178002c0fcc6ff4dab67be = L.marker(
+                [45.0, 80.0],
+                {
+}
+            ).addTo(map_05fa0c6eb8a67c9f20fcd699c2e38a0f);
+        
+    
+            var icon_f257cce5034e0a80ddcaa6236cd89f07 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1659f22166249b37a951a9382e5bdf77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e2fd3e9d888d0d50a813536b747667f = $(`<div id="html_4e2fd3e9d888d0d50a813536b747667f" style="width: 100.0%; height: 100.0%;">Гидропост: ГП1 Текущий расход воды: 100 м³/с Риск паводка: Низкий риск</div>`)[0];
+                popup_1659f22166249b37a951a9382e5bdf77.setContent(html_4e2fd3e9d888d0d50a813536b747667f);
+            
+        
+
+        marker_7448087800178002c0fcc6ff4dab67be.bindPopup(popup_1659f22166249b37a951a9382e5bdf77)
+        ;
+
+        
+    
+    
+                marker_7448087800178002c0fcc6ff4dab67be.setIcon(icon_f257cce5034e0a80ddcaa6236cd89f07);
+            
+    
+            var marker_f99295d5aa9922a5abbd0bf72d91a032 = L.marker(
+                [46.0, 81.0],
+                {
+}
+            ).addTo(map_05fa0c6eb8a67c9f20fcd699c2e38a0f);
+        
+    
+            var icon_3e7e97f139cf9e02d91876daf2514720 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_34edeb7e0e210014ce7019a58ff3cb93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c58f4ea1036334759892911b68c15a1d = $(`<div id="html_c58f4ea1036334759892911b68c15a1d" style="width: 100.0%; height: 100.0%;">Гидропост: ГП2 Текущий расход воды: 200 м³/с Риск паводка: Средний риск</div>`)[0];
+                popup_34edeb7e0e210014ce7019a58ff3cb93.setContent(html_c58f4ea1036334759892911b68c15a1d);
+            
+        
+
+        marker_f99295d5aa9922a5abbd0bf72d91a032.bindPopup(popup_34edeb7e0e210014ce7019a58ff3cb93)
+        ;
+
+        
+    
+    
+                marker_f99295d5aa9922a5abbd0bf72d91a032.setIcon(icon_3e7e97f139cf9e02d91876daf2514720);
+            
+    
+            var marker_7401915b7d0c3d5bf749c17d4c0ef05b = L.marker(
+                [47.0, 82.0],
+                {
+}
+            ).addTo(map_05fa0c6eb8a67c9f20fcd699c2e38a0f);
+        
+    
+            var icon_d6e66c46c2b0a442cb11f383000c159e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69ed0e399d5d468f18fc54295a1d7430 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ac8d925f2bf278f759fb34388e0b2dd = $(`<div id="html_2ac8d925f2bf278f759fb34388e0b2dd" style="width: 100.0%; height: 100.0%;">Гидропост: ГП3 Текущий расход воды: 300 м³/с Риск паводка: Высокий риск</div>`)[0];
+                popup_69ed0e399d5d468f18fc54295a1d7430.setContent(html_2ac8d925f2bf278f759fb34388e0b2dd);
+            
+        
+
+        marker_7401915b7d0c3d5bf749c17d4c0ef05b.bindPopup(popup_69ed0e399d5d468f18fc54295a1d7430)
+        ;
+
+        
+    
+    
+                marker_7401915b7d0c3d5bf749c17d4c0ef05b.setIcon(icon_d6e66c46c2b0a442cb11f383000c159e);
+            
+</script>
+</html>

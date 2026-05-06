@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c21bc7e52aea815171f79ca2c91dab9d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c21bc7e52aea815171f79ca2c91dab9d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c21bc7e52aea815171f79ca2c91dab9d = L.map(
+                "map_c21bc7e52aea815171f79ca2c91dab9d",
+                {
+                    center: [42.05, 76.98],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2c8521f3b0f433168f5a52751eda6a42 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2c8521f3b0f433168f5a52751eda6a42.addTo(map_c21bc7e52aea815171f79ca2c91dab9d);
+        
+    
+            var marker_cluster_70f5b6d3bdcdfb837230b06a12174c2d = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_d10a36e244899ae35532d698a18c83b9 = L.marker(
+                [42.05, 76.98],
+                {
+}
+            ).addTo(marker_cluster_70f5b6d3bdcdfb837230b06a12174c2d);
+        
+    
+            var icon_a140d956421f1c65ba2e221063688147 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_295864fb87230b2e6700dffde74ced91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ebc25a53f6ee60c2404c02891202a804 = $(`<div id="html_ebc25a53f6ee60c2404c02891202a804" style="width: 100.0%; height: 100.0%;">Talas - Уровень подверженности весеннему половодью: 22</div>`)[0];
+                popup_295864fb87230b2e6700dffde74ced91.setContent(html_ebc25a53f6ee60c2404c02891202a804);
+            
+        
+
+        marker_d10a36e244899ae35532d698a18c83b9.bindPopup(popup_295864fb87230b2e6700dffde74ced91)
+        ;
+
+        
+    
+    
+                marker_d10a36e244899ae35532d698a18c83b9.setIcon(icon_a140d956421f1c65ba2e221063688147);
+            
+    
+            var marker_37502eb79dcb3a7b2373a95c02914ac5 = L.marker(
+                [42.05, 76.98],
+                {
+}
+            ).addTo(marker_cluster_70f5b6d3bdcdfb837230b06a12174c2d);
+        
+    
+            var icon_2bb69e9c923059903bdd251a1fe5d32a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_903cd06ebc3c4278ee58f9f142844f47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ae7c6a7b56ffb07bc0e9fefe6086078 = $(`<div id="html_2ae7c6a7b56ffb07bc0e9fefe6086078" style="width: 100.0%; height: 100.0%;">Naryn - Уровень подверженности весеннему половодью: 18</div>`)[0];
+                popup_903cd06ebc3c4278ee58f9f142844f47.setContent(html_2ae7c6a7b56ffb07bc0e9fefe6086078);
+            
+        
+
+        marker_37502eb79dcb3a7b2373a95c02914ac5.bindPopup(popup_903cd06ebc3c4278ee58f9f142844f47)
+        ;
+
+        
+    
+    
+                marker_37502eb79dcb3a7b2373a95c02914ac5.setIcon(icon_2bb69e9c923059903bdd251a1fe5d32a);
+            
+    
+            var marker_44b2c81a52ca358fb56db6ea3facfe54 = L.marker(
+                [42.05, 76.98],
+                {
+}
+            ).addTo(marker_cluster_70f5b6d3bdcdfb837230b06a12174c2d);
+        
+    
+            var icon_d0dba6f8b3cef6f1402bd6dbb91709c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b3baf993a450e1337f32c4fea834a78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f8bb1b20c34d283be302e926793af21 = $(`<div id="html_5f8bb1b20c34d283be302e926793af21" style="width: 100.0%; height: 100.0%;">Kara-Kol - Уровень подверженности весеннему половодью: 10</div>`)[0];
+                popup_2b3baf993a450e1337f32c4fea834a78.setContent(html_5f8bb1b20c34d283be302e926793af21);
+            
+        
+
+        marker_44b2c81a52ca358fb56db6ea3facfe54.bindPopup(popup_2b3baf993a450e1337f32c4fea834a78)
+        ;
+
+        
+    
+    
+                marker_44b2c81a52ca358fb56db6ea3facfe54.setIcon(icon_d0dba6f8b3cef6f1402bd6dbb91709c8);
+            
+    
+            var marker_cc29de64442a01e37fa989f43f257efd = L.marker(
+                [42.05, 76.98],
+                {
+}
+            ).addTo(marker_cluster_70f5b6d3bdcdfb837230b06a12174c2d);
+        
+    
+            var icon_dcbbb3bfb87470ba6276fa80858f0fcd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af9bfc9698b0c9be3a6f177e2a9c2d41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae6de0286fe6ac74ccf75fd081ff5245 = $(`<div id="html_ae6de0286fe6ac74ccf75fd081ff5245" style="width: 100.0%; height: 100.0%;">Sarykan - Уровень подверженности весеннему половодью: 10</div>`)[0];
+                popup_af9bfc9698b0c9be3a6f177e2a9c2d41.setContent(html_ae6de0286fe6ac74ccf75fd081ff5245);
+            
+        
+
+        marker_cc29de64442a01e37fa989f43f257efd.bindPopup(popup_af9bfc9698b0c9be3a6f177e2a9c2d41)
+        ;
+
+        
+    
+    
+                marker_cc29de64442a01e37fa989f43f257efd.setIcon(icon_dcbbb3bfb87470ba6276fa80858f0fcd);
+            
+    
+            marker_cluster_70f5b6d3bdcdfb837230b06a12174c2d.addTo(map_c21bc7e52aea815171f79ca2c91dab9d);
+        
+</script>
+</html>

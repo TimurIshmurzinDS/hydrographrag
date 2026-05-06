@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_632ecae289eb2dc94072e990929bf89b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_632ecae289eb2dc94072e990929bf89b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_632ecae289eb2dc94072e990929bf89b = L.map(
+                "map_632ecae289eb2dc94072e990929bf89b",
+                {
+                    center: [42.854375, 74.604375],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_89cf66a76db9e37485a38d1924cbf174 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_89cf66a76db9e37485a38d1924cbf174.addTo(map_632ecae289eb2dc94072e990929bf89b);
+        
+    
+            var marker_cluster_e3866ac1e8d3200ddbed48775054b908 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_55f82e05fde1cceffd2f5751739abe5b = L.marker(
+                [42.85, 74.6],
+                {
+}
+            ).addTo(marker_cluster_e3866ac1e8d3200ddbed48775054b908);
+        
+    
+            var icon_123276c1990f612dac26b229f5ea1001 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93dbaf2d0cc150744bac66e2d6f4cc81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ff08cac5bdb887116d3c11af6ccb067 = $(`<div id="html_7ff08cac5bdb887116d3c11af6ccb067" style="width: 100.0%; height: 100.0%;">Оборудование 1: Работает</div>`)[0];
+                popup_93dbaf2d0cc150744bac66e2d6f4cc81.setContent(html_7ff08cac5bdb887116d3c11af6ccb067);
+            
+        
+
+        marker_55f82e05fde1cceffd2f5751739abe5b.bindPopup(popup_93dbaf2d0cc150744bac66e2d6f4cc81)
+        ;
+
+        
+    
+    
+                marker_55f82e05fde1cceffd2f5751739abe5b.setIcon(icon_123276c1990f612dac26b229f5ea1001);
+            
+    
+            var marker_223428569176c8fa894f392083366223 = L.marker(
+                [42.855, 74.605],
+                {
+}
+            ).addTo(marker_cluster_e3866ac1e8d3200ddbed48775054b908);
+        
+    
+            var icon_b789755921ed60bc3d3e26eed3d9769c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_882f36b6de457c56fe7d12c46705a3aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cff6b98ea5abc8f68694a91c53ab39ae = $(`<div id="html_cff6b98ea5abc8f68694a91c53ab39ae" style="width: 100.0%; height: 100.0%;">Оборудование 2: Не работает</div>`)[0];
+                popup_882f36b6de457c56fe7d12c46705a3aa.setContent(html_cff6b98ea5abc8f68694a91c53ab39ae);
+            
+        
+
+        marker_223428569176c8fa894f392083366223.bindPopup(popup_882f36b6de457c56fe7d12c46705a3aa)
+        ;
+
+        
+    
+    
+                marker_223428569176c8fa894f392083366223.setIcon(icon_b789755921ed60bc3d3e26eed3d9769c);
+            
+    
+            var marker_9172ffe8f2888dd9fa2ce5a62a82a040 = L.marker(
+                [42.86, 74.61],
+                {
+}
+            ).addTo(marker_cluster_e3866ac1e8d3200ddbed48775054b908);
+        
+    
+            var icon_4842039f5b72ca39f8a178387e46fed8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d9bdfa4cd5723f23ae10f371ba1b687 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4de4afa256b3b5187034e9a49e22ac67 = $(`<div id="html_4de4afa256b3b5187034e9a49e22ac67" style="width: 100.0%; height: 100.0%;">Оборудование 3: Работает</div>`)[0];
+                popup_9d9bdfa4cd5723f23ae10f371ba1b687.setContent(html_4de4afa256b3b5187034e9a49e22ac67);
+            
+        
+
+        marker_9172ffe8f2888dd9fa2ce5a62a82a040.bindPopup(popup_9d9bdfa4cd5723f23ae10f371ba1b687)
+        ;
+
+        
+    
+    
+                marker_9172ffe8f2888dd9fa2ce5a62a82a040.setIcon(icon_4842039f5b72ca39f8a178387e46fed8);
+            
+    
+            var marker_38006f57a807eaf618051f51a4a9d29d = L.marker(
+                [42.8525, 74.6025],
+                {
+}
+            ).addTo(marker_cluster_e3866ac1e8d3200ddbed48775054b908);
+        
+    
+            var icon_326d4614e077b9627601ba8be811f171 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8542e2a9b50e6947c2c13d55cbd90f05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5704c9fe9b19a1df99a45992fbe00d8 = $(`<div id="html_c5704c9fe9b19a1df99a45992fbe00d8" style="width: 100.0%; height: 100.0%;">Оборудование 4: Не работает</div>`)[0];
+                popup_8542e2a9b50e6947c2c13d55cbd90f05.setContent(html_c5704c9fe9b19a1df99a45992fbe00d8);
+            
+        
+
+        marker_38006f57a807eaf618051f51a4a9d29d.bindPopup(popup_8542e2a9b50e6947c2c13d55cbd90f05)
+        ;
+
+        
+    
+    
+                marker_38006f57a807eaf618051f51a4a9d29d.setIcon(icon_326d4614e077b9627601ba8be811f171);
+            
+    
+            marker_cluster_e3866ac1e8d3200ddbed48775054b908.addTo(map_632ecae289eb2dc94072e990929bf89b);
+        
+</script>
+</html>

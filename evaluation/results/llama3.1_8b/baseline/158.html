@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0522b1df3503189469e9b3b640a71b5a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0522b1df3503189469e9b3b640a71b5a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0522b1df3503189469e9b3b640a71b5a = L.map(
+                "map_0522b1df3503189469e9b3b640a71b5a",
+                {
+                    center: [50.0, 90.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b0598d3df4d3b19f48d1eddf29589a3b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b0598d3df4d3b19f48d1eddf29589a3b.addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+            var marker_2916230bdb2365fba7964c28f04fcff4 = L.marker(
+                [50.0, 90.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_74fdfa45455e4bcc21bb715a321f6a62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_916cb55532e310eba4459b51b0568cae = $(`<div id="html_916cb55532e310eba4459b51b0568cae" style="width: 100.0%; height: 100.0%;">Река Баянколь</div>`)[0];
+                popup_74fdfa45455e4bcc21bb715a321f6a62.setContent(html_916cb55532e310eba4459b51b0568cae);
+            
+        
+
+        marker_2916230bdb2365fba7964c28f04fcff4.bindPopup(popup_74fdfa45455e4bcc21bb715a321f6a62)
+        ;
+
+        
+    
+    
+            var marker_4049264867c29f88d9f5f651e6d7708b = L.marker(
+                [51.0, 91.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_0ea95f521b8817774ba6f01f2390e7fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60cada0fff6f73c1f6542d30d1f22f75 = $(`<div id="html_60cada0fff6f73c1f6542d30d1f22f75" style="width: 100.0%; height: 100.0%;">Река Сарыкан</div>`)[0];
+                popup_0ea95f521b8817774ba6f01f2390e7fd.setContent(html_60cada0fff6f73c1f6542d30d1f22f75);
+            
+        
+
+        marker_4049264867c29f88d9f5f651e6d7708b.bindPopup(popup_0ea95f521b8817774ba6f01f2390e7fd)
+        ;
+
+        
+    
+    
+            var marker_6799035b8cab0045ac229adde99f7fc2 = L.marker(
+                [50.0, 90.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_40438401199212dbd0f1efab135ba21f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_133428db3b8799d3f6e9bae6a0104ac3 = $(`<div id="html_133428db3b8799d3f6e9bae6a0104ac3" style="width: 100.0%; height: 100.0%;">Год: 2020, Уровень воды в реке Баянколь: 13.610000000000127</div>`)[0];
+                popup_40438401199212dbd0f1efab135ba21f.setContent(html_133428db3b8799d3f6e9bae6a0104ac3);
+            
+        
+
+        marker_6799035b8cab0045ac229adde99f7fc2.bindPopup(popup_40438401199212dbd0f1efab135ba21f)
+        ;
+
+        
+    
+    
+            var marker_431bce24455e72d34152f68d2b864187 = L.marker(
+                [51.0, 90.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_39200f6db939d6b5f20dc7dadee8cf79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b6bfaa39c8ab56992795a24bab65fa2 = $(`<div id="html_1b6bfaa39c8ab56992795a24bab65fa2" style="width: 100.0%; height: 100.0%;">Год: 2021, Уровень воды в реке Баянколь: 14.000000000000114</div>`)[0];
+                popup_39200f6db939d6b5f20dc7dadee8cf79.setContent(html_1b6bfaa39c8ab56992795a24bab65fa2);
+            
+        
+
+        marker_431bce24455e72d34152f68d2b864187.bindPopup(popup_39200f6db939d6b5f20dc7dadee8cf79)
+        ;
+
+        
+    
+    
+            var marker_c2434e276dfa3b04fc67ddef030635e0 = L.marker(
+                [52.0, 90.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_d58cdf197c29952190f2538bc17dabae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7aab91a815b4d777688fca1f00c8332 = $(`<div id="html_b7aab91a815b4d777688fca1f00c8332" style="width: 100.0%; height: 100.0%;">Год: 2022, Уровень воды в реке Баянколь: 14.3900000000001</div>`)[0];
+                popup_d58cdf197c29952190f2538bc17dabae.setContent(html_b7aab91a815b4d777688fca1f00c8332);
+            
+        
+
+        marker_c2434e276dfa3b04fc67ddef030635e0.bindPopup(popup_d58cdf197c29952190f2538bc17dabae)
+        ;
+
+        
+    
+    
+            var marker_bf88eb67d7fe73f5bf6457afff0775c3 = L.marker(
+                [51.0, 91.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_e509841477bf123a7b94836de7111b88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a952e447b31f5bf59742470725b8cfa = $(`<div id="html_7a952e447b31f5bf59742470725b8cfa" style="width: 100.0%; height: 100.0%;">Год: 2020, Уровень воды в реке Сарыкан: 5.300000000000068</div>`)[0];
+                popup_e509841477bf123a7b94836de7111b88.setContent(html_7a952e447b31f5bf59742470725b8cfa);
+            
+        
+
+        marker_bf88eb67d7fe73f5bf6457afff0775c3.bindPopup(popup_e509841477bf123a7b94836de7111b88)
+        ;
+
+        
+    
+    
+            var marker_c0c95837b1b23fe14f67a51769db1337 = L.marker(
+                [52.0, 91.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_e2f06e8e796d9b4644687fe2c0dce94d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_478d491d623e4f69ef11e2e42dae8242 = $(`<div id="html_478d491d623e4f69ef11e2e42dae8242" style="width: 100.0%; height: 100.0%;">Год: 2021, Уровень воды в реке Сарыкан: 4.899999999999977</div>`)[0];
+                popup_e2f06e8e796d9b4644687fe2c0dce94d.setContent(html_478d491d623e4f69ef11e2e42dae8242);
+            
+        
+
+        marker_c0c95837b1b23fe14f67a51769db1337.bindPopup(popup_e2f06e8e796d9b4644687fe2c0dce94d)
+        ;
+
+        
+    
+    
+            var marker_549b044ae11865be3e30f0b8ea7d483c = L.marker(
+                [53.0, 91.0],
+                {
+}
+            ).addTo(map_0522b1df3503189469e9b3b640a71b5a);
+        
+    
+        var popup_0691278c606e31279469b41650ca92d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b698eb9b4e72d5f886d2c584121d4d6a = $(`<div id="html_b698eb9b4e72d5f886d2c584121d4d6a" style="width: 100.0%; height: 100.0%;">Год: 2022, Уровень воды в реке Сарыкан: 4.5</div>`)[0];
+                popup_0691278c606e31279469b41650ca92d8.setContent(html_b698eb9b4e72d5f886d2c584121d4d6a);
+            
+        
+
+        marker_549b044ae11865be3e30f0b8ea7d483c.bindPopup(popup_0691278c606e31279469b41650ca92d8)
+        ;
+
+        
+    
+</script>
+</html>

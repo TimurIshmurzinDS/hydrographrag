@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a54c32db58d543f9c71fd9742e3d6bc5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a54c32db58d543f9c71fd9742e3d6bc5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a54c32db58d543f9c71fd9742e3d6bc5 = L.map(
+                "map_a54c32db58d543f9c71fd9742e3d6bc5",
+                {
+                    center: [43.0597, 69.2164],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_48da3e5912110b9df690b2b712d198a2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_48da3e5912110b9df690b2b712d198a2.addTo(map_a54c32db58d543f9c71fd9742e3d6bc5);
+        
+    
+            var marker_07e93c1930f37ca7f156ed57a6e5a504 = L.marker(
+                [42.8743, 69.5011],
+                {
+}
+            ).addTo(map_a54c32db58d543f9c71fd9742e3d6bc5);
+        
+    
+            var icon_fe5a4c4bcc0ffe75bfcc3093add890dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c28336c5196c8039a90c9b05f2efe9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d5d9747d67d7d3f08fba32dae43fb25 = $(`<div id="html_6d5d9747d67d7d3f08fba32dae43fb25" style="width: 100.0%; height: 100.0%;">Датчик: Tentek River Sensor 1 Статус: Активен</div>`)[0];
+                popup_8c28336c5196c8039a90c9b05f2efe9d.setContent(html_6d5d9747d67d7d3f08fba32dae43fb25);
+            
+        
+
+        marker_07e93c1930f37ca7f156ed57a6e5a504.bindPopup(popup_8c28336c5196c8039a90c9b05f2efe9d)
+        ;
+
+        
+    
+    
+                marker_07e93c1930f37ca7f156ed57a6e5a504.setIcon(icon_fe5a4c4bcc0ffe75bfcc3093add890dd);
+            
+    
+            var marker_a81823eb60a8d513a20b0ea22c2f02af = L.marker(
+                [42.875, 69.502],
+                {
+}
+            ).addTo(map_a54c32db58d543f9c71fd9742e3d6bc5);
+        
+    
+            var icon_f591cae969badc70ff4db864426f6e53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31f20a24852058780893e86791b60ba1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60dea7aac30af7d520ac3161e34a6871 = $(`<div id="html_60dea7aac30af7d520ac3161e34a6871" style="width: 100.0%; height: 100.0%;">Датчик: Tentek River Sensor 2 Статус: Неактивен</div>`)[0];
+                popup_31f20a24852058780893e86791b60ba1.setContent(html_60dea7aac30af7d520ac3161e34a6871);
+            
+        
+
+        marker_a81823eb60a8d513a20b0ea22c2f02af.bindPopup(popup_31f20a24852058780893e86791b60ba1)
+        ;
+
+        
+    
+    
+                marker_a81823eb60a8d513a20b0ea22c2f02af.setIcon(icon_f591cae969badc70ff4db864426f6e53);
+            
+    
+            var marker_f8e5b2a958f6a48508c6bea1c4c41976 = L.marker(
+                [43.245, 69.185],
+                {
+}
+            ).addTo(map_a54c32db58d543f9c71fd9742e3d6bc5);
+        
+    
+            var icon_bf19c4f23e9a6156e1906481dc96a009 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50bbf2f6137496b4a1aae3a93cec71ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00f9ef269d8dc8658b08206574d70d5d = $(`<div id="html_00f9ef269d8dc8658b08206574d70d5d" style="width: 100.0%; height: 100.0%;">Датчик: Temirlik River Sensor 1 Статус: Активен</div>`)[0];
+                popup_50bbf2f6137496b4a1aae3a93cec71ea.setContent(html_00f9ef269d8dc8658b08206574d70d5d);
+            
+        
+
+        marker_f8e5b2a958f6a48508c6bea1c4c41976.bindPopup(popup_50bbf2f6137496b4a1aae3a93cec71ea)
+        ;
+
+        
+    
+    
+                marker_f8e5b2a958f6a48508c6bea1c4c41976.setIcon(icon_bf19c4f23e9a6156e1906481dc96a009);
+            
+    
+            var marker_7a736e66bdf391ad42acdc843dde2997 = L.marker(
+                [43.246, 69.186],
+                {
+}
+            ).addTo(map_a54c32db58d543f9c71fd9742e3d6bc5);
+        
+    
+            var icon_6c9aeca1b597d9dec7dc1c4bfe98c491 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dda807c96de12d7688ca79b7a7da1699 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d741f6bc92d72d51e425f1a6f522dbb7 = $(`<div id="html_d741f6bc92d72d51e425f1a6f522dbb7" style="width: 100.0%; height: 100.0%;">Датчик: Temirlik River Sensor 2 Статус: Неактивен</div>`)[0];
+                popup_dda807c96de12d7688ca79b7a7da1699.setContent(html_d741f6bc92d72d51e425f1a6f522dbb7);
+            
+        
+
+        marker_7a736e66bdf391ad42acdc843dde2997.bindPopup(popup_dda807c96de12d7688ca79b7a7da1699)
+        ;
+
+        
+    
+    
+                marker_7a736e66bdf391ad42acdc843dde2997.setIcon(icon_6c9aeca1b597d9dec7dc1c4bfe98c491);
+            
+</script>
+</html>

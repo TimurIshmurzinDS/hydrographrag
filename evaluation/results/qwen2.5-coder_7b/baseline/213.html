@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8513562e3eaffdd845fe7a7f999e44c4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8513562e3eaffdd845fe7a7f999e44c4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8513562e3eaffdd845fe7a7f999e44c4 = L.map(
+                "map_8513562e3eaffdd845fe7a7f999e44c4",
+                {
+                    center: [37.421998, -122.084],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f4f0af260bd704f51af272be0ff74ca = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7f4f0af260bd704f51af272be0ff74ca.addTo(map_8513562e3eaffdd845fe7a7f999e44c4);
+        
+    
+            var marker_c3fea2670e129582773910cc7df21614 = L.marker(
+                [37.421998, -122.084],
+                {
+}
+            ).addTo(map_8513562e3eaffdd845fe7a7f999e44c4);
+        
+    
+        var popup_d6c335c1ba0f52ec503327249f7cf815 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98b77822802ac6be3eb3d016dc7023c0 = $(`<div id="html_98b77822802ac6be3eb3d016dc7023c0" style="width: 100.0%; height: 100.0%;">Датчик Dos River: 10, Цена Ethereum: 2000</div>`)[0];
+                popup_d6c335c1ba0f52ec503327249f7cf815.setContent(html_98b77822802ac6be3eb3d016dc7023c0);
+            
+        
+
+        marker_c3fea2670e129582773910cc7df21614.bindPopup(popup_d6c335c1ba0f52ec503327249f7cf815)
+        ;
+
+        
+    
+    
+            var marker_99786cc3e39e2f8d38be347e00410df1 = L.marker(
+                [37.421998, -122.084],
+                {
+}
+            ).addTo(map_8513562e3eaffdd845fe7a7f999e44c4);
+        
+    
+        var popup_52a7bfcd052666f147112c1e17ff94ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c1725909606540f47209e1035cfa553 = $(`<div id="html_7c1725909606540f47209e1035cfa553" style="width: 100.0%; height: 100.0%;">Датчик Dos River: 20, Цена Ethereum: 2100</div>`)[0];
+                popup_52a7bfcd052666f147112c1e17ff94ce.setContent(html_7c1725909606540f47209e1035cfa553);
+            
+        
+
+        marker_99786cc3e39e2f8d38be347e00410df1.bindPopup(popup_52a7bfcd052666f147112c1e17ff94ce)
+        ;
+
+        
+    
+    
+            var marker_8890a70957c7e1f42838e7b43f967370 = L.marker(
+                [37.421998, -122.084],
+                {
+}
+            ).addTo(map_8513562e3eaffdd845fe7a7f999e44c4);
+        
+    
+        var popup_e1c03b72a046ae9575343035226b43df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fec6fba435626d038d1140c6d62489d4 = $(`<div id="html_fec6fba435626d038d1140c6d62489d4" style="width: 100.0%; height: 100.0%;">Датчик Dos River: 30, Цена Ethereum: 2200</div>`)[0];
+                popup_e1c03b72a046ae9575343035226b43df.setContent(html_fec6fba435626d038d1140c6d62489d4);
+            
+        
+
+        marker_8890a70957c7e1f42838e7b43f967370.bindPopup(popup_e1c03b72a046ae9575343035226b43df)
+        ;
+
+        
+    
+    
+            var marker_417f8e38f7e842b52a07265970df1a04 = L.marker(
+                [37.421998, -122.084],
+                {
+}
+            ).addTo(map_8513562e3eaffdd845fe7a7f999e44c4);
+        
+    
+        var popup_627877f00b6e43fa244b718040d90076 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16c8ef71e19a0160afe6c3ed8c55a1b6 = $(`<div id="html_16c8ef71e19a0160afe6c3ed8c55a1b6" style="width: 100.0%; height: 100.0%;">Датчик Dos River: 40, Цена Ethereum: 2300</div>`)[0];
+                popup_627877f00b6e43fa244b718040d90076.setContent(html_16c8ef71e19a0160afe6c3ed8c55a1b6);
+            
+        
+
+        marker_417f8e38f7e842b52a07265970df1a04.bindPopup(popup_627877f00b6e43fa244b718040d90076)
+        ;
+
+        
+    
+    
+            var marker_ea13b3d8374b7bcebfc24c099665a3f9 = L.marker(
+                [37.421998, -122.084],
+                {
+}
+            ).addTo(map_8513562e3eaffdd845fe7a7f999e44c4);
+        
+    
+        var popup_aaa19e975ab28433fc5b78cb7dc81fa6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef5249a209b8ef9cdbe20249db5309ad = $(`<div id="html_ef5249a209b8ef9cdbe20249db5309ad" style="width: 100.0%; height: 100.0%;">Датчик Dos River: 50, Цена Ethereum: 2400</div>`)[0];
+                popup_aaa19e975ab28433fc5b78cb7dc81fa6.setContent(html_ef5249a209b8ef9cdbe20249db5309ad);
+            
+        
+
+        marker_ea13b3d8374b7bcebfc24c099665a3f9.bindPopup(popup_aaa19e975ab28433fc5b78cb7dc81fa6)
+        ;
+
+        
+    
+</script>
+</html>

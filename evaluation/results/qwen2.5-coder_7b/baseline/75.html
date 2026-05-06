@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5f6b87ff2a8abe392b7a0b88c4c583af {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5f6b87ff2a8abe392b7a0b88c4c583af" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5f6b87ff2a8abe392b7a0b88c4c583af = L.map(
+                "map_5f6b87ff2a8abe392b7a0b88c4c583af",
+                {
+                    center: [50.175, 49.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_131d136f4be15d3e354f9409fc34ef0f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_131d136f4be15d3e354f9409fc34ef0f.addTo(map_5f6b87ff2a8abe392b7a0b88c4c583af);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_5f6b87ff2a8abe392b7a0b88c4c583af.timeDimension = L.timeDimension(
+                {
+                    period: "PT1M",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 10,
+  "autoPlay": true,
+  "loopButton": false,
+  "timeSliderDragUpdate": false,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": true,
+  "startOver": true,
+},
+}
+            );
+            map_5f6b87ff2a8abe392b7a0b88c4c583af.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [50.1, 49.2]}, "properties": {"speed": 3, "direction": "N"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [50.2, 49.3]}, "properties": {"speed": 2, "direction": "NE"}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_db0a959de35300c3ebb065d6cc2da4f9 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_5f6b87ff2a8abe392b7a0b88c4c583af);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_5f6b87ff2a8abe392b7a0b88c4c583af.timeDimension = L.timeDimension(
+                {
+                    period: "PT1M",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 10,
+  "autoPlay": true,
+  "loopButton": false,
+  "timeSliderDragUpdate": false,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": true,
+  "startOver": true,
+},
+}
+            );
+            map_5f6b87ff2a8abe392b7a0b88c4c583af.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [50.15, 49.25]}, "properties": {"speed": 3, "direction": "S"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [50.25, 49.35]}, "properties": {"speed": 2, "direction": "SE"}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_f4e8fa9ad1af26f638432725ea0e4a47 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_5f6b87ff2a8abe392b7a0b88c4c583af);
+        
+    
+            var marker_9bdab25b7067c4b1f7b07071a4a6464b = L.marker(
+                [50.1, 49.2],
+                {
+}
+            ).addTo(map_5f6b87ff2a8abe392b7a0b88c4c583af);
+        
+    
+            var icon_7d81846c659dc1ee9d4b6b06e6ea2a92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0916528eeeba83556f37b45d1f35685d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8015dbb0aba7825d49a5c93a0a094206 = $(`<div id="html_8015dbb0aba7825d49a5c93a0a094206" style="width: 100.0%; height: 100.0%;">Tentek River - Speed: 3 km/h, Direction: N</div>`)[0];
+                popup_0916528eeeba83556f37b45d1f35685d.setContent(html_8015dbb0aba7825d49a5c93a0a094206);
+            
+        
+
+        marker_9bdab25b7067c4b1f7b07071a4a6464b.bindPopup(popup_0916528eeeba83556f37b45d1f35685d)
+        ;
+
+        
+    
+    
+                marker_9bdab25b7067c4b1f7b07071a4a6464b.setIcon(icon_7d81846c659dc1ee9d4b6b06e6ea2a92);
+            
+    
+            var marker_0099feb01331a74f1fcfe7f0a855c85a = L.marker(
+                [50.2, 49.3],
+                {
+}
+            ).addTo(map_5f6b87ff2a8abe392b7a0b88c4c583af);
+        
+    
+            var icon_d75b1e6e769943c51d4c0c3864a9b603 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e9d5a7d2b32b5e06b2dea94c47b6bfe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9083be6508bd156706a40955437abb85 = $(`<div id="html_9083be6508bd156706a40955437abb85" style="width: 100.0%; height: 100.0%;">Tentek River - Speed: 2 km/h, Direction: NE</div>`)[0];
+                popup_2e9d5a7d2b32b5e06b2dea94c47b6bfe.setContent(html_9083be6508bd156706a40955437abb85);
+            
+        
+
+        marker_0099feb01331a74f1fcfe7f0a855c85a.bindPopup(popup_2e9d5a7d2b32b5e06b2dea94c47b6bfe)
+        ;
+
+        
+    
+    
+                marker_0099feb01331a74f1fcfe7f0a855c85a.setIcon(icon_d75b1e6e769943c51d4c0c3864a9b603);
+            
+    
+            var marker_e55d9e9a8f787b2b79bdb78a3fbe3118 = L.marker(
+                [50.15, 49.25],
+                {
+}
+            ).addTo(map_5f6b87ff2a8abe392b7a0b88c4c583af);
+        
+    
+            var icon_42dbe40f889b851857e880204828a45b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c876907bddf14aafcd3e7fb24ce4eb50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23d7f5b9cf87dbcc5c821c3db3e6e7db = $(`<div id="html_23d7f5b9cf87dbcc5c821c3db3e6e7db" style="width: 100.0%; height: 100.0%;">Sharyn River - Speed: 3 km/h, Direction: S</div>`)[0];
+                popup_c876907bddf14aafcd3e7fb24ce4eb50.setContent(html_23d7f5b9cf87dbcc5c821c3db3e6e7db);
+            
+        
+
+        marker_e55d9e9a8f787b2b79bdb78a3fbe3118.bindPopup(popup_c876907bddf14aafcd3e7fb24ce4eb50)
+        ;
+
+        
+    
+    
+                marker_e55d9e9a8f787b2b79bdb78a3fbe3118.setIcon(icon_42dbe40f889b851857e880204828a45b);
+            
+    
+            var marker_14e1d31ff9c6cac6bf25bae8622157ae = L.marker(
+                [50.25, 49.35],
+                {
+}
+            ).addTo(map_5f6b87ff2a8abe392b7a0b88c4c583af);
+        
+    
+            var icon_26d1c87ee1258531f8f2f79588973c51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b16ba37d01c29933b6683704121f7410 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdb8674b85e7352c31e15b106e2857e4 = $(`<div id="html_cdb8674b85e7352c31e15b106e2857e4" style="width: 100.0%; height: 100.0%;">Sharyn River - Speed: 2 km/h, Direction: SE</div>`)[0];
+                popup_b16ba37d01c29933b6683704121f7410.setContent(html_cdb8674b85e7352c31e15b106e2857e4);
+            
+        
+
+        marker_14e1d31ff9c6cac6bf25bae8622157ae.bindPopup(popup_b16ba37d01c29933b6683704121f7410)
+        ;
+
+        
+    
+    
+                marker_14e1d31ff9c6cac6bf25bae8622157ae.setIcon(icon_26d1c87ee1258531f8f2f79588973c51);
+            
+</script>
+</html>

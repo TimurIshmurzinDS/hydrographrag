@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4d6cf68632b4161f2ebf9e0188237462 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4d6cf68632b4161f2ebf9e0188237462" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4d6cf68632b4161f2ebf9e0188237462 = L.map(
+                "map_4d6cf68632b4161f2ebf9e0188237462",
+                {
+                    center: [43.05, 78.85],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_71d078925010ed3212cc829f9c46ac83 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_71d078925010ed3212cc829f9c46ac83.addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+            var poly_line_115be72e3fd923e4e4e33b180e5b1fa1 = L.polyline(
+                [[43.25, 78.5], [43.18, 78.65], [43.1, 78.8], [43.02, 78.95], [42.95, 79.1], [42.88, 79.25]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+            poly_line_115be72e3fd923e4e4e33b180e5b1fa1.bindTooltip(
+                `<div>
+                     Русло реки Лепси
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f18fed6aaac2b9805f3bbaaee3b09f50 = L.circleMarker(
+                [43.25, 78.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+        var popup_a73a122308cb0181f84a276c315fb70a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7e72dd08346ae9de33eeeb1f267b0d94 = $(`<div id="html_7e72dd08346ae9de33eeeb1f267b0d94" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; width: 200px;'>         <h4>Станция: Верхнее течение</h4>         <b>pH:</b> 7.2<br>         <b>БПК₅:</b> 1.2 мг/л<br>         <b>Нитраты:</b> 5.0 мг/л<br>         <hr>         <b>Статус:</b> <span style='color:green; font-weight:bold;'>         Low</span>     </div>     </div>`)[0];
+                popup_a73a122308cb0181f84a276c315fb70a.setContent(html_7e72dd08346ae9de33eeeb1f267b0d94);
+            
+        
+
+        circle_marker_f18fed6aaac2b9805f3bbaaee3b09f50.bindPopup(popup_a73a122308cb0181f84a276c315fb70a)
+        ;
+
+        
+    
+    
+            var circle_marker_60589c5108145c1f720f8a1ac59ed409 = L.circleMarker(
+                [43.18, 78.65],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+        var popup_0e67bd458419039929e31cbe6375bd42 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5f3db31a257b01dc8a1e8a9404336abc = $(`<div id="html_5f3db31a257b01dc8a1e8a9404336abc" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; width: 200px;'>         <h4>Станция: Участок А</h4>         <b>pH:</b> 7.5<br>         <b>БПК₅:</b> 2.5 мг/л<br>         <b>Нитраты:</b> 12.0 мг/л<br>         <hr>         <b>Статус:</b> <span style='color:green; font-weight:bold;'>         Low</span>     </div>     </div>`)[0];
+                popup_0e67bd458419039929e31cbe6375bd42.setContent(html_5f3db31a257b01dc8a1e8a9404336abc);
+            
+        
+
+        circle_marker_60589c5108145c1f720f8a1ac59ed409.bindPopup(popup_0e67bd458419039929e31cbe6375bd42)
+        ;
+
+        
+    
+    
+            var circle_marker_18f7e02f393d24df4205d07ea9a38c39 = L.circleMarker(
+                [43.1, 78.8],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+        var popup_ee3ccad01c765851c3f08160a632e5d8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9660d8a8455fed727d598ec61f87cc3b = $(`<div id="html_9660d8a8455fed727d598ec61f87cc3b" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; width: 200px;'>         <h4>Станция: Среднее течение</h4>         <b>pH:</b> 8.1<br>         <b>БПК₅:</b> 4.8 мг/л<br>         <b>Нитраты:</b> 25.0 мг/л<br>         <hr>         <b>Статус:</b> <span style='color:orange; font-weight:bold;'>         Medium</span>     </div>     </div>`)[0];
+                popup_ee3ccad01c765851c3f08160a632e5d8.setContent(html_9660d8a8455fed727d598ec61f87cc3b);
+            
+        
+
+        circle_marker_18f7e02f393d24df4205d07ea9a38c39.bindPopup(popup_ee3ccad01c765851c3f08160a632e5d8)
+        ;
+
+        
+    
+    
+            var circle_marker_e3961f4c90c44f776d6cf8365c937955 = L.circleMarker(
+                [43.02, 78.95],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+        var popup_24c8e43206379f21d42e719d9ecde2b7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_48e532363603963d1fe71400dcb9a1f5 = $(`<div id="html_48e532363603963d1fe71400dcb9a1f5" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; width: 200px;'>         <h4>Станция: Участок Б</h4>         <b>pH:</b> 8.4<br>         <b>БПК₅:</b> 6.1 мг/л<br>         <b>Нитраты:</b> 40.0 мг/л<br>         <hr>         <b>Статус:</b> <span style='color:red; font-weight:bold;'>         High</span>     </div>     </div>`)[0];
+                popup_24c8e43206379f21d42e719d9ecde2b7.setContent(html_48e532363603963d1fe71400dcb9a1f5);
+            
+        
+
+        circle_marker_e3961f4c90c44f776d6cf8365c937955.bindPopup(popup_24c8e43206379f21d42e719d9ecde2b7)
+        ;
+
+        
+    
+    
+            var circle_marker_ad06336884a5ef9356587b0dedddf799 = L.circleMarker(
+                [42.95, 79.1],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+        var popup_30d73bfd6a41d8778414033af9ca1f2a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7d49735d75a140a9f341b329c2fd5fe7 = $(`<div id="html_7d49735d75a140a9f341b329c2fd5fe7" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; width: 200px;'>         <h4>Станция: Нижнее течение</h4>         <b>pH:</b> 7.8<br>         <b>БПК₅:</b> 3.2 мг/л<br>         <b>Нитраты:</b> 15.0 мг/л<br>         <hr>         <b>Статус:</b> <span style='color:orange; font-weight:bold;'>         Medium</span>     </div>     </div>`)[0];
+                popup_30d73bfd6a41d8778414033af9ca1f2a.setContent(html_7d49735d75a140a9f341b329c2fd5fe7);
+            
+        
+
+        circle_marker_ad06336884a5ef9356587b0dedddf799.bindPopup(popup_30d73bfd6a41d8778414033af9ca1f2a)
+        ;
+
+        
+    
+    
+            var circle_marker_bafb34a7d227d837e9b70e9dd580c204 = L.circleMarker(
+                [42.88, 79.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4d6cf68632b4161f2ebf9e0188237462);
+        
+    
+        var popup_b053dc93252ec29998b734be53296798 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cbc5c93b8453274c3400d08e6b65ac78 = $(`<div id="html_cbc5c93b8453274c3400d08e6b65ac78" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; width: 200px;'>         <h4>Станция: Устье</h4>         <b>pH:</b> 7.6<br>         <b>БПК₅:</b> 2.8 мг/л<br>         <b>Нитраты:</b> 10.0 мг/л<br>         <hr>         <b>Статус:</b> <span style='color:green; font-weight:bold;'>         Low</span>     </div>     </div>`)[0];
+                popup_b053dc93252ec29998b734be53296798.setContent(html_cbc5c93b8453274c3400d08e6b65ac78);
+            
+        
+
+        circle_marker_bafb34a7d227d837e9b70e9dd580c204.bindPopup(popup_b053dc93252ec29998b734be53296798)
+        ;
+
+        
+    
+</script>
+</html>

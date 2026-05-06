@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4018c31ed7238a209e5bd5279aa88d51 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4018c31ed7238a209e5bd5279aa88d51" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4018c31ed7238a209e5bd5279aa88d51 = L.map(
+                "map_4018c31ed7238a209e5bd5279aa88d51",
+                {
+                    center: [43.25, 78.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f6c2006102e4d09ccf0e29356a6c757b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f6c2006102e4d09ccf0e29356a6c757b.addTo(map_4018c31ed7238a209e5bd5279aa88d51);
+        
+    
+            var poly_line_c4f70d0a31ba53b613e14d894d1f91b4 = L.polyline(
+                [[43.25, 78.1], [43.1, 78.25]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_4018c31ed7238a209e5bd5279aa88d51);
+        
+    
+            poly_line_c4f70d0a31ba53b613e14d894d1f91b4.bindTooltip(
+                `<div>
+                     Sarykan River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9ddd6a9208f31a63b0db88cb1438b7f3 = L.polyline(
+                [[43.4, 78.5], [43.2, 78.65]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_4018c31ed7238a209e5bd5279aa88d51);
+        
+    
+            poly_line_9ddd6a9208f31a63b0db88cb1438b7f3.bindTooltip(
+                `<div>
+                     Aksu River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_684ec7baec9b168f42acf16da26f04a8 = L.circleMarker(
+                [43.25, 78.1],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4018c31ed7238a209e5bd5279aa88d51);
+        
+    
+        var popup_f80da977e1311add6399d2c9b628e331 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6064203bb44706212ff6dbda503135e2 = $(`<div id="html_6064203bb44706212ff6dbda503135e2" style="width: 100.0%; height: 100.0%;">Река: Sarykan River<br>Уровень: 1.2 м<br>Порог: 1.0 м<br><b>Статус: Пограничное состояние</b></div>`)[0];
+                popup_f80da977e1311add6399d2c9b628e331.setContent(html_6064203bb44706212ff6dbda503135e2);
+            
+        
+
+        circle_marker_684ec7baec9b168f42acf16da26f04a8.bindPopup(popup_f80da977e1311add6399d2c9b628e331)
+        ;
+
+        
+    
+    
+            var circle_marker_d9b104c620b34b2ef67d34606ba38acd = L.circleMarker(
+                [43.1, 78.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4018c31ed7238a209e5bd5279aa88d51);
+        
+    
+        var popup_cacaa364509e9c6429d78187289e1c28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92b886b271518b6dd18ef769463275ee = $(`<div id="html_92b886b271518b6dd18ef769463275ee" style="width: 100.0%; height: 100.0%;">Река: Sarykan River<br>Уровень: 0.8 м<br>Порог: 1.0 м<br><b>Статус: Недостаточно</b></div>`)[0];
+                popup_cacaa364509e9c6429d78187289e1c28.setContent(html_92b886b271518b6dd18ef769463275ee);
+            
+        
+
+        circle_marker_d9b104c620b34b2ef67d34606ba38acd.bindPopup(popup_cacaa364509e9c6429d78187289e1c28)
+        ;
+
+        
+    
+    
+            var circle_marker_c8d5011f8933c593164e195e9595ee02 = L.circleMarker(
+                [43.4, 78.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4018c31ed7238a209e5bd5279aa88d51);
+        
+    
+        var popup_a6117c0e7796859850581eb9a35d464b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2baea7f7224552c4bffa4f2189435f75 = $(`<div id="html_2baea7f7224552c4bffa4f2189435f75" style="width: 100.0%; height: 100.0%;">Река: Aksu River<br>Уровень: 2.5 м<br>Порог: 1.0 м<br><b>Статус: Достаточно</b></div>`)[0];
+                popup_a6117c0e7796859850581eb9a35d464b.setContent(html_2baea7f7224552c4bffa4f2189435f75);
+            
+        
+
+        circle_marker_c8d5011f8933c593164e195e9595ee02.bindPopup(popup_a6117c0e7796859850581eb9a35d464b)
+        ;
+
+        
+    
+    
+            var circle_marker_d81b22a4aa6848c2c8917f3e07adf09d = L.circleMarker(
+                [43.2, 78.65],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4018c31ed7238a209e5bd5279aa88d51);
+        
+    
+        var popup_2efe9ff7c962df990b70f4fa71a7a492 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecf27dc212df455c1acf8b248de8685c = $(`<div id="html_ecf27dc212df455c1acf8b248de8685c" style="width: 100.0%; height: 100.0%;">Река: Aksu River<br>Уровень: 1.1 м<br>Порог: 1.0 м<br><b>Статус: Пограничное состояние</b></div>`)[0];
+                popup_2efe9ff7c962df990b70f4fa71a7a492.setContent(html_ecf27dc212df455c1acf8b248de8685c);
+            
+        
+
+        circle_marker_d81b22a4aa6848c2c8917f3e07adf09d.bindPopup(popup_2efe9ff7c962df990b70f4fa71a7a492)
+        ;
+
+        
+    
+</script>
+</html>

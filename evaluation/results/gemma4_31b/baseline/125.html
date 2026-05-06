@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6fd873f68ff382e4d31a174cd4206554 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6fd873f68ff382e4d31a174cd4206554" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6fd873f68ff382e4d31a174cd4206554 = L.map(
+                "map_6fd873f68ff382e4d31a174cd4206554",
+                {
+                    center: [44.2, 71.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6d6d4be4bc751c76dc6da95305910b12 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6d6d4be4bc751c76dc6da95305910b12.addTo(map_6fd873f68ff382e4d31a174cd4206554);
+        
+    
+            var marker_9124b3cee483654e2304aa7fc6cb0d47 = L.marker(
+                [44.5, 78.0],
+                {
+}
+            ).addTo(map_6fd873f68ff382e4d31a174cd4206554);
+        
+    
+            var icon_5011dc43370c0eb3cd099a2f625728c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dec52149a2cefc889b28c1f6d2be4178 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f587ce6a99a69ab0a13d0ec4def19ae = $(`<div id="html_0f587ce6a99a69ab0a13d0ec4def19ae" style="width: 100.0%; height: 100.0%;"><b>Tekes River</b><br>Средний расход: 13.62 m3/s<br>Текущий расход: 15.50 m3/s<br>Увеличение: 1.88 m3/s</div>`)[0];
+                popup_dec52149a2cefc889b28c1f6d2be4178.setContent(html_0f587ce6a99a69ab0a13d0ec4def19ae);
+            
+        
+
+        marker_9124b3cee483654e2304aa7fc6cb0d47.bindPopup(popup_dec52149a2cefc889b28c1f6d2be4178)
+        ;
+
+        
+    
+    
+            marker_9124b3cee483654e2304aa7fc6cb0d47.bindTooltip(
+                `<div>
+                     Tekes River (Increase: 1.88)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9124b3cee483654e2304aa7fc6cb0d47.setIcon(icon_5011dc43370c0eb3cd099a2f625728c0);
+            
+    
+            var marker_904f72f5588329db4a453bded2675563 = L.marker(
+                [44.0, 65.0],
+                {
+}
+            ).addTo(map_6fd873f68ff382e4d31a174cd4206554);
+        
+    
+            var icon_ea4888f222d598e9a5626484de9de37a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1157063bed3009527d8cc7dec66cfe1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b186d0e808d5745d0b47944f2c28ea90 = $(`<div id="html_b186d0e808d5745d0b47944f2c28ea90" style="width: 100.0%; height: 100.0%;"><b>Bayankol River</b><br>Средний расход: 9.02 m3/s<br>Текущий расход: 12.40 m3/s<br>Увеличение: 3.38 m3/s</div>`)[0];
+                popup_a1157063bed3009527d8cc7dec66cfe1.setContent(html_b186d0e808d5745d0b47944f2c28ea90);
+            
+        
+
+        marker_904f72f5588329db4a453bded2675563.bindPopup(popup_a1157063bed3009527d8cc7dec66cfe1)
+        ;
+
+        
+    
+    
+            marker_904f72f5588329db4a453bded2675563.bindTooltip(
+                `<div>
+                     Bayankol River (Increase: 3.38)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_904f72f5588329db4a453bded2675563.setIcon(icon_ea4888f222d598e9a5626484de9de37a);
+            
+    
+            var marker_917cdc107398bb941d24f407d450be98 = L.marker(
+                [44.2, 71.5],
+                {
+}
+            ).addTo(map_6fd873f68ff382e4d31a174cd4206554);
+        
+    
+            var div_icon_303ba9eff869dea001cd3740a20783c7 = L.divIcon({
+  "html": "\u003cdiv style=\"font-family: Arial; color: black; font-weight: bold; \n                                background: white; padding: 10px; border: 2px solid black;\"\u003e\n                                \u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442: Bayankol River \u043f\u043e\u043a\u0430\u0437\u0430\u043b\u0430 \u043d\u0430\u0438\u0431\u043e\u043b\u044c\u0448\u0438\u0439 \u0440\u043e\u0441\u0442\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_917cdc107398bb941d24f407d450be98.setIcon(div_icon_303ba9eff869dea001cd3740a20783c7);
+            
+</script>
+</html>

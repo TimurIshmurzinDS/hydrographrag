@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_16cd09fb6d7d7173c1202790c7a3f4e0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_16cd09fb6d7d7173c1202790c7a3f4e0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_16cd09fb6d7d7173c1202790c7a3f4e0 = L.map(
+                "map_16cd09fb6d7d7173c1202790c7a3f4e0",
+                {
+                    center: [51.74, 68.39],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d3e2d9361bb5c0f7c959cbfb795726fb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d3e2d9361bb5c0f7c959cbfb795726fb.addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var marker_eeedcab2eb557cce56b2a5e0301c5a7f = L.marker(
+                [51.234, 67.89],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_1d4e5a4bd32590190d0655e5417cd5d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_369c3866e5591129243126044e5bf885 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6f06ffc2c2e380020fe1023c57c1f9b = $(`<div id="html_b6f06ffc2c2e380020fe1023c57c1f9b" style="width: 100.0%; height: 100.0%;">Lepsy River - Current Level: 100%</div>`)[0];
+                popup_369c3866e5591129243126044e5bf885.setContent(html_b6f06ffc2c2e380020fe1023c57c1f9b);
+            
+        
+
+        marker_eeedcab2eb557cce56b2a5e0301c5a7f.bindPopup(popup_369c3866e5591129243126044e5bf885)
+        ;
+
+        
+    
+    
+                marker_eeedcab2eb557cce56b2a5e0301c5a7f.setIcon(icon_1d4e5a4bd32590190d0655e5417cd5d2);
+            
+    
+            var marker_65269b6ce4acfb848b0f0aad8488980e = L.marker(
+                [52.345, 68.901],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_502347206311bbc3519e4d8d999a832e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a9ba6bbd52931d3111c478c987a1107 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42de229348abc725216d8fe6fd8a4769 = $(`<div id="html_42de229348abc725216d8fe6fd8a4769" style="width: 100.0%; height: 100.0%;">Sarykan River - Current Level: 100%</div>`)[0];
+                popup_0a9ba6bbd52931d3111c478c987a1107.setContent(html_42de229348abc725216d8fe6fd8a4769);
+            
+        
+
+        marker_65269b6ce4acfb848b0f0aad8488980e.bindPopup(popup_0a9ba6bbd52931d3111c478c987a1107)
+        ;
+
+        
+    
+    
+                marker_65269b6ce4acfb848b0f0aad8488980e.setIcon(icon_502347206311bbc3519e4d8d999a832e);
+            
+    
+            var marker_bbf5fdda4fb49e6c99b89cab1037e746 = L.marker(
+                [51.234, 67.89],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_50d5c4ddaf1fb1b2b0e79a48e1159440 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1b5ba3381914d00eb7f6efc687982ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d5913fde04be70e0d675ab93f9e0774 = $(`<div id="html_1d5913fde04be70e0d675ab93f9e0774" style="width: 100.0%; height: 100.0%;">Fish in Lepsy River</div>`)[0];
+                popup_e1b5ba3381914d00eb7f6efc687982ba.setContent(html_1d5913fde04be70e0d675ab93f9e0774);
+            
+        
+
+        marker_bbf5fdda4fb49e6c99b89cab1037e746.bindPopup(popup_e1b5ba3381914d00eb7f6efc687982ba)
+        ;
+
+        
+    
+    
+                marker_bbf5fdda4fb49e6c99b89cab1037e746.setIcon(icon_50d5c4ddaf1fb1b2b0e79a48e1159440);
+            
+    
+            var marker_5fe58a9937203ae3b3789d2ed742d963 = L.marker(
+                [51.234, 67.89],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_c9a16f299548e950398223af1dd59ffd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_196caa29d1f26f461e1374970d9f564a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66595a661a3704433055641e93dfe36f = $(`<div id="html_66595a661a3704433055641e93dfe36f" style="width: 100.0%; height: 100.0%;">Water lilies in Lepsy River</div>`)[0];
+                popup_196caa29d1f26f461e1374970d9f564a.setContent(html_66595a661a3704433055641e93dfe36f);
+            
+        
+
+        marker_5fe58a9937203ae3b3789d2ed742d963.bindPopup(popup_196caa29d1f26f461e1374970d9f564a)
+        ;
+
+        
+    
+    
+                marker_5fe58a9937203ae3b3789d2ed742d963.setIcon(icon_c9a16f299548e950398223af1dd59ffd);
+            
+    
+            var marker_76e8f0cc86c77b8d85d60d17f9c64d76 = L.marker(
+                [51.234, 67.89],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_04ce047b4a1c7e2e929efe7162f1ba3f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_385a2810475e8b64bf54529e529984be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2c8e739eeff5e2eb663c17e363f9ea0 = $(`<div id="html_d2c8e739eeff5e2eb663c17e363f9ea0" style="width: 100.0%; height: 100.0%;">Reeds in Lepsy River</div>`)[0];
+                popup_385a2810475e8b64bf54529e529984be.setContent(html_d2c8e739eeff5e2eb663c17e363f9ea0);
+            
+        
+
+        marker_76e8f0cc86c77b8d85d60d17f9c64d76.bindPopup(popup_385a2810475e8b64bf54529e529984be)
+        ;
+
+        
+    
+    
+                marker_76e8f0cc86c77b8d85d60d17f9c64d76.setIcon(icon_04ce047b4a1c7e2e929efe7162f1ba3f);
+            
+    
+            var marker_4b047ae428dc08092a1ba33c0919ad1f = L.marker(
+                [52.345, 68.901],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_76d71523206cb80bd77dd672fb86f343 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ef97ac998cafe189f8852a148321c87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6ecc3d8d679a46c54d9340e96ed9299 = $(`<div id="html_c6ecc3d8d679a46c54d9340e96ed9299" style="width: 100.0%; height: 100.0%;">Turtles in Sarykan River</div>`)[0];
+                popup_4ef97ac998cafe189f8852a148321c87.setContent(html_c6ecc3d8d679a46c54d9340e96ed9299);
+            
+        
+
+        marker_4b047ae428dc08092a1ba33c0919ad1f.bindPopup(popup_4ef97ac998cafe189f8852a148321c87)
+        ;
+
+        
+    
+    
+                marker_4b047ae428dc08092a1ba33c0919ad1f.setIcon(icon_76d71523206cb80bd77dd672fb86f343);
+            
+    
+            var marker_1d4522781239e6a8b7709c364b35d693 = L.marker(
+                [52.345, 68.901],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_e70356a6453c9e028675536246124c6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9764a6298479aceb673f9901e757359e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab1212c371f9f76b39d5fd452f1c35f4 = $(`<div id="html_ab1212c371f9f76b39d5fd452f1c35f4" style="width: 100.0%; height: 100.0%;">Aquatic birds in Sarykan River</div>`)[0];
+                popup_9764a6298479aceb673f9901e757359e.setContent(html_ab1212c371f9f76b39d5fd452f1c35f4);
+            
+        
+
+        marker_1d4522781239e6a8b7709c364b35d693.bindPopup(popup_9764a6298479aceb673f9901e757359e)
+        ;
+
+        
+    
+    
+                marker_1d4522781239e6a8b7709c364b35d693.setIcon(icon_e70356a6453c9e028675536246124c6f);
+            
+    
+            var marker_89543b61244fadee0886192bda171560 = L.marker(
+                [52.345, 68.901],
+                {
+}
+            ).addTo(map_16cd09fb6d7d7173c1202790c7a3f4e0);
+        
+    
+            var icon_c1ec6036de594f601cccbd90c91068f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1257636a57b72cdc54a2cdd7f0691765 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43ec984f4656e9d731b02f7e2de321d0 = $(`<div id="html_43ec984f4656e9d731b02f7e2de321d0" style="width: 100.0%; height: 100.0%;">Crayfish in Sarykan River</div>`)[0];
+                popup_1257636a57b72cdc54a2cdd7f0691765.setContent(html_43ec984f4656e9d731b02f7e2de321d0);
+            
+        
+
+        marker_89543b61244fadee0886192bda171560.bindPopup(popup_1257636a57b72cdc54a2cdd7f0691765)
+        ;
+
+        
+    
+    
+                marker_89543b61244fadee0886192bda171560.setIcon(icon_c1ec6036de594f601cccbd90c91068f6);
+            
+</script>
+</html>

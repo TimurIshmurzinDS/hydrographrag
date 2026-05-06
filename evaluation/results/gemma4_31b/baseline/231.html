@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d569675a2ccf7a0e5bafdb5bfbf5caa6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d569675a2ccf7a0e5bafdb5bfbf5caa6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d569675a2ccf7a0e5bafdb5bfbf5caa6 = L.map(
+                "map_d569675a2ccf7a0e5bafdb5bfbf5caa6",
+                {
+                    center: [52.15, 78.6],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e8f9b1dc2ebda64f7a58758d7f08a0fb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e8f9b1dc2ebda64f7a58758d7f08a0fb.addTo(map_d569675a2ccf7a0e5bafdb5bfbf5caa6);
+        
+    
+            var poly_line_eb915bf09786b3297b2ae2937e23ca9f = L.polyline(
+                [[52.1, 78.5], [52.12, 78.55], [52.15, 78.58], [52.18, 78.62], [52.22, 78.65], [52.25, 78.7]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_d569675a2ccf7a0e5bafdb5bfbf5caa6);
+        
+    
+            poly_line_eb915bf09786b3297b2ae2937e23ca9f.bindTooltip(
+                `<div>
+                     Koktal River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var polygon_8248fd33aab67e32e50f70c4fb6ad40a = L.polygon(
+                [[52.10143046618229, 78.55742781352708], [52.102276099375864, 78.5592662477123], [52.10330317815524, 78.56100982017492], [52.10450118796637, 78.56264068137192], [52.10585786437627, 78.56414213562373], [52.13485281374238, 78.59313708498983], [52.164, 78.632], [52.16520502105522, 78.63345765945563], [52.166542340544375, 78.63479497894478], [52.168, 78.63600000000001], [52.20486580440112, 78.66364935330085], [52.23285014148575, 78.71028991510856], [52.2339413107952, 78.7119213464434], [52.23518713406027, 78.71343796869515], [52.236575613321875, 78.7148251759624], [52.238093376765704, 78.71606960868088], [52.23972580750011, 78.71715928228322], [52.24145718432472, 78.71808370261695], [52.24327083313427, 78.71883396700892], [52.245149287499274, 78.71940285000291], [52.24707445687733, 78.71978487294469], [52.24902780083492, 78.7199763567445], [52.25099050760193, 78.71997545730868], [52.25294367523926, 78.71978218329927], [52.25486849367486, 78.71939839605065], [52.25674642585499, 78.71882779164382], [52.25855938626616, 78.71807586531115], [52.26028991510855, 78.71714985851425], [52.26192134644341, 78.7160586892048], [52.26343796869514, 78.71481286593973], [52.2648251759624, 78.71342438667813], [52.26606960868088, 78.7119066232343], [52.26715928228322, 78.7102741924999], [52.26808370261695, 78.70854281567529], [52.26883396700892, 78.70672916686573], [52.269402850002905, 78.70485071250073], [52.26978487294468, 78.70292554312267], [52.2699763567445, 78.70097219916508], [52.26997545730867, 78.69900949239808], [52.26978218329926, 78.69705632476074], [52.26939839605065, 78.69513150632514], [52.26882779164382, 78.69325357414502], [52.26807586531115, 78.69144061373385], [52.26714985851425, 78.68971008489144], [52.23714985851425, 78.63971008489145], [52.23607602776552, 78.63810204507985], [52.234851930184895, 78.63660521856158], [52.233489007732295, 78.63523359656524], [52.232, 78.634], [52.194285714285705, 78.60571428571427], [52.166, 78.568], [52.16414213562373, 78.56585786437627], [52.13704491788259, 78.53876064663514], [52.118569533817706, 78.49257218647291], [52.117752063395976, 78.49078782082321], [52.116763630899484, 78.48909217349487], [52.11561375547349, 78.4875015744986], [52.114313511046944, 78.48603134217224], [52.11287541968446, 78.4846956356568], [52.11131333099198, 78.48350731853621], [52.10964228873756, 78.48247783495394], [52.10787838597159, 78.48161709939964], [52.10603861004194, 78.48093340122725], [52.10414067899655, 78.48043332482389], [52.1022028709489, 78.48012168619871], [52.1002438480498, 78.48000148660203], [52.09828247676068, 78.48007388362169], [52.09633764615925, 78.48033818003476], [52.09442808602734, 78.48079183052238], [52.09257218647292, 78.48143046618229], [52.090787820823216, 78.48224793660403], [52.089092173494876, 78.48323636910052], [52.0875015744986, 78.4843862445265], [52.08603134217224, 78.48568648895305], [52.08469563565681, 78.48712458031555], [52.08350731853621, 78.48868666900802], [52.082477834953934, 78.49035771126245], [52.081617099399644, 78.49212161402842], [52.08093340122724, 78.49396138995806], [52.080433324823886, 78.49585932100345], [52.080121686198716, 78.49779712905111], [52.080001486602036, 78.49975615195021], [52.08007388362168, 78.50171752323932], [52.08033818003477, 78.50366235384075], [52.08079183052237, 78.50557191397266], [52.0814304661823, 78.50742781352709], [52.10143046618229, 78.55742781352708]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d569675a2ccf7a0e5bafdb5bfbf5caa6);
+        
+    
+            polygon_8248fd33aab67e32e50f70c4fb6ad40a.bindTooltip(
+                `<div>
+                     Spring Flood Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

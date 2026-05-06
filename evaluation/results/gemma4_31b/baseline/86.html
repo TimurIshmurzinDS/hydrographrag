@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae6d98541f4b965758d5aed20014e690 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ae6d98541f4b965758d5aed20014e690" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae6d98541f4b965758d5aed20014e690 = L.map(
+                "map_ae6d98541f4b965758d5aed20014e690",
+                {
+                    center: [43.22, 77.25],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9686eea262c389865a1ae1f769f6f2a6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9686eea262c389865a1ae1f769f6f2a6.addTo(map_ae6d98541f4b965758d5aed20014e690);
+        
+    
+            var marker_39e0e0b5181743b352b9e89239a456df = L.marker(
+                [43.25, 77.12],
+                {
+}
+            ).addTo(map_ae6d98541f4b965758d5aed20014e690);
+        
+    
+            var icon_6a90d2f3c5908d75c8a651d3aa7305d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2341764d0a450ee52ef216c1eeece374 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4b094728de0b4274741f9e106ddc4c45 = $(`<div id="html_4b094728de0b4274741f9e106ddc4c45" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Karaoy River<br><b>Уровень:</b> 5.8 m<br><b>Порог:</b> 4.5 m<br><b>Статус:</b> ОПАСНО</div>`)[0];
+                popup_2341764d0a450ee52ef216c1eeece374.setContent(html_4b094728de0b4274741f9e106ddc4c45);
+            
+        
+
+        marker_39e0e0b5181743b352b9e89239a456df.bindPopup(popup_2341764d0a450ee52ef216c1eeece374)
+        ;
+
+        
+    
+    
+                marker_39e0e0b5181743b352b9e89239a456df.setIcon(icon_6a90d2f3c5908d75c8a651d3aa7305d4);
+            
+    
+            var marker_e4ed8c322724f884c5d8674769a9aefe = L.marker(
+                [43.3, 77.25],
+                {
+}
+            ).addTo(map_ae6d98541f4b965758d5aed20014e690);
+        
+    
+            var icon_a87a1c433ca7ac083e052a4ee166f0f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4668e680c5b06002d9686c333f0af19c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c45a4969c645d679aaa730a7783dd1a9 = $(`<div id="html_c45a4969c645d679aaa730a7783dd1a9" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Temirlik River<br><b>Уровень:</b> 2.1 m<br><b>Порог:</b> 3.0 m<br><b>Статус:</b> Норма</div>`)[0];
+                popup_4668e680c5b06002d9686c333f0af19c.setContent(html_c45a4969c645d679aaa730a7783dd1a9);
+            
+        
+
+        marker_e4ed8c322724f884c5d8674769a9aefe.bindPopup(popup_4668e680c5b06002d9686c333f0af19c)
+        ;
+
+        
+    
+    
+                marker_e4ed8c322724f884c5d8674769a9aefe.setIcon(icon_a87a1c433ca7ac083e052a4ee166f0f2);
+            
+    
+            var marker_f36baf9097172272dec1f49dacd88b84 = L.marker(
+                [43.15, 77.4],
+                {
+}
+            ).addTo(map_ae6d98541f4b965758d5aed20014e690);
+        
+    
+            var icon_870d6b5fd55666abcc720405d6ab138b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae2a28ec0deae5c1fa466b4b3c0158f8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70b93ddaf003f1b881416288811f2430 = $(`<div id="html_70b93ddaf003f1b881416288811f2430" style="width: 100.0%; height: 100.0%;"><b>Река:</b> Turgen River<br><b>Уровень:</b> 6.2 m<br><b>Порог:</b> 4.0 m<br><b>Статус:</b> ОПАСНО</div>`)[0];
+                popup_ae2a28ec0deae5c1fa466b4b3c0158f8.setContent(html_70b93ddaf003f1b881416288811f2430);
+            
+        
+
+        marker_f36baf9097172272dec1f49dacd88b84.bindPopup(popup_ae2a28ec0deae5c1fa466b4b3c0158f8)
+        ;
+
+        
+    
+    
+                marker_f36baf9097172272dec1f49dacd88b84.setIcon(icon_870d6b5fd55666abcc720405d6ab138b);
+            
+</script>
+</html>

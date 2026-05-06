@@ -1,0 +1,20 @@
+python
+     import geopandas as gpd
+     import folium
+     from shapely import wkt
+
+     # Load the shapefile and convert to CRS 'EPSG:4326'
+     basin = gpd.read_file(r"data/basin_data.shp")
+     basin = basin.to_crs('EPSG:4326')
+
+     # Initialize folium map using the centroid of the shapefile
+     m = folium.Map(location=[basin.geometry.centroid.y, basin.geometry.centroid.x], tiles='CartoDB positron')
+
+     # Add the basin to the map
+     folium.GeoJson(basin, style_function=lambda x: {'fillColor': 'green', 'color': 'darkgreen', 'fillOpacity': 0.2}).add_to(m)
+
+     # Hardcoded list of dictionaries for rivers (if coordinates were provided in the context)
+     rivers = [{'name': 'Shynzhaly River', 'water_level': None}, {'name': 'Shyzhyn River', 'water_level': None}]
+
+     # Save the final map
+     m.save("154.html")

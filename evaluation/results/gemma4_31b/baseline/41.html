@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e24057a020b851a6b27f349fa2a379b5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Интенсивность воды:</b><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Низкая<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Средняя<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Высокая
+     </div>
+     
+    
+            <div class="folium-map" id="map_e24057a020b851a6b27f349fa2a379b5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e24057a020b851a6b27f349fa2a379b5 = L.map(
+                "map_e24057a020b851a6b27f349fa2a379b5",
+                {
+                    center: [43.75, 81.7],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_60194d703f70061ad0ccb14723062a7d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_60194d703f70061ad0ccb14723062a7d.addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+            var poly_line_ba19234e09db9c84e69fdbf2f3f93dd4 = L.polyline(
+                [[43.5, 81.0], [43.6, 81.2], [43.7, 81.5], [43.8, 81.8], [43.9, 82.1], [44.0, 82.4]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+            poly_line_ba19234e09db9c84e69fdbf2f3f93dd4.bindTooltip(
+                `<div>
+                     Река Аксу
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6fe3a60eb772da38fd2be1f93940f592 = L.circleMarker(
+                [43.68727005942368, 82.33100002897389],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_4b5be4b970e6bcb4f9063b4bc8ccc48f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ee5cd80ca37e9d456643878498e8f61 = $(`<div id="html_5ee5cd80ca37e9d456643878498e8f61" style="width: 100.0%; height: 100.0%;">Ферма ID: 0.0<br>Потребление: 206.0 тыс.м3<br>Интенсивность: 1.70 м3/га</div>`)[0];
+                popup_4b5be4b970e6bcb4f9063b4bc8ccc48f.setContent(html_5ee5cd80ca37e9d456643878498e8f61);
+            
+        
+
+        circle_marker_6fe3a60eb772da38fd2be1f93940f592.bindPopup(popup_4b5be4b970e6bcb4f9063b4bc8ccc48f)
+        ;
+
+        
+    
+    
+            var circle_marker_6a7fefca407a77c89604276a029341c4 = L.circleMarker(
+                [43.799329242098516, 81.21842609661941],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_900788eff6b9886517eaa1a294b4c618 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecfa4bff6923c2527e022dc95d5e9f2f = $(`<div id="html_ecfa4bff6923c2527e022dc95d5e9f2f" style="width: 100.0%; height: 100.0%;">Ферма ID: 1.0<br>Потребление: 566.0 тыс.м3<br>Интенсивность: 2.14 м3/га</div>`)[0];
+                popup_900788eff6b9886517eaa1a294b4c618.setContent(html_ecfa4bff6923c2527e022dc95d5e9f2f);
+            
+        
+
+        circle_marker_6a7fefca407a77c89604276a029341c4.bindPopup(popup_900788eff6b9886517eaa1a294b4c618)
+        ;
+
+        
+    
+    
+            var circle_marker_8a55566b7f6d3ac6b121f6735df7d8c0 = L.circleMarker(
+                [43.5290418060841, 82.21264660408491],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_e313cb03b8393c8378d5b941c3de530a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75a21be439f3a58e206498cfc7f24897 = $(`<div id="html_75a21be439f3a58e206498cfc7f24897" style="width: 100.0%; height: 100.0%;">Ферма ID: 2.0<br>Потребление: 199.0 тыс.м3<br>Интенсивность: 0.49 м3/га</div>`)[0];
+                popup_e313cb03b8393c8378d5b941c3de530a.setContent(html_75a21be439f3a58e206498cfc7f24897);
+            
+        
+
+        circle_marker_8a55566b7f6d3ac6b121f6735df7d8c0.bindPopup(popup_e313cb03b8393c8378d5b941c3de530a)
+        ;
+
+        
+    
+    
+            var circle_marker_11c333b05f371acd18d2e0e1a119b13b = L.circleMarker(
+                [43.85403628889802, 81.02881829201412],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_3d2e7df682d76810956596646800fd34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f053e0cb77610cec1ff9ab1cec8f6d29 = $(`<div id="html_f053e0cb77610cec1ff9ab1cec8f6d29" style="width: 100.0%; height: 100.0%;">Ферма ID: 3.0<br>Потребление: 869.0 тыс.м3<br>Интенсивность: 2.21 м3/га</div>`)[0];
+                popup_3d2e7df682d76810956596646800fd34.setContent(html_f053e0cb77610cec1ff9ab1cec8f6d29);
+            
+        
+
+        circle_marker_11c333b05f371acd18d2e0e1a119b13b.bindPopup(popup_3d2e7df682d76810956596646800fd34)
+        ;
+
+        
+    
+    
+            var circle_marker_ef9e793dd4b962a41c0110fb785464c7 = L.circleMarker(
+                [43.91622132040021, 81.29727475494958],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_86273b1034712ead72d1448b66421ef8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdab134945f2f325efcf6bccbd0bd5b9 = $(`<div id="html_bdab134945f2f325efcf6bccbd0bd5b9" style="width: 100.0%; height: 100.0%;">Ферма ID: 4.0<br>Потребление: 291.0 тыс.м3<br>Интенсивность: 0.59 м3/га</div>`)[0];
+                popup_86273b1034712ead72d1448b66421ef8.setContent(html_bdab134945f2f325efcf6bccbd0bd5b9);
+            
+        
+
+        circle_marker_ef9e793dd4b962a41c0110fb785464c7.bindPopup(popup_86273b1034712ead72d1448b66421ef8)
+        ;
+
+        
+    
+    
+            var circle_marker_567bffdb3860ac02e9f878d3586b7877 = L.circleMarker(
+                [43.591702254926716, 81.42593914014336],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_9eef2125b12f0fa6cf6edeff9337cb1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9dc83fd306a2582dbedfcfe9f306a2ca = $(`<div id="html_9dc83fd306a2582dbedfcfe9f306a2ca" style="width: 100.0%; height: 100.0%;">Ферма ID: 5.0<br>Потребление: 121.0 тыс.м3<br>Интенсивность: 0.40 м3/га</div>`)[0];
+                popup_9eef2125b12f0fa6cf6edeff9337cb1a.setContent(html_9dc83fd306a2582dbedfcfe9f306a2ca);
+            
+        
+
+        circle_marker_567bffdb3860ac02e9f878d3586b7877.bindPopup(popup_9eef2125b12f0fa6cf6edeff9337cb1a)
+        ;
+
+        
+    
+    
+            var circle_marker_109c32640427773cd7b51935eb3e41be = L.circleMarker(
+                [43.715972509321055, 81.40772079627726],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_f58e9ec204711f531bf46f6f60041898 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e82b0919361d8495753d641a206640e = $(`<div id="html_7e82b0919361d8495753d641a206640e" style="width: 100.0%; height: 100.0%;">Ферма ID: 6.0<br>Потребление: 158.0 тыс.м3<br>Интенсивность: 0.72 м3/га</div>`)[0];
+                popup_f58e9ec204711f531bf46f6f60041898.setContent(html_7e82b0919361d8495753d641a206640e);
+            
+        
+
+        circle_marker_109c32640427773cd7b51935eb3e41be.bindPopup(popup_f58e9ec204711f531bf46f6f60041898)
+        ;
+
+        
+    
+    
+            var circle_marker_9284c921dacd30f7a256940ec37bb0b7 = L.circleMarker(
+                [43.52333283160681, 82.36325772637805],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_807ec66f560c3cba9427cf54f4267a2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19d7cc7f1d1d73e09efcf5594def2812 = $(`<div id="html_19d7cc7f1d1d73e09efcf5594def2812" style="width: 100.0%; height: 100.0%;">Ферма ID: 7.0<br>Потребление: 882.0 тыс.м3<br>Интенсивность: 3.69 м3/га</div>`)[0];
+                popup_807ec66f560c3cba9427cf54f4267a2a.setContent(html_19d7cc7f1d1d73e09efcf5594def2812);
+            
+        
+
+        circle_marker_9284c921dacd30f7a256940ec37bb0b7.bindPopup(popup_807ec66f560c3cba9427cf54f4267a2a)
+        ;
+
+        
+    
+    
+            var circle_marker_dc36d12decffa7f64ae001de1f8a69f5 = L.circleMarker(
+                [43.54530321726641, 81.86574041306632],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_5b7801b79ae51962a532507d45a90c60 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a27ffb44952b0cb8a08ecaa66ca606ff = $(`<div id="html_a27ffb44952b0cb8a08ecaa66ca606ff" style="width: 100.0%; height: 100.0%;">Ферма ID: 8.0<br>Потребление: 975.0 тыс.м3<br>Интенсивность: 9.38 м3/га</div>`)[0];
+                popup_5b7801b79ae51962a532507d45a90c60.setContent(html_a27ffb44952b0cb8a08ecaa66ca606ff);
+            
+        
+
+        circle_marker_dc36d12decffa7f64ae001de1f8a69f5.bindPopup(popup_5b7801b79ae51962a532507d45a90c60)
+        ;
+
+        
+    
+    
+            var circle_marker_41622ef3b235facc5161bc893767f769 = L.circleMarker(
+                [43.991615442903395, 81.65346805054718],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_1b23f5f68f7cdc3b0fe7798c81ddb34c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f03d68346ac8449e0e90038955950b2 = $(`<div id="html_2f03d68346ac8449e0e90038955950b2" style="width: 100.0%; height: 100.0%;">Ферма ID: 9.0<br>Потребление: 584.0 тыс.м3<br>Интенсивность: 1.64 м3/га</div>`)[0];
+                popup_1b23f5f68f7cdc3b0fe7798c81ddb34c.setContent(html_2f03d68346ac8449e0e90038955950b2);
+            
+        
+
+        circle_marker_41622ef3b235facc5161bc893767f769.bindPopup(popup_1b23f5f68f7cdc3b0fe7798c81ddb34c)
+        ;
+
+        
+    
+    
+            var circle_marker_a174613060ab6903606a9c087d8de37c = L.circleMarker(
+                [43.84015376929389, 81.63069895275736],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_7161d64304682a6aae1ead18a4143110 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ef72ef508c6320c6c814b84f8113683 = $(`<div id="html_8ef72ef508c6320c6c814b84f8113683" style="width: 100.0%; height: 100.0%;">Ферма ID: 10.0<br>Потребление: 373.0 тыс.м3<br>Интенсивность: 0.85 м3/га</div>`)[0];
+                popup_7161d64304682a6aae1ead18a4143110.setContent(html_8ef72ef508c6320c6c814b84f8113683);
+            
+        
+
+        circle_marker_a174613060ab6903606a9c087d8de37c.bindPopup(popup_7161d64304682a6aae1ead18a4143110)
+        ;
+
+        
+    
+    
+            var circle_marker_2342077656ec038849b636f5e76e38e1 = L.circleMarker(
+                [43.971100877842424, 81.78860350498375],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_64e8cd6c0c9a48a764aaf4e7092861df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68d378064a0b20f1c1b9d38af783812b = $(`<div id="html_68d378064a0b20f1c1b9d38af783812b" style="width: 100.0%; height: 100.0%;">Ферма ID: 11.0<br>Потребление: 876.0 тыс.м3<br>Интенсивность: 2.22 м3/га</div>`)[0];
+                popup_64e8cd6c0c9a48a764aaf4e7092861df.setContent(html_68d378064a0b20f1c1b9d38af783812b);
+            
+        
+
+        circle_marker_2342077656ec038849b636f5e76e38e1.bindPopup(popup_64e8cd6c0c9a48a764aaf4e7092861df)
+        ;
+
+        
+    
+    
+            var circle_marker_01e896c27780f762752f3b9427048b06 = L.circleMarker(
+                [43.54883605700319, 81.95792623711702],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_3a370e5d0bff43286de5175a997eeaf9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7405f340f60cb3a8cae8a28805169c99 = $(`<div id="html_7405f340f60cb3a8cae8a28805169c99" style="width: 100.0%; height: 100.0%;">Ферма ID: 12.0<br>Потребление: 466.0 тыс.м3<br>Интенсивность: 0.95 м3/га</div>`)[0];
+                popup_3a370e5d0bff43286de5175a997eeaf9.setContent(html_7405f340f60cb3a8cae8a28805169c99);
+            
+        
+
+        circle_marker_01e896c27780f762752f3b9427048b06.bindPopup(popup_3a370e5d0bff43286de5175a997eeaf9)
+        ;
+
+        
+    
+    
+            var circle_marker_652f7dab24313fc84fa91595077966b2 = L.circleMarker(
+                [43.56101911742239, 81.69324767415578],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_55b89875856a52013690ae4e8e3ec13e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d644cf3b9b908b00780fbddbb54b5c5 = $(`<div id="html_1d644cf3b9b908b00780fbddbb54b5c5" style="width: 100.0%; height: 100.0%;">Ферма ID: 13.0<br>Потребление: 134.0 тыс.м3<br>Интенсивность: 0.53 м3/га</div>`)[0];
+                popup_55b89875856a52013690ae4e8e3ec13e.setContent(html_1d644cf3b9b908b00780fbddbb54b5c5);
+            
+        
+
+        circle_marker_652f7dab24313fc84fa91595077966b2.bindPopup(popup_55b89875856a52013690ae4e8e3ec13e)
+        ;
+
+        
+    
+    
+            var circle_marker_7b715f1fa239eb3376f81f6b5c79ac24 = L.circleMarker(
+                [43.69553030378662, 81.25513052290329],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_6082b7a8f30aea6fbf600a8755762ed2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cba87b60c3f08c6e7d585ca8ea854525 = $(`<div id="html_cba87b60c3f08c6e7d585ca8ea854525" style="width: 100.0%; height: 100.0%;">Ферма ID: 14.0<br>Потребление: 487.0 тыс.м3<br>Интенсивность: 9.55 м3/га</div>`)[0];
+                popup_6082b7a8f30aea6fbf600a8755762ed2.setContent(html_cba87b60c3f08c6e7d585ca8ea854525);
+            
+        
+
+        circle_marker_7b715f1fa239eb3376f81f6b5c79ac24.bindPopup(popup_6082b7a8f30aea6fbf600a8755762ed2)
+        ;
+
+        
+    
+    
+            var circle_marker_b458082cda3d12bd2332a4177ecc77bf = L.circleMarker(
+                [43.71257793724562, 81.29111832801547],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_b5a917afb6a77ef0c6ec0b9b4ae66214 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_049798502b797d1342cea4f0ede3a97f = $(`<div id="html_049798502b797d1342cea4f0ede3a97f" style="width: 100.0%; height: 100.0%;">Ферма ID: 15.0<br>Потребление: 871.0 тыс.м3<br>Интенсивность: 2.43 м3/га</div>`)[0];
+                popup_b5a917afb6a77ef0c6ec0b9b4ae66214.setContent(html_049798502b797d1342cea4f0ede3a97f);
+            
+        
+
+        circle_marker_b458082cda3d12bd2332a4177ecc77bf.bindPopup(popup_b5a917afb6a77ef0c6ec0b9b4ae66214)
+        ;
+
+        
+    
+    
+            var circle_marker_127f033342a21667dcc00d3872e1089e = L.circleMarker(
+                [43.51565664622778, 82.179198684433],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_99f533d7b8db9e1e0be6580b73bd3b80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae3c2a566cf8dc7e32d5648d3eeade9d = $(`<div id="html_ae3c2a566cf8dc7e32d5648d3eeade9d" style="width: 100.0%; height: 100.0%;">Ферма ID: 16.0<br>Потребление: 655.0 тыс.м3<br>Интенсивность: 3.10 м3/га</div>`)[0];
+                popup_99f533d7b8db9e1e0be6580b73bd3b80.setContent(html_ae3c2a566cf8dc7e32d5648d3eeade9d);
+            
+        
+
+        circle_marker_127f033342a21667dcc00d3872e1089e.bindPopup(popup_99f533d7b8db9e1e0be6580b73bd3b80)
+        ;
+
+        
+    
+    
+            var circle_marker_bb7188430f6b3a0520880df898845d82 = L.circleMarker(
+                [43.697575118000906, 82.29732241211131],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_4dc405af4b1ed556e1b4b004502bcf98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12d695e9dc1b98e6517c77919dc5e970 = $(`<div id="html_12d695e9dc1b98e6517c77919dc5e970" style="width: 100.0%; height: 100.0%;">Ферма ID: 17.0<br>Потребление: 962.0 тыс.м3<br>Интенсивность: 2.73 м3/га</div>`)[0];
+                popup_4dc405af4b1ed556e1b4b004502bcf98.setContent(html_12d695e9dc1b98e6517c77919dc5e970);
+            
+        
+
+        circle_marker_bb7188430f6b3a0520880df898845d82.bindPopup(popup_4dc405af4b1ed556e1b4b004502bcf98)
+        ;
+
+        
+    
+    
+            var circle_marker_acfa5d7f03c3085adc86d40108d6efd1 = L.circleMarker(
+                [43.66327038440292, 81.79862156416756],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_1e102b87de6741db17ceceffe8ed79d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e034125ef94036ff79a14ceac407d08 = $(`<div id="html_5e034125ef94036ff79a14ceac407d08" style="width: 100.0%; height: 100.0%;">Ферма ID: 18.0<br>Потребление: 351.0 тыс.м3<br>Интенсивность: 1.47 м3/га</div>`)[0];
+                popup_1e102b87de6741db17ceceffe8ed79d8.setContent(html_5e034125ef94036ff79a14ceac407d08);
+            
+        
+
+        circle_marker_acfa5d7f03c3085adc86d40108d6efd1.bindPopup(popup_1e102b87de6741db17ceceffe8ed79d8)
+        ;
+
+        
+    
+    
+            var circle_marker_da7228f38d230e3c1f7549f8e1e61bf3 = L.circleMarker(
+                [43.66266516538163, 81.54414820556528],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_e24057a020b851a6b27f349fa2a379b5);
+        
+    
+        var popup_9759900822465b2c958440c767fd8a1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_209be6984cca8bcd94842f9f642d3d8f = $(`<div id="html_209be6984cca8bcd94842f9f642d3d8f" style="width: 100.0%; height: 100.0%;">Ферма ID: 19.0<br>Потребление: 437.0 тыс.м3<br>Интенсивность: 1.05 м3/га</div>`)[0];
+                popup_9759900822465b2c958440c767fd8a1c.setContent(html_209be6984cca8bcd94842f9f642d3d8f);
+            
+        
+
+        circle_marker_da7228f38d230e3c1f7549f8e1e61bf3.bindPopup(popup_9759900822465b2c958440c767fd8a1c)
+        ;
+
+        
+    
+</script>
+</html>

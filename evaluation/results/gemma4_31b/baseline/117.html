@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cbcf65f6b037fb787d55c959331f470b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Экологический статус:</b><br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Высокий дисбаланс<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Умеренный риск<br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Стабильное состояние
+     </div>
+     
+    
+            <div class="folium-map" id="map_cbcf65f6b037fb787d55c959331f470b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cbcf65f6b037fb787d55c959331f470b = L.map(
+                "map_cbcf65f6b037fb787d55c959331f470b",
+                {
+                    center: [47.0, 69.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5028179b431e0c60a3c09bc566570840 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5028179b431e0c60a3c09bc566570840.addTo(map_cbcf65f6b037fb787d55c959331f470b);
+        
+    
+            var poly_line_3c3cb0862469d489f8193c86d14a1da1 = L.polyline(
+                [[47.5, 68.2], [47.6, 68.5], [47.8, 68.8], [48.0, 69.1]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_cbcf65f6b037fb787d55c959331f470b);
+        
+    
+            poly_line_3c3cb0862469d489f8193c86d14a1da1.bindTooltip(
+                `<div>
+                     River: Urzhar | Status: High Imbalance
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f83e231b486f6e01f9ef0a6b5324ebcb = L.marker(
+                [47.5, 68.2],
+                {
+}
+            ).addTo(map_cbcf65f6b037fb787d55c959331f470b);
+        
+    
+            var icon_25958cd23f073b21daab7c66982e47cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e050e5c85e1443aba8cfb56f18ac4603 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a6eb9cd5218ad02dd488af727cabfbd = $(`<div id="html_0a6eb9cd5218ad02dd488af727cabfbd" style="width: 100.0%; height: 100.0%;"><b>Urzhar River</b><br>Eco Status: High Imbalance</div>`)[0];
+                popup_e050e5c85e1443aba8cfb56f18ac4603.setContent(html_0a6eb9cd5218ad02dd488af727cabfbd);
+            
+        
+
+        marker_f83e231b486f6e01f9ef0a6b5324ebcb.bindPopup(popup_e050e5c85e1443aba8cfb56f18ac4603)
+        ;
+
+        
+    
+    
+                marker_f83e231b486f6e01f9ef0a6b5324ebcb.setIcon(icon_25958cd23f073b21daab7c66982e47cb);
+            
+    
+            var poly_line_f267a6eab4a1ed3399a72148e3982766 = L.polyline(
+                [[46.2, 70.1], [46.5, 70.4], [46.8, 70.7], [47.1, 71.0]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_cbcf65f6b037fb787d55c959331f470b);
+        
+    
+            poly_line_f267a6eab4a1ed3399a72148e3982766.bindTooltip(
+                `<div>
+                     River: Aksu | Status: High Imbalance
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_938321376c9ba5919292ddf07c08f954 = L.marker(
+                [46.2, 70.1],
+                {
+}
+            ).addTo(map_cbcf65f6b037fb787d55c959331f470b);
+        
+    
+            var icon_63884f8bdc06c0f7d8cd8d32c539ee12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2efdb6b3f3e6e25c19109cdd286b8e9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0482f0ef7847bd14a77af751aef2e94 = $(`<div id="html_c0482f0ef7847bd14a77af751aef2e94" style="width: 100.0%; height: 100.0%;"><b>Aksu River</b><br>Eco Status: High Imbalance</div>`)[0];
+                popup_2efdb6b3f3e6e25c19109cdd286b8e9d.setContent(html_c0482f0ef7847bd14a77af751aef2e94);
+            
+        
+
+        marker_938321376c9ba5919292ddf07c08f954.bindPopup(popup_2efdb6b3f3e6e25c19109cdd286b8e9d)
+        ;
+
+        
+    
+    
+                marker_938321376c9ba5919292ddf07c08f954.setIcon(icon_63884f8bdc06c0f7d8cd8d32c539ee12);
+            
+</script>
+</html>

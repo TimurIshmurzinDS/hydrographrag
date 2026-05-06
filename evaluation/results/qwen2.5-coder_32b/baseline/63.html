@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dc460a751f35b2679a8a8cfe02ce44e6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_dc460a751f35b2679a8a8cfe02ce44e6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dc460a751f35b2679a8a8cfe02ce44e6 = L.map(
+                "map_dc460a751f35b2679a8a8cfe02ce44e6",
+                {
+                    center: [45.06333333333333, 90.01],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_699625efd07191a10e749c68ffb7a6da = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_699625efd07191a10e749c68ffb7a6da.addTo(map_dc460a751f35b2679a8a8cfe02ce44e6);
+        
+    
+            var marker_d47a90024a3206a20d7a7b9c6d0dd32a = L.marker(
+                [45.03, 89.97],
+                {
+}
+            ).addTo(map_dc460a751f35b2679a8a8cfe02ce44e6);
+        
+    
+            var icon_24ccc4bdf509c41fe0c054b923fe8910 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02806e5f195f17f8c69244853b8cacf3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e932cc4e8562a0ca9af33d0cab80fbba = $(`<div id="html_e932cc4e8562a0ca9af33d0cab80fbba" style="width: 100.0%; height: 100.0%;">Гидропост: ГП1 Уровень воды: 152.3 м</div>`)[0];
+                popup_02806e5f195f17f8c69244853b8cacf3.setContent(html_e932cc4e8562a0ca9af33d0cab80fbba);
+            
+        
+
+        marker_d47a90024a3206a20d7a7b9c6d0dd32a.bindPopup(popup_02806e5f195f17f8c69244853b8cacf3)
+        ;
+
+        
+    
+    
+                marker_d47a90024a3206a20d7a7b9c6d0dd32a.setIcon(icon_24ccc4bdf509c41fe0c054b923fe8910);
+            
+    
+            var marker_a87ecf8c44c203a50642385a73ed8898 = L.marker(
+                [45.06, 90.01],
+                {
+}
+            ).addTo(map_dc460a751f35b2679a8a8cfe02ce44e6);
+        
+    
+            var icon_c21d2b998e574249dc1d0a3d300c6b8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71d622bee39fa094ada3255684b1ade1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c9996ec3fe076280a48c67b5dd96494 = $(`<div id="html_4c9996ec3fe076280a48c67b5dd96494" style="width: 100.0%; height: 100.0%;">Гидропост: ГП2 Уровень воды: 153.1 м</div>`)[0];
+                popup_71d622bee39fa094ada3255684b1ade1.setContent(html_4c9996ec3fe076280a48c67b5dd96494);
+            
+        
+
+        marker_a87ecf8c44c203a50642385a73ed8898.bindPopup(popup_71d622bee39fa094ada3255684b1ade1)
+        ;
+
+        
+    
+    
+                marker_a87ecf8c44c203a50642385a73ed8898.setIcon(icon_c21d2b998e574249dc1d0a3d300c6b8c);
+            
+    
+            var marker_8c97c281d30329af7216acd03ab379ae = L.marker(
+                [45.1, 90.05],
+                {
+}
+            ).addTo(map_dc460a751f35b2679a8a8cfe02ce44e6);
+        
+    
+            var icon_381d1bceaeacac279d641b213cc0fc56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_767bbf897f2066a3f6006b3aa24e02c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8166def11aeee3cd9c6494ec639ff4e1 = $(`<div id="html_8166def11aeee3cd9c6494ec639ff4e1" style="width: 100.0%; height: 100.0%;">Гидропост: ГП3 Уровень воды: 151.8 м</div>`)[0];
+                popup_767bbf897f2066a3f6006b3aa24e02c3.setContent(html_8166def11aeee3cd9c6494ec639ff4e1);
+            
+        
+
+        marker_8c97c281d30329af7216acd03ab379ae.bindPopup(popup_767bbf897f2066a3f6006b3aa24e02c3)
+        ;
+
+        
+    
+    
+                marker_8c97c281d30329af7216acd03ab379ae.setIcon(icon_381d1bceaeacac279d641b213cc0fc56);
+            
+</script>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7b4527e9a5265a9aca3006ef9268f0b4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7b4527e9a5265a9aca3006ef9268f0b4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7b4527e9a5265a9aca3006ef9268f0b4 = L.map(
+                "map_7b4527e9a5265a9aca3006ef9268f0b4",
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5c846e1a8cc67f41e82eb29bdd332d58 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5c846e1a8cc67f41e82eb29bdd332d58.addTo(map_7b4527e9a5265a9aca3006ef9268f0b4);
+        
+    
+            var marker_b53d96fa59f9874523b674f429abf9a7 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(map_7b4527e9a5265a9aca3006ef9268f0b4);
+        
+    
+        var popup_13639163596a65c005e1925d7e2dc05b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83f4d45cf4b03afd6929f5d4c476f034 = $(`<div id="html_83f4d45cf4b03afd6929f5d4c476f034" style="width: 100.0%; height: 100.0%;">Год: 1900<br>Рецепт: Без муки<br>Karatal Present: Нет</div>`)[0];
+                popup_13639163596a65c005e1925d7e2dc05b.setContent(html_83f4d45cf4b03afd6929f5d4c476f034);
+            
+        
+
+        marker_b53d96fa59f9874523b674f429abf9a7.bindPopup(popup_13639163596a65c005e1925d7e2dc05b)
+        ;
+
+        
+    
+    
+            var marker_fdc19b5d0de43b904dd24b391d94b76c = L.marker(
+                [40.912800000000004, -73.806],
+                {
+}
+            ).addTo(map_7b4527e9a5265a9aca3006ef9268f0b4);
+        
+    
+        var popup_706fae22ea03115474e4be8aa1cb3207 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41de37a9470d7deb09c663ae66b43923 = $(`<div id="html_41de37a9470d7deb09c663ae66b43923" style="width: 100.0%; height: 100.0%;">Год: 1920<br>Рецепт: С муки<br>Karatal Present: Нет</div>`)[0];
+                popup_706fae22ea03115474e4be8aa1cb3207.setContent(html_41de37a9470d7deb09c663ae66b43923);
+            
+        
+
+        marker_fdc19b5d0de43b904dd24b391d94b76c.bindPopup(popup_706fae22ea03115474e4be8aa1cb3207)
+        ;
+
+        
+    
+    
+            var marker_065e83c2e71f4f456d6c815f7ef17081 = L.marker(
+                [41.1128, -73.606],
+                {
+}
+            ).addTo(map_7b4527e9a5265a9aca3006ef9268f0b4);
+        
+    
+        var popup_14d0ff362a9fa79cbab271ce3b356ede = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0214e26a67ee7d5e475769615f99e9dc = $(`<div id="html_0214e26a67ee7d5e475769615f99e9dc" style="width: 100.0%; height: 100.0%;">Год: 1940<br>Рецепт: С добавлением соли<br>Karatal Present: Да</div>`)[0];
+                popup_14d0ff362a9fa79cbab271ce3b356ede.setContent(html_0214e26a67ee7d5e475769615f99e9dc);
+            
+        
+
+        marker_065e83c2e71f4f456d6c815f7ef17081.bindPopup(popup_14d0ff362a9fa79cbab271ce3b356ede)
+        ;
+
+        
+    
+    
+            var marker_b8df0536e4c65fbe061d76a690bc29be = L.marker(
+                [41.3128, -73.406],
+                {
+}
+            ).addTo(map_7b4527e9a5265a9aca3006ef9268f0b4);
+        
+    
+        var popup_e038cb709140d2f0eba63ed9dff78d71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9a345d00b3d60bec95b3904e96274c2 = $(`<div id="html_b9a345d00b3d60bec95b3904e96274c2" style="width: 100.0%; height: 100.0%;">Год: 1960<br>Рецепт: С добавлением сахара<br>Karatal Present: Да</div>`)[0];
+                popup_e038cb709140d2f0eba63ed9dff78d71.setContent(html_b9a345d00b3d60bec95b3904e96274c2);
+            
+        
+
+        marker_b8df0536e4c65fbe061d76a690bc29be.bindPopup(popup_e038cb709140d2f0eba63ed9dff78d71)
+        ;
+
+        
+    
+    
+            var marker_e748f8bbd633b381e063f9c7a5036a73 = L.marker(
+                [41.5128, -73.206],
+                {
+}
+            ).addTo(map_7b4527e9a5265a9aca3006ef9268f0b4);
+        
+    
+        var popup_cdb754af897ca84e77ab8d706c682f0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cffd559a38edbeccfd34f60b9054274 = $(`<div id="html_7cffd559a38edbeccfd34f60b9054274" style="width: 100.0%; height: 100.0%;">Год: 1980<br>Рецепт: С добавлением масла<br>Karatal Present: Да</div>`)[0];
+                popup_cdb754af897ca84e77ab8d706c682f0f.setContent(html_7cffd559a38edbeccfd34f60b9054274);
+            
+        
+
+        marker_e748f8bbd633b381e063f9c7a5036a73.bindPopup(popup_cdb754af897ca84e77ab8d706c682f0f)
+        ;
+
+        
+    
+    
+            var marker_7f321b0b49b9757f710c0b055602f148 = L.marker(
+                [41.7128, -73.006],
+                {
+}
+            ).addTo(map_7b4527e9a5265a9aca3006ef9268f0b4);
+        
+    
+        var popup_7a7a5ea7fc03919aef6d7a07e6756deb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f64340c75c6eacf13ba99314be7867ed = $(`<div id="html_f64340c75c6eacf13ba99314be7867ed" style="width: 100.0%; height: 100.0%;">Год: 2000<br>Рецепт: С добавлением кориандра<br>Karatal Present: Да</div>`)[0];
+                popup_7a7a5ea7fc03919aef6d7a07e6756deb.setContent(html_f64340c75c6eacf13ba99314be7867ed);
+            
+        
+
+        marker_7f321b0b49b9757f710c0b055602f148.bindPopup(popup_7a7a5ea7fc03919aef6d7a07e6756deb)
+        ;
+
+        
+    
+</script>
+</html>

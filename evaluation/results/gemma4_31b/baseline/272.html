@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_36235f26924191b8f332bc6b5dbf571c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Expansion Rate</b><br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> High (>10%)<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Moderate (2-10%)<br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Stable (<2%)
+     </div>
+     
+    
+            <div class="folium-map" id="map_36235f26924191b8f332bc6b5dbf571c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_36235f26924191b8f332bc6b5dbf571c = L.map(
+                "map_36235f26924191b8f332bc6b5dbf571c",
+                {
+                    center: [44.2, 79.6],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d5d1a31721a0ce097f94c29166611b29 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d5d1a31721a0ce097f94c29166611b29.addTo(map_36235f26924191b8f332bc6b5dbf571c);
+        
+    
+            var circle_marker_0e7ca76cc3b15a3abf805054dbef86cb = L.circleMarker(
+                [44.35, 79.3],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_36235f26924191b8f332bc6b5dbf571c);
+        
+    
+        var popup_96431ba81e12844016cc904998c37a2d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34a8434f6ccfce4ab9d7c5f90fec88ce = $(`<div id="html_34a8434f6ccfce4ab9d7c5f90fec88ce" style="width: 100.0%; height: 100.0%;">Station: Upper Reach<br>Width T1: 15.2m<br>Width T2: 15.8m<br><b>Expansion Rate: 3.95%</b></div>`)[0];
+                popup_96431ba81e12844016cc904998c37a2d.setContent(html_34a8434f6ccfce4ab9d7c5f90fec88ce);
+            
+        
+
+        circle_marker_0e7ca76cc3b15a3abf805054dbef86cb.bindPopup(popup_96431ba81e12844016cc904998c37a2d)
+        ;
+
+        
+    
+    
+            var circle_marker_439691f13a5ed6a4976aec7fac8f7cda = L.circleMarker(
+                [44.28, 79.45],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_36235f26924191b8f332bc6b5dbf571c);
+        
+    
+        var popup_fb444af9dd660cabc2f30eeaf78d51a8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fb321a41a0b776373abd6fc2fe589b61 = $(`<div id="html_fb321a41a0b776373abd6fc2fe589b61" style="width: 100.0%; height: 100.0%;">Station: Canyon Entrance<br>Width T1: 45.5m<br>Width T2: 48.2m<br><b>Expansion Rate: 5.93%</b></div>`)[0];
+                popup_fb444af9dd660cabc2f30eeaf78d51a8.setContent(html_fb321a41a0b776373abd6fc2fe589b61);
+            
+        
+
+        circle_marker_439691f13a5ed6a4976aec7fac8f7cda.bindPopup(popup_fb444af9dd660cabc2f30eeaf78d51a8)
+        ;
+
+        
+    
+    
+            var circle_marker_6a554667ff7d4305bfd67d15206d2a0e = L.circleMarker(
+                [44.22, 79.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_36235f26924191b8f332bc6b5dbf571c);
+        
+    
+        var popup_09bd23721711c1bc66a4f5cca1b75ec4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ea20e7df7486f72b49086208774b97f = $(`<div id="html_0ea20e7df7486f72b49086208774b97f" style="width: 100.0%; height: 100.0%;">Station: Valley of Castles<br>Width T1: 120.3m<br>Width T2: 135.7m<br><b>Expansion Rate: 12.80%</b></div>`)[0];
+                popup_09bd23721711c1bc66a4f5cca1b75ec4.setContent(html_0ea20e7df7486f72b49086208774b97f);
+            
+        
+
+        circle_marker_6a554667ff7d4305bfd67d15206d2a0e.bindPopup(popup_09bd23721711c1bc66a4f5cca1b75ec4)
+        ;
+
+        
+    
+    
+            var circle_marker_ebd633065d6c2e4d6e240e7d6f7e089d = L.circleMarker(
+                [44.15, 79.75],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_36235f26924191b8f332bc6b5dbf571c);
+        
+    
+        var popup_2043c2b8fb13fbd6ee7f61bf61db6295 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e29bc76a1ddd1bf665accab3b5247888 = $(`<div id="html_e29bc76a1ddd1bf665accab3b5247888" style="width: 100.0%; height: 100.0%;">Station: Middle Gorge<br>Width T1: 30.1m<br>Width T2: 31.5m<br><b>Expansion Rate: 4.65%</b></div>`)[0];
+                popup_2043c2b8fb13fbd6ee7f61bf61db6295.setContent(html_e29bc76a1ddd1bf665accab3b5247888);
+            
+        
+
+        circle_marker_ebd633065d6c2e4d6e240e7d6f7e089d.bindPopup(popup_2043c2b8fb13fbd6ee7f61bf61db6295)
+        ;
+
+        
+    
+    
+            var circle_marker_de95dd8deb57979d750e7a433e99260e = L.circleMarker(
+                [44.08, 79.9],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_36235f26924191b8f332bc6b5dbf571c);
+        
+    
+        var popup_faa2914409c3e62e092c05cd34db6462 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3fa7e66f01cb7d12fccb5e9d34fc1360 = $(`<div id="html_3fa7e66f01cb7d12fccb5e9d34fc1360" style="width: 100.0%; height: 100.0%;">Station: Lower Basin<br>Width T1: 55.8m<br>Width T2: 58.2m<br><b>Expansion Rate: 4.30%</b></div>`)[0];
+                popup_faa2914409c3e62e092c05cd34db6462.setContent(html_3fa7e66f01cb7d12fccb5e9d34fc1360);
+            
+        
+
+        circle_marker_de95dd8deb57979d750e7a433e99260e.bindPopup(popup_faa2914409c3e62e092c05cd34db6462)
+        ;
+
+        
+    
+</script>
+</html>

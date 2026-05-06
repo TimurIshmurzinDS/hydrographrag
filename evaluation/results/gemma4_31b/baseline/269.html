@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c033500f5f2fcb19a4a2ffd88cebb7fe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 250px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; padding: 10px;">
+     <b>Легенда Лунной Фермы:</b><br>
+     <i style="color:blue">●</i> Источник (Лед)<br>
+     <i style="color:cyan">━</i> Магистраль Киши Осек<br>
+     <i style="color:lightblue">━</i> Распределительная сеть<br>
+     <i style="color:lime">●</i> Купольная ферма
+     </div>
+     
+    
+            <div class="folium-map" id="map_c033500f5f2fcb19a4a2ffd88cebb7fe" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c033500f5f2fcb19a4a2ffd88cebb7fe = L.map(
+                "map_c033500f5f2fcb19a4a2ffd88cebb7fe",
+                {
+                    center: [-89.5, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0b8ee8e25b7d7ee538128c747af29eac = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0b8ee8e25b7d7ee538128c747af29eac.addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var marker_772effac379b192256e207e1d9ab1443 = L.marker(
+                [-89.5, 0.0],
+                {
+}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var icon_6389e99377e01ac4392a5bd951b4ae9a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_732fc13ddcf9aa34cba7cd67990a1ae8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4b7c89371572aec13b9edcf7ee1dba3 = $(`<div id="html_e4b7c89371572aec13b9edcf7ee1dba3" style="width: 100.0%; height: 100.0%;">Источник воды (Ледяной карьер Киши Осек-Луна)</div>`)[0];
+                popup_732fc13ddcf9aa34cba7cd67990a1ae8.setContent(html_e4b7c89371572aec13b9edcf7ee1dba3);
+            
+        
+
+        marker_772effac379b192256e207e1d9ab1443.bindPopup(popup_732fc13ddcf9aa34cba7cd67990a1ae8)
+        ;
+
+        
+    
+    
+                marker_772effac379b192256e207e1d9ab1443.setIcon(icon_6389e99377e01ac4392a5bd951b4ae9a);
+            
+    
+            var poly_line_0d51d4e267930ae829ad175a55bf76cb = L.polyline(
+                [[-89.5, 0.0], [-89.48169565468383, -0.004311758708163172], [-89.46760906905617, -0.007450213652813496], [-89.44953996759885, -0.010704941512106003], [-89.43694316360123, -0.011190144799283527], [-89.4177623559972, -0.0012261111590419396]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            poly_line_0d51d4e267930ae829ad175a55bf76cb.bindTooltip(
+                `<div>
+                     Магистральный трубопровод Киши Осек
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c32a7309c67702219e6cd110d00bffd5 = L.polyline(
+                [[-89.5, 0.0], [-89.49223943106071, 0.0003905725629978745]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_dea6f5e36d85fb10955e8cfd92cae47e = L.circle(
+                [-89.49223943106071, 0.0003905725629978745],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_f5c28079bd624750d1a446eb57b4cb58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33d65410771c3a1cc0dc1aa85b7e0a6f = $(`<div id="html_33d65410771c3a1cc0dc1aa85b7e0a6f" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 293</div>`)[0];
+                popup_f5c28079bd624750d1a446eb57b4cb58.setContent(html_33d65410771c3a1cc0dc1aa85b7e0a6f);
+            
+        
+
+        circle_dea6f5e36d85fb10955e8cfd92cae47e.bindPopup(popup_f5c28079bd624750d1a446eb57b4cb58)
+        ;
+
+        
+    
+    
+            var poly_line_298009c1428a880a58f81994b1803db6 = L.polyline(
+                [[-89.5, 0.0], [-89.4853610479633, -0.008170586782740508]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_e030382442cd0e5f545140d4ad974569 = L.circle(
+                [-89.4853610479633, -0.008170586782740508],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_b5118d863dda6b07ea8a8a6f46a66155 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_228c250d09d2f7200bfe147734788901 = $(`<div id="html_228c250d09d2f7200bfe147734788901" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 471</div>`)[0];
+                popup_b5118d863dda6b07ea8a8a6f46a66155.setContent(html_228c250d09d2f7200bfe147734788901);
+            
+        
+
+        circle_e030382442cd0e5f545140d4ad974569.bindPopup(popup_b5118d863dda6b07ea8a8a6f46a66155)
+        ;
+
+        
+    
+    
+            var poly_line_9774f6250f77781ada7a69b7c6e905b8 = L.polyline(
+                [[-89.48169565468383, -0.004311758708163172], [-89.4799847118265, -0.004306150986074107]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_137afead2c52d3f1bfc947f13329fe79 = L.circle(
+                [-89.4799847118265, -0.004306150986074107],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_09433597ed6e7ecf3df5264415f54b89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f94cf5b60dc78025344563fad1f8f071 = $(`<div id="html_f94cf5b60dc78025344563fad1f8f071" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 712</div>`)[0];
+                popup_09433597ed6e7ecf3df5264415f54b89.setContent(html_f94cf5b60dc78025344563fad1f8f071);
+            
+        
+
+        circle_137afead2c52d3f1bfc947f13329fe79.bindPopup(popup_09433597ed6e7ecf3df5264415f54b89)
+        ;
+
+        
+    
+    
+            var poly_line_b6d902bd50cdbfe6c0206f060d7ee449 = L.polyline(
+                [[-89.48169565468383, -0.004311758708163172], [-89.48211331560422, -0.005330778906962726]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_c1c9f9227e65c12e30ab3f825c97c825 = L.circle(
+                [-89.48211331560422, -0.005330778906962726],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_c1e361f279660a4cfd757f681172bcfc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c984aa9b1baa4897d4ccaaea9828d706 = $(`<div id="html_c984aa9b1baa4897d4ccaaea9828d706" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 223</div>`)[0];
+                popup_c1e361f279660a4cfd757f681172bcfc.setContent(html_c984aa9b1baa4897d4ccaaea9828d706);
+            
+        
+
+        circle_c1c9f9227e65c12e30ab3f825c97c825.bindPopup(popup_c1e361f279660a4cfd757f681172bcfc)
+        ;
+
+        
+    
+    
+            var poly_line_0f41bb47d9a57b450d53273e85ce13e5 = L.polyline(
+                [[-89.48169565468383, -0.004311758708163172], [-89.47648363773217, 0.002025665461581603]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_6951ae0b29921f21e165bb4b9f813c8f = L.circle(
+                [-89.47648363773217, 0.002025665461581603],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_f4c98201ecbc54559c9c6cf7b72f4f41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c0847ccb90881eab1ac50682e060596 = $(`<div id="html_2c0847ccb90881eab1ac50682e060596" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 174</div>`)[0];
+                popup_f4c98201ecbc54559c9c6cf7b72f4f41.setContent(html_2c0847ccb90881eab1ac50682e060596);
+            
+        
+
+        circle_6951ae0b29921f21e165bb4b9f813c8f.bindPopup(popup_f4c98201ecbc54559c9c6cf7b72f4f41)
+        ;
+
+        
+    
+    
+            var poly_line_eaafcc03d26c4172aa261aa75764dcec = L.polyline(
+                [[-89.46760906905617, -0.007450213652813496], [-89.48141331712235, -0.007299585142990895]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_851d3dd977f901771d46b9168bcce8f9 = L.circle(
+                [-89.48141331712235, -0.007299585142990895],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_d60359185aae1fca049b234cf7bb73e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93ce4d7c3af5cd33f30db499e8b24d84 = $(`<div id="html_93ce4d7c3af5cd33f30db499e8b24d84" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 519</div>`)[0];
+                popup_d60359185aae1fca049b234cf7bb73e4.setContent(html_93ce4d7c3af5cd33f30db499e8b24d84);
+            
+        
+
+        circle_851d3dd977f901771d46b9168bcce8f9.bindPopup(popup_d60359185aae1fca049b234cf7bb73e4)
+        ;
+
+        
+    
+    
+            var poly_line_a0310fac612319e724af9da8dd4f08de = L.polyline(
+                [[-89.46760906905617, -0.007450213652813496], [-89.46646749392839, -0.01330383852252355]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_566952b6efc1e2769cbdce3f4d1f21e8 = L.circle(
+                [-89.46646749392839, -0.01330383852252355],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_fbcf965a0a2234f7784985c38abcc6ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98e7c4d9b255a8dec4e96c908bc8d8ea = $(`<div id="html_98e7c4d9b255a8dec4e96c908bc8d8ea" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 964</div>`)[0];
+                popup_fbcf965a0a2234f7784985c38abcc6ce.setContent(html_98e7c4d9b255a8dec4e96c908bc8d8ea);
+            
+        
+
+        circle_566952b6efc1e2769cbdce3f4d1f21e8.bindPopup(popup_fbcf965a0a2234f7784985c38abcc6ce)
+        ;
+
+        
+    
+    
+            var poly_line_1b0ae4f01659bc4d5bb22cc4700277aa = L.polyline(
+                [[-89.46760906905617, -0.007450213652813496], [-89.46981643906602, -0.01566918201932856]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_48d387a3468f60e49097cef3f03fcdac = L.circle(
+                [-89.46981643906602, -0.01566918201932856],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_059e600e9edf990e2ffbd0b86480be52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0df13b59190f5f087e115a665bae732a = $(`<div id="html_0df13b59190f5f087e115a665bae732a" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 960</div>`)[0];
+                popup_059e600e9edf990e2ffbd0b86480be52.setContent(html_0df13b59190f5f087e115a665bae732a);
+            
+        
+
+        circle_48d387a3468f60e49097cef3f03fcdac.bindPopup(popup_059e600e9edf990e2ffbd0b86480be52)
+        ;
+
+        
+    
+    
+            var poly_line_53c966d45f5fc126984548a683686b04 = L.polyline(
+                [[-89.44953996759885, -0.010704941512106003], [-89.44169672230353, -0.0031122079718627106]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_7435691b1869c22cd7677e6ddaa1151c = L.circle(
+                [-89.44169672230353, -0.0031122079718627106],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_ad61a179f0bcafc59aa2883ba3b5bf66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bbed3d4d1d4572a3d98e9ab32640fd89 = $(`<div id="html_bbed3d4d1d4572a3d98e9ab32640fd89" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 587</div>`)[0];
+                popup_ad61a179f0bcafc59aa2883ba3b5bf66.setContent(html_bbed3d4d1d4572a3d98e9ab32640fd89);
+            
+        
+
+        circle_7435691b1869c22cd7677e6ddaa1151c.bindPopup(popup_ad61a179f0bcafc59aa2883ba3b5bf66)
+        ;
+
+        
+    
+    
+            var poly_line_26b99c0fa87b9ac2166b6203b023e6a0 = L.polyline(
+                [[-89.44953996759885, -0.010704941512106003], [-89.45370767489244, -0.024769422762327797]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_19c7e0f39e527128edef45c7b2d5cdda = L.circle(
+                [-89.45370767489244, -0.024769422762327797],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_95b90819b55ac3633215e1befe13f428 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86922d3ebe52ca84b89497cc6410cdca = $(`<div id="html_86922d3ebe52ca84b89497cc6410cdca" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 581</div>`)[0];
+                popup_95b90819b55ac3633215e1befe13f428.setContent(html_86922d3ebe52ca84b89497cc6410cdca);
+            
+        
+
+        circle_19c7e0f39e527128edef45c7b2d5cdda.bindPopup(popup_95b90819b55ac3633215e1befe13f428)
+        ;
+
+        
+    
+    
+            var poly_line_974700dc23b21502d6fa637d1f562a27 = L.polyline(
+                [[-89.44953996759885, -0.010704941512106003], [-89.46128240794954, -0.0014742489502736836]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_c3aaa8c8a550490b8f19f4797ce7f106 = L.circle(
+                [-89.46128240794954, -0.0014742489502736836],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_92697db68b7af6e8f6c42a919ffb5161 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93e76ce9ce41fd56930c403a7d30a37d = $(`<div id="html_93e76ce9ce41fd56930c403a7d30a37d" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 330</div>`)[0];
+                popup_92697db68b7af6e8f6c42a919ffb5161.setContent(html_93e76ce9ce41fd56930c403a7d30a37d);
+            
+        
+
+        circle_c3aaa8c8a550490b8f19f4797ce7f106.bindPopup(popup_92697db68b7af6e8f6c42a919ffb5161)
+        ;
+
+        
+    
+    
+            var poly_line_d67f5050ba8828ee49c0baaf752f58ff = L.polyline(
+                [[-89.43694316360123, -0.011190144799283527], [-89.4507900522779, -0.01697490403241003]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_ad9f8f7cd5da12a0f71b337fb3caab95 = L.circle(
+                [-89.4507900522779, -0.01697490403241003],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_738c1318c042db4819dd51d07ad21679 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_742f94aa537000a8f5a5de280786790f = $(`<div id="html_742f94aa537000a8f5a5de280786790f" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 828</div>`)[0];
+                popup_738c1318c042db4819dd51d07ad21679.setContent(html_742f94aa537000a8f5a5de280786790f);
+            
+        
+
+        circle_ad9f8f7cd5da12a0f71b337fb3caab95.bindPopup(popup_738c1318c042db4819dd51d07ad21679)
+        ;
+
+        
+    
+    
+            var poly_line_5f9b93e0d22818fb752a24d517a8a148 = L.polyline(
+                [[-89.43694316360123, -0.011190144799283527], [-89.43148518620339, -0.016523857537898465]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_9619ff2b5f3be2bf46994072d5112bcb = L.circle(
+                [-89.43148518620339, -0.016523857537898465],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_1bdf0eb9fe2763fb279fd5ff38a19905 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ba64e51863bbba059762f3696561ea3 = $(`<div id="html_8ba64e51863bbba059762f3696561ea3" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 336</div>`)[0];
+                popup_1bdf0eb9fe2763fb279fd5ff38a19905.setContent(html_8ba64e51863bbba059762f3696561ea3);
+            
+        
+
+        circle_9619ff2b5f3be2bf46994072d5112bcb.bindPopup(popup_1bdf0eb9fe2763fb279fd5ff38a19905)
+        ;
+
+        
+    
+    
+            var poly_line_22e2d834e67e458c2c6c2f67f1eb376e = L.polyline(
+                [[-89.4177623559972, -0.0012261111590419396], [-89.41468224979702, -0.000703601817758923]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_18974597ad87cfbbc8ac1f96cd3b3020 = L.circle(
+                [-89.41468224979702, -0.000703601817758923],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_a3b4608774555e319c79f89862df586d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa28ce36ace4f9bae4c1ca4aa5cbd20a = $(`<div id="html_fa28ce36ace4f9bae4c1ca4aa5cbd20a" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 854</div>`)[0];
+                popup_a3b4608774555e319c79f89862df586d.setContent(html_fa28ce36ace4f9bae4c1ca4aa5cbd20a);
+            
+        
+
+        circle_18974597ad87cfbbc8ac1f96cd3b3020.bindPopup(popup_a3b4608774555e319c79f89862df586d)
+        ;
+
+        
+    
+    
+            var poly_line_a88f0b0674303aac45486daa14e03392 = L.polyline(
+                [[-89.4177623559972, -0.0012261111590419396], [-89.41820881993564, 0.00040276062440055584]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_8e10bb8d794d7107bb5502d95b5a6760 = L.circle(
+                [-89.41820881993564, 0.00040276062440055584],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_1fbf8cbfb021d379247b1d1b43c9a1c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab79507a3332ee091263f1f374dda36b = $(`<div id="html_ab79507a3332ee091263f1f374dda36b" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 357</div>`)[0];
+                popup_1fbf8cbfb021d379247b1d1b43c9a1c1.setContent(html_ab79507a3332ee091263f1f374dda36b);
+            
+        
+
+        circle_8e10bb8d794d7107bb5502d95b5a6760.bindPopup(popup_1fbf8cbfb021d379247b1d1b43c9a1c1)
+        ;
+
+        
+    
+    
+            var poly_line_790317e9f725e9012cf7c857aea6eada = L.polyline(
+                [[-89.4177623559972, -0.0012261111590419396], [-89.43050844687785, -0.005303851108846402]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+            var circle_ad4e4208a62868ce40621cd59c652fd8 = L.circle(
+                [-89.43050844687785, -0.005303851108846402],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500, "stroke": true, "weight": 3}
+            ).addTo(map_c033500f5f2fcb19a4a2ffd88cebb7fe);
+        
+    
+        var popup_943e31889ef5224742eb88049ba94c56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed2c0610a2b7ce053e4509ac32e53c93 = $(`<div id="html_ed2c0610a2b7ce053e4509ac32e53c93" style="width: 100.0%; height: 100.0%;">Гидропонный модуль 756</div>`)[0];
+                popup_943e31889ef5224742eb88049ba94c56.setContent(html_ed2c0610a2b7ce053e4509ac32e53c93);
+            
+        
+
+        circle_ad4e4208a62868ce40621cd59c652fd8.bindPopup(popup_943e31889ef5224742eb88049ba94c56)
+        ;
+
+        
+    
+</script>
+</html>

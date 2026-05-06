@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4f39ee79a8092a1029565514dd5a72c4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Status Legend</b><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Working<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Not Working<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Needs Repair
+     </div>
+     
+    
+            <div class="folium-map" id="map_4f39ee79a8092a1029565514dd5a72c4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4f39ee79a8092a1029565514dd5a72c4 = L.map(
+                "map_4f39ee79a8092a1029565514dd5a72c4",
+                {
+                    center: [43.7, 79.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb9adbcaed7fe5b6316e0c0a8d57aec6 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bb9adbcaed7fe5b6316e0c0a8d57aec6.addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+            var circle_marker_332f84647f083ab7b47b4ba1611c6040 = L.circleMarker(
+                [43.21, 78.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_0548e8d72069fb6171457d138fdc3552 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c84aba00ad2102f2db6db8fbac7b5ae4 = $(`<div id="html_c84aba00ad2102f2db6db8fbac7b5ae4" style="width: 100.0%; height: 100.0%;">Post ID: 101<br>River: Karatal<br>Status: Working</div>`)[0];
+                popup_0548e8d72069fb6171457d138fdc3552.setContent(html_c84aba00ad2102f2db6db8fbac7b5ae4);
+            
+        
+
+        circle_marker_332f84647f083ab7b47b4ba1611c6040.bindPopup(popup_0548e8d72069fb6171457d138fdc3552)
+        ;
+
+        
+    
+    
+            var circle_marker_555cf37a910c4bfc68d852ba0bb1d6f7 = L.circleMarker(
+                [43.35, 78.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_1d6189300dbea164c17dbe40c0157b8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3535c8c20ce385ea72d8782257b17958 = $(`<div id="html_3535c8c20ce385ea72d8782257b17958" style="width: 100.0%; height: 100.0%;">Post ID: 102<br>River: Karatal<br>Status: Not Working</div>`)[0];
+                popup_1d6189300dbea164c17dbe40c0157b8e.setContent(html_3535c8c20ce385ea72d8782257b17958);
+            
+        
+
+        circle_marker_555cf37a910c4bfc68d852ba0bb1d6f7.bindPopup(popup_1d6189300dbea164c17dbe40c0157b8e)
+        ;
+
+        
+    
+    
+            var circle_marker_534a865ff0e0f887fe88baf5921e20a6 = L.circleMarker(
+                [43.48, 78.4],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_f166b84e07b323a453ff18ef1e27e017 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c8260a47edae348883f9e09d56d4406 = $(`<div id="html_2c8260a47edae348883f9e09d56d4406" style="width: 100.0%; height: 100.0%;">Post ID: 103<br>River: Karatal<br>Status: Working</div>`)[0];
+                popup_f166b84e07b323a453ff18ef1e27e017.setContent(html_2c8260a47edae348883f9e09d56d4406);
+            
+        
+
+        circle_marker_534a865ff0e0f887fe88baf5921e20a6.bindPopup(popup_f166b84e07b323a453ff18ef1e27e017)
+        ;
+
+        
+    
+    
+            var circle_marker_c6960ab850279b9d458103971114f68f = L.circleMarker(
+                [43.6, 78.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_06a9711dd85eb6727ff9e523d6bfe688 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dfb502edd07a7166bda40a2e6c55bcfa = $(`<div id="html_dfb502edd07a7166bda40a2e6c55bcfa" style="width: 100.0%; height: 100.0%;">Post ID: 104<br>River: Karatal<br>Status: Working</div>`)[0];
+                popup_06a9711dd85eb6727ff9e523d6bfe688.setContent(html_dfb502edd07a7166bda40a2e6c55bcfa);
+            
+        
+
+        circle_marker_c6960ab850279b9d458103971114f68f.bindPopup(popup_06a9711dd85eb6727ff9e523d6bfe688)
+        ;
+
+        
+    
+    
+            var circle_marker_60be988d03d0c2945a5f9f1a2c6562c6 = L.circleMarker(
+                [43.8, 80.1],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_f17b148ea934b4caa1c1a40af83fbefd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df57cd173742900e2a914621ab675879 = $(`<div id="html_df57cd173742900e2a914621ab675879" style="width: 100.0%; height: 100.0%;">Post ID: 201<br>River: Lepsy<br>Status: Working</div>`)[0];
+                popup_f17b148ea934b4caa1c1a40af83fbefd.setContent(html_df57cd173742900e2a914621ab675879);
+            
+        
+
+        circle_marker_60be988d03d0c2945a5f9f1a2c6562c6.bindPopup(popup_f17b148ea934b4caa1c1a40af83fbefd)
+        ;
+
+        
+    
+    
+            var circle_marker_d11aa9feee0e13b4a8af35985b94fe9f = L.circleMarker(
+                [43.95, 80.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_90c61608bfb5c6c57a8e744ea7a2846d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e33113e6308104f3b2bf05d41c75bd3f = $(`<div id="html_e33113e6308104f3b2bf05d41c75bd3f" style="width: 100.0%; height: 100.0%;">Post ID: 202<br>River: Lepsy<br>Status: Not Working</div>`)[0];
+                popup_90c61608bfb5c6c57a8e744ea7a2846d.setContent(html_e33113e6308104f3b2bf05d41c75bd3f);
+            
+        
+
+        circle_marker_d11aa9feee0e13b4a8af35985b94fe9f.bindPopup(popup_90c61608bfb5c6c57a8e744ea7a2846d)
+        ;
+
+        
+    
+    
+            var circle_marker_f57c1ced8b3c7deb5a9fd58b7111f483 = L.circleMarker(
+                [44.1, 80.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_e469eda89c999f58fdaffd22e775f856 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f2a0896e9a83ad426ce886aa83a24e1 = $(`<div id="html_0f2a0896e9a83ad426ce886aa83a24e1" style="width: 100.0%; height: 100.0%;">Post ID: 203<br>River: Lepsy<br>Status: Not Working</div>`)[0];
+                popup_e469eda89c999f58fdaffd22e775f856.setContent(html_0f2a0896e9a83ad426ce886aa83a24e1);
+            
+        
+
+        circle_marker_f57c1ced8b3c7deb5a9fd58b7111f483.bindPopup(popup_e469eda89c999f58fdaffd22e775f856)
+        ;
+
+        
+    
+    
+            var circle_marker_0bd9b681374af2edae71eb0e2941e928 = L.circleMarker(
+                [44.25, 80.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_4f39ee79a8092a1029565514dd5a72c4);
+        
+    
+        var popup_42ffa224c06420f513499b261f48fa02 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_163e639965c6a5ea54fb7968506a37b3 = $(`<div id="html_163e639965c6a5ea54fb7968506a37b3" style="width: 100.0%; height: 100.0%;">Post ID: 204<br>River: Lepsy<br>Status: Working</div>`)[0];
+                popup_42ffa224c06420f513499b261f48fa02.setContent(html_163e639965c6a5ea54fb7968506a37b3);
+            
+        
+
+        circle_marker_0bd9b681374af2edae71eb0e2941e928.bindPopup(popup_42ffa224c06420f513499b261f48fa02)
+        ;
+
+        
+    
+</script>
+</html>

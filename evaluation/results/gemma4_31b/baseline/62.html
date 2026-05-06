@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8895a8bc4cbb3a53e164b735e61a7190 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8895a8bc4cbb3a53e164b735e61a7190" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8895a8bc4cbb3a53e164b735e61a7190 = L.map(
+                "map_8895a8bc4cbb3a53e164b735e61a7190",
+                {
+                    center: [43.41781666666666, 79.64358333333334],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_52a7e4cc8ef3ad66f4f2d7a2a0c9fe67 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_52a7e4cc8ef3ad66f4f2d7a2a0c9fe67.addTo(map_8895a8bc4cbb3a53e164b735e61a7190);
+        
+    
+            var circle_marker_e89d3141caf6945efd2916ca2d7e0cf6 = L.circleMarker(
+                [43.8521, 79.1234],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8895a8bc4cbb3a53e164b735e61a7190);
+        
+    
+        var popup_e5a3edf56838adc7126cf0d62249bcab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65dc42ced41a6aa24d9bf08ea76a9282 = $(`<div id="html_65dc42ced41a6aa24d9bf08ea76a9282" style="width: 100.0%; height: 100.0%;">Пост: Верхний Шарын<br>ID: SH-01<br>Статус: Активен<br>Обновление: 2026-04-18 11:32</div>`)[0];
+                popup_e5a3edf56838adc7126cf0d62249bcab.setContent(html_65dc42ced41a6aa24d9bf08ea76a9282);
+            
+        
+
+        circle_marker_e89d3141caf6945efd2916ca2d7e0cf6.bindPopup(popup_e5a3edf56838adc7126cf0d62249bcab)
+        ;
+
+        
+    
+    
+            var circle_marker_d6b449f51d890f4570b1710d632d6009 = L.circleMarker(
+                [43.6123, 79.3456],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8895a8bc4cbb3a53e164b735e61a7190);
+        
+    
+        var popup_3d01ce0f4f1146c33aa17ad237c998fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76c0dea8bb96c8f48fa584c96e059726 = $(`<div id="html_76c0dea8bb96c8f48fa584c96e059726" style="width: 100.0%; height: 100.0%;">Пост: Средний Шарын-1<br>ID: SH-02<br>Статус: НЕ ПЕРЕДАЕТ ДАННЫЕ<br>Обновление: 2026-04-18 06:32</div>`)[0];
+                popup_3d01ce0f4f1146c33aa17ad237c998fc.setContent(html_76c0dea8bb96c8f48fa584c96e059726);
+            
+        
+
+        circle_marker_d6b449f51d890f4570b1710d632d6009.bindPopup(popup_3d01ce0f4f1146c33aa17ad237c998fc)
+        ;
+
+        
+    
+    
+            var circle_marker_142f83e5b8c58be5594f4ab8ce795484 = L.circleMarker(
+                [43.4567, 79.5678],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8895a8bc4cbb3a53e164b735e61a7190);
+        
+    
+        var popup_0bafdbefb504a8d29f7068b98cec8017 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3fb2e77ef8baed21a43cedb44d57898e = $(`<div id="html_3fb2e77ef8baed21a43cedb44d57898e" style="width: 100.0%; height: 100.0%;">Пост: Средний Шарын-2<br>ID: SH-03<br>Статус: Активен<br>Обновление: 2026-04-18 11:32</div>`)[0];
+                popup_0bafdbefb504a8d29f7068b98cec8017.setContent(html_3fb2e77ef8baed21a43cedb44d57898e);
+            
+        
+
+        circle_marker_142f83e5b8c58be5594f4ab8ce795484.bindPopup(popup_0bafdbefb504a8d29f7068b98cec8017)
+        ;
+
+        
+    
+    
+            var circle_marker_d5ba1edce4178943a07d206159deee03 = L.circleMarker(
+                [43.321, 79.789],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8895a8bc4cbb3a53e164b735e61a7190);
+        
+    
+        var popup_60dab78ff70d9c195975c15abdd26e2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13b7dc3f0984762a29afc63f98de1d35 = $(`<div id="html_13b7dc3f0984762a29afc63f98de1d35" style="width: 100.0%; height: 100.0%;">Пост: Каньон-Вход<br>ID: SH-04<br>Статус: НЕ ПЕРЕДАЕТ ДАННЫЕ<br>Обновление: 2026-04-17 23:32</div>`)[0];
+                popup_60dab78ff70d9c195975c15abdd26e2e.setContent(html_13b7dc3f0984762a29afc63f98de1d35);
+            
+        
+
+        circle_marker_d5ba1edce4178943a07d206159deee03.bindPopup(popup_60dab78ff70d9c195975c15abdd26e2e)
+        ;
+
+        
+    
+    
+            var circle_marker_c396a3db1e02045d50e3f78557d1b7fb = L.circleMarker(
+                [43.2105, 79.9123],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8895a8bc4cbb3a53e164b735e61a7190);
+        
+    
+        var popup_9d4918478cdd6bfef4cea21964346a00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f652262b49465c0259ac2e21b0f7e1c1 = $(`<div id="html_f652262b49465c0259ac2e21b0f7e1c1" style="width: 100.0%; height: 100.0%;">Пост: Каньон-Центр<br>ID: SH-05<br>Статус: Активен<br>Обновление: 2026-04-18 11:32</div>`)[0];
+                popup_9d4918478cdd6bfef4cea21964346a00.setContent(html_f652262b49465c0259ac2e21b0f7e1c1);
+            
+        
+
+        circle_marker_c396a3db1e02045d50e3f78557d1b7fb.bindPopup(popup_9d4918478cdd6bfef4cea21964346a00)
+        ;
+
+        
+    
+    
+            var circle_marker_915786b08a3fea6b7530bd5a57c1135c = L.circleMarker(
+                [43.0543, 80.1234],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8895a8bc4cbb3a53e164b735e61a7190);
+        
+    
+        var popup_2732326e8a53cfbf9c97212a57b1e73f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_571955f14d5c3477a3ddfaa5372a0150 = $(`<div id="html_571955f14d5c3477a3ddfaa5372a0150" style="width: 100.0%; height: 100.0%;">Пост: Нижний Шарын<br>ID: SH-06<br>Статус: НЕ ПЕРЕДАЕТ ДАННЫЕ<br>Обновление: 2026-04-17 11:32</div>`)[0];
+                popup_2732326e8a53cfbf9c97212a57b1e73f.setContent(html_571955f14d5c3477a3ddfaa5372a0150);
+            
+        
+
+        circle_marker_915786b08a3fea6b7530bd5a57c1135c.bindPopup(popup_2732326e8a53cfbf9c97212a57b1e73f)
+        ;
+
+        
+    
+</script>
+</html>

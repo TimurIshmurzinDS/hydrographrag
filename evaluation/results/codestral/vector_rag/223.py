@@ -1,0 +1,24 @@
+python
+   import geopandas as gpd
+   import folium
+   from shapely import wkt
+
+   # Load the shapefile and convert to CRS 'EPSG:4326'
+   basin = gpd.read_file(r"data/basin_data.shp")
+   basin = basin.to_crs('EPSG:4326')
+
+   # Initialize folium map using the centroid of the shapefile
+   m = folium.Map(location=[basin.geometry.centroid.y, basin.geometry.centroid.x], tiles='CartoDB positron')
+
+   # Add the basin to the map
+   folium.GeoJson(basin['geometry'], name='Basin', style_function=lambda x: {'fillColor': 'green', 'color': 'darkgreen', 'fillOpacity': 0.2}).add_to(m)
+
+   # Hardcoded list of dictionaries for Bayankol village (Observation)
+   observations = [{'name': 'Bayankol village', 'geometry': wkt.loads('POINT(longitude latitude)')}]
+
+   # Add the observations to the map
+   for observation in observations:
+       folium.Marker([observation['geometry'].y, observation['geometry'].x], popup=observation['name']).add_to(m)
+
+   # Save the final map
+   m.save("223.html")

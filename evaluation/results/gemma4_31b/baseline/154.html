@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_06882e70fedc72fbf992935a560f7854 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 250px; height: 100px; 
+                background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+                padding: 10px;">
+    <b>Flood Probability Analysis:</b><br>
+    Shynzhaly: 0.77<br>
+    Shyzhyn: 0.33<br>
+    <i>Higher value = Higher Risk</i>
+    </div>
+    
+            <div class="folium-map" id="map_06882e70fedc72fbf992935a560f7854" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_06882e70fedc72fbf992935a560f7854 = L.map(
+                "map_06882e70fedc72fbf992935a560f7854",
+                {
+                    center: [43.55, 65.1],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1ed81f82e338cc064d162298346b84e1 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1ed81f82e338cc064d162298346b84e1.addTo(map_06882e70fedc72fbf992935a560f7854);
+        
+    
+            var poly_line_ce04ae0579f9c2bdefebeb33b436df65 = L.polyline(
+                [[43.49364214773531, 64.98263756063909], [43.49966073503431, 64.99967572776832], [43.50136216325511, 64.99282772824722], [43.510887733859214, 65.00433898963247], [43.50429772145252, 65.02419838759059], [43.51332235119055, 65.00834976291307], [43.521965348371644, 65.01326691155502], [43.52042218190777, 65.01588036296265], [43.515129895809245, 65.00737375418845], [43.51155388769819, 64.99962920765483], [43.508122841676794, 64.99663260710886], [43.503247631571824, 65.0014679736419], [43.49407856405664, 65.01330537592978], [43.48960987520683, 65.00945791193102], [43.487994262678576, 65.01031450495512], [43.49172371963334, 65.00043389697713], [43.48688159232394, 65.01733824198296], [43.49179467154009, 65.03075934533581], [43.48840063406518, 65.02848853113565], [43.48468304267428, 65.0114020604172]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_06882e70fedc72fbf992935a560f7854);
+        
+    
+            poly_line_ce04ae0579f9c2bdefebeb33b436df65.bindTooltip(
+                `<div>
+                     River: Shynzhaly | Avg Flood Prob: 0.77
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9292b8ad9a98c9de754f2f2c8b1a8d57 = L.circleMarker(
+                [43.48840063406518, 65.02848853113565],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_06882e70fedc72fbf992935a560f7854);
+        
+    
+        var popup_932338b56aece1a243f349e5cb738bc8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5de2b67a61592a4d5428e2dfc2436a22 = $(`<div id="html_5de2b67a61592a4d5428e2dfc2436a22" style="width: 100.0%; height: 100.0%;">Critical Point Shynzhaly: Risk 0.86</div>`)[0];
+                popup_932338b56aece1a243f349e5cb738bc8.setContent(html_5de2b67a61592a4d5428e2dfc2436a22);
+            
+        
+
+        circle_marker_9292b8ad9a98c9de754f2f2c8b1a8d57.bindPopup(popup_932338b56aece1a243f349e5cb738bc8)
+        ;
+
+        
+    
+    
+            var poly_line_e478fa3b650b70ca8ea44fedf4e064fe = L.polyline(
+                [[43.59293238887832, 65.2163928740913], [43.58981342408044, 65.2062671169305], [43.59087064932826, 65.2049543751327], [43.591243203010315, 65.1855896354702], [43.59118058965774, 65.18061625779507], [43.59774143850084, 65.16553494612731], [43.587862614201995, 65.17318947081172], [43.589164497525346, 65.1768846833437], [43.59797041264072, 65.19163614341352], [43.59833798218864, 65.21031907471166], [43.59627752987106, 65.22118333781403], [43.58649613283245, 65.22776494683058], [43.58045842042577, 65.2337119082077], [43.57249435570939, 65.2334197466978], [43.56393648003517, 65.22990581985671], [43.55526477470638, 65.2150984211756], [43.549289695042965, 65.21088444610756], [43.55840168423137, 65.20677920074723], [43.559644094513, 65.19752279592856], [43.55664332897422, 65.18112641316283]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_06882e70fedc72fbf992935a560f7854);
+        
+    
+            poly_line_e478fa3b650b70ca8ea44fedf4e064fe.bindTooltip(
+                `<div>
+                     River: Shyzhyn | Avg Flood Prob: 0.33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6c6a4c9c36342db51b111335e4cb5d8 = L.circleMarker(
+                [43.59118058965774, 65.18061625779507],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_06882e70fedc72fbf992935a560f7854);
+        
+    
+        var popup_8a9d9afc620b4a3e3c9eba75b743edf4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_052acabfe3c149ddc97ba7df9dd83326 = $(`<div id="html_052acabfe3c149ddc97ba7df9dd83326" style="width: 100.0%; height: 100.0%;">Critical Point Shyzhyn: Risk 0.42</div>`)[0];
+                popup_8a9d9afc620b4a3e3c9eba75b743edf4.setContent(html_052acabfe3c149ddc97ba7df9dd83326);
+            
+        
+
+        circle_marker_a6c6a4c9c36342db51b111335e4cb5d8.bindPopup(popup_8a9d9afc620b4a3e3c9eba75b743edf4)
+        ;
+
+        
+    
+</script>
+</html>

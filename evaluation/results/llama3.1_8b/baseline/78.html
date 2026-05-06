@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_51113613be3532ab60257957cf06a6e4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_51113613be3532ab60257957cf06a6e4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_51113613be3532ab60257957cf06a6e4 = L.map(
+                "map_51113613be3532ab60257957cf06a6e4",
+                {
+                    center: [46.5, 32.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eb7e54360b51f0bd6050a24e7fa897db = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eb7e54360b51f0bd6050a24e7fa897db.addTo(map_51113613be3532ab60257957cf06a6e4);
+        
+    
+            var marker_69272db0ab2b727646747b45dc4936fe = L.marker(
+                [45.1234, 30.9876],
+                {
+}
+            ).addTo(map_51113613be3532ab60257957cf06a6e4);
+        
+    
+        var popup_6a4136f0a069ce1c47c96146bb6e7ccc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06742b570a0a43a12c8afe64f25c8ad3 = $(`<div id="html_06742b570a0a43a12c8afe64f25c8ad3" style="width: 100.0%; height: 100.0%;">Пост Post 1: Вероятность наводнения - 20.0%</div>`)[0];
+                popup_6a4136f0a069ce1c47c96146bb6e7ccc.setContent(html_06742b570a0a43a12c8afe64f25c8ad3);
+            
+        
+
+        marker_69272db0ab2b727646747b45dc4936fe.bindPopup(popup_6a4136f0a069ce1c47c96146bb6e7ccc)
+        ;
+
+        
+    
+    
+            var marker_b6d4ea45de37e7091270b9e096ba8999 = L.marker(
+                [46.5678, 32.3456],
+                {
+}
+            ).addTo(map_51113613be3532ab60257957cf06a6e4);
+        
+    
+        var popup_72cc19392d8716e4d07ad00337360522 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59d464e489030c392ea5363daaab3508 = $(`<div id="html_59d464e489030c392ea5363daaab3508" style="width: 100.0%; height: 100.0%;">Пост Post 2: Вероятность наводнения - 50.0%</div>`)[0];
+                popup_72cc19392d8716e4d07ad00337360522.setContent(html_59d464e489030c392ea5363daaab3508);
+            
+        
+
+        marker_b6d4ea45de37e7091270b9e096ba8999.bindPopup(popup_72cc19392d8716e4d07ad00337360522)
+        ;
+
+        
+    
+    
+            var marker_2edc0510649ff648954153426e3e28a0 = L.marker(
+                [47.9012, 33.6789],
+                {
+}
+            ).addTo(map_51113613be3532ab60257957cf06a6e4);
+        
+    
+        var popup_1f8bff4f04dc3a5fd494740ce1eee264 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22d4d370c08f9457c997ca0c7f02177b = $(`<div id="html_22d4d370c08f9457c997ca0c7f02177b" style="width: 100.0%; height: 100.0%;">Пост Post 3: Вероятность наводнения - 80.0%</div>`)[0];
+                popup_1f8bff4f04dc3a5fd494740ce1eee264.setContent(html_22d4d370c08f9457c997ca0c7f02177b);
+            
+        
+
+        marker_2edc0510649ff648954153426e3e28a0.bindPopup(popup_1f8bff4f04dc3a5fd494740ce1eee264)
+        ;
+
+        
+    
+    
+            var heat_map_c2658e48e91ffa3720e19e4dac40b3e5 = L.heatLayer(
+                [[45.1234, 30.9876], [46.5678, 32.3456], [47.9012, 33.6789]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 10,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_c2658e48e91ffa3720e19e4dac40b3e5.addTo(map_51113613be3532ab60257957cf06a6e4);
+        
+</script>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fd8262a5030bb8371aba3a70e60fdc30 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fd8262a5030bb8371aba3a70e60fdc30" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fd8262a5030bb8371aba3a70e60fdc30 = L.map(
+                "map_fd8262a5030bb8371aba3a70e60fdc30",
+                {
+                    center: [48.3, 85.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_71e357c2073fb670f8652141366d51ab = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_71e357c2073fb670f8652141366d51ab.addTo(map_fd8262a5030bb8371aba3a70e60fdc30);
+        
+    
+            var marker_2441ec978ce293ba585e393324fa4dad = L.marker(
+                [48.5, 84.5],
+                {
+}
+            ).addTo(map_fd8262a5030bb8371aba3a70e60fdc30);
+        
+    
+            var icon_d06e5e8a56b5333ea5d8b44aa8b281aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c760bc4bc3bcac8fa5d9ec29e93e269b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e39331df658fcf3e480bd36d1fcbbad4 = $(`<div id="html_e39331df658fcf3e480bd36d1fcbbad4" style="width: 100.0%; height: 100.0%;">Lepsy River Площадь бассейна: 12000 км2</div>`)[0];
+                popup_c760bc4bc3bcac8fa5d9ec29e93e269b.setContent(html_e39331df658fcf3e480bd36d1fcbbad4);
+            
+        
+
+        marker_2441ec978ce293ba585e393324fa4dad.bindPopup(popup_c760bc4bc3bcac8fa5d9ec29e93e269b)
+        ;
+
+        
+    
+    
+                marker_2441ec978ce293ba585e393324fa4dad.setIcon(icon_d06e5e8a56b5333ea5d8b44aa8b281aa);
+            
+    
+            var circle_841231e2c4533439fba5c0229aa70806 = L.circle(
+                [48.5, 84.5],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 120000, "stroke": true, "weight": 3}
+            ).addTo(map_fd8262a5030bb8371aba3a70e60fdc30);
+        
+    
+        var popup_ed2d6b5e90227e0a6f2aaf85847142a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49b11e4cc1f26725ec16ad45e6486bf2 = $(`<div id="html_49b11e4cc1f26725ec16ad45e6486bf2" style="width: 100.0%; height: 100.0%;">Бассейн Lepsy River</div>`)[0];
+                popup_ed2d6b5e90227e0a6f2aaf85847142a0.setContent(html_49b11e4cc1f26725ec16ad45e6486bf2);
+            
+        
+
+        circle_841231e2c4533439fba5c0229aa70806.bindPopup(popup_ed2d6b5e90227e0a6f2aaf85847142a0)
+        ;
+
+        
+    
+    
+            var marker_6195bb89bac4dcaedbc6ae712dec6b8e = L.marker(
+                [48.2, 86.0],
+                {
+}
+            ).addTo(map_fd8262a5030bb8371aba3a70e60fdc30);
+        
+    
+            var icon_1cc40b42167ffdb208149f10950dab68 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_341cfd0cc40ca7df08668eebe67df1bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b14a12c1b884736a840d059aca31eb14 = $(`<div id="html_b14a12c1b884736a840d059aca31eb14" style="width: 100.0%; height: 100.0%;">Shilik River Площадь бассейна: 15000 км2</div>`)[0];
+                popup_341cfd0cc40ca7df08668eebe67df1bc.setContent(html_b14a12c1b884736a840d059aca31eb14);
+            
+        
+
+        marker_6195bb89bac4dcaedbc6ae712dec6b8e.bindPopup(popup_341cfd0cc40ca7df08668eebe67df1bc)
+        ;
+
+        
+    
+    
+                marker_6195bb89bac4dcaedbc6ae712dec6b8e.setIcon(icon_1cc40b42167ffdb208149f10950dab68);
+            
+    
+            var circle_1b7dde4f1f85e6c26b85656c60546486 = L.circle(
+                [48.2, 86.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 150000, "stroke": true, "weight": 3}
+            ).addTo(map_fd8262a5030bb8371aba3a70e60fdc30);
+        
+    
+        var popup_d36c8699ffc9be7f05fe67ba8daf0639 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f850c43df5599a71683cebbbfa995c94 = $(`<div id="html_f850c43df5599a71683cebbbfa995c94" style="width: 100.0%; height: 100.0%;">Бассейн Shilik River</div>`)[0];
+                popup_d36c8699ffc9be7f05fe67ba8daf0639.setContent(html_f850c43df5599a71683cebbbfa995c94);
+            
+        
+
+        circle_1b7dde4f1f85e6c26b85656c60546486.bindPopup(popup_d36c8699ffc9be7f05fe67ba8daf0639)
+        ;
+
+        
+    
+</script>
+</html>

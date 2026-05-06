@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_462146d2fa0cdc0a89a94c31683b0b14 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_462146d2fa0cdc0a89a94c31683b0b14" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_462146d2fa0cdc0a89a94c31683b0b14 = L.map(
+                "map_462146d2fa0cdc0a89a94c31683b0b14",
+                {
+                    center: [43.32, 79.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8893d32fac32975f8199385a56468b7f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8893d32fac32975f8199385a56468b7f.addTo(map_462146d2fa0cdc0a89a94c31683b0b14);
+        
+    
+            var poly_line_3368541770685503f4258bd78730bdbf = L.polyline(
+                [[43.2, 78.5], [43.25, 78.7], [43.3, 78.9], [43.35, 79.1], [43.4, 79.3], [43.45, 79.5]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_462146d2fa0cdc0a89a94c31683b0b14);
+        
+    
+            poly_line_3368541770685503f4258bd78730bdbf.bindTooltip(
+                `<div>
+                     Karatal River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86e7edf7152fa81393c35740604deec6 = L.circleMarker(
+                [43.22, 78.55],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_462146d2fa0cdc0a89a94c31683b0b14);
+        
+    
+        var popup_49b3ec50de9d4a43ee598a6a5d86ce04 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_14c8868a210bd2f1e2fb47d3a9c4f70f = $(`<div id="html_14c8868a210bd2f1e2fb47d3a9c4f70f" style="width: 100.0%; height: 100.0%;"><b>Village:</b> Village A<br><b>Distance to River:</b> 4.63 km<br><b>Historical Recipe:</b> Полба, речная вода, дикие травы<br><b>Modern Recipe:</b> Пшеничная мука в/с, дрожжи, сахар<br><b>Influence:</b> High</div>`)[0];
+                popup_49b3ec50de9d4a43ee598a6a5d86ce04.setContent(html_14c8868a210bd2f1e2fb47d3a9c4f70f);
+            
+        
+
+        circle_marker_86e7edf7152fa81393c35740604deec6.bindPopup(popup_49b3ec50de9d4a43ee598a6a5d86ce04)
+        ;
+
+        
+    
+    
+            var circle_marker_28be54bc1eb267abe53833706bba2970 = L.circleMarker(
+                [43.28, 78.85],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_462146d2fa0cdc0a89a94c31683b0b14);
+        
+    
+        var popup_4687a9cb037098eb09dac2ee663cc885 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_317645d7a46c5539be957a2b4473dfc8 = $(`<div id="html_317645d7a46c5539be957a2b4473dfc8" style="width: 100.0%; height: 100.0%;"><b>Village:</b> Village B<br><b>Distance to River:</b> 4.63 km<br><b>Historical Recipe:</b> Пшеница (местная), мед, соль<br><b>Modern Recipe:</b> Пшеничная мука, дрожжи, соль<br><b>Influence:</b> High</div>`)[0];
+                popup_4687a9cb037098eb09dac2ee663cc885.setContent(html_317645d7a46c5539be957a2b4473dfc8);
+            
+        
+
+        circle_marker_28be54bc1eb267abe53833706bba2970.bindPopup(popup_4687a9cb037098eb09dac2ee663cc885)
+        ;
+
+        
+    
+    
+            var circle_marker_ffc21b65cdcaaa646a5c84ae31c1f7e3 = L.circleMarker(
+                [43.32, 79.05],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_462146d2fa0cdc0a89a94c31683b0b14);
+        
+    
+        var popup_933079c1e198253a9c91007baf48df26 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0eb76242b2cf6c8f8f78f61c14871398 = $(`<div id="html_0eb76242b2cf6c8f8f78f61c14871398" style="width: 100.0%; height: 100.0%;"><b>Village:</b> Village C<br><b>Distance to River:</b> 5.25 km<br><b>Historical Recipe:</b> Ячмень, вода, семена льна<br><b>Modern Recipe:</b> Пшеничная мука, маргарин, сахар<br><b>Influence:</b> High</div>`)[0];
+                popup_933079c1e198253a9c91007baf48df26.setContent(html_0eb76242b2cf6c8f8f78f61c14871398);
+            
+        
+
+        circle_marker_ffc21b65cdcaaa646a5c84ae31c1f7e3.bindPopup(popup_933079c1e198253a9c91007baf48df26)
+        ;
+
+        
+    
+    
+            var circle_marker_acd25c0a22b2fc9b5588030ea9e03f94 = L.circleMarker(
+                [43.42, 79.25],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_462146d2fa0cdc0a89a94c31683b0b14);
+        
+    
+        var popup_991cd198ee0d62f13945dbca83713767 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10a85210f6bb89205c31761c809191ba = $(`<div id="html_10a85210f6bb89205c31761c809191ba" style="width: 100.0%; height: 100.0%;"><b>Village:</b> Village D<br><b>Distance to River:</b> 4.62 km<br><b>Historical Recipe:</b> Пшеница, закваска, местный жир<br><b>Modern Recipe:</b> Пшеничная мука, дрожжи, соль<br><b>Influence:</b> High</div>`)[0];
+                popup_991cd198ee0d62f13945dbca83713767.setContent(html_10a85210f6bb89205c31761c809191ba);
+            
+        
+
+        circle_marker_acd25c0a22b2fc9b5588030ea9e03f94.bindPopup(popup_991cd198ee0d62f13945dbca83713767)
+        ;
+
+        
+    
+    
+            var circle_marker_bfb19e25f08ccfc03ac8a058ee422252 = L.circleMarker(
+                [43.48, 79.6],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_462146d2fa0cdc0a89a94c31683b0b14);
+        
+    
+        var popup_666d16a815a3fab28be5968b1dc6b62a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_888bbd2f3b7a7e0341f08e06f72b7981 = $(`<div id="html_888bbd2f3b7a7e0341f08e06f72b7981" style="width: 100.0%; height: 100.0%;"><b>Village:</b> Village E<br><b>Distance to River:</b> 8.75 km<br><b>Historical Recipe:</b> Просо, вода, коренья<br><b>Modern Recipe:</b> Пшеничная мука, сахар, дрожжи<br><b>Influence:</b> High</div>`)[0];
+                popup_666d16a815a3fab28be5968b1dc6b62a.setContent(html_888bbd2f3b7a7e0341f08e06f72b7981);
+            
+        
+
+        circle_marker_bfb19e25f08ccfc03ac8a058ee422252.bindPopup(popup_666d16a815a3fab28be5968b1dc6b62a)
+        ;
+
+        
+    
+</script>
+</html>

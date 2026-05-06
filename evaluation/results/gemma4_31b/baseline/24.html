@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5badbd4bc6b8acb2ec3d33a2bef7c6fd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 160px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.8; padding: 10px;">
+     <b>Уровень паводка:</b><br>
+     <i style="background:green; width:10px; height:10px; display:inline-block"></i> Низкий<br>
+     <i style="background:yellow; width:10px; height:10px; display:inline-block"></i> Средний<br>
+     <i style="background:orange; width:10px; height:10px; display:inline-block"></i> Высокий<br>
+     <i style="background:red; width:10px; height:10px; display:inline-block"></i> Критический
+     </div>
+     
+    
+            <div class="folium-map" id="map_5badbd4bc6b8acb2ec3d33a2bef7c6fd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5badbd4bc6b8acb2ec3d33a2bef7c6fd = L.map(
+                "map_5badbd4bc6b8acb2ec3d33a2bef7c6fd",
+                {
+                    center: [43.19, 76.89],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0d43d104f28527cee07ede5ee5da889e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0d43d104f28527cee07ede5ee5da889e.addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+            var poly_line_8078d6a27f2b48bd6b88541fbe4cbb0d = L.polyline(
+                [[43.14, 76.84], [43.15, 76.85], [43.16, 76.86], [43.17, 76.87], [43.18, 76.88], [43.19, 76.89], [43.2, 76.9], [43.21, 76.91], [43.22, 76.92], [43.23, 76.93], [43.24, 76.94]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+            poly_line_8078d6a27f2b48bd6b88541fbe4cbb0d.bindTooltip(
+                `<div>
+                     Русло реки Большая Алматинка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d9c25b1ae2bf51f23e54a7f6064f0c3 = L.circleMarker(
+                [43.15, 76.85],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.300000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_083919f287170e49fc8838f4c432f41f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_331e4037867a53806057e9e99abe62a9 = $(`<div id="html_331e4037867a53806057e9e99abe62a9" style="width: 100.0%; height: 100.0%;">Год: 2015<br>Уровень: 2.1м<br>Статус: Low</div>`)[0];
+                popup_083919f287170e49fc8838f4c432f41f.setContent(html_331e4037867a53806057e9e99abe62a9);
+            
+        
+
+        circle_marker_9d9c25b1ae2bf51f23e54a7f6064f0c3.bindPopup(popup_083919f287170e49fc8838f4c432f41f)
+        ;
+
+        
+    
+    
+            circle_marker_9d9c25b1ae2bf51f23e54a7f6064f0c3.bindTooltip(
+                `<div>
+                     Паводок 2015 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81044c0ab6ab5c08620eab6a21e9c3bb = L.circleMarker(
+                [43.16, 76.86],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_18c173625d04c2eb03c8a2b6e8fa3710 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd575961cd76fcf9506d4136e1492518 = $(`<div id="html_cd575961cd76fcf9506d4136e1492518" style="width: 100.0%; height: 100.0%;">Год: 2016<br>Уровень: 2.5м<br>Статус: Medium</div>`)[0];
+                popup_18c173625d04c2eb03c8a2b6e8fa3710.setContent(html_cd575961cd76fcf9506d4136e1492518);
+            
+        
+
+        circle_marker_81044c0ab6ab5c08620eab6a21e9c3bb.bindPopup(popup_18c173625d04c2eb03c8a2b6e8fa3710)
+        ;
+
+        
+    
+    
+            circle_marker_81044c0ab6ab5c08620eab6a21e9c3bb.bindTooltip(
+                `<div>
+                     Паводок 2016 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96430d8d93e72279a210e56f7cf9c432 = L.circleMarker(
+                [43.17, 76.87],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.4, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_8eb4191f144e0a7a40b9547826157b62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_170b9b8b0fb8b4607d3b7f699a9b3b8a = $(`<div id="html_170b9b8b0fb8b4607d3b7f699a9b3b8a" style="width: 100.0%; height: 100.0%;">Год: 2017<br>Уровень: 1.8м<br>Статус: Low</div>`)[0];
+                popup_8eb4191f144e0a7a40b9547826157b62.setContent(html_170b9b8b0fb8b4607d3b7f699a9b3b8a);
+            
+        
+
+        circle_marker_96430d8d93e72279a210e56f7cf9c432.bindPopup(popup_8eb4191f144e0a7a40b9547826157b62)
+        ;
+
+        
+    
+    
+            circle_marker_96430d8d93e72279a210e56f7cf9c432.bindTooltip(
+                `<div>
+                     Паводок 2017 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e88b72d727d9aad197d6ac736363869d = L.circleMarker(
+                [43.18, 76.88],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.600000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_440a8b6ee796f6b05470ded9914e3e38 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d35fcb452fe2e152c375787170098c55 = $(`<div id="html_d35fcb452fe2e152c375787170098c55" style="width: 100.0%; height: 100.0%;">Год: 2018<br>Уровень: 3.2м<br>Статус: High</div>`)[0];
+                popup_440a8b6ee796f6b05470ded9914e3e38.setContent(html_d35fcb452fe2e152c375787170098c55);
+            
+        
+
+        circle_marker_e88b72d727d9aad197d6ac736363869d.bindPopup(popup_440a8b6ee796f6b05470ded9914e3e38)
+        ;
+
+        
+    
+    
+            circle_marker_e88b72d727d9aad197d6ac736363869d.bindTooltip(
+                `<div>
+                     Паводок 2018 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6f88a9ea7bacbb3831c7aed23c42dd2 = L.circleMarker(
+                [43.19, 76.89],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_edd1e73ad11c0297eebb586cfc1021dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1a70c6302cc7e54e098b9b2412d19bc = $(`<div id="html_f1a70c6302cc7e54e098b9b2412d19bc" style="width: 100.0%; height: 100.0%;">Год: 2019<br>Уровень: 2.0м<br>Статус: Low</div>`)[0];
+                popup_edd1e73ad11c0297eebb586cfc1021dc.setContent(html_f1a70c6302cc7e54e098b9b2412d19bc);
+            
+        
+
+        circle_marker_a6f88a9ea7bacbb3831c7aed23c42dd2.bindPopup(popup_edd1e73ad11c0297eebb586cfc1021dc)
+        ;
+
+        
+    
+    
+            circle_marker_a6f88a9ea7bacbb3831c7aed23c42dd2.bindTooltip(
+                `<div>
+                     Паводок 2019 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f96c9ef222c1572235ea20e3cf43c64 = L.circleMarker(
+                [43.2, 76.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.399999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_f61781c84330dbd342a4679c220cbfd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63006e280c83ac50ebeb0c61192cfde7 = $(`<div id="html_63006e280c83ac50ebeb0c61192cfde7" style="width: 100.0%; height: 100.0%;">Год: 2020<br>Уровень: 3.8м<br>Статус: Critical</div>`)[0];
+                popup_f61781c84330dbd342a4679c220cbfd7.setContent(html_63006e280c83ac50ebeb0c61192cfde7);
+            
+        
+
+        circle_marker_2f96c9ef222c1572235ea20e3cf43c64.bindPopup(popup_f61781c84330dbd342a4679c220cbfd7)
+        ;
+
+        
+    
+    
+            circle_marker_2f96c9ef222c1572235ea20e3cf43c64.bindTooltip(
+                `<div>
+                     Паводок 2020 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68e2e87206c8234c22b259752f517323 = L.circleMarker(
+                [43.21, 76.91],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.199999999999999, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_7159a083a65bf01cb1d7f0a3baee1722 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dea3174bb7f39aad86067e5a5ed2897e = $(`<div id="html_dea3174bb7f39aad86067e5a5ed2897e" style="width: 100.0%; height: 100.0%;">Год: 2021<br>Уровень: 2.4м<br>Статус: Medium</div>`)[0];
+                popup_7159a083a65bf01cb1d7f0a3baee1722.setContent(html_dea3174bb7f39aad86067e5a5ed2897e);
+            
+        
+
+        circle_marker_68e2e87206c8234c22b259752f517323.bindPopup(popup_7159a083a65bf01cb1d7f0a3baee1722)
+        ;
+
+        
+    
+    
+            circle_marker_68e2e87206c8234c22b259752f517323.bindTooltip(
+                `<div>
+                     Паводок 2021 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_018dcf8a7d5cb1b0972033b4c1ba5532 = L.circleMarker(
+                [43.22, 76.92],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_203c7f6218dc3e15a1fae1ddd176f779 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8a7d97ee35b371a4e6cce070951d6a1 = $(`<div id="html_c8a7d97ee35b371a4e6cce070951d6a1" style="width: 100.0%; height: 100.0%;">Год: 2022<br>Уровень: 2.9м<br>Статус: High</div>`)[0];
+                popup_203c7f6218dc3e15a1fae1ddd176f779.setContent(html_c8a7d97ee35b371a4e6cce070951d6a1);
+            
+        
+
+        circle_marker_018dcf8a7d5cb1b0972033b4c1ba5532.bindPopup(popup_203c7f6218dc3e15a1fae1ddd176f779)
+        ;
+
+        
+    
+    
+            circle_marker_018dcf8a7d5cb1b0972033b4c1ba5532.bindTooltip(
+                `<div>
+                     Паводок 2022 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b09e184dbecd43cad05478bc347d8b59 = L.circleMarker(
+                [43.23, 76.93],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.3, "stroke": true, "weight": 3}
+            ).addTo(map_5badbd4bc6b8acb2ec3d33a2bef7c6fd);
+        
+    
+        var popup_6a3e428059e35e1fd9425d0bb16172ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42e5af46d6623a0eabdae2de10eb1bb2 = $(`<div id="html_42e5af46d6623a0eabdae2de10eb1bb2" style="width: 100.0%; height: 100.0%;">Год: 2023<br>Уровень: 3.1м<br>Статус: High</div>`)[0];
+                popup_6a3e428059e35e1fd9425d0bb16172ae.setContent(html_42e5af46d6623a0eabdae2de10eb1bb2);
+            
+        
+
+        circle_marker_b09e184dbecd43cad05478bc347d8b59.bindPopup(popup_6a3e428059e35e1fd9425d0bb16172ae)
+        ;
+
+        
+    
+    
+            circle_marker_b09e184dbecd43cad05478bc347d8b59.bindTooltip(
+                `<div>
+                     Паводок 2023 г.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

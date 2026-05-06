@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d2e694289d77dffef6eac22aefb67f04 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d2e694289d77dffef6eac22aefb67f04" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d2e694289d77dffef6eac22aefb67f04 = L.map(
+                "map_d2e694289d77dffef6eac22aefb67f04",
+                {
+                    center: [42.86, 78.32],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a3d952e4ee487c5323fdf7e01ce360be = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a3d952e4ee487c5323fdf7e01ce360be.addTo(map_d2e694289d77dffef6eac22aefb67f04);
+        
+    
+            var marker_556078b99b97184f21f91413e583ac97 = L.marker(
+                [42.85, 78.3],
+                {
+}
+            ).addTo(map_d2e694289d77dffef6eac22aefb67f04);
+        
+    
+            var icon_3927f290b072fc7a983780449046f3b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d8c09af01c05e9db9a0b7b7d0b3628f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba39ef5786b8db4e3cb7e73f2b9d97b5 = $(`<div id="html_ba39ef5786b8db4e3cb7e73f2b9d97b5" style="width: 100.0%; height: 100.0%;">Высота: 1500.0 м Расход воды (весна): 22.0 куб.м/с</div>`)[0];
+                popup_8d8c09af01c05e9db9a0b7b7d0b3628f.setContent(html_ba39ef5786b8db4e3cb7e73f2b9d97b5);
+            
+        
+
+        marker_556078b99b97184f21f91413e583ac97.bindPopup(popup_8d8c09af01c05e9db9a0b7b7d0b3628f)
+        ;
+
+        
+    
+    
+                marker_556078b99b97184f21f91413e583ac97.setIcon(icon_3927f290b072fc7a983780449046f3b7);
+            
+    
+            var marker_269e83ced78367b396ee47d99fa03abb = L.marker(
+                [42.86, 78.31],
+                {
+}
+            ).addTo(map_d2e694289d77dffef6eac22aefb67f04);
+        
+    
+            var icon_1d467f27b9c048031d7c0fb4871ad2fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25ccbba226eb351c0de005e57a0f3e21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68a82daf2c8e59ecbc7958a37ee62a84 = $(`<div id="html_68a82daf2c8e59ecbc7958a37ee62a84" style="width: 100.0%; height: 100.0%;">Высота: 1600.0 м Расход воды (весна): 27.500000000000004 куб.м/с</div>`)[0];
+                popup_25ccbba226eb351c0de005e57a0f3e21.setContent(html_68a82daf2c8e59ecbc7958a37ee62a84);
+            
+        
+
+        marker_269e83ced78367b396ee47d99fa03abb.bindPopup(popup_25ccbba226eb351c0de005e57a0f3e21)
+        ;
+
+        
+    
+    
+                marker_269e83ced78367b396ee47d99fa03abb.setIcon(icon_1d467f27b9c048031d7c0fb4871ad2fa);
+            
+    
+            var marker_395f50ad9a21814d297138555c1a5570 = L.marker(
+                [42.87, 78.32],
+                {
+}
+            ).addTo(map_d2e694289d77dffef6eac22aefb67f04);
+        
+    
+            var icon_4a75a03d9a3f06ae66c2bf007ddab832 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c8cd47d0c1964cc1750cd6b90068d5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65c23d3bdb0175df3296fea45bbe7b81 = $(`<div id="html_65c23d3bdb0175df3296fea45bbe7b81" style="width: 100.0%; height: 100.0%;">Высота: 1700.0 м Расход воды (весна): 33.0 куб.м/с</div>`)[0];
+                popup_7c8cd47d0c1964cc1750cd6b90068d5e.setContent(html_65c23d3bdb0175df3296fea45bbe7b81);
+            
+        
+
+        marker_395f50ad9a21814d297138555c1a5570.bindPopup(popup_7c8cd47d0c1964cc1750cd6b90068d5e)
+        ;
+
+        
+    
+    
+                marker_395f50ad9a21814d297138555c1a5570.setIcon(icon_4a75a03d9a3f06ae66c2bf007ddab832);
+            
+    
+            var marker_b8abb0d8696897e6ebc00fb22007fde0 = L.marker(
+                [42.88, 78.33],
+                {
+}
+            ).addTo(map_d2e694289d77dffef6eac22aefb67f04);
+        
+    
+            var icon_ba313ee0bbe40728795f3127ab03d869 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb40a62b3fc574666822e52b2cccf540 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8257383e948ed77aca94337d0af1f243 = $(`<div id="html_8257383e948ed77aca94337d0af1f243" style="width: 100.0%; height: 100.0%;">Высота: 1800.0 м Расход воды (весна): 44.0 куб.м/с</div>`)[0];
+                popup_cb40a62b3fc574666822e52b2cccf540.setContent(html_8257383e948ed77aca94337d0af1f243);
+            
+        
+
+        marker_b8abb0d8696897e6ebc00fb22007fde0.bindPopup(popup_cb40a62b3fc574666822e52b2cccf540)
+        ;
+
+        
+    
+    
+                marker_b8abb0d8696897e6ebc00fb22007fde0.setIcon(icon_ba313ee0bbe40728795f3127ab03d869);
+            
+    
+            var marker_d0d6d653b5e638e951b7db53a193b6d5 = L.marker(
+                [42.89, 78.34],
+                {
+}
+            ).addTo(map_d2e694289d77dffef6eac22aefb67f04);
+        
+    
+            var icon_9a51284d139839cc9e24eb3f9752455d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03f0fb59ee0ca50343187f29bbd9f14d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82b1d0b2e91e73763de75877b6023d38 = $(`<div id="html_82b1d0b2e91e73763de75877b6023d38" style="width: 100.0%; height: 100.0%;">Высота: 1900.0 м Расход воды (весна): 55.00000000000001 куб.м/с</div>`)[0];
+                popup_03f0fb59ee0ca50343187f29bbd9f14d.setContent(html_82b1d0b2e91e73763de75877b6023d38);
+            
+        
+
+        marker_d0d6d653b5e638e951b7db53a193b6d5.bindPopup(popup_03f0fb59ee0ca50343187f29bbd9f14d)
+        ;
+
+        
+    
+    
+                marker_d0d6d653b5e638e951b7db53a193b6d5.setIcon(icon_9a51284d139839cc9e24eb3f9752455d);
+            
+</script>
+</html>

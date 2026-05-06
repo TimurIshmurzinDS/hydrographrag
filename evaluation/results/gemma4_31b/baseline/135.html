@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_873018a79d51e3fe086f0aa15d15c0fd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_873018a79d51e3fe086f0aa15d15c0fd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_873018a79d51e3fe086f0aa15d15c0fd = L.map(
+                "map_873018a79d51e3fe086f0aa15d15c0fd",
+                {
+                    center: [44.1, 79.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3faf6d6bb2b917d33591f61996995898 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3faf6d6bb2b917d33591f61996995898.addTo(map_873018a79d51e3fe086f0aa15d15c0fd);
+        
+    
+            var circle_marker_f2084f5a920d513f11350ac0b6ba1b69 = L.circleMarker(
+                [44.5, 78.5],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_873018a79d51e3fe086f0aa15d15c0fd);
+        
+    
+        var popup_0b41ba3a51f4f1586fcddebaa2b9cfa8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1a9913cccc65571a1764db3dfad46bb = $(`<div id="html_b1a9913cccc65571a1764db3dfad46bb" style="width: 100.0%; height: 100.0%;"><b>Shilik River</b><br>Drought Years: 4</div>`)[0];
+                popup_0b41ba3a51f4f1586fcddebaa2b9cfa8.setContent(html_b1a9913cccc65571a1764db3dfad46bb);
+            
+        
+
+        circle_marker_f2084f5a920d513f11350ac0b6ba1b69.bindPopup(popup_0b41ba3a51f4f1586fcddebaa2b9cfa8)
+        ;
+
+        
+    
+    
+            var marker_49caf8e7206a56e44a6f791c99746ff1 = L.marker(
+                [44.5, 78.5],
+                {
+}
+            ).addTo(map_873018a79d51e3fe086f0aa15d15c0fd);
+        
+    
+            var div_icon_3ca1a50aabd7a5753c6d44b02e60311f = L.divIcon({
+  "html": "\u003cdiv style=\"font-family: Arial; color: black; font-weight: bold;\"\u003eShilik River\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_49caf8e7206a56e44a6f791c99746ff1.setIcon(div_icon_3ca1a50aabd7a5753c6d44b02e60311f);
+            
+    
+            var circle_marker_e973211a7744bc871f670396a43fc393 = L.circleMarker(
+                [43.8, 80.2],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_873018a79d51e3fe086f0aa15d15c0fd);
+        
+    
+        var popup_79e4f12430e93b53bc16883f082ffc7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd14f369617b90a67af0d34c9fb45dbe = $(`<div id="html_dd14f369617b90a67af0d34c9fb45dbe" style="width: 100.0%; height: 100.0%;"><b>Sharyn River</b><br>Drought Years: 4</div>`)[0];
+                popup_79e4f12430e93b53bc16883f082ffc7b.setContent(html_dd14f369617b90a67af0d34c9fb45dbe);
+            
+        
+
+        circle_marker_e973211a7744bc871f670396a43fc393.bindPopup(popup_79e4f12430e93b53bc16883f082ffc7b)
+        ;
+
+        
+    
+    
+            var marker_0ec6ad1a3a7817b964313b7806155a38 = L.marker(
+                [43.8, 80.2],
+                {
+}
+            ).addTo(map_873018a79d51e3fe086f0aa15d15c0fd);
+        
+    
+            var div_icon_7fba9734051e60eb265c4964f7113542 = L.divIcon({
+  "html": "\u003cdiv style=\"font-family: Arial; color: black; font-weight: bold;\"\u003eSharyn River\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_0ec6ad1a3a7817b964313b7806155a38.setIcon(div_icon_7fba9734051e60eb265c4964f7113542);
+            
+</script>
+</html>

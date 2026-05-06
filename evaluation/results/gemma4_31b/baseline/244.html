@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_288264ea8ebd6a777d368aacaf8679d7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_288264ea8ebd6a777d368aacaf8679d7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_288264ea8ebd6a777d368aacaf8679d7 = L.map(
+                "map_288264ea8ebd6a777d368aacaf8679d7",
+                {
+                    center: [52.3, 69.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e4a00eb76a845094f0dc6bb2bf94b973 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e4a00eb76a845094f0dc6bb2bf94b973.addTo(map_288264ea8ebd6a777d368aacaf8679d7);
+        
+    
+            var poly_line_11f460196d9557d9cb932ffda341d65b = L.polyline(
+                [[68.5, 52.1], [68.6, 52.2], [68.8, 52.1], [68.9, 52.3], [69.1, 52.2], [69.2, 52.4], [69.4, 52.3], [69.5, 52.5], [69.7, 52.4], [69.8, 52.6], [70.0, 52.5]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_288264ea8ebd6a777d368aacaf8679d7);
+        
+    
+            poly_line_11f460196d9557d9cb932ffda341d65b.bindTooltip(
+                `<div>
+                     Русло реки Дос
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_96510fc95b035c94f653fe859e44899b = L.marker(
+                [68.5, 52.1],
+                {
+}
+            ).addTo(map_288264ea8ebd6a777d368aacaf8679d7);
+        
+    
+            var icon_68fd9502785b97c00730299b99f037b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6eb71a5536b174ba900c78e22dd565e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa05e85911174741203b2fc076d79077 = $(`<div id="html_aa05e85911174741203b2fc076d79077" style="width: 100.0%; height: 100.0%;">Исток</div>`)[0];
+                popup_6eb71a5536b174ba900c78e22dd565e1.setContent(html_aa05e85911174741203b2fc076d79077);
+            
+        
+
+        marker_96510fc95b035c94f653fe859e44899b.bindPopup(popup_6eb71a5536b174ba900c78e22dd565e1)
+        ;
+
+        
+    
+    
+                marker_96510fc95b035c94f653fe859e44899b.setIcon(icon_68fd9502785b97c00730299b99f037b5);
+            
+    
+            var marker_9e112ee67dda7a85c4b16dc4abd340a8 = L.marker(
+                [70.0, 52.5],
+                {
+}
+            ).addTo(map_288264ea8ebd6a777d368aacaf8679d7);
+        
+    
+            var icon_363185cbeb4b3c479c4d38adcbb55bf6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_613999ca3aebc776d5a7e28854607d26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ac6aa59a156d9bf13e0b8520050bf80 = $(`<div id="html_3ac6aa59a156d9bf13e0b8520050bf80" style="width: 100.0%; height: 100.0%;">Устье</div>`)[0];
+                popup_613999ca3aebc776d5a7e28854607d26.setContent(html_3ac6aa59a156d9bf13e0b8520050bf80);
+            
+        
+
+        marker_9e112ee67dda7a85c4b16dc4abd340a8.bindPopup(popup_613999ca3aebc776d5a7e28854607d26)
+        ;
+
+        
+    
+    
+                marker_9e112ee67dda7a85c4b16dc4abd340a8.setIcon(icon_363185cbeb4b3c479c4d38adcbb55bf6);
+            
+</script>
+</html>

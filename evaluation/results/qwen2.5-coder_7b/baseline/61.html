@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1480bc51a924ade7932c604e13c2d110 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1480bc51a924ade7932c604e13c2d110" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1480bc51a924ade7932c604e13c2d110 = L.map(
+                "map_1480bc51a924ade7932c604e13c2d110",
+                {
+                    center: [42.124, 74.12400000000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_05740a2a4df5aba508295729055b63c3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_05740a2a4df5aba508295729055b63c3.addTo(map_1480bc51a924ade7932c604e13c2d110);
+        
+    
+            var marker_e6ffc5305b9febed5962cc0ffc205db2 = L.marker(
+                [42.123, 74.123],
+                {
+}
+            ).addTo(map_1480bc51a924ade7932c604e13c2d110);
+        
+    
+            var icon_a7a7b325a4cc8dc20f51ef4766c42526 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b005766a0f94942965c29db0bc0ec8b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7a30930c1a9aed197ebabe288ad96d7 = $(`<div id="html_c7a30930c1a9aed197ebabe288ad96d7" style="width: 100.0%; height: 100.0%;">Уровень воды: 5.2 м</div>`)[0];
+                popup_b005766a0f94942965c29db0bc0ec8b0.setContent(html_c7a30930c1a9aed197ebabe288ad96d7);
+            
+        
+
+        marker_e6ffc5305b9febed5962cc0ffc205db2.bindPopup(popup_b005766a0f94942965c29db0bc0ec8b0)
+        ;
+
+        
+    
+    
+                marker_e6ffc5305b9febed5962cc0ffc205db2.setIcon(icon_a7a7b325a4cc8dc20f51ef4766c42526);
+            
+    
+            var marker_4d845a665915cd4ca1d951429d677ea1 = L.marker(
+                [42.124, 74.124],
+                {
+}
+            ).addTo(map_1480bc51a924ade7932c604e13c2d110);
+        
+    
+            var icon_86fbf2a1599e1f9baed197305394d39a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e14bc07f38bdd97daa54aa099b694a76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0557ae0760360836ffdab7515485c73a = $(`<div id="html_0557ae0760360836ffdab7515485c73a" style="width: 100.0%; height: 100.0%;">Уровень воды: 4.8 м</div>`)[0];
+                popup_e14bc07f38bdd97daa54aa099b694a76.setContent(html_0557ae0760360836ffdab7515485c73a);
+            
+        
+
+        marker_4d845a665915cd4ca1d951429d677ea1.bindPopup(popup_e14bc07f38bdd97daa54aa099b694a76)
+        ;
+
+        
+    
+    
+                marker_4d845a665915cd4ca1d951429d677ea1.setIcon(icon_86fbf2a1599e1f9baed197305394d39a);
+            
+    
+            var marker_f6c07cde9860b81278d32a62ad72f8dd = L.marker(
+                [42.125, 74.125],
+                {
+}
+            ).addTo(map_1480bc51a924ade7932c604e13c2d110);
+        
+    
+            var icon_1330ab80c5a2e20d21ab767c1e3f05ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ae4287722d2d7dbf7d64c5985fb8c2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b63644dd5ec835c31b0ce5b8706f6a8 = $(`<div id="html_8b63644dd5ec835c31b0ce5b8706f6a8" style="width: 100.0%; height: 100.0%;">Уровень воды: 5.0 м</div>`)[0];
+                popup_3ae4287722d2d7dbf7d64c5985fb8c2f.setContent(html_8b63644dd5ec835c31b0ce5b8706f6a8);
+            
+        
+
+        marker_f6c07cde9860b81278d32a62ad72f8dd.bindPopup(popup_3ae4287722d2d7dbf7d64c5985fb8c2f)
+        ;
+
+        
+    
+    
+                marker_f6c07cde9860b81278d32a62ad72f8dd.setIcon(icon_1330ab80c5a2e20d21ab767c1e3f05ed);
+            
+</script>
+</html>

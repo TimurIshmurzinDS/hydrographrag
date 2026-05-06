@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6ddc72ddbed9a6fd66d8c0410a9ade6d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6ddc72ddbed9a6fd66d8c0410a9ade6d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6ddc72ddbed9a6fd66d8c0410a9ade6d = L.map(
+                "map_6ddc72ddbed9a6fd66d8c0410a9ade6d",
+                {
+                    center: [54.321, 67.89],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_908f4461b19d3e0265dc35a99ea4ca2b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_908f4461b19d3e0265dc35a99ea4ca2b.addTo(map_6ddc72ddbed9a6fd66d8c0410a9ade6d);
+        
+    
+            var marker_7862371a59c3ab6cfc1ee89de68a81c3 = L.marker(
+                [54.321, 67.89],
+                {
+}
+            ).addTo(map_6ddc72ddbed9a6fd66d8c0410a9ade6d);
+        
+    
+        var popup_b0c539aced23ceca1ea5bcf0492d483e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_275026b7fc9a710f1b924c3160985e87 = $(`<div id="html_275026b7fc9a710f1b924c3160985e87" style="width: 100.0%; height: 100.0%;">Безопасный период: 2023-10-02 00:00:00, Уровень воды: 0.8</div>`)[0];
+                popup_b0c539aced23ceca1ea5bcf0492d483e.setContent(html_275026b7fc9a710f1b924c3160985e87);
+            
+        
+
+        marker_7862371a59c3ab6cfc1ee89de68a81c3.bindPopup(popup_b0c539aced23ceca1ea5bcf0492d483e)
+        ;
+
+        
+    
+    
+            var marker_db02396ddb206aec116ac15f58ca9a1d = L.marker(
+                [54.321, 67.89],
+                {
+}
+            ).addTo(map_6ddc72ddbed9a6fd66d8c0410a9ade6d);
+        
+    
+        var popup_bc1b572598749ddad6c0dd6f5f60dd7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5eb897ad2b0eac5e0e5f5c4ecafb2cd8 = $(`<div id="html_5eb897ad2b0eac5e0e5f5c4ecafb2cd8" style="width: 100.0%; height: 100.0%;">Безопасный период: 2023-10-05 00:00:00, Уровень воды: 0.9</div>`)[0];
+                popup_bc1b572598749ddad6c0dd6f5f60dd7c.setContent(html_5eb897ad2b0eac5e0e5f5c4ecafb2cd8);
+            
+        
+
+        marker_db02396ddb206aec116ac15f58ca9a1d.bindPopup(popup_bc1b572598749ddad6c0dd6f5f60dd7c)
+        ;
+
+        
+    
+</script>
+</html>

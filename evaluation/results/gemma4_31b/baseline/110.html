@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2da1cfd330d1c6e4913a1189994978f2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h4 style="font-family: Arial;">Анализ влияния расхода воды на урожайность</h4>
+    <p>Синие линии обозначают русла рек. Маркеры показывают точки анализа.</p>
+    
+            <div class="folium-map" id="map_2da1cfd330d1c6e4913a1189994978f2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2da1cfd330d1c6e4913a1189994978f2 = L.map(
+                "map_2da1cfd330d1c6e4913a1189994978f2",
+                {
+                    center: [44.2, 80.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ac9b22e4ec5122c6f9e18bd0ab1a61bd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ac9b22e4ec5122c6f9e18bd0ab1a61bd.addTo(map_2da1cfd330d1c6e4913a1189994978f2);
+        
+    
+            var poly_line_197668d6a882cc57a3129fee5c01044f = L.polyline(
+                [[44.1, 80.2], [44.3, 80.5], [44.5, 80.8]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_2da1cfd330d1c6e4913a1189994978f2);
+        
+    
+            poly_line_197668d6a882cc57a3129fee5c01044f.bindTooltip(
+                `<div>
+                     Tekeli River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2446982dcd87b89df0a8ade99012612a = L.polyline(
+                [[44.0, 81.0], [44.2, 81.3], [44.4, 81.6]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_2da1cfd330d1c6e4913a1189994978f2);
+        
+    
+            poly_line_2446982dcd87b89df0a8ade99012612a.bindTooltip(
+                `<div>
+                     Sarykan River
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f87020cf5a7cdbb731e5a7119b0d6cf6 = L.circleMarker(
+                [44.3, 80.5],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_2da1cfd330d1c6e4913a1189994978f2);
+        
+    
+        var popup_451d20172e43848121806ec120c2abaa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d319c2b5e8f6d913c2b54babb0fbeb4c = $(`<div id="html_d319c2b5e8f6d913c2b54babb0fbeb4c" style="width: 100.0%; height: 100.0%;">Tekeli River Corr with Yield: 0.81</div>`)[0];
+                popup_451d20172e43848121806ec120c2abaa.setContent(html_d319c2b5e8f6d913c2b54babb0fbeb4c);
+            
+        
+
+        circle_marker_f87020cf5a7cdbb731e5a7119b0d6cf6.bindPopup(popup_451d20172e43848121806ec120c2abaa)
+        ;
+
+        
+    
+    
+            var circle_marker_13906de2bcbd29dd63735d711fd02331 = L.circleMarker(
+                [44.2, 81.3],
+                {"bubblingMouseEvents": true, "color": "darkcyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkcyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_2da1cfd330d1c6e4913a1189994978f2);
+        
+    
+        var popup_8fa385dcb119c096652effb332247445 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4596e78c0182b02939bd205cf6fb8719 = $(`<div id="html_4596e78c0182b02939bd205cf6fb8719" style="width: 100.0%; height: 100.0%;">Sarykan River Corr with Yield: 0.83</div>`)[0];
+                popup_8fa385dcb119c096652effb332247445.setContent(html_4596e78c0182b02939bd205cf6fb8719);
+            
+        
+
+        circle_marker_13906de2bcbd29dd63735d711fd02331.bindPopup(popup_8fa385dcb119c096652effb332247445)
+        ;
+
+        
+    
+</script>
+</html>
