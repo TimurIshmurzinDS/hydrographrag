@@ -90,7 +90,7 @@ async def generate_plan_and_code(req: QueryRequest):
     try:
         # --- PHASE I: Semantic Cache ---
         query_vec = embedder.get_embedding(req.query)
-        THRESHOLD = 0.90
+        THRESHOLD = 0.97
         
         for cached_query, data in query_cache.items():
             similarity = embedder.compute_similarity(query_vec, data['vector'])

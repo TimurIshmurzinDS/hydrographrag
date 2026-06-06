@@ -118,7 +118,7 @@ class GraphRetriever:
         """
         records = self.db.execute_query(query)
         return [{"id": r["id"], "name": r["name"], "category": r.get("category", "Unknown")} for r in records]
-    def find_solution_subgraph(self, demand, top_k1=5, top_k2=15):
+    def find_solution_subgraph(self, demand, top_k1=5, top_k2=50):
         """
         Главный пайплайн поиска GeoGraphRAG.
         """
@@ -173,13 +173,13 @@ class GraphRetriever:
         for query_text in search_queries:
             matches = self.embedder.find_top_matches(query_text, all_entities, top_k=top_k1)
             for match, score in matches:
-                if score >= 0.83: 
+                if score >0.75: 
                     node_id = match['id'] 
                     node_name = match['name']
                     found_nodes.add((node_id, node_name))
                     print(f"🎯 [DGE Match] Нашел узел: '{node_name}' (Уверенность: {score:.2f})")
                 else:
-                    print(f"⚠️ [DGE Skip] Узел '{match['name']}' отброшен ({score:.2f} < 0.83)")
+                    print(f"⚠️ [DGE Skip] Узел '{match['name']}' отброшен ({score:.2f} < 0.75)")  
 
         if not found_nodes:
             return []
@@ -234,72 +234,115 @@ class GraphRetriever:
                     })
 
 
- # --- PHASE IV: Deep Attributes Extraction (Глубокое извлечение атрибутов) ---
-        print("\n📝 [Phase IV: Attributes] Извлекаем параметры узлов и их постов мониторинга...")
+ # --- PHASE IV: Deep Attributes Extraction (Бронебойный + Уникальные имена) ---
+        print("\n📝 [Phase IV: Attributes] Извлекаем параметры...")
         for node_id, node_name in found_nodes:
             attr_query = self.prefixes + f"""
-            SELECT ?sourceName ?p ?val WHERE {{
+            SELECT DISTINCT ?sourceName ?p ?val WHERE {{
+                # 1. Параметры самого объекта
                 {{
-                    # Случай А: Прямые параметры самого объекта (например, длина реки)
                     <{node_id}> ?p ?val .
-                    BIND("{node_name}" AS ?sourceName)
                     FILTER(isLiteral(?val)) 
+                    BIND("{node_name}" AS ?sourceName)
                 }}
                 UNION
+                # 2. Параметры рек в регионе (locatedInRegion)
                 {{
-                    # Случай Б: Параметры постов (Observation), привязанных к объекту
+                    ?child sw:locatedInRegion <{node_id}> .
+                    ?child ?p ?val .
+                    FILTER(isLiteral(?val))
+                    OPTIONAL {{ ?child rdfs:label|wr_kz:Post_name ?cLbl }}
+                    BIND(COALESCE(?cLbl, "Объект в {node_name}") AS ?sourceName)
+                }}
+                UNION
+                # 3. Параметры рек в регионе (hasLocation)
+                {{
+                    ?child wr_kz:hasLocation <{node_id}> .
+                    ?child ?p ?val .
+                    FILTER(isLiteral(?val))
+                    OPTIONAL {{ ?child rdfs:label|wr_kz:Post_name ?cLbl }}
+                    BIND(COALESCE(?cLbl, "Объект в {node_name}") AS ?sourceName)
+                }}
+                UNION
+                # 4. Посты на найденной реке
+                {{
                     ?obs sosa:hasFeatureOfInterest <{node_id}> .
                     ?obs ?p ?val .
                     FILTER(isLiteral(?val))
-                    
-                    # Склеиваем имя объекта и имя поста, чтобы LLM понимала, откуда цифры
-                    OPTIONAL {{ ?obs wr_kz:Post_name|rdfs:label ?obsLbl }}
-                    BIND(COALESCE(CONCAT("{node_name} | ", ?obsLbl), CONCAT("{node_name} | Пост мониторинга")) AS ?sourceName)
+                    OPTIONAL {{ ?obs rdfs:label|wr_kz:Post_name ?oLbl }}
+                    BIND(COALESCE(CONCAT("{node_name} - ", ?oLbl), "Пост на {node_name}") AS ?sourceName)
                 }}
-            }} LIMIT 50
+            }} LIMIT 150
             """
             attributes = self.db.execute_query(attr_query)
             for attr in attributes:
                 rel_name = attr['p'].split('#')[-1].split('/')[-1]
-                # Пропускаем WKT, так как мы берем его в Фазе V, и системные label
                 if "asWKT" not in rel_name and rel_name != "label":
                     triples.append({
-                        "from": attr['sourceName'], # Теперь тут будет "Ile River | Dobyn pier"
+                        "from": attr['sourceName'], 
                         "rel": rel_name,
                         "to": str(attr['val']),
                         "code": "" 
                     })
 
-        # --- PHASE V: Geo-Spatial Expansion (Склейка имени объекта и точки) ---
-        print("\n🗺️ [Phase V: Geo-Spatial] Поиск гео-координат (WKT) для карты...")
+        # --- PHASE V: Geo-Spatial Expansion (Уникальные имена постов) ---
+        print("\n🗺️ [Phase V: Geo-Spatial] Поиск гео-координат (WKT)...")
         for node_id, node_name in found_nodes:
             geo_query = self.prefixes + f"""
             SELECT DISTINCT ?ptName ?wkt WHERE {{
+                # 1. WKT на самом объекте
                 {{
-                    # Случай 1: Координаты привязаны прямо к узлу
-                    <{node_id}> geo:asWKT ?wkt .
+                    <{node_id}> ?p ?wkt .
+                    FILTER(CONTAINS(STR(?p), "asWKT"))
                     BIND("{node_name}" AS ?ptName)
                 }}
                 UNION
+                # 2. WKT на реках (locatedInRegion)
                 {{
-                    # Случай 2: Координаты лежат в обсервациях, связанных с узлом
-                    ?obs sosa:hasFeatureOfInterest <{node_id}> .
-                    ?obs geo:asWKT ?wkt .
-                    OPTIONAL {{ ?obs rdfs:label|wr_kz:Post_name ?obsLbl }}
-                    
-                    # ВАЖНО: Склеиваем имя реки и имя поста!
-                    BIND(COALESCE(CONCAT("{node_name} | ", ?obsLbl), CONCAT("{node_name} | Точка мониторинга")) AS ?ptName)
+                    ?child sw:locatedInRegion <{node_id}> .
+                    ?child ?p ?wkt .
+                    FILTER(CONTAINS(STR(?p), "asWKT"))
+                    OPTIONAL {{ ?child rdfs:label|wr_kz:Post_name ?cLbl }}
+                    BIND(COALESCE(?cLbl, "Река в {node_name}") AS ?ptName)
                 }}
-            }} LIMIT 5
+                UNION
+                # 3. WKT на реках (hasLocation)
+                {{
+                    ?child wr_kz:hasLocation <{node_id}> .
+                    ?child ?p ?wkt .
+                    FILTER(CONTAINS(STR(?p), "asWKT"))
+                    OPTIONAL {{ ?child rdfs:label|wr_kz:Post_name ?cLbl }}
+                    BIND(COALESCE(?cLbl, "Река в {node_name}") AS ?ptName)
+                }}
+                UNION
+                # 4. WKT на постах внутри региона
+                {{
+                    ?child sw:locatedInRegion <{node_id}> .
+                    ?obs sosa:hasFeatureOfInterest ?child .
+                    ?obs ?p ?wkt .
+                    FILTER(CONTAINS(STR(?p), "asWKT"))
+                    OPTIONAL {{ ?child rdfs:label|wr_kz:Post_name ?cLbl }}
+                    OPTIONAL {{ ?obs rdfs:label|wr_kz:Post_name ?oLbl }}
+                    BIND(COALESCE(CONCAT(?cLbl, " - ", ?oLbl), "Пост в {node_name}") AS ?ptName)
+                }}
+                UNION
+                # 5. WKT на постах найденной реки
+                {{
+                    ?obs sosa:hasFeatureOfInterest <{node_id}> .
+                    ?obs ?p ?wkt .
+                    FILTER(CONTAINS(STR(?p), "asWKT"))
+                    OPTIONAL {{ ?obs rdfs:label|wr_kz:Post_name ?oLbl }}
+                    BIND(COALESCE(CONCAT("{node_name} - ", ?oLbl), "Пост на {node_name}") AS ?ptName)
+                }}
+            }} LIMIT 100
             """
             geo_results = self.db.execute_query(geo_query)
             for geo in geo_results:
                 triples.append({
-                    "from": geo['ptName'], # Формат: "Ile River | Dobyn pier"
+                    "from": geo['ptName'], 
                     "rel": "hasWKT",
                     "to": geo['wkt'],
                     "code": ""
                 })
                 print(f"📍 Найдена геометрия: {geo['ptName']} -> {geo['wkt']}")
-
         return triples
