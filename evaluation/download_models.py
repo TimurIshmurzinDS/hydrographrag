@@ -5,17 +5,20 @@ print("⏳ Начинаем загрузку 8 моделей для масшт�
 print("⚠️ Внимание: скачивание займет много времени (~150 ГБ)!\n")
 
 models = [
-    # --- Генераторы (Великолепная восьмерка) ---
+    # --- Lightweight code-oriented models ---
     "qwen2.5-coder:7b",
-    "qwen2.5-coder:32b",
-    "deepseek-r1:14b",
-    "deepseek-r1:32b",
     "llama3.1:8b",
-    "gemma2:27b",
-    "codestral",
+    
+    # --- Medium generalist reasoning model ---
     "mistral-nemo",
     
-    # --- Судья ---
+    # --- Heavyweight structured reasoning models ---
+    "codestral",
+    "gemma2:27b",
+    "gemma4:31b",
+    "qwen2.5-coder:32b",
+    
+    # --- Judge ---
     "qwen2.5:72b-instruct"
 ]
 
