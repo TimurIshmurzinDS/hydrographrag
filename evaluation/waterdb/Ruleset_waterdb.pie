@@ -1,0 +1,48 @@
+Prefices
+{
+    rdf     : http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs    : http://www.w3.org/2000/01/rdf-schema#
+    xsd     : http://www.w3.org/2001/XMLSchema#
+    sosa    : http://www.w3.org/ns/sosa/
+    hyf     : http://www.opengis.net/ont/hy_features#
+    sw      : http://smart-water.org/data/
+    wrkz    : http://smart-water.org/data/WR_KZ/
+    sgkz    : http://smart-water.org/data/SocioGeo_KZ/
+}
+
+Axioms
+{
+}
+
+Rules
+{
+    Id: Rule_1
+        obs <rdf:type> <sosa:Observation>
+        obs <wrkz:Water_quality_class> "class 3"
+        ------------------------------------
+        obs <wrkz:hasWaterClass> <sw:Class_III>
+    Id: Rule_2
+        wb <rdf:type> <hyf:HY_HydroFeature>
+        wb <sw:locatedInRegion> reg
+        ------------------------------------
+        wb <wrkz:hasLocation> reg
+    Id: Rule_3a
+        obs <rdf:type> <sosa:Observation>
+        obs <sosa:hasFeatureOfInterest> wb
+        wb <sw:locatedInRegion> reg
+        reg <sgkz:Population_region_2022> pop
+        ------------------------------------
+        obs <wrkz:hasPopulation> pop
+    Id: Rule_3b
+        obs <rdf:type> <sosa:Observation>
+        obs <sosa:hasFeatureOfInterest> wb
+        wb <sw:locatedInRegion> reg
+        reg <sgkz:Total_sown_area_ha> area
+        ------------------------------------
+        obs <wrkz:hasArableLandAreaValue> area
+    Id: Rule_4
+        obs <rdf:type> <sosa:Observation>
+        obs <sosa:resultTime> t
+        ------------------------------------
+        obs <wrkz:hasTime> t
+}

@@ -8,7 +8,7 @@ from core.database import HydroDatabase
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
 class DatasetGenerator:
-    def __init__(self, model_name="gemma4:26b"):
+    def __init__(self, model_name="qwen2.5:72b-instruct"):
         self.db = HydroDatabase()
         # Температура 0.7 для креативности, чтобы OOD вопросы были разнообразными
         self.llm = ChatOllama(model=model_name, temperature=0.7) 

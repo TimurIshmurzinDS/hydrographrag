@@ -1,0 +1,6 @@
+
+http://www.w3.org/2001/XMLSchema#string
+http://www.w3.org/2001/XMLSchema#float
+http://www.opengis.net/ont/geosparql#wktLiteral
+http://www.w3.org/2001/XMLSchema#double
+http://www.w3.org/2001/XMLSchema#dateTime

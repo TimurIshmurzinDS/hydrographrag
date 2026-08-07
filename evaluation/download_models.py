@@ -16,7 +16,7 @@ models = [
     "mistral-nemo",
     "gemma4:26b",
     # --- Судья ---
-    "llama3.3" 
+ "qwen2.5:72b-instruct"
 ]
 
 for model in models:

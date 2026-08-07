@@ -8,9 +8,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(
 
 # Список скриптов в строгом порядке выполнения
 PIPELINE = [
-   # {"file": "download_models.py", "desc": "1. Загрузка/проверка LLM моделей"},
-    #{"file": "generate_dataset.py", "desc": "2. Генерация Ground Truth датасета"},
-    #{"file": "run_generation.py",   "desc": "3. Ablation Study (Генерация ответов и кода)"},
+  #{"file": "download_models.py", "desc": "1. Загрузка/проверка LLM моделей"},
+  # {"file": "generate_dataset.py", "desc": "2. Генерация Ground Truth датасета"},
+    {"file": "run_generation.py",   "desc": "3. Ablation Study (Генерация ответов и кода)"},
    {"file": "run_judge.py",        "desc": "4. Оценка судьей (LLM-as-a-Judge)"}
 ]
 
@@ -20,7 +20,6 @@ def run_script(script_name, description):
     logging.info(f"{'='*60}")
     
     start_time = time.time()
-    
     try:
         # МАГИЯ ЗДЕСЬ: Добавляем корневую папку (Code) в пути видимости Python
         env = os.environ.copy()

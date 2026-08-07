@@ -10,68 +10,31 @@ from langchain_ollama import ChatOllama
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
 
-# Укажи здесь модель, которая будет выступать судьей
-JUDGE_MODEL = "qwen2.5-coder:7b"  # Легковесный и быстрый для оценки
+# Независимый судья (не пересекающийся с пулом легких генераторов)
+JUDGE_MODEL = "qwen2.5:72b-instruct"  # Модель для оценки Faithfulness и Hallucination Subtypes
 
 # Жесткая привязка путей к директории скрипта
 EVAL_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_PATH = os.path.join(EVAL_DIR, "generation_results.json")
 FINAL_OUTPUT_PATH = os.path.join(EVAL_DIR, "final_evaluation_results.json")
-RESULTS_DIR = os.path.join(EVAL_DIR, "results") # Путь к папке с .py файлами
-GROUND_TRUTH_PATH = os.path.join(EVAL_DIR, "ground_truth.json") # Путь к вопросам
-
-import os
-import subprocess
-import time
-import logging
-
-def restart_ollama():
-    """Перезапуск Ollama на Windows для очистки VRAM"""
-    logging.info("\n🔄 Очистка VRAM: Перезапуск Ollama (Windows)...")
-    try:
-        # Убиваем все процессы ollama (принудительно /F)
-        subprocess.run(["taskkill", "/F", "/IM", "ollama.exe", "/T"], 
-                       capture_output=True, check=False)
-        
-        # Даем системе немного времени на реальную очистку памяти
-        time.sleep(5) 
-        
-        # Запускаем Ollama снова. 
-        # Используем Popen, чтобы скрипт не ждал завершения работы Ollama
-        subprocess.Popen(["ollama", "serve"], 
-                         stdout=subprocess.DEVNULL, 
-                         stderr=subprocess.DEVNULL,
-                         creationflags=subprocess.CREATE_NEW_CONSOLE)
-        
-        # Ждем, пока сервер поднимется, особенно для тяжелых моделей (70B)
-        logging.info("⏳ Ожидание инициализации (15 сек)...")
-        time.sleep(15)
-        logging.info("✅ Ollama перезапущена, VRAM должна быть пуста.")
-        
-    except Exception as e:
-        logging.error(f"⚠️ Ошибка при перезапуске Ollama: {e}")
+RESULTS_DIR = os.path.join(EVAL_DIR, "results") 
+GROUND_TRUTH_PATH = os.path.join(EVAL_DIR, "ground_truth.json") 
 
 class EvaluationPipeline:
     def __init__(self):
-        logging.info(f"⚖️ Инициализация судьи {JUDGE_MODEL} (режим 0.0 temp)...")
-        # Температура 0.0 для максимально строгого и детерминированного судейства
+        logging.info(f"⚖️ Инициализация независимого судьи {JUDGE_MODEL} (режим 0.0 temp)...")
         self.judge = ChatOllama(model=JUDGE_MODEL, temperature=0.0)
 
     def _robust_json_parse(self, text):
         """Очистка вывода от <think> и markdown + защита от кривого JSON."""
         try:
-            # 1. Убираем блок размышлений <think>
             text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
-            
-            # 2. Ищем сам JSON
             match = re.search(r'\{.*\}', text, re.DOTALL)
             json_str = match.group(0) if match else text
             
-            # 3. Пытаемся распарсить стандартным json (строго)
             try:
                 return json.loads(json_str)
             except json.JSONDecodeError:
-                # 4. Если JSON сломан (висячие запятые, одинарные кавычки), спасает ast
                 try:
                     return ast.literal_eval(json_str)
                 except Exception:
@@ -80,51 +43,59 @@ class EvaluationPipeline:
             return None
 
     def evaluate(self, query, code_response, exec_status, mode, expected_entities):
-        """Оценка с использованием эталонных сущностей (Ground Truth)."""
+        """Оценка с использованием эталонных сущностей и 4 подтипов галлюцинаций."""
         status_msg = "Execution: SUCCESS" if exec_status else "Execution: FAILED"
-        
-        # Превращаем список эталонных сущностей в строку
         truth_str = ", ".join(expected_entities) if expected_entities else "None specified"
         
         prompt = f"""
-        You are a senior geospatial scientist evaluating a GeoGraphRAG system.
+        You are a senior geospatial scientist evaluating an AI geospatial framework.
         User Query: "{query}"
         Expected Targets: {truth_str}
         Runtime Status: {status_msg}
 
-        Analyze the Python Code and evaluate it on a scale of 1-5 across these 7 dimensions of Geospatial Knowledge:
-        1. Spatial Location: Correctness of coordinates and ROI.
-        2. Geometric Morphology: Correct application of spatial geometries (e.g., Points, Lines, Polygons, Bounding Boxes) to represent geographic features.
-        3. Attribute Characteristics: Correct usage of hydrological properties (water level, flow).
-        4. Feature Relationships: Logical interaction between rivers, stations, and basins.
-        5. Evolutionary Processes: Handling of temporal data (dates, intervals).
-        6. Operational Mechanisms: Correct hydrological logic (e.g., NDVI calculation, slope analysis).
-        7. Semantic Understanding: Correct terminology and naming.
+        Analyze the Python Code and evaluate it on a scale of 1 to 5.
+        CRITICAL: You MUST evaluate Faithfulness by checking for 4 specific Hydrological Hallucination Subtypes.
+        Score each subtype from 1 (severe hallucination/completely fabricated) to 5 (perfectly faithful/no hallucination).
+        
+        Subtypes to evaluate:
+        1. "spatial_score": Are WKT coordinates or spatial locations fabricated?
+        2. "numerical_score": Are water levels, flow rates, or other numerical metrics invented?
+        3. "topological_score": Are river connections (tributaries, upstream/downstream) hallucinated?
+        4. "categorical_score": Are sensor statuses, water classes, or region names made up?
 
         Output strictly JSON:
         {{
-            "semantic_score": <average_of_7_dimensions>,
-            "structural_score": <1-5_based_on_execution_status>,
-            "faithfulness_score": <1-5_based_on_data_usage_accuracy>,
-            "dimension_breakdown": {{ "spatial": <int>, "temporal": <int>, "logic": <int> }},
-            "reasoning": "<short explanation>"
+            "semantic_score": <1-5>,
+            "structural_score": <1-5>,
+            "faithfulness_score": <1-5>,
+            "hallucination_subtypes": {{
+                "spatial_score": <1-5>,
+                "numerical_score": <1-5>,
+                "topological_score": <1-5>,
+                "categorical_score": <1-5>
+            }},
+            "reasoning": "<short explanation of faults if any>"
         }}
         """
         try:
             res = self.judge.invoke(prompt)
             parsed = self._robust_json_parse(res.content)
             
-            if parsed and all(k in parsed for k in ("semantic_score", "structural_score", "faithfulness_score", "reasoning")):
+            if parsed and "hallucination_subtypes" in parsed:
+                subtypes = parsed.pop("hallucination_subtypes")
+                parsed.update(subtypes)
                 return parsed
             else:
                 return {
                     "semantic_score": 0, "structural_score": 0, "faithfulness_score": 0,
+                    "spatial_score": 0, "numerical_score": 0, "topological_score": 0, "categorical_score": 0,
                     "reasoning": "Judge failed to output valid JSON format."
                 }
         except Exception as e:
             logging.error(f"Ошибка судьи: {e}")
             return {
                 "semantic_score": 0, "structural_score": 0, "faithfulness_score": 0,
+                "spatial_score": 0, "numerical_score": 0, "topological_score": 0, "categorical_score": 0,
                 "reasoning": f"Judge error: {str(e)}"
             }
 
@@ -136,25 +107,24 @@ class EvaluationPipeline:
             logging.error(f"❌ Файл {GROUND_TRUTH_PATH} не найден.")
             return
 
-        # 1. Читаем результаты генерации
         with open(INPUT_PATH, 'r', encoding='utf-8') as f:
             generation_data = json.load(f)
 
-        # 2. Читаем оригинальные вопросы из эталона
         with open(GROUND_TRUTH_PATH, 'r', encoding='utf-8') as f:
             ground_truth = json.load(f)
             
-        # 3. Создаем словарь для быстрого поиска
         queries_map = {str(item.get("id")): item.get("query") for item in ground_truth}
 
-        # Маппинг для названий папок на диске
-        folder_map = {
-            'Baseline': 'baseline', 
-            'VectorRAG': 'vector_rag', 
-            'GeoGraphRAG': 'geographrag'
-        }
-
-        eval_counter = 0  # Счетчик для очистки VRAM
+        # Все 7 режимов Ablation Study
+        modes = [
+            "Baseline", 
+            "VectorRAG", 
+            "GeoGraphRAG",
+            "GeoGraphRAG_no_CDA",
+            "GeoGraphRAG_no_WKT",
+            "GeoGraphRAG_no_Template",
+            "GeoGraphRAG_no_OOD"
+        ]
 
         for model_data in generation_data:
             model_name = model_data['model']
@@ -163,46 +133,38 @@ class EvaluationPipeline:
             safe_model_name = model_name.replace(":", "_")
             
             for item in tqdm(model_data['metrics'], desc=f"Judging {model_name}"):
-                
-                # --- БЛОК ОЧИСТКИ ПАМЯТИ ---
-                eval_counter += 1
-                if eval_counter % 50 == 0:  # Каждые 50 вопросов
-                    restart_ollama()
-                    # Переподключаем LangChain-клиент, чтобы сбросить зависшие HTTP-сессии
-                    self.judge = ChatOllama(model=JUDGE_MODEL, temperature=0.0)
-                # ------------------------------
-
                 query_id = str(item.get('query_id'))
                 query = queries_map.get(query_id, "Unknown query")
                 category = item.get('category')
                 
-                # Достаем эталонные сущности для текущего вопроса
                 ground_truth_item = next((g for g in ground_truth if str(g.get("id")) == query_id), {})
                 expected_entities = ground_truth_item.get("expected_entities", [])
-                
-                modes = ['Baseline', 'VectorRAG', 'GeoGraphRAG']
                 
                 for m in modes:
                     if m not in item: continue
                     
                     # Логика оценки аномальных (Out-of-Domain) запросов
                     if category == "anomalous":
-                        # Если GeoGraphRAG не нашел триплетов
-                        triples_count = item[m].get('triples', 0) if m == 'GeoGraphRAG' else 0
-                        success = (m == 'GeoGraphRAG' and triples_count == 0)
-                        
+                        success = False
+                        if m in ["GeoGraphRAG", "GeoGraphRAG_no_CDA", "GeoGraphRAG_no_WKT", "GeoGraphRAG_no_Template", "GeoGraphRAG_no_OOD"]:
+                            triples_count = item[m].get('triples', 0) if "triples" in item[m] else 0
+                            success = (triples_count == 0)
+                        else:
+                            success = not item[m].get('exec', True)
+
                         item[m].update({
                             "semantic_score": 5 if success else 1,
                             "structural_score": 5 if success else 1,
                             "faithfulness_score": 5 if success else 1,
+                            "spatial_score": 5 if success else 1,
+                            "numerical_score": 5 if success else 1,
+                            "topological_score": 5 if success else 1,
+                            "categorical_score": 5 if success else 1,
                             "reasoning": "Correct OOD rejection" if success else "Failed to reject OOD query and generated hallucination."
                         })
                     else:
-                        # 1. Формируем путь к .py файлу
-                        mode_folder = folder_map.get(m)
-                        py_path = os.path.join(RESULTS_DIR, safe_model_name, mode_folder, f"{query_id}.py")
+                        py_path = os.path.join(RESULTS_DIR, safe_model_name, m, f"{query_id}.py")
                         
-                        # 2. Читаем код из файла
                         code_response = ""
                         if os.path.exists(py_path):
                             with open(py_path, 'r', encoding='utf-8') as f:
@@ -210,14 +172,11 @@ class EvaluationPipeline:
                         else:
                             code_response = "# ОШИБКА: Файл с кодом не был сгенерирован или не найден."
                             
-                        # 3. Берем статус выполнения
                         exec_status = item[m].get('exec', False)
                         
-                        # 4. Отправляем судье ВМЕСТЕ с expected_entities
                         scores = self.evaluate(query, code_response, exec_status, m, expected_entities)
                         item[m].update(scores)
 
-            # Сохраняем после оценки каждой модели
             with open(FINAL_OUTPUT_PATH, 'w', encoding='utf-8') as f:
                 json.dump(generation_data, f, ensure_ascii=False, indent=4)
 
