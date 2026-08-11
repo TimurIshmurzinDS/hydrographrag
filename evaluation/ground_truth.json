@@ -6,7 +6,12 @@
             "Ili River"
         ],
         "expected_behavior": "generate_code",
-        "id": 1
+        "id": 1,
+        "expected_wkt": [
+            "POINT(80.046 43.4)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь статус датчика уровня воды на реке Karatal River.",
@@ -15,7 +20,12 @@
             "Karatal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 2
+        "id": 2,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какой последний показатель уровня воды зафиксирован на реке Talgar River?",
@@ -24,7 +34,12 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 3
+        "id": 3,
+        "expected_wkt": [
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Работает ли сейчас станция мониторинга на реке Koktal River?",
@@ -33,7 +48,12 @@
             "Koktal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 4
+        "id": 4,
+        "expected_wkt": [
+            "POINT(79.0553 44.3437)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Покажи текущий уровень воды в реке Prokhodnaya River.",
@@ -42,7 +62,12 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 5
+        "id": 5,
+        "expected_wkt": [
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какой статус у сенсора на реке Kumbel River?",
@@ -51,7 +76,12 @@
             "Kumbel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 6
+        "id": 6,
+        "expected_wkt": [
+            "POINT(77.013858 43.091453)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предоставь данные о текущем уровне воды в реке Batareyka River.",
@@ -60,7 +90,12 @@
             "Batareyka River"
         ],
         "expected_behavior": "generate_code",
-        "id": 7
+        "id": 7,
+        "expected_wkt": [
+            "POINT(77.216 43.935)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь состояние датчика мониторинга на реке Ulken Almaty River.",
@@ -69,7 +104,12 @@
             "Ulken Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 8
+        "id": 8,
+        "expected_wkt": [
+            "POINT(76.8884931 43.1873512)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каков текущий уровень воды в реках Ili River и Karatal River?",
@@ -79,7 +119,13 @@
             "Karatal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 9
+        "id": 9,
+        "expected_wkt": [
+            "POINT(80.046 43.4)",
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выведи статус датчиков на реке Talgar River.",
@@ -88,7 +134,12 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 10
+        "id": 10,
+        "expected_wkt": [
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какая сейчас глубина воды в Koktal River?",
@@ -97,7 +148,12 @@
             "Koktal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 11
+        "id": 11,
+        "expected_wkt": [
+            "POINT(79.0553 44.3437)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Есть ли ошибки в работе сенсора на реке Prokhodnaya River?",
@@ -106,7 +162,12 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 12
+        "id": 12,
+        "expected_wkt": [
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Покажи последние показания уровня воды для Kumbel River.",
@@ -115,7 +176,12 @@
             "Kumbel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 13
+        "id": 13,
+        "expected_wkt": [
+            "POINT(77.013858 43.091453)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь работоспособность системы мониторинга на реке Batareyka River.",
@@ -124,7 +190,12 @@
             "Batareyka River"
         ],
         "expected_behavior": "generate_code",
-        "id": 14
+        "id": 14,
+        "expected_wkt": [
+            "POINT(77.216 43.935)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какой уровень воды сейчас в Ulken Almaty River?",
@@ -133,7 +204,12 @@
             "Ulken Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 15
+        "id": 15,
+        "expected_wkt": [
+            "POINT(76.8884931 43.1873512)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каков текущий риск паводка на реке Ulken Almaty River?",
@@ -142,7 +218,12 @@
             "Ulken Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 16
+        "id": 16,
+        "expected_wkt": [
+            "POINT(76.8884931 43.1873512)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Покажите данные по весеннему расходу воды для реки Tekes River.",
@@ -151,7 +232,12 @@
             "Tekes River"
         ],
         "expected_behavior": "generate_code",
-        "id": 17
+        "id": 17,
+        "expected_wkt": [
+            "POINT(80.0254 42.4932)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Есть ли предупреждения о сезонных паводках для реки Bayankol River?",
@@ -160,7 +246,12 @@
             "Bayankol River"
         ],
         "expected_behavior": "generate_code",
-        "id": 18
+        "id": 18,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Получите максимальный уровень воды, достигнутый во время последнего весеннего паводка на реке Osek River.",
@@ -169,7 +260,12 @@
             "Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 19
+        "id": 19,
+        "expected_wkt": [
+            "POINT(79.7227227 43.9101969)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предоставьте данные об изменениях расхода воды в реке Batareyka River в период паводка.",
@@ -178,7 +274,12 @@
             "Batareyka River"
         ],
         "expected_behavior": "generate_code",
-        "id": 20
+        "id": 20,
+        "expected_wkt": [
+            "POINT(77.216 43.935)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверьте прогнозы сезонного расхода воды для реки Shyzhyn River.",
@@ -187,7 +288,12 @@
             "Shyzhyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 21
+        "id": 21,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каким был пиковый уровень воды в реке Uzyn Kargaly River во время весеннего паводка?",
@@ -196,7 +302,12 @@
             "Uzyn Kargaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 22
+        "id": 22,
+        "expected_wkt": [
+            "POINT(76.25 43.1)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предоставьте оценку риска наводнения для реки Prokhodnaya River.",
@@ -205,7 +316,12 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 23
+        "id": 23,
+        "expected_wkt": [
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Покажите исторические данные весенних паводков для реки Ulken Almaty River.",
@@ -214,7 +330,12 @@
             "Ulken Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 24
+        "id": 24,
+        "expected_wkt": [
+            "POINT(76.8884931 43.1873512)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните уровни расхода воды рек Tekes River и Bayankol River в период паводка.",
@@ -224,7 +345,13 @@
             "Bayankol River"
         ],
         "expected_behavior": "generate_code",
-        "id": 25
+        "id": 25,
+        "expected_wkt": [
+            "POINT(80.0254 42.4932)",
+            "POINT(80.001 42.3534)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какой текущий уровень воды на реке Osek River в период паводка?",
@@ -233,7 +360,12 @@
             "Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 26
+        "id": 26,
+        "expected_wkt": [
+            "POINT(79.7227227 43.9101969)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Получите значения расхода воды в реке Batareyka River во время весеннего таяния.",
@@ -242,7 +374,12 @@
             "Batareyka River"
         ],
         "expected_behavior": "generate_code",
-        "id": 27
+        "id": 27,
+        "expected_wkt": [
+            "POINT(77.216 43.935)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Есть ли оповещения о высоком уровне воды для реки Shyzhyn River?",
@@ -251,7 +388,12 @@
             "Shyzhyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 28
+        "id": 28,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Перечислите значения расхода воды во время весеннего паводка для реки Uzyn Kargaly River.",
@@ -260,7 +402,12 @@
             "Uzyn Kargaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 29
+        "id": 29,
+        "expected_wkt": [
+            "POINT(76.25 43.1)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитайте индекс риска наводнения для реки Prokhodnaya River на основе текущего расхода.",
@@ -269,7 +416,12 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 30
+        "id": 30,
+        "expected_wkt": [
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каков текущий уровень потребления воды для реки Или?",
@@ -278,7 +430,10 @@
             "Ile River"
         ],
         "expected_behavior": "generate_code",
-        "id": 31
+        "id": 31,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предоставьте данные об экологическом состоянии реки Талгар.",
@@ -287,7 +442,12 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 32
+        "id": 32,
+        "expected_wkt": [
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какой объем воды забирается на нужды сельского хозяйства в реке Аксу?",
@@ -296,7 +456,12 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 33
+        "id": 33,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Покажите показатели загрязнения воды в реке Лепси.",
@@ -305,7 +470,12 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 34
+        "id": 34,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каков уровень дефицита воды для ирригации в реке Аягоз?",
@@ -314,7 +484,12 @@
             "Ayagoz River"
         ],
         "expected_behavior": "generate_code",
-        "id": 35
+        "id": 35,
+        "expected_wkt": [
+            "POINT(81.1434 47.4804)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какие изменения в экосистеме реки Шынжалы связаны с потреблением воды?",
@@ -323,7 +498,12 @@
             "Shynzhaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 36
+        "id": 36,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предоставьте статистику использования воды для нужд агропромышленного комплекса в реке Кумбель.",
@@ -332,7 +512,12 @@
             "Kumbel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 37
+        "id": 37,
+        "expected_wkt": [
+            "POINT(77.013858 43.091453)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каков уровень экологического риска для реки Каркара?",
@@ -341,7 +526,12 @@
             "Karkara River"
         ],
         "expected_behavior": "generate_code",
-        "id": 38
+        "id": 38,
+        "expected_wkt": [
+            "POINT(79.2074388 42.8099764)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Укажите объемы воды, используемые для полива в бассейне реки Или.",
@@ -350,7 +540,10 @@
             "Ile River"
         ],
         "expected_behavior": "generate_code",
-        "id": 39
+        "id": 39,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каков уровень загрязнения сточными водами в реке Талгар?",
@@ -359,7 +552,12 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 40
+        "id": 40,
+        "expected_wkt": [
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какие данные по потреблению воды на фермерские хозяйства есть по реке Аксу?",
@@ -368,7 +566,12 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 41
+        "id": 41,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Покажите уровень влияния агрокультуры на качество воды в реке Лепси.",
@@ -377,7 +580,12 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 42
+        "id": 42,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Каков объем воды, выделяемый на орошение в реке Аягоз?",
@@ -386,7 +594,12 @@
             "Ayagoz River"
         ],
         "expected_behavior": "generate_code",
-        "id": 43
+        "id": 43,
+        "expected_wkt": [
+            "POINT(81.1434 47.4804)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какие экологические показатели зафиксированы в реке Шынжалы?",
@@ -395,7 +608,12 @@
             "Shynzhaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 44
+        "id": 44,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предоставьте данные о потреблении воды предприятиями в реке Кумбель.",
@@ -404,7 +622,12 @@
             "Kumbel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 45
+        "id": 45,
+        "expected_wkt": [
+            "POINT(77.013858 43.091453)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните уровни воды в реке Sarykan River за 22022 и 2023 годы.",
@@ -413,7 +636,12 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 46
+        "id": 46,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предскажите расход воды в реке Shilik River на следующий месяц на основе исторических данных.",
@@ -422,7 +650,12 @@
             "Shilik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 47
+        "id": 47,
+        "expected_wkt": [
+            "POINT(78.4793574 43.3333618)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Получите исторические данные о расходе воды в реке Karkara River за период с 2010 по 2020 годы.",
@@ -431,7 +664,12 @@
             "Karkara River"
         ],
         "expected_behavior": "generate_code",
-        "id": 48
+        "id": 48,
+        "expected_wkt": [
+            "POINT(79.2074388 42.8099764)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните пиковые уровни воды в реке Batareyka River в 2015 и 2023 годах.",
@@ -440,7 +678,12 @@
             "Batareyka River"
         ],
         "expected_behavior": "generate_code",
-        "id": 49
+        "id": 49,
+        "expected_wkt": [
+            "POINT(77.216 43.935)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Создайте модель прогнозирования уровня паводка для реки Dos River, используя данные за последние 5 лет.",
@@ -449,7 +692,12 @@
             "Dos River"
         ],
         "expected_behavior": "generate_code",
-        "id": 50
+        "id": 50,
+        "expected_wkt": [
+            "POINT(77.994303 44.623949)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните средний расход воды в реке Kurty River в летний и зимний периоды прошлых лет.",
@@ -458,7 +706,12 @@
             "Kurty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 51
+        "id": 51,
+        "expected_wkt": [
+            "POINT(76.328361 43.889215)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Разработайте модель прогнозирования стока для реки Sarykan River на следующий сезон.",
@@ -467,7 +720,12 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 52
+        "id": 52,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните исторические показатели температуры воды в реке Shilik River за 202 21 и 2022 годы.",
@@ -476,7 +734,12 @@
             "Shilik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 53
+        "id": 53,
+        "expected_wkt": [
+            "POINT(78.4793574 43.3333618)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитайте разницу в расходе воды в реке Karkara River между последним и предыдущим десятилетиями.",
@@ -485,7 +748,12 @@
             "Karkara River"
         ],
         "expected_behavior": "generate_code",
-        "id": 54
+        "id": 54,
+        "expected_wkt": [
+            "POINT(79.2074388 42.8099764)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предскажите уровень воды в реке Batareyka River на предстоящий год на основе исторических трендов.",
@@ -494,7 +762,12 @@
             "Batareyka River"
         ],
         "expected_behavior": "generate_code",
-        "id": 55
+        "id": 55,
+        "expected_wkt": [
+            "POINT(77.216 43.935)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните историческую нагрузку наносов в реке Dos River за последние 5 лет.",
@@ -503,7 +776,12 @@
             "Dos River"
         ],
         "expected_behavior": "generate_code",
-        "id": 56
+        "id": 56,
+        "expected_wkt": [
+            "POINT(77.994303 44.623949)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Постройте модель прогнозирования уровня воды в реке Kurty River на основе исторических трендов.",
@@ -512,7 +790,12 @@
             "Kurty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 57
+        "id": 57,
+        "expected_wkt": [
+            "POINT(76.328361 43.889215)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните ежемесячные показатели расхода воды в реке Sarykan River за 2020 и 2023 годы.",
@@ -521,7 +804,12 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 58
+        "id": 58,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Предскажите максимальный расход воды в реке Shilik River на следующее десятилетие.",
@@ -530,7 +818,12 @@
             "Shilik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 59
+        "id": 59,
+        "expected_wkt": [
+            "POINT(78.4793574 43.3333618)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните влияние исторических осадков на уровень воды в реке Karkara River в период с 2018 по 2023 годы.",
@@ -539,7 +832,12 @@
             "Karkara River"
         ],
         "expected_behavior": "generate_code",
-        "id": 60
+        "id": 60,
+        "expected_wkt": [
+            "POINT(79.2074388 42.8099764)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь статус всех датчиков уровня воды на реке Aksu River.",
@@ -548,7 +846,12 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 61
+        "id": 61,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какие посты мониторинга на реке Sharyn River сейчас не передают данные?",
@@ -557,7 +860,12 @@
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 62
+        "id": 62,
+        "expected_wkt": [
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выведи текущие уровни воды для всех гидропостов на реке Byzhy River.",
@@ -566,7 +874,12 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 63
+        "id": 63,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Есть ли ошибки в работе сенсоров на реке Tentek River?",
@@ -575,7 +888,12 @@
             "Tentek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 64
+        "id": 64,
+        "expected_wkt": [
+            "POINT(80.5218 45.4716)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь уровень воды на реках Aksu River и Byzhy River и сообщи, если датчики неисправны.",
@@ -585,7 +903,13 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 65
+        "id": 65,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)",
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь работоспособность оборудования на реке Temirlik River.",
@@ -594,7 +918,10 @@
             "Temirlik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 66
+        "id": 66,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Покажи последние зафиксированные уровни воды для всех постов на реке Prokhodnaya River.",
@@ -603,7 +930,12 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 67
+        "id": 67,
+        "expected_wkt": [
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Просканируй датчики на реке Osek River и сообщи о любых неисправностях.",
@@ -612,7 +944,12 @@
             "Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 68
+        "id": 68,
+        "expected_wkt": [
+            "POINT(79.7227227 43.9101969)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни текущий статус датчиков на реке Koktal River и реке Aksu River.",
@@ -622,7 +959,13 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 69
+        "id": 69,
+        "expected_wkt": [
+            "POINT(79.0553 44.3437)",
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какие гидрологические посты на реке Sharyn River показывают критический уровень?",
@@ -631,7 +974,12 @@
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 70
+        "id": 70,
+        "expected_wkt": [
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь, все ли сенсоры на реке Byzhy River находятся в активном режиме.",
@@ -640,7 +988,12 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 71
+        "id": 71,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди информацию о состоянии датчиков уровня для рек Tentek River и Temirlik River.",
@@ -650,7 +1003,12 @@
             "Temirlik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 72
+        "id": 72,
+        "expected_wkt": [
+            "POINT(80.5218 45.4716)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь состояние датчиков уровня воды на реках Osek River и Koktal River.",
@@ -660,7 +1018,13 @@
             "Koktal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 73
+        "id": 73,
+        "expected_wkt": [
+            "POINT(79.7227227 43.9101969)",
+            "POINT(79.0553 44.3437)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь наличие аномалий в показаниях сенсоров на реке Prokhodnaya River.",
@@ -669,7 +1033,12 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 74
+        "id": 74,
+        "expected_wkt": [
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни статус передачи данных между реками Tentek River и Sharyn River.",
@@ -679,7 +1048,13 @@
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 75
+        "id": 75,
+        "expected_wkt": [
+            "POINT(80.5218 45.4716)",
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди все гидропосты на реке Karaoy River и оцени риск паводка по их текущему расходу воды.",
@@ -691,7 +1066,12 @@
             "Karaoy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 76
+        "id": 76,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни уровни сезонного расхода на реках Baskan River и Prokhodnaya River для прогнозирования весеннего половодья.",
@@ -705,7 +1085,13 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 77
+        "id": 77,
+        "expected_wkt": [
+            "POINT(80.0756 45.2257)",
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выведи данные о расходе воды для всех постов на реке Temirlik River, чтобы определить вероятность наводнения.",
@@ -717,7 +1103,10 @@
             "Temirlik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 78
+        "id": 78,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь, есть ли признаки паводка на реке Turgen River, изучив изменения сезонного расхода воды.",
@@ -729,7 +1118,12 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 79
+        "id": 79,
+        "expected_wkt": [
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди показатели расхода на реке Tokyraun River и сравни их с уровнем на реке Koktal River для оценки риска затопления.",
@@ -743,7 +1137,13 @@
             "Koktal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 80
+        "id": 80,
+        "expected_wkt": [
+            "POINT(79.4025 46.5658)",
+            "POINT(79.0553 44.3437)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи, на каких реках из списка (Baskan River, Prokhodnaya River) уровень воды превышает норму из-за весеннего таяния снегов.",
@@ -757,7 +1157,13 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 81
+        "id": 81,
+        "expected_wkt": [
+            "POINT(80.0756 45.2257)",
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди все посты на реке Karaoy River и проверь, превышает ли их расход критическую отметку паводка.",
@@ -769,7 +1175,12 @@
             "Karaoy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 82
+        "id": 82,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни сезонные динамики расхода воды на реках Temirlik River и Turgen River для оценки угрозы весенних наводнений.",
@@ -783,7 +1194,12 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 83
+        "id": 83,
+        "expected_wkt": [
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь все гидропосты на реке Tokyraun River на предмет резкого роста расхода воды в период весеннего половодья.",
@@ -795,7 +1211,12 @@
             "Tokyraun River"
         ],
         "expected_behavior": "generate_code",
-        "id": 84
+        "id": 84,
+        "expected_wkt": [
+            "POINT(79.4025 46.5658)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди данные по расходу на реках Koktal River и Baskan River, чтобы выявить риск сезонного затопления территорий.",
@@ -809,7 +1230,13 @@
             "Baskan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 85
+        "id": 85,
+        "expected_wkt": [
+            "POINT(79.0553 44.3437)",
+            "POINT(80.0756 45.2257)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи, на каких реках (Karaoy River, Temirlik River, Turgen River) наблюдается опасный рост уровня воды из-за паводка.",
@@ -825,7 +1252,13 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 86
+        "id": 86,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)",
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни текущий расход на реке Prokhodnaya River с историческими данными весеннего паводка для этой реки.",
@@ -837,7 +1270,12 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 87
+        "id": 87,
+        "expected_wkt": [
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выведи список всех постов на реке Koktal River и их текущий уровень воды для мониторинга паводковой ситуации.",
@@ -849,7 +1287,12 @@
             "Koktal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 88
+        "id": 88,
+        "expected_wkt": [
+            "POINT(79.0553 44.3437)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь, насколько текущий расход на реке Baskan River отличается от уровня на реке Prokhodnaya River в период пика половодья.",
@@ -863,7 +1306,13 @@
             "Prokhodnaya River"
         ],
         "expected_behavior": "generate_code",
-        "id": 89
+        "id": 89,
+        "expected_wkt": [
+            "POINT(80.0756 45.2257)",
+            "POINT(76.5593266 43.012549)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди все реки из списка (Karaoy River, Baskan River, Temirlik River) и проверь их текущий риск затопления.",
@@ -879,7 +1328,13 @@
             "Temirlik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 90
+        "id": 90,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)",
+            "POINT(80.0756 45.2257)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди все притоки реки Уржар и укажи их координаты.",
@@ -888,7 +1343,12 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 91
+        "id": 91,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Вычисли расстояние между устьем реки Дос и началом реки Емель.",
@@ -898,7 +1358,13 @@
             "Emel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 92
+        "id": 92,
+        "expected_wkt": [
+            "POINT(77.994303 44.623949)",
+            "POINT(77.0401 43.2406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Перечисли все реки, которые являются притоками реки Каратал, и найди их общую протяженность.",
@@ -907,7 +1373,12 @@
             "Karatal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 93
+        "id": 93,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди координаты самого верхнего течения реки Тентек и сравни их с координатами реки Быж.",
@@ -917,7 +1388,13 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 94
+        "id": 94,
+        "expected_wkt": [
+            "POINT(80.5218 45.4716)",
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь, связаны ли река Улькен Алматы и река Шыжын через систему притоков.",
@@ -927,7 +1404,13 @@
             "Shyzhyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 95
+        "id": 95,
+        "expected_wkt": [
+            "POINT(76.8884931 43.1873512)",
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди реки Уржар и Дос и определи расстояние между их гидрографическими точками.",
@@ -937,7 +1420,13 @@
             "Dos River"
         ],
         "expected_behavior": "generate_code",
-        "id": 96
+        "id": 96,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)",
+            "POINT(77.994303 44.623949)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Является ли река Емель притоком реки Каратал и какая длина этого участка?",
@@ -947,7 +1436,13 @@
             "Karatal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 97
+        "id": 97,
+        "expected_wkt": [
+            "POINT(77.0401 43.2406)",
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди реки Тентек и Быж и определи, в какой бассейн они впадают.",
@@ -957,7 +1452,13 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 98
+        "id": 98,
+        "expected_wkt": [
+            "POINT(80.5218 45.4716)",
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни географические координаты истока реки Улькен Алматы и реки Уржар.",
@@ -967,7 +1468,13 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 99
+        "id": 99,
+        "expected_wkt": [
+            "POINT(76.8884931 43.1873512)",
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитай общую длину речного пути от реки Шыжын до реки Дос, учитывая все промежуточные звенья.",
@@ -977,7 +1484,13 @@
             "Dos River"
         ],
         "expected_behavior": "generate_code",
-        "id": 100
+        "id": 100,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)",
+            "POINT(77.994303 44.623949)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи, какие из перечисленных рек (Тентек, Быж) являются притоками реки Емель.",
@@ -988,7 +1501,14 @@
             "Emel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 101
+        "id": 101,
+        "expected_wkt": [
+            "POINT(80.5218 45.4716)",
+            "POINT(78.2158 44.26)",
+            "POINT(77.0401 43.2406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди расстояние между точками впадения реки Каратал и реки Улькен Алматы.",
@@ -998,7 +1518,13 @@
             "Ulken Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 102
+        "id": 102,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)",
+            "POINT(76.8884931 43.1873512)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выведи список координат для всех рек: Уржар, Дос и Каратал.",
@@ -1009,7 +1535,14 @@
             "Karatal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 103
+        "id": 103,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)",
+            "POINT(77.994303 44.623949)",
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь, является ли река Шыжын притоком реки Дос, и найди расстояние до их слияния.",
@@ -1019,7 +1552,13 @@
             "Dos River"
         ],
         "expected_behavior": "generate_code",
-        "id": 104
+        "id": 104,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)",
+            "POINT(77.994303 44.623949)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди все реки из списка (Улькен Алматы, Емель, Тентек), чьи координаты находятся в одном регионе.",
@@ -1030,7 +1569,14 @@
             "Tentek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 105
+        "id": 105,
+        "expected_wkt": [
+            "POINT(76.8884931 43.1873512)",
+            "POINT(77.0401 43.2406)",
+            "POINT(80.5218 45.4716)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверьте, достаточно ли уровней воды в реках Sarykan River и Aksu River для орошения в текущем сезоне.",
@@ -1040,7 +1586,13 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 106
+        "id": 106,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитайте суммарное потребление воды для нужд сельского хозяйства по рекам Tekeli River и Temirlik River.",
@@ -1050,7 +1602,12 @@
             "Temirlik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 107
+        "id": 107,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выявите признаки экологического стресса в реках Kurty River и Urzhar River на основе последних изменений уровня стока.",
@@ -1060,7 +1617,13 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 108
+        "id": 108,
+        "expected_wkt": [
+            "POINT(76.328361 43.889215)",
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните доступность водных ресурсов в реках Byzhy River и Lepsy River для нужд животноводства.",
@@ -1070,7 +1633,13 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 109
+        "id": 109,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)",
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найдите показатели расхода воды в реках Sarykan River и Tekeli River для оценки их влияния на урожайность.",
@@ -1080,7 +1649,13 @@
             "Tekeli River"
         ],
         "expected_behavior": "generate_code",
-        "id": 110
+        "id": 110,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определите, какая из рек, Aksu River или Temirlik River, подвержена большему риску засухи, угрожающей фермерским хозяйствам.",
@@ -1090,7 +1665,12 @@
             "Temirlik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 111
+        "id": 111,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выведите уровни водопотребления для следующих рек: Kurty River, Urzhar River и Byzhy River.",
@@ -1101,7 +1681,14 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 112
+        "id": 112,
+        "expected_wkt": [
+            "POINT(76.328361 43.889215)",
+            "POINT(81.3315 47.1457)",
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцените экологические последствия снижения уровня воды в реках Lepsy River и Sarykan River для местной флоры и фауны.",
@@ -1111,7 +1698,13 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 113
+        "id": 113,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните ирригационный потенциал рек Aksu River и Kurty River, основываясь на их текущем дебите.",
@@ -1121,7 +1714,13 @@
             "Kurty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 114
+        "id": 114,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)",
+            "POINT(76.328361 43.889215)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируйте потребление воды для сельского хозяйства в бассейнах рек Temirlik River и Byzhy River.",
@@ -1131,7 +1730,12 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 115
+        "id": 115,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверьте стабильность уровня воды в реках Tekeli River и Lepsy River с точки зрения устойчивого земледелия.",
@@ -1141,7 +1745,13 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 116
+        "id": 116,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)",
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Установите, ведут ли изменения стока в реках Urzhar River и Aksu River к экологическому дисбалансу.",
@@ -1151,7 +1761,13 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 117
+        "id": 117,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)",
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитайте общий объем воды, доступный для полива культур, из рек Sarykan River и Temirlik River.",
@@ -1161,7 +1777,12 @@
             "Temirlik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 118
+        "id": 118,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведите сравнение экологических индикаторов для рек Byzhy River и Tekeli River.",
@@ -1171,7 +1792,13 @@
             "Tekeli River"
         ],
         "expected_behavior": "generate_code",
-        "id": 119
+        "id": 119,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)",
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверьте, достаточно ли объемов воды из рек Kurty River и Lepsy River для удовлетворения сельскохозяйственного спроса.",
@@ -1181,7 +1808,13 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 120
+        "id": 120,
+        "expected_wkt": [
+            "POINT(76.328361 43.889215)",
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни средний расход воды в реке Bayankol River и реке Shilik River за последние 10 лет.",
@@ -1191,7 +1824,13 @@
             "Shilik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 121
+        "id": 121,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)",
+            "POINT(78.4793574 43.3333618)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди пиковый уровень воды, зафиксированный на реке Kishi Almaty River, и сравни его со средним многолетним показателем.",
@@ -1200,7 +1839,12 @@
             "Kishi Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 122
+        "id": 122,
+        "expected_wkt": [
+            "POINT(76.786 43.099021)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи, совпадает ли текущий тренд стока реки Kurty River с историческим паттерном реки Sharyn River.",
@@ -1210,7 +1854,13 @@
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 123
+        "id": 123,
+        "expected_wkt": [
+            "POINT(76.328361 43.889215)",
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Спрогнозируй уровни воды в реке Lepsy River на 2025 год, используя исторические данные реки Dos River.",
@@ -1220,7 +1870,13 @@
             "Dos River"
         ],
         "expected_behavior": "generate_code",
-        "id": 124
+        "id": 124,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(77.994303 44.623949)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выяви, какая из рек — Tekes River или Bayankol River — показала наибольшее увеличение расхода воды по сравнению со своим средним значением за последние 5 лет.",
@@ -1230,7 +1886,13 @@
             "Bayankol River"
         ],
         "expected_behavior": "generate_code",
-        "id": 125
+        "id": 125,
+        "expected_wkt": [
+            "POINT(80.0254 42.4932)",
+            "POINT(80.001 42.3534)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни сезонную изменчивость стока реки Shilik River с показателями реки Kishi Almaty River на основе исторических записей.",
@@ -1240,7 +1902,13 @@
             "Kishi Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 126
+        "id": 126,
+        "expected_wkt": [
+            "POINT(78.4793574 43.3333618)",
+            "POINT(76.786 43.099021)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитай разницу между максимальным зафиксированным уровнем паводка в реке Sharyn River и его историческим средним значением.",
@@ -1249,7 +1917,12 @@
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 127
+        "id": 127,
+        "expected_wkt": [
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Используя исторические данные реки Lepsy River, оцени вероятность паводка в реке Dos River в следующем сезоне.",
@@ -1259,77 +1932,125 @@
             "Dos River"
         ],
         "expected_behavior": "generate_code",
-        "id": 128
+        "id": 128,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(77.994303 44.623949)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни показатели расхода воды в реках Kurty River и Tekes River в период весеннего половодья за последние 5 лет.",
-        "category": "semi-explicit",
+        "category": "implicit",
         "expected_entities": [
             "Kurty River",
             "Tekes River"
         ],
         "expected_behavior": "generate_code",
-        "id": 129
+        "id": 129,
+        "expected_wkt": [
+            "POINT(76.328361 43.889215)",
+            "POINT(80.0254 42.4932)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй историческое отклонение стока реки Bayankol River относительно базового уровня, установленного рекой Shilik River.",
-        "category": "semi-explicit",
+        "category": "implicit",
         "expected_entities": [
             "Bayankol River",
             "Shilik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 130
+        "id": 130,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)",
+            "POINT(78.4793574 43.3333618)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Спрогнозируй среднемесячный расход воды для реки Kishi Almaty River, основываясь на исторических трендах реки Sharyn River.",
-        "category": "semi-explicit",
+        "category": "implicit",
         "expected_entities": [
             "Kishi Almaty River",
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 131
+        "id": 131,
+        "expected_wkt": [
+            "POINT(76.786 43.099021)",
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Найди год с самым высоким уровнем стока в реке Lepsy River и сравни его с аналогичным периодом в реке Tekes River.",
-        "category": "semi-explicit",
+        "category": "implicit",
         "expected_entities": [
             "Lepsy River",
             "Tekes River"
         ],
         "expected_behavior": "generate_code",
-        "id": 132
+        "id": 132,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(80.0254 42.4932)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни влияние недавних осадков на сток реки Dos River относительно исторических данных реки Kurty River.",
-        "category": "semi-explicit",
+        "category": "implicit",
         "expected_entities": [
             "Dos River",
             "Kurty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 133
+        "id": 133,
+        "expected_wkt": [
+            "POINT(77.994303 44.623949)",
+            "POINT(76.328361 43.889215)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи, является ли волатильность стока в реке Bayankol River выше, чем в реке Kishi Almaty River, используя данные за последнее десятилетие.",
-        "category": "semi-explicit",
+        "category": "implicit",
         "expected_entities": [
             "Bayankol River",
             "Kishi Almaty River"
         ],
         "expected_behavior": "generate_code",
-        "id": 134
+        "id": 134,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)",
+            "POINT(76.786 43.099021)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни исторические периоды летней засухи в реках Shilik River и Sharyn River.",
-        "category": "semi-explicit",
+        "category": "implicit",
         "expected_entities": [
             "Shilik River",
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 135
+        "id": 135,
+        "expected_wkt": [
+            "POINT(78.4793574 43.3333618)",
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь статус всех датчиков уровня воды в речной сети региона.",
@@ -1345,7 +2066,18 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 136
+        "id": 136,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(81.1434 47.4804)",
+            "POINT(80.3849 45.4753)",
+            "POINT(79.4025 46.5658)",
+            "POINT(78.5644 46.1406)",
+            "POINT(76.5574531 43.184451)",
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Есть ли неисправные датчики мониторинга в бассейнах рек Или и Каратал?",
@@ -1355,7 +2087,12 @@
             "Karatal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 137
+        "id": 137,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведи сравнение текущих уровней воды в реках Лепсы и Бутак.",
@@ -1365,7 +2102,13 @@
             "Butak River"
         ],
         "expected_behavior": "generate_code",
-        "id": 138
+        "id": 138,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(76.5574531 43.184451)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выяви реки, где датчики уровня воды фиксируют аномальные показатели в районе реки Сарыкан.",
@@ -1374,7 +2117,12 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 139
+        "id": 139,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Подготовь отчет о стабильности связи датчиков на реках Токыраун и Аягоз.",
@@ -1384,7 +2132,13 @@
             "Ayagoz River"
         ],
         "expected_behavior": "generate_code",
-        "id": 140
+        "id": 140,
+        "expected_wkt": [
+            "POINT(79.4025 46.5658)",
+            "POINT(81.1434 47.4804)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи, на каких из основных рек сейчас наблюдаются критические уровни воды согласно данным мониторинга.",
@@ -1400,7 +2154,18 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 141
+        "id": 141,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(81.1434 47.4804)",
+            "POINT(80.3849 45.4753)",
+            "POINT(79.4025 46.5658)",
+            "POINT(78.5644 46.1406)",
+            "POINT(76.5574531 43.184451)",
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь, нет ли сбоев в работе оборудования мониторинга на реке Киши Осек.",
@@ -1409,7 +2174,12 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 142
+        "id": 142,
+        "expected_wkt": [
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни состояние работоспособности гидропостов на реках Каратал и Лепсы.",
@@ -1419,7 +2189,13 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 143
+        "id": 143,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)",
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Есть ли какие-либо оповещения от датчиков уровня воды в бассейне реки Или?",
@@ -1428,7 +2204,10 @@
             "Ile River"
         ],
         "expected_behavior": "generate_code",
-        "id": 144
+        "id": 144,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сделай общий обзор текущего состояния датчиков по всем рекам в базе данных.",
@@ -1444,7 +2223,18 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 145
+        "id": 145,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(81.1434 47.4804)",
+            "POINT(80.3849 45.4753)",
+            "POINT(79.4025 46.5658)",
+            "POINT(78.5644 46.1406)",
+            "POINT(76.5574531 43.184451)",
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Нужно ли провести техническое обслуживание датчиков на реках Аягоз и Токыраун?",
@@ -1454,7 +2244,13 @@
             "Tokyraun River"
         ],
         "expected_behavior": "generate_code",
-        "id": 146
+        "id": 146,
+        "expected_wkt": [
+            "POINT(81.1434 47.4804)",
+            "POINT(79.4025 46.5658)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Все ли датчики в районе рек Бутак и Сарыкан передают данные без ошибок?",
@@ -1464,7 +2260,13 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 147
+        "id": 147,
+        "expected_wkt": [
+            "POINT(76.5574531 43.184451)",
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какие реки сейчас показывают повышенный уровень воды по данным последних замеров?",
@@ -1480,7 +2282,18 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 148
+        "id": 148,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(81.1434 47.4804)",
+            "POINT(80.3849 45.4753)",
+            "POINT(79.4025 46.5658)",
+            "POINT(78.5644 46.1406)",
+            "POINT(76.5574531 43.184451)",
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проверь наличие периодов отсутствия сигнала от датчиков на реках Лепсы и Киши Осек.",
@@ -1490,7 +2303,13 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 149
+        "id": 149,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй стабильность показаний датчиков уровня воды для рек Или и Каратал.",
@@ -1500,7 +2319,12 @@
             "Karatal River"
         ],
         "expected_behavior": "generate_code",
-        "id": 150
+        "id": 150,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй риск паводков на реках Bayankol River и Ili River.",
@@ -1510,7 +2334,13 @@
             "Ili River"
         ],
         "expected_behavior": "generate_code",
-        "id": 151
+        "id": 151,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)",
+            "POINT(80.046 43.4)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени сезонный сток для системы рек Lepsy River и Shilik River.",
@@ -1520,7 +2350,13 @@
             "Shilik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 152
+        "id": 152,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(78.4793574 43.3333618)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какие реки в бассейне Sarykan River наиболее подвержены весенним половодьям?",
@@ -1529,7 +2365,12 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 153
+        "id": 153,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни вероятность наводнений на реках Shynzhaly River и Shyzhyn River.",
@@ -1539,7 +2380,13 @@
             "Shyzhyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 154
+        "id": 154,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)",
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведи анализ динамики весеннего половодья для рек Bayankol River и Lepsy River.",
@@ -1549,7 +2396,13 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 155
+        "id": 155,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)",
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени угрозу паводков для бассейна Ili River, включая притоки Sarykan River и Shynzhaly River.",
@@ -1560,7 +2413,14 @@
             "Shynzhaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 156
+        "id": 156,
+        "expected_wkt": [
+            "POINT(80.046 43.4)",
+            "POINT(79.5507 45.2436)",
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какова прогнозируемая амплитуда сезонного стока для рек Shilik River и Shyzhyn River?",
@@ -1570,7 +2430,13 @@
             "Shyzhyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 157
+        "id": 157,
+        "expected_wkt": [
+            "POINT(78.4793574 43.3333618)",
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выяви наиболее опасные периоды паводка для рек Bayankol River и Sarykan River.",
@@ -1580,7 +2446,13 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 158
+        "id": 158,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)",
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй риск перелива рек Lepsy River и Shynzhaly River во время весеннего таяния.",
@@ -1590,7 +2462,13 @@
             "Shynzhaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 159
+        "id": 159,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни уровни сезонного расхода воды в реках Ili River и Shyzhyn River.",
@@ -1600,7 +2478,13 @@
             "Shyzhyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 160
+        "id": 160,
+        "expected_wkt": [
+            "POINT(80.046 43.4)",
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени потенциал паводкового затопления для бассейна Shynzhaly River и рек Shilik River.",
@@ -1610,7 +2494,13 @@
             "Shilik River"
         ],
         "expected_behavior": "generate_code",
-        "id": 161
+        "id": 161,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)",
+            "POINT(78.4793574 43.3333618)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Исследуй корреляцию между снеготаянием и паводками на реках Bayankol River и Lepsy River.",
@@ -1620,7 +2510,13 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 162
+        "id": 162,
+        "expected_wkt": [
+            "POINT(80.001 42.3534)",
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Подготовь отчет по рискам весеннего половодья для системы рек Sarykan River и Shyzhyn River.",
@@ -1630,7 +2526,13 @@
             "Shyzhyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 163
+        "id": 163,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(78.4551 44.5147)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени вероятность экстремальных паводков на реках Ili River и Shynzhaly River.",
@@ -1640,7 +2542,13 @@
             "Shynzhaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 164
+        "id": 164,
+        "expected_wkt": [
+            "POINT(80.046 43.4)",
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй гидрологическую обстановку (паводки) для рек Shyzhyn River и Sarykan River.",
@@ -1650,7 +2558,13 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 165
+        "id": 165,
+        "expected_wkt": [
+            "POINT(78.4551 44.5147)",
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй структуру притоков реки Талгар, чтобы определить основные узлы слияния в её бассейне.",
@@ -1659,7 +2573,12 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 166
+        "id": 166,
+        "expected_wkt": [
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитай общую протяженность речной сети, соединяющей реку Текес и река Тентек.",
@@ -1669,7 +2588,13 @@
             "Tentek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 167
+        "id": 167,
+        "expected_wkt": [
+            "POINT(80.0254 42.4932)",
+            "POINT(80.5218 45.4716)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени топологическую связность бассейна реки Эмель с притоками, такими как река Сарыкан.",
@@ -1679,7 +2604,13 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 168
+        "id": 168,
+        "expected_wkt": [
+            "POINT(77.0401 43.2406)",
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи пространственное пересечение координат русел рек Шынжалы и реки Талгар.",
@@ -1689,7 +2620,13 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 169
+        "id": 169,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)",
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведи анализ иерархии речной сети, начиная от ручья Терисбутак до основных артерий региона.",
@@ -1698,7 +2635,12 @@
             "Terisbuthak Creek"
         ],
         "expected_behavior": "generate_code",
-        "id": 170
+        "id": 170,
+        "expected_wkt": [
+            "POINT(76.8376879 43.077879)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Вычисли гидрологическое расстояние между точками слияния реки Киши-Осек и реки Талгар.",
@@ -1708,7 +2650,13 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 171
+        "id": 171,
+        "expected_wkt": [
+            "POINT(79.689005 43.9318)",
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени плотность дренажной сети в бассейне реки Текес, учитывая её топологические особенности.",
@@ -1717,7 +2665,12 @@
             "Tekes River"
         ],
         "expected_behavior": "generate_code",
-        "id": 172
+        "id": 172,
+        "expected_wkt": [
+            "POINT(80.0254 42.4932)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй направление стока от реки Шынжалы к основным речным системам, используя топологию сети.",
@@ -1726,7 +2679,12 @@
             "Shynzhaly River"
         ],
         "expected_behavior": "generate_code",
-        "id": 173
+        "id": 173,
+        "expected_wkt": [
+            "POINT(80.3849 45.4753)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи все точки пересечения водоразделов между реками Эмель и Тентек.",
@@ -1736,7 +2694,13 @@
             "Tentek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 174
+        "id": 174,
+        "expected_wkt": [
+            "POINT(77.0401 43.2406)",
+            "POINT(80.5218 45.4716)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитай коэффициент связности речной сети для системы, включающей река Сарыкан.",
@@ -1745,7 +2709,12 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 175
+        "id": 175,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведи пространственный анализ близости русла ручья Терисбутак к реке Талгар.",
@@ -1755,7 +2724,13 @@
             "Talgar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 176
+        "id": 176,
+        "expected_wkt": [
+            "POINT(76.8376879 43.077879)",
+            "POINT(77.236018 43.303213)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни топологическую сложность бассейнов рек Сарыкан и реки Эмель.",
@@ -1765,7 +2740,13 @@
             "Emel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 177
+        "id": 177,
+        "expected_wkt": [
+            "POINT(79.5507 45.2436)",
+            "POINT(77.0401 43.2406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени влияние топологии притоков реки Тентек на общую структуру речной сети региона.",
@@ -1774,7 +2755,12 @@
             "Tentek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 178
+        "id": 178,
+        "expected_wkt": [
+            "POINT(80.5218 45.4716)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выяви потенциальные пути распространения паводка по речной сети, начиная от реки Киши-Осек.",
@@ -1783,7 +2769,12 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 179
+        "id": 179,
+        "expected_wkt": [
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй конфигурацию речной сети, объединяющей реки Текес и Сарыкан.",
@@ -1793,7 +2784,13 @@
             "Sarykan River"
         ],
         "expected_behavior": "generate_code",
-        "id": 180
+        "id": 180,
+        "expected_wkt": [
+            "POINT(80.0254 42.4932)",
+            "POINT(79.5507 45.2436)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцените влияние изменения уровня воды в реке Шарын на состояние прилегающих экосистем и биоразнообразие.",
@@ -1802,7 +2799,12 @@
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 181
+        "id": 181,
+        "expected_wkt": [
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируйте риски дефицита воды для сельскохозяйственных нужд в бассейне реки Уржар.",
@@ -1811,7 +2813,12 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 182
+        "id": 182,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как текущее состояние стока реки Турген влияет на доступность воды для орошения садов?",
@@ -1820,7 +2827,12 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 183
+        "id": 183,
+        "expected_wkt": [
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцените экологическую устойчивость пойменных земель вдоль реки Киши Осек в контексте изменения климата.",
@@ -1829,7 +2841,12 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 184
+        "id": 184,
+        "expected_wkt": [
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Исследуйте корреляцию между объемом потребления воды из реки Бызж и урожайностью местных культур.",
@@ -1838,7 +2855,12 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 185
+        "id": 185,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведите анализ влияния загрязнения реки Бутак на качество воды, используемой в сельском хозяйстве.",
@@ -1847,7 +2869,12 @@
             "Butak River"
         ],
         "expected_behavior": "generate_code",
-        "id": 186
+        "id": 186,
+        "expected_wkt": [
+            "POINT(76.5574531 43.184451)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцените потенциальное влияние снижения уровня реки Токыраун на потребление воды животноводческими хозяйствами.",
@@ -1856,7 +2883,12 @@
             "Tokyraun River"
         ],
         "expected_behavior": "generate_code",
-        "id": 187
+        "id": 187,
+        "expected_wkt": [
+            "POINT(79.4025 46.5658)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравните экологический статус речных экосистем в бассейнах рек Шарын и Уржар.",
@@ -1866,7 +2898,13 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 188
+        "id": 188,
+        "expected_wkt": [
+            "POINT(79.190577 43.344053)",
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какова вероятность возникновения засухи в регионе реки Турген и её последствия для ирригационных систем?",
@@ -1875,7 +2913,12 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 189
+        "id": 189,
+        "expected_wkt": [
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцените нагрузку на водные ресурсы реки Киши Осек в связи с расширением сельскохозяйственных угодий.",
@@ -1884,7 +2927,12 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 190
+        "id": 190,
+        "expected_wkt": [
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируйте динамику изменения биоразнообразия в дельте реки Бызж под влиянием интенсивного забора воды.",
@@ -1893,7 +2941,12 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 191
+        "id": 191,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Исследуйте влияние сезонных колебаний стока реки Бутак на устойчивость местных агроценозов.",
@@ -1902,7 +2955,12 @@
             "Butak River"
         ],
         "expected_behavior": "generate_code",
-        "id": 192
+        "id": 192,
+        "expected_wkt": [
+            "POINT(76.5574531 43.184451)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сделайте прогноз потребности в воде для орошения в бассейне реки Токыраун на основе исторических данных о стоке.",
@@ -1911,7 +2969,12 @@
             "Tokyraun River"
         ],
         "expected_behavior": "generate_code",
-        "id": 193
+        "id": 193,
+        "expected_wkt": [
+            "POINT(79.4025 46.5658)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как изменение гидрологического режима реки Шарын может повлиять на развитие экологического туризма в регионе?",
@@ -1920,7 +2983,12 @@
             "Sharyn River"
         ],
         "expected_behavior": "generate_code",
-        "id": 194
+        "id": 194,
+        "expected_wkt": [
+            "POINT(79.190577 43.344053)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцените риски засоления почв вблизи реки Уржар вследствие неэффективного использования поливной воды.",
@@ -1929,7 +2997,12 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 195
+        "id": 195,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведи сравнительный анализ исторических показателей расхода воды в Koksu River и Emel River за последние 10 лет для выявления сезонных закономерностей.",
@@ -1939,7 +3012,13 @@
             "Emel River"
         ],
         "expected_behavior": "generate_code",
-        "id": 196
+        "id": 196,
+        "expected_wkt": [
+            "POINT(78.5517 44.394)",
+            "POINT(77.0401 43.2406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "На основе исторических данных о стоке, разработай модель прогнозирования пиковых паводков для реки Aksu River на следующий сезон.",
@@ -1948,7 +3027,12 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 197
+        "id": 197,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй долгосрочные тренды изменения уровня воды в бассейнах рек Lepsy River и Turgen River.",
@@ -1958,7 +3042,13 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 198
+        "id": 198,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Оцени корреляцию между историческими изменениями осадков и динамикой стока в реках Urzhar River и Byzhy River.",
@@ -1968,7 +3058,13 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 199
+        "id": 199,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)",
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Выяви годы экстремальных паводков в Kishi Osek River, сравнив текущие показатели с историческими записями.",
@@ -1977,7 +3073,12 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 200
+        "id": 200,
+        "expected_wkt": [
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Создай модель прогнозирования риска летней засухи для бассейна, включающего Aksu River и Lepsy River, используя исторические данные.",
@@ -1987,7 +3088,13 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 201
+        "id": 201,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)",
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Определи, какая из рек демонстрирует более значительную межгодовую изменчивость стока: Emel River или Turgen River, на основе ретроспективного анализа.",
@@ -1997,7 +3104,13 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 202
+        "id": 202,
+        "expected_wkt": [
+            "POINT(77.0401 43.2406)",
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рассчитай вероятность превышения порога 50-летнего паводка для Koksu River, используя исторический ряд данных.",
@@ -2006,7 +3119,12 @@
             "Koksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 203
+        "id": 203,
+        "expected_wkt": [
+            "POINT(78.5517 44.394)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни гидрологические режимы рек Byzhy River и Urzhar River на основе их исторических рядов стока.",
@@ -2016,7 +3134,13 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 204
+        "id": 204,
+        "expected_wkt": [
+            "POINT(78.2158 44.26)",
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй, как исторические изменения в сроках снеготаяния повлияли на динамику стока в Lepsy River.",
@@ -2025,7 +3149,12 @@
             "Lepsy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 205
+        "id": 205,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Разработай прогностическую модель доступности воды в бассейне рек Aksu River и Kishi Osek River, опираясь на исторические показатели.",
@@ -2035,7 +3164,13 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "generate_code",
-        "id": 206
+        "id": 206,
+        "expected_wkt": [
+            "POINT(78.4325 45.5358)",
+            "POINT(79.689005 43.9318)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни частоту экстремальных межени в реках Emel River и Turgen River за последние два десятилетия.",
@@ -2045,7 +3180,13 @@
             "Turgen River"
         ],
         "expected_behavior": "generate_code",
-        "id": 207
+        "id": 207,
+        "expected_wkt": [
+            "POINT(77.0401 43.2406)",
+            "POINT(77.3706 43.2057)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проанализируй десятилетний тренд минимальных уровней воды в Koksu River и Byzhy River.",
@@ -2055,7 +3196,13 @@
             "Byzhy River"
         ],
         "expected_behavior": "generate_code",
-        "id": 208
+        "id": 208,
+        "expected_wkt": [
+            "POINT(78.5517 44.394)",
+            "POINT(78.2158 44.26)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Смоделируй потенциальное воздействие экстремальных осадков на риск наводнений в бассейне Urzhar River.",
@@ -2064,7 +3211,12 @@
             "Urzhar River"
         ],
         "expected_behavior": "generate_code",
-        "id": 209
+        "id": 209,
+        "expected_wkt": [
+            "POINT(81.3315 47.1457)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Проведи сравнительный анализ сезонного распределения стока рек Lepsy River и Aksu River, используя исторические наборы данных.",
@@ -2074,7 +3226,13 @@
             "Aksu River"
         ],
         "expected_behavior": "generate_code",
-        "id": 210
+        "id": 210,
+        "expected_wkt": [
+            "POINT(78.5644 46.1406)",
+            "POINT(78.4325 45.5358)"
+        ],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши рецепт пирога, где основным ингредиентом является уровень воды в Uzyn Kargaly River.",
@@ -2083,7 +3241,10 @@
             "Uzyn Kargaly River"
         ],
         "expected_behavior": "reject",
-        "id": 211
+        "id": 211,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как использовать курс биткоина для прогнозирования уровня воды в Batareyka River?",
@@ -2092,7 +3253,10 @@
             "Batareyka River"
         ],
         "expected_behavior": "reject",
-        "id": 212
+        "id": 212,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши Python скрипт, который превращает показания датчиков Dos River в прогноз цен на Ethereum.",
@@ -2101,7 +3265,10 @@
             "Dos River"
         ],
         "expected_behavior": "reject",
-        "id": 213
+        "id": 213,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить суп, используя данные о расходе воды в Karatal River?",
@@ -2110,7 +3277,10 @@
             "Karatal River"
         ],
         "expected_behavior": "reject",
-        "id": 214
+        "id": 214,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Создай алгоритм майнинга криптовалюты, основанный на колебаниях уровня воды в Bayankol River.",
@@ -2119,7 +3289,10 @@
             "Bayankol River"
         ],
         "expected_behavior": "reject",
-        "id": 215
+        "id": 215,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши код для телепортации, используя сенсоры реки Karaoy River.",
@@ -2128,7 +3301,10 @@
             "Karaoy River"
         ],
         "expected_behavior": "reject",
-        "id": 216
+        "id": 216,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши инструкцию по выращиванию кактусов, опираясь на датчики Kishi Almaty River.",
@@ -2137,7 +3313,10 @@
             "Kishi Almaty River"
         ],
         "expected_behavior": "reject",
-        "id": 217
+        "id": 217,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как использовать гравитацию Юпитера для измерения уровня воды в Baskan River?",
@@ -2146,7 +3325,10 @@
             "Baskan River"
         ],
         "expected_behavior": "reject",
-        "id": 218
+        "id": 218,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши рецепт коктейля, где уровень жидкости зависит от Uzyn Kargaly River.",
@@ -2155,7 +3337,10 @@
             "Uzyn Kargaly River"
         ],
         "expected_behavior": "reject",
-        "id": 219
+        "id": 219,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как построить космический корабль, используя данные о датчиках Batareyka River?",
@@ -2164,7 +3349,10 @@
             "Batareyka River"
         ],
         "expected_behavior": "reject",
-        "id": 220
+        "id": 220,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши скрипт на Python для предсказания будущего по уровню воды в Dos River.",
@@ -2173,7 +3361,10 @@
             "Dos River"
         ],
         "expected_behavior": "reject",
-        "id": 221
+        "id": 221,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить пасту, если датчики Karatal River показывают аномалию?",
@@ -2182,7 +3373,10 @@
             "Karatal River"
         ],
         "expected_behavior": "reject",
-        "id": 222
+        "id": 222,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как инвестировать в золото, глядя на уровень воды в Bayankol River?",
@@ -2191,7 +3385,10 @@
             "Bayankol River"
         ],
         "expected_behavior": "reject",
-        "id": 223
+        "id": 223,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши код для управления роботом, используя данные Karaoy River.",
@@ -2200,7 +3397,10 @@
             "Karaoy River"
         ],
         "expected_behavior": "reject",
-        "id": 224
+        "id": 224,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как создать черную дыру, используя поток воды в Kishi Almaty River?",
@@ -2209,7 +3409,10 @@
             "Kishi Almaty River"
         ],
         "expected_behavior": "reject",
-        "id": 225
+        "id": 225,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить яблочный пирог, используя уровень паводка реки Шарын?",
@@ -2218,7 +3421,10 @@
             "Sharyn River"
         ],
         "expected_behavior": "reject",
-        "id": 226
+        "id": 226,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите Python-скрипт для майнинга биткоина, основываясь на сезонном расходе реки Или.",
@@ -2227,7 +3433,10 @@
             "Ile River"
         ],
         "expected_behavior": "reject",
-        "id": 227
+        "id": 227,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как построить ракету, используя сезонные изменения реки Аягоз?",
@@ -2236,7 +3445,10 @@
             "Ayagoz River"
         ],
         "expected_behavior": "reject",
-        "id": 228
+        "id": 228,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рецепт борща, вдохновленный риском наводнения реки Аксу.",
@@ -2245,7 +3457,10 @@
             "Aksu River"
         ],
         "expected_behavior": "reject",
-        "id": 229
+        "id": 229,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите код на Python для предсказания курса Ethereum на основе стока реки Осек.",
@@ -2254,7 +3469,10 @@
             "Osek River"
         ],
         "expected_behavior": "reject",
-        "id": 230
+        "id": 230,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить пасту, используя данные о весеннем половодье реки Коктал?",
@@ -2263,7 +3481,10 @@
             "Koktal River"
         ],
         "expected_behavior": "reject",
-        "id": 231
+        "id": 231,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как рассчитать траекторию полета на Луну, используя уровень воды в реке Каскелен?",
@@ -2272,7 +3493,10 @@
             "Kaskelen River"
         ],
         "expected_behavior": "reject",
-        "id": 232
+        "id": 232,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Создайте Python-скрипт для создания NFT, основываясь на паводке реки Кумбель.",
@@ -2281,7 +3505,10 @@
             "Kumbel River"
         ],
         "expected_behavior": "reject",
-        "id": 233
+        "id": 233,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Инструкция по приготовлению пиццы, используя сезонный разлив реки Шарын.",
@@ -2290,7 +3517,10 @@
             "Sharyn River"
         ],
         "expected_behavior": "reject",
-        "id": 234
+        "id": 234,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как запустить спутник, используя расход воды реки Или?",
@@ -2299,7 +3529,10 @@
             "Ile River"
         ],
         "expected_behavior": "reject",
-        "id": 235
+        "id": 235,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите алгоритм на Python для торговли криптовалютой, используя уровень реки Аягоз?",
@@ -2308,7 +3541,10 @@
             "Ayagoz River"
         ],
         "expected_behavior": "reject",
-        "id": 236
+        "id": 236,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рецепт коктейля 'Весенний паводок реки Аксу'.",
@@ -2317,7 +3553,10 @@
             "Aksu River"
         ],
         "expected_behavior": "reject",
-        "id": 237
+        "id": 237,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как создать блокчейн, используя данные о стоке реки Осек?",
@@ -2326,7 +3565,10 @@
             "Osek River"
         ],
         "expected_behavior": "reject",
-        "id": 238
+        "id": 238,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите Python-скрипт для игры в космосе, используя уровень реки Коктал?",
@@ -2335,7 +3577,10 @@
             "Koktal River"
         ],
         "expected_behavior": "reject",
-        "id": 239
+        "id": 239,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как испечь хлеб, используя сезонные колебания реки Каскелен?",
@@ -2344,7 +3589,10 @@
             "Kaskelen River"
         ],
         "expected_behavior": "reject",
-        "id": 240
+        "id": 240,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите Python-скript для расчета расстояния между рекой Талгар и Луной.",
@@ -2353,7 +3601,10 @@
             "Talgar River"
         ],
         "expected_behavior": "reject",
-        "id": 241
+        "id": 241,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить пирог, форма которого повторяет разветвление притоков реки Тентек?",
@@ -2362,7 +3613,10 @@
             "Tentek River"
         ],
         "expected_behavior": "reject",
-        "id": 242
+        "id": 242,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какой криптовалютный алгоритм лучше всего подходит для моделирования географических координат реки Кумбель?",
@@ -2371,7 +3625,10 @@
             "Kumbel River"
         ],
         "expected_behavior": "reject",
-        "id": 243
+        "id": 243,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите рецепт соуса, вкус которого соответствует топографии русла реки Дос.",
@@ -2380,7 +3637,10 @@
             "Dos River"
         ],
         "expected_behavior": "reject",
-        "id": 244
+        "id": 244,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как вычислить массу черной дыры, используя длину реки Караой?",
@@ -2389,7 +3649,10 @@
             "Karaoy River"
         ],
         "expected_behavior": "reject",
-        "id": 245
+        "id": 245,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Создайте программу на Python для поиска кратчайшего пути между созвездием Ориона и рекой Шилик.",
@@ -2398,7 +3661,10 @@
             "Shilik River"
         ],
         "expected_behavior": "reject",
-        "id": 246
+        "id": 246,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как добывать биткоины, используя данные о расположении притоков реки Каскелен?",
@@ -2407,7 +3673,10 @@
             "Kaskelen River"
         ],
         "expected_behavior": "reject",
-        "id": 247
+        "id": 247,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите эссе о колонизации Марса, основываясь на географических координатах реки Аксу.",
@@ -2416,16 +3685,22 @@
             "Aksu River"
         ],
         "expected_behavior": "reject",
-        "id": 248
+        "id": 248,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рецепт коктейля, ингредиенты которого зависят от расстояния между рекой Талгар и Юпитером.",
-        "category": "anomalulus",
+        "category": "anomalous",
         "expected_entities": [
             "Talgar River"
         ],
         "expected_behavior": "reject",
-        "id": 249
+        "id": 249,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите скрипт на Python, который рассчитывает орбиту спутника относительно топографической сети притоков реки Тентек.",
@@ -2434,7 +3709,10 @@
             "Tentek River"
         ],
         "expected_behavior": "reject",
-        "id": 250
+        "id": 250,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить десерт, визуально напоминающий гидрографическую сеть реки Кумбель?",
@@ -2443,7 +3721,10 @@
             "Kumbel River"
         ],
         "expected_behavior": "reject",
-        "id": 251
+        "id": 251,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Инструкция по созданию смарт-контракта, привязанного к географическим координатам реки Дос.",
@@ -2452,7 +3733,10 @@
             "Dos River"
         ],
         "expected_behavior": "reject",
-        "id": 252
+        "id": 252,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как рассчитать расстояние до Альфы Центавра, используя ширину реки Караой?",
@@ -2461,7 +3745,10 @@
             "Karaoy River"
         ],
         "expected_behavior": "reject",
-        "id": 253
+        "id": 253,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Python-скрипт для генерации случайных чисел на основе извилистости русла реки Шилик.",
@@ -2470,7 +3757,10 @@
             "Shilik River"
         ],
         "expected_behavior": "reject",
-        "id": 254
+        "id": 254,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рецепт хлеба, текстура которого имитирует рельеф бассейна реки Каскелен.",
@@ -2479,7 +3769,10 @@
             "Kaskelen River"
         ],
         "expected_behavior": "reject",
-        "id": 255
+        "id": 255,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рецепт блюда, которое можно приготовить, используя только воду из реки Талгар.",
@@ -2488,7 +3781,10 @@
             "Talgar River"
         ],
         "expected_behavior": "reject",
-        "id": 256
+        "id": 256,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите скрипт на Python для расчета потребности в поливе, основываясь на уровне воды в реке Баянколь.",
@@ -2497,7 +3793,10 @@
             "Bayankol River"
         ],
         "expected_behavior": "reject",
-        "id": 257
+        "id": 257,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как изменится курс биткоина, если уровень воды в реке Эмел упадет из-за засухи?",
@@ -2506,7 +3805,10 @@
             "Emel River"
         ],
         "expected_behavior": "reject",
-        "id": 258
+        "id": 258,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Может ли космический корабль использовать воду из реки Баскан для охлаждения двигателей?",
@@ -2515,7 +3817,10 @@
             "Baskan River"
         ],
         "expected_behavior": "reject",
-        "id": 259
+        "id": 259,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить органическое удобрение, используя ил из реки Караой?",
@@ -2524,7 +3829,10 @@
             "Karaoy River"
         ],
         "expected_behavior": "reject",
-        "id": 260
+        "id": 260,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Рецепт засолки овощей, если у нас есть только вода из реки Киши Осек.",
@@ -2533,7 +3841,10 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "reject",
-        "id": 261
+        "id": 261,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите код на Python, который предсказывает популяцию рыб в реке Бутак на основе цен на нефть.",
@@ -2542,7 +3853,10 @@
             "Butak River"
         ],
         "expected_behavior": "reject",
-        "id": 262
+        "id": 262,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как вырастить картофель на Марсе, используя воду из реки Талгар?",
@@ -2551,7 +3865,10 @@
             "Talgar River"
         ],
         "expected_behavior": "reject",
-        "id": 263
+        "id": 263,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Создайте прогноз стоимости токенов, привязанных к уровню воды в реке Баянколь.",
@@ -2560,7 +3877,10 @@
             "Bayankol River"
         ],
         "expected_behavior": "reject",
-        "id": 264
+        "id": 264,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Расскажите анекдот про экологическую катастрофу на реке Эмел.",
@@ -2569,7 +3889,10 @@
             "Emel River"
         ],
         "expected_behavior": "reject",
-        "id": 265
+        "id": 265,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите программу на Python для автоматического полива полей в бассейне реки Караой.",
@@ -2578,7 +3901,10 @@
             "Karaoy River"
         ],
         "expected_behavior": "reject",
-        "id": 266
+        "id": 266,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как приготовить освежающий напиток, используя лед из реки Баскан?",
@@ -2587,7 +3913,10 @@
             "Baskan River"
         ],
         "expected_behavior": "reject",
-        "id": 267
+        "id": 267,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Какая криптовалюта лучше всего подходит для инвестиций в сельское хозяйство реки Бутак?",
@@ -2596,7 +3925,10 @@
             "Butak River"
         ],
         "expected_behavior": "reject",
-        "id": 268
+        "id": 268,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как построить ферму на Луне, используя системы орошения реки Киши Осек?",
@@ -2605,7 +3937,10 @@
             "Kishi Osek River"
         ],
         "expected_behavior": "reject",
-        "id": 269
+        "id": 269,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напишите функцию на Python, которая рассчитывает индекс NDVI, используя только уровень воды в реке Талгар.",
@@ -2614,7 +3949,10 @@
             "Talgar River"
         ],
         "expected_behavior": "reject",
-        "id": 270
+        "id": 270,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Можно ли использовать исторические данные реки Bayankol River для предсказания курса биткоина?",
@@ -2623,7 +3961,10 @@
             "Bayankol River"
         ],
         "expected_behavior": "reject",
-        "id": 271
+        "id": 271,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши Python-скрипт для сравнения темпов инфляции, используя данные реки Sharyn River.",
@@ -2632,7 +3973,10 @@
             "Sharyn River"
         ],
         "expected_behavior": "reject",
-        "id": 272
+        "id": 272,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как изменился состав традиционных рецептов хлеба, если сравнить их с периодом, когда рядом протекала Karatal River?",
@@ -2641,90 +3985,129 @@
             "Karatal River"
         ],
         "expected_behavior": "reject",
-        "id": 273
+        "id": 273,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни динамику добычи золота в XIX и XX веках.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 274
+        "id": 274,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как предсказать вероятность солнечной вспышки, используя данные прошлых циклов?",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 275
+        "id": 275,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши код для моделирования роста популяции кроликов в зависимости от количества корма.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 276
+        "id": 276,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни прибыльность акций технологического сектора за последние три десятилетия.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 277
+        "id": 277,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как предсказать следующую волну миграции, основываясь на исторических трендах?",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 278
+        "id": 278,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши скрипт на Python для регрессионного анализа цен на недвижимость.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 279
+        "id": 279,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни историческую стоимость проживания в крупных городах по сравнению с прошлым веком.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 280
+        "id": 280,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни исторические методы прогнозирования погоды и современные алгоритмы.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 281
+        "id": 281,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как предсказать падение стоимости криптовалюты на основе анализа волатильности?",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 282
+        "id": 282,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Напиши функцию для сравнения двух временных рядов в библиотеке Pandas.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 283
+        "id": 283,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Как анализировать исторические изменения климата на Марсе?",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 284
+        "id": 284,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     },
     {
         "query": "Сравни эффективность различных стратегий трейдинга на основе исторических графиков.",
         "category": "anomalous",
         "expected_entities": [],
         "expected_behavior": "reject",
-        "id": 285
+        "id": 285,
+        "expected_wkt": [],
+        "expected_topology": [],
+        "expected_numeric_facts": []
     }
 ]

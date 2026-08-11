@@ -3,12 +3,12 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-# Имя твоего файла
+# Имя твоего файла с результатами генерации
 RESULTS_FILE = "generation_results.json" 
 
 def post_process_metrics():
     try:
-        # Python без проблем прочитает хоть миллион строк за секунды
+        # Читаем JSON с результатами
         with open(RESULTS_FILE, 'r', encoding='utf-8') as f:
             results_data = json.load(f)
     except Exception as e:
@@ -16,7 +16,7 @@ def post_process_metrics():
         return
 
     print("\n" + "="*70)
-    print("📊 ФИНАЛЬНЫЕ МЕТРИКИ ДЛЯ ПРЕДЗАЩИТЫ (Исправленные)")
+    print("📊 ФИНАЛЬНЫЕ МЕТРИКИ (Исправленные для IEEE Access)")
     print("="*70)
 
     for model_data in results_data:
@@ -28,36 +28,37 @@ def post_process_metrics():
 
         precisions, recalls, f1_scores = [], [], []
         
-        # Статистика генерации кода для Ablation Study
+        # Статистика генерации кода для Ablation Study (Имя заменено на HydroGraphRAG)
         stats = {
             "Baseline": {"syntax_ok": 0, "map_ok": 0, "total": 0},
             "VectorRAG": {"syntax_ok": 0, "map_ok": 0, "total": 0},
-            "GeoGraphRAG": {"syntax_ok": 0, "map_ok": 0, "total": 0}
+            "HydroGraphRAG": {"syntax_ok": 0, "map_ok": 0, "total": 0}
         }
 
         for item in metrics:
             # 1. Подсчет успешности написания кода
-            for mode in ["Baseline", "VectorRAG", "GeoGraphRAG"]:
+            for mode in ["Baseline", "VectorRAG", "HydroGraphRAG"]:
                 if mode in item:
                     stats[mode]["total"] += 1
                     if item[mode].get("syntax"): stats[mode]["syntax_ok"] += 1
                     if item[mode].get("has_map"): stats[mode]["map_ok"] += 1
 
-            # 2. Подсчет честных метрик Ретривера
-            geographrag = item.get("GeoGraphRAG", {})
-            retrieval = geographrag.get("retrieval")
-            triples_count = geographrag.get("triples", 0)
+            # 2. Подсчет честных метрик Ретривера (Entity-level)
+            hydrographrag = item.get("HydroGraphRAG", {})
+            retrieval = hydrographrag.get("retrieval")
             
             if retrieval and retrieval.get("status") != "no_ground_truth":
                 tp = retrieval.get("targets_found", 0)
+                # Берем реальное количество извлеченных сущностей, а не триплетов!
+                retrieved_entities = retrieval.get("retrieved_total", 0) 
                 
                 # Recall (Target Discovery Rate)
                 recall = retrieval.get("tdr", 0.0)
                 recalls.append(recall)
                 
-                # Честный Precision (Context Density)
-                if triples_count > 0:
-                    precision = min(tp / triples_count, 1.0)
+                # Честный Entity-level Precision
+                if retrieved_entities > 0:
+                    precision = min(tp / retrieved_entities, 1.0)
                 else:
                     precision = 0.0
                     
@@ -77,18 +78,18 @@ def post_process_metrics():
         def pct(part, whole): return (part / whole * 100) if whole else 0.0
 
         print(f"\n🚀 Модель: {model_name}")
-        print("-" * 55)
-        print("1. Метрики извлечения подграфа (GeoGraphRAG):")
-        print(f"   Precision (Плотность контекста) : {avg(precisions):.4f}")
-        print(f"   Recall (Полнота нахождения)     : {avg(recalls):.4f}")
+        print("-" * 57)
+        print("1. Метрики извлечения подграфа (HydroGraphRAG):")
+        print(f"   Precision (Entity-level)        : {avg(precisions):.4f}")
+        print(f"   Recall (Target Discovery Rate)  : {avg(recalls):.4f}")
         print(f"   F1-Score (Баланс)               : {avg(f1_scores):.4f}")
         
         print("\n2. Способность сгенерировать карту (Ablation Study):")
-        for mode in ["Baseline", "VectorRAG", "GeoGraphRAG"]:
+        for mode in ["Baseline", "VectorRAG", "HydroGraphRAG"]:
             s = stats[mode]
             syn_pct = pct(s['syntax_ok'], s['total'])
             map_pct = pct(s['map_ok'], s['total'])
-            print(f"   [{mode.ljust(11)}] Код без ошибок: {syn_pct:5.1f}% | Карта создана: {map_pct:5.1f}%")
+            print(f"   [{mode.ljust(13)}] Код без ошибок: {syn_pct:5.1f}% | Карта создана: {map_pct:5.1f}%")
 
     print("\n" + "="*70)
 

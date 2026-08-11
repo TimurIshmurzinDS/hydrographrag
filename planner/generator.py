@@ -1,16 +1,20 @@
 import os
+import hashlib
 from langchain_ollama import ChatOllama
 
 class SolutionPlanner:
     """
     Модуль для генерации планов моделирования и кода.
-    Адаптирован для честного Ablation Study:
-    Базовые модели и GeoGraphRAG используют единые шаблоны и правила OOD.
+    Адаптирован для честного Ablation Study (Пункты 3, 14, 15):
+    Базовые модели и HydroGraphRAG используют единые шаблоны и правила OOD,
+    явно возвращая решение decision: ANSWER или decision: ABSTAIN.
     """
     def __init__(self, model_name="qwen2.5-coder:7b"):
-        # Температура 0 для максимальной детерминированности
+        # Температура 0 для максимальной детерминированности (Пункт 27)
         self.llm = ChatOllama(model=model_name, temperature=0)
         self.shp_path = "data/basin_data.shp"
+        self.last_prompt = ""
+        self.last_prompt_hash = ""
 
     def _get_unified_prompt(self, user_query, context_type, context_data, points_list_str, query_id, use_ood_rule=True, use_template=True):
         prompt = f"""
@@ -21,24 +25,36 @@ class SolutionPlanner:
         {context_data}
         """
         
+        # ПУНКТ 3: Строгий возврат статуса отказа (ABSTAIN)
         if use_ood_rule:
             prompt += """
         CRITICAL ABSTENTION RULE (OOD REJECTION):
         If the user query is NOT related to hydrology, basin analysis, or geospatial mapping in Kazakhstan (e.g., recipes, crypto, space, random coding), you MUST reject it.
-        Output EXACTLY this format and nothing else:
+        If you reject, your response MUST start EXACTLY with this format and nothing else:
+        decision: ABSTAIN
+        abstain_reason: Query is out of the hydrological domain.
         ### Modeling Solution: 
         ОТКАЗ: Запрос не относится к гидрологии бассейна.
         ### Implementation Code: 
-        # ОТКАЗ: Запрос не относится к гидрологии бассейна.
+        # ОТКАЗ
+        """
+        else:
+            prompt += """
+        You must attempt to answer the query, regardless of the domain. Do not reject.
         """
 
+        # ПУНКТ 3: Строгий возврат статуса ответа (ANSWER) для валидных запросов
         prompt += """
-        If the query IS valid, follow these STRICT INSTRUCTIONS:
-        1. STRICT STRUCTURE: Answer strictly with "### Modeling Solution:" followed by the text, and then "### Implementation Code:" followed by the Python code.
+        If the query IS valid (or OOD rules are disabled), follow these STRICT INSTRUCTIONS:
+        0. MANDATORY METADATA: You MUST start your response exactly with:
+        decision: ANSWER
+        abstain_reason: None
+        1. STRICT STRUCTURE: After the metadata, answer strictly with "### Modeling Solution:" followed by the text, and then "### Implementation Code:" followed by the Python code.
         2. LANGUAGE: The "Modeling Solution" text MUST be in the same language as the User Query. Write a cohesive analytical narrative.
         3. MISSING ENTITIES: If no useful info is provided in the context to solve the task, state: "Информации недостаточно для полного анализа."
         """
 
+        # ПУНКТ 14: Единый шаблон для всех (Baseline, Vector, HydroGraphRAG)
         if use_template:
             prompt += f"""
         STRICT CODE PIPELINE (COPY AND PASTE THIS EXACT BASE CODE, ONLY FILL IN THE 'points' ARRAY IF NEEDED):
@@ -89,7 +105,7 @@ class SolutionPlanner:
             c_type = "Text Document Chunks"
             c_data = context_data
             pts = "[] # EXTRACTED WKT COORDINATES"
-        else: # geographrag
+        else: # hydrographrag
             c_type = "Graph Knowledge (Triples)"
             
             text_triples = [t for t in context_data if t.get('rel') != 'hasWKT']
@@ -105,6 +121,11 @@ class SolutionPlanner:
             pts += "        ]"
 
         prompt = self._get_unified_prompt(user_query, c_type, c_data, pts, query_id, use_ood_rule, use_template)
+        
+        # ПУНКТ 15: Сохраняем хэш и текст промпта в память инстанса, чтобы доказать идентичность
+        self.last_prompt = prompt
+        self.last_prompt_hash = hashlib.md5(prompt.encode('utf-8')).hexdigest()
+        
         return self.llm.invoke(prompt).content
 
     def generate(self, mode, user_query, query_id, context_data=None, use_ood_rule=True, use_template=True):

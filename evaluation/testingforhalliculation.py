@@ -10,10 +10,11 @@ import functools
 # --- НАСТРОЙКИ ---
 GT_PATH = "ground_truth.json"
 RESULTS_DIR = "results"
-SPARQL_ENDPOINT = "http://localhost:7200/repositories/HydroDB"
+# Пункт 35: Унифицировано название репозитория на waterdb
+SPARQL_ENDPOINT = "http://localhost:7200/repositories/waterdb"
 
-# Улучшенная регулярка (ловит WKT в любых кавычках и без)
-WKT_RE = re.compile(r"['\"]?(POINT|LINESTRING|POLYGON|MULTIPOINT|MULTILINESTRING)\s*\([\d\s.,\-()]+\)['\"]?", re.IGNORECASE)
+# Пункт 18: Исправлена регулярка (внешняя группа ловит весь WKT, внутренняя non-capturing)
+WKT_RE = re.compile(r"['\"]?((?:POINT|LINESTRING|POLYGON|MULTIPOINT|MULTILINESTRING)\s*\([\d\s.,\-()]+\))['\"]?", re.IGNORECASE)
 
 @functools.lru_cache(maxsize=512)
 def fetch_truth_from_db(entity_label):
@@ -36,7 +37,7 @@ def fetch_truth_from_db(entity_label):
         return []
 
 def analyze_faithfulness():
-    print(f"🚀 Начинаю аудит. Ryzen 9700X в деле...")
+    print(f"🚀 Начинаю аудит пространственных галлюцинаций...")
     
     if not os.path.exists(GT_PATH):
         return print("❌ Файл ground_truth.json не найден!")
@@ -59,21 +60,22 @@ def analyze_faithfulness():
 
     for idx, file_path in enumerate(all_files):
         # Выводим прогресс каждые 50 файлов
-        if idx % 50 == 0:
+        if idx % 50 == 0 and idx > 0:
             print(f"⏳ Обработано {idx}/{total} ({round(idx/total*100, 1)}%)...")
 
         path_parts = Path(file_path).parts
         try:
-            # Структура: results/Model/Mode/ID.py
-            model = path_parts[1]
-            mode = path_parts[2]
-            q_id = os.path.splitext(path_parts[3])[0]
-        except: continue
+            # Структура пути с конца: ... / Model / Mode / ID.py
+            model = path_parts[-3] 
+            mode = path_parts[-2]
+            q_id = os.path.splitext(path_parts[-1])[0]
+        except Exception: 
+            continue
 
         with open(file_path, 'r', encoding='utf-8') as f:
             script_content = f.read()
 
-        # 1. Извлекаем WKT
+        # 1. Извлекаем WKT (теперь regex возвращает полные строки координат)
         found_wkts = WKT_RE.findall(script_content)
         
         # 2. Ищем эталон
@@ -92,7 +94,8 @@ def analyze_faithfulness():
                     f_geom = wkt.loads(f_wkt_str.strip("'\""))
                     if any(f_geom.equals(wkt.loads(r)) for r in reference_wkts if r):
                         valid_hits += 1
-                except: continue
+                except Exception: 
+                    continue
             score = valid_hits / len(found_wkts)
 
         analysis_results.append({
@@ -102,13 +105,18 @@ def analyze_faithfulness():
         })
 
     # Итог
+    if not analysis_results:
+        print("⚠️ Нет данных для анализа. Проверьте, сгенерировались ли файлы в папке results.")
+        return
+
     df = pd.DataFrame(analysis_results)
     report = df.groupby(["Architecture", "Model"])["Spatial_Faithfulness"].mean().reset_index()
     report["Hallucination_Rate"] = 1.0 - report["Spatial_Faithfulness"]
     
-    print("\n🏁 ФИНАЛЬНЫЙ ОТЧЕТ:")
+    print("\n🏁 ФИНАЛЬНЫЙ ОТЧЕТ (Пространственные Галлюцинации):")
     print(report.round(3).to_string(index=False))
     report.to_csv("spatial_faithfulness_final.csv", index=False)
+    print("✅ Результаты сохранены в spatial_faithfulness_final.csv")
 
 if __name__ == "__main__":
     analyze_faithfulness()
