@@ -10,7 +10,10 @@ GT_PATH = "ground_truth.json"
 RESULTS_DIR = "results"
 
 # Пункт 18: Исправлена регулярка (внешняя группа ловит весь WKT, внутренняя non-capturing)
-WKT_RE = re.compile(r"['\"]?((?:POINT|LINESTRING|POLYGON|MULTIPOINT|MULTILINESTRING)\s*\([\d\s.,\-()]+\))['\"]?", re.IGNORECASE)
+WKT_RE = re.compile(
+    r"""['"]?((?:POINT|LINESTRING|POLYGON|MULTIPOINT|MULTILINESTRING)\s*\([\d\s.,-]+\))['"]?""",
+    re.IGNORECASE
+)
 
 def analyze_faithfulness():
     print(f"🚀 Начинаю аудит пространственных галлюцинаций (Frozen Benchmark Mode)...")
