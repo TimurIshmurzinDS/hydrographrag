@@ -4,47 +4,26 @@ import json
 import pandas as pd
 from pathlib import Path
 from shapely import wkt
-from SPARQLWrapper import SPARQLWrapper, JSON
-import functools
 
 # --- НАСТРОЙКИ ---
 GT_PATH = "ground_truth.json"
 RESULTS_DIR = "results"
-# Пункт 35: Унифицировано название репозитория на waterdb
-SPARQL_ENDPOINT = "http://localhost:7200/repositories/waterdb"
 
 # Пункт 18: Исправлена регулярка (внешняя группа ловит весь WKT, внутренняя non-capturing)
 WKT_RE = re.compile(r"['\"]?((?:POINT|LINESTRING|POLYGON|MULTIPOINT|MULTILINESTRING)\s*\([\d\s.,\-()]+\))['\"]?", re.IGNORECASE)
 
-@functools.lru_cache(maxsize=512)
-def fetch_truth_from_db(entity_label):
-    """Кэшируемый запрос к базе, чтобы не дергать её по пустякам"""
-    sparql = SPARQLWrapper(SPARQL_ENDPOINT)
-    query = f"""
-    PREFIX geo: <http://www.opengis.net/ont/geosparql#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    SELECT ?wkt WHERE {{
-        ?s rdfs:label "{entity_label}" .
-        ?s geo:hasGeometry/geo:asWKT ?wkt .
-    }}
-    """
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    try:
-        results = sparql.query().convert()
-        return [b["wkt"]["value"] for b in results["results"]["bindings"]]
-    except:
-        return []
-
 def analyze_faithfulness():
-    print(f"🚀 Начинаю аудит пространственных галлюцинаций...")
+    print(f"🚀 Начинаю аудит пространственных галлюцинаций (Frozen Benchmark Mode)...")
     
     if not os.path.exists(GT_PATH):
-        return print("❌ Файл ground_truth.json не найден!")
+        print("❌ Файл ground_truth.json не найден!")
+        return
 
+    # Читаем эталонные WKT прямо из нашего идеального датасета (Без SPARQL!)
     with open(GT_PATH, 'r', encoding='utf-8') as f:
         raw_gt = json.load(f)
-        gt_lookup = {str(item.get('id')): item.get('expected_entities', []) for item in raw_gt}
+        # Словарь: ID запроса -> список правильных WKT координат
+        gt_lookup_wkt = {str(item.get('id')): item.get('expected_wkt', []) for item in raw_gt}
 
     analysis_results = []
     
@@ -56,16 +35,16 @@ def analyze_faithfulness():
                 all_files.append(os.path.join(root, f))
     
     total = len(all_files)
-    print(f"📦 Всего файлов для проверки: {total}")
+    if total == 0:
+        print("⚠️ Нет данных для анализа. Запусти run_generation.py.")
+        return
+        
+    print(f"📦 Всего сгенерированных .py файлов для проверки: {total}")
 
     for idx, file_path in enumerate(all_files):
-        # Выводим прогресс каждые 50 файлов
-        if idx % 50 == 0 and idx > 0:
-            print(f"⏳ Обработано {idx}/{total} ({round(idx/total*100, 1)}%)...")
-
         path_parts = Path(file_path).parts
         try:
-            # Структура пути с конца: ... / Model / Mode / ID.py
+            # Структура пути: ... / Model / Mode / ID.py
             model = path_parts[-3] 
             mode = path_parts[-2]
             q_id = os.path.splitext(path_parts[-1])[0]
@@ -75,27 +54,28 @@ def analyze_faithfulness():
         with open(file_path, 'r', encoding='utf-8') as f:
             script_content = f.read()
 
-        # 1. Извлекаем WKT (теперь regex возвращает полные строки координат)
+        # 1. Извлекаем сгенерированные моделью WKT координаты
         found_wkts = WKT_RE.findall(script_content)
         
-        # 2. Ищем эталон
-        expected_names = gt_lookup.get(q_id, [])
-        reference_wkts = []
-        for name in expected_names:
-            reference_wkts.extend(fetch_truth_from_db(name))
+        # 2. Берем эталонные координаты из Ground Truth
+        reference_wkts = gt_lookup_wkt.get(q_id, [])
 
-        # 3. Сверка
+        # 3. Сверка (Пространственный аудит)
         if not found_wkts:
-            score = 1.0 if not expected_names else 0.0
+            # Если WKT нет в коде, и в эталоне их тоже нет -> 1.0 (все верно)
+            # Если в коде нет, а в эталоне есть -> 0.0 (галлюцинация упущения)
+            score = 1.0 if not reference_wkts else 0.0
         else:
             valid_hits = 0
             for f_wkt_str in found_wkts:
                 try:
                     f_geom = wkt.loads(f_wkt_str.strip("'\""))
+                    # Проверяем, совпадает ли сгенерированная геометрия с любой из эталонных
                     if any(f_geom.equals(wkt.loads(r)) for r in reference_wkts if r):
                         valid_hits += 1
                 except Exception: 
                     continue
+            # Доля правильных координат от всех сгенерированных
             score = valid_hits / len(found_wkts)
 
         analysis_results.append({
@@ -105,10 +85,6 @@ def analyze_faithfulness():
         })
 
     # Итог
-    if not analysis_results:
-        print("⚠️ Нет данных для анализа. Проверьте, сгенерировались ли файлы в папке results.")
-        return
-
     df = pd.DataFrame(analysis_results)
     report = df.groupby(["Architecture", "Model"])["Spatial_Faithfulness"].mean().reset_index()
     report["Hallucination_Rate"] = 1.0 - report["Spatial_Faithfulness"]
