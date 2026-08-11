@@ -67,6 +67,15 @@ DATA_DIR = os.path.join(
 # REPRODUCIBILITY CONFIGURATION
 # ============================================================
 
+GENERATION_RUNNER_VERSION = "hydrographrag_generation_v5"
+
+# Primary benchmark policy:
+# response/semantic cache is disabled for every primary architecture.
+# Cache effects must be evaluated in a separate dedicated study so that
+# Baseline, VectorRAG, HydroGraphRAG and full-minus-one ablations are
+# compared under the same cold-cache condition.
+PRIMARY_BENCHMARK_CACHE_POLICY = "disabled_cold_for_all_primary_modes"
+
 GENERATION_CONFIG = {
     "temperature": 0.0,
     "top_p": 1.0,
@@ -79,12 +88,13 @@ EXECUTION_TIMEOUT_SECONDS = 30
 VECTOR_TOP_K = 5
 
 # IMPORTANT:
-# This runner currently implements an exact final-prompt response cache.
-# It is deliberately NOT called a semantic cache.
+# An exact final-prompt response cache implementation is retained for
+# dedicated experiments, but it is DISABLED in every primary benchmark
+# mode by validate_experiment_design().
 #
-# A separate semantic-cache study should use embeddings + a fixed
-# similarity threshold and should be reported separately from the
-# frozen benchmark.
+# It is deliberately NOT called a semantic cache. A semantic-cache study
+# must use embeddings + a fixed similarity threshold and be reported
+# separately from the frozen benchmark.
 CACHE_IMPLEMENTATION = "exact_prompt_response_cache"
 
 
@@ -116,6 +126,7 @@ ABLATION_MODES = {
         "use_template": True,
         "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": False,
     },
 
     "VectorRAG": {
@@ -126,6 +137,7 @@ ABLATION_MODES = {
         "use_template": True,
         "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": False,
     },
 
     "HydroGraphRAG": {
@@ -134,8 +146,9 @@ ABLATION_MODES = {
         "use_wkt": True,
         "use_ood": True,
         "use_template": True,
-        "use_cache": True,
+        "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": True,
     },
 
     "HydroGraphRAG_no_CDA": {
@@ -144,8 +157,9 @@ ABLATION_MODES = {
         "use_wkt": True,
         "use_ood": True,
         "use_template": True,
-        "use_cache": True,
+        "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": True,
     },
 
     "HydroGraphRAG_no_WKT": {
@@ -154,8 +168,9 @@ ABLATION_MODES = {
         "use_wkt": False,
         "use_ood": True,
         "use_template": True,
-        "use_cache": True,
+        "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": True,
     },
 
     "HydroGraphRAG_no_Template": {
@@ -164,8 +179,9 @@ ABLATION_MODES = {
         "use_wkt": True,
         "use_ood": True,
         "use_template": False,
-        "use_cache": True,
+        "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": True,
     },
 
     "HydroGraphRAG_no_OOD": {
@@ -174,11 +190,12 @@ ABLATION_MODES = {
         "use_wkt": True,
         "use_ood": False,
         "use_template": True,
-        "use_cache": True,
+        "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": True,
     },
 
-    "HydroGraphRAG_no_Cache": {
+    "HydroGraphRAG_no_OntologyRetrieval": {
         "type": "hydrographrag",
         "use_cda": True,
         "use_wkt": True,
@@ -186,6 +203,7 @@ ABLATION_MODES = {
         "use_template": True,
         "use_cache": False,
         "use_sandbox": True,
+        "use_ontology_retrieval": False,
     },
 
     "HydroGraphRAG_no_Sandbox": {
@@ -194,10 +212,75 @@ ABLATION_MODES = {
         "use_wkt": True,
         "use_ood": True,
         "use_template": True,
-        "use_cache": True,
+        "use_cache": False,
         "use_sandbox": False,
+        "use_ontology_retrieval": True,
     },
 }
+
+
+def validate_experiment_design() -> None:
+    """
+    Deterministically enforce the frozen primary-benchmark design.
+
+    1. Cache must be OFF for every primary mode.
+    2. Baseline and VectorRAG must never use ontology/graph retrieval.
+    3. HydroGraphRAG full-minus-one ablations must differ from the full
+       HydroGraphRAG configuration by exactly one intended switch.
+    """
+
+    cache_enabled_modes = [
+        mode_name
+        for mode_name, config in ABLATION_MODES.items()
+        if bool(config.get("use_cache", False))
+    ]
+
+    if cache_enabled_modes:
+        raise RuntimeError(
+            "Primary benchmark cache policy violated. "
+            f"Cache enabled for: {cache_enabled_modes}"
+        )
+
+    for mode_name in ("Baseline", "VectorRAG"):
+        if ABLATION_MODES[mode_name].get(
+            "use_ontology_retrieval",
+            False,
+        ):
+            raise RuntimeError(
+                f"{mode_name} must not use ontology retrieval."
+            )
+
+    full = ABLATION_MODES["HydroGraphRAG"]
+
+    expected_single_deltas = {
+        "HydroGraphRAG_no_CDA": "use_cda",
+        "HydroGraphRAG_no_WKT": "use_wkt",
+        "HydroGraphRAG_no_Template": "use_template",
+        "HydroGraphRAG_no_OOD": "use_ood",
+        "HydroGraphRAG_no_OntologyRetrieval": (
+            "use_ontology_retrieval"
+        ),
+        "HydroGraphRAG_no_Sandbox": "use_sandbox",
+    }
+
+    for mode_name, intended_delta in (
+        expected_single_deltas.items()
+    ):
+        candidate = ABLATION_MODES[mode_name]
+
+        changed = {
+            key
+            for key in full.keys()
+            if candidate.get(key) != full.get(key)
+        }
+
+        if changed != {intended_delta}:
+            raise RuntimeError(
+                "Ablation is not strict full-minus-one: "
+                f"{mode_name}; expected delta={intended_delta}; "
+                f"actual deltas={sorted(changed)}"
+            )
+
 
 
 # ============================================================
@@ -1138,6 +1221,8 @@ class GenerationPipeline:
                 "retrieval_latency": 0.0,
                 "cda_error": None,
                 "retrieval_error": None,
+                "retrieval_strategy": "none",
+                "graph_retrieval_called": False,
             }
 
         # ----------------------------------------------------
@@ -1182,6 +1267,8 @@ class GenerationPipeline:
                 "retrieval_error": (
                     retrieval_error
                 ),
+                "retrieval_strategy": "flat_vector",
+                "graph_retrieval_called": False,
             }
 
         # ----------------------------------------------------
@@ -1202,6 +1289,52 @@ class GenerationPipeline:
                 "use_ood"
             ],
         )
+
+        # ----------------------------------------------------
+        # STRICT no_OntologyRetrieval ABLATION
+        # ----------------------------------------------------
+        #
+        # Keep CDA + flat vector entity search, but do NOT call
+        # GraphRetriever.find_solution_subgraph(). This preserves the
+        # search component while removing ontology/graph path retrieval.
+        if not config.get(
+            "use_ontology_retrieval",
+            True,
+        ):
+            retrieval_start = (
+                time.perf_counter()
+            )
+
+            (
+                context_string,
+                vector_entities,
+                retrieval_error,
+            ) = self.get_vector_context(
+                query=query,
+                retriever=retriever,
+                k=VECTOR_TOP_K,
+            )
+
+            retrieval_latency = round(
+                time.perf_counter()
+                - retrieval_start,
+                4,
+            )
+
+            return {
+                "demand": demand,
+                "context_data": context_string,
+                "retrieved_entities": vector_entities,
+                "retrieved_triples": 0,
+                "cda_latency": cda_latency,
+                "retrieval_latency": retrieval_latency,
+                "cda_error": cda_error,
+                "retrieval_error": retrieval_error,
+                "retrieval_strategy": (
+                    "flat_vector_without_ontology"
+                ),
+                "graph_retrieval_called": False,
+            }
 
         retrieval_start = (
             time.perf_counter()
@@ -1298,6 +1431,8 @@ class GenerationPipeline:
             "retrieval_error": (
                 retrieval_error
             ),
+            "retrieval_strategy": "ontology_graph",
+            "graph_retrieval_called": True,
         }
 
     # ========================================================
@@ -1800,6 +1935,33 @@ class GenerationPipeline:
         demand = retrieval_result[
             "demand"
         ]
+
+        retrieval_strategy = str(
+            retrieval_result.get(
+                "retrieval_strategy",
+                "unknown",
+            )
+        )
+
+        graph_retrieval_called = bool(
+            retrieval_result.get(
+                "graph_retrieval_called",
+                False,
+            )
+        )
+
+        # Hard fairness guard:
+        # Baseline and VectorRAG are never allowed to execute ontology
+        # graph retrieval in the measured per-query architecture path.
+        if (
+            config["type"]
+            in {"baseline", "vector_rag"}
+            and graph_retrieval_called
+        ):
+            raise RuntimeError(
+                "Retrieval leakage detected: "
+                f"{mode_name} called ontology graph retrieval."
+            )
 
         # Persist retrieved evidence before generation.
         self.write_json(
@@ -2404,6 +2566,18 @@ class GenerationPipeline:
             "retrieved_triples": (
                 triples_count
             ),
+            "retrieval_strategy": (
+                retrieval_strategy
+            ),
+            "graph_retrieval_called": (
+                graph_retrieval_called
+            ),
+            "ontology_retrieval_enabled": bool(
+                config.get(
+                    "use_ontology_retrieval",
+                    False,
+                )
+            ),
 
             # Artifact directory relative to evaluation/
             "artifact_dir": (
@@ -2476,6 +2650,20 @@ class GenerationPipeline:
 
         manifest = {
             "run_id": self.run_id,
+            "generation_runner_version": (
+                GENERATION_RUNNER_VERSION
+            ),
+            "primary_benchmark_cache_policy": (
+                PRIMARY_BENCHMARK_CACHE_POLICY
+            ),
+            "retrieval_fairness_policy": {
+                "baseline_graph_retrieval": False,
+                "vectorrag_graph_retrieval": False,
+                "hydrographrag_graph_retrieval": True,
+                "no_ontology_retrieval_strategy": (
+                    "flat_vector_without_ontology"
+                ),
+            },
             "created_at": (
                 datetime.now().isoformat(
                     timespec="seconds"
@@ -2593,6 +2781,20 @@ class GenerationPipeline:
         os.makedirs(
             RESULTS_DIR,
             exist_ok=True,
+        )
+
+        # ----------------------------------------------------
+        # EXPERIMENT DESIGN PREFLIGHT
+        # ----------------------------------------------------
+
+        validate_experiment_design()
+
+        logging.info(
+            "✅ Experiment design validation: OK"
+        )
+        logging.info(
+            "Primary benchmark cache policy: %s",
+            PRIMARY_BENCHMARK_CACHE_POLICY,
         )
 
         # ----------------------------------------------------
@@ -2862,6 +3064,14 @@ class GenerationPipeline:
                             "retrieval_context": [],
                             "retrieved_entities": [],
                             "retrieved_triples": 0,
+                            "retrieval_strategy": "failed_before_audit",
+                            "graph_retrieval_called": False,
+                            "ontology_retrieval_enabled": bool(
+                                config.get(
+                                    "use_ontology_retrieval",
+                                    False,
+                                )
+                            ),
                             "cda_latency": 0.0,
                             "retrieval_latency": 0.0,
                             "generation_latency": 0.0,
@@ -2889,6 +3099,9 @@ class GenerationPipeline:
                 "model": model_name,
                 "role": "generator",
                 "run_id": self.run_id,
+                "generation_runner_version": (
+                    GENERATION_RUNNER_VERSION
+                ),
                 "quantization": "Q4_K_M",
                 "generation_config": (
                     GENERATION_CONFIG
