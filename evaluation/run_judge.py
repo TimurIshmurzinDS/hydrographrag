@@ -7,12 +7,10 @@ import pandas as pd
 from tqdm import tqdm
 from langchain_ollama import ChatOllama
 
-
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s"
 )
-
 
 # ============================================================
 # CONFIG
@@ -37,43 +35,19 @@ GROUND_TRUTH_PATH = os.path.join(
     "ground_truth.json"
 )
 
-DETAILED_CSV_PATH = os.path.join(
+HALLUCINATION_DETAILS_PATH = os.path.join(
     EVAL_DIR,
     "hallucination_subtypes_detailed.csv"
 )
 
-SUMMARY_CSV_PATH = os.path.join(
+HALLUCINATION_SUMMARY_PATH = os.path.join(
     EVAL_DIR,
     "hallucination_subtypes.csv"
 )
 
 
-ABLATION_MODES = [
-    "Baseline",
-    "VectorRAG",
-    "HydroGraphRAG",
-    "HydroGraphRAG_no_CDA",
-    "HydroGraphRAG_no_WKT",
-    "HydroGraphRAG_no_Template",
-    "HydroGraphRAG_no_OOD",
-    "HydroGraphRAG_no_Cache",
-    "HydroGraphRAG_no_Sandbox"
-]
-
-
-SCORE_KEYS = [
-    "semantic_score",
-    "structural_score",
-    "faithfulness_score",
-    "spatial_score",
-    "numerical_score",
-    "topological_score",
-    "categorical_score"
-]
-
-
 # ============================================================
-# PIPELINE
+# EVALUATION PIPELINE
 # ============================================================
 
 class EvaluationPipeline:
@@ -81,25 +55,20 @@ class EvaluationPipeline:
     def __init__(self):
 
         logging.info(
-            f"⚖️ Инициализация независимого судьи: {JUDGE_MODEL}"
+            f"⚖️ Инициализация судьи {JUDGE_MODEL} "
+            f"(temperature=0, seed=42)"
         )
 
         self.judge = ChatOllama(
             model=JUDGE_MODEL,
-
-            # Строгий детерминизм
             temperature=0.0,
             top_p=1.0,
-            seed=42,
-
-            # Достаточно большой контекст для
-            # Ground Truth + полного ответа модели
-            num_ctx=32768
+            num_ctx=8192,
+            seed=42
         )
 
-
     # ========================================================
-    # JSON PARSER
+    # ROBUST JSON PARSER
     # ========================================================
 
     def _robust_json_parse(self, text):
@@ -109,7 +78,7 @@ class EvaluationPipeline:
 
         try:
 
-            # Удаляем thinking-блоки
+            # Убираем reasoning/thinking блоки
             text = re.sub(
                 r"<think>.*?</think>",
                 "",
@@ -117,128 +86,244 @@ class EvaluationPipeline:
                 flags=re.DOTALL | re.IGNORECASE
             ).strip()
 
-            # Сначала пытаемся распарсить весь ответ
-            try:
-                return json.loads(text)
-            except json.JSONDecodeError:
-                pass
+            # Убираем markdown fences
+            text = text.replace("```json", "")
+            text = text.replace("```", "").strip()
 
-            # Если модель добавила текст вокруг JSON,
-            # достаём объект.
+            # Ищем JSON object
             match = re.search(
                 r"\{.*\}",
                 text,
-                flags=re.DOTALL
+                re.DOTALL
             )
 
-            if not match:
-                return None
+            json_str = match.group(0) if match else text
 
-            json_str = match.group(0)
-
-            # Нормальный JSON
+            # Сначала обычный JSON
             try:
                 return json.loads(json_str)
-            except json.JSONDecodeError:
-                pass
 
-            # Fallback для Python-style dict
-            try:
-                return ast.literal_eval(json_str)
-            except Exception:
-                return None
+            except json.JSONDecodeError:
+
+                # Fallback для Python-style dict
+                try:
+                    return ast.literal_eval(json_str)
+
+                except Exception:
+                    return None
 
         except Exception:
-
             return None
 
+    # ========================================================
+    # CONTEXT SERIALIZATION
+    # ========================================================
+
+    def _format_retrieved_context(self, mode_result):
+
+        """
+        В generation_results retrieval context напрямую не сохраняется
+        как отдельное поле, поэтому здесь используем сохранённые данные,
+        если они присутствуют.
+
+        Поддерживаются:
+        - retrieved_context
+        - context_data
+        - retrieval_context
+
+        Если их нет — возвращаем честное сообщение.
+        """
+
+        context = (
+            mode_result.get("retrieved_context")
+            or mode_result.get("context_data")
+            or mode_result.get("retrieval_context")
+        )
+
+        if context is None:
+            return (
+                "RETRIEVED CONTEXT WAS NOT STORED IN "
+                "generation_results.json."
+            )
+
+        if isinstance(context, list):
+
+            lines = []
+
+            for i, item in enumerate(context, 1):
+
+                if isinstance(item, dict):
+
+                    source = item.get(
+                        "from",
+                        item.get("source", "")
+                    )
+
+                    relation = item.get(
+                        "rel",
+                        item.get("relation", "")
+                    )
+
+                    target = item.get(
+                        "to",
+                        item.get("target", "")
+                    )
+
+                    lines.append(
+                        f"{i}. {source} -[{relation}]-> {target}"
+                    )
+
+                else:
+                    lines.append(
+                        f"{i}. {str(item)}"
+                    )
+
+            return "\n".join(lines)
+
+        return str(context)
 
     # ========================================================
-    # SCORE VALIDATION
+    # GROUND TRUTH FORMATTER
     # ========================================================
 
-    def _validate_scores(self, parsed):
+    def _format_ground_truth(self, gt_item):
 
-        if not isinstance(parsed, dict):
-            return False
+        return f"""
+Expected Entities:
+{json.dumps(
+    gt_item.get("expected_entities", []),
+    ensure_ascii=False
+)}
 
-        for key in SCORE_KEYS:
+Expected Relations:
+{json.dumps(
+    gt_item.get("expected_relations", []),
+    ensure_ascii=False
+)}
 
-            value = parsed.get(key)
+Expected Triples:
+{json.dumps(
+    gt_item.get("expected_triples", []),
+    ensure_ascii=False
+)}
 
-            # bool является subclass int,
-            # поэтому отдельно исключаем его.
-            if isinstance(value, bool):
-                return False
+Expected WKT:
+{json.dumps(
+    gt_item.get("expected_wkt", []),
+    ensure_ascii=False
+)}
 
-            if not isinstance(value, (int, float)):
-                return False
+Expected Numeric Values:
+{json.dumps(
+    gt_item.get("expected_numeric_facts", []),
+    ensure_ascii=False
+)}
 
-            if not 1 <= value <= 5:
-                return False
+Expected Temporal Facts:
+{json.dumps(
+    gt_item.get("expected_temporal_facts", []),
+    ensure_ascii=False
+)}
 
-        return True
+Expected Categories:
+{json.dumps(
+    gt_item.get("expected_categories", []),
+    ensure_ascii=False
+)}
 
+Expected Topology:
+{json.dumps(
+    gt_item.get("expected_topology", []),
+    ensure_ascii=False
+)}
+""".strip()
 
     # ========================================================
-    # EVALUATION
+    # JUDGE
     # ========================================================
 
     def evaluate(
         self,
         query,
-        raw_response,
-        exec_status,
-        decision,
+        mode_name,
+        mode_result,
         gt_item
     ):
 
-        status_msg = "SUCCESS" if exec_status else "FAILED"
+        exec_status = mode_result.get(
+            "exec",
+            False
+        )
 
-        # ----------------------------------------------------
-        # FULL GROUND TRUTH
-        # ----------------------------------------------------
+        syntax_status = mode_result.get(
+            "syntax",
+            False
+        )
 
-        truth_str = f"""
-Expected Entities:
-{gt_item.get("expected_entities", [])}
+        has_map = mode_result.get(
+            "has_map",
+            False
+        )
 
-Expected Relations:
-{gt_item.get("expected_relations", [])}
+        decision = mode_result.get(
+            "decision",
+            "INVALID"
+        )
 
-Expected Triples:
-{gt_item.get("expected_triples", [])}
+        decision_valid = mode_result.get(
+            "decision_valid",
+            False
+        )
 
-Expected WKT:
-{gt_item.get("expected_wkt", [])}
+        raw_response = mode_result.get(
+            "raw_response",
+            ""
+        )
 
-Expected Numeric Values:
-{gt_item.get("expected_numeric_facts", [])}
+        code_extracted = mode_result.get(
+            "code_extracted",
+            ""
+        )
 
-Expected Temporal Facts:
-{gt_item.get("expected_temporal_facts", [])}
+        retrieved_context = self._format_retrieved_context(
+            mode_result
+        )
 
-Expected Categories:
-{gt_item.get("expected_categories", [])}
+        ground_truth = self._format_ground_truth(
+            gt_item
+        )
 
-Expected Topology:
-{gt_item.get("expected_topology", [])}
-"""
+        execution_status = (
+            "SUCCESS"
+            if exec_status
+            else "FAILED"
+        )
 
+        syntax_status_text = (
+            "VALID"
+            if syntax_status
+            else "INVALID"
+        )
 
-        # ----------------------------------------------------
-        # JUDGE PROMPT
-        # ----------------------------------------------------
+        map_status = (
+            "GENERATED"
+            if has_map
+            else "NOT GENERATED"
+        )
+
+        # ====================================================
+        # STRICT JUDGE PROMPT
+        # ====================================================
 
         prompt = f"""
-You are an independent senior geospatial scientist evaluating
-an AI geospatial framework.
+You are a senior geospatial and hydrology researcher evaluating
+an AI GeoGraphRAG framework.
 
-Your task is to judge the generated answer against the provided
-GROUND TRUTH.
+Your task is to evaluate ONE generated answer against the
+Ground Truth and the information actually available to the generator.
 
-You must evaluate the actual generated response, not whether
-the underlying approach "looks reasonable".
+Do NOT reward plausible information that is not supported by
+the provided Ground Truth or Retrieved Context.
 
 ============================================================
 USER QUERY
@@ -246,31 +331,51 @@ USER QUERY
 
 {query}
 
-
 ============================================================
 GROUND TRUTH
 ============================================================
 
-{truth_str}
-
+{ground_truth}
 
 ============================================================
-RUNTIME INFORMATION
+RETRIEVED CONTEXT AVAILABLE TO THE GENERATOR
 ============================================================
 
-Model Decision:
+{retrieved_context}
+
+============================================================
+MODEL EXECUTION METADATA
+============================================================
+
+Architecture:
+{mode_name}
+
+Decision:
 {decision}
 
-Execution Status:
-{status_msg}
+Decision valid:
+{decision_valid}
 
+Python syntax:
+{syntax_status_text}
+
+Execution:
+{execution_status}
+
+HTML map:
+{map_status}
 
 ============================================================
-GENERATED RAW RESPONSE
+EXTRACTED PYTHON CODE
+============================================================
+
+{code_extracted}
+
+============================================================
+RAW MODEL RESPONSE
 ============================================================
 
 {raw_response}
-
 
 ============================================================
 SCORING
@@ -278,104 +383,183 @@ SCORING
 
 Score every dimension from 1 to 5.
 
-1 = completely wrong, fabricated, or contradicts Ground Truth
-2 = mostly incorrect, substantial factual errors
-3 = partially correct, but contains noticeable errors/omissions
-4 = mostly correct, minor errors or omissions
-5 = fully correct and faithful to Ground Truth
+5 = Fully correct / exactly supported
+4 = Mostly correct; only minor issue
+3 = Partially correct; meaningful omissions or inaccuracies
+2 = Mostly incorrect
+1 = Completely incorrect, fabricated, or unsupported
 
+------------------------------------------------------------
+1. semantic_score
+------------------------------------------------------------
 
-DIMENSIONS
+Evaluate whether the answer correctly understands and addresses
+the user's actual hydrology/GIS request.
+
+------------------------------------------------------------
+2. structural_score
+------------------------------------------------------------
+
+Evaluate whether the response follows the required structure:
+
+### Modeling Solution:
+...
+### Implementation Code:
+...
+
+Also consider whether the generated Python code is clearly separated
+from the explanation.
+
+A syntax error alone should not automatically make this score 1;
+evaluate the response structure itself.
+
+------------------------------------------------------------
+3. faithfulness_score
+------------------------------------------------------------
+
+Evaluate factual faithfulness.
+
+IMPORTANT:
+
+A claim is supported if it is present in either:
+
+1. Ground Truth
+2. Retrieved Context
+
+If the model introduces a factual claim that is not supported by
+either source, treat it as unsupported/hallucinated.
+
+Do NOT assume that a plausible real-world fact is correct merely
+because it sounds reasonable.
+
+------------------------------------------------------------
+4. spatial_score
+------------------------------------------------------------
+
+Evaluate spatial information:
+
+- WKT
+- coordinates
+- geometry
+- map locations
+
+Compare generated spatial information against Expected WKT.
+
+If Expected WKT is empty:
+
+- no invented spatial information = 5
+- invented coordinates/WKT = 1
+
+------------------------------------------------------------
+5. numerical_score
+------------------------------------------------------------
+
+Evaluate:
+
+- water level
+- discharge
+- measurements
+- population
+- areas
+- other numerical facts
+
+Compare against Ground Truth and Retrieved Context.
+
+If a numerical fact is not supported, treat it as hallucinated.
+
+If Expected Numeric Values is empty:
+
+- no invented numerical facts = 5
+- invented numerical facts = 1
+
+------------------------------------------------------------
+6. topological_score
+------------------------------------------------------------
+
+Evaluate graph relationships such as:
+
+- upstream/downstream
+- river connections
+- located-in relationships
+- region relationships
+- station/river relationships
+
+Do not infer correctness from general world knowledge.
+
+Use only Ground Truth and Retrieved Context.
+
+------------------------------------------------------------
+7. categorical_score
+------------------------------------------------------------
+
+Evaluate:
+
+- entity categories
+- sensor/status classifications
+- region names
+- object types
+- categorical attributes
+
+Again, use Ground Truth and Retrieved Context.
+
+============================================================
+EMPTY GROUND TRUTH RULE
 ============================================================
 
-"semantic_score":
-Logical coherence and geospatial/domain correctness.
+For every specific Ground Truth array:
 
-"structure_score":
-Whether the response follows the expected response structure,
-including explanation and Python code when applicable.
+If the array is EMPTY:
 
-"faithfulness_score":
-Overall factual faithfulness to Ground Truth.
+- no hallucinated facts of that type -> score 5
+- hallucinated/invented facts -> score 1
 
-"spatial_score":
-Correctness of WKT/geometries/coordinates.
-
-"numerical_score":
-Correctness of numeric facts such as water levels,
-flow rates and measurements.
-
-"topological_score":
-Correctness of river connections, upstream/downstream
-relationships and graph topology.
-
-"categorical_score":
-Correctness of names, classifications, statuses,
-regions and other categorical facts.
-
+Do not penalize the model merely because the expected array is empty.
 
 ============================================================
-IMPORTANT EMPTY-GROUND-TRUTH RULE
+RETRIEVAL-AWARE FAITHFULNESS
 ============================================================
 
-If a Ground Truth category is empty:
+Pay special attention to the difference between:
 
-- If the generated response does NOT invent information
-  belonging to that category, give that dimension 5.
+A) The retrieved context contains the fact and the model uses it.
 
-- If the generated response invents or hallucinates information
-  belonging to that category, give that dimension 1.
+B) The retrieved context does NOT contain the fact, but the model
+generates it anyway.
 
-Do NOT penalize the model merely because a category is absent
-from Ground Truth.
+Case B should reduce faithfulness and the relevant factual score.
 
 ============================================================
-IMPORTANT FACTUAL RULES
+EXECUTION
 ============================================================
 
-1. Ground Truth is authoritative.
+Execution success does NOT mean semantic correctness.
 
-2. Do not assume that information is correct merely because
-   it sounds geospatially plausible.
+Execution failure does NOT automatically mean semantic incorrectness.
 
-3. Do not give a high score for plausible but unsupported facts.
-
-4. If generated coordinates differ from expected coordinates,
-   spatial_score must reflect that difference.
-
-5. If generated numeric values differ from Ground Truth,
-   numerical_score must reflect that difference.
-
-6. If generated topology contradicts Ground Truth,
-   topological_score must reflect that contradiction.
-
-7. If the model refuses/abstains when the query is answerable,
-   this should negatively affect semantic/faithfulness/structural
-   quality where appropriate.
-
-8. If the model correctly abstains on an unsupported/anomalous
-   query, do not penalize it merely for abstaining.
-
-9. Execution success alone does NOT mean the answer is factually
-   correct.
-
-10. Syntax correctness alone does NOT mean the answer is correct.
-
-11. Do not infer correctness from runtime status.
+Evaluate correctness independently.
 
 ============================================================
-OUTPUT FORMAT
+IMPORTANT
 ============================================================
+
+Do not give credit for facts merely because you know them from
+your own general knowledge.
+
+Do not invent missing Ground Truth.
+
+Do not infer hidden facts.
 
 Return ONLY valid JSON.
 
 No markdown.
-No code fences.
+No comments.
 No explanation outside JSON.
 
-"reasoning" must contain at most 2 short sentences.
+"reasoning" must contain at most TWO short sentences.
 
-Required JSON:
+============================================================
+OUTPUT
+============================================================
 
 {{
     "semantic_score": 1,
@@ -389,15 +573,8 @@ Required JSON:
 }}
 """
 
-
-        # ----------------------------------------------------
-        # INVALID RESULT
-        # ----------------------------------------------------
-
         invalid_response = {
-
             "judge_valid": False,
-
             "semantic_score": None,
             "structural_score": None,
             "faithfulness_score": None,
@@ -405,41 +582,31 @@ Required JSON:
             "numerical_score": None,
             "topological_score": None,
             "categorical_score": None,
-
-            "reasoning":
+            "reasoning": (
                 "Judge failed to output valid JSON or valid scores."
+            )
         }
 
-
-        # ----------------------------------------------------
+        # ====================================================
         # CALL JUDGE
-        # ----------------------------------------------------
+        # ====================================================
 
         try:
 
-            result = self.judge.invoke(prompt)
+            response = self.judge.invoke(
+                prompt
+            )
 
             parsed = self._robust_json_parse(
-                result.content
+                response.content
             )
 
             if not parsed:
                 return invalid_response
 
-
             # ------------------------------------------------
-            # BACKWARD COMPATIBILITY
+            # Optional nested hallucination fields
             # ------------------------------------------------
-
-            # Если судья случайно вернул:
-            #
-            # {
-            #   "hallucination_subtypes": {
-            #       ...
-            #   }
-            # }
-            #
-            # разворачиваем структуру.
 
             if "hallucination_subtypes" in parsed:
 
@@ -450,46 +617,51 @@ Required JSON:
                 if isinstance(subtypes, dict):
                     parsed.update(subtypes)
 
-
             # ------------------------------------------------
-            # NORMALIZE structural_score
-            # ------------------------------------------------
-
-            # На случай если модель напишет structure_score
-            # вместо structural_score.
-
-            if (
-                "structural_score" not in parsed
-                and "structure_score" in parsed
-            ):
-                parsed["structural_score"] = (
-                    parsed["structure_score"]
-                )
-
-
-            # ------------------------------------------------
-            # VALIDATE
+            # Validate required scores
             # ------------------------------------------------
 
-            if not self._validate_scores(parsed):
+            required_keys = [
+                "semantic_score",
+                "structural_score",
+                "faithfulness_score",
+                "spatial_score",
+                "numerical_score",
+                "topological_score",
+                "categorical_score"
+            ]
 
+            valid = True
+
+            for key in required_keys:
+
+                value = parsed.get(key)
+
+                if not isinstance(
+                    value,
+                    (int, float)
+                ):
+                    valid = False
+                    break
+
+                if not 1 <= value <= 5:
+                    valid = False
+                    break
+
+            if not valid:
                 return invalid_response
-
 
             parsed["judge_valid"] = True
 
-            # Ограничиваем reasoning
-            # формально на стороне pipeline.
-            reasoning = parsed.get("reasoning", "")
-
-            if not isinstance(reasoning, str):
-                reasoning = str(reasoning)
-
-            parsed["reasoning"] = reasoning.strip()
-
+            # Нормализуем reasoning
+            parsed["reasoning"] = str(
+                parsed.get(
+                    "reasoning",
+                    ""
+                )
+            ).strip()
 
             return parsed
-
 
         except Exception as e:
 
@@ -499,7 +671,6 @@ Required JSON:
 
             return invalid_response
 
-
     # ========================================================
     # RUN
     # ========================================================
@@ -507,7 +678,7 @@ Required JSON:
     def run(self):
 
         # ----------------------------------------------------
-        # CHECK INPUTS
+        # Check files
         # ----------------------------------------------------
 
         if not os.path.exists(INPUT_PATH):
@@ -522,7 +693,6 @@ Required JSON:
 
             return
 
-
         if not os.path.exists(GROUND_TRUTH_PATH):
 
             logging.error(
@@ -532,10 +702,13 @@ Required JSON:
 
             return
 
+        # ----------------------------------------------------
+        # Load data
+        # ----------------------------------------------------
 
-        # ----------------------------------------------------
-        # LOAD DATA
-        # ----------------------------------------------------
+        logging.info(
+            "📥 Загрузка generation_results.json..."
+        )
 
         with open(
             INPUT_PATH,
@@ -545,6 +718,9 @@ Required JSON:
 
             generation_data = json.load(f)
 
+        logging.info(
+            "📥 Загрузка ground_truth.json..."
+        )
 
         with open(
             GROUND_TRUTH_PATH,
@@ -554,19 +730,42 @@ Required JSON:
 
             ground_truth = json.load(f)
 
+        # ----------------------------------------------------
+        # Ground truth index
+        # ----------------------------------------------------
 
         queries_map = {
             str(item.get("id")): item
             for item in ground_truth
         }
 
+        # ----------------------------------------------------
+        # Architectures
+        # ----------------------------------------------------
 
-        hallucination_records = []
-
+        modes = [
+            "Baseline",
+            "VectorRAG",
+            "HydroGraphRAG",
+            "HydroGraphRAG_no_CDA",
+            "HydroGraphRAG_no_WKT",
+            "HydroGraphRAG_no_Template",
+            "HydroGraphRAG_no_OOD",
+            "HydroGraphRAG_no_Cache",
+            "HydroGraphRAG_no_Sandbox"
+        ]
 
         # ----------------------------------------------------
+        # Records for CSV
+        # ----------------------------------------------------
+
+        evaluation_records = []
+
+        judge_failures = []
+
+        # ====================================================
         # MODELS
-        # ----------------------------------------------------
+        # ====================================================
 
         for model_data in generation_data:
 
@@ -576,19 +775,17 @@ Required JSON:
             )
 
             logging.info(
-                f"🧐 Оценка модели: {model_name}"
+                f"\n🧐 Оценка модели: {model_name}"
             )
-
 
             metrics = model_data.get(
                 "metrics",
                 []
             )
 
-
-            # ------------------------------------------------
+            # =================================================
             # QUERIES
-            # ------------------------------------------------
+            # =================================================
 
             for item in tqdm(
                 metrics,
@@ -609,126 +806,163 @@ Required JSON:
                     "Unknown query"
                 )
 
+                category = item.get(
+                    "category"
+                )
 
-                # ------------------------------------------------
-                # OOD / ANOMALOUS
-                # ------------------------------------------------
+                # ---------------------------------------------
+                # Anomalous queries
+                # ---------------------------------------------
 
-                if item.get("category") == "anomalous":
+                if category == "anomalous":
 
-                    logging.debug(
-                        f"Skipping anomalous query {query_id}"
+                    logging.info(
+                        f"⏭️ Skip anomalous query "
+                        f"{query_id}"
                     )
 
                     continue
 
-
-                # ------------------------------------------------
+                # =================================================
                 # ARCHITECTURES
-                # ------------------------------------------------
+                # =================================================
 
-                for mode in ABLATION_MODES:
+                for mode_name in modes:
 
-                    if mode not in item:
+                    if mode_name not in item:
                         continue
 
+                    mode_result = item[mode_name]
 
-                    mode_data = item[mode]
-
-
-                    # IMPORTANT:
-                    # Берём именно полный ответ LLM,
-                    # сохранённый run_generation.py.
-
-                    raw_response = mode_data.get(
-                        "raw_response",
-                        ""
-                    )
-
-                    exec_status = mode_data.get(
-                        "exec",
-                        False
-                    )
-
-                    decision = mode_data.get(
-                        "decision",
-                        "INVALID"
-                    )
-
-
-                    # ------------------------------------------------
-                    # JUDGE
-                    # ------------------------------------------------
+                    # ---------------------------------------------
+                    # Evaluate
+                    # ---------------------------------------------
 
                     scores = self.evaluate(
                         query=query,
-                        raw_response=raw_response,
-                        exec_status=exec_status,
-                        decision=decision,
+                        mode_name=mode_name,
+                        mode_result=mode_result,
                         gt_item=gt_item
                     )
 
+                    # ---------------------------------------------
+                    # Save scores inside result
+                    # ---------------------------------------------
 
-                    # Добавляем результаты прямо
-                    # в generation_results structure.
+                    mode_result.update(
+                        scores
+                    )
 
-                    mode_data.update(scores)
+                    # ---------------------------------------------
+                    # Judge failure tracking
+                    # ---------------------------------------------
 
+                    if not scores.get(
+                        "judge_valid",
+                        False
+                    ):
 
-                    # ------------------------------------------------
-                    # CSV RECORD
-                    # ------------------------------------------------
-
-                    if scores.get("judge_valid"):
-
-                        hallucination_records.append({
-
+                        judge_failures.append({
                             "Model": model_name,
-
-                            "Architecture": mode,
-
+                            "Architecture": mode_name,
                             "Query_ID": query_id,
-
-                            "Semantic_Score":
-                                scores.get(
-                                    "semantic_score"
-                                ),
-
-                            "Structural_Score":
-                                scores.get(
-                                    "structural_score"
-                                ),
-
-                            "Faithfulness_Overall":
-                                scores.get(
-                                    "faithfulness_score"
-                                ),
-
-                            "Spatial":
-                                scores.get(
-                                    "spatial_score"
-                                ),
-
-                            "Numeric":
-                                scores.get(
-                                    "numerical_score"
-                                ),
-
-                            "Topological":
-                                scores.get(
-                                    "topological_score"
-                                ),
-
-                            "Categorical":
-                                scores.get(
-                                    "categorical_score"
-                                )
+                            "Reason": scores.get(
+                                "reasoning",
+                                ""
+                            )
                         })
 
+                        continue
 
-        # ====================================================
-        # SAVE FINAL JSON
-        # ====================================================
+                    # ---------------------------------------------
+                    # Flat evaluation record
+                    # ---------------------------------------------
+
+                    evaluation_records.append({
+
+                        "Model": model_name,
+
+                        "Architecture": mode_name,
+
+                        "Query_ID": query_id,
+
+                        "Semantic_Score": scores.get(
+                            "semantic_score"
+                        ),
+
+                        "Structural_Score": scores.get(
+                            "structural_score"
+                        ),
+
+                        "Faithfulness_Overall": scores.get(
+                            "faithfulness_score"
+                        ),
+
+                        "Spatial": scores.get(
+                            "spatial_score"
+                        ),
+
+                        "Numeric": scores.get(
+                            "numerical_score"
+                        ),
+
+                        "Topological": scores.get(
+                            "topological_score"
+                        ),
+
+                        "Categorical": scores.get(
+                            "categorical_score"
+                        ),
+
+                        "Execution": mode_result.get(
+                            "exec",
+                            False
+                        ),
+
+                        "Syntax": mode_result.get(
+                            "syntax",
+                            False
+                        ),
+
+                        "Has_Map": mode_result.get(
+                            "has_map",
+                            False
+                        ),
+
+                        "Decision": mode_result.get(
+                            "decision",
+                            "INVALID"
+                        ),
+
+                        "Cache_Hit": mode_result.get(
+                            "cache_hit",
+                            False
+                        ),
+
+                        "Retrieval_Latency": mode_result.get(
+                            "retrieval_latency",
+                            0
+                        ),
+
+                        "Generation_Latency": mode_result.get(
+                            "generation_latency",
+                            0
+                        ),
+
+                        "Total_Latency": mode_result.get(
+                            "total_latency",
+                            0
+                        )
+                    })
+
+        # ========================================================
+        # SAVE FULL RESULTS
+        # ========================================================
+
+        logging.info(
+            f"💾 Сохранение результатов: "
+            f"{FINAL_OUTPUT_PATH}"
+        )
 
         with open(
             FINAL_OUTPUT_PATH,
@@ -743,32 +977,30 @@ Required JSON:
                 indent=4
             )
 
-
-        logging.info(
-            f"💾 Финальный JSON сохранён: "
-            f"{FINAL_OUTPUT_PATH}"
-        )
-
-
-        # ====================================================
+        # ========================================================
         # SAVE DETAILED CSV
-        # ====================================================
+        # ========================================================
 
-        if hallucination_records:
+        if evaluation_records:
 
             df = pd.DataFrame(
-                hallucination_records
+                evaluation_records
             )
 
             df.to_csv(
-                DETAILED_CSV_PATH,
-                index=False
+                HALLUCINATION_DETAILS_PATH,
+                index=False,
+                encoding="utf-8-sig"
             )
 
+            logging.info(
+                f"📊 Detailed CSV сохранён: "
+                f"{HALLUCINATION_DETAILS_PATH}"
+            )
 
-            # =================================================
-            # SUMMARY
-            # =================================================
+            # ----------------------------------------------------
+            # Summary
+            # ----------------------------------------------------
 
             summary = (
                 df
@@ -781,41 +1013,84 @@ Required JSON:
                 .round(3)
             )
 
-
             summary.to_csv(
-                SUMMARY_CSV_PATH
-            )
-
-
-            logging.info(
-                f"📊 Detailed CSV: "
-                f"{DETAILED_CSV_PATH}"
+                HALLUCINATION_SUMMARY_PATH,
+                encoding="utf-8-sig"
             )
 
             logging.info(
-                f"📊 Summary CSV: "
-                f"{SUMMARY_CSV_PATH}"
+                f"📊 Summary CSV сохранён: "
+                f"{HALLUCINATION_SUMMARY_PATH}"
             )
 
         else:
 
             logging.warning(
-                "⚠️ Не получено ни одной валидной оценки судьи."
+                "⚠️ Нет валидных judge результатов."
             )
 
+        # ========================================================
+        # JUDGE FAILURES
+        # ========================================================
 
-        # ====================================================
-        # FINAL STATS
-        # ====================================================
+        if judge_failures:
 
-        total = len(hallucination_records)
+            failures_path = os.path.join(
+                EVAL_DIR,
+                "judge_failures.json"
+            )
+
+            with open(
+                failures_path,
+                "w",
+                encoding="utf-8"
+            ) as f:
+
+                json.dump(
+                    judge_failures,
+                    f,
+                    ensure_ascii=False,
+                    indent=4
+                )
+
+            logging.warning(
+                f"⚠️ Judge failures: "
+                f"{len(judge_failures)}"
+            )
+
+            logging.warning(
+                f"Подробности: {failures_path}"
+            )
+
+        # ========================================================
+        # FINAL LOG
+        # ========================================================
 
         logging.info(
-            f"⚖️ Валидных судейских оценок: {total}"
+            "\n========================================"
         )
 
         logging.info(
-            "✅ Evaluation Pipeline завершён."
+            "✅ EVALUATION COMPLETE"
+        )
+
+        logging.info(
+            f"Models evaluated: "
+            f"{len(generation_data)}"
+        )
+
+        logging.info(
+            f"Valid judge records: "
+            f"{len(evaluation_records)}"
+        )
+
+        logging.info(
+            f"Judge failures: "
+            f"{len(judge_failures)}"
+        )
+
+        logging.info(
+            "========================================"
         )
 
 
