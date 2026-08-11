@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import os
+import requests
 import re
 import shutil
 import subprocess
@@ -62,12 +63,17 @@ DATA_DIR = os.path.join(
     "data",
 )
 
+OLLAMA_BASE_URL = os.environ.get(
+    "OLLAMA_BASE_URL",
+    "http://localhost:11434",
+)
+
 
 # ============================================================
 # REPRODUCIBILITY CONFIGURATION
 # ============================================================
 
-GENERATION_RUNNER_VERSION = "hydrographrag_generation_v5"
+GENERATION_RUNNER_VERSION = "hydrographrag_generation_v6_freeze"
 
 # Primary benchmark policy:
 # response/semantic cache is disabled for every primary architecture.
@@ -81,6 +87,7 @@ GENERATION_CONFIG = {
     "top_p": 1.0,
     "seed": 42,
     "context_size": 8192,
+    "num_predict": 4096,
 }
 
 EXECUTION_TIMEOUT_SECONDS = 30
@@ -111,6 +118,9 @@ GENERATOR_MODELS = [
     "mistral-nemo",
     "gemma4:31b",
 ]
+
+EXPECTED_GENERATOR_MODEL_COUNT = 7
+JUDGE_MODEL_NAME = "qwen2.5:72b-instruct"
 
 
 # ============================================================
@@ -378,6 +388,508 @@ class GenerationPipeline:
         return hashlib.sha256(
             text.encode("utf-8")
         ).hexdigest()
+
+    def get_ollama_model_metadata(
+        self,
+        model_name: str,
+    ) -> Dict[str, Any]:
+        """
+        Retrieve exact runtime model metadata from Ollama.
+
+        /api/tags resolves the installed canonical model name and digest.
+        /api/show provides model details, parameters and template metadata.
+
+        Missing metadata is never replaced with invented defaults.
+        """
+
+        requested_model = str(
+            model_name
+        ).strip()
+
+        tags_url = (
+            OLLAMA_BASE_URL.rstrip("/")
+            + "/api/tags"
+        )
+
+        show_url = (
+            OLLAMA_BASE_URL.rstrip("/")
+            + "/api/show"
+        )
+
+        tag_record: Dict[str, Any] = {}
+        canonical_model = requested_model
+        tags_error: Optional[str] = None
+        show_error: Optional[str] = None
+
+        # ----------------------------------------------------
+        # Resolve canonical installed tag and immutable digest.
+        # ----------------------------------------------------
+        try:
+            response = requests.get(
+                tags_url,
+                timeout=30,
+            )
+            response.raise_for_status()
+
+            body = response.json()
+
+            models = (
+                body.get(
+                    "models",
+                    [],
+                )
+                if isinstance(
+                    body,
+                    dict,
+                )
+                else []
+            )
+
+            if not isinstance(
+                models,
+                list,
+            ):
+                models = []
+
+            requested_base = (
+                requested_model.split(
+                    ":",
+                    1,
+                )[0]
+            )
+
+            exact_matches = []
+            base_matches = []
+
+            for item in models:
+                if not isinstance(
+                    item,
+                    dict,
+                ):
+                    continue
+
+                installed_name = str(
+                    item.get(
+                        "name",
+                        item.get(
+                            "model",
+                            "",
+                        ),
+                    )
+                    or ""
+                ).strip()
+
+                if not installed_name:
+                    continue
+
+                if (
+                    installed_name
+                    == requested_model
+                ):
+                    exact_matches.append(
+                        item
+                    )
+
+                installed_base = (
+                    installed_name.split(
+                        ":",
+                        1,
+                    )[0]
+                )
+
+                if (
+                    installed_base
+                    == requested_base
+                ):
+                    base_matches.append(
+                        item
+                    )
+
+            if exact_matches:
+                tag_record = exact_matches[0]
+
+            elif base_matches:
+                latest_matches = [
+                    item
+                    for item in base_matches
+                    if str(
+                        item.get(
+                            "name",
+                            item.get(
+                                "model",
+                                "",
+                            ),
+                        )
+                    ).endswith(
+                        ":latest"
+                    )
+                ]
+
+                tag_record = (
+                    latest_matches[0]
+                    if latest_matches
+                    else base_matches[0]
+                )
+
+            if tag_record:
+                canonical_model = str(
+                    tag_record.get(
+                        "name",
+                        tag_record.get(
+                            "model",
+                            requested_model,
+                        ),
+                    )
+                    or requested_model
+                ).strip()
+
+        except Exception as exc:
+            tags_error = (
+                f"{type(exc).__name__}: "
+                f"{exc}"
+            )
+
+        # ----------------------------------------------------
+        # Retrieve detailed metadata for the resolved model.
+        # ----------------------------------------------------
+        show_body: Dict[str, Any] = {}
+
+        try:
+            response = requests.post(
+                show_url,
+                json={
+                    "model": canonical_model,
+                },
+                timeout=30,
+            )
+            response.raise_for_status()
+
+            payload = response.json()
+
+            if isinstance(
+                payload,
+                dict,
+            ):
+                show_body = payload
+
+        except Exception as exc:
+            show_error = (
+                f"{type(exc).__name__}: "
+                f"{exc}"
+            )
+
+        tag_details = (
+            tag_record.get(
+                "details",
+                {}
+            )
+            if isinstance(
+                tag_record,
+                dict,
+            )
+            else {}
+        )
+
+        if not isinstance(
+            tag_details,
+            dict,
+        ):
+            tag_details = {}
+
+        show_details = (
+            show_body.get(
+                "details",
+                {}
+            )
+            if isinstance(
+                show_body,
+                dict,
+            )
+            else {}
+        )
+
+        if not isinstance(
+            show_details,
+            dict,
+        ):
+            show_details = {}
+
+        details = dict(
+            tag_details
+        )
+
+        details.update(
+            {
+                key: value
+                for key, value
+                in show_details.items()
+                if value is not None
+            }
+        )
+
+        digest = None
+
+        if isinstance(
+            tag_record,
+            dict,
+        ):
+            digest = (
+                tag_record.get(
+                    "digest"
+                )
+                or tag_record.get(
+                    "sha256"
+                )
+            )
+
+        template = (
+            show_body.get(
+                "template",
+                ""
+            )
+            if isinstance(
+                show_body,
+                dict,
+            )
+            else ""
+        )
+
+        ok = bool(
+            tag_record
+            or show_body
+        )
+
+        return {
+            "ok": ok,
+            "requested_model": (
+                requested_model
+            ),
+            "canonical_model": (
+                canonical_model
+            ),
+            "digest": (
+                digest
+            ),
+            "modified_at": (
+                tag_record.get(
+                    "modified_at"
+                )
+                if isinstance(
+                    tag_record,
+                    dict,
+                )
+                else None
+            ),
+            "size_bytes": (
+                tag_record.get(
+                    "size"
+                )
+                if isinstance(
+                    tag_record,
+                    dict,
+                )
+                else None
+            ),
+            "format": (
+                details.get(
+                    "format"
+                )
+            ),
+            "family": (
+                details.get(
+                    "family"
+                )
+            ),
+            "families": (
+                details.get(
+                    "families"
+                )
+            ),
+            "parameter_size": (
+                details.get(
+                    "parameter_size"
+                )
+            ),
+            "quantization_level": (
+                details.get(
+                    "quantization_level"
+                )
+            ),
+            "details": (
+                details
+            ),
+            "model_info": (
+                show_body.get(
+                    "model_info"
+                )
+                if isinstance(
+                    show_body,
+                    dict,
+                )
+                else None
+            ),
+            "parameters": (
+                show_body.get(
+                    "parameters"
+                )
+                if isinstance(
+                    show_body,
+                    dict,
+                )
+                else None
+            ),
+            "template_sha256": (
+                self.sha256_text(
+                    template
+                )
+                if template
+                else None
+            ),
+            "license": (
+                show_body.get(
+                    "license"
+                )
+                if isinstance(
+                    show_body,
+                    dict,
+                )
+                else None
+            ),
+            "tags_error": (
+                tags_error
+            ),
+            "show_error": (
+                show_error
+            ),
+        }
+
+    def validate_generator_models(
+        self,
+    ) -> Dict[str, Dict[str, Any]]:
+        """
+        Fail-fast reproducibility preflight for generator models.
+
+        Requirements:
+        - exactly seven unique generator models;
+        - judge model must not be in generator set;
+        - every model must be resolvable by Ollama;
+        - every model must have an immutable digest;
+        - parameter size and quantization must be available.
+
+        Returns frozen runtime metadata keyed by requested model name.
+        """
+
+        normalized_models = [
+            str(model).strip()
+            for model in GENERATOR_MODELS
+            if str(model).strip()
+        ]
+
+        if (
+            len(normalized_models)
+            != EXPECTED_GENERATOR_MODEL_COUNT
+        ):
+            raise RuntimeError(
+                "Generator model count mismatch: "
+                f"expected={EXPECTED_GENERATOR_MODEL_COUNT}, "
+                f"actual={len(normalized_models)}"
+            )
+
+        if (
+            len(set(normalized_models))
+            != len(normalized_models)
+        ):
+            raise RuntimeError(
+                "Duplicate generator model entries detected."
+            )
+
+        if (
+            JUDGE_MODEL_NAME
+            in set(normalized_models)
+        ):
+            raise RuntimeError(
+                "Judge model must not appear in generator set: "
+                f"{JUDGE_MODEL_NAME}"
+            )
+
+        metadata_by_model: Dict[
+            str,
+            Dict[str, Any],
+        ] = {}
+
+        for model_name in normalized_models:
+            metadata = (
+                self.get_ollama_model_metadata(
+                    model_name
+                )
+            )
+
+            if not metadata.get(
+                "ok"
+            ):
+                raise RuntimeError(
+                    "Cannot resolve Ollama metadata for "
+                    f"{model_name}: "
+                    f"{metadata.get('show_error') or metadata.get('tags_error')}"
+                )
+
+            if not metadata.get(
+                "digest"
+            ):
+                raise RuntimeError(
+                    "Ollama digest missing for generator model: "
+                    f"{model_name}"
+                )
+
+            if not metadata.get(
+                "parameter_size"
+            ):
+                raise RuntimeError(
+                    "Ollama parameter_size missing for generator model: "
+                    f"{model_name}"
+                )
+
+            if not metadata.get(
+                "quantization_level"
+            ):
+                raise RuntimeError(
+                    "Ollama quantization_level missing for generator model: "
+                    f"{model_name}"
+                )
+
+            metadata_by_model[
+                model_name
+            ] = metadata
+
+        logging.info(
+            "✅ Generator model metadata preflight: OK"
+        )
+
+        for (
+            model_name,
+            metadata,
+        ) in metadata_by_model.items():
+            logging.info(
+                (
+                    "Model freeze | requested=%s | canonical=%s | "
+                    "digest=%s | params=%s | quant=%s"
+                ),
+                model_name,
+                metadata.get(
+                    "canonical_model"
+                ),
+                metadata.get(
+                    "digest"
+                ),
+                metadata.get(
+                    "parameter_size"
+                ),
+                metadata.get(
+                    "quantization_level"
+                ),
+            )
+
+        return metadata_by_model
 
     # ========================================================
     # JSON / TEXT ARTIFACT HELPERS
@@ -2432,6 +2944,11 @@ class GenerationPipeline:
                     "seed"
                 ]
             ),
+            "num_predict": (
+                GENERATION_CONFIG[
+                    "num_predict"
+                ]
+            ),
         }
 
         architecture_result: Dict[
@@ -2797,6 +3314,12 @@ class GenerationPipeline:
             PRIMARY_BENCHMARK_CACHE_POLICY,
         )
 
+        # Freeze installed runtime model identities BEFORE the
+        # first expensive model/query generation.
+        frozen_model_metadata = (
+            self.validate_generator_models()
+        )
+
         # ----------------------------------------------------
         # GROUND TRUTH
         # ----------------------------------------------------
@@ -2890,6 +3413,11 @@ class GenerationPipeline:
                 seed=(
                     GENERATION_CONFIG[
                         "seed"
+                    ]
+                ),
+                num_predict=(
+                    GENERATION_CONFIG[
+                        "num_predict"
                     ]
                 ),
             )
@@ -3095,14 +3623,56 @@ class GenerationPipeline:
             # MODEL RESULT
             # =================================================
 
+            model_metadata = (
+                frozen_model_metadata[
+                    model_name
+                ]
+            )
+
             model_result = {
                 "model": model_name,
+                "canonical_model": (
+                    model_metadata.get(
+                        "canonical_model"
+                    )
+                ),
                 "role": "generator",
                 "run_id": self.run_id,
                 "generation_runner_version": (
                     GENERATION_RUNNER_VERSION
                 ),
-                "quantization": "Q4_K_M",
+
+                # Exact runtime model identity.
+                "model_digest": (
+                    model_metadata.get(
+                        "digest"
+                    )
+                ),
+                "parameter_size": (
+                    model_metadata.get(
+                        "parameter_size"
+                    )
+                ),
+                "quantization": (
+                    model_metadata.get(
+                        "quantization_level"
+                    )
+                ),
+                "model_family": (
+                    model_metadata.get(
+                        "family"
+                    )
+                ),
+                "model_format": (
+                    model_metadata.get(
+                        "format"
+                    )
+                ),
+                "model_metadata": (
+                    model_metadata
+                ),
+
+                # Frozen inference settings.
                 "generation_config": (
                     GENERATION_CONFIG
                 ),

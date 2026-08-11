@@ -112,6 +112,7 @@ class SolutionPlanner:
         temperature: float = 0.0,
         top_p: float = 1.0,
         seed: int = 42,
+        num_predict: int = 4096,
     ):
         self.model_name = model_name
         self.num_ctx = num_ctx
@@ -122,6 +123,7 @@ class SolutionPlanner:
         self.temperature = temperature
         self.top_p = top_p
         self.seed = seed
+        self.num_predict = num_predict
 
         self.shp_path = "data/basin_data.shp"
 
@@ -130,6 +132,7 @@ class SolutionPlanner:
             temperature=temperature,
             top_p=top_p,
             num_ctx=num_ctx,
+            num_predict=num_predict,
             seed=seed,
         )
 
@@ -141,11 +144,12 @@ class SolutionPlanner:
         logging.info(
             (
                 "SolutionPlanner initialized | "
-                "model=%s | num_ctx=%d | "
+                "model=%s | num_ctx=%d | num_predict=%d | "
                 "max_triples=%d | max_wkt=%d | max_hops=%d"
             ),
             model_name,
             num_ctx,
+            num_predict,
             max_context_triples,
             max_wkt_geometries,
             max_relevance_hops,
@@ -1775,6 +1779,7 @@ Return no text outside the required format.
             "temperature": self.temperature,
             "top_p": self.top_p,
             "seed": self.seed,
+            "num_predict": self.num_predict,
         }
 
         response = self.llm.invoke(

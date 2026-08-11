@@ -73,8 +73,8 @@ import requests
 # CONFIG
 # ============================================================
 
-JUDGE_SCRIPT_VERSION = "hydrographrag_judge_v5"
-JUDGE_PROMPT_VERSION = "hydrographrag_judge_prompt_v5"
+JUDGE_SCRIPT_VERSION = "hydrographrag_judge_v6_freeze"
+JUDGE_PROMPT_VERSION = "hydrographrag_judge_prompt_v6_freeze"
 
 DEFAULT_GROUND_TRUTH = "ground_truth.json"
 DEFAULT_RESULTS_ROOT = "results"
@@ -91,6 +91,7 @@ DEFAULT_TEMPERATURE = 0.0
 DEFAULT_TOP_P = 1.0
 DEFAULT_SEED = 42
 DEFAULT_NUM_CTX = 8192
+DEFAULT_NUM_PREDICT = 2048
 DEFAULT_TIMEOUT = 180
 
 VALID_DECISIONS = {"ANSWER", "ABSTAIN"}
@@ -150,6 +151,18 @@ def sha256_file(path: Path) -> str:
             h.update(chunk)
 
     return h.hexdigest()
+
+
+def sha256_text_normalized(path: Path) -> str:
+    """
+    Canonical benchmark hash independent of CRLF/LF line endings.
+
+    This must be used for the frozen ground-truth identity so that
+    Windows and Linux runs refer to the same benchmark snapshot.
+    """
+    raw = path.read_bytes()
+    raw = raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(raw).hexdigest()
 
 
 def json_dumps_compact(value: Any) -> str:
@@ -568,12 +581,25 @@ def extract_generation_failure(
 def extract_retrieved_evidence(
     result: Dict[str, Any],
 ) -> Dict[str, Any]:
+    """
+    Preserve retrieval provenance from the frozen generation runner.
+
+    run_generation stores:
+      - retrieved_entities: list[str]
+      - retrieved_triples: integer count
+      - retrieval_context: actual graph triples (HydroGraphRAG) or text
+        context (VectorRAG)
+
+    Older judge code incorrectly discarded retrieved_triples whenever the
+    field was an integer. This implementation keeps both the count and the
+    recoverable triple/context payload.
+    """
     entities = result.get(
         "retrieved_entities",
         [],
     )
 
-    triples = result.get(
+    raw_triples = result.get(
         "retrieved_triples",
         [],
     )
@@ -592,15 +618,65 @@ def extract_retrieved_evidence(
     ):
         entities = []
 
-    if not isinstance(
-        triples,
+    triples_count = 0
+    triples: List[Any] = []
+
+    if isinstance(
+        raw_triples,
         list,
     ):
-        triples = []
+        triples = raw_triples
+        triples_count = len(
+            triples
+        )
+
+    elif isinstance(
+        raw_triples,
+        (int, float),
+    ) and not isinstance(
+        raw_triples,
+        bool,
+    ):
+        triples_count = max(
+            0,
+            int(
+                raw_triples
+            ),
+        )
+
+    # In the frozen generation runner, HydroGraphRAG stores the actual
+    # triple dictionaries in retrieval_context while retrieved_triples is
+    # the count. Recover those triples for judge provenance.
+    if (
+        not triples
+        and isinstance(
+            context,
+            list,
+        )
+    ):
+        triples = [
+            item
+            for item in context
+            if isinstance(
+                item,
+                dict,
+            )
+        ]
+
+        if (
+            triples
+            and triples_count == 0
+        ):
+            triples_count = len(
+                triples
+            )
 
     return {
         "retrieved_entities": entities,
         "retrieved_triples": triples,
+        "retrieved_triples_count": (
+            triples_count
+        ),
         "retrieval_context": context,
     }
 
@@ -880,8 +956,9 @@ IMPORTANT RULES:
 6. OOD decision correctness is separate from answer faithfulness.
 7. If expected_decision=ABSTAIN:
    - judge decision correctness;
-   - do not assign ordinary answer faithfulness scores unless the response makes
-     substantive unsupported hydrological claims despite abstaining.
+   - set semantic, structural, and faithfulness to applicable=false and score=null;
+   - report any substantive unsupported claims through hallucination subtypes and
+     unsupported_claims, not through ordinary answer-quality scores.
 8. For valid in-domain queries with missing evidence:
    - ANSWER can still be correct;
    - saying the requested fact is unavailable is acceptable;
@@ -925,6 +1002,13 @@ def build_judge_prompt(
         gold
     )
 
+    answer_dimensions_applicable = not bool(
+        applicability.get(
+            "ood",
+            False,
+        )
+    )
+
     prompt_payload = {
         "judge_prompt_version": (
             JUDGE_PROMPT_VERSION
@@ -948,6 +1032,12 @@ def build_judge_prompt(
                     [],
                 )
             ),
+            "retrieved_triples_count": (
+                retrieved_evidence.get(
+                    "retrieved_triples_count",
+                    0,
+                )
+            ),
         },
         "required_output_schema": {
             "decision": {
@@ -957,18 +1047,36 @@ def build_judge_prompt(
                 "reason": "short string",
             },
             "semantic": {
-                "applicable": True,
-                "score": 1,
+                "applicable": (
+                    answer_dimensions_applicable
+                ),
+                "score": (
+                    1
+                    if answer_dimensions_applicable
+                    else None
+                ),
                 "reason": "short string",
             },
             "structural": {
-                "applicable": True,
-                "score": 1,
+                "applicable": (
+                    answer_dimensions_applicable
+                ),
+                "score": (
+                    1
+                    if answer_dimensions_applicable
+                    else None
+                ),
                 "reason": "short string",
             },
             "faithfulness": {
-                "applicable": True,
-                "score": 1,
+                "applicable": (
+                    answer_dimensions_applicable
+                ),
+                "score": (
+                    1
+                    if answer_dimensions_applicable
+                    else None
+                ),
                 "reason": "short string",
             },
             "subtypes": {
@@ -1043,6 +1151,7 @@ class OllamaJudge:
         top_p: float,
         seed: int,
         num_ctx: int,
+        num_predict: int,
         timeout: int,
     ):
         self.model = model
@@ -1050,6 +1159,7 @@ class OllamaJudge:
         self.top_p = top_p
         self.seed = seed
         self.num_ctx = num_ctx
+        self.num_predict = num_predict
         self.timeout = timeout
         self.session = requests.Session()
 
@@ -1076,6 +1186,9 @@ class OllamaJudge:
                 ),
                 "num_ctx": (
                     self.num_ctx
+                ),
+                "num_predict": (
+                    self.num_predict
                 ),
             },
         }
@@ -1446,6 +1559,29 @@ def validate_judge_payload(
         ),
     }
 
+    # Ordinary answer-quality scores are defined only for valid
+    # in-domain queries. OOD is evaluated independently through the
+    # ANSWER/ABSTAIN decision and hallucination claims.
+    if expected_applicability.get(
+        "ood",
+        False,
+    ):
+        for dimension in [
+            "semantic",
+            "structural",
+            "faithfulness",
+        ]:
+            validated[
+                dimension
+            ][
+                "applicable"
+            ] = False
+            validated[
+                dimension
+            ][
+                "score"
+            ] = None
+
     for subtype in [
         "spatial",
         "numerical",
@@ -1642,6 +1778,9 @@ def judge_one(
             ),
             "applicability": applicability,
             "deterministic_checks": deterministic,
+            "retrieved_evidence": (
+                retrieved_evidence
+            ),
             "scores": None,
             "created_at": utc_now_iso(),
         }
@@ -1807,6 +1946,9 @@ def judge_one(
             "num_ctx": (
                 judge.num_ctx
             ),
+            "num_predict": (
+                judge.num_predict
+            ),
             "timeout_s": (
                 judge.timeout
             ),
@@ -1843,6 +1985,9 @@ def judge_one(
         ),
         "deterministic_checks": (
             deterministic
+        ),
+        "retrieved_evidence": (
+            retrieved_evidence
         ),
         "scores": validated,
         "created_at": utc_now_iso(),
@@ -2046,21 +2191,67 @@ def summarize_group(
         Dict[str, Any]
     ],
 ) -> Dict[str, Any]:
+    """
+    Aggregate judge records without conflating technical generation
+    failures with judge failures or semantic/OOD decisions.
+
+    Denominators:
+      N_total              all selected generation records
+      N_generation_failure records skipped before LLM judging
+      N_judge_eligible     records that were eligible for LLM judging
+      N_judge_ok           eligible records successfully judged
+      N_judge_error        eligible records whose judge call/schema failed
+
+    faithfulness_valid is computed ONLY for:
+      explicit + semi-explicit + implicit
+
+    anomalous/OOD records are excluded from faithfulness_valid.
+    """
     total = len(
         records
     )
 
-    ok = [
+    generation_failures = [
         r
         for r in records
+        if r.get(
+            "judge_status"
+        )
+        == "SKIPPED_GENERATION_FAILURE"
+    ]
+
+    judge_eligible = [
+        r
+        for r in records
+        if r.get(
+            "judge_status"
+        )
+        != "SKIPPED_GENERATION_FAILURE"
+    ]
+
+    ok = [
+        r
+        for r in judge_eligible
         if r.get(
             "judge_status"
         ) == "OK"
     ]
 
+    judge_errors = [
+        r
+        for r in judge_eligible
+        if r.get(
+            "judge_status"
+        ) != "OK"
+    ]
+
+    decision_eligible = (
+        judge_eligible
+    )
+
     decision_valid = [
         r
-        for r in records
+        for r in decision_eligible
         if r.get(
             "deterministic_checks",
             {},
@@ -2072,7 +2263,7 @@ def summarize_group(
 
     decision_correct = [
         r
-        for r in records
+        for r in decision_eligible
         if r.get(
             "deterministic_checks",
             {},
@@ -2082,42 +2273,117 @@ def summarize_group(
         )
     ]
 
+    valid_in_domain_records = [
+        r
+        for r in records
+        if normalize_text(
+            r.get(
+                "category"
+            )
+        ).lower()
+        in {
+            "explicit",
+            "semi-explicit",
+            "implicit",
+        }
+    ]
+
+    faithfulness_valid_values = [
+        score
+        for score in (
+            score_if_valid(
+                r,
+                "faithfulness",
+            )
+            for r in valid_in_domain_records
+        )
+        if score is not None
+    ]
+
     summary: Dict[
         str,
         Any,
     ] = {
+        # Backward-compatible N plus explicit denominators.
         "N": total,
+        "N_total": total,
+        "N_generation_failure": len(
+            generation_failures
+        ),
+        "N_judge_eligible": len(
+            judge_eligible
+        ),
+        "N_judge_ok": len(
+            ok
+        ),
+        "N_judge_error": len(
+            judge_errors
+        ),
+
+        # Backward-compatible aliases.
         "judge_ok": len(
             ok
         ),
-        "judge_error": (
-            total
-            - len(
-                ok
-            )
+        "judge_error": len(
+            judge_errors
         ),
+
         "judge_coverage": (
-            len(ok) / total
+            len(ok)
+            / len(
+                judge_eligible
+            )
+            if judge_eligible
+            else None
+        ),
+        "generation_failure_rate": (
+            len(
+                generation_failures
+            )
+            / total
             if total
             else None
         ),
-        "decision_valid_count": (
+
+        "decision_eligible_count": len(
+            decision_eligible
+        ),
+        "decision_valid_count": len(
+            decision_valid
+        ),
+        "decision_correct_count": len(
+            decision_correct
+        ),
+        "decision_valid_rate": (
             len(
                 decision_valid
             )
-        ),
-        "decision_correct_count": (
-            len(
-                decision_correct
+            / len(
+                decision_eligible
             )
+            if decision_eligible
+            else None
         ),
         "decision_accuracy": (
             len(
                 decision_correct
             )
-            / total
-            if total
+            / len(
+                decision_eligible
+            )
+            if decision_eligible
             else None
+        ),
+
+        # Reviewer-facing valid-query faithfulness.
+        "faithfulness_valid_N": len(
+            faithfulness_valid_values
+        ),
+        "faithfulness_valid_mean": safe_mean(
+            faithfulness_valid_values
+        ),
+        "faithfulness_valid_std": safe_stdev(
+            faithfulness_valid_values
         ),
     }
 
@@ -2230,7 +2496,6 @@ def summarize_group(
 
     return summary
 
-
 def aggregate_records(
     records: Sequence[
         Dict[str, Any]
@@ -2328,12 +2593,14 @@ def write_flat_csv(
         "generator_model",
         "architecture_mode",
         "judge_status",
+        "generation_failure",
         "expected_decision",
         "generated_decision",
         "decision_correct",
         "semantic_score",
         "structural_score",
         "faithfulness_score",
+        "faithfulness_valid_score",
         "spatial_score",
         "spatial_hallucination",
         "numerical_score",
@@ -2463,6 +2730,16 @@ def write_flat_csv(
                         "judge_status"
                     )
                 ),
+                "generation_failure": (
+                    record.get(
+                        "judge_error"
+                    )
+                    if record.get(
+                        "judge_status"
+                    )
+                    == "SKIPPED_GENERATION_FAILURE"
+                    else ""
+                ),
                 "expected_decision": (
                     record.get(
                         "expected_decision"
@@ -2495,6 +2772,22 @@ def write_flat_csv(
                     dim_score(
                         "faithfulness"
                     )
+                ),
+                "faithfulness_valid_score": (
+                    dim_score(
+                        "faithfulness"
+                    )
+                    if normalize_text(
+                        record.get(
+                            "category"
+                        )
+                    ).lower()
+                    in {
+                        "explicit",
+                        "semi-explicit",
+                        "implicit",
+                    }
+                    else ""
                 ),
                 "spatial_score": (
                     subtype_value(
@@ -2585,66 +2878,440 @@ def get_ollama_model_metadata(
     model: str,
 ) -> Dict[str, Any]:
     """
-    Best-effort model metadata.
-    Failure is recorded but does not block judging.
-    """
+    Resolve exact installed Ollama model identity.
 
-    url = (
+    /api/tags supplies canonical installed tag and digest.
+    /api/show supplies parameter size, quantization, family, model info,
+    parameters and prompt-template metadata.
+
+    This function records errors instead of inventing metadata. main()
+    performs the fail-fast checks required for the frozen benchmark.
+    """
+    requested_model = normalize_text(
+        model
+    )
+
+    tags_url = (
+        OLLAMA_BASE_URL.rstrip("/")
+        + "/api/tags"
+    )
+
+    show_url = (
         OLLAMA_BASE_URL.rstrip("/")
         + "/api/show"
     )
 
+    tag_record: Dict[
+        str,
+        Any,
+    ] = {}
+
+    canonical_model = (
+        requested_model
+    )
+
+    tags_error = None
+    show_error = None
+
+    try:
+        response = requests.get(
+            tags_url,
+            timeout=30,
+        )
+        response.raise_for_status()
+
+        payload = response.json()
+
+        installed = (
+            payload.get(
+                "models",
+                [],
+            )
+            if isinstance(
+                payload,
+                dict,
+            )
+            else []
+        )
+
+        if not isinstance(
+            installed,
+            list,
+        ):
+            installed = []
+
+        requested_base = (
+            requested_model.split(
+                ":",
+                1,
+            )[0]
+        )
+
+        exact = []
+        same_base = []
+
+        for item in installed:
+            if not isinstance(
+                item,
+                dict,
+            ):
+                continue
+
+            installed_name = normalize_text(
+                item.get(
+                    "name"
+                )
+                or item.get(
+                    "model"
+                )
+            )
+
+            if not installed_name:
+                continue
+
+            if (
+                installed_name
+                == requested_model
+            ):
+                exact.append(
+                    item
+                )
+
+            if (
+                installed_name.split(
+                    ":",
+                    1,
+                )[0]
+                == requested_base
+            ):
+                same_base.append(
+                    item
+                )
+
+        if exact:
+            tag_record = exact[0]
+
+        elif same_base:
+            latest = [
+                item
+                for item in same_base
+                if normalize_text(
+                    item.get(
+                        "name"
+                    )
+                    or item.get(
+                        "model"
+                    )
+                ).endswith(
+                    ":latest"
+                )
+            ]
+
+            tag_record = (
+                latest[0]
+                if latest
+                else same_base[0]
+            )
+
+        if tag_record:
+            canonical_model = normalize_text(
+                tag_record.get(
+                    "name"
+                )
+                or tag_record.get(
+                    "model"
+                )
+                or requested_model
+            )
+
+    except Exception as exc:
+        tags_error = (
+            f"{type(exc).__name__}: "
+            f"{exc}"
+        )
+
+    show_body: Dict[
+        str,
+        Any,
+    ] = {}
+
     try:
         response = requests.post(
-            url,
+            show_url,
             json={
-                "model": model,
+                "model": canonical_model,
             },
             timeout=30,
         )
-
         response.raise_for_status()
 
-        body = response.json()
+        payload = response.json()
 
-        return {
-            "ok": True,
-            "model": model,
-            "details": body.get(
-                "details"
-            ),
-            "model_info": body.get(
-                "model_info"
-            ),
-            "parameters": body.get(
-                "parameters"
-            ),
-            "template_sha256": (
-                sha256_text(
-                    body.get(
-                        "template",
-                        "",
-                    )
-                )
-                if body.get(
-                    "template"
-                )
-                else None
-            ),
-            "license": body.get(
-                "license"
-            ),
-        }
+        if isinstance(
+            payload,
+            dict,
+        ):
+            show_body = payload
 
     except Exception as exc:
-        return {
-            "ok": False,
-            "model": model,
-            "error": (
-                f"{type(exc).__name__}: "
-                f"{exc}"
-            ),
-        }
+        show_error = (
+            f"{type(exc).__name__}: "
+            f"{exc}"
+        )
+
+    tag_details = (
+        tag_record.get(
+            "details",
+            {}
+        )
+        if isinstance(
+            tag_record,
+            dict,
+        )
+        else {}
+    )
+
+    show_details = (
+        show_body.get(
+            "details",
+            {}
+        )
+        if isinstance(
+            show_body,
+            dict,
+        )
+        else {}
+    )
+
+    if not isinstance(
+        tag_details,
+        dict,
+    ):
+        tag_details = {}
+
+    if not isinstance(
+        show_details,
+        dict,
+    ):
+        show_details = {}
+
+    details = dict(
+        tag_details
+    )
+
+    details.update({
+        key: value
+        for key, value
+        in show_details.items()
+        if value is not None
+    })
+
+    digest = (
+        tag_record.get(
+            "digest"
+        )
+        or tag_record.get(
+            "sha256"
+        )
+        if isinstance(
+            tag_record,
+            dict,
+        )
+        else None
+    )
+
+    template = (
+        show_body.get(
+            "template",
+            ""
+        )
+        if isinstance(
+            show_body,
+            dict,
+        )
+        else ""
+    )
+
+    return {
+        "ok": bool(
+            tag_record
+            or show_body
+        ),
+        "requested_model": (
+            requested_model
+        ),
+        "canonical_model": (
+            canonical_model
+        ),
+        "digest": digest,
+        "modified_at": (
+            tag_record.get(
+                "modified_at"
+            )
+            if isinstance(
+                tag_record,
+                dict,
+            )
+            else None
+        ),
+        "size_bytes": (
+            tag_record.get(
+                "size"
+            )
+            if isinstance(
+                tag_record,
+                dict,
+            )
+            else None
+        ),
+        "format": details.get(
+            "format"
+        ),
+        "family": details.get(
+            "family"
+        ),
+        "families": details.get(
+            "families"
+        ),
+        "parameter_size": details.get(
+            "parameter_size"
+        ),
+        "quantization_level": (
+            details.get(
+                "quantization_level"
+            )
+        ),
+        "details": details,
+        "model_info": (
+            show_body.get(
+                "model_info"
+            )
+            if isinstance(
+                show_body,
+                dict,
+            )
+            else None
+        ),
+        "parameters": (
+            show_body.get(
+                "parameters"
+            )
+            if isinstance(
+                show_body,
+                dict,
+            )
+            else None
+        ),
+        "template_sha256": (
+            sha256_text(
+                template
+            )
+            if template
+            else None
+        ),
+        "license": (
+            show_body.get(
+                "license"
+            )
+            if isinstance(
+                show_body,
+                dict,
+            )
+            else None
+        ),
+        "tags_error": tags_error,
+        "show_error": show_error,
+    }
+
+
+def validate_judge_model_metadata(
+    metadata: Dict[str, Any],
+) -> None:
+    """
+    Frozen-run fail-fast validation of judge identity.
+    """
+    if not metadata.get(
+        "ok"
+    ):
+        raise RuntimeError(
+            "Cannot resolve Ollama judge metadata: "
+            + str(
+                metadata.get(
+                    "show_error"
+                )
+                or metadata.get(
+                    "tags_error"
+                )
+                or "unknown metadata error"
+            )
+        )
+
+    required = [
+        "canonical_model",
+        "digest",
+        "parameter_size",
+        "quantization_level",
+    ]
+
+    missing = [
+        field
+        for field in required
+        if not metadata.get(
+            field
+        )
+    ]
+
+    if missing:
+        raise RuntimeError(
+            "Incomplete judge model metadata; "
+            "missing="
+            + ",".join(
+                missing
+            )
+        )
+
+
+def validate_judge_not_generator(
+    judge_requested: str,
+    judge_canonical: str,
+    generator_models: Sequence[str],
+) -> None:
+    """
+    Prevent accidental use of an evaluated generator as the judge.
+    """
+    generator_set = {
+        normalize_text(
+            model
+        ).lower()
+        for model in generator_models
+        if normalize_text(
+            model
+        )
+    }
+
+    judge_names = {
+        normalize_text(
+            judge_requested
+        ).lower(),
+        normalize_text(
+            judge_canonical
+        ).lower(),
+    }
+
+    overlap = (
+        generator_set
+        & judge_names
+    )
+
+    if overlap:
+        raise RuntimeError(
+            "Judge model overlaps generator set: "
+            + ", ".join(
+                sorted(
+                    overlap
+                )
+            )
+        )
 
 
 # ============================================================
@@ -2714,6 +3381,12 @@ def main() -> None:
     )
 
     parser.add_argument(
+        "--num-predict",
+        type=int,
+        default=DEFAULT_NUM_PREDICT,
+    )
+
+    parser.add_argument(
         "--timeout",
         type=int,
         default=DEFAULT_TIMEOUT,
@@ -2756,6 +3429,16 @@ def main() -> None:
         ),
     )
 
+    parser.add_argument(
+        "--preflight-only",
+        action="store_true",
+        help=(
+            "Validate frozen gold, selected generator models, "
+            "judge/model metadata and configuration without "
+            "calling the LLM judge."
+        ),
+    )
+
     args = parser.parse_args()
 
     gt_path = Path(
@@ -2786,6 +3469,18 @@ def main() -> None:
 
     ground_truth, gt_by_id = (
         load_ground_truth(
+            gt_path
+        )
+    )
+
+    ground_truth_sha256 = (
+        sha256_text_normalized(
+            gt_path
+        )
+    )
+
+    ground_truth_sha256_raw = (
+        sha256_file(
             gt_path
         )
     )
@@ -2881,10 +3576,12 @@ def main() -> None:
     print("=" * 72)
     print(f"Ground truth: {gt_path}")
     print(
-        "Ground-truth SHA256: "
-        + sha256_file(
-            gt_path
-        )
+        "Ground-truth SHA256 (normalized LF): "
+        + ground_truth_sha256
+    )
+    print(
+        "Ground-truth SHA256 (raw bytes):     "
+        + ground_truth_sha256_raw
     )
     print(
         f"Ground-truth items: "
@@ -2909,20 +3606,77 @@ def main() -> None:
             "No generation result files selected."
         )
 
-    judge = OllamaJudge(
-        model=args.judge_model,
-        temperature=args.temperature,
-        top_p=args.top_p,
-        seed=args.seed,
-        num_ctx=args.num_ctx,
-        timeout=args.timeout,
-    )
+    selected_generator_models = sorted({
+        infer_model(
+            read_generation_result(
+                path
+            ),
+            path,
+            results_root,
+        )
+        for path in selected_files
+    })
 
     judge_model_metadata = (
         get_ollama_model_metadata(
             args.judge_model
         )
     )
+
+    validate_judge_model_metadata(
+        judge_model_metadata
+    )
+
+    validate_judge_not_generator(
+        judge_requested=(
+            args.judge_model
+        ),
+        judge_canonical=(
+            judge_model_metadata.get(
+                "canonical_model",
+                args.judge_model,
+            )
+        ),
+        generator_models=(
+            selected_generator_models
+        ),
+    )
+
+    canonical_judge_model = (
+        judge_model_metadata.get(
+            "canonical_model",
+            args.judge_model,
+        )
+    )
+
+    judge = OllamaJudge(
+        model=canonical_judge_model,
+        temperature=args.temperature,
+        top_p=args.top_p,
+        seed=args.seed,
+        num_ctx=args.num_ctx,
+        num_predict=args.num_predict,
+        timeout=args.timeout,
+    )
+
+    print(
+        "Judge canonical model: "
+        f"{canonical_judge_model}"
+    )
+    print(
+        "Judge digest: "
+        f"{judge_model_metadata.get('digest')}"
+    )
+    print(
+        "Judge quantization: "
+        f"{judge_model_metadata.get('quantization_level')}"
+    )
+    print(
+        "Judge parameter size: "
+        f"{judge_model_metadata.get('parameter_size')}"
+    )
+    print("Judge/generator separation: OK")
+    print("")
 
     manifest = {
         "judge_script_version": (
@@ -2938,9 +3692,10 @@ def main() -> None:
             )
         ),
         "ground_truth_sha256": (
-            sha256_file(
-                gt_path
-            )
+            ground_truth_sha256
+        ),
+        "ground_truth_sha256_raw": (
+            ground_truth_sha256_raw
         ),
         "results_root": (
             str(
@@ -2952,8 +3707,29 @@ def main() -> None:
                 output_root
             )
         ),
-        "judge_model": (
+        "judge_requested_model": (
             args.judge_model
+        ),
+        "judge_model": (
+            canonical_judge_model
+        ),
+        "judge_model_digest": (
+            judge_model_metadata.get(
+                "digest"
+            )
+        ),
+        "judge_parameter_size": (
+            judge_model_metadata.get(
+                "parameter_size"
+            )
+        ),
+        "judge_quantization": (
+            judge_model_metadata.get(
+                "quantization_level"
+            )
+        ),
+        "generator_models_observed": (
+            selected_generator_models
         ),
         "judge_model_metadata": (
             judge_model_metadata
@@ -2966,6 +3742,9 @@ def main() -> None:
             "seed": args.seed,
             "num_ctx": (
                 args.num_ctx
+            ),
+            "num_predict": (
+                args.num_predict
             ),
             "timeout_s": (
                 args.timeout
@@ -2986,6 +3765,8 @@ def main() -> None:
             "non_applicable_score_is_null": True,
             "judge_failure_is_not_score": True,
             "ood_separate_from_faithfulness": True,
+            "faithfulness_valid_in_domain_only": True,
+            "technical_generation_failure_excluded_from_judge_denominators": True,
             "expected_missing_facts_enforced": True,
             "architecture_label_hidden_from_prompt": True,
             "human_evaluation": False,
@@ -3003,6 +3784,20 @@ def main() -> None:
         ),
         encoding="utf-8",
     )
+
+    if args.preflight_only:
+        print("=" * 72)
+        print("JUDGE PREFLIGHT COMPLETE")
+        print("=" * 72)
+        print(
+            "Selected generation files: "
+            f"{len(selected_files)}"
+        )
+        print(
+            "Observed generator models: "
+            f"{selected_generator_models}"
+        )
+        return
 
     records = []
 
@@ -3084,8 +3879,8 @@ def main() -> None:
             / "judge_result.json"
         )
 
-        current_gt_sha256 = sha256_file(
-            gt_path
+        current_gt_sha256 = (
+            ground_truth_sha256
         )
         current_source_generation_sha256 = sha256_file(
             path
@@ -3188,9 +3983,11 @@ def main() -> None:
 
     summary[
         "ground_truth_sha256"
-    ] = sha256_file(
-        gt_path
-    )
+    ] = ground_truth_sha256
+
+    summary[
+        "ground_truth_sha256_raw"
+    ] = ground_truth_sha256_raw
 
     summary[
         "created_at"
@@ -3259,8 +4056,16 @@ def main() -> None:
     )
 
     print(
-        "Faithfulness mean: "
-        f"{overall.get('faithfulness_mean')}"
+        "Faithfulness valid mean: "
+        f"{overall.get('faithfulness_valid_mean')}"
+    )
+    print(
+        "Generation failures: "
+        f"{overall.get('N_generation_failure', 0)}"
+    )
+    print(
+        "Judge errors: "
+        f"{overall.get('N_judge_error', 0)}"
     )
 
 
