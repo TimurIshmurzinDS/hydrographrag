@@ -1541,9 +1541,9 @@ def main() -> None:
             "path": str(
                 ground_truth_path
             ),
-            "sha256": sha256_file(
-                ground_truth_path
-            ),
+            "sha256": sha256_text_normalized(
+    ground_truth_path
+),
         },
         "benchmark_manifest": {
             "path": str(
