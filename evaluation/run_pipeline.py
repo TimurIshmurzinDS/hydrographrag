@@ -100,6 +100,10 @@ def now_iso() -> str:
         .replace(microsecond=0)
         .isoformat()
     )
+def sha256_text_normalized(path: Path) -> str:
+    raw = path.read_bytes()
+    raw = raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(raw).hexdigest()
 
 
 def run_id_now() -> str:
@@ -442,9 +446,9 @@ def validate_ground_truth(
             )
         )
 
-    gt_sha256 = sha256_file(
-        ground_truth_path
-    )
+    gt_sha256 = sha256_text_normalized(
+    ground_truth_path
+)
 
     manifest_payload = None
     manifest_expected_sha = None

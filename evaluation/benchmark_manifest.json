@@ -7,7 +7,7 @@
   "source_ground_truth": "C:\\Users\\Timur\\Desktop\\Diplomme\\Code\\evaluation\\ground_truth_compact.json",
   "source_ground_truth_sha256": "60de7dd87fb917cd369184440b4b7c7c1bf6783e5e5bd16417436396df3e1a24",
   "compact_ground_truth": "C:\\Users\\Timur\\Desktop\\Diplomme\\Code\\evaluation\\ground_truth_compact_v6.json",
-  "compact_ground_truth_sha256": "60c252f26b96cdf9716e58f23f11c3dc194617548104111e10e3b295c02d5aa4",
+  "compact_ground_truth_sha256": "511536a03915afae1d8a8e32bd77ef113ef05adafadcd5c46df9be1b2ee6c8a4",
   "dataset_size": 285,
   "category_counts": {
     "explicit": 60,
