@@ -1,0 +1,269 @@
+================================================================================
+GRAPHDB AUDIT REPORT
+================================================================================
+
+Repository: waterdb
+Endpoint: http://localhost:7200/repositories/waterdb
+Created: 2026-08-11T14:13:34
+
+--------------------------------------------------------------------------------
+SUMMARY
+--------------------------------------------------------------------------------
+total_triples: 588341
+wkt_count_in_audit: 74
+benchmark_crosscheck_available: True
+benchmark_entities_exact_match: 40
+benchmark_unique_expected_entities: 40
+benchmark_wkt_exact_match: 34
+benchmark_unique_expected_wkt: 34
+error_count: 0
+
+--------------------------------------------------------------------------------
+TOP CLASSES
+--------------------------------------------------------------------------------
+Observation: 11864
+Property: 57
+HY_HydroFeature: 43
+AdministrativeRegion: 5
+
+--------------------------------------------------------------------------------
+TOP PREDICATES
+--------------------------------------------------------------------------------
+hasResult: 210391 (literal=210391, iri=0)
+hasPopulation: 65810 (literal=65810, iri=0)
+hasArableLandAreaValue: 24622 (literal=24622, iri=0)
+type: 11969 (literal=0, iri=11969)
+Post_code: 11763 (literal=11763, iri=0)
+Post_name: 11763 (literal=11763, iri=0)
+hasTime: 11689 (literal=11689, iri=0)
+resultTime: 11689 (literal=11689, iri=0)
+Basin: 11689 (literal=11689, iri=0)
+Water_body_code: 11689 (literal=11689, iri=0)
+Date_water_level_Value: 11688 (literal=11688, iri=0)
+hasFeatureOfInterest: 11487 (literal=0, iri=11487)
+Width: 11113 (literal=11113, iri=0)
+Regulated_indicators: 9602 (literal=9602, iri=0)
+Water_quality_class: 9590 (literal=9590, iri=0)
+Attribute: 9590 (literal=9590, iri=0)
+HM_Water_quality_class_2020_2021Concentration2020: 9576 (literal=9576, iri=0)
+HM_Water_quality_class_2020_2021Parameter: 9576 (literal=9576, iri=0)
+HM_Water_quality_class_2020_2021Unit: 9576 (literal=9576, iri=0)
+Water_consumption_Value: 9576 (literal=9576, iri=0)
+Water_level_Value: 9576 (literal=9576, iri=0)
+Concentration_2022: 9518 (literal=9518, iri=0)
+Unit: 9518 (literal=9518, iri=0)
+Water_bodyy: 9518 (literal=9518, iri=0)
+Basin_are_km²: 9216 (literal=9216, iri=0)
+Length_km: 9216 (literal=9216, iri=0)
+Location_region: 9216 (literal=9216, iri=0)
+Volume_m³s: 9216 (literal=9216, iri=0)
+HM_Water_quality_class_2021_2022Concentration2021: 6696 (literal=6696, iri=0)
+HM_Water_quality_class_2021_2022Parameter: 6696 (literal=6696, iri=0)
+
+--------------------------------------------------------------------------------
+WKT PREDICATES
+--------------------------------------------------------------------------------
+asWKT [http://www.opengis.net/ont/geosparql#asWKT]: 74
+
+--------------------------------------------------------------------------------
+LABEL PREDICATES
+--------------------------------------------------------------------------------
+Post_name [http://smart-water.org/data/WR_KZ/Post_name]: 11763
+label [http://www.w3.org/2000/01/rdf-schema#label]: 48
+
+--------------------------------------------------------------------------------
+OBSERVATION PREDICATES
+--------------------------------------------------------------------------------
+hasResult: 210391
+hasPopulation: 65810
+hasArableLandAreaValue: 24622
+type: 11864
+Post_code: 11763
+Post_name: 11763
+hasTime: 11689
+resultTime: 11689
+Basin: 11689
+Water_body_code: 11689
+Date_water_level_Value: 11688
+hasFeatureOfInterest: 11487
+Width: 11113
+Regulated_indicators: 9602
+Water_quality_class: 9590
+Attribute: 9590
+HM_Water_quality_class_2020_2021Concentration2020: 9576
+HM_Water_quality_class_2020_2021Parameter: 9576
+HM_Water_quality_class_2020_2021Unit: 9576
+Water_consumption_Value: 9576
+Water_level_Value: 9576
+Concentration_2022: 9518
+Unit: 9518
+Water_bodyy: 9518
+Basin_are_km²: 9216
+Length_km: 9216
+Location_region: 9216
+Volume_m³s: 9216
+HM_Water_quality_class_2021_2022Concentration2021: 6696
+HM_Water_quality_class_2021_2022Parameter: 6696
+HM_Water_quality_class_2021_2022Unit: 6696
+hasWaterClass: 3246
+Water_consumption_Valuem³s: 2113
+Water_level_Valuecm: 2112
+Chemical_Symbol: 84
+Unit_of_Measurement: 84
+Water_Classification: 84
+Class_6_Min: 77
+asWKT: 74
+Class_5_Max: 74
+Class_1_Max: 72
+Class_2_Min: 71
+Class_4_Max: 71
+Class_2_Max: 70
+Class_3_Max: 69
+Class_3_Min: 69
+Class_4_Min: 69
+Class_5_Min: 69
+Class_1_Min: 54
+Class_6_Max: 14
+
+--------------------------------------------------------------------------------
+IMPORTANT HYDROLOGICAL PREDICATES
+--------------------------------------------------------------------------------
+hasResult: 210391 (subjects=11861, objects=2757)
+    Observation_10 -> s.Tekes
+    Observation_10 -> 1.4022e+04
+    Observation_100 -> BALHASH-ALAKOL
+hasTime: 11689 (subjects=11689, objects=6)
+    Observation_100 -> 2020-01-01T00:00:00
+    Observation_1000 -> 2021-05-01T00:00:00
+    Observation_10000 -> 2020-01-01T00:00:00
+resultTime: 11689 (subjects=11689, objects=6)
+    Observation_100 -> 2020-01-01T00:00:00
+    Observation_1000 -> 2021-05-01T00:00:00
+    Observation_10000 -> 2020-01-01T00:00:00
+Basin: 11689 (subjects=11689, objects=1)
+    Observation_100 -> BALHASH-ALAKOL
+    Observation_1000 -> BALHASH-ALAKOL
+    Observation_10000 -> BALHASH-ALAKOL
+Date_water_level_Value: 11688 (subjects=11688, objects=36)
+    Observation_100 -> 2021-12-01T00:00:00
+    Observation_1000 -> 2022-12-01T00:00:00
+    Observation_10000 -> 2020-07-01T00:00:00
+hasFeatureOfInterest: 11487 (subjects=11487, objects=43)
+    Observation_10 -> http://smart-water.org/data/TekesRiver
+    Observation_100 -> http://smart-water.org/data/IleRiver
+    Observation_1000 -> http://smart-water.org/data/KishiAlmatyRiver
+Width: 11113 (subjects=11113, objects=76)
+    Observation_100 -> 43.4000
+    Observation_1000 -> 43.099021
+    Observation_1001 -> 43.084405
+Water_quality_class: 9590 (subjects=9590, objects=4)
+    Observation_10000 -> class 3
+    Observation_10001 -> class 3
+    Observation_10002 -> class 3
+HM_Water_quality_class_2020_2021Concentration2020: 9576 (subjects=9576, objects=16)
+    Observation_10000 -> 21.3
+    Observation_10001 -> 21.3
+    Observation_10002 -> 21.3
+HM_Water_quality_class_2020_2021Parameter: 9576 (subjects=9576, objects=5)
+    Observation_10000 -> Magnesium
+    Observation_10001 -> Magnesium
+    Observation_10002 -> Magnesium
+HM_Water_quality_class_2020_2021Unit: 9576 (subjects=9576, objects=1)
+    Observation_10000 -> mg/dm³
+    Observation_10001 -> mg/dm³
+    Observation_10002 -> mg/dm³
+Water_consumption_Value: 9576 (subjects=9576, objects=23)
+    Observation_10000 -> 0.540322580645161
+    Observation_10001 -> 0.540322580645161
+    Observation_10002 -> 0.540322580645161
+Water_level_Value: 9576 (subjects=9576, objects=792)
+    Observation_10000 -> 263.129032258065
+    Observation_10001 -> 263.129032258065
+    Observation_10002 -> 263.129032258065
+Concentration_2022: 9518 (subjects=9518, objects=23)
+    Observation_10000 -> 29.522
+    Observation_10001 -> 29.522
+    Observation_10002 -> 29.522
+Basin_are_km²: 9216 (subjects=9216, objects=13)
+    Observation_1000 -> 520
+    Observation_10000 -> 520
+    Observation_10001 -> 520
+Length_km: 9216 (subjects=9216, objects=13)
+    Observation_1000 -> 32.0
+    Observation_10000 -> 32.0
+    Observation_10001 -> 32.0
+Location_region: 9216 (subjects=9216, objects=7)
+    Observation_1000 -> Almaty city
+    Observation_10000 -> Almaty city
+    Observation_10001 -> Almaty city
+Volume_m³s: 9216 (subjects=9216, objects=13)
+    Observation_1000 -> 2.0
+    Observation_10000 -> 2.0
+    Observation_10001 -> 2.0
+HM_Water_quality_class_2021_2022Concentration2021: 6696 (subjects=6696, objects=14)
+    Observation_10000 -> 0.161
+    Observation_10001 -> 0.161
+    Observation_10002 -> 0.161
+HM_Water_quality_class_2021_2022Parameter: 6696 (subjects=6696, objects=5)
+    Observation_10000 -> Total phosphorus
+    Observation_10001 -> Total phosphorus
+    Observation_10002 -> Total phosphorus
+HM_Water_quality_class_2021_2022Unit: 6696 (subjects=6696, objects=1)
+    Observation_10000 -> mg/dm³
+    Observation_10001 -> mg/dm³
+    Observation_10002 -> mg/dm³
+Water_consumption_Valuem³s: 2113 (subjects=2113, objects=60)
+    Observation_100 -> 330.903225806452
+    Observation_1000 -> 0.02608
+    Observation_1001 -> 0.215161290322581
+Water_level_Valuecm: 2112 (subjects=2112, objects=1966)
+    Observation_100 -> 248.290322580645
+    Observation_1000 -> 0.0
+    Observation_1001 -> 603.870967741935
+locatedInRegion: 46 (subjects=41, objects=5)
+    TekesRiver -> http://smart-water.org/data/AlmatyRegion
+    KishiAlmatyRiver -> http://smart-water.org/data/AlmatyCity
+    AksuRiver -> http://smart-water.org/data/JetisuRegion
+hasLocation: 46 (subjects=41, objects=5)
+    TekesRiver -> http://smart-water.org/data/AlmatyRegion
+    KishiAlmatyRiver -> http://smart-water.org/data/AlmatyCity
+    AksuRiver -> http://smart-water.org/data/JetisuRegion
+Population_region_2022: 21 (subjects=5, objects=21)
+    KaragandaRegion -> 1133933
+    AbaiRegion -> 602832
+    AbaiRegion -> 610198
+
+--------------------------------------------------------------------------------
+COMMON 2-HOP PATTERNS
+--------------------------------------------------------------------------------
+hasFeatureOfInterest -> type: 11487
+hasFeatureOfInterest -> label: 11487
+hasFeatureOfInterest -> locatedInRegion: 10445
+hasFeatureOfInterest -> hasLocation: 10445
+locatedInRegion -> Population_region_2022: 249
+hasLocation -> Population_region_2022: 249
+locatedInRegion -> Total_sown_area_ha: 104
+hasLocation -> Total_sown_area_ha: 104
+locatedInRegion -> Number_of_enterprises_and_industries: 74
+hasLocation -> Number_of_enterprises_and_industries: 74
+subPropertyOf -> type: 57
+subPropertyOf -> subPropertyOf: 57
+locatedInRegion -> type: 46
+locatedInRegion -> label: 46
+hasLocation -> type: 46
+hasLocation -> label: 46
+
+--------------------------------------------------------------------------------
+BENCHMARK CROSS-CHECK
+--------------------------------------------------------------------------------
+Expected entities with exact label match: 40 / 40
+Expected WKT with exact DB match: 34 / 34
+
+Expected entities without exact label match:
+
+Expected WKT without exact DB match:
+
+--------------------------------------------------------------------------------
+ERRORS
+--------------------------------------------------------------------------------
+No SPARQL errors.
