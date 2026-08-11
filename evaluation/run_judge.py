@@ -73,8 +73,8 @@ import requests
 # CONFIG
 # ============================================================
 
-JUDGE_SCRIPT_VERSION = "hydrographrag_judge_v4"
-JUDGE_PROMPT_VERSION = "hydrographrag_judge_prompt_v4"
+JUDGE_SCRIPT_VERSION = "hydrographrag_judge_v5"
+JUDGE_PROMPT_VERSION = "hydrographrag_judge_prompt_v5"
 
 DEFAULT_GROUND_TRUTH = "ground_truth.json"
 DEFAULT_RESULTS_ROOT = "results"
@@ -523,6 +523,48 @@ def extract_decision(
     return "INVALID"
 
 
+def extract_generation_failure(
+    result: Dict[str, Any],
+) -> Optional[str]:
+    """
+    Return a technical generation-failure description, or None.
+
+    Technical failures are not semantic abstentions and must not be scored
+    by the LLM judge.
+    """
+    failure_type = normalize_text(
+        result.get("failure_type")
+    )
+
+    if (
+        failure_type
+        and failure_type.lower()
+        not in {"none", "null", "ok", "success"}
+    ):
+        return failure_type
+
+    status = normalize_text(
+        result.get("status")
+    )
+
+    if status:
+        normalized_status = status.lower()
+
+        if normalized_status in {
+            "error",
+            "failed",
+            "failure",
+            "timeout",
+            "timed_out",
+            "generation_error",
+            "execution_error",
+            "exception",
+        }:
+            return status
+
+    return None
+
+
 def extract_retrieved_evidence(
     result: Dict[str, Any],
 ) -> Dict[str, Any]:
@@ -608,9 +650,6 @@ def gold_applicability(
             requirements.get(
                 "spatial",
                 False,
-            )
-            or gold.get(
-                "expected_wkt"
             )
         ),
         "numerical": bool(
@@ -722,42 +761,6 @@ def build_gold_for_judge(
             )
             else []
         ),
-        "gold_review": {
-            "needs_manual_review": bool(
-                gold.get(
-                    "gold_review",
-                    {},
-                ).get(
-                    "needs_manual_review",
-                    False,
-                )
-            )
-            if isinstance(
-                gold.get(
-                    "gold_review",
-                    {},
-                ),
-                dict,
-            )
-            else False,
-            "reasons": (
-                gold.get(
-                    "gold_review",
-                    {},
-                ).get(
-                    "reasons",
-                    [],
-                )
-                if isinstance(
-                    gold.get(
-                        "gold_review",
-                        {},
-                    ),
-                    dict,
-                )
-                else []
-            ),
-        },
     }
 
 
@@ -1540,6 +1543,7 @@ def judge_one(
     source_path: Path,
     results_root: Path,
     output_root: Path,
+    ground_truth_sha256: str,
 ) -> Dict[str, Any]:
     query_id = infer_query_id(
         generation,
@@ -1556,6 +1560,14 @@ def judge_one(
         generation,
         source_path,
         results_root,
+    )
+
+    source_generation_sha256 = sha256_file(
+        source_path
+    )
+
+    generation_failure = extract_generation_failure(
+        generation
     )
 
     generated_text = (
@@ -1589,21 +1601,6 @@ def judge_one(
         )
     )
 
-    prompt = build_judge_prompt(
-        gold=gold,
-        generated_text=(
-            generated_text
-        ),
-        decision=decision,
-        retrieved_evidence=(
-            retrieved_evidence
-        ),
-    )
-
-    prompt_hash = sha256_text(
-        prompt
-    )
-
     item_dir = (
         output_root
         / sanitize_path_component(
@@ -1619,6 +1616,57 @@ def judge_one(
 
     ensure_dir(
         item_dir
+    )
+
+    if generation_failure is not None:
+        record = {
+            "judge_script_version": JUDGE_SCRIPT_VERSION,
+            "judge_prompt_version": JUDGE_PROMPT_VERSION,
+            "query_id": query_id,
+            "category": gold.get("category", ""),
+            "query": gold.get("query", ""),
+            "generator_model": model,
+            "architecture_mode": mode,
+            "source_generation_file": str(source_path),
+            "source_generation_sha256": source_generation_sha256,
+            "ground_truth_sha256": ground_truth_sha256,
+            "judge_model": judge.model,
+            "judge_status": "SKIPPED_GENERATION_FAILURE",
+            "judge_error": generation_failure,
+            "judge_prompt_sha256": None,
+            "judge_raw_output_sha256": None,
+            "judge_ollama_metadata": {},
+            "generated_decision": decision,
+            "expected_decision": normalize_decision(
+                gold.get("expected_decision")
+            ),
+            "applicability": applicability,
+            "deterministic_checks": deterministic,
+            "scores": None,
+            "created_at": utc_now_iso(),
+        }
+
+        result_path = item_dir / "judge_result.json"
+        result_path.write_text(
+            json.dumps(
+                record,
+                ensure_ascii=False,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+
+        return record
+
+    prompt = build_judge_prompt(
+        gold=gold,
+        generated_text=generated_text,
+        decision=decision,
+        retrieved_evidence=retrieved_evidence,
+    )
+
+    prompt_hash = sha256_text(
+        prompt
     )
 
     prompt_path = (
@@ -1736,6 +1784,12 @@ def judge_one(
             str(
                 source_path
             )
+        ),
+        "source_generation_sha256": (
+            source_generation_sha256
+        ),
+        "ground_truth_sha256": (
+            ground_truth_sha256
         ),
         "judge_model": (
             judge.model
@@ -3030,6 +3084,13 @@ def main() -> None:
             / "judge_result.json"
         )
 
+        current_gt_sha256 = sha256_file(
+            gt_path
+        )
+        current_source_generation_sha256 = sha256_file(
+            path
+        )
+
         if (
             cached_result.is_file()
             and not args.overwrite
@@ -3052,6 +3113,14 @@ def main() -> None:
                         "judge_prompt_version"
                     )
                     == JUDGE_PROMPT_VERSION
+                    and cached.get(
+                        "ground_truth_sha256"
+                    )
+                    == current_gt_sha256
+                    and cached.get(
+                        "source_generation_sha256"
+                    )
+                    == current_source_generation_sha256
                 ):
                     records.append(
                         cached
@@ -3072,6 +3141,7 @@ def main() -> None:
             source_path=path,
             results_root=results_root,
             output_root=output_root,
+            ground_truth_sha256=current_gt_sha256,
         )
 
         records.append(
