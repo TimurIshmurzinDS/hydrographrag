@@ -1,97 +1,90 @@
 import json
-import logging
+import os
+import pandas as pd
 
-logging.basicConfig(level=logging.INFO, format="%(message)s")
-
-# Имя твоего файла с результатами генерации
-RESULTS_FILE = "generation_results.json" 
+# Берем самый полный файл, который появляется после работы Судьи
+RESULTS_FILE = "final_evaluation_results.json"
+FALLBACK_FILE = "generation_results.json"
 
 def post_process_metrics():
-    try:
-        # Читаем JSON с результатами
-        with open(RESULTS_FILE, 'r', encoding='utf-8') as f:
-            results_data = json.load(f)
-    except Exception as e:
-        logging.error(f"❌ Ошибка загрузки: {e}")
+    print("📊 Агрегация финальных метрик для статьи...")
+    
+    file_to_read = RESULTS_FILE if os.path.exists(RESULTS_FILE) else FALLBACK_FILE
+    if not os.path.exists(file_to_read):
+        print(f"❌ Файл {file_to_read} не найден.")
         return
 
-    print("\n" + "="*70)
-    print("📊 ФИНАЛЬНЫЕ МЕТРИКИ (Исправленные для IEEE Access)")
-    print("="*70)
+    with open(file_to_read, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
-    for model_data in results_data:
-        model_name = model_data.get("model")
+    # Пункт 11: Учитываем все 9 архитектур
+    architectures = [
+        "Baseline", "VectorRAG", "HydroGraphRAG",
+        "HydroGraphRAG_no_CDA", "HydroGraphRAG_no_WKT",
+        "HydroGraphRAG_no_Template", "HydroGraphRAG_no_OOD",
+        "HydroGraphRAG_no_Cache", "HydroGraphRAG_no_Sandbox"
+    ]
+
+    retrieval_records = []
+    ablation_records = []
+
+    for model_data in data:
+        model_name = model_data.get("model", "unknown")
         metrics = model_data.get("metrics", [])
         
-        if not metrics:
-            continue
-
-        precisions, recalls, f1_scores = [], [], []
-        
-        # Статистика генерации кода для Ablation Study (Имя заменено на HydroGraphRAG)
-        stats = {
-            "Baseline": {"syntax_ok": 0, "map_ok": 0, "total": 0},
-            "VectorRAG": {"syntax_ok": 0, "map_ok": 0, "total": 0},
-            "HydroGraphRAG": {"syntax_ok": 0, "map_ok": 0, "total": 0}
-        }
-
         for item in metrics:
-            # 1. Подсчет успешности написания кода
-            for mode in ["Baseline", "VectorRAG", "HydroGraphRAG"]:
-                if mode in item:
-                    stats[mode]["total"] += 1
-                    if item[mode].get("syntax"): stats[mode]["syntax_ok"] += 1
-                    if item[mode].get("has_map"): stats[mode]["map_ok"] += 1
-
-            # 2. Подсчет честных метрик Ретривера (Entity-level)
-            hydrographrag = item.get("HydroGraphRAG", {})
-            retrieval = hydrographrag.get("retrieval")
-            
-            if retrieval and retrieval.get("status") != "no_ground_truth":
-                tp = retrieval.get("targets_found", 0)
-                # Берем реальное количество извлеченных сущностей, а не триплетов!
-                retrieved_entities = retrieval.get("retrieved_total", 0) 
+            for arch in architectures:
+                if arch not in item:
+                    continue
                 
-                # Recall (Target Discovery Rate)
-                recall = retrieval.get("tdr", 0.0)
-                recalls.append(recall)
+                arch_data = item[arch]
                 
-                # Честный Entity-level Precision
-                if retrieved_entities > 0:
-                    precision = min(tp / retrieved_entities, 1.0)
-                else:
-                    precision = 0.0
-                    
-                precisions.append(precision)
+                # 1. Ablation (Способность генерации)
+                ablation_records.append({
+                    "Model": model_name,
+                    "Architecture": arch,
+                    "Syntax_OK": 1 if arch_data.get("syntax") else 0,
+                    "Exec_OK": 1 if arch_data.get("exec") else 0,
+                    "Has_Map": 1 if arch_data.get("has_map") else 0
+                })
                 
-                # F1 Score
-                if precision + recall > 0:
-                    f1 = 2 * (precision * recall) / (precision + recall)
-                else:
-                    f1 = 0.0
-                f1_scores.append(f1)
+                # 2. Retrieval Metrics (Только для графовых методов, у которых есть поле 'retrieval')
+                # Пункт 9: Читаем строго из item[arch]["retrieval"]
+                if "retrieval" in arch_data:
+                    r = arch_data["retrieval"]
+                    retrieval_records.append({
+                        "Model": model_name,
+                        "Architecture": arch,
+                        "Precision": r.get("precision", 0.0),
+                        "Recall": r.get("recall", 0.0),
+                        "F1": r.get("f1", 0.0),
+                        "Targets_Found": r.get("targets_found", 0),
+                        "Retrieved_Entities": r.get("retrieved_entities", 0),
+                        "Retrieved_Triples": r.get("retrieved_triples", 0)
+                    })
 
-        if not precisions:
-            continue
+    # Сохранение Ablation Summary
+    df_abl = pd.DataFrame(ablation_records)
+    # Группируем по Архитектуре и Модели, переводим в %
+    df_abl_summary = df_abl.groupby(["Architecture", "Model"]).mean() * 100
+    df_abl_summary = df_abl_summary.round(2)
+    df_abl_summary.to_csv("ablation_summary.csv")
+    
+    print("\n📈 ABLATION SUMMARY (Успешность выполнения в %):")
+    print(df_abl.groupby("Architecture")[["Syntax_OK", "Exec_OK", "Has_Map"]].mean().round(4) * 100)
 
-        def avg(lst): return sum(lst) / len(lst) if lst else 0.0
-        def pct(part, whole): return (part / whole * 100) if whole else 0.0
-
-        print(f"\n🚀 Модель: {model_name}")
-        print("-" * 57)
-        print("1. Метрики извлечения подграфа (HydroGraphRAG):")
-        print(f"   Precision (Entity-level)        : {avg(precisions):.4f}")
-        print(f"   Recall (Target Discovery Rate)  : {avg(recalls):.4f}")
-        print(f"   F1-Score (Баланс)               : {avg(f1_scores):.4f}")
+    # Сохранение Retrieval Metrics
+    if retrieval_records:
+        df_ret = pd.DataFrame(retrieval_records)
+        df_ret_summary = df_ret.groupby(["Architecture", "Model"])[
+            ["Precision", "Recall", "F1", "Targets_Found", "Retrieved_Entities", "Retrieved_Triples"]
+        ].mean().round(4)
+        df_ret_summary.to_csv("retrieval_metrics.csv")
         
-        print("\n2. Способность сгенерировать карту (Ablation Study):")
-        for mode in ["Baseline", "VectorRAG", "HydroGraphRAG"]:
-            s = stats[mode]
-            syn_pct = pct(s['syntax_ok'], s['total'])
-            map_pct = pct(s['map_ok'], s['total'])
-            print(f"   [{mode.ljust(13)}] Код без ошибок: {syn_pct:5.1f}% | Карта создана: {map_pct:5.1f}%")
-
-    print("\n" + "="*70)
+        print("\n🔍 RETRIEVAL METRICS (Macro-Average Entity-Level):")
+        print(df_ret.groupby("Architecture")[["Precision", "Recall", "F1"]].mean().round(4))
+        
+    print("\n✅ Метрики агрегированы и сохранены: ablation_summary.csv, retrieval_metrics.csv")
 
 if __name__ == "__main__":
     post_process_metrics()
