@@ -1654,16 +1654,21 @@ def main() -> None:
         ]
 
         generation_result = (
-            run_command(
-                command=(
-                    generation_command
-                ),
-                cwd=evaluation_dir,
-                log_path=(
-                    generation_log
-                ),
-            )
-        )
+    run_command(
+        command=(
+            generation_command
+        ),
+        cwd=evaluation_dir,
+        log_path=(
+            generation_log
+        ),
+        env={
+            "PYTHONPATH": str(project_root)
+            + os.pathsep
+            + os.environ.get("PYTHONPATH", "")
+        },
+    )
+)
 
         manifest.stage(
             "generation",
