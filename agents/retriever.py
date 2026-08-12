@@ -1,4 +1,5 @@
 import logging
+import os
 
 class GraphRetriever:
     """
@@ -6,14 +7,26 @@ class GraphRetriever:
     Адаптирован под семантические графы знаний RDF (SPARQL).
     Включает семантическое гео-расширение (Geo-Spatial Expansion) для поиска WKT.
     """
+
     def __init__(self, db_connector, embedder, model_name="qwen2.5-coder:7b"):
         self.db = db_connector
         self.embedder = embedder
         self.logger = logging.getLogger(__name__)
+
         # Инициализируем модель ОДИН раз при создании класса
         from langchain_ollama import ChatOllama
-        self.nav_llm = ChatOllama(model=model_name, temperature=0) 
-        
+
+        ollama_base_url = os.environ.get(
+            "OLLAMA_BASE_URL",
+            "http://127.0.0.1:11434",
+        )
+
+        self.nav_llm = ChatOllama(
+            model=model_name,
+            base_url=ollama_base_url,
+            temperature=0,
+        )
+
         
         # Префиксы из онтологии, включая geo: для геометрии
         self.prefixes = """

@@ -1,11 +1,21 @@
 import json
+import os
 from langchain_ollama import ChatOllama
 
 class DemandIdentifier:
 
     def __init__(self, model_name="gemma4:26b"):
         # Используем температуру 0 для стабильности извлечения данных
-        self.llm = ChatOllama(model=model_name, temperature=0)
+        ollama_base_url = os.environ.get(
+            "OLLAMA_BASE_URL",
+            "http://127.0.0.1:11434",
+        )
+
+        self.llm = ChatOllama(
+            model=model_name,
+            base_url=ollama_base_url,
+            temperature=0,
+        )
 
     def analyze_query(self, query: str):
         # Мощный промпт с правилами и примерами из Ground Truth датасета
