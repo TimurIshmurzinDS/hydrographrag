@@ -43,35 +43,20 @@ GROUND_TRUTH_PATH = os.path.join(
     "ground_truth.json",
 )
 
-# Per-worker output root. Parallel workers MUST use distinct roots.
-OUTPUT_ROOT = os.path.abspath(
-    os.environ.get(
-        "HYDRO_OUTPUT_ROOT",
-        EVAL_DIR,
-    )
-)
-
 GENERATION_OUTPUT_PATH = os.path.join(
-    OUTPUT_ROOT,
+    EVAL_DIR,
     "generation_results.json",
 )
 
 RESULTS_DIR = os.path.join(
-    OUTPUT_ROOT,
+    EVAL_DIR,
     "results",
 )
 
 EXPERIMENT_MANIFEST_PATH = os.path.join(
-    OUTPUT_ROOT,
+    EVAL_DIR,
     "experiment_manifest.json",
 )
-
-# Worker-local persistent directory for the no_Sandbox ablation.
-NO_SANDBOX_WORK_DIR = os.path.join(
-    OUTPUT_ROOT,
-    "_no_sandbox_workspace",
-)
-
 
 DATA_DIR = os.path.join(
     EVAL_DIR,
@@ -780,122 +765,128 @@ class GenerationPipeline:
 
     def validate_generator_models(
         self,
-        models_to_run: Optional[List[str]] = None,
     ) -> Dict[str, Dict[str, Any]]:
         """
-        Validate the frozen seven-model registry and resolve runtime metadata
-        only for the model subset assigned to this worker.
+        Fail-fast reproducibility preflight for generator models.
+
+        Requirements:
+        - exactly seven unique generator models;
+        - judge model must not be in generator set;
+        - every model must be resolvable by Ollama;
+        - every model must have an immutable digest;
+        - parameter size and quantization must be available.
+
+        Returns frozen runtime metadata keyed by requested model name.
         """
 
-        frozen_registry = [
+        normalized_models = [
             str(model).strip()
             for model in GENERATOR_MODELS
             if str(model).strip()
         ]
 
-        if len(frozen_registry) != EXPECTED_GENERATOR_MODEL_COUNT:
+        if (
+            len(normalized_models)
+            != EXPECTED_GENERATOR_MODEL_COUNT
+        ):
             raise RuntimeError(
-                "Generator model registry count mismatch: "
+                "Generator model count mismatch: "
                 f"expected={EXPECTED_GENERATOR_MODEL_COUNT}, "
-                f"actual={len(frozen_registry)}"
+                f"actual={len(normalized_models)}"
             )
 
-        if len(set(frozen_registry)) != len(frozen_registry):
+        if (
+            len(set(normalized_models))
+            != len(normalized_models)
+        ):
             raise RuntimeError(
                 "Duplicate generator model entries detected."
             )
 
-        if JUDGE_MODEL_NAME in set(frozen_registry):
+        if (
+            JUDGE_MODEL_NAME
+            in set(normalized_models)
+        ):
             raise RuntimeError(
                 "Judge model must not appear in generator set: "
                 f"{JUDGE_MODEL_NAME}"
             )
 
-        selected_models = (
-            frozen_registry
-            if models_to_run is None
-            else [
-                str(model).strip()
-                for model in models_to_run
-                if str(model).strip()
-            ]
-        )
+        metadata_by_model: Dict[
+            str,
+            Dict[str, Any],
+        ] = {}
 
-        if not selected_models:
-            raise RuntimeError(
-                "No generator models selected for this worker."
+        for model_name in normalized_models:
+            metadata = (
+                self.get_ollama_model_metadata(
+                    model_name
+                )
             )
 
-        if len(set(selected_models)) != len(selected_models):
-            raise RuntimeError(
-                "Duplicate selected generator models detected."
-            )
-
-        unknown_models = [
-            model
-            for model in selected_models
-            if model not in frozen_registry
-        ]
-
-        if unknown_models:
-            raise RuntimeError(
-                "Selected model(s) are not part of the frozen registry: "
-                f"{unknown_models}"
-            )
-
-        metadata_by_model: Dict[str, Dict[str, Any]] = {}
-
-        for model_name in selected_models:
-            metadata = self.get_ollama_model_metadata(
-                model_name
-            )
-
-            if not metadata.get("ok"):
+            if not metadata.get(
+                "ok"
+            ):
                 raise RuntimeError(
                     "Cannot resolve Ollama metadata for "
                     f"{model_name}: "
                     f"{metadata.get('show_error') or metadata.get('tags_error')}"
                 )
 
-            if not metadata.get("digest"):
+            if not metadata.get(
+                "digest"
+            ):
                 raise RuntimeError(
                     "Ollama digest missing for generator model: "
                     f"{model_name}"
                 )
 
-            if not metadata.get("parameter_size"):
+            if not metadata.get(
+                "parameter_size"
+            ):
                 raise RuntimeError(
                     "Ollama parameter_size missing for generator model: "
                     f"{model_name}"
                 )
 
-            if not metadata.get("quantization_level"):
+            if not metadata.get(
+                "quantization_level"
+            ):
                 raise RuntimeError(
                     "Ollama quantization_level missing for generator model: "
                     f"{model_name}"
                 )
 
-            metadata_by_model[model_name] = metadata
+            metadata_by_model[
+                model_name
+            ] = metadata
 
         logging.info(
             "✅ Generator model metadata preflight: OK"
         )
-        logging.info(
-            "Selected worker models: %s",
-            selected_models,
-        )
 
-        for model_name, metadata in metadata_by_model.items():
+        for (
+            model_name,
+            metadata,
+        ) in metadata_by_model.items():
             logging.info(
                 (
                     "Model freeze | requested=%s | canonical=%s | "
                     "digest=%s | params=%s | quant=%s"
                 ),
                 model_name,
-                metadata.get("canonical_model"),
-                metadata.get("digest"),
-                metadata.get("parameter_size"),
-                metadata.get("quantization_level"),
+                metadata.get(
+                    "canonical_model"
+                ),
+                metadata.get(
+                    "digest"
+                ),
+                metadata.get(
+                    "parameter_size"
+                ),
+                metadata.get(
+                    "quantization_level"
+                ),
             )
 
         return metadata_by_model
@@ -2161,41 +2152,18 @@ class GenerationPipeline:
                 f"{time.time_ns()}.py"
             )
 
-            os.makedirs(
-                NO_SANDBOX_WORK_DIR,
-                exist_ok=True,
+            temp_script_path = (
+                os.path.join(
+                    EVAL_DIR,
+                    temp_script_name,
+                )
             )
 
-            worker_data_path = os.path.join(
-                NO_SANDBOX_WORK_DIR,
-                "data",
-            )
-
-            if (
-                os.path.isdir(DATA_DIR)
-                and not os.path.lexists(worker_data_path)
-            ):
-                try:
-                    os.symlink(
-                        DATA_DIR,
-                        worker_data_path,
-                        target_is_directory=True,
-                    )
-                except OSError:
-                    shutil.copytree(
-                        DATA_DIR,
-                        worker_data_path,
-                        dirs_exist_ok=True,
-                    )
-
-            temp_script_path = os.path.join(
-                NO_SANDBOX_WORK_DIR,
-                temp_script_name,
-            )
-
-            host_html_path = os.path.join(
-                NO_SANDBOX_WORK_DIR,
-                output_html_name,
+            host_html_path = (
+                os.path.join(
+                    EVAL_DIR,
+                    output_html_name,
+                )
             )
 
             try:
@@ -2221,7 +2189,7 @@ class GenerationPipeline:
                         sys.executable,
                         temp_script_name,
                     ],
-                    cwd=NO_SANDBOX_WORK_DIR,
+                    cwd=EVAL_DIR,
                     capture_output=True,
                     text=True,
                     timeout=(
@@ -3186,7 +3154,6 @@ class GenerationPipeline:
         dataset: List[
             Dict[str, Any]
         ],
-        models_to_run: List[str],
     ) -> None:
         with open(
             GROUND_TRUTH_PATH,
@@ -3229,16 +3196,7 @@ class GenerationPipeline:
                 dataset
             ),
             "generator_models": (
-                models_to_run
-            ),
-            "frozen_generator_registry": (
                 GENERATOR_MODELS
-            ),
-            "output_root": (
-                OUTPUT_ROOT
-            ),
-            "ollama_base_url": (
-                OLLAMA_BASE_URL
             ),
             "generation_config": (
                 GENERATION_CONFIG
@@ -3294,24 +3252,8 @@ class GenerationPipeline:
 
     def run(
         self,
-        clean_run: bool = False,
-        models_to_run: Optional[List[str]] = None,
+        clean_run: bool = True,
     ) -> None:
-
-        selected_models = (
-            list(GENERATOR_MODELS)
-            if models_to_run is None
-            else [
-                str(model).strip()
-                for model in models_to_run
-                if str(model).strip()
-            ]
-        )
-
-        if not selected_models:
-            raise RuntimeError(
-                "No models selected for generation."
-            )
 
         # ----------------------------------------------------
         # CLEAN RUN
@@ -3354,11 +3296,6 @@ class GenerationPipeline:
                 )
 
         os.makedirs(
-            OUTPUT_ROOT,
-            exist_ok=True,
-        )
-
-        os.makedirs(
             RESULTS_DIR,
             exist_ok=True,
         )
@@ -3380,9 +3317,7 @@ class GenerationPipeline:
         # Freeze installed runtime model identities BEFORE the
         # first expensive model/query generation.
         frozen_model_metadata = (
-            self.validate_generator_models(
-                selected_models
-            )
+            self.validate_generator_models()
         )
 
         # ----------------------------------------------------
@@ -3420,8 +3355,7 @@ class GenerationPipeline:
             )
 
         self.write_experiment_manifest(
-            dataset,
-            selected_models,
+            dataset
         )
 
         # Reset cache for a genuinely cold run.
@@ -3436,7 +3370,7 @@ class GenerationPipeline:
         # ====================================================
 
         for model_name in (
-            selected_models
+            GENERATOR_MODELS
         ):
             logging.info(
                 (
@@ -3804,48 +3738,10 @@ class GenerationPipeline:
 # ============================================================
 
 if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser(
-        description=(
-            "HydroGraphRAG generation benchmark with isolated "
-            "per-model parallel workers."
-        )
+    pipeline = (
+        GenerationPipeline()
     )
-
-    parser.add_argument(
-        "--models",
-        nargs="+",
-        default=None,
-        help=(
-            "Model(s) to run from the frozen seven-model registry. "
-            "Example: --models qwen2.5-coder:7b"
-        ),
-    )
-
-    parser.add_argument(
-        "--clean-run",
-        action="store_true",
-        help=(
-            "Delete outputs only inside this worker's HYDRO_OUTPUT_ROOT "
-            "before starting."
-        ),
-    )
-
-    args = parser.parse_args()
-
-    logging.info(
-        "Worker output root: %s",
-        OUTPUT_ROOT,
-    )
-    logging.info(
-        "Worker Ollama endpoint: %s",
-        OLLAMA_BASE_URL,
-    )
-
-    pipeline = GenerationPipeline()
 
     pipeline.run(
-        clean_run=args.clean_run,
-        models_to_run=args.models,
+        clean_run=True
     )
