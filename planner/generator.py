@@ -1,6 +1,7 @@
 import hashlib
 import json
 import logging
+import os
 import re
 from typing import Any, Dict, List, Optional, Set, Tuple
 
@@ -127,8 +128,20 @@ class SolutionPlanner:
 
         self.shp_path = "data/basin_data.shp"
 
+        # Each parallel SLURM worker receives its own Ollama endpoint.
+        # Example:
+        #   GPU 0 -> http://127.0.0.1:11434
+        #   GPU 1 -> http://127.0.0.1:11435
+        #   GPU 2 -> http://127.0.0.1:11436
+        #   GPU 3 -> http://127.0.0.1:11437
+        self.ollama_base_url = os.environ.get(
+            "OLLAMA_BASE_URL",
+            "http://127.0.0.1:11434",
+        )
+
         self.llm = ChatOllama(
             model=model_name,
+            base_url=self.ollama_base_url,
             temperature=temperature,
             top_p=top_p,
             num_ctx=num_ctx,
@@ -144,10 +157,12 @@ class SolutionPlanner:
         logging.info(
             (
                 "SolutionPlanner initialized | "
-                "model=%s | num_ctx=%d | num_predict=%d | "
+                "model=%s | base_url=%s | "
+                "num_ctx=%d | num_predict=%d | "
                 "max_triples=%d | max_wkt=%d | max_hops=%d"
             ),
             model_name,
+            self.ollama_base_url,
             num_ctx,
             num_predict,
             max_context_triples,
