@@ -3296,6 +3296,7 @@ class GenerationPipeline:
         self,
         clean_run: bool = False,
         models_to_run: Optional[List[str]] = None,
+        query_ids_file: Optional[str] = None,
     ) -> None:
 
         selected_models = (
@@ -3417,6 +3418,130 @@ class GenerationPipeline:
                     "ground_truth.json must "
                     "contain a JSON list."
                 )
+            )
+
+        # ----------------------------------------------------
+        # OPTIONAL QUERY SUBSET FOR SAFE PARALLEL SPLIT RUNS
+        # ----------------------------------------------------
+
+        if query_ids_file is not None:
+            query_ids_path = os.path.abspath(
+                str(query_ids_file)
+            )
+
+            if not os.path.isfile(
+                query_ids_path
+            ):
+                raise FileNotFoundError(
+                    (
+                        "Query-ID file not found: "
+                        f"{query_ids_path}"
+                    )
+                )
+
+            with open(
+                query_ids_path,
+                "r",
+                encoding="utf-8",
+            ) as f:
+                requested_query_ids = [
+                    line.strip()
+                    for line in f
+                    if line.strip()
+                ]
+
+            if not requested_query_ids:
+                raise RuntimeError(
+                    (
+                        "Query-ID file is empty: "
+                        f"{query_ids_path}"
+                    )
+                )
+
+            if len(
+                requested_query_ids
+            ) != len(
+                set(requested_query_ids)
+            ):
+                raise RuntimeError(
+                    (
+                        "Duplicate query IDs found "
+                        "in query-ID file."
+                    )
+                )
+
+            requested_query_ids_set = set(
+                requested_query_ids
+            )
+
+            available_query_ids = {
+                str(
+                    item.get(
+                        "id",
+                        "",
+                    )
+                ).strip()
+                for item in dataset
+                if isinstance(
+                    item,
+                    dict,
+                )
+            }
+
+            unknown_query_ids = (
+                requested_query_ids_set
+                - available_query_ids
+            )
+
+            if unknown_query_ids:
+                raise RuntimeError(
+                    (
+                        "Unknown query IDs requested: "
+                        + ", ".join(
+                            sorted(
+                                unknown_query_ids,
+                                key=lambda value: (
+                                    0,
+                                    int(value),
+                                )
+                                if value.isdigit()
+                                else (
+                                    1,
+                                    value,
+                                ),
+                            )
+                        )
+                    )
+                )
+
+            dataset_by_id = {
+                str(
+                    item.get(
+                        "id",
+                        "",
+                    )
+                ).strip(): item
+                for item in dataset
+                if isinstance(
+                    item,
+                    dict,
+                )
+            }
+
+            # Preserve the exact order specified by the split file.
+            dataset = [
+                dataset_by_id[query_id]
+                for query_id
+                in requested_query_ids
+            ]
+
+            logging.info(
+                (
+                    "🔀 Query split enabled | "
+                    "file=%s | queries=%d"
+                ),
+                query_ids_path,
+                len(dataset),
             )
 
         self.write_experiment_manifest(
@@ -3832,6 +3957,15 @@ if __name__ == "__main__":
         ),
     )
 
+    parser.add_argument(
+        "--query-ids-file",
+        default=None,
+        help=(
+            "Optional text file containing one frozen ground-truth "
+            "query ID per line. Only these queries will be executed."
+        ),
+    )
+
     args = parser.parse_args()
 
     logging.info(
@@ -3848,4 +3982,5 @@ if __name__ == "__main__":
     pipeline.run(
         clean_run=args.clean_run,
         models_to_run=args.models,
+        query_ids_file=args.query_ids_file,
     )
