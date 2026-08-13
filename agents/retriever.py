@@ -22,10 +22,13 @@ class GraphRetriever:
         )
 
         self.nav_llm = ChatOllama(
-            model=model_name,
-            base_url=ollama_base_url,
-            temperature=0,
-        )
+    model=model_name,
+    base_url=ollama_base_url,
+    temperature=0.0,
+    top_p=1.0,
+    num_ctx=8192,
+    seed=42,
+)
 
         
         # Префиксы из онтологии, включая geo: для геометрии
