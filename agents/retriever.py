@@ -21,12 +21,14 @@ class GraphRetriever:
             "http://127.0.0.1:11434",
         )
 
-        self.nav_llm = ChatOllama(
+        # agents/identifier.py
+        self.llm = ChatOllama(
     model=model_name,
     base_url=ollama_base_url,
     temperature=0.0,
     top_p=1.0,
     num_ctx=8192,
+    num_predict=512,
     seed=42,
 )
 
