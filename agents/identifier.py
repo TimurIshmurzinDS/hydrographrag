@@ -17,7 +17,6 @@ class DemandIdentifier:
     temperature=0.0,
     top_p=1.0,
     num_ctx=8192,
-    num_predict=512,
     seed=42,
 )
 
