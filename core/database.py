@@ -11,13 +11,18 @@ class HydroDatabase:
     Класс для управления доступом к GraphDB (RDF) и табличным данным.
     Реализует концепцию интеграции экспертных знаний и сохранения аудита.
     """
+
     def __init__(self):
-        # Название репозитория в GraphDB
         repo_id = os.getenv("GRAPHDB_REPO", "waterdb")
-        self.endpoint = f"http://localhost:7200/repositories/{repo_id}"
-        # Для изменения данных (INSERT/DELETE) в GraphDB нужен суффикс /statements
+
+        graphdb_base_url = os.getenv(
+            "GRAPHDB_BASE_URL",
+            "http://127.0.0.1:7200"
+        ).rstrip("/")
+
+        self.endpoint = f"{graphdb_base_url}/repositories/{repo_id}"
         self.update_endpoint = f"{self.endpoint}/statements"
-        
+
         try:
             self.sparql = SPARQLWrapper(self.endpoint)
             self.sparql_update = SPARQLWrapper(self.update_endpoint)
@@ -25,7 +30,6 @@ class HydroDatabase:
         except Exception as e:
             print(f"❌ Ошибка подключения к GraphDB: {e}")
             self.sparql = None
-
     def _load_excel(self):
         if os.path.exists(self.excel_path):
             try:
