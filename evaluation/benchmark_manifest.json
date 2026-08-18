@@ -1,0 +1,41 @@
+{
+  "benchmark_name": "HydroGraphRAG 285-query benchmark",
+  "builder_version": "predicate_aware_compact_v6",
+  "repository_id": "waterdb",
+  "graphdb_endpoint": "http://localhost:7200/repositories/waterdb",
+  "created_at": "2026-08-11T15:10:30",
+  "source_ground_truth": "C:\\Users\\Timur\\Desktop\\Diplomme\\Code\\evaluation\\ground_truth_compact.json",
+  "source_ground_truth_sha256": "60de7dd87fb917cd369184440b4b7c7c1bf6783e5e5bd16417436396df3e1a24",
+  "compact_ground_truth": "C:\\Users\\Timur\\Desktop\\Diplomme\\Code\\evaluation\\ground_truth_compact_v6.json",
+  "compact_ground_truth_sha256": "511536a03915afae1d8a8e32bd77ef113ef05adafadcd5c46df9be1b2ee6c8a4",
+  "dataset_size": 285,
+  "category_counts": {
+    "explicit": 60,
+    "semi-explicit": 67,
+    "implicit": 83,
+    "anomalous": 75
+  },
+  "manual_review_count": 272,
+  "valid_manual_review_count": 197,
+  "ood_boundary_review_count": 75,
+  "auto_verified_count": 13,
+  "queries_with_numeric_gold": 111,
+  "queries_with_temporal_gold": 100,
+  "queries_with_topology_gold": 16,
+  "queries_with_missing_facts": 197,
+  "limits": {
+    "max_selected_observations_per_entity": 3,
+    "max_expected_triples_per_query": 50
+  },
+  "construction_policy": {
+    "runtime_normalization": false,
+    "query_rewriting": false,
+    "expected_entities_backward_compatible": true,
+    "expected_wkt_backward_compatible": true,
+    "gold_selection": "minimal query-specific GraphDB evidence with per-entity completeness validation",
+    "observation_selection": "requested predicate first; current/latest selects one latest record; otherwise temporal evidence, then structural fallback",
+    "wkt_selection": "independent from measurement observation selection",
+    "current_semantics": "latest available record in the frozen GraphDB snapshot; not interpreted as wall-clock real-time",
+    "derived_answers": "forecast/modeling, anomaly, trend, comparison, aggregates, risk, causal claims, alerts/maintenance/connectivity, unverified river topology, distance/network metrics, ecological assessments, management sufficiency, and unmapped query intents are flagged for manual review"
+  }
+}

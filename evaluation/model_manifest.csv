@@ -1,0 +1,9 @@
+Role,Model_Name,Exact_Tag,Quantization,Context_Size,Temperature,Top_P,Seed
+Generator,Qwen2.5-Coder (7B),qwen2.5-coder:7b,Q4_K_M,8192,0.0,1.0,42
+Generator,Qwen2.5-Coder (32B),qwen2.5-coder:32b,Q4_K_M,8192,0.0,1.0,42
+Generator,Llama 3.1 (8B),llama3.1:8b,Q4_K_M,8192,0.0,1.0,42
+Generator,Gemma 2 (27B),gemma2:27b,Q4_K_M,8192,0.0,1.0,42
+Generator,Codestral (22B),codestral,Q4_K_M,8192,0.0,1.0,42
+Generator,Mistral Nemo (12B),mistral-nemo,Q4_K_M,8192,0.0,1.0,42
+Generator,Gemma 4 (31B),gemma4:31b,Q4_K_M,8192,0.0,1.0,42
+Judge,Qwen2.5-Instruct (72B),qwen2.5:72b-instruct,Q4_K_M,8192,0.0,1.0,42

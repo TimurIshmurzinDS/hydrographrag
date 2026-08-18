@@ -1,19 +1,50 @@
 import logging
+import os
 
 class GraphRetriever:
     """
-    Модуль извлечения подграфа GeoGraphRAG.
+    Модуль извлечения подграфа HydroGraphRAG.
     Адаптирован под семантические графы знаний RDF (SPARQL).
     Включает семантическое гео-расширение (Geo-Spatial Expansion) для поиска WKT.
     """
-    def __init__(self, db_connector, embedder, model_name="qwen2.5-coder:7b"):
+
+    def __init__(
+        self,
+        db_connector,
+        embedder,
+        model_name="qwen2.5-coder:7b",
+        reproduce_frozen_nav_bug=False,
+    ):
         self.db = db_connector
         self.embedder = embedder
         self.logger = logging.getLogger(__name__)
+
         # Инициализируем модель ОДИН раз при создании класса
         from langchain_ollama import ChatOllama
-        self.nav_llm = ChatOllama(model=model_name, temperature=0) 
-        
+
+        ollama_base_url = os.environ.get(
+            "OLLAMA_BASE_URL",
+            "http://127.0.0.1:11434",
+        )
+
+        # agents/identifier.py
+        self.llm = ChatOllama(
+    model=model_name,
+    base_url=ollama_base_url,
+    temperature=0.0,
+    top_p=1.0,
+    num_ctx=8192,
+    seed=42,
+)
+
+        # Fixed public runtime.
+        # The frozen v6 benchmark referenced self.nav_llm without
+        # initializing it, producing recorded retrieval errors.
+        self.reproduce_frozen_nav_bug = bool(
+            reproduce_frozen_nav_bug
+        )
+        self.nav_llm = self.llm
+
         
         # Префиксы из онтологии, включая geo: для геометрии
         self.prefixes = """
@@ -34,6 +65,11 @@ class GraphRetriever:
         Интеллектуальный поиск пути (как в статье). 
         LLM сама выбирает, какие узлы в графе ей нужны.
         """
+        if self.reproduce_frozen_nav_bug:
+            raise AttributeError(
+                "'GraphRetriever' object has no attribute 'nav_llm'"
+            )
+
         current_node_id = start_node_id
         current_node_name = start_node_name
         path_triples = []
@@ -120,7 +156,7 @@ class GraphRetriever:
         return [{"id": r["id"], "name": r["name"], "category": r.get("category", "Unknown")} for r in records]
     def find_solution_subgraph(self, demand, top_k1=5, top_k2=50):
         """
-        Главный пайплайн поиска GeoGraphRAG.
+        Главный пайплайн поиска HydroGraphRAG.
         """
         print("\n⚙️ [DGE] Запуск Dense Graph Extraction...")
         if demand.get("category") == "anomalous":

@@ -16,4 +16,5 @@ env/
 
 # Исключаем системные файлы (для Mac/Windows)
 .DS_Store
-Thumbs.db
+Thumbs.dbruntime/
+evaluation/ground_truth.json
